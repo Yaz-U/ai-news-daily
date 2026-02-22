@@ -8,6 +8,9 @@ on:
     - cron: '0 11 * * *'   # 20:00 JST (= 11:00 UTC)
   workflow_dispatch:        # 手動実行ボタン（テスト用）
 
+permissions:
+  contents: write           # git pushに必要
+
 jobs:
   update-news:
     runs-on: ubuntu-latest
