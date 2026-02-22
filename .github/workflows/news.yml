@@ -32,21 +32,25 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_news.py
 
-      - name: lftpインストール
-        run: sudo apt-get install -y lftp
-
-      - name: FTPアップロード（lftpでさくらサーバーへ）
+      - name: HTTPアップロード（PHP経由でさくらサーバーへ）
         env:
-          FTP_HOST:        ${{ secrets.FTP_HOST }}
-          FTP_USER:        ${{ secrets.FTP_USER }}
-          FTP_PASSWORD:    ${{ secrets.FTP_PASSWORD }}
-          FTP_REMOTE_PATH: ${{ secrets.FTP_REMOTE_PATH }}
+          UPLOAD_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
+          UPLOAD_URL:   ${{ secrets.UPLOAD_URL }}
         run: |
-          lftp -d \
-            -u "${FTP_USER},${FTP_PASSWORD}" \
-            -e "set ftp:passive-mode yes; set net:timeout 30; set net:max-retries 3; set ftp:ssl-allow no; put web/index.html -o ${FTP_REMOTE_PATH}index.html; quit" \
-            "${FTP_HOST}" 2>&1 | tail -20 || echo "[WARNING] FTPアップロード失敗（lftp）"
-          echo "[INFO] FTPステップ完了"
+          RESPONSE=$(curl -s -o /tmp/upload_response.txt -w "%{http_code}" \
+            -X POST \
+            -H "X-Upload-Token: ${UPLOAD_TOKEN}" \
+            -H "Content-Type: text/html; charset=utf-8" \
+            --data-binary @web/index.html \
+            "${UPLOAD_URL}")
+          BODY=$(cat /tmp/upload_response.txt)
+          echo "[INFO] HTTP Status: ${RESPONSE}"
+          echo "[INFO] Response: ${BODY}"
+          if [ "${RESPONSE}" = "200" ]; then
+            echo "[INFO] アップロード成功！"
+          else
+            echo "[WARNING] アップロード失敗 (status: ${RESPONSE})"
+          fi
 
       - name: 更新データをリポジトリに保存
         run: |
