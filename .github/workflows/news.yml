@@ -32,29 +32,10 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_news.py
 
-      - name: SSH秘密鍵をセットアップ
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        run: |
-          mkdir -p ~/.ssh
-          echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-
-      - name: rsyncでさくらサーバーへアップロード（SSH公開鍵認証）
-        env:
-          SSH_USER: ${{ secrets.FTP_USER }}
-          SSH_HOST: ${{ secrets.FTP_HOST }}
-        run: |
-          rsync -avz \
-            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no -p 22" \
-            web/index.html \
-            "${SSH_USER}@${SSH_HOST}:www/inc/News/web/index.html"
-          echo "[INFO] rsyncアップロード完了"
-
-      - name: 更新データをリポジトリに保存
+      - name: 生成ファイルをリポジトリに保存（さくらcronが取得）
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Actions"
-          git add data/
+          git add data/ web/index.html
           git diff --staged --quiet || git commit -m "news update $(date '+%Y-%m-%d %H:%M JST' --date='9 hours')"
           git push
