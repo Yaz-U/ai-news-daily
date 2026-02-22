@@ -32,17 +32,21 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_news.py
 
-      - name: sshpassをインストール
-        run: sudo apt-get install -y sshpass
-
-      - name: rsyncでさくらサーバーへアップロード（SSH）
+      - name: SSH秘密鍵をセットアップ
         env:
-          SSH_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          SSH_USER:     ${{ secrets.FTP_USER }}
-          SSH_HOST:     ${{ secrets.FTP_HOST }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          sshpass -p "${SSH_PASSWORD}" rsync -avz \
-            -e "ssh -o StrictHostKeyChecking=no -p 22" \
+          mkdir -p ~/.ssh
+          echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+      - name: rsyncでさくらサーバーへアップロード（SSH公開鍵認証）
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+        run: |
+          rsync -avz \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no -p 22" \
             web/index.html \
             "${SSH_USER}@${SSH_HOST}:www/inc/News/web/index.html"
           echo "[INFO] rsyncアップロード完了"
