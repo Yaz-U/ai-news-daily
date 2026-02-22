@@ -27,6 +27,11 @@ DATA_DIR = BASE_DIR / "data"
 WEB_DIR = BASE_DIR / "web"
 LOG_DIR = BASE_DIR / "logs"
 
+# 必要なディレクトリを自動作成
+DATA_DIR.mkdir(exist_ok=True)
+WEB_DIR.mkdir(exist_ok=True)
+LOG_DIR.mkdir(exist_ok=True)
+
 # Gemini APIキー (環境変数から取得)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
