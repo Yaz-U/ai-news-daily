@@ -32,21 +32,21 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_news.py
 
-      - name: FTPアップロード（curlでさくらサーバーへ）
+      - name: lftpインストール
+        run: sudo apt-get install -y lftp
+
+      - name: FTPアップロード（lftpでさくらサーバーへ）
         env:
           FTP_HOST:        ${{ secrets.FTP_HOST }}
           FTP_USER:        ${{ secrets.FTP_USER }}
           FTP_PASSWORD:    ${{ secrets.FTP_PASSWORD }}
           FTP_REMOTE_PATH: ${{ secrets.FTP_REMOTE_PATH }}
         run: |
-          curl -T web/index.html \
-            "ftp://${FTP_HOST}${FTP_REMOTE_PATH}index.html" \
-            --user "${FTP_USER}:${FTP_PASSWORD}" \
-            --ftp-pasv \
-            --retry 3 --retry-delay 5 \
-            --connect-timeout 30 \
-            -v 2>&1 | grep -E "(Connected|Upload|226|error|curl)" || true
-          echo "[INFO] FTPアップロード完了"
+          lftp -d \
+            -u "${FTP_USER},${FTP_PASSWORD}" \
+            -e "set ftp:passive-mode yes; set net:timeout 30; set net:max-retries 3; set ftp:ssl-allow no; put web/index.html -o ${FTP_REMOTE_PATH}index.html; quit" \
+            "${FTP_HOST}" 2>&1 | tail -20 || echo "[WARNING] FTPアップロード失敗（lftp）"
+          echo "[INFO] FTPステップ完了"
 
       - name: 更新データをリポジトリに保存
         run: |
