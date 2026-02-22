@@ -27,14 +27,26 @@ jobs:
       - name: 必要なパッケージをインストール
         run: pip install google-genai feedparser requests
 
-      - name: ニュース取得・HTML生成・FTPアップロード
+      - name: ニュース取得・HTML生成
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          FTP_HOST:       ${{ secrets.FTP_HOST }}
-          FTP_USER:       ${{ secrets.FTP_USER }}
-          FTP_PASSWORD:   ${{ secrets.FTP_PASSWORD }}
-          FTP_REMOTE_PATH: ${{ secrets.FTP_REMOTE_PATH }}
         run: python fetch_news.py
+
+      - name: FTPアップロード（curlでさくらサーバーへ）
+        env:
+          FTP_HOST:        ${{ secrets.FTP_HOST }}
+          FTP_USER:        ${{ secrets.FTP_USER }}
+          FTP_PASSWORD:    ${{ secrets.FTP_PASSWORD }}
+          FTP_REMOTE_PATH: ${{ secrets.FTP_REMOTE_PATH }}
+        run: |
+          curl -T web/index.html \
+            "ftp://${FTP_HOST}${FTP_REMOTE_PATH}index.html" \
+            --user "${FTP_USER}:${FTP_PASSWORD}" \
+            --ftp-pasv \
+            --retry 3 --retry-delay 5 \
+            --connect-timeout 30 \
+            -v 2>&1 | grep -E "(Connected|Upload|226|error|curl)" || true
+          echo "[INFO] FTPアップロード完了"
 
       - name: 更新データをリポジトリに保存
         run: |
