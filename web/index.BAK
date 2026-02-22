@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="1800"> <!-- 30分ごとに自動更新 -->
+  <title>AI News Daily - アメリカAI最新ニュース</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --surface2: #1a2235;
+      --border: #2d3748;
+      --accent: #6366f1;
+      --accent2: #818cf8;
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --positive: #10b981;
+      --negative: #ef4444;
+      --neutral: #f59e0b;
+      --card-hover: #1e2d45;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ヘッダー */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      border-bottom: 1px solid var(--accent);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent), #a855f7);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .logo-text h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent2), #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--text2);
+    }
+
+    .presented-by {
+      font-size: 0.75rem;
+      color: var(--text2);
+      margin-left: 16px;
+      align-self: flex-end;
+      padding-bottom: 2px;
+    }
+
+    .presented-by a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .presented-by a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+
+    .update-info {
+      text-align: right;
+    }
+
+    .time-slot-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--accent);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .update-time {
+      font-size: 0.75rem;
+      color: var(--text2);
+    }
+
+    /* メインコンテンツ */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    /* セクションヘッダー */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section-header .icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .section-header h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* グリッドレイアウト */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    /* カード */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transition: border-color 0.2s;
+    }
+
+    /* ニュース要約 */
+    .summary-text {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+
+    /* センチメント */
+    .sentiment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 640px) {
+      .sentiment-grid { grid-template-columns: 1fr; }
+    }
+
+    .sentiment-card {
+      background: var(--surface2);
+      border-radius: 12px;
+      padding: 16px;
+      border-left: 4px solid;
+    }
+
+    .sentiment-card.positive { border-left-color: var(--positive); }
+    .sentiment-card.negative { border-left-color: var(--negative); }
+    .sentiment-card.neutral { border-left-color: var(--neutral); }
+
+    .sentiment-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .sentiment-card.positive .sentiment-label { color: var(--positive); }
+    .sentiment-card.negative .sentiment-label { color: var(--negative); }
+    .sentiment-card.neutral .sentiment-label { color: var(--neutral); }
+
+    .sentiment-text {
+      font-size: 0.85rem;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    /* 記事リスト */
+    .article-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px;
+      background: var(--surface2);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .article-card:hover {
+      border-color: var(--accent);
+      background: var(--card-hover);
+    }
+
+    .rank {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent2);
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .article-content { flex: 1; }
+
+    .article-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+      transition: color 0.2s;
+    }
+
+    .article-title:hover { color: var(--accent2); }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .source-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      background: rgba(99, 102, 241, 0.2);
+      color: var(--accent2);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .article-point {
+      font-size: 0.85rem;
+      color: var(--text2);
+    }
+
+    /* 履歴 */
+    .hist-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .hist-tab {
+      padding: 6px 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text2);
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .hist-tab:hover, .hist-tab.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .hist-summary {
+      font-size: 0.85rem;
+      color: var(--text2);
+      margin-bottom: 12px;
+      padding: 12px;
+      background: var(--surface2);
+      border-radius: 8px;
+    }
+
+    .hist-article {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+
+    .hist-rank { color: var(--accent2); font-weight: 700; min-width: 30px; }
+    .hist-article a { color: var(--text); text-decoration: none; flex: 1; }
+    .hist-article a:hover { color: var(--accent2); }
+    .hist-source {
+      padding: 2px 6px;
+      background: var(--surface2);
+      border-radius: 4px;
+      font-size: 0.7rem;
+      color: var(--text2);
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--text2);
+      font-size: 0.8rem;
+    }
+
+    /* スケジュール情報 */
+    .schedule-info {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .schedule-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--text2);
+    }
+
+    .schedule-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ローディングアニメーション */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .live-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      animation: pulse 2s infinite;
+      margin-right: 4px;
+    }
+
+    /* 週刊ジョーホー風解説セクション */
+    .joho-section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .joho-section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #7c3aed, #db2777);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .joho-section-desc {
+      font-size: 0.78rem;
+      color: var(--text2);
+      margin-bottom: 20px;
+      padding: 10px 14px;
+      background: rgba(124, 58, 237, 0.08);
+      border-left: 3px solid #7c3aed;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .joho-card {
+      background: var(--surface2);
+      border: 1px solid #2d1f4e;
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 16px;
+      position: relative;
+      transition: all 0.2s;
+    }
+
+    .joho-card:hover {
+      border-color: #7c3aed;
+      background: #1a1535;
+    }
+
+    .joho-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, #7c3aed, #db2777);
+      border-radius: 14px 0 0 14px;
+    }
+
+    .joho-headline {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #c4b5fd;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .joho-body {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.85;
+      margin-bottom: 14px;
+      white-space: pre-wrap;
+    }
+
+    .joho-why {
+      font-size: 0.85rem;
+      color: #f0abfc;
+      font-weight: 600;
+      margin-bottom: 12px;
+      padding: 10px 14px;
+      background: rgba(219, 39, 119, 0.1);
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    .joho-source {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+      color: var(--text2);
+      border-top: 1px solid #2d1f4e;
+      padding-top: 10px;
+    }
+
+    .joho-source-label {
+      color: var(--text2);
+    }
+
+    .joho-source-link {
+      color: #a78bfa;
+      text-decoration: none;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .joho-source-link:hover {
+      color: #c4b5fd;
+      text-decoration: underline;
+    }
+
+    .joho-source-name {
+      display: inline-block;
+      padding: 2px 8px;
+      background: rgba(124, 58, 237, 0.2);
+      color: #a78bfa;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">🤖</div>
+        <div class="logo-text">
+          <h1>AI News Daily</h1>
+          <p>アメリカ発・AI最新ニュース自動キュレーション</p>
+        </div>
+        <div class="presented-by">
+          <a href="../index.html">Presented by INCURATOR, Inc</a>
+        </div>
+      </div>
+      <div class="update-info">
+        <div class="time-slot-badge"><span class="live-dot"></span>朝版</div>
+        <div class="update-time">更新: 2026年02月22日 09:34 JST</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ニュース要約 + 意見分析 -->
+    <div class="grid-2">
+      <!-- ニュース要約 -->
+      <div class="card">
+        <div class="section-header">
+          <div class="icon">📰</div>
+          <h2>今の注目AIニュース要約</h2>
+        </div>
+        <p class="summary-text">最新のAIニュースでは、AIを取り巻く多角的な側面が浮き彫りになりました。OpenAIのサム・アルトマンCEOは、AIの莫大なエネルギー消費について人間の活動と比較し、その必要性を主張しました。これに関連して、AIデータセンターの電力不足問題に対し、高温超伝導体（超電導を利用して電力を効率的に送る技術）が解決策として注目されています。一方、AIの倫理と安全性に関する懸念も顕在化。OpenAIは、銃乱射事件の容疑者がChatGPTで暴力的な内容を記述したことを受け、警察への通報を検討したと報じられ、AIの悪用リスクと企業の責任が問われています。産業動向としては、Microsoftのゲーム部門CEOが「無駄なAI（endless AI slop）」の乱用を避け、質を重視する姿勢を示し、GoogleのVPはLLM（大規模言語モデル）を単純にラップするだけの企業や、複数のAIサービスを統合するAIアグリゲーターが、差別化の難しさから淘汰される可能性を警告しました。しかし、技術革新も続いており、OpenAIはCodexエージェント（コード生成AI）が大規模なソフトウェア開発を自動化する「Harness Engineering」を発表し、AIによる生産性向上の可能性を提示しています。これらの動きは、AIが技術進化、産業構造変革、そして社会的・倫理的課題が同時に進行するフェーズにあることを示唆しています。</p>
+      </div>
+
+      <!-- 意見・見解 -->
+      <div class="card">
+        <div class="section-header">
+          <div class="icon">💬</div>
+          <h2>メディア・専門家の見解</h2>
+        </div>
+        <p class="summary-text">AI関連ニュースからは、技術革新への期待と同時に、倫理的課題やビジネスの淘汰に関する多様な意見が示されています。ポジティブな面では、OpenAIがHarness Engineeringを通じてCodexエージェントによる大規模ソフトウェア開発の自動化を提案し、AIが生産性を飛躍的に向上させる可能性に期待が寄せられています。また、AIデータセンターの膨大な電力需要に対し、高温超伝導体技術が解決策として注目され、AIインフラの持続可能性への道筋が見え始めています。ネガティブな意見としては、Microsoftのゲーミング部門CEOが「無駄なAI」の氾濫を避け、品質を重視すると表明し、AIの安易な利用への懸念を表明。Google VPは、LLMラッパーやAIアグリゲーターといった差別化に乏しいAIスタートアップの淘汰を警告し、ビジネスモデルの脆弱性を指摘しています。さらに、OpenAIが銃乱射事件容疑者の暴力的なチャットについて警察通報を検討した一件は、AIの悪用リスクと企業に求められる倫理的責任、安全性確保の難しさを浮き彫りにしています。中立的な見解としては、Sam AltmanがAIのエネルギー消費を人間の活動と比較することで、問題の多角的な側面を提示し、AIの社会的コストについての議論を促しています。また、データサイエンティストには確率・統計的思考が重要であるという指摘は、AI活用の基盤となる専門知識の継続的な育成の必要性を強調しています。</p>
+
+        <!-- センチメント分析 -->
+        <div class="sentiment-grid">
+          <div class="sentiment-card positive">
+            <div class="sentiment-label">✅ ポジティブ</div>
+            <div class="sentiment-text">OpenAIの「Harness Engineering」によるソフトウェア開発の自動化や、高温超伝導体によるAIデータセンターの電力供給革新など、AI技術が生産性向上とインフラ強化に貢献する期待が高い。</div>
+          </div>
+          <div class="sentiment-card negative">
+            <div class="sentiment-label">⚠️ ネガティブ</div>
+            <div class="sentiment-text">Google VPは差別化に乏しいAIスタートアップの淘汰を警告。Microsoftは「無駄なAI」の氾濫に警鐘を鳴らす。OpenAIが悪用事例を巡り警察通報を検討したように、AIの悪用リスクと倫理的課題が顕在化している。</div>
+          </div>
+          <div class="sentiment-card neutral">
+            <div class="sentiment-label">⚖️ 中立</div>
+            <div class="sentiment-text">サム・アルトマンはAIのエネルギー消費を人間の活動と比較し、問題の多面性を指摘。データサイエンティストにとって確率・統計的思考の重要性が強調され、専門知識の継続的な育成の必要性を示唆する。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- トップ記事 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="icon">🏆</div>
+        <h2>注目記事 TOP 10</h2>
+      </div>
+      
+        <div class="article-card">
+          <span class="rank">#1</span>
+          <div class="article-content">
+            <a href="https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/" target="_blank" rel="noopener noreferrer" class="article-title">
+              Sam Altman would like remind you that humans use a lot of energy, too
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">TechCrunch AI</span>
+            </div>
+            <p class="article-point">Sam Altman、AIのエネルギー消費を人間活動と比較し、必要性を主張。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#2</span>
+          <div class="article-content">
+            <a href="https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/" target="_blank" rel="noopener noreferrer" class="article-title">
+              OpenAI debated calling police about suspected Canadian shooter’s chats
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">TechCrunch AI</span>
+            </div>
+            <p class="article-point">OpenAI、銃乱射事件容疑者の暴力的なチャットで警察通報を検討。AI悪用リスク。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#3</span>
+          <div class="article-content">
+            <a href="https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/" target="_blank" rel="noopener noreferrer" class="article-title">
+              Google VP warns that two types of AI startups may not survive
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">TechCrunch AI</span>
+            </div>
+            <p class="article-point">Google VP、LLMラッパーやAIアグリゲーター型スタートアップの淘汰を警告。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#4</span>
+          <div class="article-content">
+            <a href="https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer" class="article-title">
+              OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">InfoQ AI/ML</span>
+            </div>
+            <p class="article-point">OpenAI、Codexエージェントによる大規模ソフト開発自動化「Harness Engineering」導入。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#5</span>
+          <div class="article-content">
+            <a href="https://spectrum.ieee.org/ai-data-centers-hts-superconductors" target="_blank" rel="noopener noreferrer" class="article-title">
+              AI Data Centers Turn to High-Temperature Superconductors
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">IEEE Spectrum</span>
+            </div>
+            <p class="article-point">AIデータセンターの電力問題解決へ、高温超伝導技術への期待高まる。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#6</span>
+          <div class="article-content">
+            <a href="https://techcrunch.com/2026/02/21/microsofts-new-gaming-ceo-vows-not-to-flood-the-ecosystem-with-endless-ai-slop/" target="_blank" rel="noopener noreferrer" class="article-title">
+              Microsoft’s new gaming CEO vows not to flood the ecosystem with ‘endless AI slop’
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">TechCrunch AI</span>
+            </div>
+            <p class="article-point">MSゲーミングCEO、質の低いAIの乱用を否定し、AI利用の慎重姿勢を表明。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#7</span>
+          <div class="article-content">
+            <a href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt" target="_blank" rel="noopener noreferrer" class="article-title">
+              Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">The Verge AI</span>
+            </div>
+            <p class="article-point">銃乱射容疑者がChatGPTで暴力描写、OpenAIが懸念していたことを報道。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#8</span>
+          <div class="article-content">
+            <a href="https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/" target="_blank" rel="noopener noreferrer" class="article-title">
+              Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">Analytics Vidhya</span>
+            </div>
+            <p class="article-point">マルチエージェントAIシステムを統括する「Supervisor Agent」の重要性。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#9</span>
+          <div class="article-content">
+            <a href="https://www.analyticsvidhya.com/blog/2026/02/probability-and-statistics-interview-questions/" target="_blank" rel="noopener noreferrer" class="article-title">
+              15 Probability and Statistics Interview Questions Every Data Scientist Must Master
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">Analytics Vidhya</span>
+            </div>
+            <p class="article-point">データサイエンティストに必須の確率・統計的思考の重要性を強調。</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#10</span>
+          <div class="article-content">
+            <a href="https://www.zdnet.com/article/best-indoor-tv-antenna/" target="_blank" rel="noopener noreferrer" class="article-title">
+              The best indoor TV antenna of 2026: Expert recommended
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">ZDNet AI</span>
+            </div>
+            <p class="article-point">AI関連性なしのため、評価対象外。</p>
+          </div>
+        </div>
+
+    </div>
+
+    <!-- 週刊ジョーホー風 AI解説 -->
+    <div class="card">
+      <div class="joho-section-header">
+        <div class="joho-section-badge">📺 今週のAIが選んだAI関連ニュースのAI解説</div>
+      </div>
+      <div class="joho-section-desc">
+        世界のAIニュースをAIに収集してもらってからのAIによる面白そうな記事をピックアップしてからのAIによるNews解説！！
+      </div>
+      
+        <div class="joho-card">
+          <div class="joho-headline">【電力争奪戦】AIは「人間より無駄」か</div>
+          <div class="joho-body">OpenAIのサム・アルトマンが「人間を育てるのにも多大なエネルギーがかかる」と発言しました。これは、AIの電力消費量が爆発的に増え、世界の電力インフラを圧迫し始めている現実から、企業側の意図的な目逸らしを感じます。現在のAIブームは、その影で膨大な電力コストと環境負荷を生み出しています。彼の言葉は、AIの発展が既存インフラの限界にぶつかる中、「それでも進む」という強引なメッセージであり、その先に何が待っているのか、我々は冷静に見極める必要があります。楽観論の裏には常に、無視できない現実があるものです。</div>
+          <div class="joho-why">■ なぜ重要か：AIの電力消費問題は、単なる技術コストではなく、各国のエネルギー戦略、そしてビジネスの持続可能性を根本から揺るがす喫緊の課題です。日本企業もこれを他人事と捉えるべきではありません。</div>
+          <div class="joho-source">
+            <span class="joho-source-label">📰 元記事:</span>
+            <a href="https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/" target="_blank" rel="noopener noreferrer" class="joho-source-link">Sam Altman would like remind you that humans use a lot of energy, too</a>
+            <span class="joho-source-name">TechCrunch AI</span>
+          </div>
+        </div>
+
+        <div class="joho-card">
+          <div class="joho-headline">【大淘汰】AIスタートアップの末路</div>
+          <div class="joho-body">GoogleのVPが「LLMラッパーとAIアグリゲーターという2種類のAIスタートアップは生き残れないだろう」と警告しました。これはまさに、AIブームに乗じた表層的なビジネスモデルへの厳しい現実突きつけです。基盤モデルの上に薄いレイヤーを乗せるだけでは、差別化もマージンも限定的。結局はGoogleやOpenAIといった巨人たちのエコシステムに取り込まれるか、淘汰される運命にあります。技術の本質的な進化がないビジネスは、すぐにその限界を迎える。これはAI業界で起きている資本主義の厳しさそのものです。</div>
+          <div class="joho-why">■ なぜ重要か：安易なAI活用ではなく、自社の核となる技術やサービスとAIをどう融合させるか。日本のビジネスパーソンは、この淘汰の波から本質的な価値創造の重要性を学ぶべきです。</div>
+          <div class="joho-source">
+            <span class="joho-source-label">📰 元記事:</span>
+            <a href="https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/" target="_blank" rel="noopener noreferrer" class="joho-source-link">Google VP warns that two types of AI startups may not survive</a>
+            <span class="joho-source-name">TechCrunch AI</span>
+          </div>
+        </div>
+
+        <div class="joho-card">
+          <div class="joho-headline">【社会毒】AIと犯罪、企業責任</div>
+          <div class="joho-body">カナダで発生した銃乱射事件の容疑者が、犯行数カ月前にChatGPTに暴力的シナリオを詳細に記述していたことが発覚し、OpenAI内で警察への通報が議論されていました。AIが悪用される、あるいはユーザーの危険な兆候を見逃すリスクは、技術進化の裏側で深刻化しています。プライバシー保護と公共の安全という相反する価値観の間で、企業はどこまで責任を負うべきか。これは単なる倫理問題ではなく、AIが社会インフラ化するにつれて避けては通れない、企業の社会的存在意義を問う重い問いです。</div>
+          <div class="joho-why">■ なぜ重要か：AIの社会実装は技術的な課題だけでなく、倫理、安全保障、そして企業の法的な責任という極めて重いテーマを突きつけます。これは対岸の火事ではなく、日本でも起こり得る社会問題です。</div>
+          <div class="joho-source">
+            <span class="joho-source-label">📰 元記事:</span>
+            <a href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt" target="_blank" rel="noopener noreferrer" class="joho-source-link">Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT</a>
+            <span class="joho-source-name">The Verge AI</span>
+          </div>
+        </div>
+
+        <div class="joho-card">
+          <div class="joho-headline">【インフラの壁】AI電力、超電導頼み</div>
+          <div class="joho-body">AIデータセンターの電力需要が既存グリッドの能力を遥かに超え、高温超電導技術に活路を見出している現実がここNYからも見えます。これはAIが巻き起こす「電力戦争」の始まりです。従来の送電網では、AIの膨大なエネルギー消費に全く追いつきません。電力インフラはAIブームの影に隠れた最大のボトルネックであり、技術的な進歩がどんなに加速しても、電力供給という物理的な限界には抗えません。AIの未来は、半導体だけでなく、電力インフラという古くて新しい課題が握っています。</div>
+          <div class="joho-why">■ なぜ重要か：AIの進化は半導体戦争の次、「電力戦争」へと移行しています。日本の電力インフラやエネルギー戦略にも直結する、喫緊かつ国家的な重要課題です。</div>
+          <div class="joho-source">
+            <span class="joho-source-label">📰 元記事:</span>
+            <a href="https://spectrum.ieee.org/ai-data-centers-hts-superconductors" target="_blank" rel="noopener noreferrer" class="joho-source-link">AI Data Centers Turn to High-Temperature Superconductors</a>
+            <span class="joho-source-name">IEEE Spectrum</span>
+          </div>
+        </div>
+
+    </div>
+
+    <!-- 過去の履歴 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="icon">📅</div>
+        <h2>過去の更新履歴</h2>
+      </div>
+      <div class="hist-tabs">
+        <button class="hist-tab active" onclick="showHistory(0)">02/22 09:34 朝</button>
+<button class="hist-tab " onclick="showHistory(1)">02/22 01:30 夜</button>
+<button class="hist-tab " onclick="showHistory(2)">02/22 01:29 夜</button>
+<button class="hist-tab " onclick="showHistory(3)">02/22 01:28 夜</button>
+<button class="hist-tab " onclick="showHistory(4)">02/22 00:55 夜</button>
+<button class="hist-tab " onclick="showHistory(5)">02/22 00:45 夜</button>
+<button class="hist-tab " onclick="showHistory(6)">02/22 00:22 夜</button>
+<button class="hist-tab " onclick="showHistory(7)">02/20 23:44 夜</button>
+
+      </div>
+      <div id="history-container">
+        
+        <div id="hist-0" class="hist-content" style="display:block">
+          <h4>02/22 09:34 朝版</h4>
+          <div class="hist-summary">最新のAIニュースでは、AIを取り巻く多角的な側面が浮き彫りになりました。OpenAIのサム・アルトマンCEOは、AIの莫大なエネルギー消費について人間の活動と比較し、その必要性を主張しました。これに関連して、AIデータセンターの電力不足問題に対し、高温超伝導体（超電導を利用して電力を効率的に送る技術）が解決策として注目されています。一方、AIの倫理と安全性に関する懸念も顕在化。OpenAIは、銃...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://techcrunch.com/2026/02/21/sam-altman-would-like-remind-you-that-humans-use-a-lot-of-energy-too/" target="_blank" rel="noopener noreferrer">Sam Altman would like remind you that humans use a lot of energy, too</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/" target="_blank" rel="noopener noreferrer">OpenAI debated calling police about suspected Canadian shooter’s chats</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/" target="_blank" rel="noopener noreferrer">Google VP warns that two types of AI startups may not survive</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development</a>
+                <span class="hist-source">InfoQ AI/ML</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://spectrum.ieee.org/ai-data-centers-hts-superconductors" target="_blank" rel="noopener noreferrer">AI Data Centers Turn to High-Temperature Superconductors</a>
+                <span class="hist-source">IEEE Spectrum</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-1" class="hist-content" style="display:none">
+          <h4>02/22 01:30 夜版</h4>
+          <div class="hist-summary">AI分野では、Googleの幹部がLLM（大規模言語モデル）ラッパーやAIアグリゲーターといった一部のAIスタートアップが差別化の困難さから淘汰される可能性を指摘し、ビジネスモデルの再考が迫られていることが明らかになりました。一方、OpenAIのChatGPTが悪用され、銃乱射事件の容疑者が暴力的な内容を投稿していた問題が浮上し、AIの安全性、倫理、監視体制の強化が喫緊の課題となっています。技術革...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/" target="_blank" rel="noopener noreferrer">Google VP warns that two types of AI startups may not survive</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/" target="_blank" rel="noopener noreferrer">OpenAI debated calling police about suspected Canadian shooter’s chats</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt" target="_blank" rel="noopener noreferrer">Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT</a>
+                <span class="hist-source">The Verge AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development</a>
+                <span class="hist-source">InfoQ AI/ML</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/" target="_blank" rel="noopener noreferrer">Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems</a>
+                <span class="hist-source">Analytics Vidhya</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-2" class="hist-content" style="display:none">
+          <h4>02/22 01:29 夜版</h4>
+          <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/" target="_blank" rel="noopener noreferrer">Google VP warns that two types of AI startups may not survive</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/" target="_blank" rel="noopener noreferrer">OpenAI debated calling police about suspected Canadian shooter’s chats</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt" target="_blank" rel="noopener noreferrer">Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT</a>
+                <span class="hist-source">The Verge AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development</a>
+                <span class="hist-source">InfoQ AI/ML</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/" target="_blank" rel="noopener noreferrer">Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems</a>
+                <span class="hist-source">Analytics Vidhya</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-3" class="hist-content" style="display:none">
+          <h4>02/22 01:28 夜版</h4>
+          <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/" target="_blank" rel="noopener noreferrer">Google VP warns that two types of AI startups may not survive</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/" target="_blank" rel="noopener noreferrer">OpenAI debated calling police about suspected Canadian shooter’s chats</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt" target="_blank" rel="noopener noreferrer">Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT</a>
+                <span class="hist-source">The Verge AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development</a>
+                <span class="hist-source">InfoQ AI/ML</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/" target="_blank" rel="noopener noreferrer">Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems</a>
+                <span class="hist-source">Analytics Vidhya</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-4" class="hist-content" style="display:none">
+          <h4>02/22 00:55 夜版</h4>
+          <div class="hist-summary">最新のAI関連ニュースでは、AIの倫理的側面、技術革新、インフラ課題が浮き彫りになっています。OpenAIは、銃乱射事件容疑者がChatGPTで暴力的なチャットを行っていたにも関わらず、警察への通報を社内で議論した問題が表面化しました。これは、AIの悪用リスクと企業が負うべき社会的安全保障の責任、倫理的ジレンマを強く示唆しています。
+一方で、OpenAIはCodexエージェント（コード生成AI）を...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/" target="_blank" rel="noopener noreferrer">OpenAI debated calling police about suspected Canadian shooter’s chats</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt" target="_blank" rel="noopener noreferrer">Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT</a>
+                <span class="hist-source">The Verge AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development</a>
+                <span class="hist-source">InfoQ AI/ML</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://spectrum.ieee.org/ai-data-centers-hts-superconductors" target="_blank" rel="noopener noreferrer">AI Data Centers Turn to High-Temperature Superconductors</a>
+                <span class="hist-source">IEEE Spectrum</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/" target="_blank" rel="noopener noreferrer">Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems</a>
+                <span class="hist-source">Analytics Vidhya</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-5" class="hist-content" style="display:none">
+          <h4>02/22 00:45 夜版</h4>
+          <div class="hist-summary">OpenAIは、銃乱射事件の容疑者がChatGPTに暴力的シナリオを記述した件で警察に通報すべきか議論し、AIの悪用と安全対策の喫緊性を浮き彫りにした。一方、同社は「Harness Engineering」を発表、Codexエージェント（大規模言語モデル）がソフトウェア開発を生成・テスト・デプロイまで自動化し、開発効率を飛躍的に向上させる。また、複雑なAIワークフローを管理する「Superviso...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/" target="_blank" rel="noopener noreferrer">OpenAI debated calling police about suspected Canadian shooter’s chats</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt" target="_blank" rel="noopener noreferrer">Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT</a>
+                <span class="hist-source">The Verge AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development</a>
+                <span class="hist-source">InfoQ AI/ML</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/" target="_blank" rel="noopener noreferrer">Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems</a>
+                <span class="hist-source">Analytics Vidhya</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://www.analyticsvidhya.com/blog/2026/02/probability-and-statistics-interview-questions/" target="_blank" rel="noopener noreferrer">15 Probability and Statistics Interview Questions Every Data Scientist Must Master</a>
+                <span class="hist-source">Analytics Vidhya</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-6" class="hist-content" style="display:none">
+          <h4>02/22 00:22 夜版</h4>
+          <div class="hist-summary">AI業界では、Anthropicが非技術者向けデスクトップAIエージェント「Cowork」をリリースし、コード不要でファイル連携を可能にすることで、AIの民主化を加速させています。一方で、同社の「Claude Code」のような高価なAIコーディングサービスに対し、「Goose」のような無料代替ツールが登場し、AIツールのコストとアクセシビリティに関する競争が激化しています。エンタープライズAI市...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no" target="_blank" rel="noopener noreferrer">Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required</a>
+                <span class="hist-source">VentureBeat AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" target="_blank" rel="noopener noreferrer">Railway secures $100 million to challenge AWS with AI-native cloud infrastructure</a>
+                <span class="hist-source">VentureBeat AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and" target="_blank" rel="noopener noreferrer">Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI</a>
+                <span class="hist-source">VentureBeat AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free" target="_blank" rel="noopener noreferrer">Claude Code costs up to $200 a month. Goose does the same thing for free.</a>
+                <span class="hist-source">VentureBeat AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://techcrunch.com/2026/02/20/anthropic-funded-group-backs-candidate-attacked-by-rival-ai-super-pac/" target="_blank" rel="noopener noreferrer">Anthropic-funded group backs candidate attacked by rival AI super PAC</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-7" class="hist-content" style="display:none">
+          <h4>02/20 23:44 夜版</h4>
+          <div class="hist-summary">最新のAIニュースは、インド市場の急速な成長、主要AIモデルの性能向上、企業向けAIツールの進化、そしてAIインフラ投資の活発化を示しています。
+
+まず、インドはAI分野で注目すべき中心地となりつつあります。OpenAIは、インドのChatGPT利用者の約半数（18～24歳）が若年層であることを報告。Nvidiaも同国のAIスタートアップエコシステムへの初期段階投資を強化しています。さらに、UAE...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://techcrunch.com/2026/02/20/openai-says-18-to-24-year-olds-account-for-nearly-50-of-chatgpt-usage-in-india/" target="_blank" rel="noopener noreferrer">OpenAI says 18 to 24-year-olds account for nearly 50% of ChatGPT usage in India</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://techcrunch.com/2026/02/20/uaes-g42-teams-up-with-cerebras-to-deploy-8-exaflops-of-compute-in-india/" target="_blank" rel="noopener noreferrer">UAE’s G42 teams up with Cerebras to deploy 8 exaflops of compute in India</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/" target="_blank" rel="noopener noreferrer">Google’s new Gemini Pro model has record benchmark scores — again</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://techcrunch.com/2026/02/19/nvidia-deepens-early-stage-push-into-indias-ai-startup-ecosystem/" target="_blank" rel="noopener noreferrer">Nvidia deepens early-stage push into India’s AI startup ecosystem</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://techcrunch.com/2026/02/19/web-summit-qatar-read-ai-lucidya-notetakers-customer-support/" target="_blank" rel="noopener noreferrer">Why these startup CEOs don’t think AI will replace human roles</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 更新スケジュール -->
+    <div class="card">
+      <div class="section-header">
+        <div class="icon">🕐</div>
+        <h2>自動更新スケジュール</h2>
+      </div>
+      <div class="schedule-info">
+        <div class="schedule-item"><div class="schedule-dot"></div>朝 6:00 JST</div>
+        <div class="schedule-item"><div class="schedule-dot"></div>昼 12:00 JST</div>
+        <div class="schedule-item"><div class="schedule-dot"></div>夕方 16:00 JST</div>
+        <div class="schedule-item"><div class="schedule-dot"></div>夜 20:00 JST</div>
+      </div>
+      <p style="font-size:0.8rem;color:var(--text2);margin-top:12px;">
+        📰 メディア: TechCrunch, VentureBeat, The Verge, Wired, MIT Tech Review, ZDNet, IEEE Spectrum など<br>
+        👤 キーマン: Google DeepMind, NVIDIA, Microsoft AI, Hugging Face, Sam Altman, Andrej Karpathy など
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>AI News Daily — Powered by Claude AI | ソース: 米国主要テックメディアRSSフィード</p>
+    <p style="margin-top:8px;">本ページのニュース要約はAIによる自動生成です。原文は各ソースをご確認ください。</p>
+  </footer>
+
+  <script>
+    function showHistory(index) {
+      // 全タブ非アクティブ化
+      document.querySelectorAll('.hist-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.hist-content').forEach(c => c.style.display = 'none');
+
+      // 選択タブをアクティブ化
+      const tabs = document.querySelectorAll('.hist-tab');
+      if (tabs[index]) tabs[index].classList.add('active');
+
+      const content = document.getElementById('hist-' + index);
+      if (content) content.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

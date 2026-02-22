@@ -1,0 +1,200 @@
+{
+  "timestamp": "2026-02-22T01:29:16.257957+09:00",
+  "time_slot": "夜",
+  "summary": {
+    "news_summary": "【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。",
+    "opinion_summary": "【テストモード】メディアの意見分析はAPIキーが必要です。実際の運用時はGemini APIキーを設定することで、ポジティブ・ネガティブ・中立の意見分析が自動生成されます。",
+    "sentiment": {
+      "positive": "APIキー設定後に自動生成されます",
+      "negative": "APIキー設定後に自動生成されます",
+      "neutral": "APIキー設定後に自動生成されます"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "Google VP warns that two types of AI startups may not survive",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/",
+        "point": "As generative AI evolves, a Google VP warns that L..."
+      },
+      {
+        "rank": 2,
+        "title": "OpenAI debated calling police about suspected Canadian shooter’s chats",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/",
+        "point": "Jesse Van Rootselaar's descriptions of gun violenc..."
+      },
+      {
+        "rank": 3,
+        "title": "Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT",
+        "source": "The Verge AI",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt",
+        "point": "The suspect in the mass shooting at Tumbler Ridge,..."
+      },
+      {
+        "rank": 4,
+        "title": "OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development",
+        "source": "InfoQ AI/ML",
+        "url": "https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+        "point": "OpenAI introduces Harness Engineering, an AI-drive..."
+      },
+      {
+        "rank": 5,
+        "title": "Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems",
+        "source": "Analytics Vidhya",
+        "url": "https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/",
+        "point": "A junior loan officer handling data intake, risk s..."
+      },
+      {
+        "rank": 6,
+        "title": "15 Probability and Statistics Interview Questions Every Data Scientist Must Master",
+        "source": "Analytics Vidhya",
+        "url": "https://www.analyticsvidhya.com/blog/2026/02/probability-and-statistics-interview-questions/",
+        "point": "You probably solved Bayes’ Theorem in college and ..."
+      },
+      {
+        "rank": 7,
+        "title": "AI Data Centers Turn to High-Temperature Superconductors",
+        "source": "IEEE Spectrum",
+        "url": "https://spectrum.ieee.org/ai-data-centers-hts-superconductors",
+        "point": "Data centers for AI are turning the world of power..."
+      },
+      {
+        "rank": 8,
+        "title": "The best indoor TV antenna of 2026: Expert recommended",
+        "source": "ZDNet AI",
+        "url": "https://www.zdnet.com/article/best-indoor-tv-antenna/",
+        "point": "An indoor TV antenna is a great, budget-friendly w..."
+      },
+      {
+        "rank": 9,
+        "title": "This upcoming work laptop is a productivity dream machine that hits all the right notes",
+        "source": "ZDNet AI",
+        "url": "https://www.zdnet.com/article/asus-expertbook-ultra-b9-review/",
+        "point": "Asus' ExpertBook Ultra is a joy to use, with Intel..."
+      },
+      {
+        "rank": 10,
+        "title": "iRestore Elite Laser Hair Growth System Review: Surprisingly Effective",
+        "source": "Wired",
+        "url": "https://www.wired.com/review/irestore-elite-laser-hair-growth-system/",
+        "point": "After just two months, my husband saw enough hair ..."
+      }
+    ],
+    "joho_picks": []
+  },
+  "raw_articles": [
+    {
+      "source": "TechCrunch AI",
+      "title": "Google VP warns that two types of AI startups may not survive",
+      "url": "https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/",
+      "summary": "As generative AI evolves, a Google VP warns that LLM wrappers and AI aggregators face mounting pressure, with shrinking margins and limited differentiation threatening their long-term viability.",
+      "published": "2026-02-21 07:00 UTC",
+      "pub_dt": "2026-02-21T07:00:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI debated calling police about suspected Canadian shooter’s chats",
+      "url": "https://techcrunch.com/2026/02/21/openai-debated-calling-police-about-suspected-canadian-shooters-chats/",
+      "summary": "Jesse Van Rootselaar's descriptions of gun violence were flagged by tools that monitor ChatGPT for misuse.",
+      "published": "2026-02-21 06:25 UTC",
+      "pub_dt": "2026-02-21T06:25:44+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt",
+      "summary": "The suspect in the mass shooting at Tumbler Ridge, British Columbia, Jesse Van Rootselaar, was raising alarms among employees at OpenAI months before the shooting took place. This past June, Jesse had conversations with ChatGPT involving descriptions of gun violence that triggered the chatbot's automated review system. Several employees raised concerns that her posts could [&#8230;]",
+      "published": "2026-02-21 06:22 UTC",
+      "pub_dt": "2026-02-21T06:22:57+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "OpenAI Introduces Harness Engineering: Codex Agents Power Large‑Scale Software Development",
+      "url": "https://www.infoq.com/news/2026/02/openai-harness-engineering-codex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "OpenAI introduces Harness Engineering, an AI-driven methodology where Codex agents generate, test, and deploy a million-line production system. The platform integrates observability, architectural constraints, and structured documentation to automate key software development workflows. By Leela Kumili",
+      "published": "2026-02-21 06:14 UTC",
+      "pub_dt": "2026-02-21T06:14:00+00:00"
+    },
+    {
+      "source": "Analytics Vidhya",
+      "title": "Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems",
+      "url": "https://www.analyticsvidhya.com/blog/2026/02/supervisor-agent-guide/",
+      "summary": "A junior loan officer handling data intake, risk screening, and final decisions alone is prone to mistakes because the role demands too much at once. The same weakness appears in monolithic AI agents asked to run complex, multi-stage workflows. They lose context, skip steps, and produce shaky reasoning, which leads to unreliable results. A stronger [&#8230;]\nThe post Mastering the Supervisor Agent: A Guide to Orchestrating Multi-Agent AI Systems appeared first on Analytics Vidhya.",
+      "published": "2026-02-21 06:02 UTC",
+      "pub_dt": "2026-02-21T06:02:58+00:00"
+    },
+    {
+      "source": "Analytics Vidhya",
+      "title": "15 Probability and Statistics Interview Questions Every Data Scientist Must Master",
+      "url": "https://www.analyticsvidhya.com/blog/2026/02/probability-and-statistics-interview-questions/",
+      "summary": "You probably solved Bayes’ Theorem in college and decided you’re “good at statistics.” But interviews reveal something else: most candidates don’t fail because they can’t code. They fail because they can’t think probabilistically. Writing Python is easy. Reasoning under uncertainty isn’t. In real-world data science, weak statistical intuition is expensive. Misread an A/B test, misjudge [&#8230;]\nThe post 15 Probability and Statistics Interview Questions Every Data Scientist Must Master appeared ",
+      "published": "2026-02-21 05:54 UTC",
+      "pub_dt": "2026-02-21T05:54:55+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "AI Data Centers Turn to High-Temperature Superconductors",
+      "url": "https://spectrum.ieee.org/ai-data-centers-hts-superconductors",
+      "summary": "Data centers for AI are turning the world of power generation on its head. There isn’t enough power capacity on the grid to even come close to how much energy is needed for the number being built. And traditional transmission and distribution networks aren’t efficient enough to take full advantage of all the power available. According to the U.S. Energy Information Administration (EIA), annual transmission and distribution losses average about 5 percent. The rate is much higher in some other par",
+      "published": "2026-02-21 05:00 UTC",
+      "pub_dt": "2026-02-21T05:00:02+00:00"
+    },
+    {
+      "source": "ZDNet AI",
+      "title": "The best indoor TV antenna of 2026: Expert recommended",
+      "url": "https://www.zdnet.com/article/best-indoor-tv-antenna/",
+      "summary": "An indoor TV antenna is a great, budget-friendly way to access free local news, sports, and entertainment channels and help ditch streaming apps or cut the cord with your cable provider.",
+      "published": "2026-02-21 04:00 UTC",
+      "pub_dt": "2026-02-21T04:00:53+00:00"
+    },
+    {
+      "source": "ZDNet AI",
+      "title": "This upcoming work laptop is a productivity dream machine that hits all the right notes",
+      "url": "https://www.zdnet.com/article/asus-expertbook-ultra-b9-review/",
+      "summary": "Asus' ExpertBook Ultra is a joy to use, with Intel's flagship Panther Lake chip and a vibrant OLED display.",
+      "published": "2026-02-21 02:30 UTC",
+      "pub_dt": "2026-02-21T02:30:48+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "iRestore Elite Laser Hair Growth System Review: Surprisingly Effective",
+      "url": "https://www.wired.com/review/irestore-elite-laser-hair-growth-system/",
+      "summary": "After just two months, my husband saw enough hair regrowth that his college friends commented on it.",
+      "published": "2026-02-21 01:30 UTC",
+      "pub_dt": "2026-02-21T01:30:00+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "‘Narco-Submarine’ Carrying 4 Tons of Cocaine Captured by Mexico's Navy",
+      "url": "https://www.wired.com/story/narco-submarine-carrying-4-tons-of-cocaine-captured-by-mexicos-navy/",
+      "summary": "Following increased surveillance and patrols of routes used by transnational drug-trafficking networks, Mexican authorities have seized approximately 10 tons of cocaine in the past week alone.",
+      "published": "2026-02-21 01:00 UTC",
+      "pub_dt": "2026-02-21T01:00:00+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit",
+      "url": "https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html",
+      "summary": "India hosted one of the world's biggest AI events this week, but it was marred by impossible traffic and a lack of organization.",
+      "published": "2026-02-20 23:50 UTC",
+      "pub_dt": "2026-02-20T23:50:57+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Tech giants commit billions to Indian AI as New Delhi pushes for superpower status",
+      "url": "https://www.cnbc.com/2026/02/21/india-ai-summit-tech-giants-billion-dollar-investments.html",
+      "summary": "Tech and world leaders flocked to New Delhi for the India AI Impact Summit",
+      "published": "2026-02-20 22:30 UTC",
+      "pub_dt": "2026-02-20T22:30:35+00:00"
+    },
+    {
+      "source": "ZDNet AI",
+      "title": "These top 30 AI agents deliver a mix of functions and autonomy",
+      "url": "https://www.zdnet.com/article/top-30-ai-agents-offer-mixed-functionality-autonomy/",
+      "summary": "A handful hog the headlines, but many function-specific agents are available to developers and users. MIT's latest study explores the broader agentic ecosystem.",
+      "published": "2026-02-20 17:00 UTC",
+      "pub_dt": "2026-02-20T17:00:43+00:00"
+    }
+  ]
+}

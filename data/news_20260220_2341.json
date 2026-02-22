@@ -1,0 +1,192 @@
+{
+  "timestamp": "2026-02-20T23:41:43.310221+09:00",
+  "time_slot": "夜",
+  "summary": {
+    "news_summary": "【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。",
+    "opinion_summary": "【テストモード】メディアの意見分析はAPIキーが必要です。実際の運用時はGemini APIキーを設定することで、ポジティブ・ネガティブ・中立の意見分析が自動生成されます。",
+    "sentiment": {
+      "positive": "APIキー設定後に自動生成されます",
+      "negative": "APIキー設定後に自動生成されます",
+      "neutral": "APIキー設定後に自動生成されます"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI says 18 to 24-year-olds account for nearly 50% of ChatGPT usage in India",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/02/20/openai-says-18-to-24-year-olds-account-for-nearly-50-of-chatgpt-usage-in-india/",
+        "point": "The company said on Friday that users between 18 a..."
+      },
+      {
+        "rank": 2,
+        "title": "UAE’s G42 teams up with Cerebras to deploy 8 exaflops of compute in India",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/02/20/uaes-g42-teams-up-with-cerebras-to-deploy-8-exaflops-of-compute-in-india/",
+        "point": "Abu Dhabi-based tech company G42 has partnered wit..."
+      },
+      {
+        "rank": 3,
+        "title": "Google’s new Gemini Pro model has record benchmark scores — again",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/",
+        "point": "Gemini 3.1 Pro promises a Google LLM capable of ha..."
+      },
+      {
+        "rank": 4,
+        "title": "Nvidia deepens early-stage push into India’s AI startup ecosystem",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/02/19/nvidia-deepens-early-stage-push-into-indias-ai-startup-ecosystem/",
+        "point": "Nvidia is working with investors, nonprofits, and ..."
+      },
+      {
+        "rank": 5,
+        "title": "Why these startup CEOs don’t think AI will replace human roles",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/02/19/web-summit-qatar-read-ai-lucidya-notetakers-customer-support/",
+        "point": "The CEOs of Read AI and Lucidya told TechCrunch at..."
+      },
+      {
+        "rank": 6,
+        "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+        "source": "VentureBeat AI",
+        "url": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud",
+        "point": "Railway, a San Francisco-based cloud platform that..."
+      },
+      {
+        "rank": 7,
+        "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+        "source": "VentureBeat AI",
+        "url": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
+        "point": "The artificial intelligence coding revolution come..."
+      },
+      {
+        "rank": 8,
+        "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+        "source": "VentureBeat AI",
+        "url": "https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai",
+        "point": "Alfred Wahlforss was running out of options. His s..."
+      },
+      {
+        "rank": 9,
+        "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+        "source": "VentureBeat AI",
+        "url": "https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and",
+        "point": "Salesforce on Tuesday launched an entirely rebuilt..."
+      },
+      {
+        "rank": 10,
+        "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+        "source": "VentureBeat AI",
+        "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
+        "point": "Anthropic released Cowork on Monday, a new AI agen..."
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI says 18 to 24-year-olds account for nearly 50% of ChatGPT usage in India",
+      "url": "https://techcrunch.com/2026/02/20/openai-says-18-to-24-year-olds-account-for-nearly-50-of-chatgpt-usage-in-india/",
+      "summary": "The company said on Friday that users between 18 and 24 years of age account for nearly 50% of all messages sent by Indians to ChatGPT, and users under 30 accounted for 80% of usage in the country.",
+      "published": "Fri, 20 Feb 2026 13:57:03 +0000"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "UAE’s G42 teams up with Cerebras to deploy 8 exaflops of compute in India",
+      "url": "https://techcrunch.com/2026/02/20/uaes-g42-teams-up-with-cerebras-to-deploy-8-exaflops-of-compute-in-india/",
+      "summary": "Abu Dhabi-based tech company G42 has partnered with U.S.-based chipmaker Cerebras to deploy eight exaflops of compute through a new system in India",
+      "published": "Fri, 20 Feb 2026 11:58:15 +0000"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Google’s new Gemini Pro model has record benchmark scores — again",
+      "url": "https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/",
+      "summary": "Gemini 3.1 Pro promises a Google LLM capable of handling more complex forms of work.",
+      "published": "Fri, 20 Feb 2026 00:55:22 +0000"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Nvidia deepens early-stage push into India’s AI startup ecosystem",
+      "url": "https://techcrunch.com/2026/02/19/nvidia-deepens-early-stage-push-into-indias-ai-startup-ecosystem/",
+      "summary": "Nvidia is working with investors, nonprofits, and venture firms to build earlier ties with India's fast-growing AI founder ecosystem.",
+      "published": "Fri, 20 Feb 2026 00:30:00 +0000"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Why these startup CEOs don’t think AI will replace human roles",
+      "url": "https://techcrunch.com/2026/02/19/web-summit-qatar-read-ai-lucidya-notetakers-customer-support/",
+      "summary": "The CEOs of Read AI and Lucidya told TechCrunch at Web Summit Qatar that they see AI tools replacing tasks, rather than workers.",
+      "published": "Thu, 19 Feb 2026 20:47:22 +0000"
+    },
+    {
+      "source": "VentureBeat AI",
+      "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+      "url": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud",
+      "summary": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar on marketing, announced Thursday that it raised $100 million in a Series B funding round, as surging demand for artificial intelligence applications exposes the limitations of legacy cloud infrastructure.TQ Ventures led the round, with participation from FPV Ventures, Redpoint, and Unusual Ventures. The investment values Railway as one of the most significant infrastructure sta",
+      "published": "Thu, 22 Jan 2026 14:00:00 GMT"
+    },
+    {
+      "source": "VentureBeat AI",
+      "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "url": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
+      "summary": "The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.Claude Code, Anthropic&#x27;s terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to serve.Now, a free alternative is gaining traction. Goose, an open-source AI agent developed by Block",
+      "published": "Mon, 19 Jan 2026 14:00:00 GMT"
+    },
+    {
+      "source": "VentureBeat AI",
+      "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+      "url": "https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai",
+      "summary": "Alfred Wahlforss was running out of options. His startup, Listen Labs, needed to hire over 100 engineers, but competing against Mark Zuckerberg&#x27;s $100 million offers seemed impossible. So he spent $5,000 — a fifth of his marketing budget — on a billboard in San Francisco displaying what looked like gibberish: five strings of random numbers.The numbers were actually AI tokens. Decoded, they led to a coding challenge: build an algorithm to act as a digital bouncer at Berghain, the Berlin nigh",
+      "published": "Fri, 16 Jan 2026 14:01:00 GMT"
+    },
+    {
+      "source": "VentureBeat AI",
+      "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "url": "https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and",
+      "summary": "Salesforce on Tuesday launched an entirely rebuilt version of Slackbot, the company&#x27;s workplace assistant, transforming it from a simple notification tool into what executives describe as a fully powered AI agent capable of searching enterprise data, drafting documents, and taking action on behalf of employees.The new Slackbot, now generally available to Business+ and Enterprise+ customers, is Salesforce&#x27;s most aggressive move yet to position Slack at the center of the emerging &quot;a",
+      "published": "Tue, 13 Jan 2026 13:00:00 GMT"
+    },
+    {
+      "source": "VentureBeat AI",
+      "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
+      "summary": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users — and according to company insiders, the team built the entire feature in approximately a week and a half, largely using Claude Code itself.The launch marks a major inflection point in the race to deliver practical AI agents to mainstream users, positioning Anthropic to compete not just with OpenAI and Google in conversational AI, but with Microso",
+      "published": "Mon, 12 Jan 2026 11:30:00 GMT"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "The Pitt has a sharp take on AI",
+      "url": "https://www.theverge.com/entertainment/881016/hbo-the-pitt-generative-ai-charting",
+      "summary": "Each episode of HBO's The Pitt features some degree of medical trauma that almost makes the hospital drama feel like a horror series. Some patients are dealing with gnarly lacerations while others are fighting off vicious blood infections that could rob them of their limbs, and the chaos of working in an emergency room often [&#8230;]",
+      "published": "2026-02-19T18:15:00-05:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "The AI security nightmare is here and it looks suspiciously like lobster",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/881574/cline-openclaw-prompt-injection-hack",
+      "summary": "A hacker tricked a popular AI coding tool into installing OpenClaw - the viral, open-source AI agent OpenClaw that \"actually does things\" - absolutely everywhere. Funny as a stunt, but a sign of what to come as more and more people let autonomous software use their computers on their behalf. The hacker took advantage of [&#8230;]",
+      "published": "2026-02-19T13:58:56-05:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "The speech police came for Colbert",
+      "url": "https://www.theverge.com/podcast/881222/fcc-colbert-talarico-brendan-carr-vergecast",
+      "summary": "Generally speaking, arcane and mostly unenforced FCC rules are not the province of late night talk shows. FCC Commissioner Brendan Carr seems intent on changing that, though; not long after causing a ruckus that briefly took Jimmy Kimmel off the air, his vague threats appear to have been enough to convince CBS to tell Stephen [&#8230;]",
+      "published": "2026-02-19T10:08:39-05:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Money no longer matters to AI’s top talent",
+      "url": "https://www.theverge.com/podcast/880778/ai-talent-war-hiring-frenzy-openai-anthropic-ipo",
+      "summary": "Today on Decoder we&#8217;re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companies in the San Francisco Bay Area. Nowadays, such companies are paying [&#8230;]",
+      "published": "2026-02-19T10:00:00-05:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Google’s AI music maker is coming to the Gemini app",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/880584/google-gemini-ai-music-maker-lyria-3-beta",
+      "summary": "Google has given Gemini the ability to spit out AI-generated music, courtesy of DeepMind's latest audio model. Beta access to Lyria 3 is rolling out in the Gemini app, enabling users to generate 30-second tracks based on text, images, and videos, without having to leave the chatbot window. The new music-making tool is available globally [&#8230;]",
+      "published": "2026-02-18T11:00:00-05:00"
+    }
+  ]
+}
