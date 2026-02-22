@@ -437,14 +437,17 @@ def upload_to_ftp(html_path: Path):
     import ftplib
     try:
         print(f"[INFO] FTPアップロード開始: {FTP_HOST}")
-        with ftplib.FTP(FTP_HOST) as ftp:
+        with ftplib.FTP(timeout=30) as ftp:
+            ftp.connect(FTP_HOST, 21)
+            ftp.set_pasv(True)  # パッシブモード（NAT/クラウド環境対応）
             ftp.login(FTP_USER, FTP_PASSWORD)
+            print(f"[INFO] FTPログイン成功。ディレクトリ移動: {FTP_REMOTE_PATH}")
             ftp.cwd(FTP_REMOTE_PATH)
             with open(html_path, "rb") as f:
                 ftp.storbinary("STOR index.html", f)
         print(f"[INFO] FTPアップロード完了: {FTP_REMOTE_PATH}/index.html")
     except Exception as e:
-        print(f"[ERROR] FTPアップロード失敗: {e}")
+        print(f"[ERROR] FTPアップロード失敗: {type(e).__name__}: {e}")
 
 
 def save_data(summary: dict, articles: list[dict]) -> Path:
