@@ -32,25 +32,20 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_news.py
 
-      - name: HTTPアップロード（PHP経由でさくらサーバーへ）
+      - name: sshpassをインストール
+        run: sudo apt-get install -y sshpass
+
+      - name: rsyncでさくらサーバーへアップロード（SSH）
         env:
-          UPLOAD_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
-          UPLOAD_URL:   ${{ secrets.UPLOAD_URL }}
+          SSH_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          SSH_USER:     ${{ secrets.FTP_USER }}
+          SSH_HOST:     ${{ secrets.FTP_HOST }}
         run: |
-          RESPONSE=$(curl -s -o /tmp/upload_response.txt -w "%{http_code}" \
-            -X POST \
-            -H "X-Upload-Token: ${UPLOAD_TOKEN}" \
-            -H "Content-Type: text/html; charset=utf-8" \
-            --data-binary @web/index.html \
-            "${UPLOAD_URL}")
-          BODY=$(cat /tmp/upload_response.txt)
-          echo "[INFO] HTTP Status: ${RESPONSE}"
-          echo "[INFO] Response: ${BODY}"
-          if [ "${RESPONSE}" = "200" ]; then
-            echo "[INFO] アップロード成功！"
-          else
-            echo "[WARNING] アップロード失敗 (status: ${RESPONSE})"
-          fi
+          sshpass -p "${SSH_PASSWORD}" rsync -avz \
+            -e "ssh -o StrictHostKeyChecking=no -p 22" \
+            web/index.html \
+            "${SSH_USER}@${SSH_HOST}:www/inc/News/web/index.html"
+          echo "[INFO] rsyncアップロード完了"
 
       - name: 更新データをリポジトリに保存
         run: |
