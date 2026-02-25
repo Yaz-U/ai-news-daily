@@ -24,7 +24,7 @@ if sys.platform == "win32":
 # ===== 設定 =====
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
-WEB_DIR = BASE_DIR / "web"
+WEB_DIR = BASE_DIR / "docs"
 LOG_DIR = BASE_DIR / "logs"
 
 # 必要なディレクトリを自動作成
@@ -1207,8 +1207,9 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
   </main>
 
   <footer>
-    <p>AI News Daily — Powered by Claude AI | ソース: 米国主要テックメディアRSSフィード</p>
+    <p>AI News Daily — Powered by Gemini AI | ソース: 米国主要テックメディアRSSフィード</p>
     <p style="margin-top:8px;">本ページのニュース要約はAIによる自動生成です。原文は各ソースをご確認ください。</p>
+    <p style="margin-top:12px;">Copyright &copy; 2026 INCURATOR, Inc. All rights reserved.</p>
   </footer>
 
   <script>

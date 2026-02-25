@@ -32,10 +32,10 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_news.py
 
-      - name: 生成ファイルをリポジトリに保存（さくらcronが取得）
+      - name: 生成ファイルをリポジトリに保存（GitHub Pagesで公開）
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Actions"
-          git add data/ web/index.html
+          git add data/ docs/index.html
           git diff --staged --quiet || git commit -m "news update $(date '+%Y-%m-%d %H:%M JST' --date='9 hours')"
           git push
