@@ -313,8 +313,7 @@ def _dummy_summary(articles: list[dict]) -> dict:
 
 def generate_joho_commentary(articles: list[dict]) -> list[dict]:
     """
-    NewsPicks「週刊ジョーホー番組」風のAIニュース解説を生成する。
-    森川潤（NY支局長）・後藤直義（編集委員/NY支局）の目線を模倣。
+    News風のAIニュース解説を生成する。
     - NYからの俯瞰的・グローバル視点
     - ビジネス・経済インパクト重視
     - 技術ハイプに流されない逆張り・批判的目線
@@ -383,7 +382,7 @@ URL: {art['url']}
 
     for model_name in models_to_try:
         try:
-            print(f"[INFO] 週刊ジョーホー風解説 モデル試行: {model_name}")
+            print(f"[INFO] News風解説 モデル試行: {model_name}")
             response = client.models.generate_content(
                 model=model_name,
                 contents=prompt,
@@ -396,7 +395,7 @@ URL: {art['url']}
             json_match = re.search(r'\[[\s\S]*\]', response_text)
             if json_match:
                 picks = json.loads(json_match.group())
-                print(f"[INFO] 週刊ジョーホー風解説 生成成功: {len(picks)}本 ({model_name})")
+                print(f"[INFO] News風解説 生成成功: {len(picks)}本 ({model_name})")
                 return picks
             else:
                 raise ValueError("JSONリストが見つかりません")
@@ -407,10 +406,10 @@ URL: {art['url']}
                 print(f"[WARNING] {model_name} レート制限。次のモデルを試します...")
                 continue
             else:
-                print(f"[ERROR] 週刊ジョーホー風解説 エラー ({model_name}): {e}")
+                print(f"[ERROR] News風解説 エラー ({model_name}): {e}")
                 break
 
-    print("[WARNING] 週刊ジョーホー風解説の生成に失敗しました")
+    print("[WARNING] News風解説の生成に失敗しました")
     return []
 
 
@@ -550,7 +549,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
         </div>
 """
 
-    # 週刊ジョーホー風解説のHTML生成
+    # News風解説のHTML生成
     joho_picks = summary.get("joho_picks", [])
     joho_html = ""
     for pick in joho_picks:
@@ -1162,7 +1161,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
       {top_articles_html}
     </div>
 
-    <!-- 週刊ジョーホー風 AI解説 -->
+    <!-- News風 AI解説 -->
     <div class="card">
       <div class="joho-section-header">
         <div class="joho-section-badge">📺 今週のAIが選んだAI関連ニュースのAI解説</div>
@@ -1264,8 +1263,8 @@ def main():
     log("Gemini APIで要約生成中...")
     summary = summarize_with_gemini(articles)
 
-    # 3. 週刊ジョーホー風解説を生成
-    log("週刊ジョーホー風 解説記事を生成中...")
+    # 3. News風解説を生成
+    log("News風 解説記事を生成中...")
     joho_picks = generate_joho_commentary(articles)
     summary["joho_picks"] = joho_picks
 
