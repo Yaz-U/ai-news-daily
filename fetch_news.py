@@ -1104,7 +1104,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
           <p>アメリカ発・AI最新ニュース自動キュレーション</p>
         </div>
         <div class="presented-by">
-          <a href="../../index.html">Presented by INCURATOR, Inc</a>
+          <a href="https://incurator.co.jp/index.html">Presented by INCURATOR, Inc</a>
         </div>
       </div>
       <div class="update-info">
@@ -1208,7 +1208,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
   <footer>
     <p>AI News Daily — Powered by Gemini AI | ソース: 米国主要テックメディアRSSフィード</p>
     <p style="margin-top:8px;">本ページのニュース要約はAIによる自動生成です。原文は各ソースをご確認ください。</p>
-    <p style="margin-top:12px;">Copyright &copy; 2026 INCURATOR, Inc. All rights reserved.</p>
+    <p style="margin-top:12px;">Copyright &copy; 2026 INCURATOR,Inc. All rights reserved.</p>
   </footer>
 
   <script>
