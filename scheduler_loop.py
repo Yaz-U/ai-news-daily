@@ -12,9 +12,7 @@ import sys
 import os
 from pathlib import Path
 
-# APIキーを環境変数に設定（未設定の場合のみ）
-if not os.environ.get("GEMINI_API_KEY"):
-    os.environ["GEMINI_API_KEY"] = "AIzaSyD43VT1wbtnko40MuRFmtI_OJq4t_Lg8pc"
+# GEMINI_API_KEY は Windows 環境変数 (setx) で設定してください
 
 BASE_DIR = Path(__file__).parent
 LOG_DIR = BASE_DIR / "logs"
