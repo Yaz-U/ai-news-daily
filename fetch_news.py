@@ -26,11 +26,13 @@ BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 WEB_DIR = BASE_DIR / "docs"
 LOG_DIR = BASE_DIR / "logs"
+ARCHIVE_DIR = WEB_DIR / "archive"
 
 # 必要なディレクトリを自動作成
 DATA_DIR.mkdir(exist_ok=True)
 WEB_DIR.mkdir(exist_ok=True)
 LOG_DIR.mkdir(exist_ok=True)
+ARCHIVE_DIR.mkdir(exist_ok=True)
 
 # Gemini APIキー (環境変数から取得)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -489,6 +491,203 @@ def load_history(days: int = 3) -> list[dict]:
             continue
 
     return history
+
+
+def archive_current_page() -> None:
+    """更新前にlatest.jsonのNews風記事だけをアーカイブHTMLとして保存"""
+    latest_path = DATA_DIR / "latest.json"
+    if not latest_path.exists():
+        print("[INFO] アーカイブ対象のlatest.jsonが存在しません（初回実行）")
+        return
+
+    try:
+        with open(latest_path, "r", encoding="utf-8") as f:
+            prev_data = json.load(f)
+    except Exception as e:
+        print(f"[WARNING] latest.json読み込み失敗: {e}")
+        return
+
+    joho_picks = prev_data.get("summary", {}).get("joho_picks", [])
+    if not joho_picks:
+        print("[INFO] アーカイブ対象のNews風記事がありません（スキップ）")
+        return
+
+    # アーカイブファイル名: 前回の更新時刻を使用
+    prev_timestamp_str = prev_data.get("timestamp", "")
+    try:
+        prev_dt = datetime.datetime.fromisoformat(prev_timestamp_str)
+        archive_filename = prev_dt.strftime("%Y%m%d_%H%M") + ".html"
+        label = prev_dt.strftime("%Y年%m月%d日 %H:%M JST")
+        time_slot = prev_data.get("time_slot", "")
+    except Exception:
+        jst = datetime.timezone(datetime.timedelta(hours=9))
+        now = datetime.datetime.now(jst)
+        archive_filename = now.strftime("%Y%m%d_%H%M") + ".html"
+        label = now.strftime("%Y年%m月%d日 %H:%M JST")
+        time_slot = ""
+
+    archive_path = ARCHIVE_DIR / archive_filename
+
+    # News風記事のHTMLを生成
+    joho_cards_html = ""
+    for pick in joho_picks:
+        headline = pick.get("headline", "")
+        body = pick.get("body", "")
+        why_matters = pick.get("why_matters", "")
+        source_title = pick.get("source_title", "")
+        source_url = pick.get("source_url", "#")
+        source_name = pick.get("source_name", "")
+        joho_cards_html += f"""
+        <div class="joho-card">
+          <div class="joho-headline">{headline}</div>
+          <div class="joho-body">{body}</div>
+          <div class="joho-why">{why_matters}</div>
+          <div class="joho-source">
+            <span>📰 元記事:</span>
+            <a href="{source_url}" target="_blank" rel="noopener noreferrer" class="joho-source-link">{source_title}</a>
+            <span class="joho-source-name">{source_name}</span>
+          </div>
+        </div>
+"""
+
+    archive_html = f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{label} {time_slot}版 - AI News Daily アーカイブ</title>
+  <style>
+    :root {{
+      --bg: #0a0e1a; --surface: #111827; --surface2: #1a2235; --border: #2d3748;
+      --accent: #6366f1; --accent2: #818cf8; --text: #e2e8f0; --text2: #94a3b8;
+    }}
+    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{ font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }}
+    header {{ background: linear-gradient(135deg, #0f172a, #1e1b4b); border-bottom: 1px solid var(--accent); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }}
+    .header-left h1 {{ font-size: 1.2rem; font-weight: 700; background: linear-gradient(90deg, var(--accent2), #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }}
+    .header-left p {{ font-size: 0.8rem; color: var(--text2); margin-top: 4px; }}
+    .nav-links {{ display: flex; gap: 10px; }}
+    .nav-link {{ color: var(--accent2); text-decoration: none; font-size: 0.85rem; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 8px; transition: all 0.2s; white-space: nowrap; }}
+    .nav-link:hover {{ background: var(--accent); color: white; }}
+    main {{ max-width: 900px; margin: 40px auto; padding: 0 24px; }}
+    .section-badge {{ display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #7c3aed, #db2777); color: white; font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 8px; }}
+    .section-desc {{ font-size: 0.78rem; color: var(--text2); margin-bottom: 24px; padding: 10px 14px; background: rgba(124,58,237,0.08); border-left: 3px solid #7c3aed; border-radius: 0 8px 8px 0; }}
+    .joho-card {{ background: var(--surface2); border: 1px solid #2d1f4e; border-radius: 14px; padding: 22px 24px; margin-bottom: 16px; position: relative; transition: all 0.2s; }}
+    .joho-card:hover {{ border-color: #7c3aed; background: #1a1535; }}
+    .joho-card::before {{ content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, #7c3aed, #db2777); border-radius: 14px 0 0 14px; }}
+    .joho-headline {{ font-size: 1.05rem; font-weight: 700; color: #c4b5fd; margin-bottom: 12px; line-height: 1.4; }}
+    .joho-body {{ font-size: 0.9rem; color: var(--text); line-height: 1.85; margin-bottom: 14px; white-space: pre-wrap; }}
+    .joho-why {{ font-size: 0.85rem; color: #f0abfc; font-weight: 600; margin-bottom: 12px; padding: 10px 14px; background: rgba(219,39,119,0.1); border-radius: 8px; line-height: 1.6; }}
+    .joho-source {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 0.78rem; color: var(--text2); border-top: 1px solid #2d1f4e; padding-top: 10px; }}
+    .joho-source-link {{ color: #a78bfa; text-decoration: none; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
+    .joho-source-link:hover {{ color: #c4b5fd; text-decoration: underline; }}
+    .joho-source-name {{ display: inline-block; padding: 2px 8px; background: rgba(124,58,237,0.2); color: #a78bfa; border-radius: 4px; font-size: 0.72rem; font-weight: 500; white-space: nowrap; }}
+    footer {{ text-align: center; padding: 32px; color: var(--text2); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 40px; }}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>📺 たった今現在のAIが選んだAI関連ニュースのAI解説</h1>
+      <p>📅 {label} {time_slot}版</p>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">← 最新ニュース</a>
+      <a href="archive.html" class="nav-link">📚 一覧へ</a>
+    </div>
+  </header>
+  <main>
+    <div class="section-badge">📺 たった今現在のAIが選んだAI関連ニュースのAI解説</div>
+    <div class="section-desc">世界のAIニュースをAIに収集してもらってからのAIによる面白そうな記事をピックアップしてからのAIによるNews解説！！</div>
+    {joho_cards_html}
+  </main>
+  <footer>
+    <p>AI News Daily — Powered by Gemini AI</p>
+    <p style="margin-top:8px;">Copyright &copy; 2026 INCURATOR,Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>"""
+
+    with open(archive_path, "w", encoding="utf-8") as f:
+        f.write(archive_html)
+    print(f"[INFO] アーカイブ保存: {archive_path}")
+
+    generate_archive_index()
+
+
+def generate_archive_index() -> None:
+    """アーカイブ一覧ページ（archive.html）を生成"""
+    archive_files = sorted(ARCHIVE_DIR.glob("*.html"), reverse=True)
+
+    archive_items_html = ""
+    for af in archive_files[:100]:
+        stem = af.stem  # e.g. "20260227_1507"
+        try:
+            dt = datetime.datetime.strptime(stem, "%Y%m%d_%H%M")
+            dt = dt.replace(tzinfo=datetime.timezone(datetime.timedelta(hours=9)))
+            label = dt.strftime("%Y年%m月%d日 %H:%M JST")
+        except Exception:
+            label = stem
+
+        archive_items_html += f"""
+        <div class="archive-item">
+          <a href="archive/{af.name}" class="archive-link">
+            <span class="archive-icon">📄</span>
+            <span class="archive-label">{label}</span>
+            <span class="archive-arrow">→</span>
+          </a>
+        </div>
+"""
+
+    total = len(archive_files)
+    html = f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アーカイブ - AI News Daily</title>
+  <style>
+    :root {{
+      --bg: #0a0e1a; --surface: #111827; --border: #2d3748;
+      --accent: #6366f1; --accent2: #818cf8; --text: #e2e8f0; --text2: #94a3b8;
+    }}
+    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{ font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }}
+    header {{ background: linear-gradient(135deg, #0f172a, #1e1b4b); border-bottom: 1px solid var(--accent); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }}
+    .header-title {{ font-size: 1.3rem; font-weight: 700; background: linear-gradient(90deg, var(--accent2), #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }}
+    .back-link {{ color: var(--accent2); text-decoration: none; font-size: 0.9rem; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 8px; transition: all 0.2s; }}
+    .back-link:hover {{ background: var(--accent); color: white; }}
+    main {{ max-width: 800px; margin: 40px auto; padding: 0 24px; }}
+    h2 {{ font-size: 1.1rem; color: var(--text2); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }}
+    .archive-item {{ margin-bottom: 10px; }}
+    .archive-link {{ display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: var(--text); transition: all 0.2s; }}
+    .archive-link:hover {{ border-color: var(--accent); background: #1a2235; color: var(--accent2); }}
+    .archive-icon {{ font-size: 1.1rem; }}
+    .archive-label {{ flex: 1; font-size: 0.95rem; }}
+    .archive-arrow {{ color: var(--text2); font-size: 0.9rem; }}
+    footer {{ text-align: center; padding: 32px; color: var(--text2); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 40px; }}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">📚 AI News Daily アーカイブ</div>
+    <a href="index.html" class="back-link">← 最新ニュース</a>
+  </header>
+  <main>
+    <h2>過去の更新一覧（全{total}件）</h2>
+    {archive_items_html if archive_items_html else '<p style="color:var(--text2);padding:20px 0;">アーカイブはまだありません。</p>'}
+  </main>
+  <footer>
+    <p>AI News Daily — Powered by Gemini AI</p>
+    <p style="margin-top:8px;">Copyright &copy; 2026 INCURATOR,Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>"""
+
+    archive_index_path = WEB_DIR / "archive.html"
+    with open(archive_index_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"[INFO] アーカイブ一覧ページ生成: {archive_index_path}")
 
 
 def generate_html(current_data: dict, history: list[dict]) -> Path:
@@ -1164,7 +1363,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
     <!-- News風 AI解説 -->
     <div class="card">
       <div class="joho-section-header">
-        <div class="joho-section-badge">📺 今週のAIが選んだAI関連ニュースのAI解説</div>
+        <div class="joho-section-badge">📺 たった今現在のAIが選んだAI関連ニュースのAI解説</div>
       </div>
       <div class="joho-section-desc">
         世界のAIニュースをAIに収集してもらってからのAIによる面白そうな記事をピックアップしてからのAIによるNews解説！！
@@ -1208,6 +1407,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
   <footer>
     <p>AI News Daily — Powered by Gemini AI | ソース: 米国主要テックメディアRSSフィード</p>
     <p style="margin-top:8px;">本ページのニュース要約はAIによる自動生成です。原文は各ソースをご確認ください。</p>
+    <p style="margin-top:12px;"><a href="archive.html" style="color:#818cf8;text-decoration:none;">📚 過去のニュースアーカイブを見る</a></p>
     <p style="margin-top:12px;">Copyright &copy; 2026 INCURATOR,Inc. All rights reserved.</p>
   </footer>
 
@@ -1268,7 +1468,11 @@ def main():
     joho_picks = generate_joho_commentary(articles)
     summary["joho_picks"] = joho_picks
 
-    # 4. データ保存
+    # 4. 前回のNews風記事をアーカイブ（latest.json上書き前に保存）
+    log("前回のNews風記事をアーカイブ中...")
+    archive_current_page()
+
+    # 5. データ保存
     current_data = {
         "timestamp": datetime.datetime.now(
             datetime.timezone(datetime.timedelta(hours=9))
@@ -1279,14 +1483,14 @@ def main():
     }
     save_data(summary, articles)
 
-    # 5. 履歴読み込み
+    # 6. 履歴読み込み
     history = load_history()
 
-    # 6. HTML生成
+    # 7. HTML生成
     log("HTMLページ生成中...")
     html_path = generate_html(current_data, history)
 
-    # 7. FTPアップロード（さくらサーバーへ）
+    # 8. FTPアップロード（さくらサーバーへ）
     log("FTPアップロード中...")
     upload_to_ftp(html_path)
 

@@ -36,6 +36,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Actions"
-          git add data/ docs/index.html
+          git add data/ docs/index.html docs/archive.html docs/archive/
           git diff --staged --quiet || git commit -m "news update $(date '+%Y-%m-%d %H:%M JST' --date='9 hours')"
           git push
