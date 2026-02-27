@@ -1351,15 +1351,6 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
       </div>
     </div>
 
-    <!-- トップ記事 -->
-    <div class="card">
-      <div class="section-header">
-        <div class="icon">🏆</div>
-        <h2>注目記事 TOP 10</h2>
-      </div>
-      {top_articles_html}
-    </div>
-
     <!-- News風 AI解説 -->
     <div class="card">
       <div class="joho-section-header">
@@ -1369,6 +1360,15 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
         世界のAIニュースをAIに収集してもらってからのAIによる面白そうな記事をピックアップしてからのAIによるNews解説！！
       </div>
       {joho_html if joho_html else '<p style="color:var(--text2);font-size:0.85rem;">解説記事を生成中、または対象記事がありませんでした。</p>'}
+    </div>
+
+    <!-- トップ記事 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="icon">🏆</div>
+        <h2>注目記事 TOP 10</h2>
+      </div>
+      {top_articles_html}
     </div>
 
     <!-- 過去の履歴 -->
