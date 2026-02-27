@@ -327,7 +327,7 @@ def generate_joho_commentary(articles: list[dict]) -> list[dict]:
     client = genai.Client(api_key=GEMINI_API_KEY)
 
     articles_text = ""
-    for i, art in enumerate(articles[:15], 1):
+    for i, art in enumerate(articles[:20], 1):
         articles_text += f"""
 【記事{i}】
 タイトル: {art['title']}
@@ -355,7 +355,7 @@ URL: {art['url']}
 - 本文は250〜350字の日本語
 - 最後に「■ なぜ重要か」として1〜2文で核心をまとめる
 
-以下のニュース記事の中から、あなたの目線で特に重要・興味深いと思う記事を3〜4本選び、
+以下のニュース記事の中から、あなたの目線で特に重要・興味深いと思う記事を8〜10本選び、
 それぞれについて上記スタイルで解説記事を書いてください。
 
 {articles_text}
