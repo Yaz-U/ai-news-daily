@@ -278,10 +278,9 @@ URL: {art['url']}
             err_str = str(e)
             if "429" in err_str or "quota" in err_str.lower():
                 print(f"[WARNING] {model_name} レート制限。次のモデルを試します...")
-                continue
             else:
-                print(f"[ERROR] Gemini API エラー ({model_name}): {e}")
-                break
+                print(f"[ERROR] Gemini API エラー ({model_name}): {e}。次のモデルを試します...")
+            continue
 
     print("[ERROR] 全モデルで失敗しました")
     return _dummy_summary(articles)
@@ -406,10 +405,9 @@ URL: {art['url']}
             err_str = str(e)
             if "429" in err_str or "quota" in err_str.lower():
                 print(f"[WARNING] {model_name} レート制限。次のモデルを試します...")
-                continue
             else:
-                print(f"[ERROR] News風解説 エラー ({model_name}): {e}")
-                break
+                print(f"[ERROR] News風解説 エラー ({model_name}): {e}。次のモデルを試します...")
+            continue
 
     print("[WARNING] News風解説の生成に失敗しました")
     return []
