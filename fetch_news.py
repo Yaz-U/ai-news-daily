@@ -312,13 +312,14 @@ def _dummy_summary(articles: list[dict]) -> dict:
     }
 
 
-def generate_joho_commentary(articles: list[dict]) -> list[dict]:
+def generate_joho_commentary(articles: list[dict], history: list[dict] = None) -> list[dict]:
     """
-    News風のAIニュース解説を生成する。
+    News風のAIニュース深掘り解説を生成する。
     - NYからの俯瞰的・グローバル視点
     - ビジネス・経済インパクト重視
     - 技術ハイプに流されない逆張り・批判的目線
     - 【】囲みの衝撃的見出し
+    - 複数ソース・過去記事を絡めた点と線の分析
     - 読者に「なぜそれが重要か」を問い直す構成
     """
     if not GEMINI_API_KEY or not articles:
@@ -337,6 +338,24 @@ URL: {art['url']}
 ---
 """
 
+    # 過去記事のヘッドラインリストを構築
+    history_text = ""
+    if history:
+        history_text = "\n【過去数日間の主要記事（参考情報）】\n"
+        for h in history[:8]:
+            ts = h.get("timestamp", "")[:10]
+            picks = h.get("summary", {}).get("joho_picks", [])
+            if picks:
+                for p in picks[:5]:
+                    headline = p.get("headline", "")
+                    body_preview = p.get("body", "")[:100]
+                    history_text += f"- [{ts}] {headline} — {body_preview}...\n"
+            else:
+                raw = h.get("raw_articles", [])
+                for r in raw[:3]:
+                    history_text += f"- [{ts}] {r.get('title', '')}\n"
+        history_text += "---\n"
+
     prompt = f"""
 あなたはニューヨーク在住の日本人ジャーナリストです。
 アメリカのAI業界を最前線で取材し、日本のビジネスパーソン向けに「本当に重要なこと」を伝えることを使命としています。
@@ -350,14 +369,27 @@ URL: {art['url']}
 - 断言する。「〜かもしれません」より「〜です」「〜でした」
 
 【記事の形式】
-- 見出しは【】で囲む（例：【現実】【衝撃】【ミニ教養】【絶句】【完全解説】【NY発】【独自分析】）
+- 見出しは【】で囲む（例：【現実】【衝撃】【ミニ教養】【絶句】【完全解説】【NY発】【独自分析】【裏事情】【点と線】）
 - 見出しは15字以内で読者の興味を引くキャッチーなもの
-- 本文は250〜350字の日本語
-- 最後に「■ なぜ重要か」として1〜2文で核心をまとめる
+
+- 本文は600〜900字の日本語で、以下の要素を含めて深掘りすること：
+  ・このニュースの裏側にある背景や文脈（「実はこういう事情がある」）
+  ・複数の記事・情報源を横断した分析（「別のソースではこう報じている」「○○の発言と合わせると」）
+  ・業界関係者・専門家・アナリストがどう見ているかの紹介（「シリコンバレーのVC界隈では」「ウォール街のアナリストは」）
+  ・表面的な報道では見えない力学（企業の思惑、規制の動き、技術トレンドの裏側）
+  ・読者が「へぇ、そういうことだったのか」と膝を打つような解説
+
+- 「■ なぜ重要か」は200〜400字で以下を含める：
+  ・日本のビジネスパーソン・企業にとっての具体的な影響
+  ・今後の展開予測（「これにより○○が加速する」「次に起きるのは○○だ」）
+  ・なぜ今このタイミングで注目すべきか
+
+- 過去記事との関連がある場合は「■ 関連する動き」として記載（例：「○日前の△△の続報」「□□と合わせて読むと流れが見える」）。関連がなければ空文字にする
 
 以下のニュース記事の中から、あなたの目線で特に重要・興味深いと思う記事を8〜10本選び、
-それぞれについて上記スタイルで解説記事を書いてください。
-
+それぞれについて上記スタイルで深掘り解説記事を書いてください。
+{history_text}
+【本日の記事】
 {articles_text}
 
 必ずJSONのみで回答してください（説明文・マークダウン不要）：
@@ -367,8 +399,9 @@ URL: {art['url']}
     "source_title": "参照した記事の元タイトル",
     "source_url": "参照した記事のURL",
     "source_name": "メディア名",
-    "body": "本文（250〜350字）",
-    "why_matters": "■ なぜ重要か：（1〜2文）"
+    "body": "本文（600〜900字の深掘り解説）",
+    "why_matters": "■ なぜ重要か（200〜400字）",
+    "context": "■ 関連する動き：（過去記事や他ソースとの関連があれば記載。なければ空文字）"
   }},
   ...
 ]
@@ -532,14 +565,17 @@ def archive_current_page() -> None:
         headline = pick.get("headline", "")
         body = pick.get("body", "")
         why_matters = pick.get("why_matters", "")
+        context = pick.get("context", "")
         source_title = pick.get("source_title", "")
         source_url = pick.get("source_url", "#")
         source_name = pick.get("source_name", "")
+        context_html = f'<div class="joho-context">{context}</div>' if context else ""
         joho_cards_html += f"""
         <div class="joho-card">
           <div class="joho-headline">{headline}</div>
           <div class="joho-body">{body}</div>
           <div class="joho-why">{why_matters}</div>
+          {context_html}
           <div class="joho-source">
             <span>📰 元記事:</span>
             <a href="{source_url}" target="_blank" rel="noopener noreferrer" class="joho-source-link">{source_title}</a>
@@ -576,6 +612,7 @@ def archive_current_page() -> None:
     .joho-headline {{ font-size: 1.05rem; font-weight: 700; color: #c4b5fd; margin-bottom: 12px; line-height: 1.4; }}
     .joho-body {{ font-size: 0.9rem; color: var(--text); line-height: 1.85; margin-bottom: 14px; white-space: pre-wrap; }}
     .joho-why {{ font-size: 0.85rem; color: #f0abfc; font-weight: 600; margin-bottom: 12px; padding: 10px 14px; background: rgba(219,39,119,0.1); border-radius: 8px; line-height: 1.6; }}
+    .joho-context {{ font-size: 0.82rem; color: #93c5fd; margin-bottom: 12px; padding: 10px 14px; background: rgba(59,130,246,0.1); border-radius: 8px; line-height: 1.6; border-left: 3px solid #3b82f6; }}
     .joho-source {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 0.78rem; color: var(--text2); border-top: 1px solid #2d1f4e; padding-top: 10px; }}
     .joho-source-link {{ color: #a78bfa; text-decoration: none; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
     .joho-source-link:hover {{ color: #c4b5fd; text-decoration: underline; }}
@@ -753,14 +790,17 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
         headline = pick.get("headline", "")
         body = pick.get("body", "")
         why_matters = pick.get("why_matters", "")
+        context = pick.get("context", "")
         source_title = pick.get("source_title", "")
         source_url = pick.get("source_url", "#")
         source_name = pick.get("source_name", "")
+        context_html = f'<div class="joho-context">{context}</div>' if context else ""
         joho_html += f"""
         <div class="joho-card">
           <div class="joho-headline">{headline}</div>
           <div class="joho-body">{body}</div>
           <div class="joho-why">{why_matters}</div>
+          {context_html}
           <div class="joho-source">
             <span class="joho-source-label">📰 元記事:</span>
             <a href="{source_url}" target="_blank" rel="noopener noreferrer" class="joho-source-link">{source_title}</a>
@@ -1249,6 +1289,17 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
       line-height: 1.6;
     }}
 
+    .joho-context {{
+      font-size: 0.82rem;
+      color: #93c5fd;
+      margin-bottom: 12px;
+      padding: 10px 14px;
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 8px;
+      line-height: 1.6;
+      border-left: 3px solid #3b82f6;
+    }}
+
     .joho-source {{
       display: flex;
       align-items: center;
@@ -1461,16 +1512,19 @@ def main():
     log("Gemini APIで要約生成中...")
     summary = summarize_with_gemini(articles)
 
-    # 3. News風解説を生成
-    log("News風 解説記事を生成中...")
-    joho_picks = generate_joho_commentary(articles)
+    # 3. 履歴読み込み（過去記事との関連分析に使用）
+    history = load_history()
+
+    # 4. News風解説を生成（過去記事を参照して深掘り）
+    log("News風 深掘り解説記事を生成中...")
+    joho_picks = generate_joho_commentary(articles, history)
     summary["joho_picks"] = joho_picks
 
-    # 4. 前回のNews風記事をアーカイブ（latest.json上書き前に保存）
+    # 5. 前回のNews風記事をアーカイブ（latest.json上書き前に保存）
     log("前回のNews風記事をアーカイブ中...")
     archive_current_page()
 
-    # 5. データ保存
+    # 6. データ保存
     current_data = {
         "timestamp": datetime.datetime.now(
             datetime.timezone(datetime.timedelta(hours=9))
@@ -1480,9 +1534,6 @@ def main():
         "raw_articles": articles[:15],
     }
     save_data(summary, articles)
-
-    # 6. 履歴読み込み
-    history = load_history()
 
     # 7. HTML生成
     log("HTMLページ生成中...")
