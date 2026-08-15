@@ -543,8 +543,8 @@
         </div>
       </div>
       <div class="update-info">
-        <div class="time-slot-badge"><span class="live-dot"></span>昼版</div>
-        <div class="update-time">更新: 2026年08月15日 12:26 JST</div>
+        <div class="time-slot-badge"><span class="live-dot"></span>夕方版</div>
+        <div class="update-time">更新: 2026年08月15日 16:33 JST</div>
       </div>
     </div>
   </header>
@@ -744,19 +744,55 @@
         <h2>過去の更新履歴</h2>
       </div>
       <div class="hist-tabs">
-        <button class="hist-tab active" onclick="showHistory(0)">08/15 06:19 朝</button>
-<button class="hist-tab " onclick="showHistory(1)">08/14 20:42 夜</button>
-<button class="hist-tab " onclick="showHistory(2)">08/14 17:18 夕方</button>
-<button class="hist-tab " onclick="showHistory(3)">08/14 13:38 昼</button>
-<button class="hist-tab " onclick="showHistory(4)">08/14 06:39 朝</button>
-<button class="hist-tab " onclick="showHistory(5)">08/13 20:45 夜</button>
-<button class="hist-tab " onclick="showHistory(6)">08/13 17:23 夕方</button>
-<button class="hist-tab " onclick="showHistory(7)">08/13 13:42 昼</button>
+        <button class="hist-tab active" onclick="showHistory(0)">08/15 12:26 昼</button>
+<button class="hist-tab " onclick="showHistory(1)">08/15 06:19 朝</button>
+<button class="hist-tab " onclick="showHistory(2)">08/14 20:42 夜</button>
+<button class="hist-tab " onclick="showHistory(3)">08/14 17:18 夕方</button>
+<button class="hist-tab " onclick="showHistory(4)">08/14 13:38 昼</button>
+<button class="hist-tab " onclick="showHistory(5)">08/14 06:39 朝</button>
+<button class="hist-tab " onclick="showHistory(6)">08/13 20:45 夜</button>
+<button class="hist-tab " onclick="showHistory(7)">08/13 17:23 夕方</button>
 
       </div>
       <div id="history-container">
         
         <div id="hist-0" class="hist-content" style="display:block">
+          <h4>08/15 12:26 昼版</h4>
+          <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://www.cnbc.com/2026/08/14/openai-cfo-friar-tells-investors-that-enterprise-bigger-than-consumer.html" target="_blank" rel="noopener noreferrer">OpenAI CFO Friar tells investors that enterprise business now bigger than consumer by revenue</a>
+                <span class="hist-source">CNBC Tech</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://venturebeat.com/technology/glm-5-3-is-here-with-advanced-cyber-capabilities-and-reportedly-already-found-a-serious-vulnerability-in-cursor" target="_blank" rel="noopener noreferrer">GLM-5.3 is here with advanced cyber capabilities — and reportedly already found a 'serious vulnerability' in Cursor</a>
+                <span class="hist-source">VentureBeat</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html" target="_blank" rel="noopener noreferrer">Nvidia discloses $21 billion stake in SpaceX at end of second quarter</a>
+                <span class="hist-source">CNBC Tech</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://www.cnbc.com/2026/08/14/drone-stocks-trump-tariffs.html" target="_blank" rel="noopener noreferrer">Drone stocks rally after Trump orders tariffs on foreign-made components</a>
+                <span class="hist-source">CNBC Tech</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://www.cnbc.com/2026/08/14/open-ai-ipo-red-flag.html" target="_blank" rel="noopener noreferrer">OpenAI talent exodus raises 'huge red flag' ahead of IPO</a>
+                <span class="hist-source">CNBC Tech</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-1" class="hist-content" style="display:none">
           <h4>08/15 06:19 朝版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -792,7 +828,7 @@
 </div>
         </div>
 
-        <div id="hist-1" class="hist-content" style="display:none">
+        <div id="hist-2" class="hist-content" style="display:none">
           <h4>08/14 20:42 夜版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -828,7 +864,7 @@
 </div>
         </div>
 
-        <div id="hist-2" class="hist-content" style="display:none">
+        <div id="hist-3" class="hist-content" style="display:none">
           <h4>08/14 17:18 夕方版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -864,7 +900,7 @@
 </div>
         </div>
 
-        <div id="hist-3" class="hist-content" style="display:none">
+        <div id="hist-4" class="hist-content" style="display:none">
           <h4>08/14 13:38 昼版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -900,7 +936,7 @@
 </div>
         </div>
 
-        <div id="hist-4" class="hist-content" style="display:none">
+        <div id="hist-5" class="hist-content" style="display:none">
           <h4>08/14 06:39 朝版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -936,7 +972,7 @@
 </div>
         </div>
 
-        <div id="hist-5" class="hist-content" style="display:none">
+        <div id="hist-6" class="hist-content" style="display:none">
           <h4>08/13 20:45 夜版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -972,7 +1008,7 @@
 </div>
         </div>
 
-        <div id="hist-6" class="hist-content" style="display:none">
+        <div id="hist-7" class="hist-content" style="display:none">
           <h4>08/13 17:23 夕方版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -1003,42 +1039,6 @@
               <div class="hist-article">
                 <span class="hist-rank">#5</span>
                 <a href="https://www.cnbc.com/2026/08/12/cerebras-cbrs-q2-earnings-report-2026.html" target="_blank" rel="noopener noreferrer">Cerebras stock plunges 14% after second earnings report following IPO</a>
-                <span class="hist-source">CNBC Tech</span>
-              </div>
-</div>
-        </div>
-
-        <div id="hist-7" class="hist-content" style="display:none">
-          <h4>08/13 13:42 昼版</h4>
-          <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
-          <div class="hist-articles">
-              <div class="hist-article">
-                <span class="hist-rank">#1</span>
-                <a href="https://www.cnbc.com/2026/08/13/south-korea-kospi-bull-market-sk-hynix-samsung-surge.html" target="_blank" rel="noopener noreferrer">South Korea’s Kospi has staged a stunning comeback. How long will the bull market last?</a>
-                <span class="hist-source">CNBC Tech</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#2</span>
-                <a href="https://www.cnbc.com/2026/08/13/south-korea-kospi-bull-market-sk-hynix-samsung-ai-trade.html" target="_blank" rel="noopener noreferrer">South Korea's Kospi swings from bear to bull-market territory in just over a month on AI trade</a>
-                <span class="hist-source">CNBC Tech</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#3</span>
-                <a href="https://www.zdnet.com/article/polymaths-specialists-arent-required-ai-agent-workplace/" target="_blank" rel="noopener noreferrer">'Specialists aren't required' anymore: How to stay valuable in an AI agent workplace today</a>
-                <span class="hist-source">ZDNet AI</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#4</span>
-                <a href="https://www.cnbc.com/2026/08/12/cerebras-cbrs-q2-earnings-report-2026.html" target="_blank" rel="noopener noreferrer">Cerebras stock plunges 14% after second earnings report following IPO</a>
-                <span class="hist-source">CNBC Tech</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#5</span>
-                <a href="https://www.cnbc.com/2026/08/12/google-pixel-11-gemini-ai-phone-apple.html" target="_blank" rel="noopener noreferrer">Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple</a>
                 <span class="hist-source">CNBC Tech</span>
               </div>
 </div>
