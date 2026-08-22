@@ -543,8 +543,8 @@
         </div>
       </div>
       <div class="update-info">
-        <div class="time-slot-badge"><span class="live-dot"></span>昼版</div>
-        <div class="update-time">更新: 2026年08月22日 12:30 JST</div>
+        <div class="time-slot-badge"><span class="live-dot"></span>夕方版</div>
+        <div class="update-time">更新: 2026年08月22日 16:34 JST</div>
       </div>
     </div>
   </header>
@@ -744,19 +744,55 @@
         <h2>過去の更新履歴</h2>
       </div>
       <div class="hist-tabs">
-        <button class="hist-tab active" onclick="showHistory(0)">08/22 06:18 朝</button>
-<button class="hist-tab " onclick="showHistory(1)">08/21 20:25 夜</button>
-<button class="hist-tab " onclick="showHistory(2)">08/21 16:45 夕方</button>
-<button class="hist-tab " onclick="showHistory(3)">08/21 12:38 昼</button>
-<button class="hist-tab " onclick="showHistory(4)">08/21 06:22 朝</button>
-<button class="hist-tab " onclick="showHistory(5)">08/20 20:25 夜</button>
-<button class="hist-tab " onclick="showHistory(6)">08/20 16:43 夕方</button>
-<button class="hist-tab " onclick="showHistory(7)">08/20 12:34 昼</button>
+        <button class="hist-tab active" onclick="showHistory(0)">08/22 12:30 昼</button>
+<button class="hist-tab " onclick="showHistory(1)">08/22 06:18 朝</button>
+<button class="hist-tab " onclick="showHistory(2)">08/21 20:25 夜</button>
+<button class="hist-tab " onclick="showHistory(3)">08/21 16:45 夕方</button>
+<button class="hist-tab " onclick="showHistory(4)">08/21 12:38 昼</button>
+<button class="hist-tab " onclick="showHistory(5)">08/21 06:22 朝</button>
+<button class="hist-tab " onclick="showHistory(6)">08/20 20:25 夜</button>
+<button class="hist-tab " onclick="showHistory(7)">08/20 16:43 夕方</button>
 
       </div>
       <div id="history-container">
         
         <div id="hist-0" class="hist-content" style="display:block">
+          <h4>08/22 12:30 昼版</h4>
+          <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://www.wired.com/story/the-unlikely-place-at-the-center-of-chinas-ai-boom/" target="_blank" rel="noopener noreferrer">The Unlikely Place at the Center of China’s AI Boom</a>
+                <span class="hist-source">Wired</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://www.wired.com/story/teslas-door-handles-lead-to-its-biggest-recall-yet/" target="_blank" rel="noopener noreferrer">Tesla’s Door Handles Lead to Its Biggest Recall Yet</a>
+                <span class="hist-source">Wired</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/" target="_blank" rel="noopener noreferrer">Anthropic’s Opus 4.6 is a smut-machine</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/" target="_blank" rel="noopener noreferrer">Nvidia partners with data center developer Cloverleaf</a>
+                <span class="hist-source">TechCrunch AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#5</span>
+                <a href="https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html" target="_blank" rel="noopener noreferrer">Anthropic IPO filing will show AI backlash as a risk factor, sources say</a>
+                <span class="hist-source">CNBC Tech</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-1" class="hist-content" style="display:none">
           <h4>08/22 06:18 朝版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -792,7 +828,7 @@
 </div>
         </div>
 
-        <div id="hist-1" class="hist-content" style="display:none">
+        <div id="hist-2" class="hist-content" style="display:none">
           <h4>08/21 20:25 夜版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -828,7 +864,7 @@
 </div>
         </div>
 
-        <div id="hist-2" class="hist-content" style="display:none">
+        <div id="hist-3" class="hist-content" style="display:none">
           <h4>08/21 16:45 夕方版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -864,7 +900,7 @@
 </div>
         </div>
 
-        <div id="hist-3" class="hist-content" style="display:none">
+        <div id="hist-4" class="hist-content" style="display:none">
           <h4>08/21 12:38 昼版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -900,7 +936,7 @@
 </div>
         </div>
 
-        <div id="hist-4" class="hist-content" style="display:none">
+        <div id="hist-5" class="hist-content" style="display:none">
           <h4>08/21 06:22 朝版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -936,7 +972,7 @@
 </div>
         </div>
 
-        <div id="hist-5" class="hist-content" style="display:none">
+        <div id="hist-6" class="hist-content" style="display:none">
           <h4>08/20 20:25 夜版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -972,7 +1008,7 @@
 </div>
         </div>
 
-        <div id="hist-6" class="hist-content" style="display:none">
+        <div id="hist-7" class="hist-content" style="display:none">
           <h4>08/20 16:43 夕方版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -1003,42 +1039,6 @@
               <div class="hist-article">
                 <span class="hist-rank">#5</span>
                 <a href="https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/" target="_blank" rel="noopener noreferrer">Stripe didn’t really buy OpenRouter because of the ‘singularity’</a>
-                <span class="hist-source">TechCrunch AI</span>
-              </div>
-</div>
-        </div>
-
-        <div id="hist-7" class="hist-content" style="display:none">
-          <h4>08/20 12:34 昼版</h4>
-          <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
-          <div class="hist-articles">
-              <div class="hist-article">
-                <span class="hist-rank">#1</span>
-                <a href="https://venturebeat.com/orchestration/truefoundrys-open-source-ai-agent-harness-trueforge-boasts-30-75-cheaper-task-completion-than-claude-managed-agents" target="_blank" rel="noopener noreferrer">TrueFoundry's open source AI agent harness TrueForge boasts 30%-75% cheaper task completion than Claude Managed Agents</a>
-                <span class="hist-source">VentureBeat</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#2</span>
-                <a href="https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/" target="_blank" rel="noopener noreferrer">Stripe didn’t really buy OpenRouter because of the ‘singularity’</a>
-                <span class="hist-source">TechCrunch AI</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#3</span>
-                <a href="https://www.wired.com/story/elon-musk-is-expected-to-point-his-money-machine-at-texas/" target="_blank" rel="noopener noreferrer">Elon Musk Is Expected to Point His Money Machine at Texas Politics</a>
-                <span class="hist-source">Wired</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#4</span>
-                <a href="https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/" target="_blank" rel="noopener noreferrer">OpenAI seeks to one-up Anthropic with new customer privacy protections</a>
-                <span class="hist-source">TechCrunch AI</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#5</span>
-                <a href="https://techcrunch.com/2026/08/19/cognition-ceo-denies-report-that-spacex-tried-to-acquire-the-startup/" target="_blank" rel="noopener noreferrer">Cognition CEO denies report that SpaceX tried to acquire the startup</a>
                 <span class="hist-source">TechCrunch AI</span>
               </div>
 </div>
