@@ -544,7 +544,7 @@
       </div>
       <div class="update-info">
         <div class="time-slot-badge"><span class="live-dot"></span>夜版</div>
-        <div class="update-time">更新: 2026年09月08日 18:05 JST</div>
+        <div class="update-time">更新: 2026年09月08日 19:27 JST</div>
       </div>
     </div>
   </header>
@@ -552,8 +552,8 @@
   <main>
     
     <div class="card editorial-hero">
-      <div class="section-header"><div class="icon">🧭</div><h2>半導体微細化とエージェント実証の二正面で動く収益化</h2></div>
-      <p class="summary-text">ハードウェアの極限追求と、エージェントの実運用テスト・コスト削減の双方が同時進行し、AI産業の主導権争いは「モデルの頭脳戦」から「インフラの排他性と実務の信頼性」へ移行した。</p>
+      <div class="section-header"><div class="icon">🧭</div><h2>オープン重みモデルの巨大化と、エージェント自動化の実装競争</h2></div>
+      <p class="summary-text">Mistralの巨額調達とQwen・OpenClawの開発進展は、オープンウェイト（公開された重みデータ）モデルと実行ドライバが、単なる実験段階を越えて実運用レイヤーに移行しつつある事を示している。</p>
     </div>
     
     <!-- ニュース要約 + 意見分析 -->
@@ -564,9 +564,13 @@
           <div class="icon">📰</div>
           <h2>今の注目AIニュース要約</h2>
         </div>
-        <p class="summary-text">ハードウェアの極限追求と、エージェントの実運用テスト・コスト削減の双方が同時進行し、AI産業の主導権争いは「モデルの頭脳戦」から「インフラの排他性と実務の信頼性」へ移行した。
+        <p class="summary-text">Mistralの巨額調達とQwen・OpenClawの開発進展は、オープンウェイト（公開された重みデータ）モデルと実行ドライバが、単なる実験段階を越えて実運用レイヤーに移行しつつある事を示している。
 
-【事実】今回の変化の起点となるのは、半導体製造と欧州AI陣営の動き、そして自律型エージェントの実務適用の深化である。CNBC Techの報道によれば、TSMCとサムスン電子は、AI需要の急増を背景に、オランダASMLの最先端の微細化技術である「High NA EUV（高開口数極端紫外線）」露光装置の導入を正式にコミットした。これにより、より複雑で小型化された半導体の量産体制へ舵を切っている。同時に、サムスン主導のラウンドで欧州の主要AI企業であるMistral AIが240億ドルの評価額で巨額の資金調達を達成した。Mistralはオープンウェイト（重み公開）モデルを軸に、OpenAIやAnthropicに対抗する構えを見せている。また、ソフトウエアおよびエージェントの領域では、Anthropicがエージェント作業向けに最大45%安価とする「Claude Fable 5.1」を投入し、OpenAIも自律エージェント関連の動向を見せるなどコストと自律性の実用化が進んでいる（Last Week in AI）。これに加え、InfoQ等の解説によれば、AIエージェントがデモ段階で停滞するボトルネックを解消するため、シミュレーション駆動型の自動テストや合成ユーザーペルソナを活用したCI/CDパイプラインによる品質検証の重要性が指摘されている。ハードウェアの物理的限界への挑戦と、エージェントを本番環境へ載せるための検証基盤の整備が同時に進行している。</p>
+【事実】CNBCの報道によると、欧州のMistral AIはサムスン電子などの主導により240億ドルの評価額で資金調達を完了し、オープンウェイトモデルを軸に米大手に対抗する姿勢を鮮明にしている [3]。
+
+同時に、オープンソースおよびオープンウェイトの文脈では、QwenがデスクトップやOSレベルの自動化を担う「cua-driver-rs v0.20.4」や「v0.23.0-nightly」などのドライバ・SDKを相次いでリリースし、マルチプラットフォームでのエージェント実行環境をコードベースで具体化させている [1, 2]。さらにOpenClawも「v2026.9.3」をリリースし [4]、自律的なワークフローを実運用に載せるためのツールチェーン整備が進んでいる。
+
+一方、ニューヨーク・タイムズの報道では、米国の輸出管理対象であるブラックリスト企業の子会社を経由して、中国の主要AI企業がエヌビディアの最先端チップを入手し続けていた実態が明るみに出た [5]。これは、ハードウェアの物理的統制と実需の間に依然として深い流通の抜け穴が存在することを示している。</p>
       </div>
 
       <!-- 編集部の見立て -->
@@ -575,7 +579,9 @@
           <div class="icon">🧠</div>
           <h2>今回の見立て</h2>
         </div>
-        <p class="summary-text">【解釈】この同時多発的な動きは、AI産業の収益化とインフラ投資のボトルネックが「モデルのパラメータ数」から「物理的な製造能力」および「エージェントの運用信頼性」へ移動したことを意味する。TSMCやサムスンによるASMLのHigh NA EUV装置への投資は、次世代AIアクセラレータの供給網における勝者が誰になるかを決定づける動きであり、半導体製造装置のサプライチェーンを握るプレイヤーの寡占力をさらに高める。一方、Mistralへの大型出資とサムスンの関与は、アジアの製造インフラと欧州のオープンウェイトモデル陣営が、米国大手プロプライエタリ（独自）モデルに対抗するための資本・ハードウェア同盟を形成しつつあると読める。さらに、エージェントのコスト低下（Anthropicの事例）とテスト・検証技術の高度化は、企業顧客が「AIに何をさせるか」の実験フェーズを終え、「いかにコストを抑えて安全にトラブルなく本番稼働させるか」という投資対効果（ROI）の厳格な検証フェーズに入ったことを示している。ただし、半導体の歩留まり悪化や、エージェントの自律稼働における法的・運用上の事故が頻発すれば、このインフラ投資と実用化の波は急速に冷え込むリスクを孕む。</p>
+        <p class="summary-text">【解釈】今回の変化は、AIの価値が「基礎モデルのパラメータ数」という単一の指標から、「エージェントが実業務のデスクトップ環境やシステム間でいかに安価かつ確実に稼働するか」という実装インフラの勝負へ移ったことを意味する。
+
+Mistralの巨額調達は、資本市場が「独自モデルを自社で抱え、顧客のオンプレミスや多様なクラウド環境に柔軟にデプロイできるオープンウェイト陣営」の生存確率を高く見積もり始めた証左である。一方で、Qwenなどのオープンコード群がOSレベルのドライバやシェル機能を急速に固めているのは、APIの叩き合いから、PCやサーバの操作権限をAIが直接握る「エージェントの実行レイヤー」への垂直統合を急いでいるためだ。ハードウェア規制の網をかいくぐって最先端チップが流通する実態と合わせ、計算資源の確保と実行ツールのオープン化が同時並行で進むことで、開発コストと実運用コストの双方が圧縮される圧力が強まっている。</p>
       </div>
     </div>
 
@@ -589,35 +595,39 @@
       </div>
       
         <div class="joho-card">
-          <div class="joho-headline">半導体微細化とエージェント実証の二正面で動く収益化</div>
-          <div class="joho-body">【結論】AI産業の競争軸は、単なる基礎モデルの性能競走から、物理的インフラの排他的な確保と、自律型エージェント（人間の指示に基づき自ら判断・実行するAI）を実務で検証・運用するフェーズへと決定的にシフトした。本稿では、ASMLの最先端半導体製造装置への投資、Mistral AIの大規模資金調達、そしてエージェントのエラー検証やコスト構造の変化を伝える複数の材料を束ねる。これらは、AIバブル論を超えて、サプライチェーンと実運用プロセスの双方で「選別」が始まった構造変化を示している。ハードとソフトの結節点で何が起きているのか、その実態を因果関係から読み解く。
+          <div class="joho-headline">オープン重みモデルの巨大化と、エージェント自動化の実装競争</div>
+          <div class="joho-body">【結論】AI競争の主戦場は、推論能力の誇示から、自律型エージェント（自ら判断し実行するプログラム）を実務環境に定着させるための「実行インフラと流通コスト」の支配権争いへと完全にシフトした。
 
-【事実】今回の変化の起点となるのは、半導体製造と欧州AI陣営の動き、そして自律型エージェントの実務適用の深化である。CNBC Techの報道によれば、TSMCとサムスン電子は、AI需要の急増を背景に、オランダASMLの最先端の微細化技術である「High NA EUV（高開口数極端紫外線）」露光装置の導入を正式にコミットした。これにより、より複雑で小型化された半導体の量産体制へ舵を切っている。同時に、サムスン主導のラウンドで欧州の主要AI企業であるMistral AIが240億ドルの評価額で巨額の資金調達を達成した。Mistralはオープンウェイト（重み公開）モデルを軸に、OpenAIやAnthropicに対抗する構えを見せている。また、ソフトウエアおよびエージェントの領域では、Anthropicがエージェント作業向けに最大45%安価とする「Claude Fable 5.1」を投入し、OpenAIも自律エージェント関連の動向を見せるなどコストと自律性の実用化が進んでいる（Last Week in AI）。これに加え、InfoQ等の解説によれば、AIエージェントがデモ段階で停滞するボトルネックを解消するため、シミュレーション駆動型の自動テストや合成ユーザーペルソナを活用したCI/CDパイプラインによる品質検証の重要性が指摘されている。ハードウェアの物理的限界への挑戦と、エージェントを本番環境へ載せるための検証基盤の整備が同時に進行している。
+本稿では、欧州のAIチャンピオン企業による巨額資金調達のニュースと、中国発の主要オープンモデル陣営によるOS・SDK（ソフトウェア開発キット）アップデート、さらに米国の先端チップ流通網に関する最新報道を組み合わせ、今日の材料を一つの論点として読み解く。機能の目新しさではなく、計算資源と流通の主導権がどこに移動しているのかを明らかにする。
 
-【解釈】この同時多発的な動きは、AI産業の収益化とインフラ投資のボトルネックが「モデルのパラメータ数」から「物理的な製造能力」および「エージェントの運用信頼性」へ移動したことを意味する。TSMCやサムスンによるASMLのHigh NA EUV装置への投資は、次世代AIアクセラレータの供給網における勝者が誰になるかを決定づける動きであり、半導体製造装置のサプライチェーンを握るプレイヤーの寡占力をさらに高める。一方、Mistralへの大型出資とサムスンの関与は、アジアの製造インフラと欧州のオープンウェイトモデル陣営が、米国大手プロプライエタリ（独自）モデルに対抗するための資本・ハードウェア同盟を形成しつつあると読める。さらに、エージェントのコスト低下（Anthropicの事例）とテスト・検証技術の高度化は、企業顧客が「AIに何をさせるか」の実験フェーズを終え、「いかにコストを抑えて安全にトラブルなく本番稼働させるか」という投資対効果（ROI）の厳格な検証フェーズに入ったことを示している。ただし、半導体の歩留まり悪化や、エージェントの自律稼働における法的・運用上の事故が頻発すれば、このインフラ投資と実用化の波は急速に冷え込むリスクを孕む。
+【事実】CNBCの報道によると、欧州のMistral AIはサムスン電子などの主導により240億ドルの評価額で資金調達を完了し、オープンウェイトモデルを軸に米大手に対抗する姿勢を鮮明にしている [3]。
+
+同時に、オープンソースおよびオープンウェイトの文脈では、QwenがデスクトップやOSレベルの自動化を担う「cua-driver-rs v0.20.4」や「v0.23.0-nightly」などのドライバ・SDKを相次いでリリースし、マルチプラットフォームでのエージェント実行環境をコードベースで具体化させている [1, 2]。さらにOpenClawも「v2026.9.3」をリリースし [4]、自律的なワークフローを実運用に載せるためのツールチェーン整備が進んでいる。
+
+一方、ニューヨーク・タイムズの報道では、米国の輸出管理対象であるブラックリスト企業の子会社を経由して、中国の主要AI企業がエヌビディアの最先端チップを入手し続けていた実態が明るみに出た [5]。これは、ハードウェアの物理的統制と実需の間に依然として深い流通の抜け穴が存在することを示している。
+
+【解釈】今回の変化は、AIの価値が「基礎モデルのパラメータ数」という単一の指標から、「エージェントが実業務のデスクトップ環境やシステム間でいかに安価かつ確実に稼働するか」という実装インフラの勝負へ移ったことを意味する。
+
+Mistralの巨額調達は、資本市場が「独自モデルを自社で抱え、顧客のオンプレミスや多様なクラウド環境に柔軟にデプロイできるオープンウェイト陣営」の生存確率を高く見積もり始めた証左である。一方で、Qwenなどのオープンコード群がOSレベルのドライバやシェル機能を急速に固めているのは、APIの叩き合いから、PCやサーバの操作権限をAIが直接握る「エージェントの実行レイヤー」への垂直統合を急いでいるためだ。ハードウェア規制の網をかいくぐって最先端チップが流通する実態と合わせ、計算資源の確保と実行ツールのオープン化が同時並行で進むことで、開発コストと実運用コストの双方が圧縮される圧力が強まっている。
 
 【競争の構図】
-【TSMC / サムスン電子】
-ASMLのHigh NA EUV装置への投資をコミットし、次世代AIチップの物理的製造インフラの囲い込みを急ぐ。
-→ 半導体製造のボトルネックを握ることで、AIハードウェアの供給主導権を強固にする。
-
 【Mistral AI】
-サムスン主導の資金調達により240億ドルの評価額を獲得し、オープンウェイトモデルで勝負する。
-→ 米巨大資本への依存を避けつつ、ハードウェア陣営と組むことで独自の流通網を確保できるかが焦点となる。
+サムスン等が主導するラウンドで240億ドルの評価額を獲得し、オープンウェイトモデル路線を強化 [3]。
+→ 独自クラウドに縛られない柔軟なデプロイを求める欧州・アジアの事業法人に対し、第3の選択肢としての存在感を確固たるものにしている。
 
-【Anthropic】
-エージェント作業向けに最大45%低価格化した「Claude Fable 5.1」を投入し、コスト競争を加速。
-→ 単価引き下げによる薄利多売モデルへシフトし、企業向けエージェント市場でのシェア奪取を狙う。</div>
-          <div class="joho-why">【日本の実務への示唆】日本企業は、生成AIの「モデル選定」の議論から脱却し、自社システムへの「エージェントの実装と検証（テスト）プロセスの構築」へ予算と人材を直ちにシフトすべきである。特に、AIエージェントの暴走や誤作動を防ぐためのシミュレーション駆動型のテスト環境やCI/CDパイプラインへの投資が不可欠となる。また、TSMC等による半導体製造インフラの囲い込みが進む中、国内の調達部門はAIサーバーや半導体の調達リードタイムとコスト変動リスクの再評価を急ぐ必要がある。
+【Qwen陣営（Alibaba関連）】
+macOS/Linux/Windowsに対応するCUAドライバやWebシェル機能などの開発を進め、実行レイヤーのSDKを整備 [1, 2]。
+→ 単なるチャットAIを超え、デスクトップ環境で自律駆動するエージェント基盤のデファクトスタンダードを狙う動き。</div>
+          <div class="joho-why">【日本の実務への示唆】日本企業は、単に米国の汎用APIを薄くラップするだけのアプリ開発から脱却し、オープンウェイトモデル（MistralやQwenなど）を自社環境に安全に組み込み、業務プロセスを自律実行させる「エージェント基盤の調達・検証」へリソースを振り向けるべきである。特に、社内PCやローカルサーバー上で動くドライバやSDKの検証を急ぎ、データ主権を維持したままAIを現場のワークフローに直結させるアーキテクチャの設計が求められる。
 
-【反証・留保】この見立てが過大評価であると言える条件は、最先端露光装置（High NA EUV）の導入遅延やコスト高騰により半導体の供給不足が解消せずハードウェア価格が高止まりした場合、あるいはエージェントの検証技術（自動テスト等）が追いつかずに企業の本番導入事故が相次ぎ、AI投資のROIそのものが疑問視される事態が起きることである。もし企業がエージェントの自律稼働に見切りをつけ、人間の介在を前提とした軽量な自動化ツールへの回帰を選択した場合、高価なインフラ投資とエージェント特化型モデルの収益化シナリオは崩れる。</div>
+【反証・留保】この見立てが崩れる条件は、オープンウェイトモデル群がエンタープライズ領域で要求される厳格なセキュリティ基準やデータガバナンスをクリアできず、結局は閉じた商用API（OpenAIやAnthropicなど）への依存から脱却できない場合である。また、ハードウェアの流通規制が厳格化され、中国や非米陣営が必要な計算資源の調達を完全に絶たれた場合、エージェントの自律化を進める基盤そのものがシュリンクするリスクが残る。</div>
           <div class="joho-context">【次の観測点】
-・ASMLのHigh NA EUV装置の量産適用におけるTSMCおよびサムスンの歩留まり実績
-・企業向けエージェントの導入案件における自動テスト・検証ツールの採用拡大ペース
-・オープンウェイトモデル（Mistral等）を活用した商用システムの具体的な稼働事例の有無</div>
+・大手事業会社におけるオープンウェイトモデル（Mistral等）の商用採用・オンプレミス導入事例の有無
+・Qwenなどのエージェント向けドライバ（cua-driver等）の実務環境でのセキュリティ監査と採用拡大のペース
+・対中半導体輸出規制の抜け穴に対する米当局の追加制裁と、それに伴う中国AI企業のチップ調達コストの変化</div>
           <div class="joho-source">
             <span class="joho-source-label">📰 元記事:</span>
-            <a href="https://www.cnbc.com/2026/09/08/tsmc-samsung-asml-high-na-euv-machine-ai-chips.html" target="_blank" rel="noopener noreferrer" class="joho-source-link">中心テーマ型編集記事</a>
+            <a href="https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.4" target="_blank" rel="noopener noreferrer" class="joho-source-link">中心テーマ型編集記事</a>
             <span class="joho-source-name">AI News Daily編集部</span>
           </div>
         </div>
@@ -634,21 +644,40 @@ ASMLのHigh NA EUV装置への投資をコミットし、次世代AIチップの
         <div class="article-card">
           <span class="rank">#1</span>
           <div class="article-content">
-            <a href="https://www.cnbc.com/2026/09/08/tsmc-samsung-asml-high-na-euv-machine-ai-chips.html" target="_blank" rel="noopener noreferrer" class="article-title">
-              TSMC, Samsung commit to ASML’s newest chipmaking tools as AI drives demand
+            <a href="https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.4" target="_blank" rel="noopener noreferrer" class="article-title">
+              Qwen GitHub｜cua-driver-rs v0.20.4
             </a>
             <div class="article-meta">
-              <span class="source-tag">CNBC Tech</span>
+              <span class="source-tag">Qwen GitHub</span>
             </div>
-            <p class="article-point">TSMC and Samsung will adopt ASML’s High NA EUV tools for advanced chipmaking as AI drives demand for smaller, more compl</p>
+            <p class="article-point">Qwen CUA Driver prebuilt binaries
+(vendored under packages/cua-driver).
+
+macOS: codesigned + notarized universal binary </p>
           </div>
         </div>
 
         <div class="article-card">
           <span class="rank">#2</span>
           <div class="article-content">
+            <a href="https://github.com/QwenLM/qwen-code/releases/tag/v0.23.0-nightly.20260907.f1ed3bc31a" target="_blank" rel="noopener noreferrer" class="article-title">
+              Qwen GitHub｜Release v0.23.0-nightly.20260907.f1ed3bc31a
+            </a>
+            <div class="article-meta">
+              <span class="source-tag">Qwen GitHub</span>
+            </div>
+            <p class="article-point">What's Changed
+
+feat(web-shell): visualize and manage dynamic workflow runs by @qqqys in #10594
+perf(web-shell): derive </p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <span class="rank">#3</span>
+          <div class="article-content">
             <a href="https://www.cnbc.com/2026/09/08/mistral-ai-funding-valuation-samsung.html" target="_blank" rel="noopener noreferrer" class="article-title">
-              Mistral bags $24 billion valuation as Samsung leads funding for Europe's AI champion
+              CNBC Tech｜Mistral bags $24 billion valuation as Samsung leads funding for Europe's AI champion
             </a>
             <div class="article-meta">
               <span class="source-tag">CNBC Tech</span>
@@ -658,28 +687,28 @@ ASMLのHigh NA EUV装置への投資をコミットし、次世代AIチップの
         </div>
 
         <div class="article-card">
-          <span class="rank">#3</span>
+          <span class="rank">#4</span>
           <div class="article-content">
-            <a href="https://lastweekin.ai/p/last-week-in-ai-343-gpt-6-openais" target="_blank" rel="noopener noreferrer" class="article-title">
-              Last Week in AI #343 - GPT-6, OpenAI’s agents chatted on a wiki, Fable 5.1
+            <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.3" target="_blank" rel="noopener noreferrer" class="article-title">
+              OpenClaw GitHub｜v2026.9.3
             </a>
             <div class="article-meta">
-              <span class="source-tag">Last Week in AI</span>
+              <span class="source-tag">OpenClaw GitHub</span>
             </div>
-            <p class="article-point">GPT-6 Astra Is Here, Discovery of a new OpenAI agent message board, Anthropic launches Claude Fable 5.1 and says it&#821</p>
+            <p class="article-point">OpenClaw 2026.9.3</p>
           </div>
         </div>
 
         <div class="article-card">
-          <span class="rank">#4</span>
+          <span class="rank">#5</span>
           <div class="article-content">
-            <a href="https://www.infoq.com/presentations/ai-agent-testing-evaluation/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer" class="article-title">
-              Presentation: From AI Agent Demo to Production: Automated Testing and Evaluation
+            <a href="https://www.nytimes.com/2026/09/06/technology/ai-chips-china-blacklist.html" target="_blank" rel="noopener noreferrer" class="article-title">
+              NYTimes Technology｜How a Blacklisted Chinese Tech Giant Kept Buying America’s Best A.I. Chips
             </a>
             <div class="article-meta">
-              <span class="source-tag">InfoQ AI/ML</span>
+              <span class="source-tag">NYTimes Technology</span>
             </div>
-            <p class="article-point">Zhou Yu discusses why AI agents stall in demo phase and shares how simulation-driven testing solves compliance and relia</p>
+            <p class="article-point">Washington imposed sanctions on Inspur because of its work with the Chinese military. But the company’s subsidiary kept </p>
           </div>
         </div>
 
@@ -692,18 +721,50 @@ ASMLのHigh NA EUV装置への投資をコミットし、次世代AIチップの
         <h2>過去の更新履歴</h2>
       </div>
       <div class="hist-tabs">
-        <button class="hist-tab active" onclick="showHistory(0)">09/08 17:56 夕方</button>
-<button class="hist-tab " onclick="showHistory(1)">09/08 17:45 夕方</button>
-<button class="hist-tab " onclick="showHistory(2)">09/08 08:14 朝</button>
-<button class="hist-tab " onclick="showHistory(3)">09/08 01:17 夜</button>
-<button class="hist-tab " onclick="showHistory(4)">09/07 22:21 夜</button>
-<button class="hist-tab " onclick="showHistory(5)">09/07 16:34 夕方</button>
-<button class="hist-tab " onclick="showHistory(6)">09/07 07:38 朝</button>
+        <button class="hist-tab active" onclick="showHistory(0)">09/08 18:05 夜</button>
+<button class="hist-tab " onclick="showHistory(1)">09/08 17:56 夕方</button>
+<button class="hist-tab " onclick="showHistory(2)">09/08 17:45 夕方</button>
+<button class="hist-tab " onclick="showHistory(3)">09/08 08:14 朝</button>
+<button class="hist-tab " onclick="showHistory(4)">09/08 01:17 夜</button>
+<button class="hist-tab " onclick="showHistory(5)">09/07 22:21 夜</button>
+<button class="hist-tab " onclick="showHistory(6)">09/07 16:34 夕方</button>
 
       </div>
       <div id="history-container">
         
         <div id="hist-0" class="hist-content" style="display:block">
+          <h4>09/08 18:05 夜版</h4>
+          <div class="hist-summary">ハードウェアの極限追求と、エージェントの実運用テスト・コスト削減の双方が同時進行し、AI産業の主導権争いは「モデルの頭脳戦」から「インフラの排他性と実務の信頼性」へ移行した。
+
+【事実】今回の変化の起点となるのは、半導体製造と欧州AI陣営の動き、そして自律型エージェントの実務適用の深化である。CNBC Techの報道によれば、TSMCとサムスン電子は、AI需要の急増を背景に、オランダASMLの最先...</div>
+          <div class="hist-articles">
+              <div class="hist-article">
+                <span class="hist-rank">#1</span>
+                <a href="https://www.cnbc.com/2026/09/08/tsmc-samsung-asml-high-na-euv-machine-ai-chips.html" target="_blank" rel="noopener noreferrer">TSMC, Samsung commit to ASML’s newest chipmaking tools as AI drives demand</a>
+                <span class="hist-source">CNBC Tech</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#2</span>
+                <a href="https://www.cnbc.com/2026/09/08/mistral-ai-funding-valuation-samsung.html" target="_blank" rel="noopener noreferrer">Mistral bags $24 billion valuation as Samsung leads funding for Europe's AI champion</a>
+                <span class="hist-source">CNBC Tech</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#3</span>
+                <a href="https://lastweekin.ai/p/last-week-in-ai-343-gpt-6-openais" target="_blank" rel="noopener noreferrer">Last Week in AI #343 - GPT-6, OpenAI’s agents chatted on a wiki, Fable 5.1</a>
+                <span class="hist-source">Last Week in AI</span>
+              </div>
+
+              <div class="hist-article">
+                <span class="hist-rank">#4</span>
+                <a href="https://www.infoq.com/presentations/ai-agent-testing-evaluation/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">Presentation: From AI Agent Demo to Production: Automated Testing and Evaluation</a>
+                <span class="hist-source">InfoQ AI/ML</span>
+              </div>
+</div>
+        </div>
+
+        <div id="hist-1" class="hist-content" style="display:none">
           <h4>09/08 17:56 夕方版</h4>
           <div class="hist-summary">TSMCとサムスンによる最新半導体ツールの導入や、欧州Mistralの大型資金調達など、インフラとプレイヤー双方で動きが進んでいます。
 
@@ -729,7 +790,7 @@ TSMCとサムスンが、AI需要の増大に伴う複雑な半導体製造の�
 </div>
         </div>
 
-        <div id="hist-1" class="hist-content" style="display:none">
+        <div id="hist-2" class="hist-content" style="display:none">
           <h4>09/08 17:45 夕方版</h4>
           <div class="hist-summary">AI需要の拡大を背景に半導体の次世代製造技術や欧州のAI企業への巨額投資が進む一方、Anthropicがエージェント向け新モデルを発表するなどモデル開発の動きも活発化している。
 
@@ -755,7 +816,7 @@ TSMCとサムスンが、AI需要の増大に伴う複雑な半導体製造の�
 </div>
         </div>
 
-        <div id="hist-2" class="hist-content" style="display:none">
+        <div id="hist-3" class="hist-content" style="display:none">
           <h4>09/08 08:14 朝版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -791,7 +852,7 @@ TSMCとサムスンが、AI需要の増大に伴う複雑な半導体製造の�
 </div>
         </div>
 
-        <div id="hist-3" class="hist-content" style="display:none">
+        <div id="hist-4" class="hist-content" style="display:none">
           <h4>09/08 01:17 夜版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -827,7 +888,7 @@ TSMCとサムスンが、AI需要の増大に伴う複雑な半導体製造の�
 </div>
         </div>
 
-        <div id="hist-4" class="hist-content" style="display:none">
+        <div id="hist-5" class="hist-content" style="display:none">
           <h4>09/07 22:21 夜版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -863,7 +924,7 @@ TSMCとサムスンが、AI需要の増大に伴う複雑な半導体製造の�
 </div>
         </div>
 
-        <div id="hist-5" class="hist-content" style="display:none">
+        <div id="hist-6" class="hist-content" style="display:none">
           <h4>09/07 16:34 夕方版</h4>
           <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
           <div class="hist-articles">
@@ -895,42 +956,6 @@ TSMCとサムスンが、AI需要の増大に伴う複雑な半導体製造の�
                 <span class="hist-rank">#5</span>
                 <a href="https://www.cnbc.com/2026/09/05/ai-data-centers-cost-economy.html" target="_blank" rel="noopener noreferrer">Many truckers don't feel like the rest of America about AI data centers as business booms</a>
                 <span class="hist-source">CNBC Tech</span>
-              </div>
-</div>
-        </div>
-
-        <div id="hist-6" class="hist-content" style="display:none">
-          <h4>09/07 07:38 朝版</h4>
-          <div class="hist-summary">【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。...</div>
-          <div class="hist-articles">
-              <div class="hist-article">
-                <span class="hist-rank">#1</span>
-                <a href="https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/" target="_blank" rel="noopener noreferrer">Authors push back as publishers and agents make claims on Anthropic settlement</a>
-                <span class="hist-source">TechCrunch AI</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#2</span>
-                <a href="https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/" target="_blank" rel="noopener noreferrer">Travis Kalanick’s Atoms might be getting into the robotaxi business</a>
-                <span class="hist-source">TechCrunch AI</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#3</span>
-                <a href="https://www.cnbc.com/2026/09/06/meta-google-openai-anthropic-ai-model-fatigue.html" target="_blank" rel="noopener noreferrer">‘Model fatigue’ sets in as AI labs race to roll out new versions at frenetic pace</a>
-                <span class="hist-source">CNBC Tech</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#4</span>
-                <a href="https://www.cnbc.com/2026/09/05/ai-data-centers-cost-economy.html" target="_blank" rel="noopener noreferrer">Many truckers don't feel like the rest of America about AI data centers as business booms</a>
-                <span class="hist-source">CNBC Tech</span>
-              </div>
-
-              <div class="hist-article">
-                <span class="hist-rank">#5</span>
-                <a href="https://www.infoq.com/news/2026/09/google-mantis-vulnerability-scan/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering" target="_blank" rel="noopener noreferrer">Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives</a>
-                <span class="hist-source">InfoQ AI/ML</span>
               </div>
 </div>
         </div>
