@@ -199,23 +199,29 @@ def summarize_editorial_with_gemini(articles: list[dict]) -> dict:
         f"[{i}] {a['source']}｜{a['title']}\nURL: {a['url']}\n概要: {a['summary'][:500]}"
         for i, a in enumerate(articles[:20], 1)
     )
-    prompt = f"""あなたはAI業界を取材する日本語の編集者です。
-AI専門家ではないビジネスパーソン向けに、複数のニュースをつないで「今日、業界で何が変わったか」を解説してください。
-OpenAI、Google/DeepMind、Anthropicを中心に、中国AI（DeepSeek、Qwen、Kimi、GLM等）、OpenRouter、OpenClaw、MCPも、入力に関係する場合は必ず比較してください。
-入力にない数字・発言・専門家の見解・企業の本音を作らないでください。事実と分析を分け、関連がない会社は「今回の材料では大きな動きなし」としてください。
+    prompt = f"""あなたは、海外AI産業を継続取材する日本語の経済メディア編集者です。
+読者はAIの専門家ではないが、事業・投資・プロダクトの判断をするビジネスパーソンです。単なる要約ではなく、今日の材料から「競争のルールがどこで変わり始めたか」を一つの論点として読み解いてください。
+
+【編集原則】
+- 最初に、読者が持ち帰るべき結論を明言する。発表内容の言い換えから始めない。
+- 入力記事のうち、因果または競争上のつながりを根拠をもって説明できる2〜4本を選び、ひとつの緊張感のある問いに束ねる。無理に全記事を扱わない。
+- 注目すべきは機能の新しさではなく、誰が価値・コスト・流通・計算資源の主導権を得るか。OpenAI、Google/DeepMind、Anthropic、中国AI（DeepSeek、Qwen、Kimi、GLM等）、OpenRouter、OpenClaw、MCPは、入力と関係する主体だけを比較する。関係しない会社を「動きなし」として埋めない。
+- 「事実」と「編集部の解釈」を混ぜない。事実は入力記事にある内容だけを使い、解釈は「〜と読める」「ただし〜なら崩れる」のように条件付きで書く。数字、発言、顧客、企業の本音を創作しない。
+- ありきたりな「競争激化」「期待が高まる」「可能性がある」で結ばない。反証材料と、見立てが正しいかを判定する次の具体的シグナルを書く。
+- 専門用語を初出時に一言でほどき、短い段落でテンポよく書く。煽らず、だが論点は鋭くする。
 
 JSONのみで出力:
 {{
- "headline":"25字以内の見出し", "thesis":"中心テーマ（80字以内）",
- "opening":"導入（200字程度）", "what_happened":"事実（400字程度）",
- "why_now":"背景（400字程度）", "company_positions":[
-  {{"company":"OpenAI","status":"立場","implication":"競争上の意味"}},
-  {{"company":"Google","status":"立場","implication":"競争上の意味"}},
-  {{"company":"Anthropic","status":"立場","implication":"競争上の意味"}}
- ], "counterpoint":"反対材料・不確実性（200字程度）",
- "japan_impact":"日本への影響（300字程度）",
- "next_signals":["次に確認する動き1","動き2","動き3"],
- "sources":[{{"title":"入力記事タイトル","url":"URL"}}]
+ "headline":"結論が伝わる見出し（35字以内）",
+ "thesis":"読者が最初に持ち帰るべき見立て（120字以内）",
+ "opening":"【結論】から始める導入。何が変わったと見るのか、なぜ今日の材料を一つの論点として読むのか（350〜500字）",
+ "what_happened":"【事実】見立ての根拠となる記事を2〜4本だけ使い、各事実がどこにつながるかを示す。記事名や主体を自然に明記する（800〜1100字）",
+ "why_now":"【解釈】今回の変化が競争構造、収益化、導入、インフラのいずれを動かすのかを因果で解く。過去からの一般論の繰り返しは避ける（800〜1100字）",
+ "company_positions":[{{"company":"入力と関係する企業・陣営名","status":"今回の打ち手・現在地（120〜180字）","implication":"この主体の優位・弱点がどう変わるか（160〜240字）"}}],
+ "counterpoint":"【反証・留保】見立てを過大評価しないための条件。何が起きれば結論が崩れるか（350〜500字）",
+ "japan_impact":"【日本の実務への示唆】日本企業が今週、導入・調達・提携・人材のどれを見直すべきか。実行に近い判断として書く（400〜600字）",
+ "next_signals":["結論を検証する具体的な観測点1","観測点2","観測点3"],
+ "sources":[{{"title":"実際に用いた入力記事タイトル","url":"そのURL"}}]
 }}
 
 【入力記事】\n{article_text}"""
@@ -226,7 +232,7 @@ JSONのみで出力:
             response = client.models.generate_content(
                 model=model_name, contents=prompt,
                 config=types.GenerateContentConfig(
-                    temperature=0.7, response_mime_type="application/json"
+                    temperature=0.7, response_mime_type="application/json", max_output_tokens=8192
                 ),
             )
             text = re.sub(r"```json\s*|```", "", response.text or "").strip()
@@ -238,14 +244,21 @@ JSONのみで出力:
                 top_articles.append({"rank": rank, "title": src.get("title", match.get("title", "")),
                                      "source": match.get("source", ""), "url": src.get("url", ""),
                                      "point": match.get("summary", "")[:120]})
+            positions = editorial.get("company_positions", [])
+            position_text = "\n\n".join(
+                f"【{p.get('company', '主要プレイヤー')}】\n{p.get('status', '')}\n→ {p.get('implication', '')}"
+                for p in positions if isinstance(p, dict)
+            )
             editorial["news_summary"] = f"{editorial.get('thesis', '')}\n\n{editorial.get('what_happened', '')}"
             editorial["opinion_summary"] = editorial.get("why_now", "")
             editorial["sentiment"] = {"positive": "", "negative": editorial.get("counterpoint", ""), "neutral": "事実と分析を分けて掲載しています。"}
             editorial["top_articles"] = top_articles
             editorial["joho_picks"] = [{"headline": editorial.get("headline", ""), "source_title": "中心テーマ型編集記事",
                                          "source_url": (sources[0].get("url", "#") if sources else "#"),
-                                         "source_name": "AI News Daily編集部", "body": editorial.get("opening", "") + "\n\n" + editorial.get("what_happened", "") + "\n\n" + editorial.get("why_now", ""),
-                                         "why_matters": editorial.get("japan_impact", ""), "context": "次に見るべき点：" + "／".join(editorial.get("next_signals", []))}]
+                                         "source_name": "AI News Daily編集部",
+                                         "body": editorial.get("opening", "") + "\n\n" + editorial.get("what_happened", "") + "\n\n" + editorial.get("why_now", "") + ("\n\n【競争の構図】\n" + position_text if position_text else ""),
+                                         "why_matters": editorial.get("japan_impact", "") + "\n\n" + editorial.get("counterpoint", ""),
+                                         "context": "【次の観測点】\n" + "\n".join(f"・{signal}" for signal in editorial.get("next_signals", []))}]
             return editorial
         except Exception as e:
             print(f"[WARNING] 編集記事生成失敗 ({model_name}): {e}")
