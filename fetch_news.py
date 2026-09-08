@@ -63,7 +63,9 @@ RSS_FEEDS_MEDIA = [
 # 【カテゴリ2】AI業界キーマン・企業公式ブログ（動作確認済み）
 RSS_FEEDS_KEYMAN = [
     # 企業公式ブログ
+    ("OpenAI News",        "https://openai.com/news/rss.xml"),
     ("Google DeepMind",   "https://deepmind.google/blog/rss.xml"),
+    ("Google AI Blog",    "https://blog.google/technology/ai/rss/"),
     ("NVIDIA Blog",       "https://blogs.nvidia.com/feed/"),
     ("Microsoft AI",      "https://blogs.microsoft.com/feed/"),
     ("Hugging Face",      "https://huggingface.co/blog/feed.xml"),
@@ -75,6 +77,9 @@ RSS_FEEDS_KEYMAN = [
     ("Sam Altman Blog",   "http://blog.samaltman.com/posts.atom"),   # OpenAI CEO
     ("Andrej Karpathy",   "https://karpathy.bearblog.dev/feed/"),    # 元Tesla AI・OpenAI
     # 中国AI・モデル流通・AIエージェント
+    ("Qwen GitHub",        "https://github.com/QwenLM/qwen-code/releases.atom"),
+    ("DeepSeek GitHub",    "https://github.com/deepseek-ai/DeepSeek-V3/releases.atom"),
+    ("Z.ai GLM GitHub",    "https://github.com/zai-org/GLM-4/releases.atom"),
     ("OpenClaw GitHub",    "https://github.com/openclaw/openclaw/releases.atom"),
     ("OpenRouter Blog",    "https://openrouter.ai/announcements/rss.xml"),
 ]
@@ -97,11 +102,43 @@ AI_KEYWORDS = [
     "ERNIE", "Hunyuan", "Doubao", "OpenRouter", "OpenClaw", "MCP",
 ]
 
+# 後藤直義氏の直近AI企画を調査して得た編集上の優先順位。
+# 一次情報を起点に、価格・資本・導入・規制・インフラの変化を扱う記事を優先する。
+EDITORIAL_SOURCE_PRIORITY = {
+    "OpenAI News": 100, "Google DeepMind": 100, "Google AI Blog": 100,
+    "Qwen GitHub": 95, "DeepSeek GitHub": 95, "Z.ai GLM GitHub": 95,
+    "OpenRouter Blog": 95, "OpenClaw GitHub": 90,
+    "NVIDIA Blog": 85, "Microsoft AI": 85, "Hugging Face": 85,
+    "MIT Tech Review": 75, "CNBC Tech": 75, "TechCrunch AI": 70,
+    "Last Week in AI": 70, "Import AI": 70, "AI Business": 65,
+}
+EDITORIAL_SIGNALS = [
+    "price", "pricing", "cost", "cheap", "revenue", "profit", "funding", "valuation",
+    "agent", "enterprise", "adoption", "deployment", "open weight", "open-source",
+    "chip", "gpu", "data center", "compute", "export", "regulation", "security",
+    "価格", "コスト", "資金", "投資", "導入", "規制", "半導体", "電力",
+]
+
 
 def is_ai_related(title: str, summary: str = "") -> bool:
     """記事がAI関連かどうかを判定"""
     text = (title + " " + summary).lower()
-    return any(kw.lower() in text for kw in AI_KEYWORDS)
+    for keyword in AI_KEYWORDS:
+        # "AI" を単純な部分文字列で判定すると availability 等まで拾ってしまう。
+        if keyword.lower() == "ai":
+            if re.search(r"(?<![a-z])ai(?![a-z])", text):
+                return True
+        elif keyword.lower() in text:
+            return True
+    return False
+
+
+def editorial_rank(article: dict) -> int:
+    """一次情報と産業構造に関わる材料を、編集記事の候補として優先する。"""
+    text = f"{article.get('title', '')} {article.get('summary', '')}".lower()
+    source_score = EDITORIAL_SOURCE_PRIORITY.get(article.get("source", ""), 40)
+    signal_score = sum(8 for signal in EDITORIAL_SIGNALS if signal in text)
+    return source_score + min(signal_score, 32)
 
 
 def parse_pub_date(entry) -> datetime.datetime | None:
@@ -195,15 +232,17 @@ def summarize_editorial_with_gemini(articles: list[dict]) -> dict:
     if not GEMINI_API_KEY or not articles:
         return _dummy_summary(articles)
     client = genai.Client(api_key=GEMINI_API_KEY)
+    editorial_articles = sorted(articles, key=editorial_rank, reverse=True)[:16]
     article_text = "\n".join(
         f"[{i}] {a['source']}｜{a['title']}\nURL: {a['url']}\n概要: {a['summary'][:500]}"
-        for i, a in enumerate(articles[:20], 1)
+        for i, a in enumerate(editorial_articles, 1)
     )
     prompt = f"""あなたは、海外AI産業を継続取材する日本語の経済メディア編集者です。
 読者はAIの専門家ではないが、事業・投資・プロダクトの判断をするビジネスパーソンです。単なる要約ではなく、今日の材料から「競争のルールがどこで変わり始めたか」を一つの論点として読み解いてください。
 
 【編集原則】
 - 最初に、読者が持ち帰るべき結論を明言する。発表内容の言い換えから始めない。
+- 公式発表・公式リリースなどの一次情報を最優先し、二次報道は市場の受け止めや資本・規制の文脈を補う場合に限って使う。
 - 入力記事のうち、因果または競争上のつながりを根拠をもって説明できる2〜4本を選び、ひとつの緊張感のある問いに束ねる。無理に全記事を扱わない。
 - 注目すべきは機能の新しさではなく、誰が価値・コスト・流通・計算資源の主導権を得るか。OpenAI、Google/DeepMind、Anthropic、中国AI（DeepSeek、Qwen、Kimi、GLM等）、OpenRouter、OpenClaw、MCPは、入力と関係する主体だけを比較する。関係しない会社を「動きなし」として埋めない。
 - 「事実」と「編集部の解釈」を混ぜない。事実は入力記事にある内容だけを使い、解釈は「〜と読める」「ただし〜なら崩れる」のように条件付きで書く。数字、発言、顧客、企業の本音を創作しない。
