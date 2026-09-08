@@ -58,6 +58,9 @@ RSS_FEEDS_MEDIA = [
     ("AI Business",      "https://aibusiness.com/rss.xml"),
     ("Analytics Vidhya", "https://www.analyticsvidhya.com/feed/"),
     ("CNBC Tech",        "https://www.cnbc.com/id/19854910/device/rss/rss.html"),
+    ("NYTimes Technology", "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"),
+    ("Wall Street Journal", "https://feeds.a.dj.com/rss/RSSWSJD.xml"),
+    ("Axios",              "https://www.axios.com/feeds/feed.rss"),
 ]
 
 # 【カテゴリ2】AI業界キーマン・企業公式ブログ（動作確認済み）
@@ -109,6 +112,7 @@ EDITORIAL_SOURCE_PRIORITY = {
     "Qwen GitHub": 95, "DeepSeek GitHub": 95, "Z.ai GLM GitHub": 95,
     "OpenRouter Blog": 95, "OpenClaw GitHub": 90,
     "NVIDIA Blog": 85, "Microsoft AI": 85, "Hugging Face": 85,
+    "NYTimes Technology": 80, "Wall Street Journal": 80, "Axios": 75,
     "MIT Tech Review": 75, "CNBC Tech": 75, "TechCrunch AI": 70,
     "Last Week in AI": 70, "Import AI": 70, "AI Business": 65,
 }
@@ -243,6 +247,7 @@ def summarize_editorial_with_gemini(articles: list[dict]) -> dict:
 【編集原則】
 - 最初に、読者が持ち帰るべき結論を明言する。発表内容の言い換えから始めない。
 - 公式発表・公式リリースなどの一次情報を最優先し、二次報道は市場の受け止めや資本・規制の文脈を補う場合に限って使う。
+- 他媒体と同じテーマであっても避けない。入力された独立ソースから、価格・資本・導入・規制・インフラの変化を説明できるかだけで選ぶ。
 - 入力記事のうち、因果または競争上のつながりを根拠をもって説明できる2〜4本を選び、ひとつの緊張感のある問いに束ねる。無理に全記事を扱わない。
 - 注目すべきは機能の新しさではなく、誰が価値・コスト・流通・計算資源の主導権を得るか。OpenAI、Google/DeepMind、Anthropic、中国AI（DeepSeek、Qwen、Kimi、GLM等）、OpenRouter、OpenClaw、MCPは、入力と関係する主体だけを比較する。関係しない会社を「動きなし」として埋めない。
 - 「事実」と「編集部の解釈」を混ぜない。事実は入力記事にある内容だけを使い、解釈は「〜と読める」「ただし〜なら崩れる」のように条件付きで書く。数字、発言、顧客、企業の本音を創作しない。
