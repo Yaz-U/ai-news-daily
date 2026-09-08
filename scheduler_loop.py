@@ -17,8 +17,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent
 LOG_DIR = BASE_DIR / "logs"
 
-# 実行時刻 (JST時) - 6, 12, 16, 20時
-SCHEDULE_HOURS = [6, 12, 16, 20]
+# 実行時刻 (JST時) - 1日1回
+SCHEDULE_HOURS = [6]
 
 
 def log(msg: str):

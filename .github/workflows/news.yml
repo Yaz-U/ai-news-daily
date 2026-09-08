@@ -3,9 +3,6 @@ name: AI News Auto Update
 on:
   schedule:
     - cron: '0 21 * * *'   # 6:00 JST (= 21:00 UTC 前日)
-    - cron: '0 3 * * *'    # 12:00 JST (= 3:00 UTC)
-    - cron: '0 7 * * *'    # 16:00 JST (= 7:00 UTC)
-    - cron: '0 11 * * *'   # 20:00 JST (= 11:00 UTC)
   workflow_dispatch:        # 手動実行ボタン（テスト用）
 
 permissions:

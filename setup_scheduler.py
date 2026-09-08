@@ -12,8 +12,8 @@ BASE_DIR = Path(__file__).parent
 BAT_FILE = BASE_DIR / "run_news.bat"
 LOG_DIR = BASE_DIR / "logs"
 
-# 実行時刻 (JST) - 6:00, 12:00, 16:00, 20:00
-SCHEDULE_TIMES = ["06:00", "12:00", "16:00", "20:00"]
+# 実行時刻 (JST) - 1日1回
+SCHEDULE_TIMES = ["06:00"]
 TASK_NAME_PREFIX = "AINewsCuration"
 
 

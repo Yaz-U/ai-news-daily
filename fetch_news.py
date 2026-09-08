@@ -2,7 +2,7 @@
 """
 AI News Curation Script
 アメリカのAI関連ニュースを収集し、日本語で要約してWebページを生成する
-実行タイミング: 毎朝6:00, 12:00, 16:00, 20:00 (JST)
+実行タイミング: 毎朝6:00 (JST)
 """
 
 import os
@@ -74,6 +74,9 @@ RSS_FEEDS_KEYMAN = [
     # AI経営者・研究者のブログ
     ("Sam Altman Blog",   "http://blog.samaltman.com/posts.atom"),   # OpenAI CEO
     ("Andrej Karpathy",   "https://karpathy.bearblog.dev/feed/"),    # 元Tesla AI・OpenAI
+    # 中国AI・モデル流通・AIエージェント
+    ("OpenClaw GitHub",    "https://github.com/openclaw/openclaw/releases.atom"),
+    ("OpenRouter Blog",    "https://openrouter.ai/announcements/rss.xml"),
 ]
 
 # 全フィードをまとめる
@@ -90,6 +93,8 @@ AI_KEYWORDS = [
     "neural network", "generative AI", "foundation model", "AGI",
     "robotics", "autonomous", "computer vision", "natural language",
     "Nvidia", "GPU", "semiconductor", "chip", "data center",
+    "DeepSeek", "Qwen", "Kimi", "Moonshot", "GLM", "Zhipu", "MiniMax",
+    "ERNIE", "Hunyuan", "Doubao", "OpenRouter", "OpenClaw", "MCP",
 ]
 
 
@@ -183,6 +188,67 @@ def fetch_articles(max_per_feed: int = 5) -> list[dict]:
     unique.sort(key=lambda a: a.get("pub_dt", ""), reverse=True)
     print(f"[INFO] 合計 {len(unique)} 件（直近{MAX_ARTICLE_AGE_HOURS}時間以内）")
     return unique
+
+
+def summarize_editorial_with_gemini(articles: list[dict]) -> dict:
+    """中心テーマ型の1日1回編集記事を生成する。"""
+    if not GEMINI_API_KEY or not articles:
+        return _dummy_summary(articles)
+    client = genai.Client(api_key=GEMINI_API_KEY)
+    article_text = "\n".join(
+        f"[{i}] {a['source']}｜{a['title']}\nURL: {a['url']}\n概要: {a['summary'][:500]}"
+        for i, a in enumerate(articles[:20], 1)
+    )
+    prompt = f"""あなたはAI業界を取材する日本語の編集者です。
+AI専門家ではないビジネスパーソン向けに、複数のニュースをつないで「今日、業界で何が変わったか」を解説してください。
+OpenAI、Google/DeepMind、Anthropicを中心に、中国AI（DeepSeek、Qwen、Kimi、GLM等）、OpenRouter、OpenClaw、MCPも、入力に関係する場合は必ず比較してください。
+入力にない数字・発言・専門家の見解・企業の本音を作らないでください。事実と分析を分け、関連がない会社は「今回の材料では大きな動きなし」としてください。
+
+JSONのみで出力:
+{{
+ "headline":"25字以内の見出し", "thesis":"中心テーマ（80字以内）",
+ "opening":"導入（200字程度）", "what_happened":"事実（400字程度）",
+ "why_now":"背景（400字程度）", "company_positions":[
+  {{"company":"OpenAI","status":"立場","implication":"競争上の意味"}},
+  {{"company":"Google","status":"立場","implication":"競争上の意味"}},
+  {{"company":"Anthropic","status":"立場","implication":"競争上の意味"}}
+ ], "counterpoint":"反対材料・不確実性（200字程度）",
+ "japan_impact":"日本への影響（300字程度）",
+ "next_signals":["次に確認する動き1","動き2","動き3"],
+ "sources":[{{"title":"入力記事タイトル","url":"URL"}}]
+}}
+
+【入力記事】\n{article_text}"""
+    models_to_try = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-flash-lite-latest"]
+    for model_name in models_to_try:
+        try:
+            response = client.models.generate_content(
+                model=model_name, contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0.7, response_mime_type="application/json"
+                ),
+            )
+            text = re.sub(r"```json\s*|```", "", response.text or "").strip()
+            editorial = json.loads(text)
+            sources = editorial.get("sources", [])
+            top_articles = []
+            for rank, src in enumerate(sources[:5], 1):
+                match = next((a for a in articles if a.get("url") == src.get("url")), {})
+                top_articles.append({"rank": rank, "title": src.get("title", match.get("title", "")),
+                                     "source": match.get("source", ""), "url": src.get("url", ""),
+                                     "point": match.get("summary", "")[:120]})
+            editorial["news_summary"] = f"{editorial.get('thesis', '')}\n\n{editorial.get('what_happened', '')}"
+            editorial["opinion_summary"] = editorial.get("why_now", "")
+            editorial["sentiment"] = {"positive": "", "negative": editorial.get("counterpoint", ""), "neutral": "事実と分析を分けて掲載しています。"}
+            editorial["top_articles"] = top_articles
+            editorial["joho_picks"] = [{"headline": editorial.get("headline", ""), "source_title": "中心テーマ型編集記事",
+                                         "source_url": (sources[0].get("url", "#") if sources else "#"),
+                                         "source_name": "AI News Daily編集部", "body": editorial.get("opening", "") + "\n\n" + editorial.get("what_happened", "") + "\n\n" + editorial.get("why_now", ""),
+                                         "why_matters": editorial.get("japan_impact", ""), "context": "次に見るべき点：" + "／".join(editorial.get("next_signals", []))}]
+            return editorial
+        except Exception as e:
+            print(f"[WARNING] 編集記事生成失敗 ({model_name}): {e}")
+    return _dummy_summary(articles)
 
 
 def summarize_with_gemini(articles: list[dict]) -> dict:
@@ -513,7 +579,7 @@ def load_history(days: int = 3) -> list[dict]:
     history = []
     data_files = sorted(DATA_DIR.glob("news_*.json"), reverse=True)
 
-    for f in data_files[:12]:  # 最大12件（3日分×4回）
+    for f in data_files[:7]:  # 最大7件（1日1回×1週間）
         try:
             with open(f, "r", encoding="utf-8") as fp:
                 data = json.load(fp)
@@ -810,6 +876,12 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
 """
 
     sentiment = summary.get("sentiment", {})
+    editorial_hero_html = f"""
+    <div class="card editorial-hero">
+      <div class="section-header"><div class="icon">🧭</div><h2>{summary.get('headline', '今日のAI業界の中心テーマ')}</h2></div>
+      <p class="summary-text">{summary.get('thesis', '')}</p>
+    </div>
+    """
 
     html_content = f"""<!DOCTYPE html>
 <html lang="ja">
@@ -1363,6 +1435,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
   </header>
 
   <main>
+    {editorial_hero_html}
     <!-- ニュース要約 + 意見分析 -->
     <div class="grid-2">
       <!-- ニュース要約 -->
@@ -1374,29 +1447,13 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
         <p class="summary-text">{summary.get('news_summary', 'データを取得中...')}</p>
       </div>
 
-      <!-- 意見・見解 -->
+      <!-- 編集部の見立て -->
       <div class="card">
         <div class="section-header">
-          <div class="icon">💬</div>
-          <h2>メディア・専門家の見解</h2>
+          <div class="icon">🧠</div>
+          <h2>今回の見立て</h2>
         </div>
         <p class="summary-text">{summary.get('opinion_summary', 'データを取得中...')}</p>
-
-        <!-- センチメント分析 -->
-        <div class="sentiment-grid">
-          <div class="sentiment-card positive">
-            <div class="sentiment-label">✅ ポジティブ</div>
-            <div class="sentiment-text">{sentiment.get('positive', '-')}</div>
-          </div>
-          <div class="sentiment-card negative">
-            <div class="sentiment-label">⚠️ ネガティブ</div>
-            <div class="sentiment-text">{sentiment.get('negative', '-')}</div>
-          </div>
-          <div class="sentiment-card neutral">
-            <div class="sentiment-label">⚖️ 中立</div>
-            <div class="sentiment-text">{sentiment.get('neutral', '-')}</div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1415,7 +1472,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
     <div class="card">
       <div class="section-header">
         <div class="icon">🏆</div>
-        <h2>注目記事 TOP 10</h2>
+        <h2>注目記事 TOP 5</h2>
       </div>
       {top_articles_html}
     </div>
@@ -1441,10 +1498,7 @@ def generate_html(current_data: dict, history: list[dict]) -> Path:
         <h2>自動更新スケジュール</h2>
       </div>
       <div class="schedule-info">
-        <div class="schedule-item"><div class="schedule-dot"></div>朝 6:00 JST</div>
-        <div class="schedule-item"><div class="schedule-dot"></div>昼 12:00 JST</div>
-        <div class="schedule-item"><div class="schedule-dot"></div>夕方 16:00 JST</div>
-        <div class="schedule-item"><div class="schedule-dot"></div>夜 20:00 JST</div>
+        <div class="schedule-item"><div class="schedule-dot"></div>毎朝 6:00 JST</div>
       </div>
       <p style="font-size:0.8rem;color:var(--text2);margin-top:12px;">
         📰 メディア: TechCrunch, VentureBeat, The Verge, Wired, MIT Tech Review, ZDNet, IEEE Spectrum など<br>
@@ -1508,17 +1562,14 @@ def main():
         log("[WARNING] 記事が収集できませんでした")
         return
 
-    # 2. Gemini APIで要約
-    log("Gemini APIで要約生成中...")
-    summary = summarize_with_gemini(articles)
+    # 2. 1回のAPI呼び出しで中心テーマ型の編集記事を生成
+    log("中心テーマ型の編集記事を生成中...")
+    summary = summarize_editorial_with_gemini(articles)
 
     # 3. 履歴読み込み（過去記事との関連分析に使用）
     history = load_history()
 
-    # 4. News風解説を生成（過去記事を参照して深掘り）
-    log("News風 深掘り解説記事を生成中...")
-    joho_picks = generate_joho_commentary(articles, history)
-    summary["joho_picks"] = joho_picks
+    # 4. 解説は中心テーマ型記事に統合済み
 
     # 5. 前回のNews風記事をアーカイブ（latest.json上書き前に保存）
     log("前回のNews風記事をアーカイブ中...")
