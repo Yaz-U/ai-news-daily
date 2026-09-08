@@ -219,9 +219,8 @@ JSONのみで出力:
 }}
 
 【入力記事】\n{article_text}"""
-    # Gemini APIの新規利用者向け後継モデル。旧2.x系は2026年9月時点で
-    # 新規APIキーから利用できないため、エラー時は軽量モデルへフォールバックする。
-    models_to_try = ["gemini-3.6-flash", "gemini-3.5-flash-lite"]
+    # 編集記事は、コストと品質のバランスを優先して軽量モデルを固定で使う。
+    models_to_try = ["gemini-3.5-flash-lite"]
     for model_name in models_to_try:
         try:
             response = client.models.generate_content(
@@ -316,7 +315,6 @@ URL: {art['url']}
 
     # リトライ対象のモデル順（上限に達した場合に次を試す）
     models_to_try = [
-        "gemini-3.6-flash",
         "gemini-3.5-flash-lite",
     ]
 
@@ -474,7 +472,6 @@ URL: {art['url']}
 """
 
     models_to_try = [
-        "gemini-3.6-flash",
         "gemini-3.5-flash-lite",
     ]
 
