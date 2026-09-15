@@ -1,208 +1,254 @@
 {
-  "timestamp": "2026-09-15T08:40:01.923844+09:00",
+  "timestamp": "2026-09-14T07:48:24.130288+09:00",
   "time_slot": "朝",
   "summary": {
-    "news_summary": "【テストモード】APIキーが設定されていないため、実際の要約は生成されていません。GEMINI_API_KEY環境変数を設定してください。収集された記事のタイトルのみ表示しています。",
-    "opinion_summary": "【テストモード】メディアの意見分析はAPIキーが必要です。実際の運用時はGemini APIキーを設定することで、ポジティブ・ネガティブ・中立の意見分析が自動生成されます。",
+    "headline": "米主要AIラボが「開発減速」で一致、その裏の計算資源の争奪",
+    "thesis": "米主要AIラボの突然の開発減速合意は、社会的な逆風や規制をかわしつつ、インフラ需要を「エージェント型」へシフトさせるための戦略的調整である。",
+    "opening": "【結論】米国の主要AIラボ（OpenAI、Anthropic、Google、Metaなど）のトップが突然足並みを揃え、モデル開発のペースダウンや安全性の優先で合意した。表向きは社会不安やワシントンからの規制圧力への対応だが、その実態は単純なブレーキではない。対話型AIから、自律的にタスクを遂行する「エージェント型AI」への移行に伴う電力・計算資源のボトルネックを乗り越えるための、周到な時間稼ぎと読める。本稿では、公開された開発動向と一連の政治的動きを束ね、いま競争のルールがどこで変わり始めているかを解き明かす。",
+    "what_happened": "【事実】今週、米AI業界と政治を巡り、複数の決定的な動きが重なった。第一に、AxiosやCNBCなどが報じた通り、米主要AIラボのトップらが一斉に安全性を優先した開発の減速を支持し、AnthropicのDario Amodei CEOが具体的な計画を提示した。これにはOpenAIのSam AltmanやGoogle DeepMindのDemis Hassabis、Elon Muskも同調している。背景にはデータセンターの電力不足に対する住民の反発や、中間選挙を控えたワシントンでの規制議論の急浮上がある（CNBC、Axios）。一方で、技術の現場では実利的な前進が続く。OpenAIは、Perplexityがシステム監視やソフトウェア変更などのエンドツーエンド業務に「GPT-6 Astra」を導入し、人間のチェック頻度を大幅に削減したと発表した（OpenAI News）。また、中国市場やオープンソース陣営では実装の細分化が進んでおり、QwenはクロスプラットフォームのCUA（Computer Use Agent）ドライバーをアップデートし（Qwen GitHub）、OpenClawもAIエージェント向けの変更履歴フォーマットを含む最新版を公開した（OpenClaw GitHub）。",
+    "why_now": "【解釈】なぜこのタイミングで「減速」なのか。最大の要因は、AIモデルの巨大化がもたらす電力・インフラの物理的限界と、それが引き起こす政治的摩擦である。Wiredが指摘するように、シリコンバレーの関心は「単なるチャットボットのクエリ」から、リソースを大量消費する自律型エージェントの運用へと完全にシフトしている。エージェント型AIは常時稼働し、システムの奥深くに入り込んで自ら判断を下すため、データセンターへの電力負荷は桁違いに大きい。ラボのトップたちが「減速」を唱えて社会的批判の矛先をかわし、IPOを先送りしてでも（CNBC）時間を買いたい本当の理由は、社会不安の鎮静化そのものというよりも、インフラ供給のスピードとエージェントの実装要件のギャップを埋めるための猶予を作る点にあると解釈できる。ただし、中国がBRICS諸国を巻き込んだ独自のAI技術協力を主導する構図（CNBC）が変わらない限り、米国側が自主的なスローダウンをどこまで維持できるかは不透明である。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "今年のIPO実施を見送る一方、Perplexityなどの実運用環境への「GPT-6 Astra」の組み込みを進め、エージェントによる自動化の実績をアピールしている。",
+        "implication": "収益化のプレッシャーを抱えつつも、単なる対話から「人間に代わるシステム運用」へと価値提供の軸足を移し、実需を囲い込む狙いがある。"
+      },
+      {
+        "company": "Anthropic",
+        "status": "Dario Amodei CEOが主導して3段階のAI開発減速・安全性計画を提言し、業界全体の足並みを揃えることに成功した。",
+        "implication": "規制当局への先手を打つことでコンプライアンスの主導権を握る一方、中国との開発競争におけるジレンマ（CNBC）をどう処理するかが問われる。"
+      },
+      {
+        "company": "Qwen（Alibaba陣営）",
+        "status": "クロスプラットフォーム対応のCUAドライバー（cua-driver-rs）をリリースするなど、PCやOS操作を伴うエージェント実装の基盤整備を着実に進めている。",
+        "implication": "米国の主要ラボが政治的・社会的調整に追われる中、オープン・軽量寄りの実装スピードで実用的なユースケースの裾野を広げるポジションにある。"
+      }
+    ],
+    "counterpoint": "【反証・留保】この見立てが崩れる条件は、米国政治の動向と他陣営の裏切りにある。もし中間選挙を控えた米議会が実際に強制的な開発凍結や厳しいハードウェア規制を法制化した場合、ラボの「自主的減速」は戦略的調整から単なる停滞へと変わる。また、もし中国陣営やオープンソースコミュニティが米国の減速期間中にエージェントの自律稼働とコスト効率で圧倒的な先手を打った場合、米主要ラボは減速路線を維持できなくなり、再び泥沼の規模拡大競争に引き戻されることになる。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、「AIの進化が一時的にスローダウンする」という表面的なニュースを真に受けてはならない。実態はインフラとエージェント実装に向けた戦略的再編である。今週見直すべきは、単発のチャットボット導入計画ではなく、社内システムやクラウド監視を自律型エージェントにどこまで任せるかの「全社アーキテクチャの設計図」である。特に、米主要ラボが規制や電力制約で足踏みをする可能性がある中、オープンソースや軽量モデル（Qwen等）を活用して自社環境にエージェントを早期に組み込む検証ラインを確保することが、調達上のリスクヘッジとなる。",
+    "next_signals": [
+      "米主要ラボの「減速合意」が具体的な自主規制ルールや非公開の検証プロトコルとして文書化されるか",
+      "データセンターの電力供給・許認可を巡る自治体や連邦政府の規制・訴訟の動き",
+      "Perplexityなどの実運用環境におけるGPT-6 Astra等のエージェント稼働安定性と人間による介入頻度の変化"
+    ],
+    "sources": [
+      {
+        "title": "Qwen GitHub｜cua-driver-rs v0.20.6",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.6"
+      },
+      {
+        "title": "OpenAI News｜Perplexity trusts GPT-6 Astra with end-to-end systems",
+        "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra"
+      },
+      {
+        "title": "OpenClaw GitHub｜openclaw 2026.9.4",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.4"
+      },
+      {
+        "title": "Axios｜AI's most powerful CEOs hit the brakes",
+        "url": "https://www.axios.com/2026/09/13/ai-labs-regulation-safety"
+      },
+      {
+        "title": "CNBC Tech｜Washington scrambles to meet calls for AI guardrails while the window to act closes",
+        "url": "https://www.cnbc.com/2026/09/13/ai-congress-anthropic-openai-crisis.html"
+      },
+      {
+        "title": "NYTimes Technology｜What Anthropic CEO Dario Amodei Argued in His Call for AI Slowdown",
+        "url": "https://www.nytimes.com/2026/09/13/technology/anthropic-ceo-slower-ai-development.html"
+      },
+      {
+        "title": "CNBC Tech｜OpenAI rules out IPO this year as Altman, Musk & Amodei warn AI is moving too fast",
+        "url": "https://www.cnbc.com/2026/09/12/anthropics-amodei-proposes-plan-to-slow-the-pace-of-advancing-ai-capabilities.html"
+      },
+      {
+        "title": "CNBC Tech｜Anthropic's Amodei says China presents 'toughest dilemma' for his proposed AI slowdown",
+        "url": "https://www.cnbc.com/2026/09/13/china-dilemma-ai-slowdown-anthropic.html"
+      },
+      {
+        "title": "CNBC Tech｜Xi says China will take lead to foster AI, tech cooperation among BRICS countries",
+        "url": "https://www.cnbc.com/2026/09/13/china-xi-ai-tech-brics.html"
+      },
+      {
+        "title": "Wired｜AI Agents Are Thirsty for Power",
+        "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/"
+      }
+    ],
+    "news_summary": "米主要AIラボの突然の開発減速合意は、社会的な逆風や規制をかわしつつ、インフラ需要を「エージェント型」へシフトさせるための戦略的調整である。\n\n【事実】今週、米AI業界と政治を巡り、複数の決定的な動きが重なった。第一に、AxiosやCNBCなどが報じた通り、米主要AIラボのトップらが一斉に安全性を優先した開発の減速を支持し、AnthropicのDario Amodei CEOが具体的な計画を提示した。これにはOpenAIのSam AltmanやGoogle DeepMindのDemis Hassabis、Elon Muskも同調している。背景にはデータセンターの電力不足に対する住民の反発や、中間選挙を控えたワシントンでの規制議論の急浮上がある（CNBC、Axios）。一方で、技術の現場では実利的な前進が続く。OpenAIは、Perplexityがシステム監視やソフトウェア変更などのエンドツーエンド業務に「GPT-6 Astra」を導入し、人間のチェック頻度を大幅に削減したと発表した（OpenAI News）。また、中国市場やオープンソース陣営では実装の細分化が進んでおり、QwenはクロスプラットフォームのCUA（Computer Use Agent）ドライバーをアップデートし（Qwen GitHub）、OpenClawもAIエージェント向けの変更履歴フォーマットを含む最新版を公開した（OpenClaw GitHub）。",
+    "opinion_summary": "【解釈】なぜこのタイミングで「減速」なのか。最大の要因は、AIモデルの巨大化がもたらす電力・インフラの物理的限界と、それが引き起こす政治的摩擦である。Wiredが指摘するように、シリコンバレーの関心は「単なるチャットボットのクエリ」から、リソースを大量消費する自律型エージェントの運用へと完全にシフトしている。エージェント型AIは常時稼働し、システムの奥深くに入り込んで自ら判断を下すため、データセンターへの電力負荷は桁違いに大きい。ラボのトップたちが「減速」を唱えて社会的批判の矛先をかわし、IPOを先送りしてでも（CNBC）時間を買いたい本当の理由は、社会不安の鎮静化そのものというよりも、インフラ供給のスピードとエージェントの実装要件のギャップを埋めるための猶予を作る点にあると解釈できる。ただし、中国がBRICS諸国を巻き込んだ独自のAI技術協力を主導する構図（CNBC）が変わらない限り、米国側が自主的なスローダウンをどこまで維持できるかは不透明である。",
     "sentiment": {
-      "positive": "APIキー設定後に自動生成されます",
-      "negative": "APIキー設定後に自動生成されます",
-      "neutral": "APIキー設定後に自動生成されます"
+      "positive": "",
+      "negative": "【反証・留保】この見立てが崩れる条件は、米国政治の動向と他陣営の裏切りにある。もし中間選挙を控えた米議会が実際に強制的な開発凍結や厳しいハードウェア規制を法制化した場合、ラボの「自主的減速」は戦略的調整から単なる停滞へと変わる。また、もし中国陣営やオープンソースコミュニティが米国の減速期間中にエージェントの自律稼働とコスト効率で圧倒的な先手を打った場合、米主要ラボは減速路線を維持できなくなり、再び泥沼の規模拡大競争に引き戻されることになる。",
+      "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Is Big Tech’s AI slowdown a safety pact or a cartel?",
-        "source": "The Verge AI",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/995186/is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
-        "point": "When OpenAI CEO Sam Altman, Anthropic CEO Dario Am..."
+        "title": "Qwen GitHub｜cua-driver-rs v0.20.6",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.6",
+        "point": "Qwen CUA Driver prebuilt binaries\n(vendored under packages/cua-driver).\n\nmacOS: codesigned + notarized universal binary "
       },
       {
         "rank": 2,
-        "title": "Broadcom CEO addresses Anthropic's slowdown push, says AI revenue targets haven't changed",
-        "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/09/14/broadcom-ceo-on-anthropics-slowdown-push-ai-revenue-targets-havent-changed.html",
-        "point": "Broadcom CEO Hock Tan said demand for AI infrastru..."
+        "title": "OpenAI News｜Perplexity trusts GPT-6 Astra with end-to-end systems",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+        "point": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less "
       },
       {
         "rank": 3,
-        "title": "CrowdStrike CEO on Anthropic’s AI safety warning: ‘The genie’s out of the bottle’",
-        "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/09/14/crowdstrike-ceo-anthropics-ai-safety-warning.html",
-        "point": "CrowdStrike CEO George Kurtz said slowing AI devel..."
+        "title": "OpenClaw GitHub｜openclaw 2026.9.4",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.4",
+        "point": "OpenClaw v2026.9.4\n20 direct commits · 1,558 pull requests · 294 contributors\nChanges included in this release\nThe relea"
       },
       {
         "rank": 4,
-        "title": "Nvidia’s Jensen Huang Gets Onstage Call From Trump, Who Dismissed A.I. Safety Concerns",
-        "source": "NYTimes Technology",
-        "url": "https://www.nytimes.com/2026/09/14/technology/trump-ai-safety-jensen-huang.html",
-        "point": "Mr. Trump called Jensen Huang, Nvidia’s chief exec..."
+        "title": "Axios｜AI's most powerful CEOs hit the brakes",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/09/13/ai-labs-regulation-safety",
+        "point": "In nine startling hours on Saturday, the four biggest AI labs — which rarely agree on anything — set aside years of feud"
       },
       {
         "rank": 5,
-        "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
-        "source": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
-        "point": "Though Elon Musk and Sam Altman have supported Dar..."
-      },
-      {
-        "rank": 6,
-        "title": "Trump phones Nvidia’s Huang at All-In Summit, calls data center opposition a ‘hoax’",
+        "title": "CNBC Tech｜Washington scrambles to meet calls for AI guardrails while the window to act closes",
         "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/09/14/trump-phones-nvidia-huang-all-in-calls-data-center-opposition-hoax.html",
-        "point": "President Trump has been using his social media si..."
-      },
-      {
-        "rank": 7,
-        "title": "What execs and politicians are saying about slowing down AI development",
-        "source": "The Verge AI",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
-        "point": "Dario Amodei kicked off a flood of statements over..."
-      },
-      {
-        "rank": 8,
-        "title": "Trump and Jensen Huang unite against AI doomers in surprise on-stage call",
-        "source": "Axios",
-        "url": "https://www.axios.com/2026/09/14/trump-jensen-huang-nvidia-ai-all-in-summit",
-        "point": "Nvidia CEO Jensen Huang took a surprise call from ..."
-      },
-      {
-        "rank": 9,
-        "title": "\"Look for other ways to get attention\": House Dems face new Trump impeachment blowup",
-        "source": "Axios",
-        "url": "https://www.axios.com/2026/09/14/trump-impeachment-al-green-democrats-house-vote",
-        "point": "Rep. Al Green (D-Texas) is facing swift and intens..."
-      },
-      {
-        "rank": 10,
-        "title": "OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says",
-        "source": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
-        "point": "Glass Imaging was founded by a pair of former Appl..."
+        "url": "https://www.cnbc.com/2026/09/13/ai-congress-anthropic-openai-crisis.html",
+        "point": "The House is scheduled to be sent home in the coming days until after November's midterm elections, leaving a narrow win"
       }
     ],
-    "joho_picks": []
+    "joho_picks": [
+      {
+        "headline": "米主要AIラボが「開発減速」で一致、その裏の計算資源の争奪",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.6",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】米国の主要AIラボ（OpenAI、Anthropic、Google、Metaなど）のトップが突然足並みを揃え、モデル開発のペースダウンや安全性の優先で合意した。表向きは社会不安やワシントンからの規制圧力への対応だが、その実態は単純なブレーキではない。対話型AIから、自律的にタスクを遂行する「エージェント型AI」への移行に伴う電力・計算資源のボトルネックを乗り越えるための、周到な時間稼ぎと読める。本稿では、公開された開発動向と一連の政治的動きを束ね、いま競争のルールがどこで変わり始めているかを解き明かす。\n\n【事実】今週、米AI業界と政治を巡り、複数の決定的な動きが重なった。第一に、AxiosやCNBCなどが報じた通り、米主要AIラボのトップらが一斉に安全性を優先した開発の減速を支持し、AnthropicのDario Amodei CEOが具体的な計画を提示した。これにはOpenAIのSam AltmanやGoogle DeepMindのDemis Hassabis、Elon Muskも同調している。背景にはデータセンターの電力不足に対する住民の反発や、中間選挙を控えたワシントンでの規制議論の急浮上がある（CNBC、Axios）。一方で、技術の現場では実利的な前進が続く。OpenAIは、Perplexityがシステム監視やソフトウェア変更などのエンドツーエンド業務に「GPT-6 Astra」を導入し、人間のチェック頻度を大幅に削減したと発表した（OpenAI News）。また、中国市場やオープンソース陣営では実装の細分化が進んでおり、QwenはクロスプラットフォームのCUA（Computer Use Agent）ドライバーをアップデートし（Qwen GitHub）、OpenClawもAIエージェント向けの変更履歴フォーマットを含む最新版を公開した（OpenClaw GitHub）。\n\n【解釈】なぜこのタイミングで「減速」なのか。最大の要因は、AIモデルの巨大化がもたらす電力・インフラの物理的限界と、それが引き起こす政治的摩擦である。Wiredが指摘するように、シリコンバレーの関心は「単なるチャットボットのクエリ」から、リソースを大量消費する自律型エージェントの運用へと完全にシフトしている。エージェント型AIは常時稼働し、システムの奥深くに入り込んで自ら判断を下すため、データセンターへの電力負荷は桁違いに大きい。ラボのトップたちが「減速」を唱えて社会的批判の矛先をかわし、IPOを先送りしてでも（CNBC）時間を買いたい本当の理由は、社会不安の鎮静化そのものというよりも、インフラ供給のスピードとエージェントの実装要件のギャップを埋めるための猶予を作る点にあると解釈できる。ただし、中国がBRICS諸国を巻き込んだ独自のAI技術協力を主導する構図（CNBC）が変わらない限り、米国側が自主的なスローダウンをどこまで維持できるかは不透明である。\n\n【競争の構図】\n【OpenAI】\n今年のIPO実施を見送る一方、Perplexityなどの実運用環境への「GPT-6 Astra」の組み込みを進め、エージェントによる自動化の実績をアピールしている。\n→ 収益化のプレッシャーを抱えつつも、単なる対話から「人間に代わるシステム運用」へと価値提供の軸足を移し、実需を囲い込む狙いがある。\n\n【Anthropic】\nDario Amodei CEOが主導して3段階のAI開発減速・安全性計画を提言し、業界全体の足並みを揃えることに成功した。\n→ 規制当局への先手を打つことでコンプライアンスの主導権を握る一方、中国との開発競争におけるジレンマ（CNBC）をどう処理するかが問われる。\n\n【Qwen（Alibaba陣営）】\nクロスプラットフォーム対応のCUAドライバー（cua-driver-rs）をリリースするなど、PCやOS操作を伴うエージェント実装の基盤整備を着実に進めている。\n→ 米国の主要ラボが政治的・社会的調整に追われる中、オープン・軽量寄りの実装スピードで実用的なユースケースの裾野を広げるポジションにある。",
+        "why_matters": "【日本の実務への示唆】日本企業は、「AIの進化が一時的にスローダウンする」という表面的なニュースを真に受けてはならない。実態はインフラとエージェント実装に向けた戦略的再編である。今週見直すべきは、単発のチャットボット導入計画ではなく、社内システムやクラウド監視を自律型エージェントにどこまで任せるかの「全社アーキテクチャの設計図」である。特に、米主要ラボが規制や電力制約で足踏みをする可能性がある中、オープンソースや軽量モデル（Qwen等）を活用して自社環境にエージェントを早期に組み込む検証ラインを確保することが、調達上のリスクヘッジとなる。\n\n【反証・留保】この見立てが崩れる条件は、米国政治の動向と他陣営の裏切りにある。もし中間選挙を控えた米議会が実際に強制的な開発凍結や厳しいハードウェア規制を法制化した場合、ラボの「自主的減速」は戦略的調整から単なる停滞へと変わる。また、もし中国陣営やオープンソースコミュニティが米国の減速期間中にエージェントの自律稼働とコスト効率で圧倒的な先手を打った場合、米主要ラボは減速路線を維持できなくなり、再び泥沼の規模拡大競争に引き戻されることになる。",
+        "context": "【次の観測点】\n・米主要ラボの「減速合意」が具体的な自主規制ルールや非公開の検証プロトコルとして文書化されるか\n・データセンターの電力供給・許認可を巡る自治体や連邦政府の規制・訴訟の動き\n・Perplexityなどの実運用環境におけるGPT-6 Astra等のエージェント稼働安定性と人間による介入頻度の変化"
+      }
+    ]
   },
   "raw_articles": [
     {
+      "source": "OpenAI News",
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+      "published": "2026-09-14 00:00 UTC",
+      "pub_dt": "2026-09-14T00:00:00+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "OpenAI rules out IPO this year as Altman, Musk & Amodei warn AI is moving too fast",
+      "url": "https://www.cnbc.com/2026/09/12/anthropics-amodei-proposes-plan-to-slow-the-pace-of-advancing-ai-capabilities.html",
+      "summary": "Altman's IPO comments and Amodei's public call for more careful pacing of AI development cap a week of loud AI warnings.",
+      "published": "2026-09-13 22:21 UTC",
+      "pub_dt": "2026-09-13T22:21:33+00:00"
+    },
+    {
       "source": "The Verge AI",
-      "title": "Is Big Tech’s AI slowdown a safety pact or a cartel?",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/995186/is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
-      "summary": "When OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei, Google DeepMind cofounder Demis Hassabis, and SpaceX head Elon Musk loosely agreed over the weekend to slow down AI development, skeptics spotted an ulterior motive immediately. The AI titans had declared that their aim was to \"pace the frontier,\" signing on at least partially to a [&#8230;]",
-      "published": "2026-09-14 22:59 UTC",
-      "pub_dt": "2026-09-14T22:59:41+00:00"
+      "title": "Trump and Mike Johnson think the AI industry is overreacting",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting",
+      "summary": "Yesterday, Anthropic CEO Dario Amodei published a lengthy open letter saying it was time to \"pace the frontier\" and slow down AI development. OpenAI's Sam Altman and Elon Musk both agreed, publicly voicing their support on X. Even Alphabet's Demis Hassabis offered tentative support for Amodei's proposal. Donald Trump and House Speaker Mike Johnson, however, [&#8230;]",
+      "published": "2026-09-13 19:41 UTC",
+      "pub_dt": "2026-09-13T19:41:48+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "What’s behind the AI industry’s latest warnings of doom?",
+      "url": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+      "summary": "On Equity, we discussed the AI industry's latest debate about whether it poses an existential threat to humanity.",
+      "published": "2026-09-13 19:40 UTC",
+      "pub_dt": "2026-09-13T19:40:15+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "Broadcom CEO addresses Anthropic's slowdown push, says AI revenue targets haven't changed",
-      "url": "https://www.cnbc.com/2026/09/14/broadcom-ceo-on-anthropics-slowdown-push-ai-revenue-targets-havent-changed.html",
-      "summary": "Broadcom CEO Hock Tan said demand for AI infrastructure remains strong despite growing concerns about increasingly powerful models.",
-      "published": "2026-09-14 22:43 UTC",
-      "pub_dt": "2026-09-14T22:43:25+00:00"
+      "title": "Washington scrambles to meet calls for AI guardrails while the window to act closes",
+      "url": "https://www.cnbc.com/2026/09/13/ai-congress-anthropic-openai-crisis.html",
+      "summary": "The House is scheduled to be sent home in the coming days until after November's midterm elections, leaving a narrow window to pass any form of AI regulation.",
+      "published": "2026-09-13 17:48 UTC",
+      "pub_dt": "2026-09-13T17:48:53+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "CrowdStrike CEO on Anthropic’s AI safety warning: ‘The genie’s out of the bottle’",
-      "url": "https://www.cnbc.com/2026/09/14/crowdstrike-ceo-anthropics-ai-safety-warning.html",
-      "summary": "CrowdStrike CEO George Kurtz said slowing AI development won’t eliminate the risks because potentially dangerous models are already widely available.",
-      "published": "2026-09-14 22:41 UTC",
-      "pub_dt": "2026-09-14T22:41:44+00:00"
+      "title": "Anthropic's Amodei says China presents 'toughest dilemma' for his proposed AI slowdown",
+      "url": "https://www.cnbc.com/2026/09/13/china-dilemma-ai-slowdown-anthropic.html",
+      "summary": "OpenAI CEO Sam Altman, Demis Hassabis, the chair of Google DeepMind, and Elon Musk have all welcomed Amodei's proposal.",
+      "published": "2026-09-13 16:39 UTC",
+      "pub_dt": "2026-09-13T16:39:24+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Xi says China will take lead to foster AI, tech cooperation among BRICS countries",
+      "url": "https://www.cnbc.com/2026/09/13/china-xi-ai-tech-brics.html",
+      "summary": "China will take the lead to help foster artificial-intelligence collaboration and development among developing-economy countries, President Xi Jinping said.",
+      "published": "2026-09-13 16:38 UTC",
+      "pub_dt": "2026-09-13T16:38:45+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Obama urges Democrats to have a ‘clear plan’ for AI safeguards",
+      "url": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
+      "summary": "Obama recently said that Democrats need to make artificial intelligence one of their “central agendas” and “have a very clear plan” to address concerns around the technology’s economic impact and safety.",
+      "published": "2026-09-13 16:30 UTC",
+      "pub_dt": "2026-09-13T16:30:00+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Johnson calls for AI solutions but says Congress won't take the lead",
+      "url": "https://www.axios.com/2026/09/13/ai-safety-congress-law-mike-johnson",
+      "summary": "House Speaker Mike Johnson (R-La.) said Sunday that Congress won't lead the charge on regulating AI safety. Why it matters: Calls for AI companies to adopt safety protocols reached a fever pitch this week, prompting the four biggest AI labs to endorse slowing their models' development. Driving the news: Johnson was urged this week to cancel the House recess and bring representatives back to D.C. to pass a law on AI safeguards. During a Sunday appearance on CNN's \"State of the Union,\" Johnson sai",
+      "published": "2026-09-13 16:23 UTC",
+      "pub_dt": "2026-09-13T16:23:20+00:00"
     },
     {
       "source": "NYTimes Technology",
-      "title": "Nvidia’s Jensen Huang Gets Onstage Call From Trump, Who Dismissed A.I. Safety Concerns",
-      "url": "https://www.nytimes.com/2026/09/14/technology/trump-ai-safety-jensen-huang.html",
-      "summary": "Mr. Trump called Jensen Huang, Nvidia’s chief executive, while Mr. Huang was onstage in Los Angeles and criticized calls to slow down and regulate A.I.",
-      "published": "2026-09-14 22:29 UTC",
-      "pub_dt": "2026-09-14T22:29:25+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
-      "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
-      "summary": "Though Elon Musk and Sam Altman have supported Dario Amodei's calls to slow the pace of AI development, Jensen Huang seems to feel differently.",
-      "published": "2026-09-14 21:51 UTC",
-      "pub_dt": "2026-09-14T21:51:02+00:00"
+      "title": "What Anthropic CEO Dario Amodei Argued in His Call for AI Slowdown",
+      "url": "https://www.nytimes.com/2026/09/13/technology/anthropic-ceo-slower-ai-development.html",
+      "summary": "Dario Amodei’s 3,800-word letter laid out a three-step plan to rein in artificial intelligence.",
+      "published": "2026-09-13 15:58 UTC",
+      "pub_dt": "2026-09-13T15:58:51+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "Trump phones Nvidia’s Huang at All-In Summit, calls data center opposition a ‘hoax’",
-      "url": "https://www.cnbc.com/2026/09/14/trump-phones-nvidia-huang-all-in-calls-data-center-opposition-hoax.html",
-      "summary": "President Trump has been using his social media site to sound off on Anthropic CEO Dario Amodei's suggestion that the AI industry slow its pace of development.",
-      "published": "2026-09-14 21:32 UTC",
-      "pub_dt": "2026-09-14T21:32:03+00:00"
-    },
-    {
-      "source": "The Verge AI",
-      "title": "What execs and politicians are saying about slowing down AI development",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
-      "summary": "Dario Amodei kicked off a flood of statements over the past few days about AI safety by publishing a long essay titled \"We Must Pace the Frontier\" detailing why AI development should be slowed down. Other AI leaders and politicians are speaking out in favor of or opposing his points, and we've compiled some of [&#8230;]",
-      "published": "2026-09-14 21:21 UTC",
-      "pub_dt": "2026-09-14T21:21:42+00:00"
+      "title": "The wages of American workers are under pressure. AI's potential role is drawing more attention",
+      "url": "https://www.cnbc.com/2026/09/13/ai-jobs-pay-inflation.html",
+      "summary": "Wage growth for workers has slowed and is struggling to keep up with inflation, drawing attention to AI's potential role even as evidence remains incomplete.",
+      "published": "2026-09-13 13:52 UTC",
+      "pub_dt": "2026-09-13T13:52:58+00:00"
     },
     {
       "source": "Axios",
-      "title": "Trump and Jensen Huang unite against AI doomers in surprise on-stage call",
-      "url": "https://www.axios.com/2026/09/14/trump-jensen-huang-nvidia-ai-all-in-summit",
-      "summary": "Nvidia CEO Jensen Huang took a surprise call from President Trump onstage at the All-In Summit Monday in Los Angeles, where the two dismissed fears of an AI takeover.Why it matters: Trump and Huang are staking out an increasingly clear rejection of AI doomerism right as some of the world's most powerful CEOs and AI experts call for slower AI development over safety concerns.Driving the news: Huang appeared to receive a call from Trump in the middle of an All-In Podcast interview Monday, accordin",
-      "published": "2026-09-14 20:52 UTC",
-      "pub_dt": "2026-09-14T20:52:29+00:00"
+      "title": "AI's most powerful CEOs hit the brakes",
+      "url": "https://www.axios.com/2026/09/13/ai-labs-regulation-safety",
+      "summary": "In nine startling hours on Saturday, the four biggest AI labs — which rarely agree on anything — set aside years of feuds and competition to endorse a slower development pace for their models.Their new stance: Prioritize safety over growth, even at a cost. The big picture: AI's unrelenting growth has hit an inflection point with the public, Washington and even the companies building it. Data centers are unpopular. People are panicked about doom scenarios. And 51 days before midterms, legislators",
+      "published": "2026-09-13 12:56 UTC",
+      "pub_dt": "2026-09-13T12:56:34+00:00"
     },
     {
-      "source": "Axios",
-      "title": "\"Look for other ways to get attention\": House Dems face new Trump impeachment blowup",
-      "url": "https://www.axios.com/2026/09/14/trump-impeachment-al-green-democrats-house-vote",
-      "summary": "Rep. Al Green (D-Texas) is facing swift and intense anger from his Democratic colleagues after announcing plans to force a vote to impeach President Trump this week.Why it matters: This is a messaging headache the party did not need going into the House's last week in session before midterm Election Day, frustrated House Democrats told Axios.\"It's fucked up,\" said a senior House Democrat, speaking on the condition of anonymity to offer candid criticism of a fellow Democrat.Fumed a second lawmake",
-      "published": "2026-09-14 20:44 UTC",
-      "pub_dt": "2026-09-14T20:44:41+00:00"
+      "source": "Qwen GitHub",
+      "title": "cua-driver-rs v0.20.6",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.6",
+      "summary": "Qwen CUA Driver prebuilt binaries\n(vendored under packages/cua-driver).\n\nmacOS: codesigned + notarized universal binary + QwenCuaDriver.app\nLinux: unsigned (x86_64 + arm64, glibc 2.31 floor)\nWindows: unsigned UIAccess worker + native SDK payload\n(x86_64 + arm64); deployments must sign and trust the worker\non the target machine before UIAccess activation\nNode.js: the same workflow publishes @qwen-code/cua-sdk\nafter a clean install against these release assets and publishes\nthe independently versi",
+      "published": "2026-09-13 11:15 UTC",
+      "pub_dt": "2026-09-13T11:15:51+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says",
-      "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
-      "summary": "Glass Imaging was founded by a pair of former Apple engineers who previously led the team that developed Apple's Portrait Mode.",
-      "published": "2026-09-14 20:44 UTC",
-      "pub_dt": "2026-09-14T20:44:14+00:00"
+      "source": "Wired",
+      "title": "AI Agents Are Thirsty for Power",
+      "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
+      "summary": "Silicon Valley is shifting away from chatbot queries toward a future filled with resource-intensive agentic AI—and it's driving the data center buildout.",
+      "published": "2026-09-13 10:00 UTC",
+      "pub_dt": "2026-09-13T10:00:00+00:00"
     },
     {
-      "source": "The Verge AI",
-      "title": "Jensen Huang puts Trump on speakerphone onstage to announce robots won’t take over the world",
-      "url": "https://www.theverge.com/tech/995079/president-donald-trump-calls-nvidia-ceo-jensen-huang-all-in-summit",
-      "summary": "Nvidia CEO Jensen Huang took a call from President Trump on Monday while onstage at the All-In Podcast's All-In Summit. It's not the first time Huang has taken a call from the president during work, but this time he put Trump on speakerphone before a big crowd. During the call, the president launched into his [&#8230;]",
-      "published": "2026-09-14 20:03 UTC",
-      "pub_dt": "2026-09-14T20:03:37+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Apple releases test of redesigned Siri AI before iPhone 18 hits stores this week",
-      "url": "https://www.cnbc.com/2026/09/14/apple-releases-ios-27-redesigned-siri-ai.html",
-      "summary": "Following Apple's iPhone launch event last week, the company is releasing a redesigned Siri AI, though users may have to sign up for a waitlist.",
-      "published": "2026-09-14 19:05 UTC",
-      "pub_dt": "2026-09-14T19:05:40+00:00"
-    },
-    {
-      "source": "AI Business",
-      "title": "Harnesses Bring Coordination and Guardrails to Enterprise AI Agents",
-      "url": "https://aibusiness.com/agentic-ai/harnesses-bring-coordination-guardrails-enterprise-ai-agents",
-      "summary": "The meaning of harness is still evolving.",
-      "published": "2026-09-14 18:29 UTC",
-      "pub_dt": "2026-09-14T18:29:42+00:00"
-    },
-    {
-      "source": "Axios",
-      "title": "Trump says a strong, smart president is the only \"guardrail\" AI needs",
-      "url": "https://www.axios.com/2026/09/14/trump-ai-safety-anthropic-dario-amodei",
-      "summary": "President Trump lashed out at calls for new AI guardrails and protections on Monday, arguing AI only needs a \"STRONG AND SMART (High IQ!) PRESIDENT\" and that AI critics should \"BEWARE!\"Why it matters: Trump continues to plant himself against calls for AI safety regulations as a growing chorus of AI leaders and CEOs, spearheaded by Anthropic CEO Dario Amodei over the weekend, call for a slowdown in AI's development and better regulations to help keep humanity safe.Amodei, OpenAI CEO Sam Altman an",
-      "published": "2026-09-14 17:59 UTC",
-      "pub_dt": "2026-09-14T17:59:55+00:00"
-    },
-    {
-      "source": "MIT Tech Review",
-      "title": "The AI industry has taken a doomer turn. What now?",
-      "url": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/",
-      "summary": "This story appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. This weekend, Dario Amodei, CEO of Anthropic, posted an essay calling for a brake on the pace of development of LLMs. Amodei cites the looming dangers he sees from the technology, from its&#8230;",
-      "published": "2026-09-14 17:54 UTC",
-      "pub_dt": "2026-09-14T17:54:22+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.9.4",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.4",
+      "summary": "OpenClaw v2026.9.4\n20 direct commits · 1,558 pull requests · 294 contributors\nChanges included in this release\nThe release notes and changelog contain the same content, presented in two formats:\n\nRelease notes — formatted for people, with expandable sections.\nChangelog — plain Markdown for AI agents and tools.\n\nThanks\n@0xCyda @100yenadmin @1Vision365-PeterTijsma @609NFT @84dnnvbdvp-debug @aaajiao @aatreya @abacha @adinballew @aeoess @aevgeniou @ai-hpc @aim9sour @akagifreeez @aleps001 @alexjpanag",
+      "published": "2026-09-13 09:51 UTC",
+      "pub_dt": "2026-09-13T09:51:57+00:00"
     }
   ]
 }

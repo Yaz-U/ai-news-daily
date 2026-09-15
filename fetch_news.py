@@ -12,6 +12,7 @@ import datetime
 import feedparser
 import requests
 import re
+import time
 from pathlib import Path
 from google import genai
 from google.genai import types
@@ -231,10 +232,61 @@ def fetch_articles(max_per_feed: int = 5) -> list[dict]:
     return unique
 
 
+EDITORIAL_TEXT_FIELDS = (
+    "headline", "thesis", "opening", "what_happened", "why_now",
+    "counterpoint", "japan_impact",
+)
+EDITORIAL_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        **{key: {"type": "STRING"} for key in EDITORIAL_TEXT_FIELDS},
+        "company_positions": {"type": "ARRAY", "items": {
+            "type": "OBJECT", "properties": {
+                key: {"type": "STRING"} for key in ("company", "status", "implication")
+            }, "required": ["company", "status", "implication"]}},
+        "next_signals": {"type": "ARRAY", "items": {"type": "STRING"}},
+        "sources": {"type": "ARRAY", "items": {
+            "type": "OBJECT", "properties": {
+                "title": {"type": "STRING"}, "url": {"type": "STRING"}
+            }, "required": ["title", "url"]}},
+    },
+    "required": [*EDITORIAL_TEXT_FIELDS, "company_positions", "next_signals", "sources"],
+}
+
+
+def validate_editorial(editorial, articles):
+    """Reject malformed or incomplete data before any published files are touched."""
+    if not isinstance(editorial, dict):
+        raise ValueError("編集記事がJSONオブジェクトではありません")
+    for key in EDITORIAL_TEXT_FIELDS:
+        if not isinstance(editorial.get(key), str) or not editorial[key].strip():
+            raise ValueError(f"編集記事の必須本文が欠落: {key}")
+    for key, fields in (("company_positions", ("company", "status", "implication")),
+                        ("sources", ("title", "url"))):
+        values = editorial.get(key)
+        if not isinstance(values, list) or (key == "sources" and not values):
+            raise ValueError(f"編集記事の配列が不正: {key}")
+        for item in values:
+            if not isinstance(item, dict) or any(
+                not isinstance(item.get(field), str) or not item[field].strip() for field in fields
+            ):
+                raise ValueError(f"編集記事の項目が不正: {key}")
+    signals = editorial.get("next_signals")
+    if not isinstance(signals, list) or not signals or any(
+        not isinstance(signal, str) or not signal.strip() for signal in signals
+    ):
+        raise ValueError("編集記事の観測点が不正")
+    allowed_urls = {article.get("url") for article in articles}
+    if any(source["url"] not in allowed_urls for source in editorial["sources"]):
+        raise ValueError("入力記事にない出典URLが含まれています")
+
+
 def summarize_editorial_with_gemini(articles: list[dict]) -> dict:
     """中心テーマ型の1日1回編集記事を生成する。"""
-    if not GEMINI_API_KEY or not articles:
-        return _dummy_summary(articles)
+    if not GEMINI_API_KEY:
+        raise RuntimeError("GEMINI_API_KEYが未設定です。公開記事を保持して終了します")
+    if not articles:
+        raise RuntimeError("記事がありません。公開記事を保持して終了します")
     client = genai.Client(api_key=GEMINI_API_KEY)
     editorial_articles = sorted(articles, key=editorial_rank, reverse=True)[:16]
     article_text = "\n".join(
@@ -270,17 +322,25 @@ JSONのみで出力:
 
 【入力記事】\n{article_text}"""
     # 編集記事は、コストと品質のバランスを優先して軽量モデルを固定で使う。
-    models_to_try = ["gemini-3.5-flash-lite"]
-    for model_name in models_to_try:
+    model_name = "gemini-3.5-flash-lite"
+    last_error = ""
+    for attempt in range(1, 4):
         try:
             response = client.models.generate_content(
                 model=model_name, contents=prompt,
                 config=types.GenerateContentConfig(
-                    temperature=0.7, response_mime_type="application/json", max_output_tokens=8192
+                    temperature=0.7, response_mime_type="application/json", max_output_tokens=8192,
+                    response_schema=EDITORIAL_SCHEMA,
                 ),
             )
-            text = re.sub(r"```json\s*|```", "", response.text or "").strip()
+            candidates = getattr(response, "candidates", None) or []
+            reason = getattr(candidates[0], "finish_reason", None) if candidates else None
+            reason = getattr(reason, "value", reason)
+            if reason and reason != "STOP":
+                raise ValueError(f"生成が正常終了していません: {reason}")
+            text = re.sub(r"^```(?:json)?\s*|\s*```$", "", response.text or "").strip()
             editorial = json.loads(text)
+            validate_editorial(editorial, editorial_articles)
             sources = editorial.get("sources", [])
             top_articles = []
             for rank, src in enumerate(sources[:5], 1):
@@ -305,8 +365,13 @@ JSONのみで出力:
                                          "context": "【次の観測点】\n" + "\n".join(f"・{signal}" for signal in editorial.get("next_signals", []))}]
             return editorial
         except Exception as e:
-            print(f"[WARNING] 編集記事生成失敗 ({model_name}): {e}")
-    return _dummy_summary(articles)
+            # Log diagnosis without printing raw responses or API credentials.
+            detail = str(e) if isinstance(e, (ValueError, json.JSONDecodeError)) else f"API/処理エラー code={getattr(e, 'code', 'unknown')}"
+            last_error = f"{type(e).__name__}: {detail}"
+            print(f"[WARNING] 編集記事生成失敗 ({model_name}, {attempt}/3): {last_error}")
+            if attempt < 3:
+                time.sleep(2 ** attempt)
+    raise RuntimeError(f"編集記事生成が3回失敗しました。公開記事は更新しません。{last_error}") from None
 
 
 def summarize_with_gemini(articles: list[dict]) -> dict:
@@ -690,8 +755,7 @@ def main():
     log(f"収集記事数: {len(articles)}")
 
     if not articles:
-        log("[WARNING] 記事が収集できませんでした")
-        return
+        raise RuntimeError("記事が収集できませんでした。公開記事は更新しません")
 
     # 2. 1回のAPI呼び出しで中心テーマ型の編集記事を生成
     log("中心テーマ型の編集記事を生成中...")

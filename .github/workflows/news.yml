@@ -29,6 +29,12 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_news.py
 
+      - name: 生成失敗を報告
+        if: failure()
+        run: |
+          echo '::error::ニュース更新に失敗しました。公開記事は上書きしていません。直前の処理のログを確認してください。'
+          echo 'ニュース更新失敗。公開済み記事は保持されています。エラーの詳細は直前のステップを確認してください。' >> "$GITHUB_STEP_SUMMARY"
+
       - name: 生成ファイルをリポジトリに保存（GitHub Pagesで公開）
         run: |
           git config --local user.email "action@github.com"
