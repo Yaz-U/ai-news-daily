@@ -1,0 +1,237 @@
+{
+  "timestamp": "2026-10-13T11:22:56.588911+09:00",
+  "time_slot": "昼",
+  "summary": {
+    "headline": "自社チップとインフラ標準化が揺さぶるAIのコスト構造",
+    "thesis": "NVIDIAのアーキテクチャ開放とMicrosoftの内製チップ本格化は、クラウド巨人のハードウェア依存を断ち切り、AIインフラの主導権を「計算資源の所有者」から「コスト効率を握る者」へ移行させている。",
+    "opening": "【結論】AIインフラの競争軸は、単なる演算性能の追求から、ギガワット規模の電力消費とコストをどう抑え込むかの「経済合理性」へ完全にシフトした。今日の材料が示すのは、NVIDIAによる次世代アーキテクチャ「Vera Rubin」のオープン標準化と、Microsoftによる独自AIチップ「Maia 300」の本格展開が同時並行で進んでいる点だ。これらはサプライチェーンの勢力図を塗り替え、インフラ投資の回収フェーズにおけるマージン争いを激化させている。ハードウェアの囲い込みではなく、調達のオープン化と自社製チップの使い分けが勝敗を分ける新たなルールとなりつつある。",
+    "what_happened": "【事実】今回の変化の軸となるのは、ハードウェアの調達とチップ内製化に関する複数の発表である。NVIDIAは「OCP Global Summit」において、AIファクトリーの巨大化に伴う効率化とオープン標準の推進を狙い、次世代の「Vera Rubin」アーキテクチャをエコシステムに向けて開放すると発表した（NVIDIA Blog）。一方でMicrosoftは、外部のGPU（Graphics Processing Unit：画像処理半導体）依存を軽減しマージンを拡大するため、自社製AIチップ「Maia 300」を主力製品の「主要な推論システム」として導入すると発表した（CNBC Tech, The Verge AI）。さらにIntelやBroadcomの首脳陣は、AIブームの最大のボトルネックとして「資本の枯渇」とアクセスの限界を警告しており（CNBC Tech）、ハードウェア投資の持続可能性そのものに黄信号が灯っている。また、OpenClawのGitHubリリースではAIエージェント向けのインフラ改善が継続的に進められており（OpenClaw GitHub）、実行環境の安定化が図られている。",
+    "why_now": "【解釈】なぜこのタイミングでハードウェアとインフラの地殻変動が起きたのか。最大の理由は、AIのワークロードが「学習」から、大量のトークンを常時消費する「推論」や自律的な「エージェント実行」へ移行したことによるコスト急騰にある。NVIDIAのGPUを高価格のまま調達し続けるモデルでは、クラウド事業者や大手プラットフォーマーの利益率が圧迫される。そのため、MicrosoftがMaia 300で推論コストの引き下げを図る動きは、ハードウェアの垂直統合によるマージン死守の必然的な一手といえる。同時に、NVIDIAがVera Rubinの開放にかじを切ったのは、専用インフラの肥大化に伴い顧客離れや自社製チップへの移行が進むリスクを先回りして抑え込む防衛策と読める。資本のボトルネックが意識される中、インフラ調達の最適化は生き残りのための至上命題となっている。",
+    "counterpoint": "【反証・留保】この見立てが過大評価である可能性を示す条件は、自社製チップの性能が最先端の推論モデルや高度なエージェントタスクの複雑さに追いつかなくなる事態だ。もしMaia 300などの内製チップが、NVIDIA製GPUとの性能差を埋められず、結果として開発スピードや処理効率を大きく落とすことになれば、結局は高価格であってもNVIDIAのハードウェアに回帰せざるを得なくなる。また、資本のボトルネックが一時的な調整にとどまり、潤沢な資金を持つ一部の超巨大テック企業が再び圧倒的な力でGPUを買い占めた場合、オープン標準や内製化の波は減速し、NVIDIA一極集中構造が温存されることになると言える。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、GPUの調達難や高価格化を前提とした「とにかくハイスペックなAI環境を自前で揃える」という発想を早急に見直すべきだ。今週見直すべきは、クラウド選定において「どのチップ（NVIDIA製か、自社製・独自カスタムチップか）をベースにした推論基盤が最もコスト効率が良いか」という調達の最適化である。また、自社システムに組み込むAIエージェントの実装においては、特定のハードウェアやクローズドなAPIに依存しすぎない、オープン標準に準拠したアーキテクチャの設計が、将来のコスト高騰を防ぐ防衛策となる。",
+    "company_positions": [
+      {
+        "company": "NVIDIA",
+        "status": "Vera Rubinアーキテクチャをオープン標準に向けて開放し、巨大化するAIファクトリーのエコシステム囲い込みを狙う。",
+        "implication": "顧客の自社製チップへの逃避を防ぐ狙いがあるが、チップ販売単価以外の収益モデルへの転換が問われる。"
+      },
+      {
+        "company": "Microsoft",
+        "status": "第3世代の自社製AIチップ「Maia 300」を主要な推論システムとして導入し、NVIDIAへの依存を低減する。",
+        "implication": "クラウドのマージン拡大と推論コストの劇的な引き下げを同時に達成し、AIスタック全体の主導権を握る。"
+      }
+    ],
+    "next_signals": [
+      "MicrosoftのMaia 300導入に伴う、外部GPU（NVIDIA製など）の調達量の具体的な削減データ",
+      "NVIDIAのVera Rubinアーキテクチャ採用を表明する主要クラウド事業者およびハードウェアメーカーの広がり",
+      "AIインフラ向け資本支出に対する、大手テック企業の決算でのROI（投資利益率）の言及内容"
+    ],
+    "sources": [
+      {
+        "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+        "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/"
+      },
+      {
+        "title": "openclaw 2026.10.1",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.1"
+      },
+      {
+        "title": "openclaw 2026.10.2",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.2"
+      },
+      {
+        "title": "openclaw 2026.10.5-beta.2",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.5-beta.2"
+      },
+      {
+        "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
+        "url": "https://www.cnbc.com/2026/10/12/intel-broadcom-ceos-warn-capital-crunch-could-become-ai-bottleneck.html"
+      },
+      {
+        "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
+        "url": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html"
+      },
+      {
+        "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
+        "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout"
+      }
+    ],
+    "news_summary": "NVIDIAのアーキテクチャ開放とMicrosoftの内製チップ本格化は、クラウド巨人のハードウェア依存を断ち切り、AIインフラの主導権を「計算資源の所有者」から「コスト効率を握る者」へ移行させている。\n\n【事実】今回の変化の軸となるのは、ハードウェアの調達とチップ内製化に関する複数の発表である。NVIDIAは「OCP Global Summit」において、AIファクトリーの巨大化に伴う効率化とオープン標準の推進を狙い、次世代の「Vera Rubin」アーキテクチャをエコシステムに向けて開放すると発表した（NVIDIA Blog）。一方でMicrosoftは、外部のGPU（Graphics Processing Unit：画像処理半導体）依存を軽減しマージンを拡大するため、自社製AIチップ「Maia 300」を主力製品の「主要な推論システム」として導入すると発表した（CNBC Tech, The Verge AI）。さらにIntelやBroadcomの首脳陣は、AIブームの最大のボトルネックとして「資本の枯渇」とアクセスの限界を警告しており（CNBC Tech）、ハードウェア投資の持続可能性そのものに黄信号が灯っている。また、OpenClawのGitHubリリースではAIエージェント向けのインフラ改善が継続的に進められており（OpenClaw GitHub）、実行環境の安定化が図られている。",
+    "opinion_summary": "【解釈】なぜこのタイミングでハードウェアとインフラの地殻変動が起きたのか。最大の理由は、AIのワークロードが「学習」から、大量のトークンを常時消費する「推論」や自律的な「エージェント実行」へ移行したことによるコスト急騰にある。NVIDIAのGPUを高価格のまま調達し続けるモデルでは、クラウド事業者や大手プラットフォーマーの利益率が圧迫される。そのため、MicrosoftがMaia 300で推論コストの引き下げを図る動きは、ハードウェアの垂直統合によるマージン死守の必然的な一手といえる。同時に、NVIDIAがVera Rubinの開放にかじを切ったのは、専用インフラの肥大化に伴い顧客離れや自社製チップへの移行が進むリスクを先回りして抑え込む防衛策と読める。資本のボトルネックが意識される中、インフラ調達の最適化は生き残りのための至上命題となっている。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価である可能性を示す条件は、自社製チップの性能が最先端の推論モデルや高度なエージェントタスクの複雑さに追いつかなくなる事態だ。もしMaia 300などの内製チップが、NVIDIA製GPUとの性能差を埋められず、結果として開発スピードや処理効率を大きく落とすことになれば、結局は高価格であってもNVIDIAのハードウェアに回帰せざるを得なくなる。また、資本のボトルネックが一時的な調整にとどまり、潤沢な資金を持つ一部の超巨大テック企業が再び圧倒的な力でGPUを買い占めた場合、オープン標準や内製化の波は減速し、NVIDIA一極集中構造が温存されることになると言える。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+        "source": "NVIDIA Blog",
+        "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+        "point": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are h"
+      },
+      {
+        "rank": 2,
+        "title": "openclaw 2026.10.1",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.1",
+        "point": "OpenClaw v2026.10.1\n3,055 commits · 2,425 pull requests · 402 contributors\nChanges included in this release\nThe release "
+      },
+      {
+        "rank": 3,
+        "title": "openclaw 2026.10.2",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.2",
+        "point": "2026.10.2\nHighlights\n\nUpdates from 2026.10.1: the first upgrade from stable 2026.10.1 now completes cleanly, successful "
+      },
+      {
+        "rank": 4,
+        "title": "openclaw 2026.10.5-beta.2",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.5-beta.2",
+        "point": "2026.10.5-beta.2\nHighlights\n\nUpdates finish and recover: openclaw update settles stale handoff leases, completed receipt"
+      },
+      {
+        "rank": 5,
+        "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/10/12/intel-broadcom-ceos-warn-capital-crunch-could-become-ai-bottleneck.html",
+        "point": "The CEOs of Intel and Broadcom warned that access to capital could emerge as a major constraint on the artificial intell"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "自社チップとインフラ標準化が揺さぶるAIのコスト構造",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AIインフラの競争軸は、単なる演算性能の追求から、ギガワット規模の電力消費とコストをどう抑え込むかの「経済合理性」へ完全にシフトした。今日の材料が示すのは、NVIDIAによる次世代アーキテクチャ「Vera Rubin」のオープン標準化と、Microsoftによる独自AIチップ「Maia 300」の本格展開が同時並行で進んでいる点だ。これらはサプライチェーンの勢力図を塗り替え、インフラ投資の回収フェーズにおけるマージン争いを激化させている。ハードウェアの囲い込みではなく、調達のオープン化と自社製チップの使い分けが勝敗を分ける新たなルールとなりつつある。\n\n【事実】今回の変化の軸となるのは、ハードウェアの調達とチップ内製化に関する複数の発表である。NVIDIAは「OCP Global Summit」において、AIファクトリーの巨大化に伴う効率化とオープン標準の推進を狙い、次世代の「Vera Rubin」アーキテクチャをエコシステムに向けて開放すると発表した（NVIDIA Blog）。一方でMicrosoftは、外部のGPU（Graphics Processing Unit：画像処理半導体）依存を軽減しマージンを拡大するため、自社製AIチップ「Maia 300」を主力製品の「主要な推論システム」として導入すると発表した（CNBC Tech, The Verge AI）。さらにIntelやBroadcomの首脳陣は、AIブームの最大のボトルネックとして「資本の枯渇」とアクセスの限界を警告しており（CNBC Tech）、ハードウェア投資の持続可能性そのものに黄信号が灯っている。また、OpenClawのGitHubリリースではAIエージェント向けのインフラ改善が継続的に進められており（OpenClaw GitHub）、実行環境の安定化が図られている。\n\n【解釈】なぜこのタイミングでハードウェアとインフラの地殻変動が起きたのか。最大の理由は、AIのワークロードが「学習」から、大量のトークンを常時消費する「推論」や自律的な「エージェント実行」へ移行したことによるコスト急騰にある。NVIDIAのGPUを高価格のまま調達し続けるモデルでは、クラウド事業者や大手プラットフォーマーの利益率が圧迫される。そのため、MicrosoftがMaia 300で推論コストの引き下げを図る動きは、ハードウェアの垂直統合によるマージン死守の必然的な一手といえる。同時に、NVIDIAがVera Rubinの開放にかじを切ったのは、専用インフラの肥大化に伴い顧客離れや自社製チップへの移行が進むリスクを先回りして抑え込む防衛策と読める。資本のボトルネックが意識される中、インフラ調達の最適化は生き残りのための至上命題となっている。\n\n【競争の構図】\n【NVIDIA】\nVera Rubinアーキテクチャをオープン標準に向けて開放し、巨大化するAIファクトリーのエコシステム囲い込みを狙う。\n→ 顧客の自社製チップへの逃避を防ぐ狙いがあるが、チップ販売単価以外の収益モデルへの転換が問われる。\n\n【Microsoft】\n第3世代の自社製AIチップ「Maia 300」を主要な推論システムとして導入し、NVIDIAへの依存を低減する。\n→ クラウドのマージン拡大と推論コストの劇的な引き下げを同時に達成し、AIスタック全体の主導権を握る。",
+        "why_matters": "【日本の実務への示唆】日本企業は、GPUの調達難や高価格化を前提とした「とにかくハイスペックなAI環境を自前で揃える」という発想を早急に見直すべきだ。今週見直すべきは、クラウド選定において「どのチップ（NVIDIA製か、自社製・独自カスタムチップか）をベースにした推論基盤が最もコスト効率が良いか」という調達の最適化である。また、自社システムに組み込むAIエージェントの実装においては、特定のハードウェアやクローズドなAPIに依存しすぎない、オープン標準に準拠したアーキテクチャの設計が、将来のコスト高騰を防ぐ防衛策となる。\n\n【反証・留保】この見立てが過大評価である可能性を示す条件は、自社製チップの性能が最先端の推論モデルや高度なエージェントタスクの複雑さに追いつかなくなる事態だ。もしMaia 300などの内製チップが、NVIDIA製GPUとの性能差を埋められず、結果として開発スピードや処理効率を大きく落とすことになれば、結局は高価格であってもNVIDIAのハードウェアに回帰せざるを得なくなる。また、資本のボトルネックが一時的な調整にとどまり、潤沢な資金を持つ一部の超巨大テック企業が再び圧倒的な力でGPUを買い占めた場合、オープン標準や内製化の波は減速し、NVIDIA一極集中構造が温存されることになると言える。",
+        "context": "【次の観測点】\n・MicrosoftのMaia 300導入に伴う、外部GPU（NVIDIA製など）の調達量の具体的な削減データ\n・NVIDIAのVera Rubinアーキテクチャ採用を表明する主要クラウド事業者およびハードウェアメーカーの広がり\n・AIインフラ向け資本支出に対する、大手テック企業の決算でのROI（投資利益率）の言及内容"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "CNBC Tech",
+      "title": "SK Hynix, SoftBank shares plunge as tech stocks in Asia track Wall Street chip sell-off",
+      "url": "https://www.cnbc.com/2026/10/13/sk-hynix-softbank-samsung-electronics-shares-tech-stocks-fall.html",
+      "summary": "Asian technology stocks tumbled Tuesday as a sell-off in U.S. semiconductor shares spilled into regional markets.",
+      "published": "2026-10-13 02:11 UTC",
+      "pub_dt": "2026-10-13T02:11:41+00:00"
+    },
+    {
+      "source": "Analytics Vidhya",
+      "title": "OpenAI Decisions API: What it is and how to use it?",
+      "url": "https://www.analyticsvidhya.com/blog/2026/10/openai-decisions-api/",
+      "summary": "Imagine building an AI agent that has to decide whether a customer complaint needs human intervention, which department should handle a query, or whether a submitted delivery photo is valid. Getting these decisions right matters. A false positive can trigger an unnecessary escalation, while a false negative can let a genuine issue slip through. Traditionally, [&#8230;]\nThe post OpenAI Decisions API: What it is and how to use it? appeared first on Analytics Vidhya.",
+      "published": "2026-10-13 00:39 UTC",
+      "pub_dt": "2026-10-13T00:39:00+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "I Got My Muse AI Agent to Sext Me—and Meta Says That’s Totally Fine",
+      "url": "https://www.wired.com/story/i-got-my-muse-ai-agent-to-sext-me-and-meta-says-thats-totally-fine/",
+      "summary": "My Muse agent told me its kink was exerting “control” and described pornographic encounters. Meta defends its cuddly AI agent generating smut as “legal adult behavior.”",
+      "published": "2026-10-12 20:13 UTC",
+      "pub_dt": "2026-10-12T20:13:28+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "Meet the Anthropic Engineer Keeping Its AI Agent Trustworthy",
+      "url": "https://spectrum.ieee.org/anthropic-engineer-ai-agent",
+      "summary": "If you’ve ever wondered how Claude and similar AI agents can answer complex questions in seconds and where they get the information, you’re not alone.Gurmeet Saran works to find that answer every day as an engineer at Anthropic in San Francisco, the AI research company behind Claude. The IEEE senior member is developing an infrastructure to understand the mechanics behind the chatbot’s behavior and to ensure its underlying architecture produces reliable outputs.Gurmeet SaranEmployer Anthropic in",
+      "published": "2026-10-12 18:00 UTC",
+      "pub_dt": "2026-10-12T18:00:02+00:00"
+    },
+    {
+      "source": "ZDNet AI",
+      "title": "Claude sent a false homicide tip to police – and it’s part of a troubling AI pattern",
+      "url": "https://www.zdnet.com/innovation/claude-false-homicide-tip/",
+      "summary": "Models routinely take shortcuts to pass evaluations. Who gets to decide what incidents are innocuous?",
+      "published": "2026-10-12 17:45 UTC",
+      "pub_dt": "2026-10-12T17:45:44+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Meta debuts Muse Wonder AI model in latest test of users' willingness to pay",
+      "url": "https://www.cnbc.com/2026/10/12/meta-muse-wonder-ai-model-agent.html",
+      "summary": "Meta introduced Muse Wonder, its latest AI model, but users have to pay for subscriptions to the Muse app to access it.",
+      "published": "2026-10-12 17:34 UTC",
+      "pub_dt": "2026-10-12T17:34:35+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "WindBorne wins a hefty US Air Force contract for its balloon data",
+      "url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+      "summary": "A Silicon Valley startup that uses weather balloons and AI to predict the weather won a U.S. military contract worth almost $50 million.",
+      "published": "2026-10-12 17:19 UTC",
+      "pub_dt": "2026-10-12T17:19:14+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Muse Wonder Puts Meta Back at the AI Frontier",
+      "url": "https://www.wired.com/story/muse-wonder-puts-meta-back-at-the-ai-frontier/",
+      "summary": "Meta’s biggest model rivals the world’s best—and includes new features to keep agents from going off the rails.",
+      "published": "2026-10-12 17:00 UTC",
+      "pub_dt": "2026-10-12T17:00:27+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Meta Unveils New Series of Advanced A.I. Models",
+      "url": "https://www.nytimes.com/2026/10/12/technology/meta-muse-wonder-full-models.html",
+      "summary": "The new models, Muse Wonder and Muse Wonder Full, are meant to compete with cutting-edge A.I. models from rivals like Anthropic and OpenAI.",
+      "published": "2026-10-12 17:00 UTC",
+      "pub_dt": "2026-10-12T17:00:05+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Meta has some Wonder Full new AI models",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
+      "summary": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best. The new models, Muse Wonder and Muse Wonder Full, are available [&#8230;]",
+      "published": "2026-10-12 17:00 UTC",
+      "pub_dt": "2026-10-12T17:00:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Honeyjar offers AI tools to improve PR and comms at every company",
+      "url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+      "summary": "Journalists, entrepreneurs, and even some public relations professionals will tell you that the PR process is broken. But could AI actually make things better?",
+      "published": "2026-10-12 15:45 UTC",
+      "pub_dt": "2026-10-12T15:45:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Microsoft president says UK is best placed to drive AI regulation",
+      "url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
+      "summary": "Microsoft president Brad Smith calls for urgent AI regulation, saying milk and washing machines have more oversight than AI companies.",
+      "published": "2026-10-12 15:31 UTC",
+      "pub_dt": "2026-10-12T15:31:19+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
+      "url": "https://techcrunch.com/2026/10/12/this-ai-startup-says-it-can-generate-permit-ready-blueprints-in-minutes/",
+      "summary": "Blueprints AI, a bootstrapped startup based in Santa Monica, developed software that produces code-compliant construction blueprints from a photo, PDF, or sketch.",
+      "published": "2026-10-12 15:27 UTC",
+      "pub_dt": "2026-10-12T15:27:59+00:00"
+    },
+    {
+      "source": "NVIDIA Blog",
+      "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+      "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+      "summary": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more reliably. At the Open Compute Project (OCP) Global Summit, taking place in the San Jose McEnery Convention Center, NVIDIA announced new partnerships and contributions aimed at [&#8230;]",
+      "published": "2026-10-12 15:00 UTC",
+      "pub_dt": "2026-10-12T15:00:25+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
+      "url": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html",
+      "summary": "By increasingly counting on its own chips, Microsoft stands to expand margins and bolster its AI stack.",
+      "published": "2026-10-12 14:04 UTC",
+      "pub_dt": "2026-10-12T14:04:16+00:00"
+    }
+  ]
+}
