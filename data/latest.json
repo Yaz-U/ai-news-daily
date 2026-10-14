@@ -1,237 +1,223 @@
 {
-  "timestamp": "2026-10-13T11:22:56.588911+09:00",
-  "time_slot": "昼",
+  "timestamp": "2026-10-14T09:04:48.271603+09:00",
+  "time_slot": "朝",
   "summary": {
-    "headline": "自社チップとインフラ標準化が揺さぶるAIのコスト構造",
-    "thesis": "NVIDIAのアーキテクチャ開放とMicrosoftの内製チップ本格化は、クラウド巨人のハードウェア依存を断ち切り、AIインフラの主導権を「計算資源の所有者」から「コスト効率を握る者」へ移行させている。",
-    "opening": "【結論】AIインフラの競争軸は、単なる演算性能の追求から、ギガワット規模の電力消費とコストをどう抑え込むかの「経済合理性」へ完全にシフトした。今日の材料が示すのは、NVIDIAによる次世代アーキテクチャ「Vera Rubin」のオープン標準化と、Microsoftによる独自AIチップ「Maia 300」の本格展開が同時並行で進んでいる点だ。これらはサプライチェーンの勢力図を塗り替え、インフラ投資の回収フェーズにおけるマージン争いを激化させている。ハードウェアの囲い込みではなく、調達のオープン化と自社製チップの使い分けが勝敗を分ける新たなルールとなりつつある。",
-    "what_happened": "【事実】今回の変化の軸となるのは、ハードウェアの調達とチップ内製化に関する複数の発表である。NVIDIAは「OCP Global Summit」において、AIファクトリーの巨大化に伴う効率化とオープン標準の推進を狙い、次世代の「Vera Rubin」アーキテクチャをエコシステムに向けて開放すると発表した（NVIDIA Blog）。一方でMicrosoftは、外部のGPU（Graphics Processing Unit：画像処理半導体）依存を軽減しマージンを拡大するため、自社製AIチップ「Maia 300」を主力製品の「主要な推論システム」として導入すると発表した（CNBC Tech, The Verge AI）。さらにIntelやBroadcomの首脳陣は、AIブームの最大のボトルネックとして「資本の枯渇」とアクセスの限界を警告しており（CNBC Tech）、ハードウェア投資の持続可能性そのものに黄信号が灯っている。また、OpenClawのGitHubリリースではAIエージェント向けのインフラ改善が継続的に進められており（OpenClaw GitHub）、実行環境の安定化が図られている。",
-    "why_now": "【解釈】なぜこのタイミングでハードウェアとインフラの地殻変動が起きたのか。最大の理由は、AIのワークロードが「学習」から、大量のトークンを常時消費する「推論」や自律的な「エージェント実行」へ移行したことによるコスト急騰にある。NVIDIAのGPUを高価格のまま調達し続けるモデルでは、クラウド事業者や大手プラットフォーマーの利益率が圧迫される。そのため、MicrosoftがMaia 300で推論コストの引き下げを図る動きは、ハードウェアの垂直統合によるマージン死守の必然的な一手といえる。同時に、NVIDIAがVera Rubinの開放にかじを切ったのは、専用インフラの肥大化に伴い顧客離れや自社製チップへの移行が進むリスクを先回りして抑え込む防衛策と読める。資本のボトルネックが意識される中、インフラ調達の最適化は生き残りのための至上命題となっている。",
-    "counterpoint": "【反証・留保】この見立てが過大評価である可能性を示す条件は、自社製チップの性能が最先端の推論モデルや高度なエージェントタスクの複雑さに追いつかなくなる事態だ。もしMaia 300などの内製チップが、NVIDIA製GPUとの性能差を埋められず、結果として開発スピードや処理効率を大きく落とすことになれば、結局は高価格であってもNVIDIAのハードウェアに回帰せざるを得なくなる。また、資本のボトルネックが一時的な調整にとどまり、潤沢な資金を持つ一部の超巨大テック企業が再び圧倒的な力でGPUを買い占めた場合、オープン標準や内製化の波は減速し、NVIDIA一極集中構造が温存されることになると言える。",
-    "japan_impact": "【日本の実務への示唆】日本企業は、GPUの調達難や高価格化を前提とした「とにかくハイスペックなAI環境を自前で揃える」という発想を早急に見直すべきだ。今週見直すべきは、クラウド選定において「どのチップ（NVIDIA製か、自社製・独自カスタムチップか）をベースにした推論基盤が最もコスト効率が良いか」という調達の最適化である。また、自社システムに組み込むAIエージェントの実装においては、特定のハードウェアやクローズドなAPIに依存しすぎない、オープン標準に準拠したアーキテクチャの設計が、将来のコスト高騰を防ぐ防衛策となる。",
+    "headline": "AIの主導権は半導体と独自シリコンの自社製化へ",
+    "thesis": "AI競争の主役は単なるモデルの性能から、エッジデバイスやカスタムシリコンによるコスト・インフラの自社制御へ移行している。Big Techの動きはNVIDIA依存からの脱却を加速させ、エコシステムの勢力図を塗り替えつつある。",
+    "opening": "【結論】AI競争の主導権は、抽象的なモデル性能の向上から、ハードウェアインフラの自社制御とコスト管理へと完全に移行した。本稿では、最新のNVIDIA製チップやPC向けエコシステムの発表、Microsoftによる独自カスタムシリコン「Maia」の展開、そして各社が推進するエージェント型AIの動向を一つの論点として読み解く。もはや単に優れた言語モデルを作るだけでは勝てず、推論コストをいかに下げ、自社製チップやデバイスの流通網を握るかが勝敗の分かれ目となっている。今日の材料から見えてきたのは、サプライチェーンとインフラの主導権を巡るプレイヤーたちの熾烈な陣取り合戦の現在地である。",
+    "what_happened": "【事実】NVIDIAブログの発表によると、同社は最大128GBのユニファイドメモリと1ペタフロップスのAI計算能力を持つ新スーパーチップを搭載したPC向けエコシステム「NVIDIA RTX Spark」を展開し、ローカル環境でのAI処理能力を大きく引き上げようとしている。また、フランスにおけるエコシステム投資を通じて、宇宙や金融などの実産業へのエージェント型AIの導入を加速させている。一方で、Axiosの報道が示すように、Microsoftが自社製チップ「Maia」の導入を進めるなど、かつてのNVIDIAの大口顧客が強力なライバルへと変貌を遂げている。この動きは特に推論コストの削減とインフラの自社所有を目的としており、NVIDIA一強の構造に揺らぎを生じさせている。さらに、OpenAIを巡っては、従業員が機密保持や安全性を揺るがす事件でFBIに逮捕されるなど、開発組織のガバナンスや内部統制に関する課題も表面化している。",
+    "why_now": "【解釈】今回の変化は、AIの収益化が「実験的なチャットボットの提供」から「実運用のためのコスト最適化とインフラの強靭化」へシフトしたことを示している。モデルのパラメータ数を増やすだけでは限界が見え、企業が自社の業務にAIを組み込む段階において、推論にかかる膨大な計算コストが最大のボトルネックとなっている。この課題を解決するため、MicrosoftをはじめとするBig TechはNVIDIAへの依存を断ち切り、自社製シリコンの調達へと舵を切らざるを得なくなっている。また、エッジデバイス側でもNVIDIAが「RTX Spark」などでローカル処理能力を底上げしているのは、クラウドへの一極集中によるコストと遅延の壁を回避する狙いがある。ただし、この見立ては自社製チップの製造歩留まりや、エージェントAIのセキュリティリスクが想定以上に企業の導入を阻む場合、一時的なサプライチェーンの混乱に留まる可能性もある。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、カスタムシリコンの開発遅延や、自社製チップがNVIDIA製エコシステム（CUDAなど）のソフトウェア互換性を完全に代替できないリスクを挙げる必要がある。もしMicrosoftの「Maia」などの独自チップが期待通りの性能や汎用性を示せなかった場合、あるいはローカルAIのセキュリティ脆弱性を突いたインシデントが多発して企業が導入を見送った場合、NVIDIAを中心とした既存の集中型インフラの優位性は揺るがない。したがって、ハードウェアの分散化が直ちにソフトウェアの標準を置き換えるとは限らない点に注意が必要である。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、クラウド上の汎用AIモデルの比較検討から、自社のオンプレミス環境やエッジデバイス（PC等）における推論コストの試算、および独自シリコン・アクセラレータの調達戦略の見直しを急ぐべきである。特に製造業や金融など、データガバナンスの観点からクラウドに依存できない領域では、NVIDIAのローカル向けソリューションや各社が提供するエージェント型AIを自社インフラにどう組み込むか、具体的な検証フェーズへ移行することが求められる。",
     "company_positions": [
       {
         "company": "NVIDIA",
-        "status": "Vera Rubinアーキテクチャをオープン標準に向けて開放し、巨大化するAIファクトリーのエコシステム囲い込みを狙う。",
-        "implication": "顧客の自社製チップへの逃避を防ぐ狙いがあるが、チップ販売単価以外の収益モデルへの転換が問われる。"
+        "status": "「RTX Spark」によるPC向けローカルAIの強化や、フランスなど欧州でのエージェント型AIエコシステムの開拓を推進している。",
+        "implication": "クラウドからエッジまでの垂直統合を進める一方で、主要顧客の自社製チップ移行により、高マージンなインフラ供給者としての地位が脅かされ始めている。"
       },
       {
         "company": "Microsoft",
-        "status": "第3世代の自社製AIチップ「Maia 300」を主要な推論システムとして導入し、NVIDIAへの依存を低減する。",
-        "implication": "クラウドのマージン拡大と推論コストの劇的な引き下げを同時に達成し、AIスタック全体の主導権を握る。"
+        "status": "独自チップ「Maia」の展開を進め、AIインフラの自社製化を加速させている。",
+        "implication": "NVIDIAへの依存度を低下させ、推論コストを最適化することで、AIサービスの収益性を構造的に高める優位性を獲得しつつある。"
+      },
+      {
+        "company": "OpenAI",
+        "status": "動画生成などの新機能拡張を進める一方で、従業員の不祥事や内部の安全管理に関するガバナンス上の課題が露出している。",
+        "implication": "モデルの性能競争では先行するものの、組織の信頼性やセキュリティの管理体制が、エンタープライズ顧客の導入判断におけるリスク要因となり得る。"
       }
     ],
     "next_signals": [
-      "MicrosoftのMaia 300導入に伴う、外部GPU（NVIDIA製など）の調達量の具体的な削減データ",
-      "NVIDIAのVera Rubinアーキテクチャ採用を表明する主要クラウド事業者およびハードウェアメーカーの広がり",
-      "AIインフラ向け資本支出に対する、大手テック企業の決算でのROI（投資利益率）の言及内容"
+      "MicrosoftのMaiaチップの外部顧客への展開状況と、Azure上の推論コストの変動",
+      "NVIDIAのローカルAI向けチップ（RTX Spark等）のPC市場における採用実績",
+      "AIインフラおよびエージェント連携ツールにおけるセキュリティ脆弱性の露呈と企業の対応"
     ],
     "sources": [
       {
-        "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
-        "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/"
+        "title": "NVIDIA Blog｜All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
+        "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"
       },
       {
-        "title": "openclaw 2026.10.1",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.1"
+        "title": "NVIDIA Blog｜NVIDIA Announces New Investments in France’s Startups",
+        "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/"
       },
       {
-        "title": "openclaw 2026.10.2",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.2"
+        "title": "Axios｜Every major Nvidia customer is now a competitor as Microsoft reveals new Maia chip",
+        "url": "https://www.axios.com/2026/10/13/big-tech-ai-chips-nvidia-rivals"
       },
       {
-        "title": "openclaw 2026.10.5-beta.2",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.5-beta.2"
-      },
-      {
-        "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
-        "url": "https://www.cnbc.com/2026/10/12/intel-broadcom-ceos-warn-capital-crunch-could-become-ai-bottleneck.html"
-      },
-      {
-        "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
-        "url": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html"
-      },
-      {
-        "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
-        "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout"
+        "title": "NYTimes Technology｜F.B.I. Arrests OpenAI Employee Accused of Planting Bug in Office",
+        "url": "https://www.nytimes.com/2026/10/13/technology/openai-worker-arrested-bugging.html"
       }
     ],
-    "news_summary": "NVIDIAのアーキテクチャ開放とMicrosoftの内製チップ本格化は、クラウド巨人のハードウェア依存を断ち切り、AIインフラの主導権を「計算資源の所有者」から「コスト効率を握る者」へ移行させている。\n\n【事実】今回の変化の軸となるのは、ハードウェアの調達とチップ内製化に関する複数の発表である。NVIDIAは「OCP Global Summit」において、AIファクトリーの巨大化に伴う効率化とオープン標準の推進を狙い、次世代の「Vera Rubin」アーキテクチャをエコシステムに向けて開放すると発表した（NVIDIA Blog）。一方でMicrosoftは、外部のGPU（Graphics Processing Unit：画像処理半導体）依存を軽減しマージンを拡大するため、自社製AIチップ「Maia 300」を主力製品の「主要な推論システム」として導入すると発表した（CNBC Tech, The Verge AI）。さらにIntelやBroadcomの首脳陣は、AIブームの最大のボトルネックとして「資本の枯渇」とアクセスの限界を警告しており（CNBC Tech）、ハードウェア投資の持続可能性そのものに黄信号が灯っている。また、OpenClawのGitHubリリースではAIエージェント向けのインフラ改善が継続的に進められており（OpenClaw GitHub）、実行環境の安定化が図られている。",
-    "opinion_summary": "【解釈】なぜこのタイミングでハードウェアとインフラの地殻変動が起きたのか。最大の理由は、AIのワークロードが「学習」から、大量のトークンを常時消費する「推論」や自律的な「エージェント実行」へ移行したことによるコスト急騰にある。NVIDIAのGPUを高価格のまま調達し続けるモデルでは、クラウド事業者や大手プラットフォーマーの利益率が圧迫される。そのため、MicrosoftがMaia 300で推論コストの引き下げを図る動きは、ハードウェアの垂直統合によるマージン死守の必然的な一手といえる。同時に、NVIDIAがVera Rubinの開放にかじを切ったのは、専用インフラの肥大化に伴い顧客離れや自社製チップへの移行が進むリスクを先回りして抑え込む防衛策と読める。資本のボトルネックが意識される中、インフラ調達の最適化は生き残りのための至上命題となっている。",
+    "news_summary": "AI競争の主役は単なるモデルの性能から、エッジデバイスやカスタムシリコンによるコスト・インフラの自社制御へ移行している。Big Techの動きはNVIDIA依存からの脱却を加速させ、エコシステムの勢力図を塗り替えつつある。\n\n【事実】NVIDIAブログの発表によると、同社は最大128GBのユニファイドメモリと1ペタフロップスのAI計算能力を持つ新スーパーチップを搭載したPC向けエコシステム「NVIDIA RTX Spark」を展開し、ローカル環境でのAI処理能力を大きく引き上げようとしている。また、フランスにおけるエコシステム投資を通じて、宇宙や金融などの実産業へのエージェント型AIの導入を加速させている。一方で、Axiosの報道が示すように、Microsoftが自社製チップ「Maia」の導入を進めるなど、かつてのNVIDIAの大口顧客が強力なライバルへと変貌を遂げている。この動きは特に推論コストの削減とインフラの自社所有を目的としており、NVIDIA一強の構造に揺らぎを生じさせている。さらに、OpenAIを巡っては、従業員が機密保持や安全性を揺るがす事件でFBIに逮捕されるなど、開発組織のガバナンスや内部統制に関する課題も表面化している。",
+    "opinion_summary": "【解釈】今回の変化は、AIの収益化が「実験的なチャットボットの提供」から「実運用のためのコスト最適化とインフラの強靭化」へシフトしたことを示している。モデルのパラメータ数を増やすだけでは限界が見え、企業が自社の業務にAIを組み込む段階において、推論にかかる膨大な計算コストが最大のボトルネックとなっている。この課題を解決するため、MicrosoftをはじめとするBig TechはNVIDIAへの依存を断ち切り、自社製シリコンの調達へと舵を切らざるを得なくなっている。また、エッジデバイス側でもNVIDIAが「RTX Spark」などでローカル処理能力を底上げしているのは、クラウドへの一極集中によるコストと遅延の壁を回避する狙いがある。ただし、この見立ては自社製チップの製造歩留まりや、エージェントAIのセキュリティリスクが想定以上に企業の導入を阻む場合、一時的なサプライチェーンの混乱に留まる可能性もある。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てが過大評価である可能性を示す条件は、自社製チップの性能が最先端の推論モデルや高度なエージェントタスクの複雑さに追いつかなくなる事態だ。もしMaia 300などの内製チップが、NVIDIA製GPUとの性能差を埋められず、結果として開発スピードや処理効率を大きく落とすことになれば、結局は高価格であってもNVIDIAのハードウェアに回帰せざるを得なくなる。また、資本のボトルネックが一時的な調整にとどまり、潤沢な資金を持つ一部の超巨大テック企業が再び圧倒的な力でGPUを買い占めた場合、オープン標準や内製化の波は減速し、NVIDIA一極集中構造が温存されることになると言える。",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、カスタムシリコンの開発遅延や、自社製チップがNVIDIA製エコシステム（CUDAなど）のソフトウェア互換性を完全に代替できないリスクを挙げる必要がある。もしMicrosoftの「Maia」などの独自チップが期待通りの性能や汎用性を示せなかった場合、あるいはローカルAIのセキュリティ脆弱性を突いたインシデントが多発して企業が導入を見送った場合、NVIDIAを中心とした既存の集中型インフラの優位性は揺るがない。したがって、ハードウェアの分散化が直ちにソフトウェアの標準を置き換えるとは限らない点に注意が必要である。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+        "title": "NVIDIA Blog｜All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
         "source": "NVIDIA Blog",
-        "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
-        "point": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are h"
+        "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
+        "point": "NVIDIA RTX Spark is a new beginning for the PC — a reinvention combining the capabilities of a gaming PC, a creative stu"
       },
       {
         "rank": 2,
-        "title": "openclaw 2026.10.1",
-        "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.1",
-        "point": "OpenClaw v2026.10.1\n3,055 commits · 2,425 pull requests · 402 contributors\nChanges included in this release\nThe release "
+        "title": "NVIDIA Blog｜NVIDIA Announces New Investments in France’s Startups",
+        "source": "NVIDIA Blog",
+        "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/",
+        "point": "Companies in France are deploying agentic computing across industries spanning space, financial services, the public sec"
       },
       {
         "rank": 3,
-        "title": "openclaw 2026.10.2",
-        "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.2",
-        "point": "2026.10.2\nHighlights\n\nUpdates from 2026.10.1: the first upgrade from stable 2026.10.1 now completes cleanly, successful "
+        "title": "Axios｜Every major Nvidia customer is now a competitor as Microsoft reveals new Maia chip",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/10/13/big-tech-ai-chips-nvidia-rivals",
+        "point": "The trillion-dollar AI race is moving from software to silicon, as Microsoft's massive bet on its proprietary Maia chips"
       },
       {
         "rank": 4,
-        "title": "openclaw 2026.10.5-beta.2",
-        "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.5-beta.2",
-        "point": "2026.10.5-beta.2\nHighlights\n\nUpdates finish and recover: openclaw update settles stale handoff leases, completed receipt"
-      },
-      {
-        "rank": 5,
-        "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
-        "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/10/12/intel-broadcom-ceos-warn-capital-crunch-could-become-ai-bottleneck.html",
-        "point": "The CEOs of Intel and Broadcom warned that access to capital could emerge as a major constraint on the artificial intell"
+        "title": "NYTimes Technology｜F.B.I. Arrests OpenAI Employee Accused of Planting Bug in Office",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/10/13/technology/openai-worker-arrested-bugging.html",
+        "point": "OpenAI said that the employee had placed a device built to evade detection and that he had planned to secretly record me"
       }
     ],
     "joho_picks": [
       {
-        "headline": "自社チップとインフラ標準化が揺さぶるAIのコスト構造",
+        "headline": "AIの主導権は半導体と独自シリコンの自社製化へ",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+        "source_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】AIインフラの競争軸は、単なる演算性能の追求から、ギガワット規模の電力消費とコストをどう抑え込むかの「経済合理性」へ完全にシフトした。今日の材料が示すのは、NVIDIAによる次世代アーキテクチャ「Vera Rubin」のオープン標準化と、Microsoftによる独自AIチップ「Maia 300」の本格展開が同時並行で進んでいる点だ。これらはサプライチェーンの勢力図を塗り替え、インフラ投資の回収フェーズにおけるマージン争いを激化させている。ハードウェアの囲い込みではなく、調達のオープン化と自社製チップの使い分けが勝敗を分ける新たなルールとなりつつある。\n\n【事実】今回の変化の軸となるのは、ハードウェアの調達とチップ内製化に関する複数の発表である。NVIDIAは「OCP Global Summit」において、AIファクトリーの巨大化に伴う効率化とオープン標準の推進を狙い、次世代の「Vera Rubin」アーキテクチャをエコシステムに向けて開放すると発表した（NVIDIA Blog）。一方でMicrosoftは、外部のGPU（Graphics Processing Unit：画像処理半導体）依存を軽減しマージンを拡大するため、自社製AIチップ「Maia 300」を主力製品の「主要な推論システム」として導入すると発表した（CNBC Tech, The Verge AI）。さらにIntelやBroadcomの首脳陣は、AIブームの最大のボトルネックとして「資本の枯渇」とアクセスの限界を警告しており（CNBC Tech）、ハードウェア投資の持続可能性そのものに黄信号が灯っている。また、OpenClawのGitHubリリースではAIエージェント向けのインフラ改善が継続的に進められており（OpenClaw GitHub）、実行環境の安定化が図られている。\n\n【解釈】なぜこのタイミングでハードウェアとインフラの地殻変動が起きたのか。最大の理由は、AIのワークロードが「学習」から、大量のトークンを常時消費する「推論」や自律的な「エージェント実行」へ移行したことによるコスト急騰にある。NVIDIAのGPUを高価格のまま調達し続けるモデルでは、クラウド事業者や大手プラットフォーマーの利益率が圧迫される。そのため、MicrosoftがMaia 300で推論コストの引き下げを図る動きは、ハードウェアの垂直統合によるマージン死守の必然的な一手といえる。同時に、NVIDIAがVera Rubinの開放にかじを切ったのは、専用インフラの肥大化に伴い顧客離れや自社製チップへの移行が進むリスクを先回りして抑え込む防衛策と読める。資本のボトルネックが意識される中、インフラ調達の最適化は生き残りのための至上命題となっている。\n\n【競争の構図】\n【NVIDIA】\nVera Rubinアーキテクチャをオープン標準に向けて開放し、巨大化するAIファクトリーのエコシステム囲い込みを狙う。\n→ 顧客の自社製チップへの逃避を防ぐ狙いがあるが、チップ販売単価以外の収益モデルへの転換が問われる。\n\n【Microsoft】\n第3世代の自社製AIチップ「Maia 300」を主要な推論システムとして導入し、NVIDIAへの依存を低減する。\n→ クラウドのマージン拡大と推論コストの劇的な引き下げを同時に達成し、AIスタック全体の主導権を握る。",
-        "why_matters": "【日本の実務への示唆】日本企業は、GPUの調達難や高価格化を前提とした「とにかくハイスペックなAI環境を自前で揃える」という発想を早急に見直すべきだ。今週見直すべきは、クラウド選定において「どのチップ（NVIDIA製か、自社製・独自カスタムチップか）をベースにした推論基盤が最もコスト効率が良いか」という調達の最適化である。また、自社システムに組み込むAIエージェントの実装においては、特定のハードウェアやクローズドなAPIに依存しすぎない、オープン標準に準拠したアーキテクチャの設計が、将来のコスト高騰を防ぐ防衛策となる。\n\n【反証・留保】この見立てが過大評価である可能性を示す条件は、自社製チップの性能が最先端の推論モデルや高度なエージェントタスクの複雑さに追いつかなくなる事態だ。もしMaia 300などの内製チップが、NVIDIA製GPUとの性能差を埋められず、結果として開発スピードや処理効率を大きく落とすことになれば、結局は高価格であってもNVIDIAのハードウェアに回帰せざるを得なくなる。また、資本のボトルネックが一時的な調整にとどまり、潤沢な資金を持つ一部の超巨大テック企業が再び圧倒的な力でGPUを買い占めた場合、オープン標準や内製化の波は減速し、NVIDIA一極集中構造が温存されることになると言える。",
-        "context": "【次の観測点】\n・MicrosoftのMaia 300導入に伴う、外部GPU（NVIDIA製など）の調達量の具体的な削減データ\n・NVIDIAのVera Rubinアーキテクチャ採用を表明する主要クラウド事業者およびハードウェアメーカーの広がり\n・AIインフラ向け資本支出に対する、大手テック企業の決算でのROI（投資利益率）の言及内容"
+        "body": "【結論】AI競争の主導権は、抽象的なモデル性能の向上から、ハードウェアインフラの自社制御とコスト管理へと完全に移行した。本稿では、最新のNVIDIA製チップやPC向けエコシステムの発表、Microsoftによる独自カスタムシリコン「Maia」の展開、そして各社が推進するエージェント型AIの動向を一つの論点として読み解く。もはや単に優れた言語モデルを作るだけでは勝てず、推論コストをいかに下げ、自社製チップやデバイスの流通網を握るかが勝敗の分かれ目となっている。今日の材料から見えてきたのは、サプライチェーンとインフラの主導権を巡るプレイヤーたちの熾烈な陣取り合戦の現在地である。\n\n【事実】NVIDIAブログの発表によると、同社は最大128GBのユニファイドメモリと1ペタフロップスのAI計算能力を持つ新スーパーチップを搭載したPC向けエコシステム「NVIDIA RTX Spark」を展開し、ローカル環境でのAI処理能力を大きく引き上げようとしている。また、フランスにおけるエコシステム投資を通じて、宇宙や金融などの実産業へのエージェント型AIの導入を加速させている。一方で、Axiosの報道が示すように、Microsoftが自社製チップ「Maia」の導入を進めるなど、かつてのNVIDIAの大口顧客が強力なライバルへと変貌を遂げている。この動きは特に推論コストの削減とインフラの自社所有を目的としており、NVIDIA一強の構造に揺らぎを生じさせている。さらに、OpenAIを巡っては、従業員が機密保持や安全性を揺るがす事件でFBIに逮捕されるなど、開発組織のガバナンスや内部統制に関する課題も表面化している。\n\n【解釈】今回の変化は、AIの収益化が「実験的なチャットボットの提供」から「実運用のためのコスト最適化とインフラの強靭化」へシフトしたことを示している。モデルのパラメータ数を増やすだけでは限界が見え、企業が自社の業務にAIを組み込む段階において、推論にかかる膨大な計算コストが最大のボトルネックとなっている。この課題を解決するため、MicrosoftをはじめとするBig TechはNVIDIAへの依存を断ち切り、自社製シリコンの調達へと舵を切らざるを得なくなっている。また、エッジデバイス側でもNVIDIAが「RTX Spark」などでローカル処理能力を底上げしているのは、クラウドへの一極集中によるコストと遅延の壁を回避する狙いがある。ただし、この見立ては自社製チップの製造歩留まりや、エージェントAIのセキュリティリスクが想定以上に企業の導入を阻む場合、一時的なサプライチェーンの混乱に留まる可能性もある。\n\n【競争の構図】\n【NVIDIA】\n「RTX Spark」によるPC向けローカルAIの強化や、フランスなど欧州でのエージェント型AIエコシステムの開拓を推進している。\n→ クラウドからエッジまでの垂直統合を進める一方で、主要顧客の自社製チップ移行により、高マージンなインフラ供給者としての地位が脅かされ始めている。\n\n【Microsoft】\n独自チップ「Maia」の展開を進め、AIインフラの自社製化を加速させている。\n→ NVIDIAへの依存度を低下させ、推論コストを最適化することで、AIサービスの収益性を構造的に高める優位性を獲得しつつある。\n\n【OpenAI】\n動画生成などの新機能拡張を進める一方で、従業員の不祥事や内部の安全管理に関するガバナンス上の課題が露出している。\n→ モデルの性能競争では先行するものの、組織の信頼性やセキュリティの管理体制が、エンタープライズ顧客の導入判断におけるリスク要因となり得る。",
+        "why_matters": "【日本の実務への示唆】日本企業は、クラウド上の汎用AIモデルの比較検討から、自社のオンプレミス環境やエッジデバイス（PC等）における推論コストの試算、および独自シリコン・アクセラレータの調達戦略の見直しを急ぐべきである。特に製造業や金融など、データガバナンスの観点からクラウドに依存できない領域では、NVIDIAのローカル向けソリューションや各社が提供するエージェント型AIを自社インフラにどう組み込むか、具体的な検証フェーズへ移行することが求められる。\n\n【反証・留保】この見立てを過大評価しないための条件として、カスタムシリコンの開発遅延や、自社製チップがNVIDIA製エコシステム（CUDAなど）のソフトウェア互換性を完全に代替できないリスクを挙げる必要がある。もしMicrosoftの「Maia」などの独自チップが期待通りの性能や汎用性を示せなかった場合、あるいはローカルAIのセキュリティ脆弱性を突いたインシデントが多発して企業が導入を見送った場合、NVIDIAを中心とした既存の集中型インフラの優位性は揺るがない。したがって、ハードウェアの分散化が直ちにソフトウェアの標準を置き換えるとは限らない点に注意が必要である。",
+        "context": "【次の観測点】\n・MicrosoftのMaiaチップの外部顧客への展開状況と、Azure上の推論コストの変動\n・NVIDIAのローカルAI向けチップ（RTX Spark等）のPC市場における採用実績\n・AIインフラおよびエージェント連携ツールにおけるセキュリティ脆弱性の露呈と企業の対応"
       }
     ]
   },
   "raw_articles": [
     {
       "source": "CNBC Tech",
-      "title": "SK Hynix, SoftBank shares plunge as tech stocks in Asia track Wall Street chip sell-off",
-      "url": "https://www.cnbc.com/2026/10/13/sk-hynix-softbank-samsung-electronics-shares-tech-stocks-fall.html",
-      "summary": "Asian technology stocks tumbled Tuesday as a sell-off in U.S. semiconductor shares spilled into regional markets.",
-      "published": "2026-10-13 02:11 UTC",
-      "pub_dt": "2026-10-13T02:11:41+00:00"
-    },
-    {
-      "source": "Analytics Vidhya",
-      "title": "OpenAI Decisions API: What it is and how to use it?",
-      "url": "https://www.analyticsvidhya.com/blog/2026/10/openai-decisions-api/",
-      "summary": "Imagine building an AI agent that has to decide whether a customer complaint needs human intervention, which department should handle a query, or whether a submitted delivery photo is valid. Getting these decisions right matters. A false positive can trigger an unnecessary escalation, while a false negative can let a genuine issue slip through. Traditionally, [&#8230;]\nThe post OpenAI Decisions API: What it is and how to use it? appeared first on Analytics Vidhya.",
-      "published": "2026-10-13 00:39 UTC",
-      "pub_dt": "2026-10-13T00:39:00+00:00"
+      "title": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
+      "url": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html",
+      "summary": "The Tuesday incident comes as the ChatGPT-maker, along with competitors, faces heightened scrutiny over its safety practices.",
+      "published": "2026-10-13 23:56 UTC",
+      "pub_dt": "2026-10-13T23:56:04+00:00"
     },
     {
       "source": "Wired",
-      "title": "I Got My Muse AI Agent to Sext Me—and Meta Says That’s Totally Fine",
-      "url": "https://www.wired.com/story/i-got-my-muse-ai-agent-to-sext-me-and-meta-says-thats-totally-fine/",
-      "summary": "My Muse agent told me its kink was exerting “control” and described pornographic encounters. Meta defends its cuddly AI agent generating smut as “legal adult behavior.”",
-      "published": "2026-10-12 20:13 UTC",
-      "pub_dt": "2026-10-12T20:13:28+00:00"
-    },
-    {
-      "source": "IEEE Spectrum",
-      "title": "Meet the Anthropic Engineer Keeping Its AI Agent Trustworthy",
-      "url": "https://spectrum.ieee.org/anthropic-engineer-ai-agent",
-      "summary": "If you’ve ever wondered how Claude and similar AI agents can answer complex questions in seconds and where they get the information, you’re not alone.Gurmeet Saran works to find that answer every day as an engineer at Anthropic in San Francisco, the AI research company behind Claude. The IEEE senior member is developing an infrastructure to understand the mechanics behind the chatbot’s behavior and to ensure its underlying architecture produces reliable outputs.Gurmeet SaranEmployer Anthropic in",
-      "published": "2026-10-12 18:00 UTC",
-      "pub_dt": "2026-10-12T18:00:02+00:00"
-    },
-    {
-      "source": "ZDNet AI",
-      "title": "Claude sent a false homicide tip to police – and it’s part of a troubling AI pattern",
-      "url": "https://www.zdnet.com/innovation/claude-false-homicide-tip/",
-      "summary": "Models routinely take shortcuts to pass evaluations. Who gets to decide what incidents are innocuous?",
-      "published": "2026-10-12 17:45 UTC",
-      "pub_dt": "2026-10-12T17:45:44+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Meta debuts Muse Wonder AI model in latest test of users' willingness to pay",
-      "url": "https://www.cnbc.com/2026/10/12/meta-muse-wonder-ai-model-agent.html",
-      "summary": "Meta introduced Muse Wonder, its latest AI model, but users have to pay for subscriptions to the Muse app to access it.",
-      "published": "2026-10-12 17:34 UTC",
-      "pub_dt": "2026-10-12T17:34:35+00:00"
+      "title": "An OpenAI Employee Allegedly Used a Chatbot to Help Plant a Recording Device at the Office",
+      "url": "https://www.wired.com/story/an-openai-employee-allegedly-used-a-chatbot-to-help-plant-a-recording-device-at-the-office/",
+      "summary": "Chatbot prompts reveal the engineer’s alleged efforts to set up a covert listening device days before one was found in a meeting room used by high-level executives.",
+      "published": "2026-10-13 23:17 UTC",
+      "pub_dt": "2026-10-13T23:17:59+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "WindBorne wins a hefty US Air Force contract for its balloon data",
-      "url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
-      "summary": "A Silicon Valley startup that uses weather balloons and AI to predict the weather won a U.S. military contract worth almost $50 million.",
-      "published": "2026-10-12 17:19 UTC",
-      "pub_dt": "2026-10-12T17:19:14+00:00"
+      "title": "Science Corporation implants its vision-restoring chip in its first Stargardt disease patient",
+      "url": "https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/",
+      "summary": "Max Hodak, the former president and co-founder of Neuralink, detailed on stage at TechCrunch Disrupt how his company's work with PRIMA is part of its path toward a novel brain-computer interface (BCI).",
+      "published": "2026-10-13 23:13 UTC",
+      "pub_dt": "2026-10-13T23:13:31+00:00"
     },
     {
-      "source": "Wired",
-      "title": "Muse Wonder Puts Meta Back at the AI Frontier",
-      "url": "https://www.wired.com/story/muse-wonder-puts-meta-back-at-the-ai-frontier/",
-      "summary": "Meta’s biggest model rivals the world’s best—and includes new features to keep agents from going off the rails.",
-      "published": "2026-10-12 17:00 UTC",
-      "pub_dt": "2026-10-12T17:00:27+00:00"
+      "source": "TechCrunch AI",
+      "title": "Cerebras CEO says we’re nearing a future where everyone has a personal AI assistant at home",
+      "url": "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/",
+      "summary": "Cerebras CEO Andrew Feldman predicts a future where personal AI assistants become as commonplace as household appliances, running partly on local devices and partly in the cloud.",
+      "published": "2026-10-13 23:05 UTC",
+      "pub_dt": "2026-10-13T23:05:34+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting",
+      "url": "https://www.cnbc.com/2026/10/13/anthropic-wants-court-in-dc-to-rehear-appeal-of-pentagon-blacklist-.html",
+      "summary": "Anthropic is asking a federal court in Washington, D.C. to rehear its appeal in a case concerning the Pentagon's blacklisting of the company's AI models.",
+      "published": "2026-10-13 22:54 UTC",
+      "pub_dt": "2026-10-13T22:54:21+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Here's where Jim Cramer stands on this newly public AI infrastructure stock",
+      "url": "https://www.cnbc.com/2026/10/13/jim-cramer-accelevation-stock.html",
+      "summary": "CNBC’s Jim Cramer said investors should hold off on buying newly public AI infrastructure company Accelevation Holdings.",
+      "published": "2026-10-13 22:47 UTC",
+      "pub_dt": "2026-10-13T22:47:07+00:00"
     },
     {
       "source": "NYTimes Technology",
-      "title": "Meta Unveils New Series of Advanced A.I. Models",
-      "url": "https://www.nytimes.com/2026/10/12/technology/meta-muse-wonder-full-models.html",
-      "summary": "The new models, Muse Wonder and Muse Wonder Full, are meant to compete with cutting-edge A.I. models from rivals like Anthropic and OpenAI.",
-      "published": "2026-10-12 17:00 UTC",
-      "pub_dt": "2026-10-12T17:00:05+00:00"
-    },
-    {
-      "source": "The Verge AI",
-      "title": "Meta has some Wonder Full new AI models",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
-      "summary": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best. The new models, Muse Wonder and Muse Wonder Full, are available [&#8230;]",
-      "published": "2026-10-12 17:00 UTC",
-      "pub_dt": "2026-10-12T17:00:00+00:00"
+      "title": "F.B.I. Arrests OpenAI Employee Accused of Planting Bug in Office",
+      "url": "https://www.nytimes.com/2026/10/13/technology/openai-worker-arrested-bugging.html",
+      "summary": "OpenAI said that the employee had placed a device built to evade detection and that he had planned to secretly record meetings in other sensitive spaces.",
+      "published": "2026-10-13 22:45 UTC",
+      "pub_dt": "2026-10-13T22:45:09+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "Honeyjar offers AI tools to improve PR and comms at every company",
-      "url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
-      "summary": "Journalists, entrepreneurs, and even some public relations professionals will tell you that the PR process is broken. But could AI actually make things better?",
-      "published": "2026-10-12 15:45 UTC",
-      "pub_dt": "2026-10-12T15:45:00+00:00"
+      "title": "Cerebras CEO pushes back on AI doomsday warnings",
+      "url": "https://techcrunch.com/2026/10/13/cerebras-ceo-pushes-back-on-ai-doomsday-warnings/",
+      "summary": "Cerebras CEO Andrew Feldman has a message for AI leaders spreading doomsday warnings: Maybe stop talking? At TechCrunch Disrupt, he argued that the industry's focus on AI's risks is drowning out its potential benefits.",
+      "published": "2026-10-13 22:36 UTC",
+      "pub_dt": "2026-10-13T22:36:59+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "Microsoft president says UK is best placed to drive AI regulation",
-      "url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
-      "summary": "Microsoft president Brad Smith calls for urgent AI regulation, saying milk and washing machines have more oversight than AI companies.",
-      "published": "2026-10-12 15:31 UTC",
-      "pub_dt": "2026-10-12T15:31:19+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "This AI startup says it can generate permit-ready blueprints in minutes",
-      "url": "https://techcrunch.com/2026/10/12/this-ai-startup-says-it-can-generate-permit-ready-blueprints-in-minutes/",
-      "summary": "Blueprints AI, a bootstrapped startup based in Santa Monica, developed software that produces code-compliant construction blueprints from a photo, PDF, or sketch.",
-      "published": "2026-10-12 15:27 UTC",
-      "pub_dt": "2026-10-12T15:27:59+00:00"
-    },
-    {
-      "source": "NVIDIA Blog",
-      "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
-      "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
-      "summary": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more reliably. At the Open Compute Project (OCP) Global Summit, taking place in the San Jose McEnery Convention Center, NVIDIA announced new partnerships and contributions aimed at [&#8230;]",
-      "published": "2026-10-12 15:00 UTC",
-      "pub_dt": "2026-10-12T15:00:25+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.10.3",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.3",
+      "summary": "OpenClaw v2026.10.3\n90 commits · 79 pull requests · 99 contributors\nChanges included in this release\nThe release notes and changelog contain the same content, presented in two formats:\n\nRelease notes — formatted for people.\nChangelog — plain Markdown for AI agents and tools.\n\nThanks\n@aaajiao @adenzhou1350 @aia007731-lab @aleps001 @alexph-dev @an2in @arifarai @bluet @ceckert @chedong @clawdgawd @Claynetic @CodeForcer @creanet-64 @davidevelyn @davidmackrory-byte @destinedenergy @DonnieFi @eduherra",
+      "published": "2026-10-13 22:33 UTC",
+      "pub_dt": "2026-10-13T22:33:26+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
-      "url": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html",
-      "summary": "By increasingly counting on its own chips, Microsoft stands to expand margins and bolster its AI stack.",
-      "published": "2026-10-12 14:04 UTC",
-      "pub_dt": "2026-10-12T14:04:16+00:00"
+      "title": "Jim Cramer isn't giving up on semiconductor stocks despite the sell off. Here's why",
+      "url": "https://www.cnbc.com/2026/10/13/jim-cramer-semiconductor-stocks-sell-off.html",
+      "summary": "CNBC’s Jim Cramer said investors shouldn't give up on semiconductor stocks despite the recent sell-off.",
+      "published": "2026-10-13 22:19 UTC",
+      "pub_dt": "2026-10-13T22:19:29+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "OpenAI employee arrested for allegedly planting a bug in a conference room",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device",
+      "summary": "An OpenAI engineer was arrested after the company said it discovered a \"sophisticated recording device\" hidden in one of its offices. The employee was identified as Abdulrahman Alfozan, a 35-year-old Saudi national. Alfozan is charged with using or endeavoring to use a device to intercept oral communications, according to a press release from the Department [&#8230;]",
+      "published": "2026-10-13 20:45 UTC",
+      "pub_dt": "2026-10-13T20:45:25+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Judge orders OpenAI to turn over hiring records in Apple trade secrets case",
+      "url": "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/",
+      "summary": "A federal judge ruled that Apple can access OpenAI's interview materials involving former Apple employees, as well as private messages and testimony from key figures in the case.",
+      "published": "2026-10-13 20:36 UTC",
+      "pub_dt": "2026-10-13T20:36:44+00:00"
+    },
+    {
+      "source": "Google DeepMind",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+      "summary": "",
+      "published": "2026-10-13 19:43 UTC",
+      "pub_dt": "2026-10-13T19:43:07+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Shopify opens its catalog up to more AI agents",
+      "url": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents",
+      "summary": "More AI agents will soon be able to browse and purchase from Shopify listings, marking an expansion of the company's agentic commerce ambitions. Shopify announced Tuesday it will let shoppers configure their AI agents to purchase products on their behalf, giving more agents access to over a billion listings in Shopify's catalog. (The catalog consists [&#8230;]",
+      "published": "2026-10-13 19:42 UTC",
+      "pub_dt": "2026-10-13T19:42:42+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "OpenAI and Anthropic Tell British Lawmakers: Regulate Us",
+      "url": "https://www.wired.com/story/openai-and-anthropic-tell-british-lawmakers-regulate-us/",
+      "summary": "AI leaders joined whistleblowers and security leaders at a sweeping parliamentary session, while a few hundred meters away Britain’s spy chief warned AI could be used to create new bioweapons.",
+      "published": "2026-10-13 19:35 UTC",
+      "pub_dt": "2026-10-13T19:35:29+00:00"
     }
   ]
 }
