@@ -1,0 +1,223 @@
+{
+  "timestamp": "2026-10-15T10:48:26.448514+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "「エージェント実用化」の裏で揺らぐAIインフラ市場",
+    "thesis": "AIの主戦場はチャットから長時間稼働する「自律型エージェント」へ移行したが、ハードウェア市場では投資回収の遅れへの懸念から株価下落が起きており、実需と資本の間に深い溝が生まれ始めている。",
+    "opening": "【結論】本日の市場動向と各社の発表から見えてくるのは、AI競争の主導権が「単発の推論性能の高さ」から「数日単位で自律的にタスクを完遂するエージェントの実運用能力」へと完全にシフトしたという事実だ。しかし奇妙なことに、その実用化が加速する一方で、NVIDIAの現地投資やOpenAIの顧客事例が相次ぐ中、DellやSKハイニックスなどのハードウェア関連株は急落し、米上院からはメタの税制優遇への疑義が呈されるなど、インフラ投資の持続可能性に対する市場の疑念がピークに達している。誰が価値を握るのかというゲームのルールが変わる中で、資本市場と実需の間で明確な矛盾が噴き出し始めている。",
+    "what_happened": "【事実】OpenAIは公式ブログにおいて、Third Moment Researchが36時間以上にわたり1万件のエージェントを稼働させた事例や、Amp、Block、SentinelOneといった企業が新モデル（GPT-6 AstraやDaybreakなど）を活用してマルウェア解析時間を数週間から数時間に短縮した成果を相次いで発表した。他方でCNBC等の報道によれば、エンタープライズAIの導入遅延懸念からDell株が11%急落し、SKハイニックスなどもアジアのテック株安に巻き込まれて大幅に下落した。また、NVIDIAは英国のスタートアップエコシステムに対し5年間で2億5000万ドルの計算資源コミットメントを発表する一方、ニューヨーク・タイムズはAnthropicが第3四半期に前年同期比45%増の168億ドルの売上を記録し、大型IPO（新規株式公開）を控えていると報じた。さらに、CNBCはAnthropicの「Mythos」が露呈させたソフトウェアの脆弱性を修復するため、バンク・オブ・アメリカが1,000人のコントラクターを雇った実態を伝えている。",
+    "why_now": "【解釈】この矛盾の正体は、ソフトウェアレイヤーでの「自律型エージェントによる実用価値の爆発」と、インフラレイヤーでの「投資回収サイクルの不確実性」の乖離にある。Anthropicの売上急増やOpenAIのエージェント導入事例は、AIが単なるツールから組織の「実働部隊」へ変わり、企業のコスト構造に直接メスを入れ始めたことを示している。しかし、その恩恵を受けるのはモデル提供者や一部のセキュリティ・業務効率化の勝者に限られており、一般企業全体のAI導入スピードはハードウェアへの巨額投資のペースに追いついていない。バンク・オブ・アメリカが多額の人件費を投じて脆弱性パッチを当てたように、AI導入は新たなコストや安全保障リスクを同時に生み出しており、データセンター投資がこのまま無条件で正当化される時期は過ぎ去ったと読める。ただし、この見立ては、今後数四半期で一般企業の自律型エージェント導入が本格的な収益貢献に結びつかない場合、ハードウェアの調整局面がさらに長期化するというリスクを孕んでいる。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、もし今後数ヶ月で主要クラウド事業者やエンタープライズ顧客のAI投資予算が予想以上のスピードで再拡大し、エージェント運用コストを上回る実利（明確な人員削減や生産性倍増）が統計的に証明された場合、「インフラ投資の失速」という前提は崩れる。また、規制当局による安全性の追及や州政府による訴訟（OpenAIが8州から提訴された件など）が想定以上にAIの社会実装を遅らせた場合、インフラ需要そのものが根本から見直される可能性もある。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、単発の生成AI（チャットボットや要約ツール）の検証から、数日単位で自律稼働する「エージェント型AI」の導入とリスク管理へ直ちに舵を切るべきである。特にセキュリティやソフトウェア開発の脆弱性管理において、AIがもたらす効率化だけでなく、バンク・オブ・アメリカの事例のように「AIが露出させたリスクを塞ぐための人的・金銭的コスト」がどれほど発生するかを事前に見積もる必要がある。ハードウェアやクラウドの調達においては、海外のデータセンター関連株の調整ムードに惑わされず、自社の業務プロセスにエージェントを組み込む実証実験を早期に行い、投資対効果（ROI）が見込める領域を絞り込むべきだ。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "GPT-6 AstraやDaybreakなどの新モデルを投入し、金融・セキュリティ分野での1万件規模の長時間エージェント運用実績を公開している。",
+        "implication": "単なる対話型AIから、企業のコア業務を数日単位で代行する「自律型ワーカー」としての地位を確立しつつある。"
+      },
+      {
+        "company": "Anthropic",
+        "status": "第3四半期の売上が前年同期比45%増の168億ドルに達し、来月にも大型IPOを控える中で、高度なモデルによる脆弱性露出の課題も指摘されている。",
+        "implication": "圧倒的な財務成長を見せる一方で、エンタープライズ顧客におけるセキュリティ対応コストという新たな課題の当事者となっている。"
+      },
+      {
+        "company": "NVIDIA",
+        "status": "英国のエージェント安全・セキュリティ強化に5年間で2億5000万ドルの計算資源をコミットするなど、全方位的なエコシステム投資を継続している。",
+        "implication": "ハードウェア市場に逆風が吹く中でも、国家・スタートアップレベルでの囲い込みを進め、基盤としての影響力を維持しようとしている。"
+      }
+    ],
+    "next_signals": [
+      "AnthropicのIPOにおける市場評価と機関投資家の需要動向",
+      "エンタープライズ企業における自律型エージェントの本格導入と、それに伴うIT予算・ハードウェア調達の復活有無",
+      "AIの安全性や児童保護を巡る州政府・規制当局の訴訟・規制のビジネスへの実質的影響"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA Announces New Investments in the UK Startup Ecosystem",
+        "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/"
+      },
+      {
+        "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+        "url": "https://openai.com/index/third-moment-research"
+      },
+      {
+        "title": "Anthropic Says Revenue Jumped 45% to $16.8 Billion in Third Quarter",
+        "url": "https://www.nytimes.com/2026/10/14/technology/anthropic-ipo-revenue-profit.html"
+      },
+      {
+        "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
+        "url": "https://www.cnbc.com/2026/10/14/dell-stock-barclays-enterprise-ai.html"
+      }
+    ],
+    "news_summary": "AIの主戦場はチャットから長時間稼働する「自律型エージェント」へ移行したが、ハードウェア市場では投資回収の遅れへの懸念から株価下落が起きており、実需と資本の間に深い溝が生まれ始めている。\n\n【事実】OpenAIは公式ブログにおいて、Third Moment Researchが36時間以上にわたり1万件のエージェントを稼働させた事例や、Amp、Block、SentinelOneといった企業が新モデル（GPT-6 AstraやDaybreakなど）を活用してマルウェア解析時間を数週間から数時間に短縮した成果を相次いで発表した。他方でCNBC等の報道によれば、エンタープライズAIの導入遅延懸念からDell株が11%急落し、SKハイニックスなどもアジアのテック株安に巻き込まれて大幅に下落した。また、NVIDIAは英国のスタートアップエコシステムに対し5年間で2億5000万ドルの計算資源コミットメントを発表する一方、ニューヨーク・タイムズはAnthropicが第3四半期に前年同期比45%増の168億ドルの売上を記録し、大型IPO（新規株式公開）を控えていると報じた。さらに、CNBCはAnthropicの「Mythos」が露呈させたソフトウェアの脆弱性を修復するため、バンク・オブ・アメリカが1,000人のコントラクターを雇った実態を伝えている。",
+    "opinion_summary": "【解釈】この矛盾の正体は、ソフトウェアレイヤーでの「自律型エージェントによる実用価値の爆発」と、インフラレイヤーでの「投資回収サイクルの不確実性」の乖離にある。Anthropicの売上急増やOpenAIのエージェント導入事例は、AIが単なるツールから組織の「実働部隊」へ変わり、企業のコスト構造に直接メスを入れ始めたことを示している。しかし、その恩恵を受けるのはモデル提供者や一部のセキュリティ・業務効率化の勝者に限られており、一般企業全体のAI導入スピードはハードウェアへの巨額投資のペースに追いついていない。バンク・オブ・アメリカが多額の人件費を投じて脆弱性パッチを当てたように、AI導入は新たなコストや安全保障リスクを同時に生み出しており、データセンター投資がこのまま無条件で正当化される時期は過ぎ去ったと読める。ただし、この見立ては、今後数四半期で一般企業の自律型エージェント導入が本格的な収益貢献に結びつかない場合、ハードウェアの調整局面がさらに長期化するというリスクを孕んでいる。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、もし今後数ヶ月で主要クラウド事業者やエンタープライズ顧客のAI投資予算が予想以上のスピードで再拡大し、エージェント運用コストを上回る実利（明確な人員削減や生産性倍増）が統計的に証明された場合、「インフラ投資の失速」という前提は崩れる。また、規制当局による安全性の追及や州政府による訴訟（OpenAIが8州から提訴された件など）が想定以上にAIの社会実装を遅らせた場合、インフラ需要そのものが根本から見直される可能性もある。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "NVIDIA Announces New Investments in the UK Startup Ecosystem",
+        "source": "NVIDIA Blog",
+        "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/",
+        "point": "Across industries, the U.K. is putting the full stack to work. The scale of deployment is growing fast, from enterprises"
+      },
+      {
+        "rank": 2,
+        "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/third-moment-research",
+        "point": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days a"
+      },
+      {
+        "rank": 3,
+        "title": "Anthropic Says Revenue Jumped 45% to $16.8 Billion in Third Quarter",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/10/14/technology/anthropic-ipo-revenue-profit.html",
+        "point": "The company held an investor meeting on Wednesday as it plans a blockbuster initial public offering as soon as next mont"
+      },
+      {
+        "rank": 4,
+        "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/10/14/dell-stock-barclays-enterprise-ai.html",
+        "point": "Barclays downgraded Dell, HPE, and NetApp on concerns that enterprise AI adoption is lagging."
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "「エージェント実用化」の裏で揺らぐAIインフラ市場",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】本日の市場動向と各社の発表から見えてくるのは、AI競争の主導権が「単発の推論性能の高さ」から「数日単位で自律的にタスクを完遂するエージェントの実運用能力」へと完全にシフトしたという事実だ。しかし奇妙なことに、その実用化が加速する一方で、NVIDIAの現地投資やOpenAIの顧客事例が相次ぐ中、DellやSKハイニックスなどのハードウェア関連株は急落し、米上院からはメタの税制優遇への疑義が呈されるなど、インフラ投資の持続可能性に対する市場の疑念がピークに達している。誰が価値を握るのかというゲームのルールが変わる中で、資本市場と実需の間で明確な矛盾が噴き出し始めている。\n\n【事実】OpenAIは公式ブログにおいて、Third Moment Researchが36時間以上にわたり1万件のエージェントを稼働させた事例や、Amp、Block、SentinelOneといった企業が新モデル（GPT-6 AstraやDaybreakなど）を活用してマルウェア解析時間を数週間から数時間に短縮した成果を相次いで発表した。他方でCNBC等の報道によれば、エンタープライズAIの導入遅延懸念からDell株が11%急落し、SKハイニックスなどもアジアのテック株安に巻き込まれて大幅に下落した。また、NVIDIAは英国のスタートアップエコシステムに対し5年間で2億5000万ドルの計算資源コミットメントを発表する一方、ニューヨーク・タイムズはAnthropicが第3四半期に前年同期比45%増の168億ドルの売上を記録し、大型IPO（新規株式公開）を控えていると報じた。さらに、CNBCはAnthropicの「Mythos」が露呈させたソフトウェアの脆弱性を修復するため、バンク・オブ・アメリカが1,000人のコントラクターを雇った実態を伝えている。\n\n【解釈】この矛盾の正体は、ソフトウェアレイヤーでの「自律型エージェントによる実用価値の爆発」と、インフラレイヤーでの「投資回収サイクルの不確実性」の乖離にある。Anthropicの売上急増やOpenAIのエージェント導入事例は、AIが単なるツールから組織の「実働部隊」へ変わり、企業のコスト構造に直接メスを入れ始めたことを示している。しかし、その恩恵を受けるのはモデル提供者や一部のセキュリティ・業務効率化の勝者に限られており、一般企業全体のAI導入スピードはハードウェアへの巨額投資のペースに追いついていない。バンク・オブ・アメリカが多額の人件費を投じて脆弱性パッチを当てたように、AI導入は新たなコストや安全保障リスクを同時に生み出しており、データセンター投資がこのまま無条件で正当化される時期は過ぎ去ったと読める。ただし、この見立ては、今後数四半期で一般企業の自律型エージェント導入が本格的な収益貢献に結びつかない場合、ハードウェアの調整局面がさらに長期化するというリスクを孕んでいる。\n\n【競争の構図】\n【OpenAI】\nGPT-6 AstraやDaybreakなどの新モデルを投入し、金融・セキュリティ分野での1万件規模の長時間エージェント運用実績を公開している。\n→ 単なる対話型AIから、企業のコア業務を数日単位で代行する「自律型ワーカー」としての地位を確立しつつある。\n\n【Anthropic】\n第3四半期の売上が前年同期比45%増の168億ドルに達し、来月にも大型IPOを控える中で、高度なモデルによる脆弱性露出の課題も指摘されている。\n→ 圧倒的な財務成長を見せる一方で、エンタープライズ顧客におけるセキュリティ対応コストという新たな課題の当事者となっている。\n\n【NVIDIA】\n英国のエージェント安全・セキュリティ強化に5年間で2億5000万ドルの計算資源をコミットするなど、全方位的なエコシステム投資を継続している。\n→ ハードウェア市場に逆風が吹く中でも、国家・スタートアップレベルでの囲い込みを進め、基盤としての影響力を維持しようとしている。",
+        "why_matters": "【日本の実務への示唆】日本企業は、単発の生成AI（チャットボットや要約ツール）の検証から、数日単位で自律稼働する「エージェント型AI」の導入とリスク管理へ直ちに舵を切るべきである。特にセキュリティやソフトウェア開発の脆弱性管理において、AIがもたらす効率化だけでなく、バンク・オブ・アメリカの事例のように「AIが露出させたリスクを塞ぐための人的・金銭的コスト」がどれほど発生するかを事前に見積もる必要がある。ハードウェアやクラウドの調達においては、海外のデータセンター関連株の調整ムードに惑わされず、自社の業務プロセスにエージェントを組み込む実証実験を早期に行い、投資対効果（ROI）が見込める領域を絞り込むべきだ。\n\n【反証・留保】この見立てを過大評価しないための条件として、もし今後数ヶ月で主要クラウド事業者やエンタープライズ顧客のAI投資予算が予想以上のスピードで再拡大し、エージェント運用コストを上回る実利（明確な人員削減や生産性倍増）が統計的に証明された場合、「インフラ投資の失速」という前提は崩れる。また、規制当局による安全性の追及や州政府による訴訟（OpenAIが8州から提訴された件など）が想定以上にAIの社会実装を遅らせた場合、インフラ需要そのものが根本から見直される可能性もある。",
+        "context": "【次の観測点】\n・AnthropicのIPOにおける市場評価と機関投資家の需要動向\n・エンタープライズ企業における自律型エージェントの本格導入と、それに伴うIT予算・ハードウェア調達の復活有無\n・AIの安全性や児童保護を巡る州政府・規制当局の訴訟・規制のビジネスへの実質的影響"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "CNBC Tech",
+      "title": "SK Hynix shares plunge 10% amid Asia tech rout as Fed rate hike fears, AI funding worries mount",
+      "url": "https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html",
+      "summary": "A sell-off in global technology hardware stocks deepened Thursday.",
+      "published": "2026-10-15 01:07 UTC",
+      "pub_dt": "2026-10-15T01:07:01+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Ricursive Intelligence is betting on AI-designed chips to help solve the compute crisis",
+      "url": "https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/",
+      "summary": "The founders detailed how their startup is developing AI that can design chips, learn from each iteration, and improve subsequent designs, all with the goal of automating and accelerating the chip design process.",
+      "published": "2026-10-15 01:01 UTC",
+      "pub_dt": "2026-10-15T01:01:32+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Gudea leverages AI to help organizations prevent social media crises before they erupt",
+      "url": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/",
+      "summary": "Every day, conversations unfold across social media and websites around the world. A seemingly insignificant post—whether it involves AI-generated misinformation, hate speech, or a damaging rumor—can quickly snowball into a much larger public controversy. Gudea, a company that tracks how stories and rumors spread online that describes itself as the “storm tracker for the internet,” [&#8230;]",
+      "published": "2026-10-15 00:00 UTC",
+      "pub_dt": "2026-10-15T00:00:00+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Anthropic Says Revenue Jumped 45% to $16.8 Billion in Third Quarter",
+      "url": "https://www.nytimes.com/2026/10/14/technology/anthropic-ipo-revenue-profit.html",
+      "summary": "The company held an investor meeting on Wednesday as it plans a blockbuster initial public offering as soon as next month.",
+      "published": "2026-10-14 23:57 UTC",
+      "pub_dt": "2026-10-14T23:57:26+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "McKinsey is making job applicants spar with a fake AI client",
+      "url": "https://www.theverge.com/news/1011654/mckinsey-ai-client-interview",
+      "summary": "Consulting firm McKinsey &#38; Company is going to ask some entry-level candidates to have a 10-minute conversation with an AI simulation of a client as part of the interview process, according to The Wall Street Journal. The AI simulation \"aims to reflect 80% of the scenarios McKinsey consultants might encounter in their day-to-day work,\" the [&#8230;]",
+      "published": "2026-10-14 22:53 UTC",
+      "pub_dt": "2026-10-14T22:53:31+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Eight states sue OpenAI, saying ChatGPT isn&#8217;t safe for kids",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety",
+      "summary": "OpenAI is facing a new wave of lawsuits from eight US states that accuse the company of harming children and misleading customers about the safety of ChatGPT, as reported earlier by Reuters. The lawsuits, filed separately by Iowa, Kansas, Nebraska, West Virginia, Arkansas, Arizona, Idaho, and Montana, allege OpenAI unlawfully put profits over safety when [&#8230;]",
+      "published": "2026-10-14 21:11 UTC",
+      "pub_dt": "2026-10-14T21:11:28+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "OpenAI sued by 8 states over ChatGPT safety concerns",
+      "url": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html",
+      "summary": "OpenAI is facing mounting scrutiny over its safety and security practices, including around how the company is working to protect children.",
+      "published": "2026-10-14 21:09 UTC",
+      "pub_dt": "2026-10-14T21:09:20+00:00"
+    },
+    {
+      "source": "AI Business",
+      "title": "IBM: Agentic AI is reshaping governance, controls and trust",
+      "url": "https://aibusiness.com/generative-ai/ibm-agentic-ai-reshaping-governance-controls-trust",
+      "summary": "As AI agents move from answering questions to making decisions and acting, businesses face a growing challenge of keeping accountability in step with the pace of change.",
+      "published": "2026-10-14 20:35 UTC",
+      "pub_dt": "2026-10-14T20:35:20+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
+      "url": "https://www.cnbc.com/2026/10/14/dell-stock-barclays-enterprise-ai.html",
+      "summary": "Barclays downgraded Dell, HPE, and NetApp on concerns that enterprise AI adoption is lagging.",
+      "published": "2026-10-14 20:19 UTC",
+      "pub_dt": "2026-10-14T20:19:25+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
+      "url": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html",
+      "summary": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic’s Mythos, offering a rare look at costs involved in defending against AI.",
+      "published": "2026-10-14 20:06 UTC",
+      "pub_dt": "2026-10-14T20:06:28+00:00"
+    },
+    {
+      "source": "AI Business",
+      "title": "Musing about Muse’s new AI models, unruly DeepSeek",
+      "url": "https://aibusiness.com/generative-ai/musing-muse-s-new-supporting-ai-models-unruly-deepseek-models",
+      "summary": "The social media giant tries to capitalize on, monetize its successful personal agent and maybe crack the business market. Chinese models go astray, like their U.S. counterparts.",
+      "published": "2026-10-14 19:36 UTC",
+      "pub_dt": "2026-10-14T19:36:02+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "AI tools are aiding would-be spies",
+      "url": "https://www.axios.com/2026/10/14/ai-tools-are-aiding-would-be-spies",
+      "summary": "AI tools are now exacerbating a largely hidden problem that frontier AI companies have been contending with for years: the risk that employees will exploit their access to spy on their employers.Why it matters: The same AI tools that companies are racing to release can also help people plan crimes and develop the technology to carry them out, creating another security headache for the companies building them.Driving the news: Federal prosecutors charged Abdulrahman Alfozan, a Saudi national who ",
+      "published": "2026-10-14 19:30 UTC",
+      "pub_dt": "2026-10-14T19:30:05+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Senators Question Meta’s Data Center Tax Strategy",
+      "url": "https://www.nytimes.com/2026/10/14/technology/meta-senators-tax-avoidance.html",
+      "summary": "Democrats on the Senate Finance Committee sent a letter to Mark Zuckerberg, Meta’s chief executive, questioning the company’s $6.6 billion in tax breaks.",
+      "published": "2026-10-14 19:12 UTC",
+      "pub_dt": "2026-10-14T19:12:32+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "The AI race is back on",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on",
+      "summary": "Last week, Anthropic and OpenAI looked like they had the AI race to themselves, pulling ahead with increasingly powerful models that left their rivals in the dust. Google seemed hopelessly far behind, while Meta, despite spending billions to revive its floundering AI ambitions, had yet to establish itself as a serious contender. Even the latest [&#8230;]",
+      "published": "2026-10-14 19:06 UTC",
+      "pub_dt": "2026-10-14T19:06:03+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Now that Character.AI is going bankrupt, what happens to all of its users&#8217; data?",
+      "url": "https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy",
+      "summary": "New York Attorney General Letitia James revealed a years-long multi-state investigation against Character.AI as they now seek to require protections on consumer data sold through its bankruptcy proceeding. James is among 40 bipartisan AGs who filed a notice of interest in Character.AI's bankruptcy case \"to put all parties on notice of the regulatory issues that [&#8230;]",
+      "published": "2026-10-14 18:47 UTC",
+      "pub_dt": "2026-10-14T18:47:54+00:00"
+    }
+  ]
+}
