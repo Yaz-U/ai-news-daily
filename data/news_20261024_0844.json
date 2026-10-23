@@ -1,0 +1,278 @@
+{
+  "timestamp": "2026-10-24T08:44:02.431655+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "AIの成長痛：インフラの審判と開発防衛の転換",
+    "thesis": "AI産業は、無制限な拡大から、財務規律と安全な学習環境を最優先する収れん期へと突入しつつある。",
+    "opening": "【結論】AIの主導権争いは、計算資源の拡大競争から、インフラの財務健全性、そしてモデルの安全な内部学習環境の確立へとその軸足を移し始めている。今日の材料群から見えてくるのは、ネオクラウド（独立系AI向けクラウド事業者）の信用リスクやIPO計画の撤回といったインフラ側の歪みと、OpenAIによるライブインターネットからの学習停止という開発アプローチの根底的な転換である。これらは、AI産業が「質より量」で走ってきた拡大期から、持続可能性とガバナンスが厳しく問われる現実的なフェーズへ移行したことを示している。本稿では、この構造変化がもたらす意味を読み解く。",
+    "what_happened": "【事実】今回の変化を裏付ける複数の重要な動きが報じられている。まず、インフラと資金調達の側面では、CNBC等の報道により、ネoclouds（新興クラウド事業者）が資金繰りの圧力や信用リスクに直面しており、SKハイニックスが米国のSolidigmのIPO計画を突如見送ったことが伝えられた。株式市場やクレジット市場ではAIビルドアウトに対する警戒感が表面化している。他方で、エヌビディアのジェンスン・ファンCEOはカザフスタンを初訪問し、同国のAIエコシステム向けの計算資源拡張や産業用AIの展開を加速させている。Siemensとエヌビディアは、デジタルツインとAIエージェントを用いた製造業の自動化で協業している。モデル開発の領域では、OpenAIが「重大なリスク」を理由に、フロンティアモデルの訓練においてライブインターネットからの学習を今後行わない方針を発表した。同時に、オフライン環境の強化や高計算量によるレッドチーミング（脆弱性検証）を含む安全対策「Securing our frontier model training environment」の導入を進めており、ポーランドのNASKともAI安全性で提携している。さらに、OpenAIは10億人を超えるChatGPTユーザーを支えるため、ストレージ基盤である「Habitat」をAzure Cosmos DB等を活用して大幅にスケーリングし、読み込み速度を12倍に高速化した実用化を進めている。金融機関の動向としては、AxiosやCNBCが、大手銀行がAIエージェントによる顧客の資格情報利用など未知の活動に対処し、カタストロフィ（最悪のシナリオ）に対するシナリオプランニングを行っていることを報じた。エネルギー・データセンターを巡っては、NYTimesがオハイオ州の住民への取材をもとに、電気代上昇への不満が必ずしも直近の選挙結果を左右するわけではない複雑な世論を伝えている。",
+    "why_now": "【解釈】なぜ今、こうした変化が同時に起きているのか。その背景には、AIの急速な「実需への接続」と、それを支える資本・インフラのミスマッチがある。これまでAIブームを牽引してきたのは、無尽蔵なVCマネーやネオクラウドによる先行投資、そしてウェブ上のあらゆるデータを貪欲に学習するモデル開発の手法だった。しかし、ネオクラウドの信用リスクやIPO見送りは、資本市場が「収益化の確証なきインフラ投資」に明確なノーを突き付け始めたことを意味する。エヌビディアがカザフスタンや産業用分野へフロンティアを広げる一方で、金融やエネルギーといった実社会側では、AIエージェントの制御不能リスクやコスト負担が現実的な経営リスクとして浮上している。さらに、OpenAIがライブインターネット学習を断念したことは、オープンなスクレイピングによる性能向上の限界と、法的・セキュリティ上のリスクが開発スピードを上回ったという重大な転換点を示唆する。もはや「データを集めて規模を大きくすれば勝てる」という単純なゲームは終わり、ガバナンスと財務の健全性を担保できるプレイヤーだけが生き残る構造へと、競争のルールが書き換わりつつある。",
+    "counterpoint": "【反証・留保】この見立てが過大評価であり、単なる一時的な調整に過ぎない可能性もある。もし、直近のネオクラウドの失速やIPO見送りが、個別の企業の財務管理の拙さに起因するものであり、大手ハイパースケーラー（Microsoft、Google、Amazon等）の潤沢なキャッシュフローに基づく投資意欲に少しも陰りを与えないのであれば、インフラの冷え込みという解釈は崩れる。また、OpenAIのインターネット学習停止が他社（中国勢やオープンソース陣営）に追随されず、むしろオープンなインターネットデータを活用したモデルが圧倒的な性能差を生み出し続けた場合、安全策を優先した同社の戦略は競争上の足かせになりかねない。ウォール街の警戒感についても、過去のITバブル初期に見られたような「過剰反応」の範疇に留まり、エージェントの実装が予想をはるかに超えるスピードで生産性を押し上げれば、リスク論は霧散するだろう。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、この「インフラの選別」と「安全・ガバナンス重視」の潮流を直視した実務見直しを迫られている。第一に、AI導入において「どのクラウド基盤やベンダーに依存しているか」という信用リスクの精査が必要だ。資金繰りに懸念のある新興クラウドや未確立のサービスに依存すると、インフラ側のトラブルに巻き込まれる恐れがある。第二に、自社データをAIに接続する際のセキュリティとガバナンスの基準を急ぎ引き上げるべきである。OpenAIのネット学習停止の動きや金融機関の警戒が示す通り、野放図なデータ連携は情報漏洩や予期せぬリスクを招く。日本企業は、閉域環境や安全性が担保された検証済みプラットフォーム（オフライン・セキュア環境）を前提としたPoCから本格実装へのシフトを急ぐべきであり、単なる「おもちゃとしての生成AI」の導入から、リスク管理を内包したエージェント運用への移行計画を引くべきである。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "フロンティアモデル訓練におけるライブインターネット学習の停止、オフライン環境やセキュリティの強化、10億人規模へのインフラ拡張を実施。",
+        "implication": "法的・セキュリティリスクを回避する防衛策に出る一方で、スケーリング則を維持するための独自の安全な学習環境の構築が死活問題となっている。"
+      },
+      {
+        "company": "NVIDIA",
+        "status": "カザフスタン等の新興市場への計算資源供給の拡大、産業用デジタルツイン（Siemens連携）やエッジ向けロボティクス（マイクロダック等）の展開を推進。",
+        "implication": "米国や一部のネオクラウドにおける資金繰り・信用リスクの逆風を、グローバルな需要開拓と産業用AIの実需で相殺できるかが試されている。"
+      },
+      {
+        "company": "SKハイニックス",
+        "status": "米国でのSolidigmのIPO計画の見送りを発表。一方で、発表後に株価は上昇するなど市場の受け止めは複雑。",
+        "implication": "半導体需要の旺盛さは続くものの、資本市場におけるAI関連のIPOや資金調達環境の冷え込みが、サプライチェーン全体の財務戦略に影響を与え始めている。"
+      }
+    ],
+    "next_signals": [
+      "主要ハイパースケーラー（Microsoft、Google、Meta等）の次期決算における、AI関連の資本支出（CapEx）の修正有無",
+      "OpenAIによるライブネット学習停止の代替となるデータ調達・安全性確保の手法の具体像",
+      "ネオクラウドおよびチップ関連企業の信用スプレッド（CDS）や資金調達コストの推移"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI News｜Securing our frontier model training environment",
+        "url": "https://openai.com/index/securing-our-frontier-model-training-environment"
+      },
+      {
+        "title": "OpenAI News｜OpenAI and Poland’s NASK partner to advance AI safety and security",
+        "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership"
+      },
+      {
+        "title": "NVIDIA Blog｜Kazakhstan Expands Compute for Its AI Future",
+        "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/"
+      },
+      {
+        "title": "OpenAI News｜Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two"
+      },
+      {
+        "title": "NYTimes Technology｜Why Anger About Data Centers and Energy Prices May Not Swing Votes",
+        "url": "https://www.nytimes.com/2026/10/23/business/energy-environment/ohio-election-gas-prices.html"
+      },
+      {
+        "title": "CNBC Tech｜AI agents could disrupt bank deposits. Why Wall Street may be overreacting",
+        "url": "https://www.cnbc.com/investingclub/2026/10/23/ai-agents-could-disrupt-bank-deposits-why-wall-street-may-be-overreacting.html"
+      },
+      {
+        "title": "Axios｜Wall Street prepares for AI's \"day after\"",
+        "url": "https://www.axios.com/2026/10/23/ai-catastrophe-wall-street"
+      },
+      {
+        "title": "CNBC Tech｜SK Hynix shares jump over 4% after early losses as chipmaker scraps Solidigm IPO plans",
+        "url": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html"
+      },
+      {
+        "title": "TechCrunch AI｜Left alone with nothing to do, AI agents started playing",
+        "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/"
+      },
+      {
+        "title": "CNBC Tech｜Turmoil hits AI build-out as neoclouds face pressure, credit risks mount and Solidigm pulls IPO",
+        "url": "https://www.cnbc.com/2026/10/23/ai-turmoil-neoclouds-struggle-credit-risks-jump-solidigm-pulls-ipo.html"
+      },
+      {
+        "title": "CNBC Tech｜On the ground at Nvidia's AI showpiece: Jensen-mania, robot ducks and neocloud distress",
+        "url": "https://www.cnbc.com/2026/10/23/jensen-huang-gtc-robot-ducks-neocloud-distress.html"
+      },
+      {
+        "title": "CNBC Tech｜Nvidia's Huang heads to Kazakhstan for the first time — and he's not the only one with big plans",
+        "url": "https://www.cnbc.com/2026/10/23/nvidia-huang-investment-kazakhstan-.html"
+      },
+      {
+        "title": "AI Business｜Siemens, Nvidia deploy industrial AI to reduce engineering effort",
+        "url": "https://aibusiness.com/generative-ai/siemens-nvidia-industrial-ai-reduce-engineering-effort"
+      },
+      {
+        "title": "TechCrunch AI｜OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+        "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/"
+      },
+      {
+        "title": "TechCrunch AI｜Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
+        "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/"
+      },
+      {
+        "title": "TechCrunch AI｜From Toast to Bessemer: Who founders will hear from at TechCrunch Founder Summit 2026",
+        "url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/"
+      }
+    ],
+    "news_summary": "AI産業は、無制限な拡大から、財務規律と安全な学習環境を最優先する収れん期へと突入しつつある。\n\n【事実】今回の変化を裏付ける複数の重要な動きが報じられている。まず、インフラと資金調達の側面では、CNBC等の報道により、ネoclouds（新興クラウド事業者）が資金繰りの圧力や信用リスクに直面しており、SKハイニックスが米国のSolidigmのIPO計画を突如見送ったことが伝えられた。株式市場やクレジット市場ではAIビルドアウトに対する警戒感が表面化している。他方で、エヌビディアのジェンスン・ファンCEOはカザフスタンを初訪問し、同国のAIエコシステム向けの計算資源拡張や産業用AIの展開を加速させている。Siemensとエヌビディアは、デジタルツインとAIエージェントを用いた製造業の自動化で協業している。モデル開発の領域では、OpenAIが「重大なリスク」を理由に、フロンティアモデルの訓練においてライブインターネットからの学習を今後行わない方針を発表した。同時に、オフライン環境の強化や高計算量によるレッドチーミング（脆弱性検証）を含む安全対策「Securing our frontier model training environment」の導入を進めており、ポーランドのNASKともAI安全性で提携している。さらに、OpenAIは10億人を超えるChatGPTユーザーを支えるため、ストレージ基盤である「Habitat」をAzure Cosmos DB等を活用して大幅にスケーリングし、読み込み速度を12倍に高速化した実用化を進めている。金融機関の動向としては、AxiosやCNBCが、大手銀行がAIエージェントによる顧客の資格情報利用など未知の活動に対処し、カタストロフィ（最悪のシナリオ）に対するシナリオプランニングを行っていることを報じた。エネルギー・データセンターを巡っては、NYTimesがオハイオ州の住民への取材をもとに、電気代上昇への不満が必ずしも直近の選挙結果を左右するわけではない複雑な世論を伝えている。",
+    "opinion_summary": "【解釈】なぜ今、こうした変化が同時に起きているのか。その背景には、AIの急速な「実需への接続」と、それを支える資本・インフラのミスマッチがある。これまでAIブームを牽引してきたのは、無尽蔵なVCマネーやネオクラウドによる先行投資、そしてウェブ上のあらゆるデータを貪欲に学習するモデル開発の手法だった。しかし、ネオクラウドの信用リスクやIPO見送りは、資本市場が「収益化の確証なきインフラ投資」に明確なノーを突き付け始めたことを意味する。エヌビディアがカザフスタンや産業用分野へフロンティアを広げる一方で、金融やエネルギーといった実社会側では、AIエージェントの制御不能リスクやコスト負担が現実的な経営リスクとして浮上している。さらに、OpenAIがライブインターネット学習を断念したことは、オープンなスクレイピングによる性能向上の限界と、法的・セキュリティ上のリスクが開発スピードを上回ったという重大な転換点を示唆する。もはや「データを集めて規模を大きくすれば勝てる」という単純なゲームは終わり、ガバナンスと財務の健全性を担保できるプレイヤーだけが生き残る構造へと、競争のルールが書き換わりつつある。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価であり、単なる一時的な調整に過ぎない可能性もある。もし、直近のネオクラウドの失速やIPO見送りが、個別の企業の財務管理の拙さに起因するものであり、大手ハイパースケーラー（Microsoft、Google、Amazon等）の潤沢なキャッシュフローに基づく投資意欲に少しも陰りを与えないのであれば、インフラの冷え込みという解釈は崩れる。また、OpenAIのインターネット学習停止が他社（中国勢やオープンソース陣営）に追随されず、むしろオープンなインターネットデータを活用したモデルが圧倒的な性能差を生み出し続けた場合、安全策を優先した同社の戦略は競争上の足かせになりかねない。ウォール街の警戒感についても、過去のITバブル初期に見られたような「過剰反応」の範疇に留まり、エージェントの実装が予想をはるかに超えるスピードで生産性を押し上げれば、リスク論は霧散するだろう。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI News｜Securing our frontier model training environment",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "point": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environmen"
+      },
+      {
+        "rank": 2,
+        "title": "OpenAI News｜OpenAI and Poland’s NASK partner to advance AI safety and security",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "point": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and supp"
+      },
+      {
+        "rank": 3,
+        "title": "NVIDIA Blog｜Kazakhstan Expands Compute for Its AI Future",
+        "source": "NVIDIA Blog",
+        "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/",
+        "point": "Kazakhstan’s AI ecosystem is moving from infrastructure plans to deployment.  The shift is visible across the full AI st"
+      },
+      {
+        "rank": 4,
+        "title": "OpenAI News｜Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "point": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster r"
+      },
+      {
+        "rank": 5,
+        "title": "NYTimes Technology｜Why Anger About Data Centers and Energy Prices May Not Swing Votes",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/10/23/business/energy-environment/ohio-election-gas-prices.html",
+        "point": "In Ohio, many voters say their frustration about the increase in electricity and fuel prices and the growth of data cent"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AIの成長痛：インフラの審判と開発防衛の転換",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AIの主導権争いは、計算資源の拡大競争から、インフラの財務健全性、そしてモデルの安全な内部学習環境の確立へとその軸足を移し始めている。今日の材料群から見えてくるのは、ネオクラウド（独立系AI向けクラウド事業者）の信用リスクやIPO計画の撤回といったインフラ側の歪みと、OpenAIによるライブインターネットからの学習停止という開発アプローチの根底的な転換である。これらは、AI産業が「質より量」で走ってきた拡大期から、持続可能性とガバナンスが厳しく問われる現実的なフェーズへ移行したことを示している。本稿では、この構造変化がもたらす意味を読み解く。\n\n【事実】今回の変化を裏付ける複数の重要な動きが報じられている。まず、インフラと資金調達の側面では、CNBC等の報道により、ネoclouds（新興クラウド事業者）が資金繰りの圧力や信用リスクに直面しており、SKハイニックスが米国のSolidigmのIPO計画を突如見送ったことが伝えられた。株式市場やクレジット市場ではAIビルドアウトに対する警戒感が表面化している。他方で、エヌビディアのジェンスン・ファンCEOはカザフスタンを初訪問し、同国のAIエコシステム向けの計算資源拡張や産業用AIの展開を加速させている。Siemensとエヌビディアは、デジタルツインとAIエージェントを用いた製造業の自動化で協業している。モデル開発の領域では、OpenAIが「重大なリスク」を理由に、フロンティアモデルの訓練においてライブインターネットからの学習を今後行わない方針を発表した。同時に、オフライン環境の強化や高計算量によるレッドチーミング（脆弱性検証）を含む安全対策「Securing our frontier model training environment」の導入を進めており、ポーランドのNASKともAI安全性で提携している。さらに、OpenAIは10億人を超えるChatGPTユーザーを支えるため、ストレージ基盤である「Habitat」をAzure Cosmos DB等を活用して大幅にスケーリングし、読み込み速度を12倍に高速化した実用化を進めている。金融機関の動向としては、AxiosやCNBCが、大手銀行がAIエージェントによる顧客の資格情報利用など未知の活動に対処し、カタストロフィ（最悪のシナリオ）に対するシナリオプランニングを行っていることを報じた。エネルギー・データセンターを巡っては、NYTimesがオハイオ州の住民への取材をもとに、電気代上昇への不満が必ずしも直近の選挙結果を左右するわけではない複雑な世論を伝えている。\n\n【解釈】なぜ今、こうした変化が同時に起きているのか。その背景には、AIの急速な「実需への接続」と、それを支える資本・インフラのミスマッチがある。これまでAIブームを牽引してきたのは、無尽蔵なVCマネーやネオクラウドによる先行投資、そしてウェブ上のあらゆるデータを貪欲に学習するモデル開発の手法だった。しかし、ネオクラウドの信用リスクやIPO見送りは、資本市場が「収益化の確証なきインフラ投資」に明確なノーを突き付け始めたことを意味する。エヌビディアがカザフスタンや産業用分野へフロンティアを広げる一方で、金融やエネルギーといった実社会側では、AIエージェントの制御不能リスクやコスト負担が現実的な経営リスクとして浮上している。さらに、OpenAIがライブインターネット学習を断念したことは、オープンなスクレイピングによる性能向上の限界と、法的・セキュリティ上のリスクが開発スピードを上回ったという重大な転換点を示唆する。もはや「データを集めて規模を大きくすれば勝てる」という単純なゲームは終わり、ガバナンスと財務の健全性を担保できるプレイヤーだけが生き残る構造へと、競争のルールが書き換わりつつある。\n\n【競争の構図】\n【OpenAI】\nフロンティアモデル訓練におけるライブインターネット学習の停止、オフライン環境やセキュリティの強化、10億人規模へのインフラ拡張を実施。\n→ 法的・セキュリティリスクを回避する防衛策に出る一方で、スケーリング則を維持するための独自の安全な学習環境の構築が死活問題となっている。\n\n【NVIDIA】\nカザフスタン等の新興市場への計算資源供給の拡大、産業用デジタルツイン（Siemens連携）やエッジ向けロボティクス（マイクロダック等）の展開を推進。\n→ 米国や一部のネオクラウドにおける資金繰り・信用リスクの逆風を、グローバルな需要開拓と産業用AIの実需で相殺できるかが試されている。\n\n【SKハイニックス】\n米国でのSolidigmのIPO計画の見送りを発表。一方で、発表後に株価は上昇するなど市場の受け止めは複雑。\n→ 半導体需要の旺盛さは続くものの、資本市場におけるAI関連のIPOや資金調達環境の冷え込みが、サプライチェーン全体の財務戦略に影響を与え始めている。",
+        "why_matters": "【日本の実務への示唆】日本企業は、この「インフラの選別」と「安全・ガバナンス重視」の潮流を直視した実務見直しを迫られている。第一に、AI導入において「どのクラウド基盤やベンダーに依存しているか」という信用リスクの精査が必要だ。資金繰りに懸念のある新興クラウドや未確立のサービスに依存すると、インフラ側のトラブルに巻き込まれる恐れがある。第二に、自社データをAIに接続する際のセキュリティとガバナンスの基準を急ぎ引き上げるべきである。OpenAIのネット学習停止の動きや金融機関の警戒が示す通り、野放図なデータ連携は情報漏洩や予期せぬリスクを招く。日本企業は、閉域環境や安全性が担保された検証済みプラットフォーム（オフライン・セキュア環境）を前提としたPoCから本格実装へのシフトを急ぐべきであり、単なる「おもちゃとしての生成AI」の導入から、リスク管理を内包したエージェント運用への移行計画を引くべきである。\n\n【反証・留保】この見立てが過大評価であり、単なる一時的な調整に過ぎない可能性もある。もし、直近のネオクラウドの失速やIPO見送りが、個別の企業の財務管理の拙さに起因するものであり、大手ハイパースケーラー（Microsoft、Google、Amazon等）の潤沢なキャッシュフローに基づく投資意欲に少しも陰りを与えないのであれば、インフラの冷え込みという解釈は崩れる。また、OpenAIのインターネット学習停止が他社（中国勢やオープンソース陣営）に追随されず、むしろオープンなインターネットデータを活用したモデルが圧倒的な性能差を生み出し続けた場合、安全策を優先した同社の戦略は競争上の足かせになりかねない。ウォール街の警戒感についても、過去のITバブル初期に見られたような「過剰反応」の範疇に留まり、エージェントの実装が予想をはるかに超えるスピードで生産性を押し上げれば、リスク論は霧散するだろう。",
+        "context": "【次の観測点】\n・主要ハイパースケーラー（Microsoft、Google、Meta等）の次期決算における、AI関連の資本支出（CapEx）の修正有無\n・OpenAIによるライブネット学習停止の代替となるデータ調達・安全性確保の手法の具体像\n・ネオクラウドおよびチップ関連企業の信用スプレッド（CDS）や資金調達コストの推移"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+      "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+      "summary": "OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn't work.",
+      "published": "2026-10-23 23:05 UTC",
+      "pub_dt": "2026-10-23T23:05:49+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Turmoil hits AI build-out as neoclouds face pressure, credit risks mount and Solidigm pulls IPO",
+      "url": "https://www.cnbc.com/2026/10/23/ai-turmoil-neoclouds-struggle-credit-risks-jump-solidigm-pulls-ipo.html",
+      "summary": "Stock slumps, pulled IPOs and rising spreads on credit default swaps this week sets stage for hyperscaler earnings.",
+      "published": "2026-10-23 22:49 UTC",
+      "pub_dt": "2026-10-23T22:49:04+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
+      "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+      "summary": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.",
+      "published": "2026-10-23 21:59 UTC",
+      "pub_dt": "2026-10-23T21:59:19+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "OpenAI now trains its frontier AI models with no internet access",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
+      "summary": "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI paused training its frontier [&#8230;]",
+      "published": "2026-10-23 21:11 UTC",
+      "pub_dt": "2026-10-23T21:11:07+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+      "summary": "Jack Dorsey's Block announced an AI model called Dessa that's trained \"from scratch on nothing but human conversation,\" and to show off the model, Block shared chats it has had with humans that can occasionally be a little awkward and uncanny. Take this one, for example, shared by Dessa lead Ragavan Thurairatnam. The conversation between [&#8230;]",
+      "published": "2026-10-23 19:32 UTC",
+      "pub_dt": "2026-10-23T19:32:39+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "From Toast to Bessemer: Who founders will hear from at TechCrunch Founder Summit 2026",
+      "url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/",
+      "summary": "Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, developing founder leadership, and scaling companies both inside and outside traditional startup hubs.",
+      "published": "2026-10-23 19:06 UTC",
+      "pub_dt": "2026-10-23T19:06:23+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "From Chip Lab to Center Stage",
+      "url": "https://spectrum.ieee.org/preethi-ashwath-chip-designer",
+      "summary": "Many engineers are more comfortable working behind the scenes developing technology than speaking to consumers about products. But Preethi Ashwath has learned to take center stage, talking about the “hearable” and wearable devices she has had a hand in developing as an analog integrated circuit designer in the consumer electronics division at Analog Devices of Wilmington, Mass.The IEEE member is one of the few women who work in the specialized field, where about 11 percent are female, according ",
+      "published": "2026-10-23 18:00 UTC",
+      "pub_dt": "2026-10-23T18:00:03+00:00"
+    },
+    {
+      "source": "AI Business",
+      "title": "Siemens, Nvidia deploy industrial AI to reduce engineering effort",
+      "url": "https://aibusiness.com/generative-ai/siemens-nvidia-industrial-ai-reduce-engineering-effort",
+      "summary": "The partners are using digital twins and AI agents as part of a roadmap to create world-first AI-powered manufacturing facilities.",
+      "published": "2026-10-23 17:26 UTC",
+      "pub_dt": "2026-10-23T17:26:03+00:00"
+    },
+    {
+      "source": "OpenAI News",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+      "published": "2026-10-23 17:00 UTC",
+      "pub_dt": "2026-10-23T17:00:00+00:00"
+    },
+    {
+      "source": "Analytics Vidhya",
+      "title": "LLM Inference Explained: How Models Generate Responses Faster",
+      "url": "https://www.analyticsvidhya.com/blog/2026/10/llm-inference-explained-optimization-techniques/",
+      "summary": "You type a question into ChatGPT or Claude. For a split second, nothing happens. Then the answer starts flowing, word by word. That brief pause and the steady stream that follows are two very different jobs happening on a GPU. Understanding them is the key to building AI apps that feel instant, serve thousands of [&#8230;]\nThe post LLM Inference Explained: How Models Generate Responses Faster appeared first on Analytics Vidhya.",
+      "published": "2026-10-23 16:53 UTC",
+      "pub_dt": "2026-10-23T16:53:41+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "summary": "Google has updated its privacy policy in a way that could mean you'll start seeing targeted ads based on your personal data if you're using personalized AI features. The update, spotted by Android Authority, adds an exception to its promise about not using your Drive, Gmail, or Google Photos for personalized ads. While the previous [&#8230;]",
+      "published": "2026-10-23 16:52 UTC",
+      "pub_dt": "2026-10-23T16:52:55+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Why Anger About Data Centers and Energy Prices May Not Swing Votes",
+      "url": "https://www.nytimes.com/2026/10/23/business/energy-environment/ohio-election-gas-prices.html",
+      "summary": "In Ohio, many voters say their frustration about the increase in electricity and fuel prices and the growth of data centers won’t influence whom they vote for.",
+      "published": "2026-10-23 16:00 UTC",
+      "pub_dt": "2026-10-23T16:00:09+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "AI agents could disrupt bank deposits. Why Wall Street may be overreacting",
+      "url": "https://www.cnbc.com/investingclub/2026/10/23/ai-agents-could-disrupt-bank-deposits-why-wall-street-may-be-overreacting.html",
+      "summary": "Analysts say the fears that AI agents could disrupt the banking industry are overblown, for now.",
+      "published": "2026-10-23 15:00 UTC",
+      "pub_dt": "2026-10-23T15:00:49+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Meta delays new business terms after publisher pushback on AI scraping",
+      "url": "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping",
+      "summary": "Meta is delaying the enforcement of its new business terms after publishers raised concerns that they could allow the company to scrape news sites for AI training, as reported earlier by Fast Company. In a statement to The Verge, Meta spokesperson Daniel Roberts says the terms will go into effect on November 20th \"to allow [&#8230;]",
+      "published": "2026-10-23 14:47 UTC",
+      "pub_dt": "2026-10-23T14:47:41+00:00"
+    },
+    {
+      "source": "AI Business",
+      "title": "Prompt: AI moves beyond the screen",
+      "url": "https://aibusiness.com/robotics/prompt-ai-moves-beyond-the-screen",
+      "summary": "Physical AI is pushing artificial intelligence into robots, factories and other real-world environments, where understanding language is only part of the challenge.",
+      "published": "2026-10-23 14:40 UTC",
+      "pub_dt": "2026-10-23T14:40:50+00:00"
+    }
+  ]
+}
