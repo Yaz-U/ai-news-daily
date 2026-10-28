@@ -1,0 +1,238 @@
+{
+  "timestamp": "2026-10-28T09:12:49.902967+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "AI投資が「資本市場の主導権」を握る時代の到来",
+    "thesis": "Anthropicの巨額IPOや巨大なインフラ調達に象徴されるように、AI産業の主導権は単なるモデルの性能競争から、ウォール街を巻き込んだ資本とインフラの圧倒的な囲い込みへと完全に移行した。",
+    "opening": "【結論】AI産業の競争軸は、モデルの賢さや精度の競い合いから、巨大資本とインフラの調達力を背景にした「実業・社会インフラへの強制的な組み込み」へと完全にシフトした。今日の材料が示すのは、技術の進化スピードそのものよりも、それを支える資本市場の動向が産業全体の命運を握るという現実である。Anthropicが史上最大級のIPOを模索し、SpaceXなどがGPU調達のために巨額のデットファイナンスを行う一方で、OpenAIはOracleとの提携を深めビジネスアプリ領域へ浸透している。もはやAIは、単なるテック企業の実験場ではない。米国GDPの1%に匹敵する規模のディールが乱立し、ウォール街の資金供給そのものがAIの進化速度を規定するインフラとなっている。この構造変化を捉え損ねれば、いかに優れたプロダクトを持っていっても、計算資源と流通網の壁の前に淘汰される。",
+    "what_happened": "【事実】今回の構造変化を示す根拠として、Axiosが報じたAnthropicによる史上最大級（100億ドル規模とも囁かれる）のIPO申請と、SpaceXによるGPUリース目的の400億ドルのデットファイナンス調達という巨大ディールが挙げられる（Axios「Anthropic IPO leads AI's $235 billion dealmaking blitz」）。これらは単体のテック企業の資金調達に留まらず、AIインフラのビルドアウトがウォール街の巨大資本によって直接ファイナンスされるフェーズに入ったことを示している。また、OpenAIは音声エージェント「Retell」での導入実績（従業員一人当たり年商160万ドル規模のランレートを記録）を示すと同時に、Oracleとの提携拡大を発表し、ビジネスアプリケーションやAIエージェントをChatGPTおよびOracleの新規オファリングに統合する動きを強めている（OpenAI「Retell uses OpenAI models to help power 100M monthly calls」「OpenAI expands partnership with Oracle to bring its apps to ChatGPT」）。さらに、半導体市場においてもSKハイニックスがAIメモリの需要拡大を背景に市場予想を大きく上回る第3四半期利益を叩き出し（CNBC「SK Hynix third-quarter profit sharply beats estimates on AI memory boost」）、インフラ層へのマネーフローの偏在が裏付けられている。他方で、Bank of Americaが顧客に対してAIアシスタントへの銀行パスワード共有に注意喚起を行うなど、エージェントの自律化に伴う実務的なセキュリティリスクや責任問題も表面化している（TechCrunch「Bank of America kindly asks that you don’t share your banking password with your AI assistant」）。",
+    "why_now": "【解釈】なぜ今、この資本とインフラの巨大化が起きているのか。その理由は、AIの価値が「チャットの賢さ」から「業務やインフラを代行するエージェントの稼働量」へと移行した点にある。OpenAIとOracleの提携や、Retellを通じた月間1億件規模の音声コール処理は、AIがエンタープライズの基幹システムや顧客接点に深く組み込まれ始めた証拠である。エージェントが自律的に動き、数百万、数千万単位のタスクを継続的に処理するためには、途方もない計算資源（GPU）と、それを支える電力、そして何よりそれを賄うための巨額の資本が必要不可欠になる。AnthropicのIPOやSpaceXのGPUリース用借入は、この「莫大な計算資源の事前調達」を行わなければ、エージェント時代のプラットフォーム競争に敗北するという危機感の表れと読める。ただし、この構造は、ウォール街のマネーフローが滞ったり、データセンターの電力・コスト効率化が期待を下回ったりした場合には、一気にキャッシュバーン（資金枯渇）のプレッシャーとなって跳ね返る諸刃の剣でもある。",
+    "counterpoint": "【反証・留保】この「資本・インフラ主導型」の見立てを過大評価しないための条件として、金融市場の金利動向とデータセンターの投資回収サイクルの不確実性がある。ジム・クレイマー氏が指摘するように、足元の株価ラリーやディールメーキングの熱狂の裏で、データセンター投資に対する収益化のプレッシャーは高まっている（CNBC「Jim Cramer warns investors not to get fooled by the latest AI stock rally」）。もし、企業向けエージェントの導入が期待されたほどのROI（投資利益率）を生み出さず、Bank of Americaが警告するようなセキュリティ上の重大なインシデントや法的責任問題が続発すれば、ウォール街の資金供給は急速に冷え込むだろう。その場合、巨額の借入やIPOに依存したAIベンダーの成長モデルは一気に瓦解し、オープンソースや軽量モデルによるローコストなエージェント群へと主導権が巻き戻される可能性が残る。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、「自社でどのモデルを採用するか」というプロダクト選定の議論から、「どのようなエージェント基盤を誰のインフラ上で動かし、リスクをどう担保するか」という全体設計への引き上げを急ぐべきである。OpenAIとOracleの提携やエンタープライズ向けエージェントの浸透が示すように、AIは単体のツールではなく業務プロセスやクラウド基幹に直結し始めている。したがって、導入にあたっては、Bank of Americaの事例に見るような「AIエージェントの権限管理とセキュリティ境界」を社内ポリシーとして明確に定義することが不可欠だ。また、半導体・メモリ等のハードウェア供給がグローバルな資本動向に左右される以上、調達リスクを見据えたマルチクラウド・マルチモデルの調達網の維持、および国内インフラ・電力制約を考慮した実務的なコスト管理を今週直ちに見直すべきである。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "Oracleとの提携拡大によるビジネスアプリ領域への浸透と、Retell等の音声エージェント経由での圧倒的な処理実績を武器に、エンタープライズの深部へ食い込んでいる。",
+        "implication": "単なるAPI提供者から、企業の基幹業務システムや音声インフラを牛耳るプラットフォーマーとしての地位を強固にしつつある。"
+      },
+      {
+        "company": "Anthropic",
+        "status": "史上最大級とも言われる巨額IPOの申請に踏み切り、ウォール街の巨大資本を直接巻き込んだビルドアウト体制に入っている。",
+        "implication": "潤沢な資金を背景に、長期的かつ大規模な計算資源の確保が可能になる一方、上場企業としての厳しい収益化プレッシャーに晒される。"
+      },
+      {
+        "company": "SK Hynix",
+        "status": "AIメモリの記録的な需要を背景に、第3四半期利益が市場予想を大幅に上回る好決算を記録している。",
+        "implication": "AIブームの恩恵がソフトウェア層だけでなく、半導体・ハードウェアの上流サプライチェーンに確実に利益として還流していることを証明している。"
+      }
+    ],
+    "next_signals": [
+      "AnthropicのIPOにおける実際のバリュエーションと機関投資家の需要動向",
+      "大規模なGPUリース・デットファイナンスを行う企業群におけるキャッシュフローと電力確保の実態",
+      "エンタープライズ領域におけるAIエージェントの権限逸脱・セキュリティ事故に関する具体的な規制や法的責任の議論"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI News｜Retell uses OpenAI models to help power 100M monthly calls",
+        "url": "https://openai.com/index/retell-ai"
+      },
+      {
+        "title": "OpenAI News｜OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+        "url": "https://openai.com/index/oracle-apps-in-chatgpt"
+      },
+      {
+        "title": "CNBC Tech｜SK Hynix third-quarter profit sharply beats estimates on AI memory boost",
+        "url": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html"
+      },
+      {
+        "title": "Axios｜Anthropic IPO leads AI's $235 billion dealmaking blitz",
+        "url": "https://www.axios.com/2026/10/27/anthropic-ipo-meta-spacex-ai-deals"
+      },
+      {
+        "title": "CNBC Tech｜Jim Cramer warns investors not to get fooled by the latest AI stock rally",
+        "url": "https://www.cnbc.com/2026/10/27/jim-cramer-ai-trade-financing-risks.html"
+      },
+      {
+        "title": "TechCrunch AI｜Bank of America kindly asks that you don’t share your banking password with your AI assistant",
+        "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/"
+      }
+    ],
+    "news_summary": "Anthropicの巨額IPOや巨大なインフラ調達に象徴されるように、AI産業の主導権は単なるモデルの性能競争から、ウォール街を巻き込んだ資本とインフラの圧倒的な囲い込みへと完全に移行した。\n\n【事実】今回の構造変化を示す根拠として、Axiosが報じたAnthropicによる史上最大級（100億ドル規模とも囁かれる）のIPO申請と、SpaceXによるGPUリース目的の400億ドルのデットファイナンス調達という巨大ディールが挙げられる（Axios「Anthropic IPO leads AI's $235 billion dealmaking blitz」）。これらは単体のテック企業の資金調達に留まらず、AIインフラのビルドアウトがウォール街の巨大資本によって直接ファイナンスされるフェーズに入ったことを示している。また、OpenAIは音声エージェント「Retell」での導入実績（従業員一人当たり年商160万ドル規模のランレートを記録）を示すと同時に、Oracleとの提携拡大を発表し、ビジネスアプリケーションやAIエージェントをChatGPTおよびOracleの新規オファリングに統合する動きを強めている（OpenAI「Retell uses OpenAI models to help power 100M monthly calls」「OpenAI expands partnership with Oracle to bring its apps to ChatGPT」）。さらに、半導体市場においてもSKハイニックスがAIメモリの需要拡大を背景に市場予想を大きく上回る第3四半期利益を叩き出し（CNBC「SK Hynix third-quarter profit sharply beats estimates on AI memory boost」）、インフラ層へのマネーフローの偏在が裏付けられている。他方で、Bank of Americaが顧客に対してAIアシスタントへの銀行パスワード共有に注意喚起を行うなど、エージェントの自律化に伴う実務的なセキュリティリスクや責任問題も表面化している（TechCrunch「Bank of America kindly asks that you don’t share your banking password with your AI assistant」）。",
+    "opinion_summary": "【解釈】なぜ今、この資本とインフラの巨大化が起きているのか。その理由は、AIの価値が「チャットの賢さ」から「業務やインフラを代行するエージェントの稼働量」へと移行した点にある。OpenAIとOracleの提携や、Retellを通じた月間1億件規模の音声コール処理は、AIがエンタープライズの基幹システムや顧客接点に深く組み込まれ始めた証拠である。エージェントが自律的に動き、数百万、数千万単位のタスクを継続的に処理するためには、途方もない計算資源（GPU）と、それを支える電力、そして何よりそれを賄うための巨額の資本が必要不可欠になる。AnthropicのIPOやSpaceXのGPUリース用借入は、この「莫大な計算資源の事前調達」を行わなければ、エージェント時代のプラットフォーム競争に敗北するという危機感の表れと読める。ただし、この構造は、ウォール街のマネーフローが滞ったり、データセンターの電力・コスト効率化が期待を下回ったりした場合には、一気にキャッシュバーン（資金枯渇）のプレッシャーとなって跳ね返る諸刃の剣でもある。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この「資本・インフラ主導型」の見立てを過大評価しないための条件として、金融市場の金利動向とデータセンターの投資回収サイクルの不確実性がある。ジム・クレイマー氏が指摘するように、足元の株価ラリーやディールメーキングの熱狂の裏で、データセンター投資に対する収益化のプレッシャーは高まっている（CNBC「Jim Cramer warns investors not to get fooled by the latest AI stock rally」）。もし、企業向けエージェントの導入が期待されたほどのROI（投資利益率）を生み出さず、Bank of Americaが警告するようなセキュリティ上の重大なインシデントや法的責任問題が続発すれば、ウォール街の資金供給は急速に冷え込むだろう。その場合、巨額の借入やIPOに依存したAIベンダーの成長モデルは一気に瓦解し、オープンソースや軽量モデルによるローコストなエージェント群へと主導権が巻き戻される可能性が残る。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI News｜Retell uses OpenAI models to help power 100M monthly calls",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/retell-ai",
+        "point": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee"
+      },
+      {
+        "rank": 2,
+        "title": "OpenAI News｜OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+        "point": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power ne"
+      },
+      {
+        "rank": 3,
+        "title": "CNBC Tech｜SK Hynix third-quarter profit sharply beats estimates on AI memory boost",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html",
+        "point": "South Korean chipmaker SK Hynix on Wednesday reported its third-quarter earnings."
+      },
+      {
+        "rank": 4,
+        "title": "Axios｜Anthropic IPO leads AI's $235 billion dealmaking blitz",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/10/27/anthropic-ipo-meta-spacex-ai-deals",
+        "point": "Anthropic filed yesterday for what could be the biggest IPO ever, capping a massive day of AI dealmaking that nearly equ"
+      },
+      {
+        "rank": 5,
+        "title": "CNBC Tech｜Jim Cramer warns investors not to get fooled by the latest AI stock rally",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/10/27/jim-cramer-ai-trade-financing-risks.html",
+        "point": "CNBC’s Jim Cramer warned that the latest rally in AI stocks doesn't mean the data center trade is out of the woods."
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AI投資が「資本市場の主導権」を握る時代の到来",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://openai.com/index/retell-ai",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の競争軸は、モデルの賢さや精度の競い合いから、巨大資本とインフラの調達力を背景にした「実業・社会インフラへの強制的な組み込み」へと完全にシフトした。今日の材料が示すのは、技術の進化スピードそのものよりも、それを支える資本市場の動向が産業全体の命運を握るという現実である。Anthropicが史上最大級のIPOを模索し、SpaceXなどがGPU調達のために巨額のデットファイナンスを行う一方で、OpenAIはOracleとの提携を深めビジネスアプリ領域へ浸透している。もはやAIは、単なるテック企業の実験場ではない。米国GDPの1%に匹敵する規模のディールが乱立し、ウォール街の資金供給そのものがAIの進化速度を規定するインフラとなっている。この構造変化を捉え損ねれば、いかに優れたプロダクトを持っていっても、計算資源と流通網の壁の前に淘汰される。\n\n【事実】今回の構造変化を示す根拠として、Axiosが報じたAnthropicによる史上最大級（100億ドル規模とも囁かれる）のIPO申請と、SpaceXによるGPUリース目的の400億ドルのデットファイナンス調達という巨大ディールが挙げられる（Axios「Anthropic IPO leads AI's $235 billion dealmaking blitz」）。これらは単体のテック企業の資金調達に留まらず、AIインフラのビルドアウトがウォール街の巨大資本によって直接ファイナンスされるフェーズに入ったことを示している。また、OpenAIは音声エージェント「Retell」での導入実績（従業員一人当たり年商160万ドル規模のランレートを記録）を示すと同時に、Oracleとの提携拡大を発表し、ビジネスアプリケーションやAIエージェントをChatGPTおよびOracleの新規オファリングに統合する動きを強めている（OpenAI「Retell uses OpenAI models to help power 100M monthly calls」「OpenAI expands partnership with Oracle to bring its apps to ChatGPT」）。さらに、半導体市場においてもSKハイニックスがAIメモリの需要拡大を背景に市場予想を大きく上回る第3四半期利益を叩き出し（CNBC「SK Hynix third-quarter profit sharply beats estimates on AI memory boost」）、インフラ層へのマネーフローの偏在が裏付けられている。他方で、Bank of Americaが顧客に対してAIアシスタントへの銀行パスワード共有に注意喚起を行うなど、エージェントの自律化に伴う実務的なセキュリティリスクや責任問題も表面化している（TechCrunch「Bank of America kindly asks that you don’t share your banking password with your AI assistant」）。\n\n【解釈】なぜ今、この資本とインフラの巨大化が起きているのか。その理由は、AIの価値が「チャットの賢さ」から「業務やインフラを代行するエージェントの稼働量」へと移行した点にある。OpenAIとOracleの提携や、Retellを通じた月間1億件規模の音声コール処理は、AIがエンタープライズの基幹システムや顧客接点に深く組み込まれ始めた証拠である。エージェントが自律的に動き、数百万、数千万単位のタスクを継続的に処理するためには、途方もない計算資源（GPU）と、それを支える電力、そして何よりそれを賄うための巨額の資本が必要不可欠になる。AnthropicのIPOやSpaceXのGPUリース用借入は、この「莫大な計算資源の事前調達」を行わなければ、エージェント時代のプラットフォーム競争に敗北するという危機感の表れと読める。ただし、この構造は、ウォール街のマネーフローが滞ったり、データセンターの電力・コスト効率化が期待を下回ったりした場合には、一気にキャッシュバーン（資金枯渇）のプレッシャーとなって跳ね返る諸刃の剣でもある。\n\n【競争の構図】\n【OpenAI】\nOracleとの提携拡大によるビジネスアプリ領域への浸透と、Retell等の音声エージェント経由での圧倒的な処理実績を武器に、エンタープライズの深部へ食い込んでいる。\n→ 単なるAPI提供者から、企業の基幹業務システムや音声インフラを牛耳るプラットフォーマーとしての地位を強固にしつつある。\n\n【Anthropic】\n史上最大級とも言われる巨額IPOの申請に踏み切り、ウォール街の巨大資本を直接巻き込んだビルドアウト体制に入っている。\n→ 潤沢な資金を背景に、長期的かつ大規模な計算資源の確保が可能になる一方、上場企業としての厳しい収益化プレッシャーに晒される。\n\n【SK Hynix】\nAIメモリの記録的な需要を背景に、第3四半期利益が市場予想を大幅に上回る好決算を記録している。\n→ AIブームの恩恵がソフトウェア層だけでなく、半導体・ハードウェアの上流サプライチェーンに確実に利益として還流していることを証明している。",
+        "why_matters": "【日本の実務への示唆】日本企業は、「自社でどのモデルを採用するか」というプロダクト選定の議論から、「どのようなエージェント基盤を誰のインフラ上で動かし、リスクをどう担保するか」という全体設計への引き上げを急ぐべきである。OpenAIとOracleの提携やエンタープライズ向けエージェントの浸透が示すように、AIは単体のツールではなく業務プロセスやクラウド基幹に直結し始めている。したがって、導入にあたっては、Bank of Americaの事例に見るような「AIエージェントの権限管理とセキュリティ境界」を社内ポリシーとして明確に定義することが不可欠だ。また、半導体・メモリ等のハードウェア供給がグローバルな資本動向に左右される以上、調達リスクを見据えたマルチクラウド・マルチモデルの調達網の維持、および国内インフラ・電力制約を考慮した実務的なコスト管理を今週直ちに見直すべきである。\n\n【反証・留保】この「資本・インフラ主導型」の見立てを過大評価しないための条件として、金融市場の金利動向とデータセンターの投資回収サイクルの不確実性がある。ジム・クレイマー氏が指摘するように、足元の株価ラリーやディールメーキングの熱狂の裏で、データセンター投資に対する収益化のプレッシャーは高まっている（CNBC「Jim Cramer warns investors not to get fooled by the latest AI stock rally」）。もし、企業向けエージェントの導入が期待されたほどのROI（投資利益率）を生み出さず、Bank of Americaが警告するようなセキュリティ上の重大なインシデントや法的責任問題が続発すれば、ウォール街の資金供給は急速に冷え込むだろう。その場合、巨額の借入やIPOに依存したAIベンダーの成長モデルは一気に瓦解し、オープンソースや軽量モデルによるローコストなエージェント群へと主導権が巻き戻される可能性が残る。",
+        "context": "【次の観測点】\n・AnthropicのIPOにおける実際のバリュエーションと機関投資家の需要動向\n・大規模なGPUリース・デットファイナンスを行う企業群におけるキャッシュフローと電力確保の実態\n・エンタープライズ領域におけるAIエージェントの権限逸脱・セキュリティ事故に関する具体的な規制や法的責任の議論"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.10.8",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.8",
+      "summary": "2026.10.8\nHighlights\n\nUpdates that finish and recover: an ordinary post-update Doctor failure restarts the Gateway instead of leaving it stopped, an orphaned maintenance worker no longer blocks every CLI command and Gateway start, and updates no longer abort on ACL filesystems, Windows pnpm optional-dependency links, pnpm 10 global installs, debug console logging, or a missing legacy OAuth directory. (#180668, #181695, #181141, #181596, #181456, #182850, #180174) Thanks @hannesrudolph, @SMF12138",
+      "published": "2026-10-28 00:10 UTC",
+      "pub_dt": "2026-10-28T00:10:29+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "SK Hynix third-quarter profit sharply beats estimates on AI memory boost",
+      "url": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html",
+      "summary": "South Korean chipmaker SK Hynix on Wednesday reported its third-quarter earnings.",
+      "published": "2026-10-28 00:09 UTC",
+      "pub_dt": "2026-10-28T00:09:17+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
+      "url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
+      "summary": "A family is suing OpenAI, saying ChatGPT coached their daughter to quietly taper off her seizure medication and keep it from her doctors before she died in February.",
+      "published": "2026-10-27 23:34 UTC",
+      "pub_dt": "2026-10-27T23:34:27+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Chart: Anthropic's cash pile towers over nearly every U.S. company",
+      "url": "https://www.cnbc.com/2026/10/27/anthropic-cash-investments-ipo.html",
+      "summary": "Anthropic's cash pile of $131.7 billion is more than every non-bank U.S. company except for Berkshire Hathaway and Alphabet.",
+      "published": "2026-10-27 23:03 UTC",
+      "pub_dt": "2026-10-27T23:03:09+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "The data center boom has an upside: innovation for the US grid",
+      "url": "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/",
+      "summary": "As the AI boom stresses the existing power grid, all sorts of new opportunities for grid modernization are also emerging as a result, industry insiders say.",
+      "published": "2026-10-27 22:55 UTC",
+      "pub_dt": "2026-10-27T22:55:41+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "DOJ fails to indict Cassidy Hutchinson, a key Jan. 6 witness",
+      "url": "https://www.axios.com/2026/10/27/cassidy-hutchinson-indictment-jan-6-testimony",
+      "summary": "The Justice Department failed to secure an indictment against Cassidy Hutchinson, a former White House aide who testified about President Trump's actions on Jan. 6, multiple media outlets reported Tuesday.Why it matters: The grand jury's refusal to indict Hutchinson is another blow to the DOJ in its ongoing effort to prosecute President Trump's perceived political enemies.The latest: A Justice Department lawyer told a magistrate judge Tuesday that a grand jury could not agree on an indictment, a",
+      "published": "2026-10-27 22:31 UTC",
+      "pub_dt": "2026-10-27T22:31:08+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jim Cramer warns investors not to get fooled by the latest AI stock rally",
+      "url": "https://www.cnbc.com/2026/10/27/jim-cramer-ai-trade-financing-risks.html",
+      "summary": "CNBC’s Jim Cramer warned that the latest rally in AI stocks doesn't mean the data center trade is out of the woods.",
+      "published": "2026-10-27 22:24 UTC",
+      "pub_dt": "2026-10-27T22:24:19+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Bank of America kindly asks that you don’t share your banking password with your AI assistant",
+      "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+      "summary": "The banking giant reminds customers that \"you're responsible for activity\" resulting from your AI agents' access.",
+      "published": "2026-10-27 21:44 UTC",
+      "pub_dt": "2026-10-27T21:44:34+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Who’s really in charge at Anthropic after the IPO?",
+      "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
+      "summary": "Here's a clear explanation of Anthropic's incredibly complex governance structure.",
+      "published": "2026-10-27 21:38 UTC",
+      "pub_dt": "2026-10-27T21:38:28+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Walmart says AI training is boosting confidence with the technology among its 2.1 million associates",
+      "url": "https://www.cnbc.com/2026/10/27/walmart-ai-training-workers.html",
+      "summary": "Walmart says training from OpenAI and Google is helping its 2.1 million associates feel more confident using AI and digital tools.",
+      "published": "2026-10-27 21:15 UTC",
+      "pub_dt": "2026-10-27T21:15:35+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
+      "summary": "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings. But despite its apparent course correction, researchers who spoke to The Verge are growing increasingly tired of the company's antics. It has been a turbulent few months between OpenAI [&#8230;]",
+      "published": "2026-10-27 20:48 UTC",
+      "pub_dt": "2026-10-27T20:48:58+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Anthropic Says It Will Revolutionize Biology—Some Day",
+      "url": "https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day/",
+      "summary": "In breathless press releases and posts, the company has touted its models’ ability to deliver scientific breakthroughs. But its IPO filing taps the brakes on just how fast its AI will lead to big discoveries.",
+      "published": "2026-10-27 19:39 UTC",
+      "pub_dt": "2026-10-27T19:39:04+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Trump praises Canadian separatists amid delicate trade talks",
+      "url": "https://www.axios.com/2026/10/27/trump-applauds-canadian-separatist-trade-talks",
+      "summary": "President Trump applauded Quebec's new separatist premier Tuesday, continuing to jab at Ottawa despite fragile trade talks that seemed to be gaining momentum. The big picture: Even as Trump's top economic adviser suggested a deal to ease the ongoing trade war is possible, the president has continue to antagonize Canada.The U.S. recently accused Canada of trying to influence American elections through retaliatory tariffs, which Canadian officials have denied.Meanwhile, Trump's continued to antago",
+      "published": "2026-10-27 19:25 UTC",
+      "pub_dt": "2026-10-27T19:25:12+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI",
+      "url": "https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html",
+      "summary": "Amazon has rapidly integrated AI across the e-commerce giant's sprawling business operations under CEO Andy Jassy.",
+      "published": "2026-10-27 18:57 UTC",
+      "pub_dt": "2026-10-27T18:57:45+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Disruptive raises $10B fund to make big bets on at least 10 companies",
+      "url": "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/",
+      "summary": "Disruptive has made headlines in recent years for pouring money into companies like chip startup Groq and the AI voice-generation startup ElevenLabs.",
+      "published": "2026-10-27 18:55 UTC",
+      "pub_dt": "2026-10-27T18:55:35+00:00"
+    }
+  ]
+}
