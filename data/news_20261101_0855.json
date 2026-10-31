@@ -1,0 +1,228 @@
+{
+  "timestamp": "2026-11-01T08:55:00.867010+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "AI投資の「キャッシュ枯渇」と自律エージェントの壁",
+    "thesis": "巨大テックの巨額AI投資がウォール街を怯えさせ、資金調達の縮小や融資の肩代わりが表面化する一方で、AIエージェントの裏では人間が手作業を補う実態が露わになり、AIブームは投資・実需の両面で踊り場を迎えている。",
+    "opening": "【結論】AI産業は今、インフラ投資の過熱によるキャッシュの急激な消耗と、実用フェーズに入った「AIエージェント」が抱える隠れた人的コストという、2つの巨大な壁に直面している。Amazonなどの巨額支出が株価を押し下げ、OpenAIが資金調達目標を引き下げるなど、資本の論理に急ブレーキがかかり始めた。同時に、Metaの「Muse」や各種エージェントの華やかな実演の裏側では、ソフトウェアが破綻した際に人間が電話対応などを裏で支えている実態が明らかになっている。本稿では、インフラのマネタイズ不安とエージェントの実力値のギャップから、AI競争のルールがどう変質しつつあるかを読み解く。",
+    "what_happened": "ニューヨーク・タイムズやCNBC、テッククランチ等の報道によると、まず資本・インフラ面では、AmazonがAIへの投資を加速させる一方で、その巨額の支出がキャッシュを燃やし続け、ウォール街や株式市場に深刻な懸念を与えている（NYTimes Technology）。ハイパースケーラーの決算に対する懸念からナスダックが調整局面入りし、株式市場全体でAIトレードへの不安心理が広がった（CNBC、Axios）。さらに、OpenAIは新たな資金調達ラウンドで当初の目標額を引き下げ、最大200億ドル規模へと修正している（CNBC）。インフラを巡っては、エヌビディアがNscaleのウエストバージニア州におけるAIデータセンターの融資で「共同署名者（コサイン）」として関与することを検討していることが報じられ、チップメーカー自らが買い手にファイナンスの肩代わりを迫られる歪みが生じている（TechCrunch）。環境面でも、xAIのメンフィス等のデータセンターを巡る大気汚染を指摘したNAACP（全米黒人地位向上協会）による訴訟の却下請求が退けられ、法的な足かせや地域住民との摩擦が顕在化している（CNBC、TechCrunch）。一方で実需・プロダクト面では、Metaの「Muse」やOpenAIの「dots」など、個人向けのタスク自動化エージェントが話題を集めているが、CNBCの報道によれば、DazzleやDuckbillなどのAIエージェントによる実世界でのタスクや電話対応の裏では、依然として多くの人間が手動で作業を補っている実態が暴かれている（CNBC）。また、グーグルが公開したセキュリティエージェント「PageBreak」が決定論的なバリデーターと組み合わせて数百件の脆弱性を発見するといった実用的な成果や（InfoQ）、バイオスタートアップがエージェントを活用してマウスの脳への遺伝子治療薬の投与に成功するといった極端な事例もあるが（Wired）、全体として「AIだけで自律的に動く世界」と「裏で人間が支える現実」のギャップが浮き彫りになっている。",
+    "why_now": "今回の変化の本質は、AIブームが「期待によるバリュエーションの拡大期」から「資本の回収と実需の証明を迫られる冷徹な検証期」へ移行したことにある。過去数年間、テック企業は「AIに投資しないことの最大のリスク」を口実に、投資家からの不満を押し切ってデータセンターやGPUへ巨額のキャッシュを投じてきた。しかし、Amazonの決算や株式市場の動揺が示す通り、ウォール街の忍耐は限界に達しつつある。エヌビディアが融資の共同署名者を検討せざるを得ない状況は、川下の顧客（データセンター事業者やクラウド）の自力での資金調達力が細り始めているシグナルであり、AIバリューチェーン全体の資金循環が詰まり始めていることを意味する。同時に、OpenAIの資金調達目標の引き下げは、民間資本の供給が無限ではない現実を突きつけている。プロダクト側においても、エージェントの実力が「人間の労働の完全代替」にはまだ程遠く、裏で人間が汗をかく「ヒューマン・イン・ザ・ループの隠蔽版」に依存していることが判明したことで、ソフトウェアの限界とコスト構造の歪みが露呈した。つまり、今起きているのは単なる「競争激化」ではなく、「無限に拡大するはずだったインフラ需要と、人間を介さなければ回らないエージェントの限界という、二重の物理的・経済的制約の顕在化」である。",
+    "counterpoint": "この見立てを過大評価しないための最大の留保は、今回の資金調達の縮小やインフラへの懸念が、単なる「一時的な市場の消化不良」に過ぎない可能性である。もし、今後数四半期で主要なクラウドプロバイダーがAI投資から具体的な収益（例えば法人向けSaaSや独自の強力なAIサービスからの莫大なキャッシュイン）を証明し、エージェントが人間の介入なしで自律的に動く割合を急激に高めた場合、現在の株価の動揺や調達難のニュースは、単なる成長痛として片付けられることになる。また、エージェントの裏での人間の作業についても、初期のプロダクトが信頼性を担保するための「過渡期の安全装置」に過ぎず、モデルの急速な進化によって数か月単位で自動化率が100%に近づくのであれば、ここで指摘した「人間の限界」という前提は崩れる。したがって、これらの事象が構造的な頭打ちなのか、あるいは一時的な踊り場に過ぎないのかは、今後の決算における具体的なROI（投資対効果）の数値と、エージェントの自律稼働率のデータによってのみ判定される。",
+    "japan_impact": "日本企業の実務において、今週見直すべきは「AIベンダーの華やかなデモに依拠したPoC（概念実証）のバラマキ」から「自社でのキャッシュアウトとROIの厳格な検証」への転換である。海外市場でハイパースケーラーの投資対効果が問われ、エージェントの裏で人間が手作業をしている実態が明るみに出た以上、日本企業も「AIを導入すれば自動的にコストが下がる」という幻想を捨てる必要がある。特に、業務自動化エージェントを導入する際は、ソフトウェアが自律処理できる範囲の限界を見極め、裏で発生する例外処理の人件費や運用コストを含めたトータルコスト（TCO）を再計算すべきである。また、グローバルのインフラ投資が曲がり角を迎えている中、国内のクラウド調達やAIインフラのコスト構造も影響を受ける可能性を視野に入れ、過剰な初期投資を避けた段階的な調達・提携戦略に舵を切るべきタイミングにある。",
+    "company_positions": [
+      {
+        "company": "Amazon",
+        "status": "AIへの巨額投資を継続し、それが原因で株価下落やウォール街からの厳しい視線に晒されている。",
+        "implication": "インフラ投資の継続と市場からのプレッシャーの板挟みにあり、今後は投資の効率性と明確なマネタイズの証明が強く求められる立場にある。"
+      },
+      {
+        "company": "OpenAI",
+        "status": "新たな資金調達ラウンドで当初の目標額を最大200億ドルへと引き下げている。",
+        "implication": "これまでの無制限な資金調達の神話に陰りが見えており、巨額の計算資源コストを維持するためのビジネスモデルの現実路線への転換や、投資家との交渉力の低下につながる恐れがある。"
+      },
+      {
+        "company": "NVIDIA",
+        "status": "顧客であるNscaleのデータセンター向け融資において、共同署名者（コサイン）としての関与を検討している。",
+        "implication": "チップを売るだけでなく、自ら買い手のファイナンスを支えるリスクを取る必要が生じており、エコシステムのバブルを自社のバランスシートで支える構造的な歪みが強まっている。"
+      },
+      {
+        "company": "Meta",
+        "status": "個人向けタスク自動化エージェント「Muse」などを展開し、エコシステムの拡大を狙っている。",
+        "implication": "プロダクトの露出度は高いものの、業界全体としてエージェントの裏で人間が手作業を補う実態が暴かれており、技術の信頼性と実用性の乖離をどう埋めるかが問われている。"
+      }
+    ],
+    "next_signals": [
+      "主要ハイパースケーラーの次四半期決算におけるAI関連資本支出（CapEx）の増減トレンド",
+      "OpenAIの最新資金調達ラウンドの最終的な着地金額と評価額の変動",
+      "AIエージェントを導入した企業における、人間による手動介入（ヒューマン・イン・ザ・ループ）の割合の推移"
+    ],
+    "sources": [
+      {
+        "title": "Big Tech’s Data Center Blitz Is Burning Through Cash and Scaring Wall St.",
+        "url": "https://www.nytimes.com/2026/10/29/technology/amazon-earnings-tech-spending.html"
+      },
+      {
+        "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+        "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/"
+      },
+      {
+        "title": "OpenAI pares fundraising goal, now seeking up to $20 billion in latest round",
+        "url": "https://www.cnbc.com/2026/10/31/openai-fundraising-20-billion-valuation.html"
+      },
+      {
+        "title": "Humans are still doing the work behind some AI agents",
+        "url": "https://www.cnbc.com/2026/10/31/ai-agents-humans-dazzle-duckbill-meta.html"
+      }
+    ],
+    "news_summary": "巨大テックの巨額AI投資がウォール街を怯えさせ、資金調達の縮小や融資の肩代わりが表面化する一方で、AIエージェントの裏では人間が手作業を補う実態が露わになり、AIブームは投資・実需の両面で踊り場を迎えている。\n\nニューヨーク・タイムズやCNBC、テッククランチ等の報道によると、まず資本・インフラ面では、AmazonがAIへの投資を加速させる一方で、その巨額の支出がキャッシュを燃やし続け、ウォール街や株式市場に深刻な懸念を与えている（NYTimes Technology）。ハイパースケーラーの決算に対する懸念からナスダックが調整局面入りし、株式市場全体でAIトレードへの不安心理が広がった（CNBC、Axios）。さらに、OpenAIは新たな資金調達ラウンドで当初の目標額を引き下げ、最大200億ドル規模へと修正している（CNBC）。インフラを巡っては、エヌビディアがNscaleのウエストバージニア州におけるAIデータセンターの融資で「共同署名者（コサイン）」として関与することを検討していることが報じられ、チップメーカー自らが買い手にファイナンスの肩代わりを迫られる歪みが生じている（TechCrunch）。環境面でも、xAIのメンフィス等のデータセンターを巡る大気汚染を指摘したNAACP（全米黒人地位向上協会）による訴訟の却下請求が退けられ、法的な足かせや地域住民との摩擦が顕在化している（CNBC、TechCrunch）。一方で実需・プロダクト面では、Metaの「Muse」やOpenAIの「dots」など、個人向けのタスク自動化エージェントが話題を集めているが、CNBCの報道によれば、DazzleやDuckbillなどのAIエージェントによる実世界でのタスクや電話対応の裏では、依然として多くの人間が手動で作業を補っている実態が暴かれている（CNBC）。また、グーグルが公開したセキュリティエージェント「PageBreak」が決定論的なバリデーターと組み合わせて数百件の脆弱性を発見するといった実用的な成果や（InfoQ）、バイオスタートアップがエージェントを活用してマウスの脳への遺伝子治療薬の投与に成功するといった極端な事例もあるが（Wired）、全体として「AIだけで自律的に動く世界」と「裏で人間が支える現実」のギャップが浮き彫りになっている。",
+    "opinion_summary": "今回の変化の本質は、AIブームが「期待によるバリュエーションの拡大期」から「資本の回収と実需の証明を迫られる冷徹な検証期」へ移行したことにある。過去数年間、テック企業は「AIに投資しないことの最大のリスク」を口実に、投資家からの不満を押し切ってデータセンターやGPUへ巨額のキャッシュを投じてきた。しかし、Amazonの決算や株式市場の動揺が示す通り、ウォール街の忍耐は限界に達しつつある。エヌビディアが融資の共同署名者を検討せざるを得ない状況は、川下の顧客（データセンター事業者やクラウド）の自力での資金調達力が細り始めているシグナルであり、AIバリューチェーン全体の資金循環が詰まり始めていることを意味する。同時に、OpenAIの資金調達目標の引き下げは、民間資本の供給が無限ではない現実を突きつけている。プロダクト側においても、エージェントの実力が「人間の労働の完全代替」にはまだ程遠く、裏で人間が汗をかく「ヒューマン・イン・ザ・ループの隠蔽版」に依存していることが判明したことで、ソフトウェアの限界とコスト構造の歪みが露呈した。つまり、今起きているのは単なる「競争激化」ではなく、「無限に拡大するはずだったインフラ需要と、人間を介さなければ回らないエージェントの限界という、二重の物理的・経済的制約の顕在化」である。",
+    "sentiment": {
+      "positive": "",
+      "negative": "この見立てを過大評価しないための最大の留保は、今回の資金調達の縮小やインフラへの懸念が、単なる「一時的な市場の消化不良」に過ぎない可能性である。もし、今後数四半期で主要なクラウドプロバイダーがAI投資から具体的な収益（例えば法人向けSaaSや独自の強力なAIサービスからの莫大なキャッシュイン）を証明し、エージェントが人間の介入なしで自律的に動く割合を急激に高めた場合、現在の株価の動揺や調達難のニュースは、単なる成長痛として片付けられることになる。また、エージェントの裏での人間の作業についても、初期のプロダクトが信頼性を担保するための「過渡期の安全装置」に過ぎず、モデルの急速な進化によって数か月単位で自動化率が100%に近づくのであれば、ここで指摘した「人間の限界」という前提は崩れる。したがって、これらの事象が構造的な頭打ちなのか、あるいは一時的な踊り場に過ぎないのかは、今後の決算における具体的なROI（投資対効果）の数値と、エージェントの自律稼働率のデータによってのみ判定される。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "Big Tech’s Data Center Blitz Is Burning Through Cash and Scaring Wall St.",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/10/29/technology/amazon-earnings-tech-spending.html",
+        "point": "Amazon became the latest tech company to announce swelling investments in A.I. amid stumbling share prices."
+      },
+      {
+        "rank": 2,
+        "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+        "point": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the lo"
+      },
+      {
+        "rank": 3,
+        "title": "OpenAI pares fundraising goal, now seeking up to $20 billion in latest round",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/10/31/openai-fundraising-20-billion-valuation.html",
+        "point": "The funding round is still in progress and has not closed, so the figures are subject to change, a person directly famil"
+      },
+      {
+        "rank": 4,
+        "title": "Humans are still doing the work behind some AI agents",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/10/31/ai-agents-humans-dazzle-duckbill-meta.html",
+        "point": "AI agents from startups including Dazzle, Duckbill and Wajo still rely on human workers for calls and other real-world t"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AI投資の「キャッシュ枯渇」と自律エージェントの壁",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://www.nytimes.com/2026/10/29/technology/amazon-earnings-tech-spending.html",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業は今、インフラ投資の過熱によるキャッシュの急激な消耗と、実用フェーズに入った「AIエージェント」が抱える隠れた人的コストという、2つの巨大な壁に直面している。Amazonなどの巨額支出が株価を押し下げ、OpenAIが資金調達目標を引き下げるなど、資本の論理に急ブレーキがかかり始めた。同時に、Metaの「Muse」や各種エージェントの華やかな実演の裏側では、ソフトウェアが破綻した際に人間が電話対応などを裏で支えている実態が明らかになっている。本稿では、インフラのマネタイズ不安とエージェントの実力値のギャップから、AI競争のルールがどう変質しつつあるかを読み解く。\n\nニューヨーク・タイムズやCNBC、テッククランチ等の報道によると、まず資本・インフラ面では、AmazonがAIへの投資を加速させる一方で、その巨額の支出がキャッシュを燃やし続け、ウォール街や株式市場に深刻な懸念を与えている（NYTimes Technology）。ハイパースケーラーの決算に対する懸念からナスダックが調整局面入りし、株式市場全体でAIトレードへの不安心理が広がった（CNBC、Axios）。さらに、OpenAIは新たな資金調達ラウンドで当初の目標額を引き下げ、最大200億ドル規模へと修正している（CNBC）。インフラを巡っては、エヌビディアがNscaleのウエストバージニア州におけるAIデータセンターの融資で「共同署名者（コサイン）」として関与することを検討していることが報じられ、チップメーカー自らが買い手にファイナンスの肩代わりを迫られる歪みが生じている（TechCrunch）。環境面でも、xAIのメンフィス等のデータセンターを巡る大気汚染を指摘したNAACP（全米黒人地位向上協会）による訴訟の却下請求が退けられ、法的な足かせや地域住民との摩擦が顕在化している（CNBC、TechCrunch）。一方で実需・プロダクト面では、Metaの「Muse」やOpenAIの「dots」など、個人向けのタスク自動化エージェントが話題を集めているが、CNBCの報道によれば、DazzleやDuckbillなどのAIエージェントによる実世界でのタスクや電話対応の裏では、依然として多くの人間が手動で作業を補っている実態が暴かれている（CNBC）。また、グーグルが公開したセキュリティエージェント「PageBreak」が決定論的なバリデーターと組み合わせて数百件の脆弱性を発見するといった実用的な成果や（InfoQ）、バイオスタートアップがエージェントを活用してマウスの脳への遺伝子治療薬の投与に成功するといった極端な事例もあるが（Wired）、全体として「AIだけで自律的に動く世界」と「裏で人間が支える現実」のギャップが浮き彫りになっている。\n\n今回の変化の本質は、AIブームが「期待によるバリュエーションの拡大期」から「資本の回収と実需の証明を迫られる冷徹な検証期」へ移行したことにある。過去数年間、テック企業は「AIに投資しないことの最大のリスク」を口実に、投資家からの不満を押し切ってデータセンターやGPUへ巨額のキャッシュを投じてきた。しかし、Amazonの決算や株式市場の動揺が示す通り、ウォール街の忍耐は限界に達しつつある。エヌビディアが融資の共同署名者を検討せざるを得ない状況は、川下の顧客（データセンター事業者やクラウド）の自力での資金調達力が細り始めているシグナルであり、AIバリューチェーン全体の資金循環が詰まり始めていることを意味する。同時に、OpenAIの資金調達目標の引き下げは、民間資本の供給が無限ではない現実を突きつけている。プロダクト側においても、エージェントの実力が「人間の労働の完全代替」にはまだ程遠く、裏で人間が汗をかく「ヒューマン・イン・ザ・ループの隠蔽版」に依存していることが判明したことで、ソフトウェアの限界とコスト構造の歪みが露呈した。つまり、今起きているのは単なる「競争激化」ではなく、「無限に拡大するはずだったインフラ需要と、人間を介さなければ回らないエージェントの限界という、二重の物理的・経済的制約の顕在化」である。\n\n【競争の構図】\n【Amazon】\nAIへの巨額投資を継続し、それが原因で株価下落やウォール街からの厳しい視線に晒されている。\n→ インフラ投資の継続と市場からのプレッシャーの板挟みにあり、今後は投資の効率性と明確なマネタイズの証明が強く求められる立場にある。\n\n【OpenAI】\n新たな資金調達ラウンドで当初の目標額を最大200億ドルへと引き下げている。\n→ これまでの無制限な資金調達の神話に陰りが見えており、巨額の計算資源コストを維持するためのビジネスモデルの現実路線への転換や、投資家との交渉力の低下につながる恐れがある。\n\n【NVIDIA】\n顧客であるNscaleのデータセンター向け融資において、共同署名者（コサイン）としての関与を検討している。\n→ チップを売るだけでなく、自ら買い手のファイナンスを支えるリスクを取る必要が生じており、エコシステムのバブルを自社のバランスシートで支える構造的な歪みが強まっている。\n\n【Meta】\n個人向けタスク自動化エージェント「Muse」などを展開し、エコシステムの拡大を狙っている。\n→ プロダクトの露出度は高いものの、業界全体としてエージェントの裏で人間が手作業を補う実態が暴かれており、技術の信頼性と実用性の乖離をどう埋めるかが問われている。",
+        "why_matters": "日本企業の実務において、今週見直すべきは「AIベンダーの華やかなデモに依拠したPoC（概念実証）のバラマキ」から「自社でのキャッシュアウトとROIの厳格な検証」への転換である。海外市場でハイパースケーラーの投資対効果が問われ、エージェントの裏で人間が手作業をしている実態が明るみに出た以上、日本企業も「AIを導入すれば自動的にコストが下がる」という幻想を捨てる必要がある。特に、業務自動化エージェントを導入する際は、ソフトウェアが自律処理できる範囲の限界を見極め、裏で発生する例外処理の人件費や運用コストを含めたトータルコスト（TCO）を再計算すべきである。また、グローバルのインフラ投資が曲がり角を迎えている中、国内のクラウド調達やAIインフラのコスト構造も影響を受ける可能性を視野に入れ、過剰な初期投資を避けた段階的な調達・提携戦略に舵を切るべきタイミングにある。\n\nこの見立てを過大評価しないための最大の留保は、今回の資金調達の縮小やインフラへの懸念が、単なる「一時的な市場の消化不良」に過ぎない可能性である。もし、今後数四半期で主要なクラウドプロバイダーがAI投資から具体的な収益（例えば法人向けSaaSや独自の強力なAIサービスからの莫大なキャッシュイン）を証明し、エージェントが人間の介入なしで自律的に動く割合を急激に高めた場合、現在の株価の動揺や調達難のニュースは、単なる成長痛として片付けられることになる。また、エージェントの裏での人間の作業についても、初期のプロダクトが信頼性を担保するための「過渡期の安全装置」に過ぎず、モデルの急速な進化によって数か月単位で自動化率が100%に近づくのであれば、ここで指摘した「人間の限界」という前提は崩れる。したがって、これらの事象が構造的な頭打ちなのか、あるいは一時的な踊り場に過ぎないのかは、今後の決算における具体的なROI（投資対効果）の数値と、エージェントの自律稼働率のデータによってのみ判定される。",
+        "context": "【次の観測点】\n・主要ハイパースケーラーの次四半期決算におけるAI関連資本支出（CapEx）の増減トレンド\n・OpenAIの最新資金調達ラウンドの最終的な着地金額と評価額の変動\n・AIエージェントを導入した企業における、人間による手動介入（ヒューマン・イン・ザ・ループ）の割合の推移"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "NYTimes Technology",
+      "title": "Put Your A.I. Agents to Work with These 5 Killer Tasks",
+      "url": "https://www.nytimes.com/2026/10/25/technology/personaltech/openai-dots-meta-muse-killer-tasks.html",
+      "summary": "When you start using Meta’s Muse and OpenAI’s dots for these tasks — like applying for jobs and booking hard-to-get restaurant tables — you may never go back.",
+      "published": "2026-10-31 23:24 UTC",
+      "pub_dt": "2026-10-31T23:24:11+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+      "summary": "Apple's new CEO defended the company's current position in the AI landscape.",
+      "published": "2026-10-31 21:41 UTC",
+      "pub_dt": "2026-10-31T21:41:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+      "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+      "summary": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.",
+      "published": "2026-10-31 21:17 UTC",
+      "pub_dt": "2026-10-31T21:17:03+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "SpaceX loses bid to toss NAACP lawsuit over Memphis data center air pollution",
+      "url": "https://www.cnbc.com/2026/10/31/xai-naacp-clean-air-act-lawsuit-dismissal.html",
+      "summary": "The Colossus data centers and a power plant that SpaceXAI is also building in Southaven, Mississippi, have faced community backlash for years.",
+      "published": "2026-10-31 20:12 UTC",
+      "pub_dt": "2026-10-31T20:12:37+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "OpenAI pares fundraising goal, now seeking up to $20 billion in latest round",
+      "url": "https://www.cnbc.com/2026/10/31/openai-fundraising-20-billion-valuation.html",
+      "summary": "The funding round is still in progress and has not closed, so the figures are subject to change, a person directly familiar with the deal told CNBC.",
+      "published": "2026-10-31 19:56 UTC",
+      "pub_dt": "2026-10-31T19:56:23+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI reportedly lowers funding target for new round",
+      "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
+      "summary": "OpenAI’s latest funding round doesn't seem to be living up to expectations.",
+      "published": "2026-10-31 16:12 UTC",
+      "pub_dt": "2026-10-31T16:12:55+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "I built an AI Tamagotchi before Meta could",
+      "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+      "summary": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It [&#8230;]",
+      "published": "2026-10-31 16:05 UTC",
+      "pub_dt": "2026-10-31T16:05:00+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Stocks started the week with promise but ended in despair. Our take on the big reversal",
+      "url": "https://www.cnbc.com/investingclub/2026/10/31/stocks-started-the-week-with-promise-but-ended-in-despair.html",
+      "summary": "Big Tech earnings reignited AI spending fears, sending investors into defensive stocks.",
+      "published": "2026-10-31 15:37 UTC",
+      "pub_dt": "2026-10-31T15:37:11+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Humans are still doing the work behind some AI agents",
+      "url": "https://www.cnbc.com/2026/10/31/ai-agents-humans-dazzle-duckbill-meta.html",
+      "summary": "AI agents from startups including Dazzle, Duckbill and Wajo still rely on human workers for calls and other real-world tasks when software falls short.",
+      "published": "2026-10-31 12:00 UTC",
+      "pub_dt": "2026-10-31T12:00:01+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
+      "url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
+      "summary": "Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.",
+      "published": "2026-10-31 12:00 UTC",
+      "pub_dt": "2026-10-31T12:00:00+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "How North Korea perfected the crypto heist",
+      "url": "https://www.axios.com/2026/10/31/north-korea-hackers-binance-crypto",
+      "summary": "The world's biggest crypto heist is the latest feat by North Korean hackers who have spent years perfecting an arsenal of financial theft, social engineering and sophisticated cyberattacks.Why it matters: The suspected North Korean hackers behind the $6.3 billion Binance theft appear to have combined familiar hacking tactics with extraordinary speed and automation — raising fresh questions about how AI could supercharge their already sophisticated operations.Driving the news: Binance said late T",
+      "published": "2026-10-31 11:15 UTC",
+      "pub_dt": "2026-10-31T11:15:07+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "The AI trade's trick-or-treat earnings season",
+      "url": "https://www.axios.com/2026/10/31/tech-earnings-ai-hyperscaler-risks-trick-or-treat",
+      "summary": "The latest wave of hyperscaler earnings is spooking Wall Street. Bulls and bears alike have evidence to validate their wildest dreams — or their worst nightmares.Why it matters: The market's AI obsession has entered its Jekyll and Hyde era, with the latest earnings from tech giants offering contrary signals about the AI boom.Driving the news: The tech-heavy Nasdaq briefly sank into correction territory, falling 10% from its prior peak, losing $1.2 trillion in value for the month of October, afte",
+      "published": "2026-10-31 10:45 UTC",
+      "pub_dt": "2026-10-31T10:45:06+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
+      "url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/",
+      "summary": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.",
+      "published": "2026-10-31 10:30 UTC",
+      "pub_dt": "2026-10-31T10:30:00+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
+      "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
+      "summary": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.",
+      "published": "2026-10-31 10:00 UTC",
+      "pub_dt": "2026-10-31T10:00:00+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "url": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+      "published": "2026-10-31 06:20 UTC",
+      "pub_dt": "2026-10-31T06:20:00+00:00"
+    }
+  ]
+}
