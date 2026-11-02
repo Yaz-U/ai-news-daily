@@ -1,0 +1,221 @@
+{
+  "timestamp": "2026-11-02T09:10:43.701809+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "AIの主導権は技術からインフラと流通の防衛戦へ移行する",
+    "thesis": "AI競争の本質はモデルの性能から、データセンターの社会受容性と、企業・プラットフォーム間での顧客接点の主導権争いへとシフトしている。",
+    "opening": "【結論】AI競争の主軸は、単なるモデルの賢さの追求から、物理インフラの許認可獲得と、ユーザーとの接点を巡るプラットフォーム間の攻防へと完全に移行した。今日の材料を見ると、OpenAIによる政治的・PR的なインフラの命名変更の動きや、大手企業によるAIエージェントの遮断、そして実ビジネスでの収益化の萌芽が同時に起きている。これは、AIが実験的な技術フェーズを抜け、社会インフラおよび流通の利権を奪い合う闘争に入ったことを示している。本稿では、このインフラと流通を巡る新たな攻防の構造を読み解く。",
+    "what_happened": "【事実】AxiosおよびTechCrunchの報道によると、OpenAIは中間選挙後のワシントンにおける政治的逆風を見据え、批判の集まるデータセンターを「AIコンピュート・キャンパス（AI Compute Campuses）」へリブランドするPR戦略を準備している。これはWiredが報じるニューヨーク州などのデータセンターに対するモラトリアムや政治的反発を回避するための布石である。一方でCNBCは、JPMorganやAmazonなどの企業がMetaの「Muse」のような外部のAIパーソナルエージェントによるアクセスをブロックし始めていると伝えた。これは摩擦のない顧客体験を提供するAIエージェントが、既存企業の顧客チャネルや経済圏の流通主導権を奪うことへの防衛策である。さらに、CNBCの別報ではSantanderやNovartisなどの企業業績において、AIがコスト削減や収益向上としてようやく数値化され始めたことが示されている。また、Qwen GitHubのリリース（v0.26.5-nightlyおよびDesktop v0.26.5）では、マネージドエージェントのセッション管理、SQL履歴クエリ、MCP（Model Context Protocol）のツール名衝突回避などの実装が進んでおり、オープンな開発環境におけるエージェントの実用性が着実に向上している。",
+    "why_now": "【解釈】今回の変化が起きている背景には、AIの評価基準が「どれだけ賢いモデルを作るか」から「社会や既存プラットフォームの利害とどう摩擦を起こさずに接続するか」へ転換したことがある。データセンターの建設反対運動や地方自治体レベルのモラトリアムは、AIのスケール拡大そのものを物理的・政治的に封じるボトルネックとなっている。OpenAIが「キャンパス」という教育的・中立的な響きの言葉へリブランドを試みるのは、計算資源の拡大という死活問題を政治的レトリックで乗り切らざるを得ない追い詰められた現状を物語る。同時に、Meta Museのようなエージェントに対するJPMorganらのブロックは、AI企業がエンドユーザーとの唯一の接点を握ることで、従来の金融や小売などのプラットフォームを「下請けのAPIプロバイダ」に降格させる脅威への直接的な反発である。AIによる収益化が実需として表れ始めたからこそ、既存産業側も自社の流通網と顧客データを死守する防衛戦に入ったと言える。",
+    "counterpoint": "【反証・留保】この見立てが過大評価であり、単なる一時的な雑音に過ぎないと言える条件はいくつかある。もしOpenAIのデータセンターリブランドが政治的・世論的な批判をかわすことに完全に失敗し、電力・土地の認可取得が主要州で全面凍結された場合、計算資源の拡大を前提としたすべてのAIインフラ戦略は頓挫する。また、JPMorganやAmazonなどの既存企業によるAIエージェントのブロックがユーザーの強い支持を得て定着した場合、外部エージェントを基盤とした新たな流通エコシステムの拡大は阻まれ、プラットフォームの壁が再び強固になる。もしこれらの障壁がAI産業の進歩を実質的に押し止めたと確認されたとき、今日の「インフラと流通の主導権争い」という見立ては崩れ、単なる過熱期の局所的な摩擦に格下げされる。",
+    "japan_impact": "【日本の実務への示唆】日本企業の実務においては、生成AIの「機能評価」フェーズを早急に終え、インフラ調達リスクとAPIの流通支配権の評価に軸足を移すべきである。特に、自社が提供するサービスや顧客接点が外部のAIエージェントやプラットフォーマーにバイパスされるリスク（ディスインターミディエーション）を点検する必要がある。また、データセンターの電力・用地制約は日本国内でも厳しさを増しており、自社で保有・契約するAIインフラの持続可能性を再検証することが求められる。導入の判断においては、単なる業務効率化のPoCにとどまらず、自社の顧客データやチャネルが外部のAIエコシステムにどのような条件で組み込まれるのか、法務・事業の両面で契約条件を見直すタイミングに来ている。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "データセンターの呼称を「AIコンピュート・キャンパス」へ変更するPR戦略を準備し、政治的逆風に対応しようとしている。",
+        "implication": "計算資源の確保という最大の成長ボトルネックに対して、世論と政治の摩擦を和らげることでインフラ拡張の継続を図るが、実質的な環境負荷の解決には至らないリスクがある。"
+      },
+      {
+        "company": "Meta",
+        "status": "AIパーソナルエージェント「Muse」などを通じて、ユーザーの消費や情報の流通チャネルに直接介入するプロダクトを展開している。",
+        "implication": "エンドユーザーとの強い接点を握ることで、検索や既存プラットフォームを迂回する強力な流通主導権を握りつつあるが、他社からのブロックという摩擦を招いている。"
+      }
+    ],
+    "next_signals": [
+      "米国の主要自治体や州政府におけるデータセンターの新規建設認可およびモラトリアムの動向",
+      "JPMorganやAmazonなどの大手企業による外部AIエージェントのブロック措置が業界標準化するかどうか",
+      "主要企業の決算におけるAI投資のROI（投資対効果）の具体的な数値の継続的な現れ方"
+    ],
+    "sources": [
+      {
+        "title": "Qwen GitHub｜Release v0.26.5-nightly.20261101.7b4b353750",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750"
+      },
+      {
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.26.5",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.5"
+      },
+      {
+        "title": "CNBC Tech｜Companies promised AI gains — here's how the payoff showed up in earnings",
+        "url": "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html"
+      },
+      {
+        "title": "Axios｜Behind the Curtain: OpenAI's post-election power play",
+        "url": "https://www.axios.com/2026/11/01/scoop-openai-post-midterm-policy"
+      },
+      {
+        "title": "TechCrunch AI｜OpenAI might rebrand its data centers as ‘AI compute campuses’",
+        "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/"
+      },
+      {
+        "title": "CNBC Tech｜For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
+        "url": "https://www.cnbc.com/2026/11/01/jpmorgan-amazon-ai-agents-meta-muse.html"
+      },
+      {
+        "title": "Wired｜What Democrats Can Learn From New York’s Data Center Moratorium",
+        "url": "https://www.wired.com/story/what-democrats-can-learn-new-york-data-center-moratorium/"
+      }
+    ],
+    "news_summary": "AI競争の本質はモデルの性能から、データセンターの社会受容性と、企業・プラットフォーム間での顧客接点の主導権争いへとシフトしている。\n\n【事実】AxiosおよびTechCrunchの報道によると、OpenAIは中間選挙後のワシントンにおける政治的逆風を見据え、批判の集まるデータセンターを「AIコンピュート・キャンパス（AI Compute Campuses）」へリブランドするPR戦略を準備している。これはWiredが報じるニューヨーク州などのデータセンターに対するモラトリアムや政治的反発を回避するための布石である。一方でCNBCは、JPMorganやAmazonなどの企業がMetaの「Muse」のような外部のAIパーソナルエージェントによるアクセスをブロックし始めていると伝えた。これは摩擦のない顧客体験を提供するAIエージェントが、既存企業の顧客チャネルや経済圏の流通主導権を奪うことへの防衛策である。さらに、CNBCの別報ではSantanderやNovartisなどの企業業績において、AIがコスト削減や収益向上としてようやく数値化され始めたことが示されている。また、Qwen GitHubのリリース（v0.26.5-nightlyおよびDesktop v0.26.5）では、マネージドエージェントのセッション管理、SQL履歴クエリ、MCP（Model Context Protocol）のツール名衝突回避などの実装が進んでおり、オープンな開発環境におけるエージェントの実用性が着実に向上している。",
+    "opinion_summary": "【解釈】今回の変化が起きている背景には、AIの評価基準が「どれだけ賢いモデルを作るか」から「社会や既存プラットフォームの利害とどう摩擦を起こさずに接続するか」へ転換したことがある。データセンターの建設反対運動や地方自治体レベルのモラトリアムは、AIのスケール拡大そのものを物理的・政治的に封じるボトルネックとなっている。OpenAIが「キャンパス」という教育的・中立的な響きの言葉へリブランドを試みるのは、計算資源の拡大という死活問題を政治的レトリックで乗り切らざるを得ない追い詰められた現状を物語る。同時に、Meta Museのようなエージェントに対するJPMorganらのブロックは、AI企業がエンドユーザーとの唯一の接点を握ることで、従来の金融や小売などのプラットフォームを「下請けのAPIプロバイダ」に降格させる脅威への直接的な反発である。AIによる収益化が実需として表れ始めたからこそ、既存産業側も自社の流通網と顧客データを死守する防衛戦に入ったと言える。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価であり、単なる一時的な雑音に過ぎないと言える条件はいくつかある。もしOpenAIのデータセンターリブランドが政治的・世論的な批判をかわすことに完全に失敗し、電力・土地の認可取得が主要州で全面凍結された場合、計算資源の拡大を前提としたすべてのAIインフラ戦略は頓挫する。また、JPMorganやAmazonなどの既存企業によるAIエージェントのブロックがユーザーの強い支持を得て定着した場合、外部エージェントを基盤とした新たな流通エコシステムの拡大は阻まれ、プラットフォームの壁が再び強固になる。もしこれらの障壁がAI産業の進歩を実質的に押し止めたと確認されたとき、今日の「インフラと流通の主導権争い」という見立ては崩れ、単なる過熱期の局所的な摩擦に格下げされる。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "Qwen GitHub｜Release v0.26.5-nightly.20261101.7b4b353750",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750",
+        "point": "What's Changed\n\nrefactor(managed-agent): Share the session event delivery loop by @doudouOUC in #15952\nci: route the cla"
+      },
+      {
+        "rank": 2,
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.26.5",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.5",
+        "point": "What's Changed\n\nfeat(managed): Add bounded SQL history queries by @doudouOUC in #15839\nfeat(generated-ui): keep chatting"
+      },
+      {
+        "rank": 3,
+        "title": "CNBC Tech｜Companies promised AI gains — here's how the payoff showed up in earnings",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html",
+        "point": "Santander, Novartis and other companies say AI is beginning to boost revenue, cut costs or improve profitability as inve"
+      },
+      {
+        "rank": 4,
+        "title": "Axios｜Behind the Curtain: OpenAI's post-election power play",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/01/scoop-openai-post-midterm-policy",
+        "point": "Right after Tuesday's midterms, OpenAI will unleash a policy and PR blitz to try to get in sync with the new Washington,"
+      },
+      {
+        "rank": 5,
+        "title": "TechCrunch AI｜OpenAI might rebrand its data centers as ‘AI compute campuses’",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+        "point": "Data centers are deeply unpopular. But what if we called them something else?"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AIの主導権は技術からインフラと流通の防衛戦へ移行する",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI競争の主軸は、単なるモデルの賢さの追求から、物理インフラの許認可獲得と、ユーザーとの接点を巡るプラットフォーム間の攻防へと完全に移行した。今日の材料を見ると、OpenAIによる政治的・PR的なインフラの命名変更の動きや、大手企業によるAIエージェントの遮断、そして実ビジネスでの収益化の萌芽が同時に起きている。これは、AIが実験的な技術フェーズを抜け、社会インフラおよび流通の利権を奪い合う闘争に入ったことを示している。本稿では、このインフラと流通を巡る新たな攻防の構造を読み解く。\n\n【事実】AxiosおよびTechCrunchの報道によると、OpenAIは中間選挙後のワシントンにおける政治的逆風を見据え、批判の集まるデータセンターを「AIコンピュート・キャンパス（AI Compute Campuses）」へリブランドするPR戦略を準備している。これはWiredが報じるニューヨーク州などのデータセンターに対するモラトリアムや政治的反発を回避するための布石である。一方でCNBCは、JPMorganやAmazonなどの企業がMetaの「Muse」のような外部のAIパーソナルエージェントによるアクセスをブロックし始めていると伝えた。これは摩擦のない顧客体験を提供するAIエージェントが、既存企業の顧客チャネルや経済圏の流通主導権を奪うことへの防衛策である。さらに、CNBCの別報ではSantanderやNovartisなどの企業業績において、AIがコスト削減や収益向上としてようやく数値化され始めたことが示されている。また、Qwen GitHubのリリース（v0.26.5-nightlyおよびDesktop v0.26.5）では、マネージドエージェントのセッション管理、SQL履歴クエリ、MCP（Model Context Protocol）のツール名衝突回避などの実装が進んでおり、オープンな開発環境におけるエージェントの実用性が着実に向上している。\n\n【解釈】今回の変化が起きている背景には、AIの評価基準が「どれだけ賢いモデルを作るか」から「社会や既存プラットフォームの利害とどう摩擦を起こさずに接続するか」へ転換したことがある。データセンターの建設反対運動や地方自治体レベルのモラトリアムは、AIのスケール拡大そのものを物理的・政治的に封じるボトルネックとなっている。OpenAIが「キャンパス」という教育的・中立的な響きの言葉へリブランドを試みるのは、計算資源の拡大という死活問題を政治的レトリックで乗り切らざるを得ない追い詰められた現状を物語る。同時に、Meta Museのようなエージェントに対するJPMorganらのブロックは、AI企業がエンドユーザーとの唯一の接点を握ることで、従来の金融や小売などのプラットフォームを「下請けのAPIプロバイダ」に降格させる脅威への直接的な反発である。AIによる収益化が実需として表れ始めたからこそ、既存産業側も自社の流通網と顧客データを死守する防衛戦に入ったと言える。\n\n【競争の構図】\n【OpenAI】\nデータセンターの呼称を「AIコンピュート・キャンパス」へ変更するPR戦略を準備し、政治的逆風に対応しようとしている。\n→ 計算資源の確保という最大の成長ボトルネックに対して、世論と政治の摩擦を和らげることでインフラ拡張の継続を図るが、実質的な環境負荷の解決には至らないリスクがある。\n\n【Meta】\nAIパーソナルエージェント「Muse」などを通じて、ユーザーの消費や情報の流通チャネルに直接介入するプロダクトを展開している。\n→ エンドユーザーとの強い接点を握ることで、検索や既存プラットフォームを迂回する強力な流通主導権を握りつつあるが、他社からのブロックという摩擦を招いている。",
+        "why_matters": "【日本の実務への示唆】日本企業の実務においては、生成AIの「機能評価」フェーズを早急に終え、インフラ調達リスクとAPIの流通支配権の評価に軸足を移すべきである。特に、自社が提供するサービスや顧客接点が外部のAIエージェントやプラットフォーマーにバイパスされるリスク（ディスインターミディエーション）を点検する必要がある。また、データセンターの電力・用地制約は日本国内でも厳しさを増しており、自社で保有・契約するAIインフラの持続可能性を再検証することが求められる。導入の判断においては、単なる業務効率化のPoCにとどまらず、自社の顧客データやチャネルが外部のAIエコシステムにどのような条件で組み込まれるのか、法務・事業の両面で契約条件を見直すタイミングに来ている。\n\n【反証・留保】この見立てが過大評価であり、単なる一時的な雑音に過ぎないと言える条件はいくつかある。もしOpenAIのデータセンターリブランドが政治的・世論的な批判をかわすことに完全に失敗し、電力・土地の認可取得が主要州で全面凍結された場合、計算資源の拡大を前提としたすべてのAIインフラ戦略は頓挫する。また、JPMorganやAmazonなどの既存企業によるAIエージェントのブロックがユーザーの強い支持を得て定着した場合、外部エージェントを基盤とした新たな流通エコシステムの拡大は阻まれ、プラットフォームの壁が再び強固になる。もしこれらの障壁がAI産業の進歩を実質的に押し止めたと確認されたとき、今日の「インフラと流通の主導権争い」という見立ては崩れ、単なる過熱期の局所的な摩擦に格下げされる。",
+        "context": "【次の観測点】\n・米国の主要自治体や州政府におけるデータセンターの新規建設認可およびモラトリアムの動向\n・JPMorganやAmazonなどの大手企業による外部AIエージェントのブロック措置が業界標準化するかどうか\n・主要企業の決算におけるAI投資のROI（投資対効果）の具体的な数値の継続的な現れ方"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "Axios",
+      "title": "Where Dems eyeing the White House are putting their midterm chips",
+      "url": "https://www.axios.com/2026/11/01/2028-democrats-midterm-bets",
+      "summary": "Pennsylvania Gov. Josh Shapiro's chances of being a presidential contender in 2028 are riding on his winning reelection in a landslide Tuesday. New York Rep. Alexandria Ocasio-Cortez's future hinges on whether a fellow progressive can carry a swing state, for once.California Gov. Gavin Newsom has to show that his congressional redistricting gambit worked for Democrats — and he needs to beat back a state wealth tax proposal supported by Sen. Bernie Sanders (I-Vt.).Driving the news: Democrats eyei",
+      "published": "2026-11-01 22:45 UTC",
+      "pub_dt": "2026-11-01T22:45:06+00:00"
+    },
+    {
+      "source": "Qwen GitHub",
+      "title": "Release v0.26.5-nightly.20261101.7b4b353750",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750",
+      "summary": "What's Changed\n\nrefactor(managed-agent): Share the session event delivery loop by @doudouOUC in #15952\nci: route the classify_pr gate to ECS for every pull request by @yiliang114 in #16019\nfix(core): delete the OAuth refresh lock only when owned by @2SinceJuly in #15661\nfix(core): keep uniquely named MCP tools when names collide by @2SinceJuly in #15757\nfix(web-shell): expose the Plugins back control without the navigation rail by @2SinceJuly in #15651\nfix(core): reject LSP queries when no serve",
+      "published": "2026-11-01 22:43 UTC",
+      "pub_dt": "2026-11-01T22:43:08+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+      "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+      "summary": "Data centers are deeply unpopular. But what if we called them something else?",
+      "published": "2026-11-01 21:55 UTC",
+      "pub_dt": "2026-11-01T21:55:23+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
+      "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+      "summary": "On Equity, we discuss why tech CEO statements can seem so tone deaf.",
+      "published": "2026-11-01 20:57 UTC",
+      "pub_dt": "2026-11-01T20:57:58+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "AI Is Finding a Flood of Bugs, and Silicon Valley Is Rushing to Fix Them",
+      "url": "https://www.nytimes.com/2026/10/28/technology/silicon-valley-bugs-ai.html",
+      "summary": "A.I. has uncovered a horde of software flaws, which engineers are racing to fix before they can be exploited and abused by hackers.",
+      "published": "2026-11-01 17:19 UTC",
+      "pub_dt": "2026-11-01T17:19:20+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
+      "url": "https://www.cnbc.com/2026/11/01/jpmorgan-amazon-ai-agents-meta-muse.html",
+      "summary": "As companies from Amazon to JPMorgan block AI personal agents like Meta's Muse, retail experts warn that technology that removes customer friction usually wins.",
+      "published": "2026-11-01 16:34 UTC",
+      "pub_dt": "2026-11-01T16:34:43+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Why AI is boosting Meta's ad business while hurting Google search",
+      "url": "https://www.cnbc.com/2026/11/01/ai-meta-ads-google-search.html",
+      "summary": "The gap between Meta's ad revenue growth and Google's search expansion was the widest it's been since 2021 in the latest quarter.",
+      "published": "2026-11-01 14:31 UTC",
+      "pub_dt": "2026-11-01T14:31:29+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "Guarding the Gates of Knowledge",
+      "url": "https://spectrum.ieee.org/ai-slop-trust-science",
+      "summary": "A recent scroll through social media got me thinking about trust. About half my feed was filled with AI slop that astute users would call out as being machine-generated, often to the embarrassment of the rube who unknowingly spread it and sometimes to the delight of the poster who shared it deliberately because they found it amusing or useful for sowing confusion.Remember the good old days of GPT-3 when we could ask the chatbot anything and it would almost instantly and very confidently spit bac",
+      "published": "2026-11-01 14:00 UTC",
+      "pub_dt": "2026-11-01T14:00:01+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Behind the Curtain: OpenAI's post-election power play",
+      "url": "https://www.axios.com/2026/11/01/scoop-openai-post-midterm-policy",
+      "summary": "Right after Tuesday's midterms, OpenAI will unleash a policy and PR blitz to try to get in sync with the new Washington, including an effort to rebrand data centers as \"AI compute campuses.\" Why it matters: After two years of a friendly White House, AI companies will face a harsher Washington after Tuesday, when Democrats will likely win the House. OpenAI also aims to help frame the AI debate for the big field of 2028 presidential contenders that'll start forming on Wednesday. \"You can try to ch",
+      "published": "2026-11-01 13:43 UTC",
+      "pub_dt": "2026-11-01T13:43:06+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Companies promised AI gains — here's how the payoff showed up in earnings",
+      "url": "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html",
+      "summary": "Santander, Novartis and other companies say AI is beginning to boost revenue, cut costs or improve profitability as investors seek returns.",
+      "published": "2026-11-01 12:34 UTC",
+      "pub_dt": "2026-11-01T12:34:06+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "What Democrats Can Learn From New York’s Data Center Moratorium",
+      "url": "https://www.wired.com/story/what-democrats-can-learn-new-york-data-center-moratorium/",
+      "summary": "With a number of anti-data-center candidates poised to win on Tuesday, New York provides a glimpse at the tensions around actually having to do something about the digital infrastructure.",
+      "published": "2026-11-01 11:00 UTC",
+      "pub_dt": "2026-11-01T11:00:00+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Chatbots Are Leading Hikers Astray, With Dangerous Consequences",
+      "url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
+      "summary": "Outsourcing planning to AI can lead people to surrender their own critical thinking, which can have potentially deadly results in places like the backcountry.",
+      "published": "2026-11-01 10:30 UTC",
+      "pub_dt": "2026-11-01T10:30:00+00:00"
+    },
+    {
+      "source": "Qwen GitHub",
+      "title": "Qwen Code Desktop v0.26.5",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.5",
+      "summary": "What's Changed\n\nfeat(managed): Add bounded SQL history queries by @doudouOUC in #15839\nfeat(generated-ui): keep chatting with a card's values and turn Generated UI on by default by @qqqys in #15856\ntest(web-shell): follow the renamed workspace copy in two e2e specs by @wenshao in #15860\nfeat(web-shell): keyboard shortcuts for Session Overview and Split View by @4ekuct25 in #14179\nfeat(web-shell): add Russian locale for the Goal card and Goals dialog by @4ekuct25 in #13685\nfix(managed-agent): har",
+      "published": "2026-11-01 03:59 UTC",
+      "pub_dt": "2026-11-01T03:59:58+00:00"
+    }
+  ]
+}
