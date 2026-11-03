@@ -1,221 +1,218 @@
 {
-  "timestamp": "2026-11-02T09:10:43.701809+09:00",
-  "time_slot": "朝",
+  "timestamp": "2026-11-03T11:44:34.422356+09:00",
+  "time_slot": "昼",
   "summary": {
-    "headline": "AIの主導権は技術からインフラと流通の防衛戦へ移行する",
-    "thesis": "AI競争の本質はモデルの性能から、データセンターの社会受容性と、企業・プラットフォーム間での顧客接点の主導権争いへとシフトしている。",
-    "opening": "【結論】AI競争の主軸は、単なるモデルの賢さの追求から、物理インフラの許認可獲得と、ユーザーとの接点を巡るプラットフォーム間の攻防へと完全に移行した。今日の材料を見ると、OpenAIによる政治的・PR的なインフラの命名変更の動きや、大手企業によるAIエージェントの遮断、そして実ビジネスでの収益化の萌芽が同時に起きている。これは、AIが実験的な技術フェーズを抜け、社会インフラおよび流通の利権を奪い合う闘争に入ったことを示している。本稿では、このインフラと流通を巡る新たな攻防の構造を読み解く。",
-    "what_happened": "【事実】AxiosおよびTechCrunchの報道によると、OpenAIは中間選挙後のワシントンにおける政治的逆風を見据え、批判の集まるデータセンターを「AIコンピュート・キャンパス（AI Compute Campuses）」へリブランドするPR戦略を準備している。これはWiredが報じるニューヨーク州などのデータセンターに対するモラトリアムや政治的反発を回避するための布石である。一方でCNBCは、JPMorganやAmazonなどの企業がMetaの「Muse」のような外部のAIパーソナルエージェントによるアクセスをブロックし始めていると伝えた。これは摩擦のない顧客体験を提供するAIエージェントが、既存企業の顧客チャネルや経済圏の流通主導権を奪うことへの防衛策である。さらに、CNBCの別報ではSantanderやNovartisなどの企業業績において、AIがコスト削減や収益向上としてようやく数値化され始めたことが示されている。また、Qwen GitHubのリリース（v0.26.5-nightlyおよびDesktop v0.26.5）では、マネージドエージェントのセッション管理、SQL履歴クエリ、MCP（Model Context Protocol）のツール名衝突回避などの実装が進んでおり、オープンな開発環境におけるエージェントの実用性が着実に向上している。",
-    "why_now": "【解釈】今回の変化が起きている背景には、AIの評価基準が「どれだけ賢いモデルを作るか」から「社会や既存プラットフォームの利害とどう摩擦を起こさずに接続するか」へ転換したことがある。データセンターの建設反対運動や地方自治体レベルのモラトリアムは、AIのスケール拡大そのものを物理的・政治的に封じるボトルネックとなっている。OpenAIが「キャンパス」という教育的・中立的な響きの言葉へリブランドを試みるのは、計算資源の拡大という死活問題を政治的レトリックで乗り切らざるを得ない追い詰められた現状を物語る。同時に、Meta Museのようなエージェントに対するJPMorganらのブロックは、AI企業がエンドユーザーとの唯一の接点を握ることで、従来の金融や小売などのプラットフォームを「下請けのAPIプロバイダ」に降格させる脅威への直接的な反発である。AIによる収益化が実需として表れ始めたからこそ、既存産業側も自社の流通網と顧客データを死守する防衛戦に入ったと言える。",
-    "counterpoint": "【反証・留保】この見立てが過大評価であり、単なる一時的な雑音に過ぎないと言える条件はいくつかある。もしOpenAIのデータセンターリブランドが政治的・世論的な批判をかわすことに完全に失敗し、電力・土地の認可取得が主要州で全面凍結された場合、計算資源の拡大を前提としたすべてのAIインフラ戦略は頓挫する。また、JPMorganやAmazonなどの既存企業によるAIエージェントのブロックがユーザーの強い支持を得て定着した場合、外部エージェントを基盤とした新たな流通エコシステムの拡大は阻まれ、プラットフォームの壁が再び強固になる。もしこれらの障壁がAI産業の進歩を実質的に押し止めたと確認されたとき、今日の「インフラと流通の主導権争い」という見立ては崩れ、単なる過熱期の局所的な摩擦に格下げされる。",
-    "japan_impact": "【日本の実務への示唆】日本企業の実務においては、生成AIの「機能評価」フェーズを早急に終え、インフラ調達リスクとAPIの流通支配権の評価に軸足を移すべきである。特に、自社が提供するサービスや顧客接点が外部のAIエージェントやプラットフォーマーにバイパスされるリスク（ディスインターミディエーション）を点検する必要がある。また、データセンターの電力・用地制約は日本国内でも厳しさを増しており、自社で保有・契約するAIインフラの持続可能性を再検証することが求められる。導入の判断においては、単なる業務効率化のPoCにとどまらず、自社の顧客データやチャネルが外部のAIエコシステムにどのような条件で組み込まれるのか、法務・事業の両面で契約条件を見直すタイミングに来ている。",
+    "headline": "AI競争の主戦場が「モデルの性能」から「物理インフラと膨大なコストの耐久戦」へ移行する",
+    "thesis": "Anthropicの巨額の売上と赤字、そしてMarvellとLumentumの巨大合併が示す通り、AI競争は単なる知能の優劣を競う段階を抜け、電力・光学ネットワーク・莫大なトークン消費を支える財務基盤の確保戦へと突入した。",
+    "opening": "【結論】AI競争のルールは、モデルの賢さや精度の高さを競うフェーズから、膨大な計算資源と物理インフラを維持し続けることができる資本力と、コスト構造の耐久戦へと完全に切り替わった。今日、私たちが目にしている一連の動きは、単なるプロダクトのアップデートではない。Anthropicが公表した170億ドルの四半期売上と230億ドルの純損失という極端な収益構造、MarvellとLumentumによる1150億ドルの光学ネットワーク関連巨大合併、そしてOpenAIによる電力網保護プログラムの立ち上げは、すべて一つの現実を指し示している。それは、AIエージェントの自律化に伴う爆発的なトークン消費が、電力、半導体、そしてハードウェアの限界を突きつけているという事実である。もはやAI企業の価値は、賢いモデルを最初に作ったことではなく、この莫大な物理的制約と財務的重圧をどう乗り越えるかというインフラの主導権に移行している。本稿では、この構造変化の本質を読み解く。",
+    "what_happened": "【事実】本日の市場と業界の動きは、財務、物理インフラ、そしてエージェント利用によるコスト急増という3つの軸に集約される。第一に、Anthropicが公開したS-1プロスペクトスおよび四半期財務情報では、四半期売上が17億ドルではなく170億ドルに達する一方、純損失が23億ドルではなく230億ドル規模に膨らみ、さらに8954億ドルという途方もない購入コミットメントを抱えていることが明らかになった（CNBC Tech報道）。第二に、インフラ面では、MarvellとLumentumが1150億ドル規模の合併を発表し、AIデータセンターで急増する光学ネットワーク技術の取り込みに動いた（NYTimes Technology報道）。第三に、OpenAIは将来の巨大なコンピュートキャンパスが電力網の信頼性を損なわず、消費者への電気代への影響を防ぐための「Grid Protectors Program」を発表し、電力供給インフラとの調整に乗り出した（OpenAI News）。また、開発現場では、MIT Technology Reviewの報道が示すように、AIエージェントがタスクを遂行する際に自律的なエラー修正やテストを繰り返すため、従来のチャットプロンプトの10倍から50倍ものトークンを消費するようになっており、Y CombinatorのGarry Tan氏がエージェント利用だけで年間最大20万ドルのトークン費用を支払っているという実態とも符合している（TechCrunch AI報道）。これらはいずれも、AIの利用が実務や開発の現場で深く自律化するにつれて、コストとインフラのボトルネックが表面化している事象である。",
+    "why_now": "【解釈】なぜこのタイミングで、インフラとコストに関するニュースが噴出しているのか。その最大の理由は、AIの利用形態が「人間が1回指示して1回答える対話型（チャット）」から、「システムが自律的に計画・実行・テストを繰り返すエージェント型」へと不可逆的にシフトした点にある。MIT Technology Reviewが指摘するように、エージェント型AIは1つのタスクを完結させるために数倍から数十倍のトークンを消費する。これは、AI企業側にとってはデータセンターの稼働率と電力需要の爆発的な増加を意味し、ユーザー側にとっては法外なトークンコストの発生を意味する。Anthropicが巨額の売上を叩き出しながらもそれを大きく上回る赤字を計上し、将来の購買コミットメントを積み上げているのは、この膨大な計算需要を先回りして確保しなければ競争に敗北するという切迫感の裏返しである。また、MarvellとLumentumの1150億ドルの合併や、OpenAIの電力網保護プログラムは、もはやシリコンチップやソフトウェアの最適化だけではこの需要増に対応できず、データセンターをつなぐ「光学ネットワーク」や「地域電力網」という物理的・泥臭いレイヤーの主導権を握ることが、そのままAI産業の勝敗を決する決定打になりつつあることを示している。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、ハードウェアおよびアルゴリズムの効率化スピードを挙げる必要がある。もし、推論コストを劇的に下げるブレイクスルー（例えば、より軽量な小規模モデルの高度化や、推論時の計算量を根本から削減する新アーキテクチャ）が予想以上のスピードで実用化された場合、現在観測されている「巨額のインフラ投資と電力確保の必要性」という前提は急速に色褪せることになる。Anthropicの抱える8954億ドルのコミットメントや、データセンター向けの1150億ドルの巨大合併も、もし数年以内にトークン単価が現在の10分の一以下に暴落すれば、過剰設備投資という巨大な足かせに変貌しかねない。したがって、今回の動きが持続的な構造変化であるか、あるいはインフラの過渡期における一時的なバブルであるかは、今後の推論コストの低下率と実際の企業収益のバランスによって判定されるべきである。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、生成AIの「利用モデルの選定」ではなく、「AI活用に伴うコスト構造とインフラ調達の試算」である。多くの日本企業は、APIの利用料金や月額のライセンス費用を基準にAI導入のROIを計算しているが、グローバルで起きている実態は、エージェント型AIの普及による「トークン消費量の爆発的増加」である。もし自社で業務プロセスを完全に自動化するエージェントの導入を進める場合、現在の予測の何倍ものAPIコストが発生するリスクを織り込む必要がある。また、電力インフラや国内のデータセンター調達、あるいはクラウドベンダーとの契約においても、グローバルな計算資源の争奪戦によるコスト転嫁の可能性を見据え、特定のプロバイダーに依存しない調達戦略や、軽量なローカルモデルとのハイブリッド運用を真剣に検討するタイミングにきている。",
     "company_positions": [
       {
-        "company": "OpenAI",
-        "status": "データセンターの呼称を「AIコンピュート・キャンパス」へ変更するPR戦略を準備し、政治的逆風に対応しようとしている。",
-        "implication": "計算資源の確保という最大の成長ボトルネックに対して、世論と政治の摩擦を和らげることでインフラ拡張の継続を図るが、実質的な環境負荷の解決には至らないリスクがある。"
+        "company": "Anthropic",
+        "status": "四半期売上170億ドルを達成する一方で、230億ドルの純損失と8954億ドルの購入コミットメントを抱える巨額投資フェーズにある（CNBC TechおよびNYTimes報道）。",
+        "implication": "圧倒的な収益拡大を見せる一方で、それに匹敵する規模の赤字と将来の調達義務を抱えており、財務的な耐久力が次の成長を維持できるかの生死を分ける。"
       },
       {
-        "company": "Meta",
-        "status": "AIパーソナルエージェント「Muse」などを通じて、ユーザーの消費や情報の流通チャネルに直接介入するプロダクトを展開している。",
-        "implication": "エンドユーザーとの強い接点を握ることで、検索や既存プラットフォームを迂回する強力な流通主導権を握りつつあるが、他社からのブロックという摩擦を招いている。"
+        "company": "OpenAI",
+        "status": "開発効率化のためのGit互換バックエンド「Pando」の構築や、将来のコンピュートキャンパスに向けた電力網保護プログラム、さらに国家安全保障分野の人材登用を進める（OpenAI News、CNBC Tech）。",
+        "implication": "技術のスケール化と同時に、物理的な電力インフラの確保や政治・安全保障とのタイアップを強めており、国家インフラレベルでの主導権を握ろうとしている。"
       }
     ],
     "next_signals": [
-      "米国の主要自治体や州政府におけるデータセンターの新規建設認可およびモラトリアムの動向",
-      "JPMorganやAmazonなどの大手企業による外部AIエージェントのブロック措置が業界標準化するかどうか",
-      "主要企業の決算におけるAI投資のROI（投資対効果）の具体的な数値の継続的な現れ方"
+      "AnthropicのI.P.O.（新規株式公開）プロセスにおけるS-1のさらなる詳細と、購入コミットメントの実態",
+      "MarvellとLumentumの合併完了に向けた各国の独占禁止法審査および光学ネットワーク市場への具体的影響",
+      "エージェント型AIの普及に伴う主要クラウドベンダーのAPI料金・トークン単価の改定動向"
     ],
     "sources": [
       {
-        "title": "Qwen GitHub｜Release v0.26.5-nightly.20261101.7b4b353750",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750"
+        "title": "OpenAI News｜Introducing the Grid Protectors Program",
+        "url": "https://openai.com/index/grid-protectors-program"
       },
       {
-        "title": "Qwen GitHub｜Qwen Code Desktop v0.26.5",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.5"
+        "title": "NYTimes Technology｜Anthropic Reveals $17 Billion in Revenue as I.P.O. Approaches",
+        "url": "https://www.nytimes.com/2026/11/02/business/anthropic-earnings-ai.html"
       },
       {
-        "title": "CNBC Tech｜Companies promised AI gains — here's how the payoff showed up in earnings",
-        "url": "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html"
+        "title": "NYTimes Technology｜Driven by A.I. Boom, Marvell and Lumentum Announce $115 Billion Merger",
+        "url": "https://www.nytimes.com/2026/11/02/technology/marvell-lumentum-115-billion-merger-ai.html"
       },
       {
-        "title": "Axios｜Behind the Curtain: OpenAI's post-election power play",
-        "url": "https://www.axios.com/2026/11/01/scoop-openai-post-midterm-policy"
-      },
-      {
-        "title": "TechCrunch AI｜OpenAI might rebrand its data centers as ‘AI compute campuses’",
-        "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/"
-      },
-      {
-        "title": "CNBC Tech｜For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
-        "url": "https://www.cnbc.com/2026/11/01/jpmorgan-amazon-ai-agents-meta-muse.html"
-      },
-      {
-        "title": "Wired｜What Democrats Can Learn From New York’s Data Center Moratorium",
-        "url": "https://www.wired.com/story/what-democrats-can-learn-new-york-data-center-moratorium/"
+        "title": "MIT Tech Review｜Stop counting tokens, start counting what ships",
+        "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/"
       }
     ],
-    "news_summary": "AI競争の本質はモデルの性能から、データセンターの社会受容性と、企業・プラットフォーム間での顧客接点の主導権争いへとシフトしている。\n\n【事実】AxiosおよびTechCrunchの報道によると、OpenAIは中間選挙後のワシントンにおける政治的逆風を見据え、批判の集まるデータセンターを「AIコンピュート・キャンパス（AI Compute Campuses）」へリブランドするPR戦略を準備している。これはWiredが報じるニューヨーク州などのデータセンターに対するモラトリアムや政治的反発を回避するための布石である。一方でCNBCは、JPMorganやAmazonなどの企業がMetaの「Muse」のような外部のAIパーソナルエージェントによるアクセスをブロックし始めていると伝えた。これは摩擦のない顧客体験を提供するAIエージェントが、既存企業の顧客チャネルや経済圏の流通主導権を奪うことへの防衛策である。さらに、CNBCの別報ではSantanderやNovartisなどの企業業績において、AIがコスト削減や収益向上としてようやく数値化され始めたことが示されている。また、Qwen GitHubのリリース（v0.26.5-nightlyおよびDesktop v0.26.5）では、マネージドエージェントのセッション管理、SQL履歴クエリ、MCP（Model Context Protocol）のツール名衝突回避などの実装が進んでおり、オープンな開発環境におけるエージェントの実用性が着実に向上している。",
-    "opinion_summary": "【解釈】今回の変化が起きている背景には、AIの評価基準が「どれだけ賢いモデルを作るか」から「社会や既存プラットフォームの利害とどう摩擦を起こさずに接続するか」へ転換したことがある。データセンターの建設反対運動や地方自治体レベルのモラトリアムは、AIのスケール拡大そのものを物理的・政治的に封じるボトルネックとなっている。OpenAIが「キャンパス」という教育的・中立的な響きの言葉へリブランドを試みるのは、計算資源の拡大という死活問題を政治的レトリックで乗り切らざるを得ない追い詰められた現状を物語る。同時に、Meta Museのようなエージェントに対するJPMorganらのブロックは、AI企業がエンドユーザーとの唯一の接点を握ることで、従来の金融や小売などのプラットフォームを「下請けのAPIプロバイダ」に降格させる脅威への直接的な反発である。AIによる収益化が実需として表れ始めたからこそ、既存産業側も自社の流通網と顧客データを死守する防衛戦に入ったと言える。",
+    "news_summary": "Anthropicの巨額の売上と赤字、そしてMarvellとLumentumの巨大合併が示す通り、AI競争は単なる知能の優劣を競う段階を抜け、電力・光学ネットワーク・莫大なトークン消費を支える財務基盤の確保戦へと突入した。\n\n【事実】本日の市場と業界の動きは、財務、物理インフラ、そしてエージェント利用によるコスト急増という3つの軸に集約される。第一に、Anthropicが公開したS-1プロスペクトスおよび四半期財務情報では、四半期売上が17億ドルではなく170億ドルに達する一方、純損失が23億ドルではなく230億ドル規模に膨らみ、さらに8954億ドルという途方もない購入コミットメントを抱えていることが明らかになった（CNBC Tech報道）。第二に、インフラ面では、MarvellとLumentumが1150億ドル規模の合併を発表し、AIデータセンターで急増する光学ネットワーク技術の取り込みに動いた（NYTimes Technology報道）。第三に、OpenAIは将来の巨大なコンピュートキャンパスが電力網の信頼性を損なわず、消費者への電気代への影響を防ぐための「Grid Protectors Program」を発表し、電力供給インフラとの調整に乗り出した（OpenAI News）。また、開発現場では、MIT Technology Reviewの報道が示すように、AIエージェントがタスクを遂行する際に自律的なエラー修正やテストを繰り返すため、従来のチャットプロンプトの10倍から50倍ものトークンを消費するようになっており、Y CombinatorのGarry Tan氏がエージェント利用だけで年間最大20万ドルのトークン費用を支払っているという実態とも符合している（TechCrunch AI報道）。これらはいずれも、AIの利用が実務や開発の現場で深く自律化するにつれて、コストとインフラのボトルネックが表面化している事象である。",
+    "opinion_summary": "【解釈】なぜこのタイミングで、インフラとコストに関するニュースが噴出しているのか。その最大の理由は、AIの利用形態が「人間が1回指示して1回答える対話型（チャット）」から、「システムが自律的に計画・実行・テストを繰り返すエージェント型」へと不可逆的にシフトした点にある。MIT Technology Reviewが指摘するように、エージェント型AIは1つのタスクを完結させるために数倍から数十倍のトークンを消費する。これは、AI企業側にとってはデータセンターの稼働率と電力需要の爆発的な増加を意味し、ユーザー側にとっては法外なトークンコストの発生を意味する。Anthropicが巨額の売上を叩き出しながらもそれを大きく上回る赤字を計上し、将来の購買コミットメントを積み上げているのは、この膨大な計算需要を先回りして確保しなければ競争に敗北するという切迫感の裏返しである。また、MarvellとLumentumの1150億ドルの合併や、OpenAIの電力網保護プログラムは、もはやシリコンチップやソフトウェアの最適化だけではこの需要増に対応できず、データセンターをつなぐ「光学ネットワーク」や「地域電力網」という物理的・泥臭いレイヤーの主導権を握ることが、そのままAI産業の勝敗を決する決定打になりつつあることを示している。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てが過大評価であり、単なる一時的な雑音に過ぎないと言える条件はいくつかある。もしOpenAIのデータセンターリブランドが政治的・世論的な批判をかわすことに完全に失敗し、電力・土地の認可取得が主要州で全面凍結された場合、計算資源の拡大を前提としたすべてのAIインフラ戦略は頓挫する。また、JPMorganやAmazonなどの既存企業によるAIエージェントのブロックがユーザーの強い支持を得て定着した場合、外部エージェントを基盤とした新たな流通エコシステムの拡大は阻まれ、プラットフォームの壁が再び強固になる。もしこれらの障壁がAI産業の進歩を実質的に押し止めたと確認されたとき、今日の「インフラと流通の主導権争い」という見立ては崩れ、単なる過熱期の局所的な摩擦に格下げされる。",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、ハードウェアおよびアルゴリズムの効率化スピードを挙げる必要がある。もし、推論コストを劇的に下げるブレイクスルー（例えば、より軽量な小規模モデルの高度化や、推論時の計算量を根本から削減する新アーキテクチャ）が予想以上のスピードで実用化された場合、現在観測されている「巨額のインフラ投資と電力確保の必要性」という前提は急速に色褪せることになる。Anthropicの抱える8954億ドルのコミットメントや、データセンター向けの1150億ドルの巨大合併も、もし数年以内にトークン単価が現在の10分の一以下に暴落すれば、過剰設備投資という巨大な足かせに変貌しかねない。したがって、今回の動きが持続的な構造変化であるか、あるいはインフラの過渡期における一時的なバブルであるかは、今後の推論コストの低下率と実際の企業収益のバランスによって判定されるべきである。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Qwen GitHub｜Release v0.26.5-nightly.20261101.7b4b353750",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750",
-        "point": "What's Changed\n\nrefactor(managed-agent): Share the session event delivery loop by @doudouOUC in #15952\nci: route the cla"
+        "title": "OpenAI News｜Introducing the Grid Protectors Program",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/grid-protectors-program",
+        "point": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and p"
       },
       {
         "rank": 2,
-        "title": "Qwen GitHub｜Qwen Code Desktop v0.26.5",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.5",
-        "point": "What's Changed\n\nfeat(managed): Add bounded SQL history queries by @doudouOUC in #15839\nfeat(generated-ui): keep chatting"
+        "title": "NYTimes Technology｜Anthropic Reveals $17 Billion in Revenue as I.P.O. Approaches",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/02/business/anthropic-earnings-ai.html",
+        "point": "The A.I. company’s quarterly revenue totaled $17 billion, 12 times as high as the same quarter last year, while its net "
       },
       {
         "rank": 3,
-        "title": "CNBC Tech｜Companies promised AI gains — here's how the payoff showed up in earnings",
-        "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html",
-        "point": "Santander, Novartis and other companies say AI is beginning to boost revenue, cut costs or improve profitability as inve"
+        "title": "NYTimes Technology｜Driven by A.I. Boom, Marvell and Lumentum Announce $115 Billion Merger",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/02/technology/marvell-lumentum-115-billion-merger-ai.html",
+        "point": "Marvell and Lumentum said they were combining, in a major bet on a technology, known as optical networking, that is incr"
       },
       {
         "rank": 4,
-        "title": "Axios｜Behind the Curtain: OpenAI's post-election power play",
-        "source": "Axios",
-        "url": "https://www.axios.com/2026/11/01/scoop-openai-post-midterm-policy",
-        "point": "Right after Tuesday's midterms, OpenAI will unleash a policy and PR blitz to try to get in sync with the new Washington,"
-      },
-      {
-        "rank": 5,
-        "title": "TechCrunch AI｜OpenAI might rebrand its data centers as ‘AI compute campuses’",
-        "source": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
-        "point": "Data centers are deeply unpopular. But what if we called them something else?"
+        "title": "MIT Tech Review｜Stop counting tokens, start counting what ships",
+        "source": "MIT Tech Review",
+        "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+        "point": "When a developer gives an AI agent a coding task, the agent does more than answer once. It plans, generates code, runs t"
       }
     ],
     "joho_picks": [
       {
-        "headline": "AIの主導権は技術からインフラと流通の防衛戦へ移行する",
+        "headline": "AI競争の主戦場が「モデルの性能」から「物理インフラと膨大なコストの耐久戦」へ移行する",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750",
+        "source_url": "https://openai.com/index/grid-protectors-program",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】AI競争の主軸は、単なるモデルの賢さの追求から、物理インフラの許認可獲得と、ユーザーとの接点を巡るプラットフォーム間の攻防へと完全に移行した。今日の材料を見ると、OpenAIによる政治的・PR的なインフラの命名変更の動きや、大手企業によるAIエージェントの遮断、そして実ビジネスでの収益化の萌芽が同時に起きている。これは、AIが実験的な技術フェーズを抜け、社会インフラおよび流通の利権を奪い合う闘争に入ったことを示している。本稿では、このインフラと流通を巡る新たな攻防の構造を読み解く。\n\n【事実】AxiosおよびTechCrunchの報道によると、OpenAIは中間選挙後のワシントンにおける政治的逆風を見据え、批判の集まるデータセンターを「AIコンピュート・キャンパス（AI Compute Campuses）」へリブランドするPR戦略を準備している。これはWiredが報じるニューヨーク州などのデータセンターに対するモラトリアムや政治的反発を回避するための布石である。一方でCNBCは、JPMorganやAmazonなどの企業がMetaの「Muse」のような外部のAIパーソナルエージェントによるアクセスをブロックし始めていると伝えた。これは摩擦のない顧客体験を提供するAIエージェントが、既存企業の顧客チャネルや経済圏の流通主導権を奪うことへの防衛策である。さらに、CNBCの別報ではSantanderやNovartisなどの企業業績において、AIがコスト削減や収益向上としてようやく数値化され始めたことが示されている。また、Qwen GitHubのリリース（v0.26.5-nightlyおよびDesktop v0.26.5）では、マネージドエージェントのセッション管理、SQL履歴クエリ、MCP（Model Context Protocol）のツール名衝突回避などの実装が進んでおり、オープンな開発環境におけるエージェントの実用性が着実に向上している。\n\n【解釈】今回の変化が起きている背景には、AIの評価基準が「どれだけ賢いモデルを作るか」から「社会や既存プラットフォームの利害とどう摩擦を起こさずに接続するか」へ転換したことがある。データセンターの建設反対運動や地方自治体レベルのモラトリアムは、AIのスケール拡大そのものを物理的・政治的に封じるボトルネックとなっている。OpenAIが「キャンパス」という教育的・中立的な響きの言葉へリブランドを試みるのは、計算資源の拡大という死活問題を政治的レトリックで乗り切らざるを得ない追い詰められた現状を物語る。同時に、Meta Museのようなエージェントに対するJPMorganらのブロックは、AI企業がエンドユーザーとの唯一の接点を握ることで、従来の金融や小売などのプラットフォームを「下請けのAPIプロバイダ」に降格させる脅威への直接的な反発である。AIによる収益化が実需として表れ始めたからこそ、既存産業側も自社の流通網と顧客データを死守する防衛戦に入ったと言える。\n\n【競争の構図】\n【OpenAI】\nデータセンターの呼称を「AIコンピュート・キャンパス」へ変更するPR戦略を準備し、政治的逆風に対応しようとしている。\n→ 計算資源の確保という最大の成長ボトルネックに対して、世論と政治の摩擦を和らげることでインフラ拡張の継続を図るが、実質的な環境負荷の解決には至らないリスクがある。\n\n【Meta】\nAIパーソナルエージェント「Muse」などを通じて、ユーザーの消費や情報の流通チャネルに直接介入するプロダクトを展開している。\n→ エンドユーザーとの強い接点を握ることで、検索や既存プラットフォームを迂回する強力な流通主導権を握りつつあるが、他社からのブロックという摩擦を招いている。",
-        "why_matters": "【日本の実務への示唆】日本企業の実務においては、生成AIの「機能評価」フェーズを早急に終え、インフラ調達リスクとAPIの流通支配権の評価に軸足を移すべきである。特に、自社が提供するサービスや顧客接点が外部のAIエージェントやプラットフォーマーにバイパスされるリスク（ディスインターミディエーション）を点検する必要がある。また、データセンターの電力・用地制約は日本国内でも厳しさを増しており、自社で保有・契約するAIインフラの持続可能性を再検証することが求められる。導入の判断においては、単なる業務効率化のPoCにとどまらず、自社の顧客データやチャネルが外部のAIエコシステムにどのような条件で組み込まれるのか、法務・事業の両面で契約条件を見直すタイミングに来ている。\n\n【反証・留保】この見立てが過大評価であり、単なる一時的な雑音に過ぎないと言える条件はいくつかある。もしOpenAIのデータセンターリブランドが政治的・世論的な批判をかわすことに完全に失敗し、電力・土地の認可取得が主要州で全面凍結された場合、計算資源の拡大を前提としたすべてのAIインフラ戦略は頓挫する。また、JPMorganやAmazonなどの既存企業によるAIエージェントのブロックがユーザーの強い支持を得て定着した場合、外部エージェントを基盤とした新たな流通エコシステムの拡大は阻まれ、プラットフォームの壁が再び強固になる。もしこれらの障壁がAI産業の進歩を実質的に押し止めたと確認されたとき、今日の「インフラと流通の主導権争い」という見立ては崩れ、単なる過熱期の局所的な摩擦に格下げされる。",
-        "context": "【次の観測点】\n・米国の主要自治体や州政府におけるデータセンターの新規建設認可およびモラトリアムの動向\n・JPMorganやAmazonなどの大手企業による外部AIエージェントのブロック措置が業界標準化するかどうか\n・主要企業の決算におけるAI投資のROI（投資対効果）の具体的な数値の継続的な現れ方"
+        "body": "【結論】AI競争のルールは、モデルの賢さや精度の高さを競うフェーズから、膨大な計算資源と物理インフラを維持し続けることができる資本力と、コスト構造の耐久戦へと完全に切り替わった。今日、私たちが目にしている一連の動きは、単なるプロダクトのアップデートではない。Anthropicが公表した170億ドルの四半期売上と230億ドルの純損失という極端な収益構造、MarvellとLumentumによる1150億ドルの光学ネットワーク関連巨大合併、そしてOpenAIによる電力網保護プログラムの立ち上げは、すべて一つの現実を指し示している。それは、AIエージェントの自律化に伴う爆発的なトークン消費が、電力、半導体、そしてハードウェアの限界を突きつけているという事実である。もはやAI企業の価値は、賢いモデルを最初に作ったことではなく、この莫大な物理的制約と財務的重圧をどう乗り越えるかというインフラの主導権に移行している。本稿では、この構造変化の本質を読み解く。\n\n【事実】本日の市場と業界の動きは、財務、物理インフラ、そしてエージェント利用によるコスト急増という3つの軸に集約される。第一に、Anthropicが公開したS-1プロスペクトスおよび四半期財務情報では、四半期売上が17億ドルではなく170億ドルに達する一方、純損失が23億ドルではなく230億ドル規模に膨らみ、さらに8954億ドルという途方もない購入コミットメントを抱えていることが明らかになった（CNBC Tech報道）。第二に、インフラ面では、MarvellとLumentumが1150億ドル規模の合併を発表し、AIデータセンターで急増する光学ネットワーク技術の取り込みに動いた（NYTimes Technology報道）。第三に、OpenAIは将来の巨大なコンピュートキャンパスが電力網の信頼性を損なわず、消費者への電気代への影響を防ぐための「Grid Protectors Program」を発表し、電力供給インフラとの調整に乗り出した（OpenAI News）。また、開発現場では、MIT Technology Reviewの報道が示すように、AIエージェントがタスクを遂行する際に自律的なエラー修正やテストを繰り返すため、従来のチャットプロンプトの10倍から50倍ものトークンを消費するようになっており、Y CombinatorのGarry Tan氏がエージェント利用だけで年間最大20万ドルのトークン費用を支払っているという実態とも符合している（TechCrunch AI報道）。これらはいずれも、AIの利用が実務や開発の現場で深く自律化するにつれて、コストとインフラのボトルネックが表面化している事象である。\n\n【解釈】なぜこのタイミングで、インフラとコストに関するニュースが噴出しているのか。その最大の理由は、AIの利用形態が「人間が1回指示して1回答える対話型（チャット）」から、「システムが自律的に計画・実行・テストを繰り返すエージェント型」へと不可逆的にシフトした点にある。MIT Technology Reviewが指摘するように、エージェント型AIは1つのタスクを完結させるために数倍から数十倍のトークンを消費する。これは、AI企業側にとってはデータセンターの稼働率と電力需要の爆発的な増加を意味し、ユーザー側にとっては法外なトークンコストの発生を意味する。Anthropicが巨額の売上を叩き出しながらもそれを大きく上回る赤字を計上し、将来の購買コミットメントを積み上げているのは、この膨大な計算需要を先回りして確保しなければ競争に敗北するという切迫感の裏返しである。また、MarvellとLumentumの1150億ドルの合併や、OpenAIの電力網保護プログラムは、もはやシリコンチップやソフトウェアの最適化だけではこの需要増に対応できず、データセンターをつなぐ「光学ネットワーク」や「地域電力網」という物理的・泥臭いレイヤーの主導権を握ることが、そのままAI産業の勝敗を決する決定打になりつつあることを示している。\n\n【競争の構図】\n【Anthropic】\n四半期売上170億ドルを達成する一方で、230億ドルの純損失と8954億ドルの購入コミットメントを抱える巨額投資フェーズにある（CNBC TechおよびNYTimes報道）。\n→ 圧倒的な収益拡大を見せる一方で、それに匹敵する規模の赤字と将来の調達義務を抱えており、財務的な耐久力が次の成長を維持できるかの生死を分ける。\n\n【OpenAI】\n開発効率化のためのGit互換バックエンド「Pando」の構築や、将来のコンピュートキャンパスに向けた電力網保護プログラム、さらに国家安全保障分野の人材登用を進める（OpenAI News、CNBC Tech）。\n→ 技術のスケール化と同時に、物理的な電力インフラの確保や政治・安全保障とのタイアップを強めており、国家インフラレベルでの主導権を握ろうとしている。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、生成AIの「利用モデルの選定」ではなく、「AI活用に伴うコスト構造とインフラ調達の試算」である。多くの日本企業は、APIの利用料金や月額のライセンス費用を基準にAI導入のROIを計算しているが、グローバルで起きている実態は、エージェント型AIの普及による「トークン消費量の爆発的増加」である。もし自社で業務プロセスを完全に自動化するエージェントの導入を進める場合、現在の予測の何倍ものAPIコストが発生するリスクを織り込む必要がある。また、電力インフラや国内のデータセンター調達、あるいはクラウドベンダーとの契約においても、グローバルな計算資源の争奪戦によるコスト転嫁の可能性を見据え、特定のプロバイダーに依存しない調達戦略や、軽量なローカルモデルとのハイブリッド運用を真剣に検討するタイミングにきている。\n\n【反証・留保】この見立てを過大評価しないための条件として、ハードウェアおよびアルゴリズムの効率化スピードを挙げる必要がある。もし、推論コストを劇的に下げるブレイクスルー（例えば、より軽量な小規模モデルの高度化や、推論時の計算量を根本から削減する新アーキテクチャ）が予想以上のスピードで実用化された場合、現在観測されている「巨額のインフラ投資と電力確保の必要性」という前提は急速に色褪せることになる。Anthropicの抱える8954億ドルのコミットメントや、データセンター向けの1150億ドルの巨大合併も、もし数年以内にトークン単価が現在の10分の一以下に暴落すれば、過剰設備投資という巨大な足かせに変貌しかねない。したがって、今回の動きが持続的な構造変化であるか、あるいはインフラの過渡期における一時的なバブルであるかは、今後の推論コストの低下率と実際の企業収益のバランスによって判定されるべきである。",
+        "context": "【次の観測点】\n・AnthropicのI.P.O.（新規株式公開）プロセスにおけるS-1のさらなる詳細と、購入コミットメントの実態\n・MarvellとLumentumの合併完了に向けた各国の独占禁止法審査および光学ネットワーク市場への具体的影響\n・エージェント型AIの普及に伴う主要クラウドベンダーのAPI料金・トークン単価の改定動向"
       }
     ]
   },
   "raw_articles": [
     {
-      "source": "Axios",
-      "title": "Where Dems eyeing the White House are putting their midterm chips",
-      "url": "https://www.axios.com/2026/11/01/2028-democrats-midterm-bets",
-      "summary": "Pennsylvania Gov. Josh Shapiro's chances of being a presidential contender in 2028 are riding on his winning reelection in a landslide Tuesday. New York Rep. Alexandria Ocasio-Cortez's future hinges on whether a fellow progressive can carry a swing state, for once.California Gov. Gavin Newsom has to show that his congressional redistricting gambit worked for Democrats — and he needs to beat back a state wealth tax proposal supported by Sen. Bernie Sanders (I-Vt.).Driving the news: Democrats eyei",
-      "published": "2026-11-01 22:45 UTC",
-      "pub_dt": "2026-11-01T22:45:06+00:00"
-    },
-    {
-      "source": "Qwen GitHub",
-      "title": "Release v0.26.5-nightly.20261101.7b4b353750",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261101.7b4b353750",
-      "summary": "What's Changed\n\nrefactor(managed-agent): Share the session event delivery loop by @doudouOUC in #15952\nci: route the classify_pr gate to ECS for every pull request by @yiliang114 in #16019\nfix(core): delete the OAuth refresh lock only when owned by @2SinceJuly in #15661\nfix(core): keep uniquely named MCP tools when names collide by @2SinceJuly in #15757\nfix(web-shell): expose the Plugins back control without the navigation rail by @2SinceJuly in #15651\nfix(core): reject LSP queries when no serve",
-      "published": "2026-11-01 22:43 UTC",
-      "pub_dt": "2026-11-01T22:43:08+00:00"
+      "source": "CNBC Tech",
+      "title": "OpenAI hires former U.S. Army Secretary Dan Driscoll for national security role",
+      "url": "https://www.cnbc.com/2026/11/03/openai-hires-dan-driscoll-national-security.html",
+      "summary": "OpenAI has hired former U.S. Army Secretary Dan Driscoll for a newly created national security role for national security modernization.",
+      "published": "2026-11-03 02:17 UTC",
+      "pub_dt": "2026-11-03T02:17:10+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
-      "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
-      "summary": "Data centers are deeply unpopular. But what if we called them something else?",
-      "published": "2026-11-01 21:55 UTC",
-      "pub_dt": "2026-11-01T21:55:23+00:00"
+      "title": "Apple may try to increase revenue by doing…something with third-party AI apps",
+      "url": "https://techcrunch.com/2026/11/02/apple-may-try-to-increase-revenue-by-doing-something-with-third-party-ai-apps/",
+      "summary": "Apple hinted at ways that it could spur revenue through third-party \"opportunities\" during its Monday night earnings call.",
+      "published": "2026-11-03 01:49 UTC",
+      "pub_dt": "2026-11-03T01:49:52+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "v2026.10.10",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.10",
+      "summary": "openclaw 2026.10.10",
+      "published": "2026-11-03 01:32 UTC",
+      "pub_dt": "2026-11-03T01:32:18+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
-      "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
-      "summary": "On Equity, we discuss why tech CEO statements can seem so tone deaf.",
-      "published": "2026-11-01 20:57 UTC",
-      "pub_dt": "2026-11-01T20:57:58+00:00"
+      "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+      "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+      "summary": "Y Combinator Garry Tan has jokingly admitted that he's suffered from \"cyber psychosis” and barely sleeps sometimes because he’s so excited to be working with his AI agents. On a new episode of Walter Isaacson’s podcast, The Builders, Tan put a price tag on his passion.",
+      "published": "2026-11-03 00:35 UTC",
+      "pub_dt": "2026-11-03T00:35:52+00:00"
     },
     {
       "source": "NYTimes Technology",
-      "title": "AI Is Finding a Flood of Bugs, and Silicon Valley Is Rushing to Fix Them",
-      "url": "https://www.nytimes.com/2026/10/28/technology/silicon-valley-bugs-ai.html",
-      "summary": "A.I. has uncovered a horde of software flaws, which engineers are racing to fix before they can be exploited and abused by hackers.",
-      "published": "2026-11-01 17:19 UTC",
-      "pub_dt": "2026-11-01T17:19:20+00:00"
+      "title": "Apple’s Profit Grows 12% Despite Component Price Worries",
+      "url": "https://www.nytimes.com/2026/11/02/technology/apple-earnings.html",
+      "summary": "The company said iPhone sales remained strong, but warned that the cost of memory chips for its devices was going up.",
+      "published": "2026-11-02 23:41 UTC",
+      "pub_dt": "2026-11-02T23:41:50+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+      "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/",
+      "summary": "The one-year-old startup is now valued at $300 million.",
+      "published": "2026-11-02 23:13 UTC",
+      "pub_dt": "2026-11-02T23:13:53+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Anthropic warns that it’s very close to RSI capability, aka self-building AI",
+      "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+      "summary": "RSI is the point at which AI grows so good at training itself that it spawns a dramatic acceleration of AI capabilities. To the AI doomers, RSI represents the cataclysm from which there is no return.",
+      "published": "2026-11-02 22:14 UTC",
+      "pub_dt": "2026-11-02T22:14:50+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
-      "url": "https://www.cnbc.com/2026/11/01/jpmorgan-amazon-ai-agents-meta-muse.html",
-      "summary": "As companies from Amazon to JPMorgan block AI personal agents like Meta's Muse, retail experts warn that technology that removes customer friction usually wins.",
-      "published": "2026-11-01 16:34 UTC",
-      "pub_dt": "2026-11-01T16:34:43+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Why AI is boosting Meta's ad business while hurting Google search",
-      "url": "https://www.cnbc.com/2026/11/01/ai-meta-ads-google-search.html",
-      "summary": "The gap between Meta's ad revenue growth and Google's search expansion was the widest it's been since 2021 in the latest quarter.",
-      "published": "2026-11-01 14:31 UTC",
-      "pub_dt": "2026-11-01T14:31:29+00:00"
-    },
-    {
-      "source": "IEEE Spectrum",
-      "title": "Guarding the Gates of Knowledge",
-      "url": "https://spectrum.ieee.org/ai-slop-trust-science",
-      "summary": "A recent scroll through social media got me thinking about trust. About half my feed was filled with AI slop that astute users would call out as being machine-generated, often to the embarrassment of the rube who unknowingly spread it and sometimes to the delight of the poster who shared it deliberately because they found it amusing or useful for sowing confusion.Remember the good old days of GPT-3 when we could ask the chatbot anything and it would almost instantly and very confidently spit bac",
-      "published": "2026-11-01 14:00 UTC",
-      "pub_dt": "2026-11-01T14:00:01+00:00"
-    },
-    {
-      "source": "Axios",
-      "title": "Behind the Curtain: OpenAI's post-election power play",
-      "url": "https://www.axios.com/2026/11/01/scoop-openai-post-midterm-policy",
-      "summary": "Right after Tuesday's midterms, OpenAI will unleash a policy and PR blitz to try to get in sync with the new Washington, including an effort to rebrand data centers as \"AI compute campuses.\" Why it matters: After two years of a friendly White House, AI companies will face a harsher Washington after Tuesday, when Democrats will likely win the House. OpenAI also aims to help frame the AI debate for the big field of 2028 presidential contenders that'll start forming on Wednesday. \"You can try to ch",
-      "published": "2026-11-01 13:43 UTC",
-      "pub_dt": "2026-11-01T13:43:06+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Companies promised AI gains — here's how the payoff showed up in earnings",
-      "url": "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html",
-      "summary": "Santander, Novartis and other companies say AI is beginning to boost revenue, cut costs or improve profitability as investors seek returns.",
-      "published": "2026-11-01 12:34 UTC",
-      "pub_dt": "2026-11-01T12:34:06+00:00"
+      "title": "Lumentum CEO touts 'enormous' opportunity in massive AI connectivity deal with Marvell",
+      "url": "https://www.cnbc.com/2026/11/02/marvell-lumentum-ai-deal.html",
+      "summary": "The AI infrastructure deal is expected to close during the first half of 2028.",
+      "published": "2026-11-02 21:00 UTC",
+      "pub_dt": "2026-11-02T21:00:59+00:00"
     },
     {
       "source": "Wired",
-      "title": "What Democrats Can Learn From New York’s Data Center Moratorium",
-      "url": "https://www.wired.com/story/what-democrats-can-learn-new-york-data-center-moratorium/",
-      "summary": "With a number of anti-data-center candidates poised to win on Tuesday, New York provides a glimpse at the tensions around actually having to do something about the digital infrastructure.",
-      "published": "2026-11-01 11:00 UTC",
-      "pub_dt": "2026-11-01T11:00:00+00:00"
+      "title": "Best Dyson Vacuum Deals (2026): Dyson Spot+Scrub Ai, Dyson V16 Piston Animal",
+      "url": "https://www.wired.com/story/dyson-vacuum-deals-nov-2026/",
+      "summary": "Black Friday is still weeks away, but you don’t have to wait for a good sale on Dyson vacuums.",
+      "published": "2026-11-02 21:00 UTC",
+      "pub_dt": "2026-11-02T21:00:00+00:00"
     },
     {
-      "source": "Wired",
-      "title": "Chatbots Are Leading Hikers Astray, With Dangerous Consequences",
-      "url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
-      "summary": "Outsourcing planning to AI can lead people to surrender their own critical thinking, which can have potentially deadly results in places like the backcountry.",
-      "published": "2026-11-01 10:30 UTC",
-      "pub_dt": "2026-11-01T10:30:00+00:00"
+      "source": "TechCrunch AI",
+      "title": "New York Times and other outlets sue web browser Brave over alleged content scraping",
+      "url": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/",
+      "summary": "The New York Times is suing privacy-focused web browser company Brave for allegedly scraping the outlet’s copyrighted content and unlawfully distributing it to its own customers, like Anthropic and Perplexity.",
+      "published": "2026-11-02 19:19 UTC",
+      "pub_dt": "2026-11-02T19:19:17+00:00"
     },
     {
-      "source": "Qwen GitHub",
-      "title": "Qwen Code Desktop v0.26.5",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.5",
-      "summary": "What's Changed\n\nfeat(managed): Add bounded SQL history queries by @doudouOUC in #15839\nfeat(generated-ui): keep chatting with a card's values and turn Generated UI on by default by @qqqys in #15856\ntest(web-shell): follow the renamed workspace copy in two e2e specs by @wenshao in #15860\nfeat(web-shell): keyboard shortcuts for Session Overview and Split View by @4ekuct25 in #14179\nfeat(web-shell): add Russian locale for the Goal card and Goals dialog by @4ekuct25 in #13685\nfix(managed-agent): har",
-      "published": "2026-11-01 03:59 UTC",
-      "pub_dt": "2026-11-01T03:59:58+00:00"
+      "source": "The Verge AI",
+      "title": "Anthropic clamps down on Claude’s AI video game clones",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+      "summary": "Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to re-create existing video games, as reported by Tom's Hardware. Retro gaming is currently being overrun with AI-made decompilations, recompilations, and ports, but while Anthropic will still let people use Claude Code to make games, it doesn't want people to [&#8230;]",
+      "published": "2026-11-02 18:56 UTC",
+      "pub_dt": "2026-11-02T18:56:02+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Anthropic Reveals $17 Billion in Revenue as I.P.O. Approaches",
+      "url": "https://www.nytimes.com/2026/11/02/business/anthropic-earnings-ai.html",
+      "summary": "The A.I. company’s quarterly revenue totaled $17 billion, 12 times as high as the same quarter last year, while its net loss totaled $23 billion.",
+      "published": "2026-11-02 18:55 UTC",
+      "pub_dt": "2026-11-02T18:55:09+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Driven by A.I. Boom, Marvell and Lumentum Announce $115 Billion Merger",
+      "url": "https://www.nytimes.com/2026/11/02/technology/marvell-lumentum-115-billion-merger-ai.html",
+      "summary": "Marvell and Lumentum said they were combining, in a major bet on a technology, known as optical networking, that is increasingly being used in A.I. data centers.",
+      "published": "2026-11-02 18:48 UTC",
+      "pub_dt": "2026-11-02T18:48:04+00:00"
+    },
+    {
+      "source": "ZDNet AI",
+      "title": "OpenAI will merge ChatGPT’s chat and work tabs – here’s when, and what to expect",
+      "url": "https://www.zdnet.com/innovation/openai-merge-chatgpt-chat-work-tabs/",
+      "summary": "On the heels of Anthropic’s similar move, the change will be tested among select users before being rolled out.",
+      "published": "2026-11-02 18:01 UTC",
+      "pub_dt": "2026-11-02T18:01:55+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "OpenAI pitches data center power plants as a way to protect nearby areas",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
+      "summary": "In an announcement on Monday, OpenAI says it will pilot its \"Grid Protectors Program\" at an upcoming data center in Effingham County, Georgia, where the company promises to free up to 1,000 megawatts of power during extreme weather or emergencies, enough to power air conditioners in around 700,000 homes. The announcement comes as opposition to [&#8230;]",
+      "published": "2026-11-02 18:01 UTC",
+      "pub_dt": "2026-11-02T18:01:30+00:00"
     }
   ]
 }
