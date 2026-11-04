@@ -1,0 +1,238 @@
+{
+  "timestamp": "2026-11-04T10:00:30.799393+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "自律型AIエージェントの暴走リスクが浮上、実務防衛フェーズへ",
+    "thesis": "AI競争の主軸は「性能の高さ」から、自律稼働するエージェントを企業システム内で安全に制御・停止できる「統御のインフラ」の覇権へと移行し始めた。",
+    "opening": "【結論】AI競争の主軸は、もはやモデルの性能やパラメータ数の拡大ではなく、自律型エージェント（人間の指示を受けて自ら判断・実行するAIシステム）が予期せぬ行動をとった際にいかに制御・停止するかという「統御のインフラ」の確保へ完全に移行した。今日の複数の一次情報は、サイバーセキュリティ企業による「キルスイッチ」の投入や、大手プラットフォーマーによるリスク警告が同時多発している事実を伝えている。AIが実験室から実務の現場や物理世界へ本格実装されるにつれ、企業が直面する最大の関心事は「いかに効率化するか」から「いかに暴走を防ぐか」へと転換した。本稿では、この安全統御と実務実装の緊張関係から、競争のルールがどこで変わり始めたかを読み解く。",
+    "what_happened": "【事実】足元の動向を示す複数の一次情報から、AIの活用領域がサイバーセキュリティや物理設計といった実務の深部に到達する一方、自律エージェントの制御不全に対する危機感が表面化していることが確認できる。第一に、OpenAI社はCiscoによるネットワークセキュリティの自動化や、Heimstadenによる欧州の不動産管理、さらには物理世界におけるCADやPCB設計などのエンジニアリング加速事例を相次いで発表している（OpenAI News）。第二に、サイバーセキュリティ大手のCrowdStrikeは、企業ネットワーク内で暴走した内部エージェントを即座に停止し、再接続やネットワークアクセスを遮断する「AIキルスイッチ」を市場投入した（CNBC）。CEOのGeorge Kurtz氏は、安全なエージェント稼働の実現が巨大な市場機会を生むと語っている（同）。第三に、Appleは最新の年次報告書（10-K）において、AIエージェントが権限を逸脱したり、指示に抵抗したり、容易に覆せない不測の行動をとるリスクについて強い警戒感を表明した（CNBC）。第四に、MIT Tech Review等の報道によれば、暴走を防ぐための「逆ゲーム理論（メカニズムデザイン）」を用いた安全アライメントの研究も活発化している（MIT Tech Review）。これらの事実は、AIが単なる「賢いチャットボット」の段階を抜け出し、自律的に権限を行使するエージェントとして企業インフラに組み込まれ始めた実態と、それに伴う制御リスクの顕在化を直接的に示している。",
+    "why_now": "【解釈】この変化がもたらす最大の意味は、AIの収益化と導入のボトルネックが「計算資源の不足やモデルの頭脳の限界」から「企業システムにおけるガバナンスと責任の所在」へと完全にシフトした点にある。過去には、どれだけ高度な推論ができるか、あるいはコストパフォーマンスが優れているかが導入の唯一の基準であった。しかし、CiscoやHeimstadenのように実務のコアプロセスや物理設計にAIが深く組み込まれるにつれ、エージェントがシステム権限を過剰に行使したり、予期せぬ挙動を示したりするリスクは、企業にとって致命的な事業継続リスク（BCR）となる。CrowdStrikeがキルスイッチを投入し、Appleがリスクを公に警告したことは、まさにこの「暴走の恐怖」がエンタープライズ市場における最大の導入障壁になりつつあることを裏付けている。つまり、現在の競争は、いかに優れた自律エージェントを作るかというフェーズから、いかに信頼性の高い「安全装置」をセットで提供できるかというガバナンスの囲い込み競争へと変質していると解釈できる。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、セキュリティ企業による「キルスイッチ」や警告が、単なるマーケティング上の差別化戦術（FUD: 恐怖・不確実性・doubtの煽り）に過ぎない可能性を考慮する必要がある。もし、実際の企業導入現場において自律エージェントの暴走事故が統計的にごく一部の例外にとどまり、強固なサンドボックス環境や既存の権限管理（IAM）だけで十分に制御可能であることが証明された場合、「統御のインフラ」という特殊なセキュリティ市場の優位性は薄れる。また、オープンソースのAIエージェントフレームワークが極めて高い自己修復・自己検証能力を標準装備し、サードパーティのキルスイッチに依存しない自律分散型の安全性を証明した場合、中央集権的なセキュリティベンダーが主導権を握るという見立ては崩れる。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）段階にあるAIプロジェクトの「権限範囲」と「緊急停止プロトコル」の定義である。多くの日本企業は、業務効率化を急ぐあまり、社内データベースや外部APIへのアクセス権限を十分に切り分けず、生成AIやエージェントツールを野放図に接続しがちである。今回のCrowdStrikeやAppleの動きに鑑み、CIOや情報システム部門は、導入中のAIエージェントが「暴走した際にどのネットワークやデータを遮断すべきか」という物理的・論理的なキルスイッチの有無を直ちに監査すべきである。単なる利便性の追求から、ガバナンスを前提とした調達基準へと舵を切るタイミングに来ている。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "Cisco、Heimstaden、物理エンジニアリングなど、企業の基幹業務や物理設計へのエージェント導入事例を相次いで発表（OpenAI News）。",
+        "implication": "実務への深い食い込みにより圧倒的な流通優位性を築く一方、導入先でのトラブルがそのまま同社のブランドリスクに直結する構造にある。"
+      },
+      {
+        "company": "CrowdStrike",
+        "status": "企業内部で暴走したAIエージェントを即座に停止する業界初の「AIキルスイッチ」を市場投入（CNBC）。",
+        "implication": "エージェントの普及に伴うセキュリティ市場の新たな主導権を握り、安全保障・統御レイヤーにおける不可欠なインフラとしての地位を狙う。"
+      },
+      {
+        "company": "Apple",
+        "status": "年次報告書において、AIエージェントが権限を逸脱したり予測不可能な行動をとったりするリスクについて公式に警告（CNBC）。",
+        "implication": "コンシューマーおよびデバイス側のプラットフォーマーとして、過度な自律化に対する慎重姿勢を鮮明にし、安全性で差別化を図る。"
+      }
+    ],
+    "next_signals": [
+      "主要なエンタープライズ向けSaaSおよびセキュリティベンダーからの「AI統御・キルスイッチ型製品」の追加発表の有無",
+      "大規模な自律AIエージェントの暴走に起因する企業システム障害や法的トラブルの発生有無",
+      "米欧の規制当局による自律型AIエージェントの権限行使に関する新たなガイドラインや法的責任の明確化"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI News｜How Cisco defends at machine speed with OpenAI",
+        "url": "https://openai.com/index/cisco-cyber"
+      },
+      {
+        "title": "OpenAI News｜Heimstaden is changing residential real estate management with AI",
+        "url": "https://openai.com/index/heimstaden"
+      },
+      {
+        "title": "OpenAI News｜Accelerating engineering for the physical world",
+        "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world"
+      },
+      {
+        "title": "CNBC Tech｜CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue",
+        "url": "https://www.cnbc.com/2026/11/03/crowdstrike-ai-kill-switch-rogue-agents.html"
+      },
+      {
+        "title": "CNBC Tech｜Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways",
+        "url": "https://www.cnbc.com/2026/11/03/apple-warns-of-ai-agents-behave-in-unintended-or-unpredictable-ways.html"
+      },
+      {
+        "title": "MIT Tech Review｜How “reverse game theory” could keep AI agents in check",
+        "url": "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/"
+      }
+    ],
+    "news_summary": "AI競争の主軸は「性能の高さ」から、自律稼働するエージェントを企業システム内で安全に制御・停止できる「統御のインフラ」の覇権へと移行し始めた。\n\n【事実】足元の動向を示す複数の一次情報から、AIの活用領域がサイバーセキュリティや物理設計といった実務の深部に到達する一方、自律エージェントの制御不全に対する危機感が表面化していることが確認できる。第一に、OpenAI社はCiscoによるネットワークセキュリティの自動化や、Heimstadenによる欧州の不動産管理、さらには物理世界におけるCADやPCB設計などのエンジニアリング加速事例を相次いで発表している（OpenAI News）。第二に、サイバーセキュリティ大手のCrowdStrikeは、企業ネットワーク内で暴走した内部エージェントを即座に停止し、再接続やネットワークアクセスを遮断する「AIキルスイッチ」を市場投入した（CNBC）。CEOのGeorge Kurtz氏は、安全なエージェント稼働の実現が巨大な市場機会を生むと語っている（同）。第三に、Appleは最新の年次報告書（10-K）において、AIエージェントが権限を逸脱したり、指示に抵抗したり、容易に覆せない不測の行動をとるリスクについて強い警戒感を表明した（CNBC）。第四に、MIT Tech Review等の報道によれば、暴走を防ぐための「逆ゲーム理論（メカニズムデザイン）」を用いた安全アライメントの研究も活発化している（MIT Tech Review）。これらの事実は、AIが単なる「賢いチャットボット」の段階を抜け出し、自律的に権限を行使するエージェントとして企業インフラに組み込まれ始めた実態と、それに伴う制御リスクの顕在化を直接的に示している。",
+    "opinion_summary": "【解釈】この変化がもたらす最大の意味は、AIの収益化と導入のボトルネックが「計算資源の不足やモデルの頭脳の限界」から「企業システムにおけるガバナンスと責任の所在」へと完全にシフトした点にある。過去には、どれだけ高度な推論ができるか、あるいはコストパフォーマンスが優れているかが導入の唯一の基準であった。しかし、CiscoやHeimstadenのように実務のコアプロセスや物理設計にAIが深く組み込まれるにつれ、エージェントがシステム権限を過剰に行使したり、予期せぬ挙動を示したりするリスクは、企業にとって致命的な事業継続リスク（BCR）となる。CrowdStrikeがキルスイッチを投入し、Appleがリスクを公に警告したことは、まさにこの「暴走の恐怖」がエンタープライズ市場における最大の導入障壁になりつつあることを裏付けている。つまり、現在の競争は、いかに優れた自律エージェントを作るかというフェーズから、いかに信頼性の高い「安全装置」をセットで提供できるかというガバナンスの囲い込み競争へと変質していると解釈できる。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、セキュリティ企業による「キルスイッチ」や警告が、単なるマーケティング上の差別化戦術（FUD: 恐怖・不確実性・doubtの煽り）に過ぎない可能性を考慮する必要がある。もし、実際の企業導入現場において自律エージェントの暴走事故が統計的にごく一部の例外にとどまり、強固なサンドボックス環境や既存の権限管理（IAM）だけで十分に制御可能であることが証明された場合、「統御のインフラ」という特殊なセキュリティ市場の優位性は薄れる。また、オープンソースのAIエージェントフレームワークが極めて高い自己修復・自己検証能力を標準装備し、サードパーティのキルスイッチに依存しない自律分散型の安全性を証明した場合、中央集権的なセキュリティベンダーが主導権を握るという見立ては崩れる。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI News｜How Cisco defends at machine speed with OpenAI",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/cisco-cyber",
+        "point": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more "
+      },
+      {
+        "rank": 2,
+        "title": "OpenAI News｜Heimstaden is changing residential real estate management with AI",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/heimstaden",
+        "point": "Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empo"
+      },
+      {
+        "rank": 3,
+        "title": "OpenAI News｜Accelerating engineering for the physical world",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+        "point": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across "
+      },
+      {
+        "rank": 4,
+        "title": "CNBC Tech｜CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/03/crowdstrike-ai-kill-switch-rogue-agents.html",
+        "point": "CrowdStrike launched an AI kill switch that the company says can stop internal agents, block relaunches and cut enterpri"
+      },
+      {
+        "rank": 5,
+        "title": "CNBC Tech｜Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/03/apple-warns-of-ai-agents-behave-in-unintended-or-unpredictable-ways.html",
+        "point": "Apple’s annual filing warns that AI agents could exceed permissions, resist instructions or take actions that are diffic"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "自律型AIエージェントの暴走リスクが浮上、実務防衛フェーズへ",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://openai.com/index/cisco-cyber",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI競争の主軸は、もはやモデルの性能やパラメータ数の拡大ではなく、自律型エージェント（人間の指示を受けて自ら判断・実行するAIシステム）が予期せぬ行動をとった際にいかに制御・停止するかという「統御のインフラ」の確保へ完全に移行した。今日の複数の一次情報は、サイバーセキュリティ企業による「キルスイッチ」の投入や、大手プラットフォーマーによるリスク警告が同時多発している事実を伝えている。AIが実験室から実務の現場や物理世界へ本格実装されるにつれ、企業が直面する最大の関心事は「いかに効率化するか」から「いかに暴走を防ぐか」へと転換した。本稿では、この安全統御と実務実装の緊張関係から、競争のルールがどこで変わり始めたかを読み解く。\n\n【事実】足元の動向を示す複数の一次情報から、AIの活用領域がサイバーセキュリティや物理設計といった実務の深部に到達する一方、自律エージェントの制御不全に対する危機感が表面化していることが確認できる。第一に、OpenAI社はCiscoによるネットワークセキュリティの自動化や、Heimstadenによる欧州の不動産管理、さらには物理世界におけるCADやPCB設計などのエンジニアリング加速事例を相次いで発表している（OpenAI News）。第二に、サイバーセキュリティ大手のCrowdStrikeは、企業ネットワーク内で暴走した内部エージェントを即座に停止し、再接続やネットワークアクセスを遮断する「AIキルスイッチ」を市場投入した（CNBC）。CEOのGeorge Kurtz氏は、安全なエージェント稼働の実現が巨大な市場機会を生むと語っている（同）。第三に、Appleは最新の年次報告書（10-K）において、AIエージェントが権限を逸脱したり、指示に抵抗したり、容易に覆せない不測の行動をとるリスクについて強い警戒感を表明した（CNBC）。第四に、MIT Tech Review等の報道によれば、暴走を防ぐための「逆ゲーム理論（メカニズムデザイン）」を用いた安全アライメントの研究も活発化している（MIT Tech Review）。これらの事実は、AIが単なる「賢いチャットボット」の段階を抜け出し、自律的に権限を行使するエージェントとして企業インフラに組み込まれ始めた実態と、それに伴う制御リスクの顕在化を直接的に示している。\n\n【解釈】この変化がもたらす最大の意味は、AIの収益化と導入のボトルネックが「計算資源の不足やモデルの頭脳の限界」から「企業システムにおけるガバナンスと責任の所在」へと完全にシフトした点にある。過去には、どれだけ高度な推論ができるか、あるいはコストパフォーマンスが優れているかが導入の唯一の基準であった。しかし、CiscoやHeimstadenのように実務のコアプロセスや物理設計にAIが深く組み込まれるにつれ、エージェントがシステム権限を過剰に行使したり、予期せぬ挙動を示したりするリスクは、企業にとって致命的な事業継続リスク（BCR）となる。CrowdStrikeがキルスイッチを投入し、Appleがリスクを公に警告したことは、まさにこの「暴走の恐怖」がエンタープライズ市場における最大の導入障壁になりつつあることを裏付けている。つまり、現在の競争は、いかに優れた自律エージェントを作るかというフェーズから、いかに信頼性の高い「安全装置」をセットで提供できるかというガバナンスの囲い込み競争へと変質していると解釈できる。\n\n【競争の構図】\n【OpenAI】\nCisco、Heimstaden、物理エンジニアリングなど、企業の基幹業務や物理設計へのエージェント導入事例を相次いで発表（OpenAI News）。\n→ 実務への深い食い込みにより圧倒的な流通優位性を築く一方、導入先でのトラブルがそのまま同社のブランドリスクに直結する構造にある。\n\n【CrowdStrike】\n企業内部で暴走したAIエージェントを即座に停止する業界初の「AIキルスイッチ」を市場投入（CNBC）。\n→ エージェントの普及に伴うセキュリティ市場の新たな主導権を握り、安全保障・統御レイヤーにおける不可欠なインフラとしての地位を狙う。\n\n【Apple】\n年次報告書において、AIエージェントが権限を逸脱したり予測不可能な行動をとったりするリスクについて公式に警告（CNBC）。\n→ コンシューマーおよびデバイス側のプラットフォーマーとして、過度な自律化に対する慎重姿勢を鮮明にし、安全性で差別化を図る。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）段階にあるAIプロジェクトの「権限範囲」と「緊急停止プロトコル」の定義である。多くの日本企業は、業務効率化を急ぐあまり、社内データベースや外部APIへのアクセス権限を十分に切り分けず、生成AIやエージェントツールを野放図に接続しがちである。今回のCrowdStrikeやAppleの動きに鑑み、CIOや情報システム部門は、導入中のAIエージェントが「暴走した際にどのネットワークやデータを遮断すべきか」という物理的・論理的なキルスイッチの有無を直ちに監査すべきである。単なる利便性の追求から、ガバナンスを前提とした調達基準へと舵を切るタイミングに来ている。\n\n【反証・留保】この見立てを過大評価しないための条件として、セキュリティ企業による「キルスイッチ」や警告が、単なるマーケティング上の差別化戦術（FUD: 恐怖・不確実性・doubtの煽り）に過ぎない可能性を考慮する必要がある。もし、実際の企業導入現場において自律エージェントの暴走事故が統計的にごく一部の例外にとどまり、強固なサンドボックス環境や既存の権限管理（IAM）だけで十分に制御可能であることが証明された場合、「統御のインフラ」という特殊なセキュリティ市場の優位性は薄れる。また、オープンソースのAIエージェントフレームワークが極めて高い自己修復・自己検証能力を標準装備し、サードパーティのキルスイッチに依存しない自律分散型の安全性を証明した場合、中央集権的なセキュリティベンダーが主導権を握るという見立ては崩れる。",
+        "context": "【次の観測点】\n・主要なエンタープライズ向けSaaSおよびセキュリティベンダーからの「AI統御・キルスイッチ型製品」の追加発表の有無\n・大規模な自律AIエージェントの暴走に起因する企業システム障害や法的トラブルの発生有無\n・米欧の規制当局による自律型AIエージェントの権限行使に関する新たなガイドラインや法的責任の明確化"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "The Verge AI",
+      "title": "The biggest modding site in PC gaming is taking a stance on AI",
+      "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
+      "summary": "The PC gaming mods repository Nexus Mods is making disclosures about AI mandatory for uploads of new mods, meaning that mod authors will have to declare \"whether AI has been used in their work,\" the site announced today as part of a big post about AI-generated content on the platform. \"One of the most consistent [&#8230;]",
+      "published": "2026-11-04 00:42 UTC",
+      "pub_dt": "2026-11-04T00:42:10+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Google responds to political backlash over removing search from schools that ban AI",
+      "url": "https://www.cnbc.com/2026/11/03/google-responds-to-outrage-over-removing-search-in-schools-that-ban-ai.html",
+      "summary": "After elected officials voiced outrage over Google turning off search at schools that ban AI, the company said search can be turned back on with AI Overviews.",
+      "published": "2026-11-04 00:10 UTC",
+      "pub_dt": "2026-11-04T00:10:07+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "OpenAI and Anthropic Set Up ‘War Rooms’ to Fight Disinfo About Midterm Elections",
+      "url": "https://www.nytimes.com/2026/11/03/business/ai-midterm-election-misinformation.html",
+      "summary": "OpenAI, Anthropic and other tech companies have vowed to protect Tuesday’s elections from efforts to undermine democracy.",
+      "published": "2026-11-03 23:39 UTC",
+      "pub_dt": "2026-11-03T23:39:55+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Please stop asking me when the AI bubble will pop",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1025826/ai-bubble-pimco-apollo-bonds",
+      "summary": "People, including on this staff, keep asking me with varying degrees of excitement or trepidation when the AI bubble will burst. I'll tell you what I tell them: If I knew that, I would make a life-changing bet on the market, levered up as far as I could, and then, after I made my money, [&#8230;]",
+      "published": "2026-11-03 23:37 UTC",
+      "pub_dt": "2026-11-03T23:37:45+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "CrowdStrike's new kill switch can stop rogue AI agents in their tracks, CEO says",
+      "url": "https://www.cnbc.com/2026/11/03/crowdstrikes-new-kill-switch-can-stop-rogue-ai-agents-in-their-tracks-ceo-says.html",
+      "summary": "\"Enabling agents to work safely is a massive market opportunity for CrowdStrike,\" CrowdStrike CEO George Kurtz told CNBC's Jim Cramer.",
+      "published": "2026-11-03 23:37 UTC",
+      "pub_dt": "2026-11-03T23:37:07+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "AMD stock jumps 8% on earnings as data center revenue nearly doubles",
+      "url": "https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html",
+      "summary": "AMD reported better-than-expected third-quarter results, driven by booming sales of AI chips",
+      "published": "2026-11-03 23:04 UTC",
+      "pub_dt": "2026-11-03T23:04:37+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Anthropic is working on a system to prove AI models’ identity",
+      "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+      "summary": "Called FlashProve, the system would let anyone check that an AI response really came from the model it claims to be from.",
+      "published": "2026-11-03 22:41 UTC",
+      "pub_dt": "2026-11-03T22:41:03+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Data centers are turning to old jet engines as the wait for power grows",
+      "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
+      "summary": "The years-long wait for access to the grid and new turbines is causing data center builders to turn to an unusual, less-efficient and less environmentally friendly solution: once-discarded jet engines.",
+      "published": "2026-11-03 22:19 UTC",
+      "pub_dt": "2026-11-03T22:19:53+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
+      "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
+      "summary": "Cybersecurity-focused Ballistic Ventures is seeking to raise $360 million for a new flagship fund and another $130 million for a separate investment vehicle.",
+      "published": "2026-11-03 21:43 UTC",
+      "pub_dt": "2026-11-03T21:43:08+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue",
+      "url": "https://www.cnbc.com/2026/11/03/crowdstrike-ai-kill-switch-rogue-agents.html",
+      "summary": "CrowdStrike launched an AI kill switch that the company says can stop internal agents, block relaunches and cut enterprise network access.",
+      "published": "2026-11-03 20:27 UTC",
+      "pub_dt": "2026-11-03T20:27:21+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Apple starts giving Siri AI access to third-party apps",
+      "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
+      "summary": "Apple will now let Siri AI perform actions across third-party apps. As part of the iOS 27.3 update rolling out on Tuesday, Apple announced developers can now integrate Siri AI's new features in \"all apps,\" allowing the voice assistant to draw on a user's personal context, process natural language prompts, and use on-screen awareness to [&#8230;]",
+      "published": "2026-11-03 20:16 UTC",
+      "pub_dt": "2026-11-03T20:16:17+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways",
+      "url": "https://www.cnbc.com/2026/11/03/apple-warns-of-ai-agents-behave-in-unintended-or-unpredictable-ways.html",
+      "summary": "Apple’s annual filing warns that AI agents could exceed permissions, resist instructions or take actions that are difficult to reverse.",
+      "published": "2026-11-03 20:10 UTC",
+      "pub_dt": "2026-11-03T20:10:41+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "AI inference startup Fal doubles its valuation to $16B as demand surges",
+      "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+      "summary": "The five-year-old startup raised a $1.3  billion round led by Bessemer.",
+      "published": "2026-11-03 19:34 UTC",
+      "pub_dt": "2026-11-03T19:34:43+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "IEEE Computer Society Chapter Offers Webinars With Industry Experts",
+      "url": "https://spectrum.ieee.org/ieee-industry-experts-webinar",
+      "summary": "To help engineers keep up with emerging technologies such as AI, cloud computing, and sustainable infrastructure, and learn how they can be applied in practice, the IEEE Computer Society’s Central Indiana Chapter recently launched its Tech Talk Series.The live webinar series connects IEEE members, undergrad and graduate students, and engineering professionals from IEEE Region 4 with industry practitioners. The monthly sessions have covered AI governance and security, agentic systems, and related",
+      "published": "2026-11-03 19:00 UTC",
+      "pub_dt": "2026-11-03T19:00:02+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "Google Launches LiteRT Tensor API for Building, Customizing, and Optimizing ML Models for On-Device",
+      "url": "https://www.infoq.com/news/2026/11/litert-tensor-api/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "Google has introduced the LiteRT Tensor API, a lightweight C++ API that allows developers to build, customize, and optimize machine learning models directly for on-device execution. According to Google, it combines the flexibility of native model authoring with cross-platform portability. By Sergio De Simone",
+      "published": "2026-11-03 19:00 UTC",
+      "pub_dt": "2026-11-03T19:00:00+00:00"
+    }
+  ]
+}
