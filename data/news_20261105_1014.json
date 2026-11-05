@@ -1,0 +1,246 @@
+{
+  "timestamp": "2026-11-05T10:14:56.037040+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "米中間選挙とAIインフラの衝突：電力制約が変える開発主導権",
+    "thesis": "米中間選挙でのデータセンター反対運動とAMDの好決算が示す通り、AI競争のボトルネックは計算資源の確保から電力・地域の受容性へと移行し、実装の効率化を迫られています。",
+    "opening": "【結論】AI開発の主導権は、単なるモデルの巨大化から「電力とインフラ制約をどう突破するか」の実装力へシフトしました。本稿では、米中間選挙におけるデータセンターへの有権者の反発、ハードウェア需要の持続を示すAMDの決算、そしてOpenAIによるセキュリティ自動化やコード解析ツール買収などの動きを一つの論点として読み解きます。かつてシリコンバレーが描いた無制限なスケーリングの神話は、いまや地域社会の電力負荷と政治的圧力という現実の壁に直面しています。企業はインフラの膨張を許されない環境下で、エージェントの実装やセキュリティの効率化へと舵を切らざるを得なくなっています。",
+    "what_happened": "【事実】足元の動向は、インフラの制約とそれを克服しようとするソフトウェア側の自動化という二つの軸で動いています。第一に、インフラと政治を巡る動きです。CNBCやAxios、NYタイムズなどの報道によると、2026年の中間選挙では、有権者が高騰するエネルギー価格や電力網への負担に対する不満を背景に、データセンターの建設やプロジェクトに対して厳しい審判を下しました。テキサス州をはじめとする激戦地で民主党が勝利し、データセンターのモラトリアムや規制強化を掲げる候補者が支持を集めた結果、テキサスを中心としたAIインフラの急速な拡張計画に黄信号が灯りました。一方で、CNBCの報道では、AMDの第3四半期データセンター売上高がほぼ倍増し、CEOの蘇姿豊氏が成長の加速を予想するなど、AIチップのハードウェア需要自体は依然として旺盛です。第二に、AI企業による実装とセキュリティの自動化です。OpenAIは公式発表で、Linuxカーネルのローカル特権昇格脆弱性948件を自律型パイプラインで発見・検証・修正した実績を公表しました。さらにOpenAIは、コードの構築・理解・レビューツールを拡張するため、Pierre Computer Companyの買収を発表したほか、米政府向けAWS GovCloud（US-East）のAmazon Bedrockを通じてサイバーセキュリティ向け「Daybreak Red（GPT-5.6 Cyber）」の提供を開始しました。オープンソースコミュニティや競合陣営でも変化が見られます。OpenClawのGitHubリリースでは、エージェント間で再利用可能なナレッジキャプチャ機能やPostgreSQLバックエンドの状態管理が追加され、Qwenコードのリポジトリでもセッション管理やストレージロックの最適化が進められています。",
+    "why_now": "【解釈】今回の変化は、AIの収益化とインフラストラクチャの双方において「無制限の拡大」から「制約下での最適化」への構造転換を意味します。これまでビッグテックは、無限に電力を消費するデータセンターを各地に建設し、モデルの規模を拡大することで性能を競ってきました。しかし、中間選挙における有権者の反発と電力コストの高騰は、地域社会の合意形成なしにはインフラの拡張が不可能であることを突きつけました。これにより、ハードウェアの調達コストや電力供給の限界が、そのままAIサービスの展開速度を制限するボトルネックとなります。この制約下で生き残るため、OpenAIのような主要プレイヤーは、単なるモデルの推論能力の向上だけでなく、コード修正の自動化やサイバーセキュリティ、エージェントの処理効率化といった「省リソースで高い実用性を生むソフトウェア」への投資を急ピッチで進めています。つまり、計算資源の拡大が政治・物理的な壁に阻まれる中、競争の優劣は「どれだけ効率よくAIを社会実装し、自律的に価値を回収できるか」という実装の洗練度によって決まる局面に入ったと読めます。",
+    "counterpoint": "【反証・留保】この見立てが過大評価に終わる条件は、政治的逆風が一時的なものに留まり、次世代の原子力発電や送電網の近代化が一気に進む場合です。もしBig Techが独自の小型モジュール炉（SMR）や専用電源の確保に成功し、法規制の網を巧みに潜り抜けた場合、再び大規模なデータセンターの拡張競争が加速する可能性があります。また、有権者の反発が一部の地域的な現象に過ぎず、連邦レベルでの強力な足止めにつながらなかった場合も、インフラ制約を前提とした今回の悲観論は修正を迫られることになります。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、クラウドの無制限な拡張やGPUの力技によるAI活用モデルの前提を捨てるべきです。今週見直すべきは、自社が導入・運用するAIエージェントや生成AIツールが、どれだけ省リソースで確実なセキュリティ担保やコード・データの管理を行えるかという「実装の効率性」の評価基準です。電力事情や立地制約の厳しい国内において、巨大なオンプレミス型インフラに依存する計画は政治・コスト面でリスクが高いため、マネージドサービスや効率化されたオープンソースモデルを組み合わせた、ROI（投資対効果）の明確なシステムアーキテクチャへの移行を急ぐべきです。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "Pierre Computerの買収によるコード生成ツールの強化に加え、自律型パイプラインによる脆弱性修正やAWS GovCloudを通じたサイバーセキュリティ特化型モデルの展開を加速している。",
+        "implication": "モデルの規模拡大に伴う電力・インフラの外部制約が強まる中、セキュリティやコードレビューといった実務特化型の自動化で高い付加価値を回収する体制を固めつつある。"
+      },
+      {
+        "company": "AMD",
+        "status": "第3四半期のデータセンター売上高がほぼ倍増し、経営陣は今後のさらなる成長を予測している。",
+        "implication": "AIインフラへの政治的・電力的な逆風が叫ばれる一方で、AIチップ自体の需要は依然として強く、ハードウェアサプライチェーンにおける存在感を維持している。"
+      },
+      {
+        "company": "OpenClaw / Qwen陣営",
+        "status": "エージェント間のナレッジ共有機能の強化や、データベースバックエンドの安定化、マネージドエージェントのパフォーマンス最適化を継続的にリリースしている。",
+        "implication": "オープンソースおよびコミュニティベースのエージェント開発においても、機能の派手さより、実務での耐障害性や状態管理の堅牢性を重視する方向へ移行している。"
+      }
+    ],
+    "next_signals": [
+      "米国各州におけるデータセンター建設モラトリアムや新規規制法案の具体的な成立件数",
+      "ビッグテックによる電力確保（SMRや専用送電網の提携）に関する次の一手",
+      "OpenAIや主要プレイヤーによるセキュリティ・コード自動化ツールの実ビジネスへの導入事例と価格設定"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+        "url": "https://openai.com/index/openai-to-acquire-pierre"
+      },
+      {
+        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+        "url": "https://openai.com/index/daybreak-red-aws-govcloud"
+      },
+      {
+        "title": "openclaw 2026.11.5-beta.1",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.1"
+      },
+      {
+        "title": "Release v0.26.7-nightly.20261104.b9e20830f7",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7-nightly.20261104.b9e20830f7"
+      },
+      {
+        "title": "A thousand fewer paths to root",
+        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root"
+      },
+      {
+        "title": "AMD's data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate",
+        "url": "https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html"
+      },
+      {
+        "title": "Voters Rejected A.I. in the Midterms. Now Comes an Era of Scrutiny.",
+        "url": "https://www.nytimes.com/2026/11/04/technology/midterm-elections-ai-data-centers.html"
+      },
+      {
+        "title": "Voters rebuff data centers in every ballot measure except one during the 2026 midterms",
+        "url": "https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html"
+      }
+    ],
+    "news_summary": "米中間選挙でのデータセンター反対運動とAMDの好決算が示す通り、AI競争のボトルネックは計算資源の確保から電力・地域の受容性へと移行し、実装の効率化を迫られています。\n\n【事実】足元の動向は、インフラの制約とそれを克服しようとするソフトウェア側の自動化という二つの軸で動いています。第一に、インフラと政治を巡る動きです。CNBCやAxios、NYタイムズなどの報道によると、2026年の中間選挙では、有権者が高騰するエネルギー価格や電力網への負担に対する不満を背景に、データセンターの建設やプロジェクトに対して厳しい審判を下しました。テキサス州をはじめとする激戦地で民主党が勝利し、データセンターのモラトリアムや規制強化を掲げる候補者が支持を集めた結果、テキサスを中心としたAIインフラの急速な拡張計画に黄信号が灯りました。一方で、CNBCの報道では、AMDの第3四半期データセンター売上高がほぼ倍増し、CEOの蘇姿豊氏が成長の加速を予想するなど、AIチップのハードウェア需要自体は依然として旺盛です。第二に、AI企業による実装とセキュリティの自動化です。OpenAIは公式発表で、Linuxカーネルのローカル特権昇格脆弱性948件を自律型パイプラインで発見・検証・修正した実績を公表しました。さらにOpenAIは、コードの構築・理解・レビューツールを拡張するため、Pierre Computer Companyの買収を発表したほか、米政府向けAWS GovCloud（US-East）のAmazon Bedrockを通じてサイバーセキュリティ向け「Daybreak Red（GPT-5.6 Cyber）」の提供を開始しました。オープンソースコミュニティや競合陣営でも変化が見られます。OpenClawのGitHubリリースでは、エージェント間で再利用可能なナレッジキャプチャ機能やPostgreSQLバックエンドの状態管理が追加され、Qwenコードのリポジトリでもセッション管理やストレージロックの最適化が進められています。",
+    "opinion_summary": "【解釈】今回の変化は、AIの収益化とインフラストラクチャの双方において「無制限の拡大」から「制約下での最適化」への構造転換を意味します。これまでビッグテックは、無限に電力を消費するデータセンターを各地に建設し、モデルの規模を拡大することで性能を競ってきました。しかし、中間選挙における有権者の反発と電力コストの高騰は、地域社会の合意形成なしにはインフラの拡張が不可能であることを突きつけました。これにより、ハードウェアの調達コストや電力供給の限界が、そのままAIサービスの展開速度を制限するボトルネックとなります。この制約下で生き残るため、OpenAIのような主要プレイヤーは、単なるモデルの推論能力の向上だけでなく、コード修正の自動化やサイバーセキュリティ、エージェントの処理効率化といった「省リソースで高い実用性を生むソフトウェア」への投資を急ピッチで進めています。つまり、計算資源の拡大が政治・物理的な壁に阻まれる中、競争の優劣は「どれだけ効率よくAIを社会実装し、自律的に価値を回収できるか」という実装の洗練度によって決まる局面に入ったと読めます。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価に終わる条件は、政治的逆風が一時的なものに留まり、次世代の原子力発電や送電網の近代化が一気に進む場合です。もしBig Techが独自の小型モジュール炉（SMR）や専用電源の確保に成功し、法規制の網を巧みに潜り抜けた場合、再び大規模なデータセンターの拡張競争が加速する可能性があります。また、有権者の反発が一部の地域的な現象に過ぎず、連邦レベルでの強力な足止めにつながらなかった場合も、インフラ制約を前提とした今回の悲観論は修正を迫られることになります。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/openai-to-acquire-pierre",
+        "point": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code."
+      },
+      {
+        "rank": 2,
+        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+        "point": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized "
+      },
+      {
+        "rank": 3,
+        "title": "openclaw 2026.11.5-beta.1",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.1",
+        "point": "2026.11.5-beta.1\nHighlights\n\nKnowledge Scribes: add first-class knowledge capture and reusable scribe workflows across a"
+      },
+      {
+        "rank": 4,
+        "title": "Release v0.26.7-nightly.20261104.b9e20830f7",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7-nightly.20261104.b9e20830f7",
+        "point": "What's Changed\n\ntest(integration): keep ACP parity runtime state out of the workspace (#16251) by @qwen-code-dev-bot in "
+      },
+      {
+        "rank": 5,
+        "title": "A thousand fewer paths to root",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+        "point": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vuln"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "米中間選挙とAIインフラの衝突：電力制約が変える開発主導権",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://openai.com/index/openai-to-acquire-pierre",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI開発の主導権は、単なるモデルの巨大化から「電力とインフラ制約をどう突破するか」の実装力へシフトしました。本稿では、米中間選挙におけるデータセンターへの有権者の反発、ハードウェア需要の持続を示すAMDの決算、そしてOpenAIによるセキュリティ自動化やコード解析ツール買収などの動きを一つの論点として読み解きます。かつてシリコンバレーが描いた無制限なスケーリングの神話は、いまや地域社会の電力負荷と政治的圧力という現実の壁に直面しています。企業はインフラの膨張を許されない環境下で、エージェントの実装やセキュリティの効率化へと舵を切らざるを得なくなっています。\n\n【事実】足元の動向は、インフラの制約とそれを克服しようとするソフトウェア側の自動化という二つの軸で動いています。第一に、インフラと政治を巡る動きです。CNBCやAxios、NYタイムズなどの報道によると、2026年の中間選挙では、有権者が高騰するエネルギー価格や電力網への負担に対する不満を背景に、データセンターの建設やプロジェクトに対して厳しい審判を下しました。テキサス州をはじめとする激戦地で民主党が勝利し、データセンターのモラトリアムや規制強化を掲げる候補者が支持を集めた結果、テキサスを中心としたAIインフラの急速な拡張計画に黄信号が灯りました。一方で、CNBCの報道では、AMDの第3四半期データセンター売上高がほぼ倍増し、CEOの蘇姿豊氏が成長の加速を予想するなど、AIチップのハードウェア需要自体は依然として旺盛です。第二に、AI企業による実装とセキュリティの自動化です。OpenAIは公式発表で、Linuxカーネルのローカル特権昇格脆弱性948件を自律型パイプラインで発見・検証・修正した実績を公表しました。さらにOpenAIは、コードの構築・理解・レビューツールを拡張するため、Pierre Computer Companyの買収を発表したほか、米政府向けAWS GovCloud（US-East）のAmazon Bedrockを通じてサイバーセキュリティ向け「Daybreak Red（GPT-5.6 Cyber）」の提供を開始しました。オープンソースコミュニティや競合陣営でも変化が見られます。OpenClawのGitHubリリースでは、エージェント間で再利用可能なナレッジキャプチャ機能やPostgreSQLバックエンドの状態管理が追加され、Qwenコードのリポジトリでもセッション管理やストレージロックの最適化が進められています。\n\n【解釈】今回の変化は、AIの収益化とインフラストラクチャの双方において「無制限の拡大」から「制約下での最適化」への構造転換を意味します。これまでビッグテックは、無限に電力を消費するデータセンターを各地に建設し、モデルの規模を拡大することで性能を競ってきました。しかし、中間選挙における有権者の反発と電力コストの高騰は、地域社会の合意形成なしにはインフラの拡張が不可能であることを突きつけました。これにより、ハードウェアの調達コストや電力供給の限界が、そのままAIサービスの展開速度を制限するボトルネックとなります。この制約下で生き残るため、OpenAIのような主要プレイヤーは、単なるモデルの推論能力の向上だけでなく、コード修正の自動化やサイバーセキュリティ、エージェントの処理効率化といった「省リソースで高い実用性を生むソフトウェア」への投資を急ピッチで進めています。つまり、計算資源の拡大が政治・物理的な壁に阻まれる中、競争の優劣は「どれだけ効率よくAIを社会実装し、自律的に価値を回収できるか」という実装の洗練度によって決まる局面に入ったと読めます。\n\n【競争の構図】\n【OpenAI】\nPierre Computerの買収によるコード生成ツールの強化に加え、自律型パイプラインによる脆弱性修正やAWS GovCloudを通じたサイバーセキュリティ特化型モデルの展開を加速している。\n→ モデルの規模拡大に伴う電力・インフラの外部制約が強まる中、セキュリティやコードレビューといった実務特化型の自動化で高い付加価値を回収する体制を固めつつある。\n\n【AMD】\n第3四半期のデータセンター売上高がほぼ倍増し、経営陣は今後のさらなる成長を予測している。\n→ AIインフラへの政治的・電力的な逆風が叫ばれる一方で、AIチップ自体の需要は依然として強く、ハードウェアサプライチェーンにおける存在感を維持している。\n\n【OpenClaw / Qwen陣営】\nエージェント間のナレッジ共有機能の強化や、データベースバックエンドの安定化、マネージドエージェントのパフォーマンス最適化を継続的にリリースしている。\n→ オープンソースおよびコミュニティベースのエージェント開発においても、機能の派手さより、実務での耐障害性や状態管理の堅牢性を重視する方向へ移行している。",
+        "why_matters": "【日本の実務への示唆】日本企業は、クラウドの無制限な拡張やGPUの力技によるAI活用モデルの前提を捨てるべきです。今週見直すべきは、自社が導入・運用するAIエージェントや生成AIツールが、どれだけ省リソースで確実なセキュリティ担保やコード・データの管理を行えるかという「実装の効率性」の評価基準です。電力事情や立地制約の厳しい国内において、巨大なオンプレミス型インフラに依存する計画は政治・コスト面でリスクが高いため、マネージドサービスや効率化されたオープンソースモデルを組み合わせた、ROI（投資対効果）の明確なシステムアーキテクチャへの移行を急ぐべきです。\n\n【反証・留保】この見立てが過大評価に終わる条件は、政治的逆風が一時的なものに留まり、次世代の原子力発電や送電網の近代化が一気に進む場合です。もしBig Techが独自の小型モジュール炉（SMR）や専用電源の確保に成功し、法規制の網を巧みに潜り抜けた場合、再び大規模なデータセンターの拡張競争が加速する可能性があります。また、有権者の反発が一部の地域的な現象に過ぎず、連邦レベルでの強力な足止めにつながらなかった場合も、インフラ制約を前提とした今回の悲観論は修正を迫られることになります。",
+        "context": "【次の観測点】\n・米国各州におけるデータセンター建設モラトリアムや新規規制法案の具体的な成立件数\n・ビッグテックによる電力確保（SMRや専用送電網の提携）に関する次の一手\n・OpenAIや主要プレイヤーによるセキュリティ・コード自動化ツールの実ビジネスへの導入事例と価格設定"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "Wired",
+      "title": "The Blue Wave Has Tech Bros Scrambling for Data Centers in Space",
+      "url": "https://www.wired.com/story/the-blue-wave-has-tech-bros-scrambling-for-data-centers-in-space/",
+      "summary": "After Democrats won big in Texas and other AI infrastructure hot spots on Tuesday, data center enthusiasts looked for comfort in low Earth orbit.",
+      "published": "2026-11-04 23:13 UTC",
+      "pub_dt": "2026-11-04T23:13:14+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Figma sinks after earnings beat as company prioritizes long-term growth with AI changes",
+      "url": "https://www.cnbc.com/2026/11/04/figma-fig-q3-earnings-report-2026.html",
+      "summary": "Figma is letting clients use more artificial intelligence features for the same price. The company would like the move to boost results in the long term.",
+      "published": "2026-11-04 23:02 UTC",
+      "pub_dt": "2026-11-04T23:02:39+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "AI PACs spent millions trying to shape Congress — here’s how they fared",
+      "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/",
+      "summary": "AI industry PACs spent millions influencing the 2026 midterms, with mixed results. Political groups are already looking toward the next election cycle.",
+      "published": "2026-11-04 22:45 UTC",
+      "pub_dt": "2026-11-04T22:45:09+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Qualcomm is betting big on data centers as smartphone sales sink",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
+      "summary": "With smartphone sales tanking by around 20 percent compared to 2025, Qualcomm is looking to data centers to help boost its bottom line. During its Q4 2026 earnings call, the company laid out its plans to make a splash in the AI data center business, through partnerships with companies like Amazon and Meta announced earlier [&#8230;]",
+      "published": "2026-11-04 22:42 UTC",
+      "pub_dt": "2026-11-04T22:42:15+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Voters rebuff data centers in every ballot measure except one during the 2026 midterms",
+      "url": "https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html",
+      "summary": "Voters in the states at the heart of the AI data center boom pushed back on the buildout on Election Night.",
+      "published": "2026-11-04 22:29 UTC",
+      "pub_dt": "2026-11-04T22:29:51+00:00"
+    },
+    {
+      "source": "Qwen GitHub",
+      "title": "Release v0.26.7-nightly.20261104.b9e20830f7",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7-nightly.20261104.b9e20830f7",
+      "summary": "What's Changed\n\ntest(integration): keep ACP parity runtime state out of the workspace (#16251) by @qwen-code-dev-bot in #16254\nfix(ci): resume linter archive downloads by @yiliang114 in #16067\nfix(ci): repin the RHEL 10 rpm root to the current stream10 digest by @yiliang114 in #16261\nperf(managed-agent): queue journal commits on the Session row instead of the tenant lock by @doudouOUC in #16256\nperf(managed-agent): narrow output, lifecycle, and storage lock scopes by @doudouOUC in #16268\ntest(in",
+      "published": "2026-11-04 22:26 UTC",
+      "pub_dt": "2026-11-04T22:26:06+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
+      "url": "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/",
+      "summary": "While it's not yet clear what kind of product the smartphone startup is cooking up, Nothing's CEO said the product is designed to leverage AI for productivity gains.",
+      "published": "2026-11-04 22:13 UTC",
+      "pub_dt": "2026-11-04T22:13:16+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Almost no one uses AI agents to book their Uber, company says",
+      "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+      "summary": "During its busiest week last quarter, Uber said only four people booked a ride using an AI agent.",
+      "published": "2026-11-04 21:56 UTC",
+      "pub_dt": "2026-11-04T21:56:01+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI is already trying to shape the 2028 election",
+      "url": "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/",
+      "summary": "OpenAI’s Chris Lehane wants AI to define the 2028 election, proposing a new social contract that could benefit Americans while also advancing the AI giant’s own business interests.",
+      "published": "2026-11-04 21:25 UTC",
+      "pub_dt": "2026-11-04T21:25:44+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Meta acquires AI coding startup Conductor",
+      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+      "summary": "The startup allows software engineers to deploy teams of agents to work on various aspects of a project simultaneously.",
+      "published": "2026-11-04 21:10 UTC",
+      "pub_dt": "2026-11-04T21:10:56+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "The Biggest Pro-AI Super PAC Network Didn’t Really Impact the Midterms",
+      "url": "https://www.wired.com/story/the-biggest-pro-ai-super-pac-network-didnt-really-impact-the-midterms/",
+      "summary": "Leading the Future, backed by Silicon Valley’s biggest billionaires, had a war chest of $100 million and an aggressive stance against AI regulation. All of it didn’t add up to much on Tuesday night.",
+      "published": "2026-11-04 20:41 UTC",
+      "pub_dt": "2026-11-04T20:41:29+00:00"
+    },
+    {
+      "source": "AI Business",
+      "title": "What AI's growing share of tech spending means for enterprises in 2027",
+      "url": "https://aibusiness.com/generative-ai/what-ai-s-growing-share-tech-spending-means-enterprises-2027",
+      "summary": "AI spending is reshaping enterprise IT budgets. How CIOs can manage rising costs, prioritize investments and measure returns beyond productivity gains.",
+      "published": "2026-11-04 20:23 UTC",
+      "pub_dt": "2026-11-04T20:23:30+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Gemini for Home now plugs into AT&#038;T’s smart security system",
+      "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
+      "summary": "AT&#38;T's smart home security system now integrates with Gemini for Home. The company says its Connected Life system is the \"first\" home security product to integrate with Google Home Premium, enabling a bunch of Gemini-powered features that can summarize home events, search your video history, and more. With the update, Gemini for Home can provide [&#8230;]",
+      "published": "2026-11-04 20:23 UTC",
+      "pub_dt": "2026-11-04T20:23:24+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Google Is Forcing AI Overviews in Classrooms. Schools Are Searching for a Way Out",
+      "url": "https://www.wired.com/story/google-is-forcing-ai-overviews-in-classrooms-schools-are-searching-for-a-way-out/",
+      "summary": "Google is tying up AI Overviews with traditional search, angering parents and educators who worry that easy, machine-generated answers are leaving kids less capable.",
+      "published": "2026-11-04 20:06 UTC",
+      "pub_dt": "2026-11-04T20:06:21+00:00"
+    },
+    {
+      "source": "AI Business",
+      "title": "AWS goes inside the enterprise to find the real value of AI",
+      "url": "https://aibusiness.com/generative-ai/aws-goes-inside-enterprise-find-real-value-of-ai",
+      "summary": "The tech giant works closely with its customers on putting its AI systems into action.",
+      "published": "2026-11-04 19:59 UTC",
+      "pub_dt": "2026-11-04T19:59:31+00:00"
+    }
+  ]
+}
