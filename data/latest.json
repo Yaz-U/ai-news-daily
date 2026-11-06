@@ -1,246 +1,218 @@
 {
-  "timestamp": "2026-11-05T10:14:56.037040+09:00",
+  "timestamp": "2026-11-06T10:20:04.491716+09:00",
   "time_slot": "朝",
   "summary": {
-    "headline": "米中間選挙とAIインフラの衝突：電力制約が変える開発主導権",
-    "thesis": "米中間選挙でのデータセンター反対運動とAMDの好決算が示す通り、AI競争のボトルネックは計算資源の確保から電力・地域の受容性へと移行し、実装の効率化を迫られています。",
-    "opening": "【結論】AI開発の主導権は、単なるモデルの巨大化から「電力とインフラ制約をどう突破するか」の実装力へシフトしました。本稿では、米中間選挙におけるデータセンターへの有権者の反発、ハードウェア需要の持続を示すAMDの決算、そしてOpenAIによるセキュリティ自動化やコード解析ツール買収などの動きを一つの論点として読み解きます。かつてシリコンバレーが描いた無制限なスケーリングの神話は、いまや地域社会の電力負荷と政治的圧力という現実の壁に直面しています。企業はインフラの膨張を許されない環境下で、エージェントの実装やセキュリティの効率化へと舵を切らざるを得なくなっています。",
-    "what_happened": "【事実】足元の動向は、インフラの制約とそれを克服しようとするソフトウェア側の自動化という二つの軸で動いています。第一に、インフラと政治を巡る動きです。CNBCやAxios、NYタイムズなどの報道によると、2026年の中間選挙では、有権者が高騰するエネルギー価格や電力網への負担に対する不満を背景に、データセンターの建設やプロジェクトに対して厳しい審判を下しました。テキサス州をはじめとする激戦地で民主党が勝利し、データセンターのモラトリアムや規制強化を掲げる候補者が支持を集めた結果、テキサスを中心としたAIインフラの急速な拡張計画に黄信号が灯りました。一方で、CNBCの報道では、AMDの第3四半期データセンター売上高がほぼ倍増し、CEOの蘇姿豊氏が成長の加速を予想するなど、AIチップのハードウェア需要自体は依然として旺盛です。第二に、AI企業による実装とセキュリティの自動化です。OpenAIは公式発表で、Linuxカーネルのローカル特権昇格脆弱性948件を自律型パイプラインで発見・検証・修正した実績を公表しました。さらにOpenAIは、コードの構築・理解・レビューツールを拡張するため、Pierre Computer Companyの買収を発表したほか、米政府向けAWS GovCloud（US-East）のAmazon Bedrockを通じてサイバーセキュリティ向け「Daybreak Red（GPT-5.6 Cyber）」の提供を開始しました。オープンソースコミュニティや競合陣営でも変化が見られます。OpenClawのGitHubリリースでは、エージェント間で再利用可能なナレッジキャプチャ機能やPostgreSQLバックエンドの状態管理が追加され、Qwenコードのリポジトリでもセッション管理やストレージロックの最適化が進められています。",
-    "why_now": "【解釈】今回の変化は、AIの収益化とインフラストラクチャの双方において「無制限の拡大」から「制約下での最適化」への構造転換を意味します。これまでビッグテックは、無限に電力を消費するデータセンターを各地に建設し、モデルの規模を拡大することで性能を競ってきました。しかし、中間選挙における有権者の反発と電力コストの高騰は、地域社会の合意形成なしにはインフラの拡張が不可能であることを突きつけました。これにより、ハードウェアの調達コストや電力供給の限界が、そのままAIサービスの展開速度を制限するボトルネックとなります。この制約下で生き残るため、OpenAIのような主要プレイヤーは、単なるモデルの推論能力の向上だけでなく、コード修正の自動化やサイバーセキュリティ、エージェントの処理効率化といった「省リソースで高い実用性を生むソフトウェア」への投資を急ピッチで進めています。つまり、計算資源の拡大が政治・物理的な壁に阻まれる中、競争の優劣は「どれだけ効率よくAIを社会実装し、自律的に価値を回収できるか」という実装の洗練度によって決まる局面に入ったと読めます。",
-    "counterpoint": "【反証・留保】この見立てが過大評価に終わる条件は、政治的逆風が一時的なものに留まり、次世代の原子力発電や送電網の近代化が一気に進む場合です。もしBig Techが独自の小型モジュール炉（SMR）や専用電源の確保に成功し、法規制の網を巧みに潜り抜けた場合、再び大規模なデータセンターの拡張競争が加速する可能性があります。また、有権者の反発が一部の地域的な現象に過ぎず、連邦レベルでの強力な足止めにつながらなかった場合も、インフラ制約を前提とした今回の悲観論は修正を迫られることになります。",
-    "japan_impact": "【日本の実務への示唆】日本企業は、クラウドの無制限な拡張やGPUの力技によるAI活用モデルの前提を捨てるべきです。今週見直すべきは、自社が導入・運用するAIエージェントや生成AIツールが、どれだけ省リソースで確実なセキュリティ担保やコード・データの管理を行えるかという「実装の効率性」の評価基準です。電力事情や立地制約の厳しい国内において、巨大なオンプレミス型インフラに依存する計画は政治・コスト面でリスクが高いため、マネージドサービスや効率化されたオープンソースモデルを組み合わせた、ROI（投資対効果）の明確なシステムアーキテクチャへの移行を急ぐべきです。",
+    "headline": "AIインフラは「計算資源の確保」から「社会受容のコスト算入」へ",
+    "thesis": "AIインフラのボトルネックは計算資源の物理的制約から、有権者の反発による立地コストと政治的承認へと完全にシフトした。",
+    "opening": "【結論】AIインフラの主導権は、モデルの性能やGPUの調達数から、「どれだけローカルコミュニティの反発を吸収し、法的な土地利用の承認を勝ち取れるか」という政治・社会受容のフェーズへ移行した。これまでテック各社は、数兆ドル規模の投資を前提に電力と土地を力づくで確保してきた。しかし、選挙での住民投票によるデータセンター規制の激化は、その前提を根本から覆しつつある。本稿では、ハードウェアの進化とインフラ包摂をめぐる最新の動きを束ね、AI産業が直面する新しい制約条件を読み解く。",
+    "what_happened": "【事実】Axiosの報道およびNYTimesの報道によると、米国の中間選挙における住民投票で、データセンター建設を制限する措置が43対1で可決され、有権者の強い反発が表面化した。これを受け、テック各社は「データセンター」という呼称を「コンピュートキャンパス」へ言い換えるだけでなく、学校への支援金や環境配慮、労働保護などの金銭的・社会的な譲歩策の提示へと舵を切っている。これに関連してOpenAIは、地域住民との協調や雇用創出、ローカルリソース保護を掲げた「ナショナルコミュニティコンパクト」および「コンピュートキャンパス政策ブループリント」を発表した。一方、ハードウェア・計算資源の側では、NVIDIAがGPUメモリのひっ迫と価格上昇に対応するため、HBM3eやHBM4といった最新のメモリ技術をフルスタックのコードデザインで迅速に採用する動きを見せている（NVIDIA Blog）。さらに、CNBCの報道によれば、こうした米国の市場動向やナスダックの調整売りを受け、SKハイニックス、サムスン、ソフトバンクグループ、TSMCといったアジアの主要半導体関連株が急落する連鎖的な波及が起きている。",
+    "why_now": "【解釈】この変化が起きた理由は、AIモデルの高度化とエージェント型アプリケーションの普及により、消費される電力と物理スペースの規模が地方自治体の許容範囲を完全に超えたためである。従来、AIインフラの拡大は「GPUの供給量」と「電力網の容量」という技術的・経済的制約だけで語られてきた。しかし、有権者が政治プロセスを通じてデータセンター建設に明確なNO突きつけたことで、今や「政治的コスト」がインフラ投資の最大の変数に浮上した。NVIDIAが指摘するように、メモリ不足やCPU・GPU間の連携といった技術的課題への対応が急ピッチで進む一方で、物理的なハードウェアがどれだけ高性能であっても、肝心のキャンパスが地域社会の反対で建設できなければビジネスのパイプラインは止まる。つまり、今日の変化は、収益化のスピードよりも「事業の継続性を担保する社会的ライセンス（許認可）」の取得コストが、資本効率の計算式に強制的に組み込まれ始めたことを意味している。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、テック各社が提示する譲歩策やコミュニティ協定が、単なるPRや表面的な妥協に終わらず、実際の建設スピードをどこまで維持できるかを注視する必要がある。もし、景気減速や地政学的な安全保障上の理由から、米国の連邦政府が地方自治体の反対を法的に無効化する権限行使に踏み切った場合、あるいはAIインフラ投資の主導権が環境規制の緩い海外地域へと急速にシフトした場合は、「社会受容がボトルネックになる」という本結論は崩れる。あくまで民主的なプロセスと住民の拒否権が実効性を持つ局面においてのみ、この制約は機能する。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、国内でのデータセンター立地やクラウド調達の前提条件である。米国の事例が示すように、AIインフラの拡大は今後、地域住民への還元や電力・環境負荷に関する説明責任をこれまで以上に厳しく求められる。日本国内で独自のAI基盤やデータセンターを計画・利用する事業者は、単に調達コストやスペックを追うだけでなく、自治体や地域社会との合意形成プロセスを前倒しでリスク管理に組み込む必要がある。また、アジアの半導体株の連鎖安に象徴されるように、米国のインフラ規制の揺らぎがグローバルなサプライチェーン全体に波及するボラティリティを前提に、調達先の多重化と資本配分の見直しを急ぐべきである。",
     "company_positions": [
       {
         "company": "OpenAI",
-        "status": "Pierre Computerの買収によるコード生成ツールの強化に加え、自律型パイプラインによる脆弱性修正やAWS GovCloudを通じたサイバーセキュリティ特化型モデルの展開を加速している。",
-        "implication": "モデルの規模拡大に伴う電力・インフラの外部制約が強まる中、セキュリティやコードレビューといった実務特化型の自動化で高い付加価値を回収する体制を固めつつある。"
+        "status": "ナショナルコミュニティコンパクトの策定やコンピュートキャンパス政策の発表を通じ、地域住民との協調や雇用創出、環境配慮を前面に出したアプローチへ転換している。",
+        "implication": "技術的なフロンティア追求だけでなく、政治・社会的な受容を獲得できなければインフラ拡張が止まるという構造的リスクに対し、先手を打ってルールメイクを図る強みを持つ。"
       },
       {
-        "company": "AMD",
-        "status": "第3四半期のデータセンター売上高がほぼ倍増し、経営陣は今後のさらなる成長を予測している。",
-        "implication": "AIインフラへの政治的・電力的な逆風が叫ばれる一方で、AIチップ自体の需要は依然として強く、ハードウェアサプライチェーンにおける存在感を維持している。"
-      },
-      {
-        "company": "OpenClaw / Qwen陣営",
-        "status": "エージェント間のナレッジ共有機能の強化や、データベースバックエンドの安定化、マネージドエージェントのパフォーマンス最適化を継続的にリリースしている。",
-        "implication": "オープンソースおよびコミュニティベースのエージェント開発においても、機能の派手さより、実務での耐障害性や状態管理の堅牢性を重視する方向へ移行している。"
+        "company": "NVIDIA",
+        "status": "HBM3eやHBM4の最先端メモリ技術をフルスタックで早期採用し、エージェント型アプリによるメモリひっ迫と価格上昇への対応を急いでいる。",
+        "implication": "ハードウェア性能の極限追求において優位性を維持しているが、最終的な顧客のインフラ建設が社会反発で遅延した場合、その高度な計算需要の受け皿が狭まるリスクを抱える。"
       }
     ],
     "next_signals": [
-      "米国各州におけるデータセンター建設モラトリアムや新規規制法案の具体的な成立件数",
-      "ビッグテックによる電力確保（SMRや専用送電網の提携）に関する次の一手",
-      "OpenAIや主要プレイヤーによるセキュリティ・コード自動化ツールの実ビジネスへの導入事例と価格設定"
+      "米国の他の州や自治体におけるデータセンター関連の住民投票・規制条例の成立動向",
+      "テック各社が提示するコミュニティ支援策やコンピュートキャンパスの建設計画が、実際のスケジュール遅延をどの程度防げているかの実証データ",
+      "アジアの半導体・メモリー関連企業の株価および設備投資計画に対する、今回の需要懸念の影響度"
     ],
     "sources": [
       {
-        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
-        "url": "https://openai.com/index/openai-to-acquire-pierre"
+        "title": "Tech giants turn to cash, concessions for AI rebrand after voters pummeled data centers 43-1",
+        "url": "https://www.axios.com/2026/11/05/ai-data-center-election-backlash-concessions"
       },
       {
-        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
-        "url": "https://openai.com/index/daybreak-red-aws-govcloud"
+        "title": "OpenAI Pledges to Give Locals More Say in Data Center Projects",
+        "url": "https://www.nytimes.com/2026/11/05/technology/openai-data-centers-midterms.html"
       },
       {
-        "title": "openclaw 2026.11.5-beta.1",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.1"
+        "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+        "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/"
       },
       {
-        "title": "Release v0.26.7-nightly.20261104.b9e20830f7",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7-nightly.20261104.b9e20830f7"
-      },
-      {
-        "title": "A thousand fewer paths to root",
-        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root"
-      },
-      {
-        "title": "AMD's data center revenue nearly doubles in Q3 and CEO Su expects growth to accelerate",
-        "url": "https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html"
-      },
-      {
-        "title": "Voters Rejected A.I. in the Midterms. Now Comes an Era of Scrutiny.",
-        "url": "https://www.nytimes.com/2026/11/04/technology/midterm-elections-ai-data-centers.html"
-      },
-      {
-        "title": "Voters rebuff data centers in every ballot measure except one during the 2026 midterms",
-        "url": "https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html"
+        "title": "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
+        "url": "https://www.cnbc.com/2026/11/06/tech-stocks-sk-hynix-samsung-softbank.html"
       }
     ],
-    "news_summary": "米中間選挙でのデータセンター反対運動とAMDの好決算が示す通り、AI競争のボトルネックは計算資源の確保から電力・地域の受容性へと移行し、実装の効率化を迫られています。\n\n【事実】足元の動向は、インフラの制約とそれを克服しようとするソフトウェア側の自動化という二つの軸で動いています。第一に、インフラと政治を巡る動きです。CNBCやAxios、NYタイムズなどの報道によると、2026年の中間選挙では、有権者が高騰するエネルギー価格や電力網への負担に対する不満を背景に、データセンターの建設やプロジェクトに対して厳しい審判を下しました。テキサス州をはじめとする激戦地で民主党が勝利し、データセンターのモラトリアムや規制強化を掲げる候補者が支持を集めた結果、テキサスを中心としたAIインフラの急速な拡張計画に黄信号が灯りました。一方で、CNBCの報道では、AMDの第3四半期データセンター売上高がほぼ倍増し、CEOの蘇姿豊氏が成長の加速を予想するなど、AIチップのハードウェア需要自体は依然として旺盛です。第二に、AI企業による実装とセキュリティの自動化です。OpenAIは公式発表で、Linuxカーネルのローカル特権昇格脆弱性948件を自律型パイプラインで発見・検証・修正した実績を公表しました。さらにOpenAIは、コードの構築・理解・レビューツールを拡張するため、Pierre Computer Companyの買収を発表したほか、米政府向けAWS GovCloud（US-East）のAmazon Bedrockを通じてサイバーセキュリティ向け「Daybreak Red（GPT-5.6 Cyber）」の提供を開始しました。オープンソースコミュニティや競合陣営でも変化が見られます。OpenClawのGitHubリリースでは、エージェント間で再利用可能なナレッジキャプチャ機能やPostgreSQLバックエンドの状態管理が追加され、Qwenコードのリポジトリでもセッション管理やストレージロックの最適化が進められています。",
-    "opinion_summary": "【解釈】今回の変化は、AIの収益化とインフラストラクチャの双方において「無制限の拡大」から「制約下での最適化」への構造転換を意味します。これまでビッグテックは、無限に電力を消費するデータセンターを各地に建設し、モデルの規模を拡大することで性能を競ってきました。しかし、中間選挙における有権者の反発と電力コストの高騰は、地域社会の合意形成なしにはインフラの拡張が不可能であることを突きつけました。これにより、ハードウェアの調達コストや電力供給の限界が、そのままAIサービスの展開速度を制限するボトルネックとなります。この制約下で生き残るため、OpenAIのような主要プレイヤーは、単なるモデルの推論能力の向上だけでなく、コード修正の自動化やサイバーセキュリティ、エージェントの処理効率化といった「省リソースで高い実用性を生むソフトウェア」への投資を急ピッチで進めています。つまり、計算資源の拡大が政治・物理的な壁に阻まれる中、競争の優劣は「どれだけ効率よくAIを社会実装し、自律的に価値を回収できるか」という実装の洗練度によって決まる局面に入ったと読めます。",
+    "news_summary": "AIインフラのボトルネックは計算資源の物理的制約から、有権者の反発による立地コストと政治的承認へと完全にシフトした。\n\n【事実】Axiosの報道およびNYTimesの報道によると、米国の中間選挙における住民投票で、データセンター建設を制限する措置が43対1で可決され、有権者の強い反発が表面化した。これを受け、テック各社は「データセンター」という呼称を「コンピュートキャンパス」へ言い換えるだけでなく、学校への支援金や環境配慮、労働保護などの金銭的・社会的な譲歩策の提示へと舵を切っている。これに関連してOpenAIは、地域住民との協調や雇用創出、ローカルリソース保護を掲げた「ナショナルコミュニティコンパクト」および「コンピュートキャンパス政策ブループリント」を発表した。一方、ハードウェア・計算資源の側では、NVIDIAがGPUメモリのひっ迫と価格上昇に対応するため、HBM3eやHBM4といった最新のメモリ技術をフルスタックのコードデザインで迅速に採用する動きを見せている（NVIDIA Blog）。さらに、CNBCの報道によれば、こうした米国の市場動向やナスダックの調整売りを受け、SKハイニックス、サムスン、ソフトバンクグループ、TSMCといったアジアの主要半導体関連株が急落する連鎖的な波及が起きている。",
+    "opinion_summary": "【解釈】この変化が起きた理由は、AIモデルの高度化とエージェント型アプリケーションの普及により、消費される電力と物理スペースの規模が地方自治体の許容範囲を完全に超えたためである。従来、AIインフラの拡大は「GPUの供給量」と「電力網の容量」という技術的・経済的制約だけで語られてきた。しかし、有権者が政治プロセスを通じてデータセンター建設に明確なNO突きつけたことで、今や「政治的コスト」がインフラ投資の最大の変数に浮上した。NVIDIAが指摘するように、メモリ不足やCPU・GPU間の連携といった技術的課題への対応が急ピッチで進む一方で、物理的なハードウェアがどれだけ高性能であっても、肝心のキャンパスが地域社会の反対で建設できなければビジネスのパイプラインは止まる。つまり、今日の変化は、収益化のスピードよりも「事業の継続性を担保する社会的ライセンス（許認可）」の取得コストが、資本効率の計算式に強制的に組み込まれ始めたことを意味している。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てが過大評価に終わる条件は、政治的逆風が一時的なものに留まり、次世代の原子力発電や送電網の近代化が一気に進む場合です。もしBig Techが独自の小型モジュール炉（SMR）や専用電源の確保に成功し、法規制の網を巧みに潜り抜けた場合、再び大規模なデータセンターの拡張競争が加速する可能性があります。また、有権者の反発が一部の地域的な現象に過ぎず、連邦レベルでの強力な足止めにつながらなかった場合も、インフラ制約を前提とした今回の悲観論は修正を迫られることになります。",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、テック各社が提示する譲歩策やコミュニティ協定が、単なるPRや表面的な妥協に終わらず、実際の建設スピードをどこまで維持できるかを注視する必要がある。もし、景気減速や地政学的な安全保障上の理由から、米国の連邦政府が地方自治体の反対を法的に無効化する権限行使に踏み切った場合、あるいはAIインフラ投資の主導権が環境規制の緩い海外地域へと急速にシフトした場合は、「社会受容がボトルネックになる」という本結論は崩れる。あくまで民主的なプロセスと住民の拒否権が実効性を持つ局面においてのみ、この制約は機能する。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
-        "source": "OpenAI News",
-        "url": "https://openai.com/index/openai-to-acquire-pierre",
-        "point": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code."
+        "title": "Tech giants turn to cash, concessions for AI rebrand after voters pummeled data centers 43-1",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/05/ai-data-center-election-backlash-concessions",
+        "point": "The AI industry is scrambling to repackage a $10 trillion infrastructure buildout to appease a hostile electorate that o"
       },
       {
         "rank": 2,
-        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
-        "source": "OpenAI News",
-        "url": "https://openai.com/index/daybreak-red-aws-govcloud",
-        "point": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized "
+        "title": "OpenAI Pledges to Give Locals More Say in Data Center Projects",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/05/technology/openai-data-centers-midterms.html",
+        "point": "The artificial intelligence company pledged to be more collaborative with the communities where it is building its data "
       },
       {
         "rank": 3,
-        "title": "openclaw 2026.11.5-beta.1",
-        "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.1",
-        "point": "2026.11.5-beta.1\nHighlights\n\nKnowledge Scribes: add first-class knowledge capture and reusable scribe workflows across a"
+        "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+        "source": "NVIDIA Blog",
+        "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+        "point": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and pri"
       },
       {
         "rank": 4,
-        "title": "Release v0.26.7-nightly.20261104.b9e20830f7",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7-nightly.20261104.b9e20830f7",
-        "point": "What's Changed\n\ntest(integration): keep ACP parity runtime state out of the workspace (#16251) by @qwen-code-dev-bot in "
-      },
-      {
-        "rank": 5,
-        "title": "A thousand fewer paths to root",
-        "source": "OpenAI News",
-        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
-        "point": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vuln"
+        "title": "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/06/tech-stocks-sk-hynix-samsung-softbank.html",
+        "point": "Asian technology stocks tumbled Friday, tracking a sharp sell-off on Wall Street overnight that sent the tech-heavy Nasd"
       }
     ],
     "joho_picks": [
       {
-        "headline": "米中間選挙とAIインフラの衝突：電力制約が変える開発主導権",
+        "headline": "AIインフラは「計算資源の確保」から「社会受容のコスト算入」へ",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://openai.com/index/openai-to-acquire-pierre",
+        "source_url": "https://www.axios.com/2026/11/05/ai-data-center-election-backlash-concessions",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】AI開発の主導権は、単なるモデルの巨大化から「電力とインフラ制約をどう突破するか」の実装力へシフトしました。本稿では、米中間選挙におけるデータセンターへの有権者の反発、ハードウェア需要の持続を示すAMDの決算、そしてOpenAIによるセキュリティ自動化やコード解析ツール買収などの動きを一つの論点として読み解きます。かつてシリコンバレーが描いた無制限なスケーリングの神話は、いまや地域社会の電力負荷と政治的圧力という現実の壁に直面しています。企業はインフラの膨張を許されない環境下で、エージェントの実装やセキュリティの効率化へと舵を切らざるを得なくなっています。\n\n【事実】足元の動向は、インフラの制約とそれを克服しようとするソフトウェア側の自動化という二つの軸で動いています。第一に、インフラと政治を巡る動きです。CNBCやAxios、NYタイムズなどの報道によると、2026年の中間選挙では、有権者が高騰するエネルギー価格や電力網への負担に対する不満を背景に、データセンターの建設やプロジェクトに対して厳しい審判を下しました。テキサス州をはじめとする激戦地で民主党が勝利し、データセンターのモラトリアムや規制強化を掲げる候補者が支持を集めた結果、テキサスを中心としたAIインフラの急速な拡張計画に黄信号が灯りました。一方で、CNBCの報道では、AMDの第3四半期データセンター売上高がほぼ倍増し、CEOの蘇姿豊氏が成長の加速を予想するなど、AIチップのハードウェア需要自体は依然として旺盛です。第二に、AI企業による実装とセキュリティの自動化です。OpenAIは公式発表で、Linuxカーネルのローカル特権昇格脆弱性948件を自律型パイプラインで発見・検証・修正した実績を公表しました。さらにOpenAIは、コードの構築・理解・レビューツールを拡張するため、Pierre Computer Companyの買収を発表したほか、米政府向けAWS GovCloud（US-East）のAmazon Bedrockを通じてサイバーセキュリティ向け「Daybreak Red（GPT-5.6 Cyber）」の提供を開始しました。オープンソースコミュニティや競合陣営でも変化が見られます。OpenClawのGitHubリリースでは、エージェント間で再利用可能なナレッジキャプチャ機能やPostgreSQLバックエンドの状態管理が追加され、Qwenコードのリポジトリでもセッション管理やストレージロックの最適化が進められています。\n\n【解釈】今回の変化は、AIの収益化とインフラストラクチャの双方において「無制限の拡大」から「制約下での最適化」への構造転換を意味します。これまでビッグテックは、無限に電力を消費するデータセンターを各地に建設し、モデルの規模を拡大することで性能を競ってきました。しかし、中間選挙における有権者の反発と電力コストの高騰は、地域社会の合意形成なしにはインフラの拡張が不可能であることを突きつけました。これにより、ハードウェアの調達コストや電力供給の限界が、そのままAIサービスの展開速度を制限するボトルネックとなります。この制約下で生き残るため、OpenAIのような主要プレイヤーは、単なるモデルの推論能力の向上だけでなく、コード修正の自動化やサイバーセキュリティ、エージェントの処理効率化といった「省リソースで高い実用性を生むソフトウェア」への投資を急ピッチで進めています。つまり、計算資源の拡大が政治・物理的な壁に阻まれる中、競争の優劣は「どれだけ効率よくAIを社会実装し、自律的に価値を回収できるか」という実装の洗練度によって決まる局面に入ったと読めます。\n\n【競争の構図】\n【OpenAI】\nPierre Computerの買収によるコード生成ツールの強化に加え、自律型パイプラインによる脆弱性修正やAWS GovCloudを通じたサイバーセキュリティ特化型モデルの展開を加速している。\n→ モデルの規模拡大に伴う電力・インフラの外部制約が強まる中、セキュリティやコードレビューといった実務特化型の自動化で高い付加価値を回収する体制を固めつつある。\n\n【AMD】\n第3四半期のデータセンター売上高がほぼ倍増し、経営陣は今後のさらなる成長を予測している。\n→ AIインフラへの政治的・電力的な逆風が叫ばれる一方で、AIチップ自体の需要は依然として強く、ハードウェアサプライチェーンにおける存在感を維持している。\n\n【OpenClaw / Qwen陣営】\nエージェント間のナレッジ共有機能の強化や、データベースバックエンドの安定化、マネージドエージェントのパフォーマンス最適化を継続的にリリースしている。\n→ オープンソースおよびコミュニティベースのエージェント開発においても、機能の派手さより、実務での耐障害性や状態管理の堅牢性を重視する方向へ移行している。",
-        "why_matters": "【日本の実務への示唆】日本企業は、クラウドの無制限な拡張やGPUの力技によるAI活用モデルの前提を捨てるべきです。今週見直すべきは、自社が導入・運用するAIエージェントや生成AIツールが、どれだけ省リソースで確実なセキュリティ担保やコード・データの管理を行えるかという「実装の効率性」の評価基準です。電力事情や立地制約の厳しい国内において、巨大なオンプレミス型インフラに依存する計画は政治・コスト面でリスクが高いため、マネージドサービスや効率化されたオープンソースモデルを組み合わせた、ROI（投資対効果）の明確なシステムアーキテクチャへの移行を急ぐべきです。\n\n【反証・留保】この見立てが過大評価に終わる条件は、政治的逆風が一時的なものに留まり、次世代の原子力発電や送電網の近代化が一気に進む場合です。もしBig Techが独自の小型モジュール炉（SMR）や専用電源の確保に成功し、法規制の網を巧みに潜り抜けた場合、再び大規模なデータセンターの拡張競争が加速する可能性があります。また、有権者の反発が一部の地域的な現象に過ぎず、連邦レベルでの強力な足止めにつながらなかった場合も、インフラ制約を前提とした今回の悲観論は修正を迫られることになります。",
-        "context": "【次の観測点】\n・米国各州におけるデータセンター建設モラトリアムや新規規制法案の具体的な成立件数\n・ビッグテックによる電力確保（SMRや専用送電網の提携）に関する次の一手\n・OpenAIや主要プレイヤーによるセキュリティ・コード自動化ツールの実ビジネスへの導入事例と価格設定"
+        "body": "【結論】AIインフラの主導権は、モデルの性能やGPUの調達数から、「どれだけローカルコミュニティの反発を吸収し、法的な土地利用の承認を勝ち取れるか」という政治・社会受容のフェーズへ移行した。これまでテック各社は、数兆ドル規模の投資を前提に電力と土地を力づくで確保してきた。しかし、選挙での住民投票によるデータセンター規制の激化は、その前提を根本から覆しつつある。本稿では、ハードウェアの進化とインフラ包摂をめぐる最新の動きを束ね、AI産業が直面する新しい制約条件を読み解く。\n\n【事実】Axiosの報道およびNYTimesの報道によると、米国の中間選挙における住民投票で、データセンター建設を制限する措置が43対1で可決され、有権者の強い反発が表面化した。これを受け、テック各社は「データセンター」という呼称を「コンピュートキャンパス」へ言い換えるだけでなく、学校への支援金や環境配慮、労働保護などの金銭的・社会的な譲歩策の提示へと舵を切っている。これに関連してOpenAIは、地域住民との協調や雇用創出、ローカルリソース保護を掲げた「ナショナルコミュニティコンパクト」および「コンピュートキャンパス政策ブループリント」を発表した。一方、ハードウェア・計算資源の側では、NVIDIAがGPUメモリのひっ迫と価格上昇に対応するため、HBM3eやHBM4といった最新のメモリ技術をフルスタックのコードデザインで迅速に採用する動きを見せている（NVIDIA Blog）。さらに、CNBCの報道によれば、こうした米国の市場動向やナスダックの調整売りを受け、SKハイニックス、サムスン、ソフトバンクグループ、TSMCといったアジアの主要半導体関連株が急落する連鎖的な波及が起きている。\n\n【解釈】この変化が起きた理由は、AIモデルの高度化とエージェント型アプリケーションの普及により、消費される電力と物理スペースの規模が地方自治体の許容範囲を完全に超えたためである。従来、AIインフラの拡大は「GPUの供給量」と「電力網の容量」という技術的・経済的制約だけで語られてきた。しかし、有権者が政治プロセスを通じてデータセンター建設に明確なNO突きつけたことで、今や「政治的コスト」がインフラ投資の最大の変数に浮上した。NVIDIAが指摘するように、メモリ不足やCPU・GPU間の連携といった技術的課題への対応が急ピッチで進む一方で、物理的なハードウェアがどれだけ高性能であっても、肝心のキャンパスが地域社会の反対で建設できなければビジネスのパイプラインは止まる。つまり、今日の変化は、収益化のスピードよりも「事業の継続性を担保する社会的ライセンス（許認可）」の取得コストが、資本効率の計算式に強制的に組み込まれ始めたことを意味している。\n\n【競争の構図】\n【OpenAI】\nナショナルコミュニティコンパクトの策定やコンピュートキャンパス政策の発表を通じ、地域住民との協調や雇用創出、環境配慮を前面に出したアプローチへ転換している。\n→ 技術的なフロンティア追求だけでなく、政治・社会的な受容を獲得できなければインフラ拡張が止まるという構造的リスクに対し、先手を打ってルールメイクを図る強みを持つ。\n\n【NVIDIA】\nHBM3eやHBM4の最先端メモリ技術をフルスタックで早期採用し、エージェント型アプリによるメモリひっ迫と価格上昇への対応を急いでいる。\n→ ハードウェア性能の極限追求において優位性を維持しているが、最終的な顧客のインフラ建設が社会反発で遅延した場合、その高度な計算需要の受け皿が狭まるリスクを抱える。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、国内でのデータセンター立地やクラウド調達の前提条件である。米国の事例が示すように、AIインフラの拡大は今後、地域住民への還元や電力・環境負荷に関する説明責任をこれまで以上に厳しく求められる。日本国内で独自のAI基盤やデータセンターを計画・利用する事業者は、単に調達コストやスペックを追うだけでなく、自治体や地域社会との合意形成プロセスを前倒しでリスク管理に組み込む必要がある。また、アジアの半導体株の連鎖安に象徴されるように、米国のインフラ規制の揺らぎがグローバルなサプライチェーン全体に波及するボラティリティを前提に、調達先の多重化と資本配分の見直しを急ぐべきである。\n\n【反証・留保】この見立てを過大評価しないための条件として、テック各社が提示する譲歩策やコミュニティ協定が、単なるPRや表面的な妥協に終わらず、実際の建設スピードをどこまで維持できるかを注視する必要がある。もし、景気減速や地政学的な安全保障上の理由から、米国の連邦政府が地方自治体の反対を法的に無効化する権限行使に踏み切った場合、あるいはAIインフラ投資の主導権が環境規制の緩い海外地域へと急速にシフトした場合は、「社会受容がボトルネックになる」という本結論は崩れる。あくまで民主的なプロセスと住民の拒否権が実効性を持つ局面においてのみ、この制約は機能する。",
+        "context": "【次の観測点】\n・米国の他の州や自治体におけるデータセンター関連の住民投票・規制条例の成立動向\n・テック各社が提示するコミュニティ支援策やコンピュートキャンパスの建設計画が、実際のスケジュール遅延をどの程度防げているかの実証データ\n・アジアの半導体・メモリー関連企業の株価および設備投資計画に対する、今回の需要懸念の影響度"
       }
     ]
   },
   "raw_articles": [
     {
-      "source": "Wired",
-      "title": "The Blue Wave Has Tech Bros Scrambling for Data Centers in Space",
-      "url": "https://www.wired.com/story/the-blue-wave-has-tech-bros-scrambling-for-data-centers-in-space/",
-      "summary": "After Democrats won big in Texas and other AI infrastructure hot spots on Tuesday, data center enthusiasts looked for comfort in low Earth orbit.",
-      "published": "2026-11-04 23:13 UTC",
-      "pub_dt": "2026-11-04T23:13:14+00:00"
-    },
-    {
       "source": "CNBC Tech",
-      "title": "Figma sinks after earnings beat as company prioritizes long-term growth with AI changes",
-      "url": "https://www.cnbc.com/2026/11/04/figma-fig-q3-earnings-report-2026.html",
-      "summary": "Figma is letting clients use more artificial intelligence features for the same price. The company would like the move to boost results in the long term.",
-      "published": "2026-11-04 23:02 UTC",
-      "pub_dt": "2026-11-04T23:02:39+00:00"
+      "title": "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
+      "url": "https://www.cnbc.com/2026/11/06/tech-stocks-sk-hynix-samsung-softbank.html",
+      "summary": "Asian technology stocks tumbled Friday, tracking a sharp sell-off on Wall Street overnight that sent the tech-heavy Nasdaq Composite into correction territory.",
+      "published": "2026-11-06 01:11 UTC",
+      "pub_dt": "2026-11-06T01:11:35+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "AI PACs spent millions trying to shape Congress — here’s how they fared",
-      "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/",
-      "summary": "AI industry PACs spent millions influencing the 2026 midterms, with mixed results. Political groups are already looking toward the next election cycle.",
-      "published": "2026-11-04 22:45 UTC",
-      "pub_dt": "2026-11-04T22:45:09+00:00"
+      "source": "NYTimes Technology",
+      "title": "House G.O.P. Leaders Ask Nvidia’s Huang to Speak in Closed-Door Briefing",
+      "url": "https://www.nytimes.com/2026/11/05/technology/house-republicans-nvidia-jensen-huang-china.html",
+      "summary": "The New York Times reported last week that Mr. Huang had a close relationship with an executive that U.S. officials determined was funneling information to Chinese intelligence.",
+      "published": "2026-11-06 01:10 UTC",
+      "pub_dt": "2026-11-06T01:10:46+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Nvidia CEO called in by lawmakers over ties to alleged Chinese spy",
+      "url": "https://www.axios.com/2026/11/05/jensen-huang-nvidia-congress-china",
+      "summary": "Nvidia CEO Jensen Huang has been asked by three House Republican  committee chairs to brief Congress behind closed doors about his reported ties to a woman accused of spying for China.Why it matters: The request escalates the scrutiny of the Nvidia CEO over his alleged relationship with Alice Huang, a businesswoman accused of spying for China.Catch up quick: Jensen Huang and Alice Huang purportedly had a \"close\" relationship, per reporting from The New York Times. The Times also reported that Pr",
+      "published": "2026-11-06 00:53 UTC",
+      "pub_dt": "2026-11-06T00:53:37+00:00"
     },
     {
       "source": "The Verge AI",
-      "title": "Qualcomm is betting big on data centers as smartphone sales sink",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
-      "summary": "With smartphone sales tanking by around 20 percent compared to 2025, Qualcomm is looking to data centers to help boost its bottom line. During its Q4 2026 earnings call, the company laid out its plans to make a splash in the AI data center business, through partnerships with companies like Amazon and Meta announced earlier [&#8230;]",
-      "published": "2026-11-04 22:42 UTC",
-      "pub_dt": "2026-11-04T22:42:15+00:00"
+      "title": "OpenAI is stepping back from NDAs for data center projects",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+      "summary": "Following this week's midterms where voters resoundingly voiced their opposition to data center expansion, OpenAI today announced new commitments to communities where it is working on data center projects, including that it won't use non-disclosure agreements (NDAs) with public officials. Many data center projects have come under scrutiny for relying on NDAs to hide discussions [&#8230;]",
+      "published": "2026-11-06 00:37 UTC",
+      "pub_dt": "2026-11-06T00:37:56+00:00"
     },
     {
-      "source": "CNBC Tech",
-      "title": "Voters rebuff data centers in every ballot measure except one during the 2026 midterms",
-      "url": "https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html",
-      "summary": "Voters in the states at the heart of the AI data center boom pushed back on the buildout on Election Night.",
-      "published": "2026-11-04 22:29 UTC",
-      "pub_dt": "2026-11-04T22:29:51+00:00"
-    },
-    {
-      "source": "Qwen GitHub",
-      "title": "Release v0.26.7-nightly.20261104.b9e20830f7",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7-nightly.20261104.b9e20830f7",
-      "summary": "What's Changed\n\ntest(integration): keep ACP parity runtime state out of the workspace (#16251) by @qwen-code-dev-bot in #16254\nfix(ci): resume linter archive downloads by @yiliang114 in #16067\nfix(ci): repin the RHEL 10 rpm root to the current stream10 digest by @yiliang114 in #16261\nperf(managed-agent): queue journal commits on the Session row instead of the tenant lock by @doudouOUC in #16256\nperf(managed-agent): narrow output, lifecycle, and storage lock scopes by @doudouOUC in #16268\ntest(in",
-      "published": "2026-11-04 22:26 UTC",
-      "pub_dt": "2026-11-04T22:26:06+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
-      "url": "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/",
-      "summary": "While it's not yet clear what kind of product the smartphone startup is cooking up, Nothing's CEO said the product is designed to leverage AI for productivity gains.",
-      "published": "2026-11-04 22:13 UTC",
-      "pub_dt": "2026-11-04T22:13:16+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Almost no one uses AI agents to book their Uber, company says",
-      "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
-      "summary": "During its busiest week last quarter, Uber said only four people booked a ride using an AI agent.",
-      "published": "2026-11-04 21:56 UTC",
-      "pub_dt": "2026-11-04T21:56:01+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "OpenAI is already trying to shape the 2028 election",
-      "url": "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/",
-      "summary": "OpenAI’s Chris Lehane wants AI to define the 2028 election, proposing a new social contract that could benefit Americans while also advancing the AI giant’s own business interests.",
-      "published": "2026-11-04 21:25 UTC",
-      "pub_dt": "2026-11-04T21:25:44+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Meta acquires AI coding startup Conductor",
-      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
-      "summary": "The startup allows software engineers to deploy teams of agents to work on various aspects of a project simultaneously.",
-      "published": "2026-11-04 21:10 UTC",
-      "pub_dt": "2026-11-04T21:10:56+00:00"
-    },
-    {
-      "source": "Wired",
-      "title": "The Biggest Pro-AI Super PAC Network Didn’t Really Impact the Midterms",
-      "url": "https://www.wired.com/story/the-biggest-pro-ai-super-pac-network-didnt-really-impact-the-midterms/",
-      "summary": "Leading the Future, backed by Silicon Valley’s biggest billionaires, had a war chest of $100 million and an aggressive stance against AI regulation. All of it didn’t add up to much on Tuesday night.",
-      "published": "2026-11-04 20:41 UTC",
-      "pub_dt": "2026-11-04T20:41:29+00:00"
-    },
-    {
-      "source": "AI Business",
-      "title": "What AI's growing share of tech spending means for enterprises in 2027",
-      "url": "https://aibusiness.com/generative-ai/what-ai-s-growing-share-tech-spending-means-enterprises-2027",
-      "summary": "AI spending is reshaping enterprise IT budgets. How CIOs can manage rising costs, prioritize investments and measure returns beyond productivity gains.",
-      "published": "2026-11-04 20:23 UTC",
-      "pub_dt": "2026-11-04T20:23:30+00:00"
+      "source": "Axios",
+      "title": "Trump says voters should blame themselves for stock market rout",
+      "url": "https://www.axios.com/2026/11/06/trump-stock-market-sell-off",
+      "summary": "President Trump said Thursday night that voters had themselves to blame for the stock market's historic sell-off.Why it matters: Two days after Republicans lost the midterm elections in historic fashion, the president is lashing out at the voters who rejected his candidates and message. Driving the news: Stocks plunged Thursday, with the tech-heavy Nasdaq sinking more than 5% as AI-linked stocks sold off.Investors are skittish about the future for AI development — and the data centers that power",
+      "published": "2026-11-06 00:28 UTC",
+      "pub_dt": "2026-11-06T00:28:09+00:00"
     },
     {
       "source": "The Verge AI",
-      "title": "Gemini for Home now plugs into AT&#038;T’s smart security system",
-      "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
-      "summary": "AT&#38;T's smart home security system now integrates with Gemini for Home. The company says its Connected Life system is the \"first\" home security product to integrate with Google Home Premium, enabling a bunch of Gemini-powered features that can summarize home events, search your video history, and more. With the update, Gemini for Home can provide [&#8230;]",
-      "published": "2026-11-04 20:23 UTC",
-      "pub_dt": "2026-11-04T20:23:24+00:00"
+      "title": "Airbnb is working on an AI travel agent",
+      "url": "https://www.theverge.com/tech/1028412/airbnb-ai-travel-agent-q3-2026-earnings",
+      "summary": "Airbnb plans to roll out an AI agent in the first half of 2027 that will help users plan and book travel, the company said in its Q3 2026 earnings shareholder letter released today. \"Today's AI agents are good at simple, routine tasks, like making a restaurant reservation or scheduling an appointment,\" Airbnb said. \"But [&#8230;]",
+      "published": "2026-11-06 00:06 UTC",
+      "pub_dt": "2026-11-06T00:06:12+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "What Shaped Anthropic CEO Dario Amodei’s Thinking on A.I.",
+      "url": "https://www.nytimes.com/2026/11/05/technology/dario-amodei-anthropic-ai.html",
+      "summary": "Some call him a doomer. Others see him as a responsible technologist. Here’s how the Anthropic chief executive’s thinking on artificial intelligence was shaped.",
+      "published": "2026-11-05 23:51 UTC",
+      "pub_dt": "2026-11-05T23:51:09+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jim Cramer explains why no AI stock seems safe from the market carnage",
+      "url": "https://www.cnbc.com/2026/11/05/jim-cramer-ai-stocks-data-center-uncertainty.html",
+      "summary": "CNBC’s Jim Cramer said AI stocks are becoming increasingly difficult to value.",
+      "published": "2026-11-05 23:25 UTC",
+      "pub_dt": "2026-11-05T23:25:04+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jim Cramer says the AI sell-off isn't over, but it isn't another dot-com crash",
+      "url": "https://www.cnbc.com/2026/11/05/jim-cramer-ai-stocks-sell-off.html",
+      "summary": "Cramer warned that the sell-off in AI stocks likely has further to run.",
+      "published": "2026-11-05 23:17 UTC",
+      "pub_dt": "2026-11-05T23:17:51+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Airbnb says it’s launching an AI travel agent in the first half of 2027",
+      "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+      "summary": "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance throughout their stay.",
+      "published": "2026-11-05 22:40 UTC",
+      "pub_dt": "2026-11-05T22:40:55+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Perplexity launches its own take on AI agents for work",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+      "summary": "Perplexity is taking on OpenAI and Anthropic with its own work-focused AI agents. The startup's new always-on \"Teammates\" can take on multiple roles within a workspace, while pulling existing projects, skills, and memory from the Perplexity tools you already use. Teammates integrate with Perplexity Computer, an AI system that can deploy agents on your device [&#8230;]",
+      "published": "2026-11-05 22:26 UTC",
+      "pub_dt": "2026-11-05T22:26:50+00:00"
     },
     {
       "source": "Wired",
-      "title": "Google Is Forcing AI Overviews in Classrooms. Schools Are Searching for a Way Out",
-      "url": "https://www.wired.com/story/google-is-forcing-ai-overviews-in-classrooms-schools-are-searching-for-a-way-out/",
-      "summary": "Google is tying up AI Overviews with traditional search, angering parents and educators who worry that easy, machine-generated answers are leaving kids less capable.",
-      "published": "2026-11-04 20:06 UTC",
-      "pub_dt": "2026-11-04T20:06:21+00:00"
+      "title": "How Elon Musk and Big Tech Poured Millions Into the Midterms, and Lost",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-how-elon-musk-and-big-tech-poured-millions-into-the-midterms-and-lost/",
+      "summary": "This week on “Uncanny Valley,” we discuss the historic blue wave that swept the midterms and delivered a rebuke to the Trump administration, Big Tech, and data centers.",
+      "published": "2026-11-05 22:18 UTC",
+      "pub_dt": "2026-11-05T22:18:42+00:00"
     },
     {
-      "source": "AI Business",
-      "title": "AWS goes inside the enterprise to find the real value of AI",
-      "url": "https://aibusiness.com/generative-ai/aws-goes-inside-enterprise-find-real-value-of-ai",
-      "summary": "The tech giant works closely with its customers on putting its AI systems into action.",
-      "published": "2026-11-04 19:59 UTC",
-      "pub_dt": "2026-11-04T19:59:31+00:00"
+      "source": "NYTimes Technology",
+      "title": "OpenAI Pledges to Give Locals More Say in Data Center Projects",
+      "url": "https://www.nytimes.com/2026/11/05/technology/openai-data-centers-midterms.html",
+      "summary": "The artificial intelligence company pledged to be more collaborative with the communities where it is building its data centers.",
+      "published": "2026-11-05 22:08 UTC",
+      "pub_dt": "2026-11-05T22:08:14+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.1",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.1",
+      "summary": "2026.11.1\nHighlights\n\nSafer Mac settings: failed config saves no longer overwrite secrets, and turning off Tailscale exposure keeps Gateway authentication intact. (#187734, #187664) Fixes #187600, #187597 Thanks @anmol0b.\nMore reliable channel replies: Telegram, Discord, and webhook conversations keep reaching the agent after request handlers or earlier turns finish. (#179200, #179385, #179704, #189457) Fixes #178554 Thanks @steipete, @LiuwqGit, @jalehman, and @vincentkoc.\nConversations survive ",
+      "published": "2026-11-05 21:39 UTC",
+      "pub_dt": "2026-11-05T21:39:58+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Ads in Chatbots Have Arrived. Here’s What’s Working—and What’s Not",
+      "url": "https://www.wired.com/story/ads-in-chatbots-have-arrived-heres-whats-working-and-whats-not/",
+      "summary": "As Anthropic maintains its vow to keep ads out of Claude, the rest of the AI chatbot industry is racing to win over advertisers without antagonizing users.",
+      "published": "2026-11-05 21:37 UTC",
+      "pub_dt": "2026-11-05T21:37:18+00:00"
     }
   ]
 }
