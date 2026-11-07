@@ -1,0 +1,223 @@
+{
+  "timestamp": "2026-11-07T09:34:19.694639+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "AIインフラの拡張に壁：資金調達と物理インフラの転換点",
+    "thesis": "AI産業は無制限の拡張フェーズを終え、データセンターの建設規制、資金調達の選別、そして大手によるインフラ内製化という「物理的・財務的な現実」に直面し、競争の軸が変質し始めている。",
+    "opening": "【結論】AIブームは「作れば売れる」という拡大期を抜け、地域社会の反発、資本市場の冷却、そしてインフラ構築の効率化が問われる現実路線へと強制的にシフトし始めた。本稿では、米国のミッドターム選挙を受けたデータセンター規制の波及、OpenAIの巨額調達とAnthropicの評価を巡る市場の温度差、そしてMicrosoftによる新興クラウド（ネオクラウド）のパートナー選別という複数の動きを一つの緊張感ある問いに束ねる。いま起きているのは単なる成長の鈍化ではなく、AIインフラの主導権とコスト構造の根本的な見直しである。",
+    "what_happened": "【事実】足元の動向を示す複数の一次情報と報道から、インフラと資本を巡る構造変化の萌芽が読み取れる。第一に、TechCrunchの報道によれば、米国のミッドターム選挙（中間選挙）に伴うデータセンター関連の住民投票では、41件中ほぼ全ての案件で開発に対する新たな規制が支持され、地域社会からの反発が政治的な制約として明確に顕在化した。第二に、CNBCやTechCrunchの報道によると、OpenAIは1兆2500億ドルの評価額でさらに110億ドルの資金調達を進めている一方で、Anthropicは1兆5000億ドルの評価額に対する市場の見方が厳しく、ウォール街のAI関連株に対する熱狂に陰りが見え始めている。第三に、同じくCNBCの報道で、MicrosoftがAI構築の負荷を背景に、提携する新興クラウド（ネオクラウド）の数を絞り込み、自社データセンターの活用へと軸足を移しつつあることが明らかになった。これらは、無制限に膨らんでいたAIインフラの拡張スピードに、資本面と物理面の両方からブレーキがかかり始めていることを示している。",
+    "why_now": "【解釈】今回の変化は、AI産業が「トップラインの性能追求」から「持続可能なコスト構造と調達力」への移行を強いられていることを示している。過去数年間、巨額の計算資源を外部のネオクラウドや未確定の土地に依存して調達するモデルが主流だったが、中間選挙で示された住民の反発や、Microsoftによるネオクラウドの整理という動きは、インフラの乱立が限界に達したことを意味する。資本市場においても、OpenAIが大型調達を継続する一方でAnthropicの評価に慎重論が出ていることは、投資家が「将来の夢」ではなく「具体的な収益化と財務の健全性」で企業を選別し始めている証左である。つまり、現在はAIの技術的な進化のスピードよりも、物理的な電力・土地の制約と、それを支える資本の持続可能性が競争の勝敗を分ける局面に入ったと読める。ただし、主要国での規制緩和や新たな電力供給技術のブレイクスルーが起きた場合、この制約は一時的なものにとどまり、再び拡張路線へ回帰する可能性もある。",
+    "counterpoint": "【反証・留保】この「インフラ制約と選別が進む」という見立ては、いくつかの条件が崩れることで妥当性を失う。例えば、次世代の核融合や分散型小型原子炉などによる電力供給の抜本的な解決策が急速に実用化され、データセンター建設への地域住民の反対が政治的合意によって覆された場合、物理的制約は急速に消滅する。また、大手クラウド企業による内製化が進んだとしても、オープンソースや軽量なフロンティアモデルの効率化（例：Qwenなどによるスキル管理の高度化や効率的な推論技術）が進展すれば、巨額のインフラ投資そのものを回避するルートが太くなり、現在のインフラ企業向けの投資環境の冷え込みが一時的な調整に過ぎなかったという結論になり得る。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、米国のデータセンター建設規制や大手クラウドの調達方針の見直しという動きを他山の石とし、自社の生成AI導入計画を「計算資源の無制限な調達」を前提としたものから見直す必要がある。具体的には、外部の特定の超大型クラウドや特定のネオクラウドへの過度な依存を避け、マルチクラウドや、自社のユースケースに特化した軽量・効率的なモデル（オープンソースモデルの活用など）を組み合わせた実利的な調達戦略へ舵を切るべきだ。また、電力コストや国内でのインフラ制約を考慮し、ローカル環境での推論最適化やガバナンス体制の構築を急ぐことが実務上の急務となる。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "1兆2500億ドルの評価額でさらに110億ドルの追加調達を進行中であり、システム防御の強化や地域社会との協調を模索している。",
+        "implication": "巨額の資金力を維持しつつも、物理インフラや社会的摩擦というボトルネックに対処せざるを得ないフェーズに入っており、財務規律が厳しく問われる。"
+      },
+      {
+        "company": "Anthropic",
+        "status": "市場において1兆5000億ドルの評価額に対する慎重論が強まり、ウォール街のAIブームの冷えの影響を受けている。",
+        "implication": "調達環境が厳しくなることで、競合に対する資本優位性が揺らぎ、より明確な収益化モデルの証明が迫られている。"
+      },
+      {
+        "company": "Microsoft",
+        "status": "AI構築のひずみを背景に、提携するネオクラウドの数を絞り込み、自社データセンターの活用へ関係を再構築している。",
+        "implication": "外部依存度を下げてインフラの主導権を自社内に囲い込むことで、コスト効率を高めようとしているが、独自の調達スピードが全体の足かせになるリスクもある。"
+      }
+    ],
+    "next_signals": [
+      "米国内のデータセンター建設における住民投票や地方自治体の条例化のさらなる広がり",
+      "主要AI企業（OpenAIやAnthropic等）の次ラウンドにおける実際の調達額とバリュエーションの着地",
+      "大手クラウドベンダーによるネオクラウドとの提携縮小・再編の具体的な影響と、自社インフラ稼働率の推移"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+        "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+      },
+      {
+        "title": "Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'",
+        "url": "https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html"
+      },
+      {
+        "title": "Microsoft plans to use fewer neoclods as AI buildout shows signs of strain",
+        "url": "https://www.cnbc.com/2026/11/06/microsoft-moves-to-consolidate-its-relationships-with-neoclouds-in-ai.html"
+      },
+      {
+        "title": "How a Blue Wave midterm might reshape the AI industry",
+        "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/"
+      }
+    ],
+    "news_summary": "AI産業は無制限の拡張フェーズを終え、データセンターの建設規制、資金調達の選別、そして大手によるインフラ内製化という「物理的・財務的な現実」に直面し、競争の軸が変質し始めている。\n\n【事実】足元の動向を示す複数の一次情報と報道から、インフラと資本を巡る構造変化の萌芽が読み取れる。第一に、TechCrunchの報道によれば、米国のミッドターム選挙（中間選挙）に伴うデータセンター関連の住民投票では、41件中ほぼ全ての案件で開発に対する新たな規制が支持され、地域社会からの反発が政治的な制約として明確に顕在化した。第二に、CNBCやTechCrunchの報道によると、OpenAIは1兆2500億ドルの評価額でさらに110億ドルの資金調達を進めている一方で、Anthropicは1兆5000億ドルの評価額に対する市場の見方が厳しく、ウォール街のAI関連株に対する熱狂に陰りが見え始めている。第三に、同じくCNBCの報道で、MicrosoftがAI構築の負荷を背景に、提携する新興クラウド（ネオクラウド）の数を絞り込み、自社データセンターの活用へと軸足を移しつつあることが明らかになった。これらは、無制限に膨らんでいたAIインフラの拡張スピードに、資本面と物理面の両方からブレーキがかかり始めていることを示している。",
+    "opinion_summary": "【解釈】今回の変化は、AI産業が「トップラインの性能追求」から「持続可能なコスト構造と調達力」への移行を強いられていることを示している。過去数年間、巨額の計算資源を外部のネオクラウドや未確定の土地に依存して調達するモデルが主流だったが、中間選挙で示された住民の反発や、Microsoftによるネオクラウドの整理という動きは、インフラの乱立が限界に達したことを意味する。資本市場においても、OpenAIが大型調達を継続する一方でAnthropicの評価に慎重論が出ていることは、投資家が「将来の夢」ではなく「具体的な収益化と財務の健全性」で企業を選別し始めている証左である。つまり、現在はAIの技術的な進化のスピードよりも、物理的な電力・土地の制約と、それを支える資本の持続可能性が競争の勝敗を分ける局面に入ったと読める。ただし、主要国での規制緩和や新たな電力供給技術のブレイクスルーが起きた場合、この制約は一時的なものにとどまり、再び拡張路線へ回帰する可能性もある。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この「インフラ制約と選別が進む」という見立ては、いくつかの条件が崩れることで妥当性を失う。例えば、次世代の核融合や分散型小型原子炉などによる電力供給の抜本的な解決策が急速に実用化され、データセンター建設への地域住民の反対が政治的合意によって覆された場合、物理的制約は急速に消滅する。また、大手クラウド企業による内製化が進んだとしても、オープンソースや軽量なフロンティアモデルの効率化（例：Qwenなどによるスキル管理の高度化や効率的な推論技術）が進展すれば、巨額のインフラ投資そのものを回避するルートが太くなり、現在のインフラ企業向けの投資環境の冷え込みが一時的な調整に過ぎなかったという結論になり得る。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+        "point": "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expected"
+      },
+      {
+        "rank": 2,
+        "title": "Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html",
+        "point": "Anthropic could list below a $1.5 trillion valuation, trailing previous expectations, as the AI trade sours on Wall Stre"
+      },
+      {
+        "rank": 3,
+        "title": "Microsoft plans to use fewer neoclods as AI buildout shows signs of strain",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/06/microsoft-moves-to-consolidate-its-relationships-with-neoclouds-in-ai.html",
+        "point": "Microsoft is winding down the number of neoclouds it counts as partners, picking key suppliers and focusing on its own d"
+      },
+      {
+        "rank": 4,
+        "title": "How a Blue Wave midterm might reshape the AI industry",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+        "point": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public v"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AIインフラの拡張に壁：資金調達と物理インフラの転換点",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AIブームは「作れば売れる」という拡大期を抜け、地域社会の反発、資本市場の冷却、そしてインフラ構築の効率化が問われる現実路線へと強制的にシフトし始めた。本稿では、米国のミッドターム選挙を受けたデータセンター規制の波及、OpenAIの巨額調達とAnthropicの評価を巡る市場の温度差、そしてMicrosoftによる新興クラウド（ネオクラウド）のパートナー選別という複数の動きを一つの緊張感ある問いに束ねる。いま起きているのは単なる成長の鈍化ではなく、AIインフラの主導権とコスト構造の根本的な見直しである。\n\n【事実】足元の動向を示す複数の一次情報と報道から、インフラと資本を巡る構造変化の萌芽が読み取れる。第一に、TechCrunchの報道によれば、米国のミッドターム選挙（中間選挙）に伴うデータセンター関連の住民投票では、41件中ほぼ全ての案件で開発に対する新たな規制が支持され、地域社会からの反発が政治的な制約として明確に顕在化した。第二に、CNBCやTechCrunchの報道によると、OpenAIは1兆2500億ドルの評価額でさらに110億ドルの資金調達を進めている一方で、Anthropicは1兆5000億ドルの評価額に対する市場の見方が厳しく、ウォール街のAI関連株に対する熱狂に陰りが見え始めている。第三に、同じくCNBCの報道で、MicrosoftがAI構築の負荷を背景に、提携する新興クラウド（ネオクラウド）の数を絞り込み、自社データセンターの活用へと軸足を移しつつあることが明らかになった。これらは、無制限に膨らんでいたAIインフラの拡張スピードに、資本面と物理面の両方からブレーキがかかり始めていることを示している。\n\n【解釈】今回の変化は、AI産業が「トップラインの性能追求」から「持続可能なコスト構造と調達力」への移行を強いられていることを示している。過去数年間、巨額の計算資源を外部のネオクラウドや未確定の土地に依存して調達するモデルが主流だったが、中間選挙で示された住民の反発や、Microsoftによるネオクラウドの整理という動きは、インフラの乱立が限界に達したことを意味する。資本市場においても、OpenAIが大型調達を継続する一方でAnthropicの評価に慎重論が出ていることは、投資家が「将来の夢」ではなく「具体的な収益化と財務の健全性」で企業を選別し始めている証左である。つまり、現在はAIの技術的な進化のスピードよりも、物理的な電力・土地の制約と、それを支える資本の持続可能性が競争の勝敗を分ける局面に入ったと読める。ただし、主要国での規制緩和や新たな電力供給技術のブレイクスルーが起きた場合、この制約は一時的なものにとどまり、再び拡張路線へ回帰する可能性もある。\n\n【競争の構図】\n【OpenAI】\n1兆2500億ドルの評価額でさらに110億ドルの追加調達を進行中であり、システム防御の強化や地域社会との協調を模索している。\n→ 巨額の資金力を維持しつつも、物理インフラや社会的摩擦というボトルネックに対処せざるを得ないフェーズに入っており、財務規律が厳しく問われる。\n\n【Anthropic】\n市場において1兆5000億ドルの評価額に対する慎重論が強まり、ウォール街のAIブームの冷えの影響を受けている。\n→ 調達環境が厳しくなることで、競合に対する資本優位性が揺らぎ、より明確な収益化モデルの証明が迫られている。\n\n【Microsoft】\nAI構築のひずみを背景に、提携するネオクラウドの数を絞り込み、自社データセンターの活用へ関係を再構築している。\n→ 外部依存度を下げてインフラの主導権を自社内に囲い込むことで、コスト効率を高めようとしているが、独自の調達スピードが全体の足かせになるリスクもある。",
+        "why_matters": "【日本の実務への示唆】日本企業は、米国のデータセンター建設規制や大手クラウドの調達方針の見直しという動きを他山の石とし、自社の生成AI導入計画を「計算資源の無制限な調達」を前提としたものから見直す必要がある。具体的には、外部の特定の超大型クラウドや特定のネオクラウドへの過度な依存を避け、マルチクラウドや、自社のユースケースに特化した軽量・効率的なモデル（オープンソースモデルの活用など）を組み合わせた実利的な調達戦略へ舵を切るべきだ。また、電力コストや国内でのインフラ制約を考慮し、ローカル環境での推論最適化やガバナンス体制の構築を急ぐことが実務上の急務となる。\n\n【反証・留保】この「インフラ制約と選別が進む」という見立ては、いくつかの条件が崩れることで妥当性を失う。例えば、次世代の核融合や分散型小型原子炉などによる電力供給の抜本的な解決策が急速に実用化され、データセンター建設への地域住民の反対が政治的合意によって覆された場合、物理的制約は急速に消滅する。また、大手クラウド企業による内製化が進んだとしても、オープンソースや軽量なフロンティアモデルの効率化（例：Qwenなどによるスキル管理の高度化や効率的な推論技術）が進展すれば、巨額のインフラ投資そのものを回避するルートが太くなり、現在のインフラ企業向けの投資環境の冷え込みが一時的な調整に過ぎなかったという結論になり得る。",
+        "context": "【次の観測点】\n・米国内のデータセンター建設における住民投票や地方自治体の条例化のさらなる広がり\n・主要AI企業（OpenAIやAnthropic等）の次ラウンドにおける実際の調達額とバリュエーションの着地\n・大手クラウドベンダーによるネオクラウドとの提携縮小・再編の具体的な影響と、自社インフラ稼働率の推移"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "The Verge AI",
+      "title": "OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
+      "summary": "OpenAI is now valued at $1.25 trillion in a new round of funding that has raised another $11 billion, according to Bloomberg. That would make it one of the world's most valuable companies, not long after raising $122 billion from investors in March at a valuation of $852 billion. Echoing FT and Wall Street Journal [&#8230;]",
+      "published": "2026-11-06 23:46 UTC",
+      "pub_dt": "2026-11-06T23:46:18+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Cramer’s week ahead: AI data center stocks face another hurdle and so does the Fed",
+      "url": "https://www.cnbc.com/2026/11/06/cramer-coreweave-nebius-earnings.html",
+      "summary": "CoreWeave and Nebius earnings, alongside key inflation reports that could shape the Fed's next interest rate decision, are the focus.",
+      "published": "2026-11-06 23:13 UTC",
+      "pub_dt": "2026-11-06T23:13:10+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "China reportedly recruited AI exec to spy on Jensen Huang",
+      "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
+      "summary": "China's intelligence agency recruited Megaspeed executive Alice Huang to spy on Nvidia CEO Jensen Huang, according to The New York Times. The Ministry of State Security (MSS) enlisted her to glean information about American AI chips and \"potentially influence the company to push for its most advanced chips to be made available to China.\" Megaspeed [&#8230;]",
+      "published": "2026-11-06 23:00 UTC",
+      "pub_dt": "2026-11-06T23:00:44+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+      "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+      "summary": "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expected to in the coming weeks.",
+      "published": "2026-11-06 22:53 UTC",
+      "pub_dt": "2026-11-06T22:53:46+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "OpenAI bugging suspect Alfozan pleads not guilty",
+      "url": "https://www.cnbc.com/2026/11/06/openai-bugging-alfozan-saudi.html",
+      "summary": "Saudi national Abdulrahman Alfozan is charged with planting a recording device in a conference room at artificial intelligence giant OpenAI.",
+      "published": "2026-11-06 21:15 UTC",
+      "pub_dt": "2026-11-06T21:15:47+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'",
+      "url": "https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html",
+      "summary": "Anthropic could list below a $1.5 trillion valuation, trailing previous expectations, as the AI trade sours on Wall Street.",
+      "published": "2026-11-06 21:07 UTC",
+      "pub_dt": "2026-11-06T21:07:07+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "All the latest updates on AI data centers",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
+      "summary": "Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand warehouses full of energy-hungry servers has also kicked up fights across the world over their impact on power grids, utility bills, nearby communities, and the environment. Data centers were a major bipartisan issue ahead [&#8230;]",
+      "published": "2026-11-06 20:02 UTC",
+      "pub_dt": "2026-11-06T20:02:22+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+      "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+      "summary": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
+      "published": "2026-11-06 18:44 UTC",
+      "pub_dt": "2026-11-06T18:44:38+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+      "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+      "summary": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
+      "published": "2026-11-06 18:44 UTC",
+      "pub_dt": "2026-11-06T18:44:20+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Free Chinese AI Models Are Getting Scary Good at Hacking",
+      "url": "https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/",
+      "summary": "An experiment in which AI models were asked to break into simulated networks showed the hacking skills of DeepSeek and GLM to be not far behind OpenAI’s most advanced cyber model, which isn’t public.",
+      "published": "2026-11-06 18:43 UTC",
+      "pub_dt": "2026-11-06T18:43:43+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Microsoft plans to use fewer neoclouds as AI buildout shows signs of strain",
+      "url": "https://www.cnbc.com/2026/11/06/microsoft-moves-to-consolidate-its-relationships-with-neoclouds-in-ai.html",
+      "summary": "Microsoft is winding down the number of neoclouds it counts as partners, picking key suppliers and focusing on its own data centers.",
+      "published": "2026-11-06 18:40 UTC",
+      "pub_dt": "2026-11-06T18:40:58+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "OpenAI, Arm and Qualcomm executives react to post-midterm AI sell-off",
+      "url": "https://www.cnbc.com/2026/11/06/tech-executives-ai-data-center-selloff-midterms.html",
+      "summary": "Executives of major tech companies are largely projecting optimism about continued growth in the artificial intelligence sector despite a post-midterm sell-off.",
+      "published": "2026-11-06 18:35 UTC",
+      "pub_dt": "2026-11-06T18:35:08+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now",
+      "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+      "summary": "Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called \"spaces,\" allows its AI assistant to build things like a shopping hub, school dashboard, music tracker, trivia game, and more, which you can interact with directly in the Muse app. Meta says you can create a new space by [&#8230;]",
+      "published": "2026-11-06 18:10 UTC",
+      "pub_dt": "2026-11-06T18:10:10+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "How a Blue Wave midterm might reshape the AI industry",
+      "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+      "summary": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot directly, they were a [&#8230;]",
+      "published": "2026-11-06 18:00 UTC",
+      "pub_dt": "2026-11-06T18:00:00+00:00"
+    },
+    {
+      "source": "Qwen GitHub",
+      "title": "Release v0.26.9",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.9",
+      "summary": "Highlights\nSee the complete change list below.\nBreaking Changes\nNo known breaking changes.\nSkill installation and activation\nSkill ZIP uploads, daemon APIs, TypeScript SDK support, bulk activation, and recovery protections make installing and managing Skills more reliable.\n\nAdds PUT /skills/activation and setUserSkillsActivation to enable or disable 1-100 user Skills in one request, with saved preferences and propagation status. (#16186)\nPrepares Skill installation for larger archives by adding ",
+      "published": "2026-11-06 17:33 UTC",
+      "pub_dt": "2026-11-06T17:33:27+00:00"
+    }
+  ]
+}
