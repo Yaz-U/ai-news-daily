@@ -1,0 +1,233 @@
+{
+  "timestamp": "2026-11-09T09:26:01.618416+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "エージェント運用とNvidia揺らぎが示すAI覇権の地殻変動",
+    "thesis": "AI競争の主戦場はモデルの性能から実務でのエージェント運用管理へと移行する一方、ハードウェアの頂点であるNvidiaを巡る地政学的リスクが表面化し、インフラの安定前提が揺らぎ始めている。",
+    "opening": "【結論】AI産業の競争軸は、単なる基礎モデルの性能競争から、自律型エージェント（人間の指示を受けて自ら判断・実行するAIシステム）の実務への安全な統合と、その基盤を支えるサプライチェーンの安全保障へと完全にシフトした。\n\n本日は、Qwen Code DesktopやOpenClawなどの開発プラットフォームによるエージェントの実装・権限管理の高度化と、Nvidiaのジェンスン・フアンCEOの個人関係を巡る調査という一見異なる二つの材料が揃った。これらは、AIの「実用化の現場」と「ハードウェアの根幹」という、産業の上下両端で同時にルール変更が起きていることを示している。本稿では、この二つの事象から今後の競争の行方を読み解く。",
+    "what_happened": "【事実】今回の変化を裏付ける動向として、オープンソースおよび開発者エコシステムにおけるエージェント管理の厳格化と、半導体業界の根幹に関わる重大なガバナンス問題が起きている。\n\nまず第一に、開発者向けツール群のアップデートが相次いでいる。QwenのGitHubリポジトリ（Qwen Code Desktop v0.27.0およびv0.26.9-nightly）では、プルリクエストの検証プロセスへのサンドボックス環境の統合や、OpenAI互換プロバイダーにおけるキャッシュ管理の最適化が進められている。また、自律エージェント基盤を志向するOpenClawの最新リリース（v2026.11.2および関連パッチ）では、機密情報や会話内容、ツールエラー、チャンネルペイロードを診断ログから厳格に排除し、プラグインの検証元を元のプロデューサーに固定するなどのプライバシーと信頼境界の強化が図られている。\n\n第二に、米NYTimes、CNBC、Axiosなどの報道によると、Nvidiaのジェンスン・フアンCEOが中国の情報機関に関連するとされる女性との私的な関係を認め、同社取締役会が独立調査を開始した。この問題は、米国のルビオ国務長官らが春先から懸念を示していた機密事項であり、議会からの超党派による調査要求やトランプ大統領の言及を巻き込み、AI全体のサプライチェーンの前提となる半導体巨人のガバナンスを揺るがす事態に発展している。",
+    "why_now": "【解釈】今回の二つの動きは、AI産業が「拡大期」から「統制と安全保障のフェーズ」へ強制的に移行させられている構造を示している。\n\nエージェントの現場では、複数のAIが自律的に連携して業務を遂行する実験が広がるにつれ、予期せぬ行動やセキュリティ侵害のリスクが現実化している。CNBCの報道が指摘するように、AIエージェント同士の「チームワーク」には倫理や目標の不一致という構造的なリスクが伴う。そのため、OpenClawやQwenが示すような権限の切り離しやログの秘匿化は、企業が実務でエージェントを安全に採用するための必須条件となりつつある。\n\n同時に、Nvidiaを巡る地政学的・ガバナンス上の動揺は、AIインフラの集中が持つ脆弱性を露わにしている。計算資源の大部分を握る一社の最高経営責任者が安全保障上の調査対象となることで、チップの調達や次世代データセンターの計画全体に不確実性の影を落とす。ソフトウェアレイヤーでは厳格な統制が進む一方で、ハードウェアレイヤーでは予測不可能な政治・人的リスクが高まるという、ねじれた構造が現在の競争環境の本質である。",
+    "counterpoint": "【反証・留保】この見立てが過大評価に終わる条件として、Nvidiaの調査が経営陣の退陣や戦略的停滞を生まずに早期収束し、米中間の半導体サプライチェーンに実質的な影響を与えない場合が挙げられる。そのシナリオでは、ハードウェアの供給不安は一時的なノイズに留まり、競争は再び純粋なモデル性能とエージェントの処理速度の争いに回帰することになる。また、エージェントのセキュリティ強化も、過剰な規制として開発速度を大きく鈍らせるだけであれば、実務への浸透はかえって遅れる可能性がある。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、生成AIの「お試し導入」の段階を早急に脱し、エージェントのガバナンスとインフラ調達のリスクヘッジを同時に見直す必要がある。\n\n第一に、社内業務に複数のAIエージェントや外部プラグインを接続する際、OpenClawやQwenが実装し始めているような「情報漏洩を防ぐ信頼境界」や「権限の動的管理」が自社システムに担保されているかを検証すべきである。第二に、Nvidiaへの過度な依存や特定のサプライチェーンに起因する調達リスクに対し、マルチクラウドや代替ハードウェアの検討を含めたBCP（事業継続計画）を再確認することが、今後の調達戦略上の急務となる。",
+    "company_positions": [
+      {
+        "company": "Nvidia",
+        "status": "CEOの私生活と中国スパイ疑惑に関する取締役会の独立調査、および米政界・議会からの厳しい監視に直面している。",
+        "implication": "AIインフラの圧倒的な優位性は揺るがないものの、ガバナンスの動揺が長期化すれば、顧客企業の調達計画や投資家のAIトレード全体に対する心理的・戦略的な弱点となる。"
+      },
+      {
+        "company": "Qwen (Alibaba系)",
+        "status": "デスクトップ環境やコード生成ツールにおいて、サンドボックス環境の強化やOpenAI互換プロバイダーとの統合を加速している。",
+        "implication": "開発者向けの利便性を高めつつ、実務環境での安全な組み込みをアピールすることで、オープンソースおよびオープンウェイト領域での実需を取り込む。"
+      }
+    ],
+    "next_signals": [
+      "Nvidia取締役会によるCEO調査の結論と、米国政府・議会による追加の規制・調達制限の有無",
+      "OpenClawやQwenをはじめとするエージェント基盤における、エンタープライズ向けの厳格なアクセス制御の標準化の進展",
+      "米国およびテキサス州等における大規模AIデータセンターの電力・インフラ認可と投資マネーの動向"
+    ],
+    "sources": [
+      {
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.27.0",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.0"
+      },
+      {
+        "title": "Qwen GitHub｜Release v0.26.9-nightly.20261107.65e1f1aeaa",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.9-nightly.20261107.65e1f1aeaa"
+      },
+      {
+        "title": "OpenClaw GitHub｜openclaw 2026.11.2",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.2"
+      },
+      {
+        "title": "CNBC Tech｜Recent AI agent experiments reveal a risky future of machine 'teamwork' inside corporations",
+        "url": "https://www.cnbc.com/2026/11/08/ai-agents-risks.html"
+      },
+      {
+        "title": "NYTimes Technology｜Nvidia Opens Investigation Into Jensen Huang’s Relationship With Chinese Spy",
+        "url": "https://www.nytimes.com/2026/11/08/technology/nvidia-investigation-jensen-huang-china.html"
+      },
+      {
+        "title": "CNBC Tech｜Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
+        "url": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html"
+      }
+    ],
+    "news_summary": "AI競争の主戦場はモデルの性能から実務でのエージェント運用管理へと移行する一方、ハードウェアの頂点であるNvidiaを巡る地政学的リスクが表面化し、インフラの安定前提が揺らぎ始めている。\n\n【事実】今回の変化を裏付ける動向として、オープンソースおよび開発者エコシステムにおけるエージェント管理の厳格化と、半導体業界の根幹に関わる重大なガバナンス問題が起きている。\n\nまず第一に、開発者向けツール群のアップデートが相次いでいる。QwenのGitHubリポジトリ（Qwen Code Desktop v0.27.0およびv0.26.9-nightly）では、プルリクエストの検証プロセスへのサンドボックス環境の統合や、OpenAI互換プロバイダーにおけるキャッシュ管理の最適化が進められている。また、自律エージェント基盤を志向するOpenClawの最新リリース（v2026.11.2および関連パッチ）では、機密情報や会話内容、ツールエラー、チャンネルペイロードを診断ログから厳格に排除し、プラグインの検証元を元のプロデューサーに固定するなどのプライバシーと信頼境界の強化が図られている。\n\n第二に、米NYTimes、CNBC、Axiosなどの報道によると、Nvidiaのジェンスン・フアンCEOが中国の情報機関に関連するとされる女性との私的な関係を認め、同社取締役会が独立調査を開始した。この問題は、米国のルビオ国務長官らが春先から懸念を示していた機密事項であり、議会からの超党派による調査要求やトランプ大統領の言及を巻き込み、AI全体のサプライチェーンの前提となる半導体巨人のガバナンスを揺るがす事態に発展している。",
+    "opinion_summary": "【解釈】今回の二つの動きは、AI産業が「拡大期」から「統制と安全保障のフェーズ」へ強制的に移行させられている構造を示している。\n\nエージェントの現場では、複数のAIが自律的に連携して業務を遂行する実験が広がるにつれ、予期せぬ行動やセキュリティ侵害のリスクが現実化している。CNBCの報道が指摘するように、AIエージェント同士の「チームワーク」には倫理や目標の不一致という構造的なリスクが伴う。そのため、OpenClawやQwenが示すような権限の切り離しやログの秘匿化は、企業が実務でエージェントを安全に採用するための必須条件となりつつある。\n\n同時に、Nvidiaを巡る地政学的・ガバナンス上の動揺は、AIインフラの集中が持つ脆弱性を露わにしている。計算資源の大部分を握る一社の最高経営責任者が安全保障上の調査対象となることで、チップの調達や次世代データセンターの計画全体に不確実性の影を落とす。ソフトウェアレイヤーでは厳格な統制が進む一方で、ハードウェアレイヤーでは予測不可能な政治・人的リスクが高まるという、ねじれた構造が現在の競争環境の本質である。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価に終わる条件として、Nvidiaの調査が経営陣の退陣や戦略的停滞を生まずに早期収束し、米中間の半導体サプライチェーンに実質的な影響を与えない場合が挙げられる。そのシナリオでは、ハードウェアの供給不安は一時的なノイズに留まり、競争は再び純粋なモデル性能とエージェントの処理速度の争いに回帰することになる。また、エージェントのセキュリティ強化も、過剰な規制として開発速度を大きく鈍らせるだけであれば、実務への浸透はかえって遅れる可能性がある。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.27.0",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.0",
+        "point": "What's Changed\n\nfix(channels): keep GitHub inbound recovery armed after a failed read by @wenshao in #16402\ntest(core): "
+      },
+      {
+        "rank": 2,
+        "title": "Qwen GitHub｜Release v0.26.9-nightly.20261107.65e1f1aeaa",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.9-nightly.20261107.65e1f1aeaa",
+        "point": "What's Changed\n\ndocs(providers): document Wally under OpenAI-compatible providers by @sanchitmonga22 in #16529\nfix(core)"
+      },
+      {
+        "rank": 3,
+        "title": "OpenClaw GitHub｜openclaw 2026.11.2",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.2",
+        "point": "2026.11.2\nHighlights\n\nPrivacy and trust boundaries: Keep configuration secrets, conversation content, tool errors, and c"
+      },
+      {
+        "rank": 4,
+        "title": "CNBC Tech｜Recent AI agent experiments reveal a risky future of machine 'teamwork' inside corporations",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/08/ai-agents-risks.html",
+        "point": "AI agents are now working together on a regular basis. Research shows they are not always seeking the same goal, or oper"
+      },
+      {
+        "rank": 5,
+        "title": "NYTimes Technology｜Nvidia Opens Investigation Into Jensen Huang’s Relationship With Chinese Spy",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/08/technology/nvidia-investigation-jensen-huang-china.html",
+        "point": "Mr. Huang, the company’s chief executive, acknowledged on Sunday that he was intimate with a business executive who U.S."
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "エージェント運用とNvidia揺らぎが示すAI覇権の地殻変動",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.0",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の競争軸は、単なる基礎モデルの性能競争から、自律型エージェント（人間の指示を受けて自ら判断・実行するAIシステム）の実務への安全な統合と、その基盤を支えるサプライチェーンの安全保障へと完全にシフトした。\n\n本日は、Qwen Code DesktopやOpenClawなどの開発プラットフォームによるエージェントの実装・権限管理の高度化と、Nvidiaのジェンスン・フアンCEOの個人関係を巡る調査という一見異なる二つの材料が揃った。これらは、AIの「実用化の現場」と「ハードウェアの根幹」という、産業の上下両端で同時にルール変更が起きていることを示している。本稿では、この二つの事象から今後の競争の行方を読み解く。\n\n【事実】今回の変化を裏付ける動向として、オープンソースおよび開発者エコシステムにおけるエージェント管理の厳格化と、半導体業界の根幹に関わる重大なガバナンス問題が起きている。\n\nまず第一に、開発者向けツール群のアップデートが相次いでいる。QwenのGitHubリポジトリ（Qwen Code Desktop v0.27.0およびv0.26.9-nightly）では、プルリクエストの検証プロセスへのサンドボックス環境の統合や、OpenAI互換プロバイダーにおけるキャッシュ管理の最適化が進められている。また、自律エージェント基盤を志向するOpenClawの最新リリース（v2026.11.2および関連パッチ）では、機密情報や会話内容、ツールエラー、チャンネルペイロードを診断ログから厳格に排除し、プラグインの検証元を元のプロデューサーに固定するなどのプライバシーと信頼境界の強化が図られている。\n\n第二に、米NYTimes、CNBC、Axiosなどの報道によると、Nvidiaのジェンスン・フアンCEOが中国の情報機関に関連するとされる女性との私的な関係を認め、同社取締役会が独立調査を開始した。この問題は、米国のルビオ国務長官らが春先から懸念を示していた機密事項であり、議会からの超党派による調査要求やトランプ大統領の言及を巻き込み、AI全体のサプライチェーンの前提となる半導体巨人のガバナンスを揺るがす事態に発展している。\n\n【解釈】今回の二つの動きは、AI産業が「拡大期」から「統制と安全保障のフェーズ」へ強制的に移行させられている構造を示している。\n\nエージェントの現場では、複数のAIが自律的に連携して業務を遂行する実験が広がるにつれ、予期せぬ行動やセキュリティ侵害のリスクが現実化している。CNBCの報道が指摘するように、AIエージェント同士の「チームワーク」には倫理や目標の不一致という構造的なリスクが伴う。そのため、OpenClawやQwenが示すような権限の切り離しやログの秘匿化は、企業が実務でエージェントを安全に採用するための必須条件となりつつある。\n\n同時に、Nvidiaを巡る地政学的・ガバナンス上の動揺は、AIインフラの集中が持つ脆弱性を露わにしている。計算資源の大部分を握る一社の最高経営責任者が安全保障上の調査対象となることで、チップの調達や次世代データセンターの計画全体に不確実性の影を落とす。ソフトウェアレイヤーでは厳格な統制が進む一方で、ハードウェアレイヤーでは予測不可能な政治・人的リスクが高まるという、ねじれた構造が現在の競争環境の本質である。\n\n【競争の構図】\n【Nvidia】\nCEOの私生活と中国スパイ疑惑に関する取締役会の独立調査、および米政界・議会からの厳しい監視に直面している。\n→ AIインフラの圧倒的な優位性は揺るがないものの、ガバナンスの動揺が長期化すれば、顧客企業の調達計画や投資家のAIトレード全体に対する心理的・戦略的な弱点となる。\n\n【Qwen (Alibaba系)】\nデスクトップ環境やコード生成ツールにおいて、サンドボックス環境の強化やOpenAI互換プロバイダーとの統合を加速している。\n→ 開発者向けの利便性を高めつつ、実務環境での安全な組み込みをアピールすることで、オープンソースおよびオープンウェイト領域での実需を取り込む。",
+        "why_matters": "【日本の実務への示唆】日本企業は、生成AIの「お試し導入」の段階を早急に脱し、エージェントのガバナンスとインフラ調達のリスクヘッジを同時に見直す必要がある。\n\n第一に、社内業務に複数のAIエージェントや外部プラグインを接続する際、OpenClawやQwenが実装し始めているような「情報漏洩を防ぐ信頼境界」や「権限の動的管理」が自社システムに担保されているかを検証すべきである。第二に、Nvidiaへの過度な依存や特定のサプライチェーンに起因する調達リスクに対し、マルチクラウドや代替ハードウェアの検討を含めたBCP（事業継続計画）を再確認することが、今後の調達戦略上の急務となる。\n\n【反証・留保】この見立てが過大評価に終わる条件として、Nvidiaの調査が経営陣の退陣や戦略的停滞を生まずに早期収束し、米中間の半導体サプライチェーンに実質的な影響を与えない場合が挙げられる。そのシナリオでは、ハードウェアの供給不安は一時的なノイズに留まり、競争は再び純粋なモデル性能とエージェントの処理速度の争いに回帰することになる。また、エージェントのセキュリティ強化も、過剰な規制として開発速度を大きく鈍らせるだけであれば、実務への浸透はかえって遅れる可能性がある。",
+        "context": "【次の観測点】\n・Nvidia取締役会によるCEO調査の結論と、米国政府・議会による追加の規制・調達制限の有無\n・OpenClawやQwenをはじめとするエージェント基盤における、エンタープライズ向けの厳格なアクセス制御の標準化の進展\n・米国およびテキサス州等における大規模AIデータセンターの電力・インフラ認可と投資マネーの動向"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "NYTimes Technology",
+      "title": "What to Know About Nvidia’s Investigation of Its C.E.O.",
+      "url": "https://www.nytimes.com/2026/11/08/technology/nvidias-investigation-jensen-huang.html",
+      "summary": "Jensen Huang, the chief executive of the A.I. chip company, admitted to a romantic relationship with a woman who U.S. intelligence says was recruited by China’s top spy agency.",
+      "published": "2026-11-09 00:21 UTC",
+      "pub_dt": "2026-11-09T00:21:21+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Trump backs Nvidia's Huang amid affair, spy investigation",
+      "url": "https://www.axios.com/2026/11/09/trump-jensen-huang-nvidia",
+      "summary": "President Trump defended Nvidia CEO Jensen Huang on Sunday night, even as the company's board launched an investigation into his affair with a suspected Chinese spy.Why it matters: The blowback to Huang's relationship is only getting more intense by the hour, with multiple members of Congress calling for probes and investors saying the news could put a cloud over the entire AI trade. What they're saying: Trump was asked Sunday night if he's taking Huang with him on an Asia trip next week. \"I don",
+      "published": "2026-11-09 00:00 UTC",
+      "pub_dt": "2026-11-09T00:00:35+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Nvidia Opens Investigation Into Jensen Huang’s Relationship With Chinese Spy",
+      "url": "https://www.nytimes.com/2026/11/08/technology/nvidia-investigation-jensen-huang-china.html",
+      "summary": "Mr. Huang, the company’s chief executive, acknowledged on Sunday that he was intimate with a business executive who U.S. officials had determined was working for Chinese intelligence.",
+      "published": "2026-11-08 23:51 UTC",
+      "pub_dt": "2026-11-08T23:51:34+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+      "summary": "On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government. In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair. You can read the full text below. To my [&#8230;]",
+      "published": "2026-11-08 22:54 UTC",
+      "pub_dt": "2026-11-08T22:54:50+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia investigates CEO Jensen Huang's relationship with alleged Chinese spy",
+      "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html",
+      "summary": "Huang told Nvidia staff in an email that he had an affair and that the company's board has opened an investigation into allegations the woman is a Chinese spy.",
+      "published": "2026-11-08 22:53 UTC",
+      "pub_dt": "2026-11-08T22:53:57+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
+      "url": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html",
+      "summary": "Lawmakers want to question Nvidia CEO Jensen Huang following reports about his relationship with an alleged Chinese intelligence asset.",
+      "published": "2026-11-08 22:49 UTC",
+      "pub_dt": "2026-11-08T22:49:46+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Rubio Warned Officials About Nvidia Chief’s Entanglement With Chinese Spy",
+      "url": "https://www.nytimes.com/2026/11/08/us/politics/rubio-nvidia-ceo-chinese-spy.html",
+      "summary": "The secretary of state’s role in drafting a secret memo highlights how top officials were concerned this past spring about Jensen Huang’s relationship with a woman tied to Chinese intelligence.",
+      "published": "2026-11-08 22:46 UTC",
+      "pub_dt": "2026-11-08T22:46:30+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Read Huang's email to his staff and statement from Nvidia's board of directors",
+      "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-email-board-of-directors-statement.html",
+      "summary": "Here is the text of a staff email from Huang obtained by CNBC and a statement released Sunday about the investigation from Nvidia's board of directors.",
+      "published": "2026-11-08 22:19 UTC",
+      "pub_dt": "2026-11-08T22:19:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
+      "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+      "summary": "In a memo to the company, Huang admitted that he had an affair.",
+      "published": "2026-11-08 21:00 UTC",
+      "pub_dt": "2026-11-08T21:00:11+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.2",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.2",
+      "summary": "2026.11.2\nHighlights\n\nPrivacy and trust boundaries: Keep configuration secrets, conversation content, tool errors, and channel payloads out of diagnostic logs, enforce the selected provider and navigation trust boundaries, and release MCP grants after warm CLI turns. (#191318) (#174998) (#174544) (#172963) (#174526) (#173422) (#191748) (#191271) (#193438) (#191102) (#191980) Authored by @steipete. Thanks @RomneyDa, @wangmiao0668000666, @Finn763, @pgondhi987, @SebTardif, and @vincentkoc.\nAccount-",
+      "published": "2026-11-08 20:27 UTC",
+      "pub_dt": "2026-11-08T20:27:09+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+      "summary": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company. A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light [&#8230;]",
+      "published": "2026-11-08 20:22 UTC",
+      "pub_dt": "2026-11-08T20:22:39+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Nvidia CEO Jensen Huang admits affair, board to launch investigation",
+      "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-admits-affair-board-to-launch-investigation",
+      "summary": "Nvidia CEO Jensen Huang admitted to having a romantic relationship with a suspected Chinese spy in a message to his company. The big picture: The company's board launched an independent investigation into reports that he was targeted by Chinese intelligence.Driving the news: \"I owe my family and all of you an apology,\" Huang wrote in a draft email to Nvidia employees obtained by Axios.\"I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for what I did.\"Huang sai",
+      "published": "2026-11-08 20:14 UTC",
+      "pub_dt": "2026-11-08T20:14:05+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Apple is racing to make Siri more agentic",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+      "summary": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's [&#8230;]",
+      "published": "2026-11-08 19:18 UTC",
+      "pub_dt": "2026-11-08T19:18:19+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "release-publish/1007cb9e5cdf-1794164430: fix(release): defer ClawHub on authenticated core recovery (#195350)",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F1007cb9e5cdf-1794164430",
+      "summary": "\nfix(release): defer ClawHub on authenticated core recovery\n\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com\n\nfix(release): defer ClawHub on authenticated core recovery\n\nOpenClaw-Publication: 51060c97-5053-4c83-9b81-5963de559d2e\n\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com",
+      "published": "2026-11-08 18:59 UTC",
+      "pub_dt": "2026-11-08T18:59:44+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "release-publish/e3a09aaba1f4-1794162889: fix: verify plugin releases from their qualified producer (#195341)",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2Fe3a09aaba1f4-1794162889",
+      "summary": "\nfix: verify plugin releases from their qualified producer\n\nKeep consumed qualification at its original producer and policy when a newer trusted publisher promotes frozen release bytes.\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com\n\nfix: verify plugin releases from their qualified producer\n\nOpenClaw-Publication: 2543f264-ba24-4c50-9b0b-0b458067bc9d\n\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com",
+      "published": "2026-11-08 18:31 UTC",
+      "pub_dt": "2026-11-08T18:31:08+00:00"
+    }
+  ]
+}
