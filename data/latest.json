@@ -1,88 +1,139 @@
 {
-  "timestamp": "2026-11-11T09:58:51.041957+09:00",
-  "time_slot": "朝",
+  "timestamp": "2026-11-12T11:05:25.385270+09:00",
+  "time_slot": "昼",
   "summary": {
-    "headline": "Anthropicの巨額IPO観測と問われる安全保障",
-    "thesis": "AI市場の主導権争いは、モデルの精度競争から、巨額資本を維持する上場・ガバナンス体制と地政学的リスク管理のステージへ移行しつつある。",
-    "opening": "【結論】今日の材料から見えてくるのは、AI産業の主導権が「単なるモデル性能の高さ」から、「資本市場での巨額調達力」および「国家安全保障の網の目を通るガバナンス」へシフトしたという事実だ。ニューヨーク・タイムズによるAnthropicの1兆4,000億ドル規模のIPO観測と、アクシオスが報じた商務省へのNVIDIA製チップ売却に関する国家安全保障上の警告は、表裏一体の現象である。AIバブルへの疑念がくすぶる市場において、各社がどのような資本基盤を築き、どう政治的リスクをクリアするかで、次の勝者が決まりつつある。",
-    "what_happened": "【事実】今回の見立ての根拠として、主要な3本の報道と動向を取り上げる。第一に、ニューヨーク・タイムズ紙の報道によれば、Anthropicは最大1兆4,000億ドル規模の評価額を目指す大型IPOを視野に入れている。これは市場でAIブームの持続可能性が問われる中でのブロックバスター上場計画となる。第二に、アクシオスのスクープによると、ハワード・ルトニック商務長官に対し、NVIDIAのジェンスン・フアンCEOの人間関係に絡む機密の国家安全保障上の警告メモが送付された。商務省はセンシティブな米国の先端技術が中国側の実態に流出しないよう管轄する機関であり、この問題はチップ販売の許認可プロセスの信頼性に直結する。第三に、GitHub上のOpenClawのリリース（v2026.11.3など）に見られるように、開発現場ではプライベートなタスク結果の秘匿や信頼性の高い子タスク（サブエージェント）のハンドオフ制御など、実務運用に耐えうる自律エージェントの統御機能の実装が進められている。これらの事実は、市場が「華やかな生成AIのデモ」から「巨大資本の維持」と「国家安全保障・ガバナンスの遵守」という重い現実フェーズに入ったことを示している。",
-    "why_now": "【解釈】なぜこのタイミングで資本と政治が前面に出てきたのか。それは、AIの社会実装が本格化するにつれ、インフラコストと法規制・安全保障リスクが膨らみ、もはや純粋な技術ベンチャーの枠組みでは回らなくなったからである。Anthropicの巨額IPO観測は、モデルのトレーニングと推論に要する莫大な計算資源を維持するためには、VCの資金調達を超えて公開市場から継続的に巨額のマネーを飲み込み続ける必要があることを示している。同時に、NVIDIAを巡る安全保障上の警告は、AIのハードウェア供給網が国家の安全保障と切り離せないことを露わにしている。つまり、どれほど優れたモデルやエージェント基盤を持っていても、地政学的リスクや輸出管理、ガバナンスの審査に耐えられなければ、サプライチェーンから排除されるリスクが現実味を帯びている。計算資源と資本の結合が、国家のコントロールという最大の制約条件に直面しているのが今の構造だ。",
-    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、公開市場の冷え込みと規制の不確実性を挙げる必要がある。もし株式市場全体の調整がさらに進み、投資家がAI企業の収益化遅延に耐えられなくなった場合、Anthropicの大型IPO計画はトーンダウンせざるを得ず、巨額資本を前提とした成長モデルは急速にブレーキを踏むことになる。また、国家安全保障を巡る調査や政治的圧力が、特定の企業だけでなくエコシステム全体への過度な調達制限やハードウェア供給の遅延を招いた場合、資本力のある大手ですら開発スピードの鈍化を余儀なくされる。つまり、資本市場の崩壊か過剰な政治介入が起きれば、「資本とガバナンスが勝敗を分ける」という前提自体が瓦解する。",
-    "japan_impact": "【日本の実務への示唆】日本企業は、AI導入において「どのモデルを使うか」の選定から、「サプライチェーンとガバナンスの安全性」を最優先に見直すべきだ。米国の巨大AI企業が上場や国家安全保障の網の目の中で再編される中、調達先やパートナー企業が政治的・法的なリスクを抱えていないかを精査する必要がある。また、OpenClawなどのオープンソース・エージェント技術に見られるように、自社データを社外に出さずに安全にタスクを処理・制御する仕組みの実装が、実務上の急務となっている。単なるPoC（概念実証）の段階を脱し、セキュリティとガバナンスを担保したインフラ調達へのシフトを急ぐべきである。",
+    "headline": "地政学とNvidiaの動揺が揺さぶるAIインフラの地殻変動",
+    "thesis": "Nvidiaを巡る政治的・人的スキャンダルと対中輸出規制の混乱は、AI半導体供給網の不確実性を高め、開発インフラの主導権争いを加速させている。",
+    "opening": "【結論】AI産業の根幹を支える半導体の需給とガバナンスの信頼が、地政学的圧力と経営陣のスキャンダルによって同時に揺らぎ始めている。本稿では、Nvidiaの対中輸出規制を巡る米政権内の対立や経営の動揺と、開発ツール・エージェント層におけるオープンソース勢力の動きを一つの文脈で読み解く。これまで圧倒的なハードウェアの独占力の上に成り立っていたAIの力学が、安全保障と政治的介入によって変質しようとしている。この変化は単なる一企業の不祥事にとどまらず、計算資源の調達リスクを再定義する転換点となる。",
+    "what_happened": "Axiosなどの報道によると、トランプ政権内でNvidia製先端AIチップの対中輸出規制を巡り、商務長官ハワード・ラトニックの対応や中国関連の安全保障上の懸念（顧客企業メガスピードを巡る問題）を背景にした激しい対立が表面化した。また、ニューヨーク・タイムズ等の報道でNvidiaのジェンスン・フアン最高経営責任者（CEO）を巡る私生活の問題やスパイ疑惑、社内関係のスクープが浮上し、取締役会での協議や辞任要求、米シリコンバレー有力者による擁護など、ガバナンス上の重大な局面を迎えている。同時に、オープンソースおよび開発者エコシステム側では、Qwenがコード生成・エージェント機能を統合した「Qwen Code 1.0 Preview」を公開し、独自のマルチプロバイダ対応やマルチプラットフォームのネイティブパッケージを提供開始した。さらに、OpenClawがバージョン2026.11.5-beta.2をリリースし、大規模な会話履歴の管理機能やセッション維持の安定化を進めている。これらの動きは、ハードウェアの供給不安と並行して、ソフトウェアレイヤーでの開発環境の分散とエージェント機能の高度化が急ピッチで進んでいることを示している。",
+    "why_now": "今回の変化の本質は、AIバリューチェーンの「ボトルネック」がハードウェアの物理的調達から、政治・ガバナンス・ソフトウェア流通の各次元へ同時に分散し始めた点にある。Nvidiaを巡る一連の騒動と対中規制を巡る政権内の足並みの乱れは、AI半導体の流通経路や調達コスト予測に不確実性をもたらしている。米国の国家安全保障と輸出管理の厳格化が政治的思惑で揺らぐ中、企業はハードウェア一辺倒の依存リスクに直面している。こうした中でQwen CodeやOpenClawといった開発者向けエージェント基盤がアップデートを重ねている背景には、特定の巨大ハードウェアや閉じたエコシステムに依存しない開発・実行環境を確保し、柔軟なモデルプロバイダの切り替えを担保しようとする実利的な動機がある。計算資源の集中管理体制に亀裂が入ることで、ソフトウェア層での代替・自律化の価値が相対的に高まっている。",
+    "counterpoint": "この見立てが過大評価であると判定されるための条件は、Nvidiaのガバナンス問題が短期的な経営陣の揺さぶりに止まり、同社の圧倒的なGPU供給力や顧客との関係性に実質的なダメージを与えない場合である。もし米政権内の対立が結果的に一過性の摩擦に終わり、対中輸出規制の実効性が担保されたり、Nvidiaのサプライチェーンが揺るがなかったりする場合は、ハードウェア覇権の構造は維持される。また、オープンソースの開発ツール群の進展が、企業のエンタープライズ導入におけるセキュリティやガバナンスの壁を越えられなければ、結局は大手クラウドプロバイダーやOpenAI等の垂直統合型プラットフォームへの依存回帰が進むことになる。",
+    "japan_impact": "日本企業の実務においては、Nvidia製GPUや特定の巨大AIモデルへの過度な依存を見直し、マルチモデル・マルチプロバイダを前提としたアーキテクチャへの移行を急ぐべき時機にある。地政学的リスクやサプライチェーンの混乱によってハードウェアの調達価格やリードタイムが変動するリスクを織り込み、オープンソースのコード支援ツールやエージェント基盤（Qwen Codeなど）を活用した開発の内製化とリスク分散を進める必要がある。特定のベンダーにロックインされないインフラ設計への投資こそが、今週直ちに見直すべき現実的な判断となる。",
     "company_positions": [
       {
-        "company": "Anthropic",
-        "status": "最大1.4兆ドル規模の評価額を目指す大型IPOの観測が浮上し、公開市場からの巨額資金調達を視野に入れている。",
-        "implication": "莫大なインフラ投資を維持するための資本調達力を確保できる一方、株式市場の厳しい収益化要求とガバナンスの目に晒されることになる。"
+        "company": "Nvidia",
+        "status": "ジェンスン・フアンCEOのスパイ疑惑や社内関係を巡る報道、さらに米政権内の対中輸出規制を巡る対立の矢面に立たされている。",
+        "implication": "経営陣のガバナンス不安と政治的圧力の強まりにより、中長期的な戦略決定や対中ビジネスの不確実性が跳ね上がり、ハードウェア市場における絶対的優位の前提が揺らいでいる。"
       },
       {
-        "company": "NVIDIA",
-        "status": "CEOを巡る国家安全保障上の警告が商務省に送付されるなど、中国向けをはじめとする先端チップの輸出管理を巡る政治的圧力が強まっている。",
-        "implication": "製品の技術的な優位性は揺るぎないものの、地政学的リスクや規制当局の審査次第で、供給網やビジネスモデルが大きな制限を受けるリスクを抱えている。"
+        "company": "Qwen",
+        "status": "コード理解・デバッグ・テストを統合したエージェント機能を持つ「Qwen Code 1.0 Preview」を公開し、マルチプロバイダ対応を進めている。",
+        "implication": "開発者向けのオープン・柔軟な選択肢としてのプレゼンスを高め、特定のクローズドなモデル群に対する代替基盤としての地位を固めつつある。"
+      },
+      {
+        "company": "OpenClaw",
+        "status": "会話履歴のページング管理やセッション維持、認証の安定化を図る「openclaw 2026.11.5-beta.2」をリリースした。",
+        "implication": "自律型エージェントの運用において実用に耐えうる安定性とスケーラビリティを証明し、開発現場での実用導入のハードルを下げている。"
       }
     ],
     "next_signals": [
-      "AnthropicのIPOにおける具体的な目論見書の値付けと公開市場での初値動向",
-      "米国商務省によるNVIDIA製チップの輸出管理および関連する安全保障調査の公式な結論",
-      "主要な自律エージェント基盤におけるセキュリティおよび権限管理機能のエンタープライズ向け実装進捗"
+      "Nvidiaの取締役会および米商務省・財務省による対中輸出規制の具体的な執行ルールと適用リストの変更",
+      "Qwen Codeや類似のオープンソースエージェントツールに対する企業・開発者の実導入スケールの拡大度合い",
+      "主要パブリッククラウドおよびAIベンダーにおけるマルチプロバイダ対応APIの拡充と価格競争の動向"
     ],
     "sources": [
       {
-        "title": "Anthropic Targets Valuation of Up to $1.4 Trillion for Blockbuster I.P.O. - The New York Times",
-        "url": "https://www.nytimes.com/2026/11/10/technology/anthropic-ipo-valuation-share-price.html"
+        "title": "Qwen GitHub｜Release v1.0.0-preview",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview"
       },
       {
-        "title": "Scoop: Commerce Department received national security warning on Nvidia CEO affair - Axios",
-        "url": "https://www.axios.com/2026/11/10/lutnick-nvidia-jensen-huang-china-memo"
+        "title": "Axios｜Scoop: Inside Bessent's Situation Room confrontation with Lutnick over China chip security",
+        "url": "https://www.axios.com/2026/11/11/bessent-lutnick-megaspeed-nvidia-china-chips"
       },
       {
-        "title": "openclaw/openclaw at v2026.11.3 · GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.3"
+        "title": "CNBC Tech｜Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+        "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html"
+      },
+      {
+        "title": "OpenClaw GitHub｜openclaw 2026.11.5-beta.2",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2"
+      },
+      {
+        "title": "NYTimes Technology｜Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+        "url": "https://www.nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html"
       }
     ],
-    "news_summary": "AI市場の主導権争いは、モデルの精度競争から、巨額資本を維持する上場・ガバナンス体制と地政学的リスク管理のステージへ移行しつつある。\n\n【事実】今回の見立ての根拠として、主要な3本の報道と動向を取り上げる。第一に、ニューヨーク・タイムズ紙の報道によれば、Anthropicは最大1兆4,000億ドル規模の評価額を目指す大型IPOを視野に入れている。これは市場でAIブームの持続可能性が問われる中でのブロックバスター上場計画となる。第二に、アクシオスのスクープによると、ハワード・ルトニック商務長官に対し、NVIDIAのジェンスン・フアンCEOの人間関係に絡む機密の国家安全保障上の警告メモが送付された。商務省はセンシティブな米国の先端技術が中国側の実態に流出しないよう管轄する機関であり、この問題はチップ販売の許認可プロセスの信頼性に直結する。第三に、GitHub上のOpenClawのリリース（v2026.11.3など）に見られるように、開発現場ではプライベートなタスク結果の秘匿や信頼性の高い子タスク（サブエージェント）のハンドオフ制御など、実務運用に耐えうる自律エージェントの統御機能の実装が進められている。これらの事実は、市場が「華やかな生成AIのデモ」から「巨大資本の維持」と「国家安全保障・ガバナンスの遵守」という重い現実フェーズに入ったことを示している。",
-    "opinion_summary": "【解釈】なぜこのタイミングで資本と政治が前面に出てきたのか。それは、AIの社会実装が本格化するにつれ、インフラコストと法規制・安全保障リスクが膨らみ、もはや純粋な技術ベンチャーの枠組みでは回らなくなったからである。Anthropicの巨額IPO観測は、モデルのトレーニングと推論に要する莫大な計算資源を維持するためには、VCの資金調達を超えて公開市場から継続的に巨額のマネーを飲み込み続ける必要があることを示している。同時に、NVIDIAを巡る安全保障上の警告は、AIのハードウェア供給網が国家の安全保障と切り離せないことを露わにしている。つまり、どれほど優れたモデルやエージェント基盤を持っていても、地政学的リスクや輸出管理、ガバナンスの審査に耐えられなければ、サプライチェーンから排除されるリスクが現実味を帯びている。計算資源と資本の結合が、国家のコントロールという最大の制約条件に直面しているのが今の構造だ。",
+    "news_summary": "Nvidiaを巡る政治的・人的スキャンダルと対中輸出規制の混乱は、AI半導体供給網の不確実性を高め、開発インフラの主導権争いを加速させている。\n\nAxiosなどの報道によると、トランプ政権内でNvidia製先端AIチップの対中輸出規制を巡り、商務長官ハワード・ラトニックの対応や中国関連の安全保障上の懸念（顧客企業メガスピードを巡る問題）を背景にした激しい対立が表面化した。また、ニューヨーク・タイムズ等の報道でNvidiaのジェンスン・フアン最高経営責任者（CEO）を巡る私生活の問題やスパイ疑惑、社内関係のスクープが浮上し、取締役会での協議や辞任要求、米シリコンバレー有力者による擁護など、ガバナンス上の重大な局面を迎えている。同時に、オープンソースおよび開発者エコシステム側では、Qwenがコード生成・エージェント機能を統合した「Qwen Code 1.0 Preview」を公開し、独自のマルチプロバイダ対応やマルチプラットフォームのネイティブパッケージを提供開始した。さらに、OpenClawがバージョン2026.11.5-beta.2をリリースし、大規模な会話履歴の管理機能やセッション維持の安定化を進めている。これらの動きは、ハードウェアの供給不安と並行して、ソフトウェアレイヤーでの開発環境の分散とエージェント機能の高度化が急ピッチで進んでいることを示している。",
+    "opinion_summary": "今回の変化の本質は、AIバリューチェーンの「ボトルネック」がハードウェアの物理的調達から、政治・ガバナンス・ソフトウェア流通の各次元へ同時に分散し始めた点にある。Nvidiaを巡る一連の騒動と対中規制を巡る政権内の足並みの乱れは、AI半導体の流通経路や調達コスト予測に不確実性をもたらしている。米国の国家安全保障と輸出管理の厳格化が政治的思惑で揺らぐ中、企業はハードウェア一辺倒の依存リスクに直面している。こうした中でQwen CodeやOpenClawといった開発者向けエージェント基盤がアップデートを重ねている背景には、特定の巨大ハードウェアや閉じたエコシステムに依存しない開発・実行環境を確保し、柔軟なモデルプロバイダの切り替えを担保しようとする実利的な動機がある。計算資源の集中管理体制に亀裂が入ることで、ソフトウェア層での代替・自律化の価値が相対的に高まっている。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てを過大評価しないための条件として、公開市場の冷え込みと規制の不確実性を挙げる必要がある。もし株式市場全体の調整がさらに進み、投資家がAI企業の収益化遅延に耐えられなくなった場合、Anthropicの大型IPO計画はトーンダウンせざるを得ず、巨額資本を前提とした成長モデルは急速にブレーキを踏むことになる。また、国家安全保障を巡る調査や政治的圧力が、特定の企業だけでなくエコシステム全体への過度な調達制限やハードウェア供給の遅延を招いた場合、資本力のある大手ですら開発スピードの鈍化を余儀なくされる。つまり、資本市場の崩壊か過剰な政治介入が起きれば、「資本とガバナンスが勝敗を分ける」という前提自体が瓦解する。",
+      "negative": "この見立てが過大評価であると判定されるための条件は、Nvidiaのガバナンス問題が短期的な経営陣の揺さぶりに止まり、同社の圧倒的なGPU供給力や顧客との関係性に実質的なダメージを与えない場合である。もし米政権内の対立が結果的に一過性の摩擦に終わり、対中輸出規制の実効性が担保されたり、Nvidiaのサプライチェーンが揺るがなかったりする場合は、ハードウェア覇権の構造は維持される。また、オープンソースの開発ツール群の進展が、企業のエンタープライズ導入におけるセキュリティやガバナンスの壁を越えられなければ、結局は大手クラウドプロバイダーやOpenAI等の垂直統合型プラットフォームへの依存回帰が進むことになる。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Anthropic Targets Valuation of Up to $1.4 Trillion for Blockbuster I.P.O. - The New York Times",
-        "source": "NYTimes Technology",
-        "url": "https://www.nytimes.com/2026/11/10/technology/anthropic-ipo-valuation-share-price.html",
-        "point": "The A.I. company’s pricing would make it one of the biggest ever public listings. It comes at a volatile moment in marke"
+        "title": "Qwen GitHub｜Release v1.0.0-preview",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview",
+        "point": "Qwen Code 1.0 Preview is now available. Some interfaces, configuration options, and behaviors may change during Preview."
       },
       {
         "rank": 2,
-        "title": "Scoop: Commerce Department received national security warning on Nvidia CEO affair - Axios",
+        "title": "Axios｜Scoop: Inside Bessent's Situation Room confrontation with Lutnick over China chip security",
         "source": "Axios",
-        "url": "https://www.axios.com/2026/11/10/lutnick-nvidia-jensen-huang-china-memo",
-        "point": "Commerce Secretary Howard Lutnick was sent a highly classified memo warning about Nvidia CEO Jensen Huang's relationship"
+        "url": "https://www.axios.com/2026/11/11/bessent-lutnick-megaspeed-nvidia-china-chips",
+        "point": "Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick over a failure to place Nvidia customer Me"
       },
       {
         "rank": 3,
-        "title": "openclaw/openclaw at v2026.11.3 · GitHub",
+        "title": "CNBC Tech｜Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html",
+        "point": "Huang was notably opposed to strict export controls on AI chips to China, which ruffled feathers with congressional Chin"
+      },
+      {
+        "rank": 4,
+        "title": "OpenClaw GitHub｜openclaw 2026.11.5-beta.2",
         "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.3",
-        "point": "2026.11.3\nHighlights\n\nPrivate task results: Keep private subagent completions out of streamed chat replies. (#188490) Th"
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2",
+        "point": "2026.11.5-beta.2\nHighlights\n\nLarge conversations remain browsable with paged history in both directions, visible history"
+      },
+      {
+        "rank": 5,
+        "title": "NYTimes Technology｜Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html",
+        "point": "Mr. Huang has been under scrutiny for an affair with a woman said to be a Chinese spy, as well as a relationship with an"
       }
     ],
     "joho_picks": [
       {
-        "headline": "Anthropicの巨額IPO観測と問われる安全保障",
+        "headline": "地政学とNvidiaの動揺が揺さぶるAIインフラの地殻変動",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://www.nytimes.com/2026/11/10/technology/anthropic-ipo-valuation-share-price.html",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】今日の材料から見えてくるのは、AI産業の主導権が「単なるモデル性能の高さ」から、「資本市場での巨額調達力」および「国家安全保障の網の目を通るガバナンス」へシフトしたという事実だ。ニューヨーク・タイムズによるAnthropicの1兆4,000億ドル規模のIPO観測と、アクシオスが報じた商務省へのNVIDIA製チップ売却に関する国家安全保障上の警告は、表裏一体の現象である。AIバブルへの疑念がくすぶる市場において、各社がどのような資本基盤を築き、どう政治的リスクをクリアするかで、次の勝者が決まりつつある。\n\n【事実】今回の見立ての根拠として、主要な3本の報道と動向を取り上げる。第一に、ニューヨーク・タイムズ紙の報道によれば、Anthropicは最大1兆4,000億ドル規模の評価額を目指す大型IPOを視野に入れている。これは市場でAIブームの持続可能性が問われる中でのブロックバスター上場計画となる。第二に、アクシオスのスクープによると、ハワード・ルトニック商務長官に対し、NVIDIAのジェンスン・フアンCEOの人間関係に絡む機密の国家安全保障上の警告メモが送付された。商務省はセンシティブな米国の先端技術が中国側の実態に流出しないよう管轄する機関であり、この問題はチップ販売の許認可プロセスの信頼性に直結する。第三に、GitHub上のOpenClawのリリース（v2026.11.3など）に見られるように、開発現場ではプライベートなタスク結果の秘匿や信頼性の高い子タスク（サブエージェント）のハンドオフ制御など、実務運用に耐えうる自律エージェントの統御機能の実装が進められている。これらの事実は、市場が「華やかな生成AIのデモ」から「巨大資本の維持」と「国家安全保障・ガバナンスの遵守」という重い現実フェーズに入ったことを示している。\n\n【解釈】なぜこのタイミングで資本と政治が前面に出てきたのか。それは、AIの社会実装が本格化するにつれ、インフラコストと法規制・安全保障リスクが膨らみ、もはや純粋な技術ベンチャーの枠組みでは回らなくなったからである。Anthropicの巨額IPO観測は、モデルのトレーニングと推論に要する莫大な計算資源を維持するためには、VCの資金調達を超えて公開市場から継続的に巨額のマネーを飲み込み続ける必要があることを示している。同時に、NVIDIAを巡る安全保障上の警告は、AIのハードウェア供給網が国家の安全保障と切り離せないことを露わにしている。つまり、どれほど優れたモデルやエージェント基盤を持っていても、地政学的リスクや輸出管理、ガバナンスの審査に耐えられなければ、サプライチェーンから排除されるリスクが現実味を帯びている。計算資源と資本の結合が、国家のコントロールという最大の制約条件に直面しているのが今の構造だ。\n\n【競争の構図】\n【Anthropic】\n最大1.4兆ドル規模の評価額を目指す大型IPOの観測が浮上し、公開市場からの巨額資金調達を視野に入れている。\n→ 莫大なインフラ投資を維持するための資本調達力を確保できる一方、株式市場の厳しい収益化要求とガバナンスの目に晒されることになる。\n\n【NVIDIA】\nCEOを巡る国家安全保障上の警告が商務省に送付されるなど、中国向けをはじめとする先端チップの輸出管理を巡る政治的圧力が強まっている。\n→ 製品の技術的な優位性は揺るぎないものの、地政学的リスクや規制当局の審査次第で、供給網やビジネスモデルが大きな制限を受けるリスクを抱えている。",
-        "why_matters": "【日本の実務への示唆】日本企業は、AI導入において「どのモデルを使うか」の選定から、「サプライチェーンとガバナンスの安全性」を最優先に見直すべきだ。米国の巨大AI企業が上場や国家安全保障の網の目の中で再編される中、調達先やパートナー企業が政治的・法的なリスクを抱えていないかを精査する必要がある。また、OpenClawなどのオープンソース・エージェント技術に見られるように、自社データを社外に出さずに安全にタスクを処理・制御する仕組みの実装が、実務上の急務となっている。単なるPoC（概念実証）の段階を脱し、セキュリティとガバナンスを担保したインフラ調達へのシフトを急ぐべきである。\n\n【反証・留保】この見立てを過大評価しないための条件として、公開市場の冷え込みと規制の不確実性を挙げる必要がある。もし株式市場全体の調整がさらに進み、投資家がAI企業の収益化遅延に耐えられなくなった場合、Anthropicの大型IPO計画はトーンダウンせざるを得ず、巨額資本を前提とした成長モデルは急速にブレーキを踏むことになる。また、国家安全保障を巡る調査や政治的圧力が、特定の企業だけでなくエコシステム全体への過度な調達制限やハードウェア供給の遅延を招いた場合、資本力のある大手ですら開発スピードの鈍化を余儀なくされる。つまり、資本市場の崩壊か過剰な政治介入が起きれば、「資本とガバナンスが勝敗を分ける」という前提自体が瓦解する。",
-        "context": "【次の観測点】\n・AnthropicのIPOにおける具体的な目論見書の値付けと公開市場での初値動向\n・米国商務省によるNVIDIA製チップの輸出管理および関連する安全保障調査の公式な結論\n・主要な自律エージェント基盤におけるセキュリティおよび権限管理機能のエンタープライズ向け実装進捗"
+        "body": "【結論】AI産業の根幹を支える半導体の需給とガバナンスの信頼が、地政学的圧力と経営陣のスキャンダルによって同時に揺らぎ始めている。本稿では、Nvidiaの対中輸出規制を巡る米政権内の対立や経営の動揺と、開発ツール・エージェント層におけるオープンソース勢力の動きを一つの文脈で読み解く。これまで圧倒的なハードウェアの独占力の上に成り立っていたAIの力学が、安全保障と政治的介入によって変質しようとしている。この変化は単なる一企業の不祥事にとどまらず、計算資源の調達リスクを再定義する転換点となる。\n\nAxiosなどの報道によると、トランプ政権内でNvidia製先端AIチップの対中輸出規制を巡り、商務長官ハワード・ラトニックの対応や中国関連の安全保障上の懸念（顧客企業メガスピードを巡る問題）を背景にした激しい対立が表面化した。また、ニューヨーク・タイムズ等の報道でNvidiaのジェンスン・フアン最高経営責任者（CEO）を巡る私生活の問題やスパイ疑惑、社内関係のスクープが浮上し、取締役会での協議や辞任要求、米シリコンバレー有力者による擁護など、ガバナンス上の重大な局面を迎えている。同時に、オープンソースおよび開発者エコシステム側では、Qwenがコード生成・エージェント機能を統合した「Qwen Code 1.0 Preview」を公開し、独自のマルチプロバイダ対応やマルチプラットフォームのネイティブパッケージを提供開始した。さらに、OpenClawがバージョン2026.11.5-beta.2をリリースし、大規模な会話履歴の管理機能やセッション維持の安定化を進めている。これらの動きは、ハードウェアの供給不安と並行して、ソフトウェアレイヤーでの開発環境の分散とエージェント機能の高度化が急ピッチで進んでいることを示している。\n\n今回の変化の本質は、AIバリューチェーンの「ボトルネック」がハードウェアの物理的調達から、政治・ガバナンス・ソフトウェア流通の各次元へ同時に分散し始めた点にある。Nvidiaを巡る一連の騒動と対中規制を巡る政権内の足並みの乱れは、AI半導体の流通経路や調達コスト予測に不確実性をもたらしている。米国の国家安全保障と輸出管理の厳格化が政治的思惑で揺らぐ中、企業はハードウェア一辺倒の依存リスクに直面している。こうした中でQwen CodeやOpenClawといった開発者向けエージェント基盤がアップデートを重ねている背景には、特定の巨大ハードウェアや閉じたエコシステムに依存しない開発・実行環境を確保し、柔軟なモデルプロバイダの切り替えを担保しようとする実利的な動機がある。計算資源の集中管理体制に亀裂が入ることで、ソフトウェア層での代替・自律化の価値が相対的に高まっている。\n\n【競争の構図】\n【Nvidia】\nジェンスン・フアンCEOのスパイ疑惑や社内関係を巡る報道、さらに米政権内の対中輸出規制を巡る対立の矢面に立たされている。\n→ 経営陣のガバナンス不安と政治的圧力の強まりにより、中長期的な戦略決定や対中ビジネスの不確実性が跳ね上がり、ハードウェア市場における絶対的優位の前提が揺らいでいる。\n\n【Qwen】\nコード理解・デバッグ・テストを統合したエージェント機能を持つ「Qwen Code 1.0 Preview」を公開し、マルチプロバイダ対応を進めている。\n→ 開発者向けのオープン・柔軟な選択肢としてのプレゼンスを高め、特定のクローズドなモデル群に対する代替基盤としての地位を固めつつある。\n\n【OpenClaw】\n会話履歴のページング管理やセッション維持、認証の安定化を図る「openclaw 2026.11.5-beta.2」をリリースした。\n→ 自律型エージェントの運用において実用に耐えうる安定性とスケーラビリティを証明し、開発現場での実用導入のハードルを下げている。",
+        "why_matters": "日本企業の実務においては、Nvidia製GPUや特定の巨大AIモデルへの過度な依存を見直し、マルチモデル・マルチプロバイダを前提としたアーキテクチャへの移行を急ぐべき時機にある。地政学的リスクやサプライチェーンの混乱によってハードウェアの調達価格やリードタイムが変動するリスクを織り込み、オープンソースのコード支援ツールやエージェント基盤（Qwen Codeなど）を活用した開発の内製化とリスク分散を進める必要がある。特定のベンダーにロックインされないインフラ設計への投資こそが、今週直ちに見直すべき現実的な判断となる。\n\nこの見立てが過大評価であると判定されるための条件は、Nvidiaのガバナンス問題が短期的な経営陣の揺さぶりに止まり、同社の圧倒的なGPU供給力や顧客との関係性に実質的なダメージを与えない場合である。もし米政権内の対立が結果的に一過性の摩擦に終わり、対中輸出規制の実効性が担保されたり、Nvidiaのサプライチェーンが揺るがなかったりする場合は、ハードウェア覇権の構造は維持される。また、オープンソースの開発ツール群の進展が、企業のエンタープライズ導入におけるセキュリティやガバナンスの壁を越えられなければ、結局は大手クラウドプロバイダーやOpenAI等の垂直統合型プラットフォームへの依存回帰が進むことになる。",
+        "context": "【次の観測点】\n・Nvidiaの取締役会および米商務省・財務省による対中輸出規制の具体的な執行ルールと適用リストの変更\n・Qwen Codeや類似のオープンソースエージェントツールに対する企業・開発者の実導入スケールの拡大度合い\n・主要パブリッククラウドおよびAIベンダーにおけるマルチプロバイダ対応APIの拡充と価格競争の動向"
       }
     ]
   },
   "raw_articles": [
+    {
+      "source": "NYTimes Technology",
+      "title": "Jensen Huang Said to Have Had Relationship With Nvidia Executive Who Reports to Him",
+      "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+      "summary": "Mr. Huang, Nvidia’s chief executive, is already facing scrutiny over an affair with a Chinese businesswoman who U.S. intelligence determined was a Chinese spy.",
+      "published": "2026-11-12 01:57 UTC",
+      "pub_dt": "2026-11-12T01:57:34+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.5-beta.2",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2",
+      "summary": "2026.11.5-beta.2\nHighlights\n\nLarge conversations remain browsable with paged history in both directions, visible history boundaries, and bounded archive reads. (#188450 #188483 #188557 #188372 #190690) Authored by @steipete. Thanks @xydt-tanshanshan.\nThe macOS app preserves saved secrets and Gateway authentication when configuration saves fail or Tailscale exposure is turned off. (#187734 #187664; related #187600, #187597) Thanks @anmol0b.\nEnding Talk on Android no longer cancels work the Gatewa",
+      "published": "2026-11-12 00:43 UTC",
+      "pub_dt": "2026-11-12T00:43:25+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia prepares to oust Jensen Huang, WSJ reports — stock sinks",
+      "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html",
+      "summary": "The report comes days after Huang admitted to an affair with a woman who is believed by U.S. intelligence of being a Chinese spy.",
+      "published": "2026-11-12 00:21 UTC",
+      "pub_dt": "2026-11-12T00:21:27+00:00"
+    },
     {
       "source": "OpenAI News",
       "title": "Gilbert + Tobin rethinks the business of law with AI",
@@ -93,115 +144,91 @@
     },
     {
       "source": "Axios",
-      "title": "Scoop: Commerce Department received national security warning on Nvidia CEO affair",
-      "url": "https://www.axios.com/2026/11/10/lutnick-nvidia-jensen-huang-china-memo",
-      "summary": "Commerce Secretary Howard Lutnick was sent a highly classified memo warning about Nvidia CEO Jensen Huang's relationship with suspected Chinese spy Alice Huang, multiple sources familiar told Axios.Why it matters: Lutnick oversees the agency charged with keeping sensitive U.S. technology out of the hands of American adversaries. The warning raises questions about how the department weighed potential security risks as it cleared advanced Nvidia chip sales to China-affiliated entities. Driving the",
-      "published": "2026-11-10 23:47 UTC",
-      "pub_dt": "2026-11-10T23:47:04+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Jim Cramer says Anthropic's explosive growth could justify a record-breaking IPO",
-      "url": "https://www.cnbc.com/2026/11/10/anthropic-ipo-revenue-growth-cramer.html",
-      "summary": "\"The fact that this deal is on is bullish for tech and the AI trade,\" CNBC's Jim Cramer said Tuesday.",
-      "published": "2026-11-10 23:46 UTC",
-      "pub_dt": "2026-11-10T23:46:35+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "CoreWeave beats on revenue and lifts guidance, easing AI slowdown concerns",
-      "url": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html",
-      "summary": "CoreWeave's stock has been hammered heading into the neocloud's Q3 earnings report.",
-      "published": "2026-11-10 23:16 UTC",
-      "pub_dt": "2026-11-10T23:16:15+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Nvidia's Huang tries to project 'business as usual' in return to office after affair revelation",
-      "url": "https://www.cnbc.com/2026/11/10/nvidia-jensen-huang-affair-office.html",
-      "summary": "Nvidia employees described the mood as \"sad\" as CEO Jensen Huang returned to the office after disclosing an affair.",
-      "published": "2026-11-10 23:11 UTC",
-      "pub_dt": "2026-11-10T23:11:34+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "Anthropic’s Giant IPO Will Tie It Closer to Nvidia",
-      "url": "https://www.nytimes.com/2026/11/10/business/anthropic-ipo-nvidia.html",
-      "summary": "Nvidia planned to invest $10 billion in Anthropic alongside its initial public offering, the largest of the new financial commitments from several giants to the A.I. company.",
-      "published": "2026-11-10 22:03 UTC",
-      "pub_dt": "2026-11-10T22:03:38+00:00"
-    },
-    {
-      "source": "OpenClaw GitHub",
-      "title": "openclaw 2026.11.3",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.3",
-      "summary": "2026.11.3\nHighlights\n\nPrivate task results: Keep private subagent completions out of streamed chat replies. (#188490) Thanks @fuller-stack-dev.\nReliable child-task handoffs: Allow a parent to hand off to replacement work after cancelling a child, without leaving the cancelled child's completion receipt blocking the handoff. (#178893; related #178565) Thanks @brianmcguire and @letsc4.\nVisible tool failures: Report unanswered tool failures instead of silently ending a user-addressed turn as a succ",
-      "published": "2026-11-10 21:56 UTC",
-      "pub_dt": "2026-11-10T21:56:19+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "Amazon and Google Will See Big Paydays from Anthropic IPO",
-      "url": "https://www.nytimes.com/2026/11/10/technology/anthropic-ipo-google-amazon.html",
-      "summary": "Amazon and Google are the largest investors in the A.I. start-up, and their shares could gain hundreds of billions of dollars in value.",
-      "published": "2026-11-10 21:54 UTC",
-      "pub_dt": "2026-11-10T21:54:37+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "Who Is Alice Huang, the Woman in the Middle of Nvidia’s Spy Scandal?",
-      "url": "https://www.nytimes.com/2026/11/10/technology/alice-huang-megaspeed-nvidia-jensen-huang.html",
-      "summary": "Alice Huang, who U.S. intelligence determined is a Chinese asset, emerged from the high-flying world of Shanghai finance to work with tech titans and obtain essential A.I. chips.",
-      "published": "2026-11-10 21:12 UTC",
-      "pub_dt": "2026-11-10T21:12:39+00:00"
+      "title": "Nvidia sinks after report implicates CEO Jensen Huang in 2nd affair",
+      "url": "https://www.axios.com/2026/11/11/nvidia-jensen-huang-affair-shares",
+      "summary": "Shares in Nvidia sank Wednesday night after the New York Times reported  CEO Jensen Huang had a second affair with a senior executive who reports to him.Why it matters: The report adds to mounting scrutiny of Huang, already  under investigation over an affair with a purported Chinese spy.The potential impact goes beyond one man and one business, though. Huang is arguably the world's most powerful CEO at the moment, his company serving as the beating heart of the AI revolution. He also has no obv",
+      "published": "2026-11-11 23:53 UTC",
+      "pub_dt": "2026-11-11T23:53:10+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
-      "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
-      "summary": "OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known figure in the travel industry.",
-      "published": "2026-11-10 21:08 UTC",
-      "pub_dt": "2026-11-10T21:08:52+00:00"
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "summary": "The affair could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+      "published": "2026-11-11 23:50 UTC",
+      "pub_dt": "2026-11-11T23:50:00+00:00"
     },
     {
-      "source": "AI Business",
-      "title": "China’s block of SoftBank’s ABB purchase raises supply-chain questions",
-      "url": "https://aibusiness.com/automation/china-s-block-of-softbank-s-abb-purchase",
-      "summary": "The move to stop the Japanese multinational investment holding company’s acquisition has sparked concerns about the future of cross-border robotics investment.",
-      "published": "2026-11-10 21:00 UTC",
-      "pub_dt": "2026-11-10T21:00:44+00:00"
+      "source": "NYTimes Technology",
+      "title": "Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+      "url": "https://www.nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html",
+      "summary": "Mr. Huang has been under scrutiny for an affair with a woman said to be a Chinese spy, as well as a relationship with an executive at his A.I. chip company.",
+      "published": "2026-11-11 23:32 UTC",
+      "pub_dt": "2026-11-11T23:32:14+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jim Cramer: This is the bet you're making if you buy the Anthropic IPO",
+      "url": "https://www.cnbc.com/2026/11/11/anthropic-ipo-profit-computing-commitments.html",
+      "summary": "CNBC's Jim Cramer said that Anthropic must sustain extraordinary growth to cover its mounting infrastructure costs.",
+      "published": "2026-11-11 23:30 UTC",
+      "pub_dt": "2026-11-11T23:30:48+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect",
-      "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
-      "summary": "New York is preparing to enforce its sweeping AI safety law, requiring major developers like OpenAI and Anthropic to register, disclose safety practices, and report critical incidents or face fines.",
-      "published": "2026-11-10 20:52 UTC",
-      "pub_dt": "2026-11-10T20:52:13+00:00"
+      "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+      "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+      "summary": "As soon as Wednesday evening, Nvidia's board could decide to remove its founder and CEO of 33 years.",
+      "published": "2026-11-11 23:28 UTC",
+      "pub_dt": "2026-11-11T23:28:45+00:00"
     },
     {
-      "source": "OpenClaw GitHub",
-      "title": "openclaw 2026.9.37",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.37",
-      "summary": "This is a gateway-only extended-stable release, published from a retired maintenance line by explicit maintainer decision. This release is OpenClaw from the end of September 2026, plus critical security updates, reliability and performance fixes, and features like new model support. The latest version of OpenClaw at the time of this release is 2026.11.2\n2026.9.37\nHighlights\n\nPrivate inspection stays private: paired-node photos and screenshots are no longer automatically attached to replies, and ",
-      "published": "2026-11-10 20:42 UTC",
-      "pub_dt": "2026-11-10T20:42:54+00:00"
+      "source": "TechCrunch AI",
+      "title": "Jensen Huang accused of having another affair — with an Nvidia exec",
+      "url": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/",
+      "summary": "Jensen Huang, who has come under fire for admitting to an affair with a woman accused of being a Chinese intelligence agent, has been accused of having a separate affair with an Nvidia subordinate.",
+      "published": "2026-11-11 23:17 UTC",
+      "pub_dt": "2026-11-11T23:17:05+00:00"
     },
     {
-      "source": "ZDNet AI",
-      "title": "Need more AI in Creator Studio? Apple may charge you for it",
-      "url": "https://www.zdnet.com/innovation/ai-creator-studio-apple-usage-packs-fee/",
-      "summary": "With its new $50 AI usage packes, Apple is the latest company to introduce paid model for AI access.",
-      "published": "2026-11-10 20:38 UTC",
-      "pub_dt": "2026-11-10T20:38:54+00:00"
+      "source": "CNBC Tech",
+      "title": "Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+      "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html",
+      "summary": "Huang was notably opposed to strict export controls on AI chips to China, which ruffled feathers with congressional China hawks.",
+      "published": "2026-11-11 22:46 UTC",
+      "pub_dt": "2026-11-11T22:46:29+00:00"
     },
     {
-      "source": "Qwen GitHub",
-      "title": "Release v0.27.2-preview.0",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-preview.0",
-      "summary": "What's Changed\n\nfix(ci): read prettier's whole ignore set at the base tip by @wenshao in #16729\nfix(cli,core): let an Agent Host retry an enrollment whose answer was lost by @wenshao in #16722\nfix(channels): shape-check authorExclude on the inbound task record by @wenshao in #16740\nfeat(managed-agent): import Skills from the original Runtime by @doudouOUC in #16638\ndocs: clarify tool bridge requirements when migrating from tools.core by @521Peter in #16750\nfix(ci): annotate a truncated tree and ",
-      "published": "2026-11-10 20:11 UTC",
-      "pub_dt": "2026-11-10T20:11:22+00:00"
+      "source": "The Verge AI",
+      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
+      "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
+      "summary": "Nvidia's board is preparing to dismiss CEO Jensen Huang following a report from the New York Times about a second alleged extramarital affair, just days after he admitted to a separate affair with a woman alleged to be a Chinese spy, The Wall Street Journal reports. The second alleged affair was with an executive who [&#8230;]",
+      "published": "2026-11-11 22:44 UTC",
+      "pub_dt": "2026-11-11T22:44:36+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "United won’t let your AI agent book your flight",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+      "summary": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash. But United is concerned [&#8230;]",
+      "published": "2026-11-11 21:54 UTC",
+      "pub_dt": "2026-11-11T21:54:21+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia shares rebound as Jensen Huang faces scrutiny ahead of earnings",
+      "url": "https://www.cnbc.com/2026/11/11/nvidia-stock-jensen-huang-affair-china.html",
+      "summary": "Investors are assessing whether CEO Jensen Huang's affair will have spillover effects on Nvidia's business.",
+      "published": "2026-11-11 21:04 UTC",
+      "pub_dt": "2026-11-11T21:04:36+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Scoop: Lutnick stalled curbing Nvidia chip sales to China — again — after Oval Office showdown",
+      "url": "https://www.axios.com/2026/11/11/trump-lutnick-nvidia-china-chip-export-controls",
+      "summary": "President Trump on Thursday authorized a crack down on companies suspected of diverting Nvidia's advanced AI chips to China for the third time this year — even consulting Elon Musk before giving the go-ahead. One administration official has repeatedly stood in the way: Commerce Secretary Howard Lutnick.Why it matters: This standoff illustrates a breakdown in efforts to keep American technology out of China's hands as the world wonders why the Trump administration has not taken action against the",
+      "published": "2026-11-11 20:59 UTC",
+      "pub_dt": "2026-11-11T20:59:02+00:00"
     }
   ]
 }

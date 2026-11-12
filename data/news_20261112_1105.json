@@ -1,0 +1,234 @@
+{
+  "timestamp": "2026-11-12T11:05:25.385270+09:00",
+  "time_slot": "昼",
+  "summary": {
+    "headline": "地政学とNvidiaの動揺が揺さぶるAIインフラの地殻変動",
+    "thesis": "Nvidiaを巡る政治的・人的スキャンダルと対中輸出規制の混乱は、AI半導体供給網の不確実性を高め、開発インフラの主導権争いを加速させている。",
+    "opening": "【結論】AI産業の根幹を支える半導体の需給とガバナンスの信頼が、地政学的圧力と経営陣のスキャンダルによって同時に揺らぎ始めている。本稿では、Nvidiaの対中輸出規制を巡る米政権内の対立や経営の動揺と、開発ツール・エージェント層におけるオープンソース勢力の動きを一つの文脈で読み解く。これまで圧倒的なハードウェアの独占力の上に成り立っていたAIの力学が、安全保障と政治的介入によって変質しようとしている。この変化は単なる一企業の不祥事にとどまらず、計算資源の調達リスクを再定義する転換点となる。",
+    "what_happened": "Axiosなどの報道によると、トランプ政権内でNvidia製先端AIチップの対中輸出規制を巡り、商務長官ハワード・ラトニックの対応や中国関連の安全保障上の懸念（顧客企業メガスピードを巡る問題）を背景にした激しい対立が表面化した。また、ニューヨーク・タイムズ等の報道でNvidiaのジェンスン・フアン最高経営責任者（CEO）を巡る私生活の問題やスパイ疑惑、社内関係のスクープが浮上し、取締役会での協議や辞任要求、米シリコンバレー有力者による擁護など、ガバナンス上の重大な局面を迎えている。同時に、オープンソースおよび開発者エコシステム側では、Qwenがコード生成・エージェント機能を統合した「Qwen Code 1.0 Preview」を公開し、独自のマルチプロバイダ対応やマルチプラットフォームのネイティブパッケージを提供開始した。さらに、OpenClawがバージョン2026.11.5-beta.2をリリースし、大規模な会話履歴の管理機能やセッション維持の安定化を進めている。これらの動きは、ハードウェアの供給不安と並行して、ソフトウェアレイヤーでの開発環境の分散とエージェント機能の高度化が急ピッチで進んでいることを示している。",
+    "why_now": "今回の変化の本質は、AIバリューチェーンの「ボトルネック」がハードウェアの物理的調達から、政治・ガバナンス・ソフトウェア流通の各次元へ同時に分散し始めた点にある。Nvidiaを巡る一連の騒動と対中規制を巡る政権内の足並みの乱れは、AI半導体の流通経路や調達コスト予測に不確実性をもたらしている。米国の国家安全保障と輸出管理の厳格化が政治的思惑で揺らぐ中、企業はハードウェア一辺倒の依存リスクに直面している。こうした中でQwen CodeやOpenClawといった開発者向けエージェント基盤がアップデートを重ねている背景には、特定の巨大ハードウェアや閉じたエコシステムに依存しない開発・実行環境を確保し、柔軟なモデルプロバイダの切り替えを担保しようとする実利的な動機がある。計算資源の集中管理体制に亀裂が入ることで、ソフトウェア層での代替・自律化の価値が相対的に高まっている。",
+    "counterpoint": "この見立てが過大評価であると判定されるための条件は、Nvidiaのガバナンス問題が短期的な経営陣の揺さぶりに止まり、同社の圧倒的なGPU供給力や顧客との関係性に実質的なダメージを与えない場合である。もし米政権内の対立が結果的に一過性の摩擦に終わり、対中輸出規制の実効性が担保されたり、Nvidiaのサプライチェーンが揺るがなかったりする場合は、ハードウェア覇権の構造は維持される。また、オープンソースの開発ツール群の進展が、企業のエンタープライズ導入におけるセキュリティやガバナンスの壁を越えられなければ、結局は大手クラウドプロバイダーやOpenAI等の垂直統合型プラットフォームへの依存回帰が進むことになる。",
+    "japan_impact": "日本企業の実務においては、Nvidia製GPUや特定の巨大AIモデルへの過度な依存を見直し、マルチモデル・マルチプロバイダを前提としたアーキテクチャへの移行を急ぐべき時機にある。地政学的リスクやサプライチェーンの混乱によってハードウェアの調達価格やリードタイムが変動するリスクを織り込み、オープンソースのコード支援ツールやエージェント基盤（Qwen Codeなど）を活用した開発の内製化とリスク分散を進める必要がある。特定のベンダーにロックインされないインフラ設計への投資こそが、今週直ちに見直すべき現実的な判断となる。",
+    "company_positions": [
+      {
+        "company": "Nvidia",
+        "status": "ジェンスン・フアンCEOのスパイ疑惑や社内関係を巡る報道、さらに米政権内の対中輸出規制を巡る対立の矢面に立たされている。",
+        "implication": "経営陣のガバナンス不安と政治的圧力の強まりにより、中長期的な戦略決定や対中ビジネスの不確実性が跳ね上がり、ハードウェア市場における絶対的優位の前提が揺らいでいる。"
+      },
+      {
+        "company": "Qwen",
+        "status": "コード理解・デバッグ・テストを統合したエージェント機能を持つ「Qwen Code 1.0 Preview」を公開し、マルチプロバイダ対応を進めている。",
+        "implication": "開発者向けのオープン・柔軟な選択肢としてのプレゼンスを高め、特定のクローズドなモデル群に対する代替基盤としての地位を固めつつある。"
+      },
+      {
+        "company": "OpenClaw",
+        "status": "会話履歴のページング管理やセッション維持、認証の安定化を図る「openclaw 2026.11.5-beta.2」をリリースした。",
+        "implication": "自律型エージェントの運用において実用に耐えうる安定性とスケーラビリティを証明し、開発現場での実用導入のハードルを下げている。"
+      }
+    ],
+    "next_signals": [
+      "Nvidiaの取締役会および米商務省・財務省による対中輸出規制の具体的な執行ルールと適用リストの変更",
+      "Qwen Codeや類似のオープンソースエージェントツールに対する企業・開発者の実導入スケールの拡大度合い",
+      "主要パブリッククラウドおよびAIベンダーにおけるマルチプロバイダ対応APIの拡充と価格競争の動向"
+    ],
+    "sources": [
+      {
+        "title": "Qwen GitHub｜Release v1.0.0-preview",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview"
+      },
+      {
+        "title": "Axios｜Scoop: Inside Bessent's Situation Room confrontation with Lutnick over China chip security",
+        "url": "https://www.axios.com/2026/11/11/bessent-lutnick-megaspeed-nvidia-china-chips"
+      },
+      {
+        "title": "CNBC Tech｜Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+        "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html"
+      },
+      {
+        "title": "OpenClaw GitHub｜openclaw 2026.11.5-beta.2",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2"
+      },
+      {
+        "title": "NYTimes Technology｜Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+        "url": "https://www.nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html"
+      }
+    ],
+    "news_summary": "Nvidiaを巡る政治的・人的スキャンダルと対中輸出規制の混乱は、AI半導体供給網の不確実性を高め、開発インフラの主導権争いを加速させている。\n\nAxiosなどの報道によると、トランプ政権内でNvidia製先端AIチップの対中輸出規制を巡り、商務長官ハワード・ラトニックの対応や中国関連の安全保障上の懸念（顧客企業メガスピードを巡る問題）を背景にした激しい対立が表面化した。また、ニューヨーク・タイムズ等の報道でNvidiaのジェンスン・フアン最高経営責任者（CEO）を巡る私生活の問題やスパイ疑惑、社内関係のスクープが浮上し、取締役会での協議や辞任要求、米シリコンバレー有力者による擁護など、ガバナンス上の重大な局面を迎えている。同時に、オープンソースおよび開発者エコシステム側では、Qwenがコード生成・エージェント機能を統合した「Qwen Code 1.0 Preview」を公開し、独自のマルチプロバイダ対応やマルチプラットフォームのネイティブパッケージを提供開始した。さらに、OpenClawがバージョン2026.11.5-beta.2をリリースし、大規模な会話履歴の管理機能やセッション維持の安定化を進めている。これらの動きは、ハードウェアの供給不安と並行して、ソフトウェアレイヤーでの開発環境の分散とエージェント機能の高度化が急ピッチで進んでいることを示している。",
+    "opinion_summary": "今回の変化の本質は、AIバリューチェーンの「ボトルネック」がハードウェアの物理的調達から、政治・ガバナンス・ソフトウェア流通の各次元へ同時に分散し始めた点にある。Nvidiaを巡る一連の騒動と対中規制を巡る政権内の足並みの乱れは、AI半導体の流通経路や調達コスト予測に不確実性をもたらしている。米国の国家安全保障と輸出管理の厳格化が政治的思惑で揺らぐ中、企業はハードウェア一辺倒の依存リスクに直面している。こうした中でQwen CodeやOpenClawといった開発者向けエージェント基盤がアップデートを重ねている背景には、特定の巨大ハードウェアや閉じたエコシステムに依存しない開発・実行環境を確保し、柔軟なモデルプロバイダの切り替えを担保しようとする実利的な動機がある。計算資源の集中管理体制に亀裂が入ることで、ソフトウェア層での代替・自律化の価値が相対的に高まっている。",
+    "sentiment": {
+      "positive": "",
+      "negative": "この見立てが過大評価であると判定されるための条件は、Nvidiaのガバナンス問題が短期的な経営陣の揺さぶりに止まり、同社の圧倒的なGPU供給力や顧客との関係性に実質的なダメージを与えない場合である。もし米政権内の対立が結果的に一過性の摩擦に終わり、対中輸出規制の実効性が担保されたり、Nvidiaのサプライチェーンが揺るがなかったりする場合は、ハードウェア覇権の構造は維持される。また、オープンソースの開発ツール群の進展が、企業のエンタープライズ導入におけるセキュリティやガバナンスの壁を越えられなければ、結局は大手クラウドプロバイダーやOpenAI等の垂直統合型プラットフォームへの依存回帰が進むことになる。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "Qwen GitHub｜Release v1.0.0-preview",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview",
+        "point": "Qwen Code 1.0 Preview is now available. Some interfaces, configuration options, and behaviors may change during Preview."
+      },
+      {
+        "rank": 2,
+        "title": "Axios｜Scoop: Inside Bessent's Situation Room confrontation with Lutnick over China chip security",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/11/bessent-lutnick-megaspeed-nvidia-china-chips",
+        "point": "Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick over a failure to place Nvidia customer Me"
+      },
+      {
+        "rank": 3,
+        "title": "CNBC Tech｜Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html",
+        "point": "Huang was notably opposed to strict export controls on AI chips to China, which ruffled feathers with congressional Chin"
+      },
+      {
+        "rank": 4,
+        "title": "OpenClaw GitHub｜openclaw 2026.11.5-beta.2",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2",
+        "point": "2026.11.5-beta.2\nHighlights\n\nLarge conversations remain browsable with paged history in both directions, visible history"
+      },
+      {
+        "rank": 5,
+        "title": "NYTimes Technology｜Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html",
+        "point": "Mr. Huang has been under scrutiny for an affair with a woman said to be a Chinese spy, as well as a relationship with an"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "地政学とNvidiaの動揺が揺さぶるAIインフラの地殻変動",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の根幹を支える半導体の需給とガバナンスの信頼が、地政学的圧力と経営陣のスキャンダルによって同時に揺らぎ始めている。本稿では、Nvidiaの対中輸出規制を巡る米政権内の対立や経営の動揺と、開発ツール・エージェント層におけるオープンソース勢力の動きを一つの文脈で読み解く。これまで圧倒的なハードウェアの独占力の上に成り立っていたAIの力学が、安全保障と政治的介入によって変質しようとしている。この変化は単なる一企業の不祥事にとどまらず、計算資源の調達リスクを再定義する転換点となる。\n\nAxiosなどの報道によると、トランプ政権内でNvidia製先端AIチップの対中輸出規制を巡り、商務長官ハワード・ラトニックの対応や中国関連の安全保障上の懸念（顧客企業メガスピードを巡る問題）を背景にした激しい対立が表面化した。また、ニューヨーク・タイムズ等の報道でNvidiaのジェンスン・フアン最高経営責任者（CEO）を巡る私生活の問題やスパイ疑惑、社内関係のスクープが浮上し、取締役会での協議や辞任要求、米シリコンバレー有力者による擁護など、ガバナンス上の重大な局面を迎えている。同時に、オープンソースおよび開発者エコシステム側では、Qwenがコード生成・エージェント機能を統合した「Qwen Code 1.0 Preview」を公開し、独自のマルチプロバイダ対応やマルチプラットフォームのネイティブパッケージを提供開始した。さらに、OpenClawがバージョン2026.11.5-beta.2をリリースし、大規模な会話履歴の管理機能やセッション維持の安定化を進めている。これらの動きは、ハードウェアの供給不安と並行して、ソフトウェアレイヤーでの開発環境の分散とエージェント機能の高度化が急ピッチで進んでいることを示している。\n\n今回の変化の本質は、AIバリューチェーンの「ボトルネック」がハードウェアの物理的調達から、政治・ガバナンス・ソフトウェア流通の各次元へ同時に分散し始めた点にある。Nvidiaを巡る一連の騒動と対中規制を巡る政権内の足並みの乱れは、AI半導体の流通経路や調達コスト予測に不確実性をもたらしている。米国の国家安全保障と輸出管理の厳格化が政治的思惑で揺らぐ中、企業はハードウェア一辺倒の依存リスクに直面している。こうした中でQwen CodeやOpenClawといった開発者向けエージェント基盤がアップデートを重ねている背景には、特定の巨大ハードウェアや閉じたエコシステムに依存しない開発・実行環境を確保し、柔軟なモデルプロバイダの切り替えを担保しようとする実利的な動機がある。計算資源の集中管理体制に亀裂が入ることで、ソフトウェア層での代替・自律化の価値が相対的に高まっている。\n\n【競争の構図】\n【Nvidia】\nジェンスン・フアンCEOのスパイ疑惑や社内関係を巡る報道、さらに米政権内の対中輸出規制を巡る対立の矢面に立たされている。\n→ 経営陣のガバナンス不安と政治的圧力の強まりにより、中長期的な戦略決定や対中ビジネスの不確実性が跳ね上がり、ハードウェア市場における絶対的優位の前提が揺らいでいる。\n\n【Qwen】\nコード理解・デバッグ・テストを統合したエージェント機能を持つ「Qwen Code 1.0 Preview」を公開し、マルチプロバイダ対応を進めている。\n→ 開発者向けのオープン・柔軟な選択肢としてのプレゼンスを高め、特定のクローズドなモデル群に対する代替基盤としての地位を固めつつある。\n\n【OpenClaw】\n会話履歴のページング管理やセッション維持、認証の安定化を図る「openclaw 2026.11.5-beta.2」をリリースした。\n→ 自律型エージェントの運用において実用に耐えうる安定性とスケーラビリティを証明し、開発現場での実用導入のハードルを下げている。",
+        "why_matters": "日本企業の実務においては、Nvidia製GPUや特定の巨大AIモデルへの過度な依存を見直し、マルチモデル・マルチプロバイダを前提としたアーキテクチャへの移行を急ぐべき時機にある。地政学的リスクやサプライチェーンの混乱によってハードウェアの調達価格やリードタイムが変動するリスクを織り込み、オープンソースのコード支援ツールやエージェント基盤（Qwen Codeなど）を活用した開発の内製化とリスク分散を進める必要がある。特定のベンダーにロックインされないインフラ設計への投資こそが、今週直ちに見直すべき現実的な判断となる。\n\nこの見立てが過大評価であると判定されるための条件は、Nvidiaのガバナンス問題が短期的な経営陣の揺さぶりに止まり、同社の圧倒的なGPU供給力や顧客との関係性に実質的なダメージを与えない場合である。もし米政権内の対立が結果的に一過性の摩擦に終わり、対中輸出規制の実効性が担保されたり、Nvidiaのサプライチェーンが揺るがなかったりする場合は、ハードウェア覇権の構造は維持される。また、オープンソースの開発ツール群の進展が、企業のエンタープライズ導入におけるセキュリティやガバナンスの壁を越えられなければ、結局は大手クラウドプロバイダーやOpenAI等の垂直統合型プラットフォームへの依存回帰が進むことになる。",
+        "context": "【次の観測点】\n・Nvidiaの取締役会および米商務省・財務省による対中輸出規制の具体的な執行ルールと適用リストの変更\n・Qwen Codeや類似のオープンソースエージェントツールに対する企業・開発者の実導入スケールの拡大度合い\n・主要パブリッククラウドおよびAIベンダーにおけるマルチプロバイダ対応APIの拡充と価格競争の動向"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "NYTimes Technology",
+      "title": "Jensen Huang Said to Have Had Relationship With Nvidia Executive Who Reports to Him",
+      "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+      "summary": "Mr. Huang, Nvidia’s chief executive, is already facing scrutiny over an affair with a Chinese businesswoman who U.S. intelligence determined was a Chinese spy.",
+      "published": "2026-11-12 01:57 UTC",
+      "pub_dt": "2026-11-12T01:57:34+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.5-beta.2",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2",
+      "summary": "2026.11.5-beta.2\nHighlights\n\nLarge conversations remain browsable with paged history in both directions, visible history boundaries, and bounded archive reads. (#188450 #188483 #188557 #188372 #190690) Authored by @steipete. Thanks @xydt-tanshanshan.\nThe macOS app preserves saved secrets and Gateway authentication when configuration saves fail or Tailscale exposure is turned off. (#187734 #187664; related #187600, #187597) Thanks @anmol0b.\nEnding Talk on Android no longer cancels work the Gatewa",
+      "published": "2026-11-12 00:43 UTC",
+      "pub_dt": "2026-11-12T00:43:25+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia prepares to oust Jensen Huang, WSJ reports — stock sinks",
+      "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html",
+      "summary": "The report comes days after Huang admitted to an affair with a woman who is believed by U.S. intelligence of being a Chinese spy.",
+      "published": "2026-11-12 00:21 UTC",
+      "pub_dt": "2026-11-12T00:21:27+00:00"
+    },
+    {
+      "source": "OpenAI News",
+      "title": "Gilbert + Tobin rethinks the business of law with AI",
+      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+      "published": "2026-11-12 00:00 UTC",
+      "pub_dt": "2026-11-12T00:00:00+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Nvidia sinks after report implicates CEO Jensen Huang in 2nd affair",
+      "url": "https://www.axios.com/2026/11/11/nvidia-jensen-huang-affair-shares",
+      "summary": "Shares in Nvidia sank Wednesday night after the New York Times reported  CEO Jensen Huang had a second affair with a senior executive who reports to him.Why it matters: The report adds to mounting scrutiny of Huang, already  under investigation over an affair with a purported Chinese spy.The potential impact goes beyond one man and one business, though. Huang is arguably the world's most powerful CEO at the moment, his company serving as the beating heart of the AI revolution. He also has no obv",
+      "published": "2026-11-11 23:53 UTC",
+      "pub_dt": "2026-11-11T23:53:10+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "summary": "The affair could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+      "published": "2026-11-11 23:50 UTC",
+      "pub_dt": "2026-11-11T23:50:00+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+      "url": "https://www.nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html",
+      "summary": "Mr. Huang has been under scrutiny for an affair with a woman said to be a Chinese spy, as well as a relationship with an executive at his A.I. chip company.",
+      "published": "2026-11-11 23:32 UTC",
+      "pub_dt": "2026-11-11T23:32:14+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jim Cramer: This is the bet you're making if you buy the Anthropic IPO",
+      "url": "https://www.cnbc.com/2026/11/11/anthropic-ipo-profit-computing-commitments.html",
+      "summary": "CNBC's Jim Cramer said that Anthropic must sustain extraordinary growth to cover its mounting infrastructure costs.",
+      "published": "2026-11-11 23:30 UTC",
+      "pub_dt": "2026-11-11T23:30:48+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+      "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+      "summary": "As soon as Wednesday evening, Nvidia's board could decide to remove its founder and CEO of 33 years.",
+      "published": "2026-11-11 23:28 UTC",
+      "pub_dt": "2026-11-11T23:28:45+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Jensen Huang accused of having another affair — with an Nvidia exec",
+      "url": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/",
+      "summary": "Jensen Huang, who has come under fire for admitting to an affair with a woman accused of being a Chinese intelligence agent, has been accused of having a separate affair with an Nvidia subordinate.",
+      "published": "2026-11-11 23:17 UTC",
+      "pub_dt": "2026-11-11T23:17:05+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+      "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html",
+      "summary": "Huang was notably opposed to strict export controls on AI chips to China, which ruffled feathers with congressional China hawks.",
+      "published": "2026-11-11 22:46 UTC",
+      "pub_dt": "2026-11-11T22:46:29+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
+      "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
+      "summary": "Nvidia's board is preparing to dismiss CEO Jensen Huang following a report from the New York Times about a second alleged extramarital affair, just days after he admitted to a separate affair with a woman alleged to be a Chinese spy, The Wall Street Journal reports. The second alleged affair was with an executive who [&#8230;]",
+      "published": "2026-11-11 22:44 UTC",
+      "pub_dt": "2026-11-11T22:44:36+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "United won’t let your AI agent book your flight",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+      "summary": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash. But United is concerned [&#8230;]",
+      "published": "2026-11-11 21:54 UTC",
+      "pub_dt": "2026-11-11T21:54:21+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia shares rebound as Jensen Huang faces scrutiny ahead of earnings",
+      "url": "https://www.cnbc.com/2026/11/11/nvidia-stock-jensen-huang-affair-china.html",
+      "summary": "Investors are assessing whether CEO Jensen Huang's affair will have spillover effects on Nvidia's business.",
+      "published": "2026-11-11 21:04 UTC",
+      "pub_dt": "2026-11-11T21:04:36+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Scoop: Lutnick stalled curbing Nvidia chip sales to China — again — after Oval Office showdown",
+      "url": "https://www.axios.com/2026/11/11/trump-lutnick-nvidia-china-chip-export-controls",
+      "summary": "President Trump on Thursday authorized a crack down on companies suspected of diverting Nvidia's advanced AI chips to China for the third time this year — even consulting Elon Musk before giving the go-ahead. One administration official has repeatedly stood in the way: Commerce Secretary Howard Lutnick.Why it matters: This standoff illustrates a breakdown in efforts to keep American technology out of China's hands as the world wonders why the Trump administration has not taken action against the",
+      "published": "2026-11-11 20:59 UTC",
+      "pub_dt": "2026-11-11T20:59:02+00:00"
+    }
+  ]
+}
