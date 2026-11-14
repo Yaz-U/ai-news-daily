@@ -1,0 +1,218 @@
+{
+  "timestamp": "2026-11-14T10:12:17.765545+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "エージェント経済とNVIDIA後退が同時進行するAI市場",
+    "thesis": "AI競争の主戦場はチャットでの対話から、決済機能を持つAIエージェントの商用化と、NVIDIAの首脳交代に伴う資本供給モデルの変質へ移行した。",
+    "opening": "【結論】AI産業の主導権は、生成モデルの性能そのものから、実利を伴うエージェントの経済圏構築と、それを支えてきた巨大資本の再編へと移行しつつある。本日の材料群をつなぐと見えてくるのは、AIが単なる知的生産ツールから、自律的に決済を行い、レガシーシステムを操作する「実務主体」へ変貌する現実と、それを背後で支えてきたハードウェアの帝王NVIDIAの動揺という二つの地殻変動だ。モデルの賢さ比べの時代が終わり、誰が決済基盤を握り、誰がスタートアップの資金繰りを支えるのかという「資本と流通のルール」の書き換えが始まっている。この変化を事業・投資判断の視点から解き明かす。",
+    "what_happened": "【事実】本日の動きは、エージェントの実装とハードウェア・資本構造の揺らぎに集約される。第一に、OpenAIが「ChatGPT Wallet」を導入し、クレジットカード大手と連携してAIエージェントがユーザーの承認のもとで直接購買を行える仕組みを公開した（CNBC/OpenAI）。また、顧客事例としてIT技術者のレガシーポータル作業を代行する「Forge」エージェントなども展開されている（OpenAI）。第二に、NVIDIAのジェンスン・フアンCEOの辞任とそれに伴うスキャンダルが表面化し、テック業界に5000億ドル規模の資金供給の穴が開く懸念が浮上している（Axios/TechCrunch/CNBC）。NVIDIAのチェックブックに依存してきたスタートアップエコシステムは、VCからのより小規模なチェックと低評価額への耐性を強いられている。第三に、規制と地政学の面では、シンガポールのメガスピード社を巡る輸出規制違反や、商務長官Lutnick氏を巡る疑惑が報じられ（Axios）、中国の先端AIモデルが依然として輸出禁止対象のNVIDIA製チップを背景に開発されている実態が指摘された（TechCrunch）。これらは、単なる技術の進歩ではなく、AIの流通とハードウェア供給網の統制が新たな局面に入ったことを示している。",
+    "why_now": "【解釈】今回の変化は、AIの収益化モデルとインフラ調達の双方に根本的な転換を迫っている。これまでAIブームは、NVIDIAによる潤沢な資本バックアップと、クラウド上の大規模モデルの精度向上という「供給サイドの論理」で回ってきた。しかし、ジェンスン・フアン氏の退任と巨額の資金供給の消失は、スタートアップに対して「自律的な収益化」を急務として突きつけている。一方で、OpenAIのウォレット機能に代表されるように、AIは「指示を聞くだけの存在」から「トランザクションを完了させる経済的アクター」へと進化している。つまり、資本の力による力づくのスケール拡大が難しくなる一方で、実業務や決済に深く組み込まれたプラットフォームだけが生き残る構造への選別が始まったと言える。規制とチップ流通の統制強化も相まって、資金力任れの開発競争は限界を迎えつつある。",
+    "counterpoint": "【反証・留保】この見立てが過大評価に終わる条件はいくつか存在する。第一に、NVIDIAの後任体制や代替の巨大資本（例えばメガテックの自社製シリコンと潤沢なフリーキャッシュフロー）が予想以上に早く空白を埋め、スタートアップ向け資金供給の縮小が一時的な混乱にとどまる場合である。第二に、OpenAIなどのエージェント決済機能がセキュリティや責任問題（医療分野での法的責任問題と同様の議論）により法規制や企業のセキュリティポリシーで強く制限され、商用利用が頓挫する場合だ。もしこれらの阻害要因が顕在化すれば、市場は再び「単なるモデルの精度競争」に回帰することになる。",
+    "japan_impact": "【日本の実務への示唆】日本企業が直面する実務上の判断は明確である。第一に、AIの導入を「対話型ツールの実験」から「決済やレガシーシステム連携を伴うエージェントの業務組込」へと基準を引き上げるべきである。OpenAIのウォレットやエージェント連携の動きは、システム間連携の自動化が次のROIの源泉になることを示している。第二に、NVIDIA依存のハードウェア調達や、特定のクラウドベンダーに依存したAI投資計画を見直し、オープンソースモデルやローカル環境（llama.cpp等のエコシステム）を活用したコスト最適化とリスクヘッジを並行して進める必要がある。海外の資本・規制環境の激変に巻き込まれないための自社インフラの選択眼が問われている。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "ChatGPT Walletやエージェント機能（dots/Forge）を相次いで投入し、決済と実務代行を統合したエコシステムを構築している。",
+        "implication": "単なるLLM提供者から、ユーザーの経済活動や業務フローのトランザクションを握るプラットフォーマーへの移行を加速させている。"
+      },
+      {
+        "company": "NVIDIA",
+        "status": "ジェンスン・フアン氏の辞任とスキャンダル、輸出規制を巡る地政学的圧力に直面し、これまでの強力な資金供給モデルが揺らいでいる。",
+        "implication": "ハードウェアの圧倒的優位性は維持しつつも、業界全体のスタートアップ支援やエコシステム形成における主導権が低下するリスクを抱えている。"
+      }
+    ],
+    "next_signals": [
+      "ChatGPT Walletの企業導入におけるセキュリティ承認と実際のトランザクション量の推移",
+      "NVIDIAの新経営体制下におけるスタートアップ投資およびクラウド債務バックストップの方針",
+      "米商務省による中国向けチップ流出問題および輸出管理規制の具体的な執行強化策"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI News｜Introducing ChatGPT Wallet",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet"
+      },
+      {
+        "title": "OpenAI News｜Shield helps technicians hand off legacy portal work with OpenAI",
+        "url": "https://openai.com/business/customer-stories/shield"
+      },
+      {
+        "title": "Axios｜The AI boom will survive without Jensen Huang, but there's a $500 billion funding hole to fill",
+        "url": "https://www.axios.com/2026/11/13/ai-boom-without-jensen-huang-nvidia"
+      },
+      {
+        "title": "TechCrunch AI｜Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+        "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/"
+      }
+    ],
+    "news_summary": "AI競争の主戦場はチャットでの対話から、決済機能を持つAIエージェントの商用化と、NVIDIAの首脳交代に伴う資本供給モデルの変質へ移行した。\n\n【事実】本日の動きは、エージェントの実装とハードウェア・資本構造の揺らぎに集約される。第一に、OpenAIが「ChatGPT Wallet」を導入し、クレジットカード大手と連携してAIエージェントがユーザーの承認のもとで直接購買を行える仕組みを公開した（CNBC/OpenAI）。また、顧客事例としてIT技術者のレガシーポータル作業を代行する「Forge」エージェントなども展開されている（OpenAI）。第二に、NVIDIAのジェンスン・フアンCEOの辞任とそれに伴うスキャンダルが表面化し、テック業界に5000億ドル規模の資金供給の穴が開く懸念が浮上している（Axios/TechCrunch/CNBC）。NVIDIAのチェックブックに依存してきたスタートアップエコシステムは、VCからのより小規模なチェックと低評価額への耐性を強いられている。第三に、規制と地政学の面では、シンガポールのメガスピード社を巡る輸出規制違反や、商務長官Lutnick氏を巡る疑惑が報じられ（Axios）、中国の先端AIモデルが依然として輸出禁止対象のNVIDIA製チップを背景に開発されている実態が指摘された（TechCrunch）。これらは、単なる技術の進歩ではなく、AIの流通とハードウェア供給網の統制が新たな局面に入ったことを示している。",
+    "opinion_summary": "【解釈】今回の変化は、AIの収益化モデルとインフラ調達の双方に根本的な転換を迫っている。これまでAIブームは、NVIDIAによる潤沢な資本バックアップと、クラウド上の大規模モデルの精度向上という「供給サイドの論理」で回ってきた。しかし、ジェンスン・フアン氏の退任と巨額の資金供給の消失は、スタートアップに対して「自律的な収益化」を急務として突きつけている。一方で、OpenAIのウォレット機能に代表されるように、AIは「指示を聞くだけの存在」から「トランザクションを完了させる経済的アクター」へと進化している。つまり、資本の力による力づくのスケール拡大が難しくなる一方で、実業務や決済に深く組み込まれたプラットフォームだけが生き残る構造への選別が始まったと言える。規制とチップ流通の統制強化も相まって、資金力任れの開発競争は限界を迎えつつある。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価に終わる条件はいくつか存在する。第一に、NVIDIAの後任体制や代替の巨大資本（例えばメガテックの自社製シリコンと潤沢なフリーキャッシュフロー）が予想以上に早く空白を埋め、スタートアップ向け資金供給の縮小が一時的な混乱にとどまる場合である。第二に、OpenAIなどのエージェント決済機能がセキュリティや責任問題（医療分野での法的責任問題と同様の議論）により法規制や企業のセキュリティポリシーで強く制限され、商用利用が頓挫する場合だ。もしこれらの阻害要因が顕在化すれば、市場は再び「単なるモデルの精度競争」に回帰することになる。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI News｜Introducing ChatGPT Wallet",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet",
+        "point": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user app"
+      },
+      {
+        "rank": 2,
+        "title": "OpenAI News｜Shield helps technicians hand off legacy portal work with OpenAI",
+        "source": "OpenAI News",
+        "url": "https://openai.com/business/customer-stories/shield",
+        "point": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technici"
+      },
+      {
+        "rank": 3,
+        "title": "Axios｜The AI boom will survive without Jensen Huang, but there's a $500 billion funding hole to fill",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/13/ai-boom-without-jensen-huang-nvidia",
+        "point": "The AI boom without Jensen Huang will test a hard truth: Even if the tech world has grown somewhat less reliant on Nvidi"
+      },
+      {
+        "rank": 4,
+        "title": "TechCrunch AI｜Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+        "source": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        "point": "Nvidia poured tens of billions into AI startups under Huang. Without him at the helm, founders and VCs are bracing for s"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "エージェント経済とNVIDIA後退が同時進行するAI市場",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://openai.com/index/introducing-chatgpt-wallet",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の主導権は、生成モデルの性能そのものから、実利を伴うエージェントの経済圏構築と、それを支えてきた巨大資本の再編へと移行しつつある。本日の材料群をつなぐと見えてくるのは、AIが単なる知的生産ツールから、自律的に決済を行い、レガシーシステムを操作する「実務主体」へ変貌する現実と、それを背後で支えてきたハードウェアの帝王NVIDIAの動揺という二つの地殻変動だ。モデルの賢さ比べの時代が終わり、誰が決済基盤を握り、誰がスタートアップの資金繰りを支えるのかという「資本と流通のルール」の書き換えが始まっている。この変化を事業・投資判断の視点から解き明かす。\n\n【事実】本日の動きは、エージェントの実装とハードウェア・資本構造の揺らぎに集約される。第一に、OpenAIが「ChatGPT Wallet」を導入し、クレジットカード大手と連携してAIエージェントがユーザーの承認のもとで直接購買を行える仕組みを公開した（CNBC/OpenAI）。また、顧客事例としてIT技術者のレガシーポータル作業を代行する「Forge」エージェントなども展開されている（OpenAI）。第二に、NVIDIAのジェンスン・フアンCEOの辞任とそれに伴うスキャンダルが表面化し、テック業界に5000億ドル規模の資金供給の穴が開く懸念が浮上している（Axios/TechCrunch/CNBC）。NVIDIAのチェックブックに依存してきたスタートアップエコシステムは、VCからのより小規模なチェックと低評価額への耐性を強いられている。第三に、規制と地政学の面では、シンガポールのメガスピード社を巡る輸出規制違反や、商務長官Lutnick氏を巡る疑惑が報じられ（Axios）、中国の先端AIモデルが依然として輸出禁止対象のNVIDIA製チップを背景に開発されている実態が指摘された（TechCrunch）。これらは、単なる技術の進歩ではなく、AIの流通とハードウェア供給網の統制が新たな局面に入ったことを示している。\n\n【解釈】今回の変化は、AIの収益化モデルとインフラ調達の双方に根本的な転換を迫っている。これまでAIブームは、NVIDIAによる潤沢な資本バックアップと、クラウド上の大規模モデルの精度向上という「供給サイドの論理」で回ってきた。しかし、ジェンスン・フアン氏の退任と巨額の資金供給の消失は、スタートアップに対して「自律的な収益化」を急務として突きつけている。一方で、OpenAIのウォレット機能に代表されるように、AIは「指示を聞くだけの存在」から「トランザクションを完了させる経済的アクター」へと進化している。つまり、資本の力による力づくのスケール拡大が難しくなる一方で、実業務や決済に深く組み込まれたプラットフォームだけが生き残る構造への選別が始まったと言える。規制とチップ流通の統制強化も相まって、資金力任れの開発競争は限界を迎えつつある。\n\n【競争の構図】\n【OpenAI】\nChatGPT Walletやエージェント機能（dots/Forge）を相次いで投入し、決済と実務代行を統合したエコシステムを構築している。\n→ 単なるLLM提供者から、ユーザーの経済活動や業務フローのトランザクションを握るプラットフォーマーへの移行を加速させている。\n\n【NVIDIA】\nジェンスン・フアン氏の辞任とスキャンダル、輸出規制を巡る地政学的圧力に直面し、これまでの強力な資金供給モデルが揺らいでいる。\n→ ハードウェアの圧倒的優位性は維持しつつも、業界全体のスタートアップ支援やエコシステム形成における主導権が低下するリスクを抱えている。",
+        "why_matters": "【日本の実務への示唆】日本企業が直面する実務上の判断は明確である。第一に、AIの導入を「対話型ツールの実験」から「決済やレガシーシステム連携を伴うエージェントの業務組込」へと基準を引き上げるべきである。OpenAIのウォレットやエージェント連携の動きは、システム間連携の自動化が次のROIの源泉になることを示している。第二に、NVIDIA依存のハードウェア調達や、特定のクラウドベンダーに依存したAI投資計画を見直し、オープンソースモデルやローカル環境（llama.cpp等のエコシステム）を活用したコスト最適化とリスクヘッジを並行して進める必要がある。海外の資本・規制環境の激変に巻き込まれないための自社インフラの選択眼が問われている。\n\n【反証・留保】この見立てが過大評価に終わる条件はいくつか存在する。第一に、NVIDIAの後任体制や代替の巨大資本（例えばメガテックの自社製シリコンと潤沢なフリーキャッシュフロー）が予想以上に早く空白を埋め、スタートアップ向け資金供給の縮小が一時的な混乱にとどまる場合である。第二に、OpenAIなどのエージェント決済機能がセキュリティや責任問題（医療分野での法的責任問題と同様の議論）により法規制や企業のセキュリティポリシーで強く制限され、商用利用が頓挫する場合だ。もしこれらの阻害要因が顕在化すれば、市場は再び「単なるモデルの精度競争」に回帰することになる。",
+        "context": "【次の観測点】\n・ChatGPT Walletの企業導入におけるセキュリティ承認と実際のトランザクション量の推移\n・NVIDIAの新経営体制下におけるスタートアップ投資およびクラウド債務バックストップの方針\n・米商務省による中国向けチップ流出問題および輸出管理規制の具体的な執行強化策"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
+      "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html",
+      "summary": "The Republican-led Congress wants to see Jensen Huang in Washington before Democrats take control in January.",
+      "published": "2026-11-13 23:54 UTC",
+      "pub_dt": "2026-11-13T23:54:36+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Lutnick faces questions over Nvidia spy scandal. His sons' firm has deep ties to the chipmaker",
+      "url": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
+      "summary": "Jensen Huang’s resignation as Nvidia CEO has brought renewed scrutiny to Commerce Secretary Howard Lutnick and his family's financial ties to the chipmaker.",
+      "published": "2026-11-13 23:42 UTC",
+      "pub_dt": "2026-11-13T23:42:18+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Why Anthropic’s Dario Amodei Has Angered OpenAI and Other A.I. Peers",
+      "url": "https://www.nytimes.com/2026/11/13/technology/anthropic-dario-amodei-ai-openai.html",
+      "summary": "Dario Amodei, the company’s chief executive, publicly frets about the dangers of artificial intelligence and has made enemies of his peers along the way.",
+      "published": "2026-11-13 23:20 UTC",
+      "pub_dt": "2026-11-13T23:20:11+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+      "summary": "Nvidia poured tens of billions into AI startups under Huang. Without him at the helm, founders and VCs are bracing for smaller checks and lower valuations.",
+      "published": "2026-11-13 22:43 UTC",
+      "pub_dt": "2026-11-13T22:43:00+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Microsoft’s Global Outage and Fixes: What We Know",
+      "url": "https://www.nytimes.com/2026/11/13/technology/microsoft-outage-what-to-know.html",
+      "summary": "The company described “encouraging” progress on efforts to overcome a second day of disruptions to its email, messaging and other services.",
+      "published": "2026-11-13 22:30 UTC",
+      "pub_dt": "2026-11-13T22:30:39+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+      "summary": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card [&#8230;]",
+      "published": "2026-11-13 20:45 UTC",
+      "pub_dt": "2026-11-13T20:45:10+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia hasn’t selected search firm for permanent Huang replacement, board tells CNBC",
+      "url": "https://www.cnbc.com/2026/11/13/nvidia-huang-ceo-replacement-search.html",
+      "summary": "Speculation has swirled around who Nvidia's board will select to permanently succeed CEO Jensen Huang.",
+      "published": "2026-11-13 20:21 UTC",
+      "pub_dt": "2026-11-13T20:21:46+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "AI agent startup LangChain hits $3B valuation",
+      "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+      "summary": "LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith.",
+      "published": "2026-11-13 19:37 UTC",
+      "pub_dt": "2026-11-13T19:37:57+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Microsoft 365 Crawls Back to Life After a 24-Hour Outage",
+      "url": "https://www.wired.com/story/microsoft-365-crawls-back-to-life-after-a-24-hour-outage/",
+      "summary": "The company says a bad update—not a cyberattack or AI—caused its servers around the world to crash.",
+      "published": "2026-11-13 19:08 UTC",
+      "pub_dt": "2026-11-13T19:08:57+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "How Microcredentials Help Engineers Build Trustworthy AI",
+      "url": "https://spectrum.ieee.org/microcredentials-trustworthy-ai",
+      "summary": "Engineering teams are moving at breakneck speed to integrate artificial intelligence, but they are running into a formidable new barrier: compliance issues. Translating high-level AI ethics, governance, and auditing into daily operational workflows has become one of the industry’s toughest challenges.“AI ethics” refers to the principles developers use to govern and operate workflows. “Governance” refers to the rules and procedures an organization establishes for AI workflows and how they interac",
+      "published": "2026-11-13 19:00 UTC",
+      "pub_dt": "2026-11-13T19:00:03+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "OpenAI launches ChatGPT Wallet, allowing its 'dots' AI agents to make purchases for users",
+      "url": "https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html",
+      "summary": "OpenAI's ChatGPT Wallet partners with American Express, Mastercard and Visa, and those cardholders keep their existing credit card rewards.",
+      "published": "2026-11-13 18:56 UTC",
+      "pub_dt": "2026-11-13T18:56:26+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Wall Street Braces for Anthropic’s Spending",
+      "url": "https://www.nytimes.com/2026/11/13/technology/anthropic-ipo-spending-plans.html",
+      "summary": "The company’s financial picture may get murky as it deals with employee stock compensation and the growing costs of artificial intelligence.",
+      "published": "2026-11-13 18:52 UTC",
+      "pub_dt": "2026-11-13T18:52:43+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+      "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+      "summary": "New research shows the most advanced AI models from China were trained on banned Nvidia chips.",
+      "published": "2026-11-13 18:40 UTC",
+      "pub_dt": "2026-11-13T18:40:30+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Jensen Huang’s Resignation From Nvidia Worries the A.I. Start-Up World",
+      "url": "https://www.nytimes.com/2026/11/13/technology/jensen-huang-silicon-valley-start-ups.html",
+      "summary": "Mr. Huang championed start-ups, with Nvidia holding $48 billion worth of stakes in 229 private companies, including OpenAI and Anthropic, at the end of July.",
+      "published": "2026-11-13 16:36 UTC",
+      "pub_dt": "2026-11-13T16:36:28+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+      "summary": "ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribers.",
+      "published": "2026-11-13 16:00 UTC",
+      "pub_dt": "2026-11-13T16:00:12+00:00"
+    }
+  ]
+}
