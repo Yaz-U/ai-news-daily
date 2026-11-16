@@ -1,250 +1,234 @@
 {
-  "timestamp": "2026-11-15T09:39:23.627008+09:00",
+  "timestamp": "2026-11-16T09:38:53.090353+09:00",
   "time_slot": "朝",
   "summary": {
-    "headline": "エヌビディアの求心力低下とガバナンス危機が示すハードウェア主導の限界",
-    "thesis": "ジェンスン・フアン氏の辞任とガバナンス問題は、AIインフラの調達および半導体サプライチェーンにおける単一企業への過度な依存リスクを表面化させた。今後はハード主導から、マルチエージェントの実装力と実運用での信頼性が競争の主軸となる。",
-    "opening": "【結論】NVIDIA（エヌビディア）のトップ辞任とガバナンス危機、そして米国政治におけるAIへの信頼性揺らぎは、AI産業における「単一のカリスマ経営者と特定ハードウェアへの過剰依存モデル」が曲がり角を迎えたことを意味する。本稿では、ハードウェアの供給を巡る地政学的リスクやサプライチェーンの混乱と、QwenやOpenClawなどの現場におけるエージェント実用化の進展をひとつの緊張感ある問いとして束ねる。いまや問われているのは、計算資源の調達力そのものではなく、サプライチェーンの動揺下で実運用をいかに継続・管理するかという「システム全体の耐障害性」である。",
-    "what_happened": "【事実】NVIDIAのCEOであるジェンスン・フアン氏が、中国へのチップ流出疑惑に関与したとされる顧客企業との関係などの秘匿を理由に辞任した。この辞任劇を受け、テック業界の著名人や主要投資家がフアン氏の復帰を求める嘆願や署名を行う一方、アジア各国の政府はチップ供給のコミットメント確認や影響のモニタリングに追われている。テック業界全体を見渡すと、Microsoftのグローバルな大規模障害が発生して36時間にわたり業務が停滞したほか、Axiosなどの報道によれば米議会ではAIやデータセンターに対するポピュリスト的な反発が強まり、ガードレール（規制）の導入が最優先課題となっている。他方、開発の現場では実用化の動きが進んでおり、Qwenのコードベース（GitHub Release v0.27.2-nightly）では長文チャットのマルチセグメント配信や管理されたエージェントのクライアントファイルシステム登録などの機能拡張が行われている。また、オープンソースのOpenClaw（v2026.11.5-beta.3）でも、トランスクリプトのインデックス作成やコンパクト化時のメモリ圧力を削減する長セッションの信頼性向上が実装されている。これらの事実は、インフラ層でのガバナンスと政治的リスクが極限に達する一方で、アプリケーション層では自律エージェントの運用性と安定性を高める実装が着実に進んでいるというねじれを示している。",
-    "why_now": "【解釈】今回のNVIDIAを巡る混乱と政治的圧力の表面化は、AIインフラの「ボトルネック」が単なる物理的なGPU不足から、ガバナンス、コンプライアンス、そして経営リスクへと完全にシフトしたことを示している。これまでAI産業は、圧倒的な計算資源を握る特定のハードウェアエコシステムと、それを率いる強力なリーダーシップに依存してスケールしてきた。しかし、CEOの突然の辞任や中国へのチップ流出を巡る安全保障上の不備が露呈したことで、調達先の不確実性が企業にとって無視できない事業リスクとなった。これは、半導体の供給網に依存するすべての企業に対し、単一のベンダーやリーダーに頼る調達モデルからの脱却を強く迫るものである。同時に、Microsoftの大規模障害やセキュリティ上の懸念は、クラウドインフラとAIシステムの統合が進むほど、ひとつの脆弱性がグローバルな業務停止を引き起こすという構造的なもろさを露わにした。結果として、競争の主導権は「誰が最も強力なチップを独占するか」から、「不安定化するインフラと規制環境の下で、いかに中断のないエージェント運用システムを構築・維持するか」へと移行しつつある。",
-    "counterpoint": "【反証・留保】この見立てが過大評価であると言える条件は、NVIDIAの取締役会が迅速かつ円滑な後継体制を構築し、主要投資家やエローン・マスク氏らの署名運動に応じる形でフアン氏の復帰や強力な求心力の維持に成功した場合である。もしサプライチェーンへの実害が限定的であり、米議会の規制の動きが従来の妥協的な枠内に収まるのであれば、ハードウェア主導の既存エコシステムは揺るがず、単なる一時的な経営陣のスキャンダルとして処理される。また、QwenやOpenClawなどのエージェント実装の進展が、エンタープライズ領域での大規模なセキュリティ監査やガバナンスの壁に阻まれて導入遅延を引き起こす場合、アプリケーション層での自律化の議論もトーンダウンする可能性がある。",
-    "japan_impact": "【日本の実務への示唆】日本企業は、NVIDIAのリーダーシップ危機やアジア各国政府の動向を踏まえ、GPUやハードウェアの調達計画における「単一ベンダー依存リスク」の再評価を直ちに行うべきである。特に半導体供給の不確実性が高まる中、特定のサプライチェーンに過度に依存したAIプロジェクトは、調達停止や価格変動によって計画の修正を余儀なくされるリスクがある。また、Microsoftの障害やセキュリティ上の脅威が示すように、クラウドやAIツールを導入する日本企業は、単一障害点（SPOF）を排除したマルチクラウドやフォールバック体制の構築を急ぐ必要がある。開発および導入の現場においては、新機能の物珍しさに飛びつくのではなく、QwenやOpenClawに見られるような「長文脈の安定処理」「メモリ管理」「権限承認の自動化」といった、実運用での耐障害性とセキュリティを担保できるアーキテクチャの選定基準を実務の調達要件に組み込むべきである。",
+    "headline": "Nvidiaの求心力低下とAnthropic上場が突くAI市場の構造転換",
+    "thesis": "Nvidiaのガバナンス揺らぎとAnthropicのIPOは、ハードウェア主導の狂騒曲から、実需とガバナンスが問われる次章への転換点である。",
+    "opening": "【結論】AI産業は、無条件の計算資源拡張とカリスマ経営に依存した成長モデルの限界を迎え、資本市場の洗礼と実需の検証フェーズへ移行した。本日は、Nvidiaの経営トップ辞任と中国向け出荷疑惑に端を発するサプライチェーンの動揺、OpenAIによる科学分野での長期的証明への踏み込み、そしてAnthropicのIPOという3つの材料を束ねる。これらは単なる個別企業のニュースではなく、AIエコシステム全体の「主導権の所在」が根底から問い直されている決定的なシグナルである。",
+    "what_happened": "【事実】足元でAI産業の中枢を揺るがす出来事が連続している。まずNvidiaでは、ジェンスン・フアンCEOが中国製チップの不正輸出やスキャンダル疑惑を背景に突如辞任に追い込まれ、米財務長官のスコット・ベッセント氏や商務省高官の間で決算の質や外部経営者の招聘を求める声が公然と上がった（CNBC、Axios、NYTimes）。Nvidia株は約1ヶ月で30%近く下落し、米国の401(k)などの退職金口座や広範な指数ファンドにも痛手を与えている。第二に、AIモデル層では、Anthropicが市場の逆風を押し切る形でIPOを強行し、冷え込むAIトレードの試金石となっている（CNBC）。第三に、実用・研究面では、OpenAIが「GPT-6 Astra」を活用して素粒子物理学の標準理論に関する厳密な証明を支援するなど、科学的発見への応用ブログを相次いで公開した（OpenAI News）。さらに、開発者レイヤーでは、Qwen Code（v0.27.3-nightlyおよびDesktop v0.27.4）がマネージドエージェントのチャネルパスやマルチセグメント配信などの機能を拡充し、オープンソースモデルのエージェント化実装が急ピッチで進んでいる（GitHub）。これらは資本・ガバナンスの動揺と、ボトムアップの実装加速が同時に進行している事実を示している。",
+    "why_now": "【解釈】今回の変化は、AI産業の収益化とガバナンス構造の脆弱性を同時に露わにしている。これまでAI市場の時価総額とインフラ投資は、Nvidiaの圧倒的なハードウェア供給力とジェンスン・フアン氏の強いリーダーシップという一点にレバレッジをかけて支えられてきた。しかし、その中核に政治的・経営的リスク（中国向け売上の不透明さやスキャンダル）が浮上したことで、ハードウェアの「かさ上げされた需要」に対する疑義が資本市場から突きつけられている。一方で、AnthropicのIPOやQwenのエージェント機能実装が進む理由は、単なるGPUの買い付け競争から、ソフトウェア・エージェントによる実利的な自動化、および科学的ブレイクスルーといった「投資に見合う実需の証明」へプレッシャーがシフトしているからに他ならない。資本が厳しく選別される環境下で、AI企業はマネタイズの裏付けを早急に示す必要に迫られている。",
+    "counterpoint": "【反証・留保】この見立てが過大評価である可能性は十分に存在する。もしNvidiaが外部から手腕あるCEOを迅速に迎えてサプライチェーンの混乱を早期に収束させ、さらに米中間の半導体規制に関する政治的圧力が緩和に向かった場合、ハードウェア主導の成長ストーリーは再び息を吹き返すだろう。また、AnthropicのIPOが市場で予想以上の高評価を獲得すれば、「AIバブル崩壊」という悲観論は一気に払拭され、巨額のインフラ投資レースは継続することになる。事態が単なる「一企業のガバナンス問題」にとどまり、クラウド各社の資本支出計画にブレーキがかからなければ、構造転換のシナリオは崩れる。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、Nvidiaの動向や米国の政治的リスクに依存した「GPUありき」のAI調達戦略の再考を迫られている。今週見直すべきは、単なるモデルの性能比較ではなく、OpenAIの科学的・高度推論アプローチや、Qwen等のオープンソースエージェントを自社業務のワークフローへどう組み込むかという「実装の自律性」である。特に半導体やインフラの調達において、単一のサプライヤーや米国の政治動向に過度に依存しない、マルチモデル・マルチクラウドの調達・ガバナンス体制の構築を急ぐべき実務的タイミングに来ている。",
     "company_positions": [
       {
-        "company": "NVIDIA",
-        "status": "ジェンスン・フアンCEOの辞任と、中国へのチップ流出疑惑を巡るガバナンス上の不備が表面化。投資家や業界有力者による復帰嘆願と、各国政府による供給・調査のモニタリングが行われている。",
-        "implication": "圧倒的なハードウェアの優位性を支えてきたカリスマ的リーダーシップと不敗神話が揺らいだことで、調達先としての信頼性やガバナンス体制に重大な弱点が露呈した。"
+        "company": "Nvidia",
+        "status": "ジェンスン・フアンCEOの辞任と中国向け売上を巡る政府・財務省からの調査・批判に直面し、株価が急落している。",
+        "implication": "圧倒的な求心力とガバナンス体制が揺らいだことで、ハードウェアの価格決定力やサプライチェーンの独占的地位に不確実性が生じている。"
       },
       {
-        "company": "Qwen",
-        "status": "クライアントファイルシステムの登録や長チャットのマルチセグメント配信、エージェントループの最適化など、管理されたエージェントの実行機能をコードベースで継続的に強化している。",
-        "implication": "インフラ層が動揺する中でも、オープン・オープンウェイトの枠組みでエージェントの実用性と複雑なワークフロー処理能力を着実に高め、実運用への適用主導権を狙う。"
+        "company": "Anthropic",
+        "status": "冷え込むAI市場と投資家の不安を背景に、極めて重要なIPOを断行し、資金調達の真価が試されている。",
+        "implication": "上場企業としての厳しい収益開示と成長責任を負うことで、ラボ主導の閉じた開発から、株主利益に直結する商業化への転換を迫られる。"
       },
       {
-        "company": "Microsoft",
-        "status": "グローバルな大規模障害が発生し、メールやメッセージなどの主要プロダクトが約36時間にわたり停止、世界中のサービスに影響を与えた。",
-        "implication": "インフラとAIサービスの高度な統合が進む中での単一障害点としてのリスクを露呈し、企業向け信頼性の再構築が急務となっている。"
+        "company": "Qwen (Alibaba)",
+        "status": "マネージドエージェントのマルチセグメント配信やファイルシステム連携など、コード・エージェント基盤の機能を連日アップデートしている。",
+        "implication": "オープンソースおよび中国発のモデルが、単なるベンチマークの追従から、実用的な自律型エージェントのインフラとしての実装力を着実に高めている。"
       }
     ],
     "next_signals": [
-      "NVIDIAの取締役会による後継体制の決定プロセス、あるいはフアン氏の処遇を巡る公式なガバナンス変更の発表",
-      "米新議会におけるAIデータセンターおよびチップ供給に対する具体的な規制法案の提出と内容",
-      "QwenやOpenClaw等のエージェントフレームワークにおける、エンタープライズ環境での実運用安定性とセキュリティ検証の導入実績"
+      "Nvidiaの後任CEO人事と、米国商務省・財務省による中国向けチップ販売に関する調査の最終結論",
+      "AnthropicのIPO初値およびその後の四半期決算における実質的な売上成長とキャッシュフロー",
+      "QwenやOpenAI等のエージェント機能が、実際のエンタープライズ顧客の基幹業務でどれだけ導入されたかを示す具体的な事例"
     ],
     "sources": [
       {
-        "title": "Qwen GitHub Release v0.27.2-nightly.20261113.6f754be654",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261113.6f754be654"
+        "title": "Qwen GitHub｜Release v0.27.3-nightly.20261115.6e3b2dcc19",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3-nightly.20261115.6e3b2dcc19"
       },
       {
-        "title": "OpenClaw GitHub openclaw 2026.11.5-beta.3",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.3"
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.27.4",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.4"
       },
       {
-        "title": "TechCrunch AI｜Where was Nvidia’s security team?",
-        "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/"
+        "title": "OpenAI News｜A step toward defining the Standard Model on a lattice",
+        "url": "https://openai.com/index/step-toward-defining-the-standard-model"
       },
       {
-        "title": "Axios｜AI's four colliding crises",
-        "url": "https://www.axios.com/2026/11/14/ai-trust-nvidia-tech-stocks"
+        "title": "Axios｜Bessent questions did Nvidia \"goose\" earnings with suspect China chip sales",
+        "url": "https://www.axios.com/2026/11/15/bessent-nvidia-earnings-china-chip-sales-ceo"
       },
       {
-        "title": "NYTimes Technology｜Jensen Huang Carried a Secret for More Than a Year. It Led to His Downfall.",
-        "url": "https://www.nytimes.com/2026/11/14/technology/jensen-huang-nvidia-board.html"
-      },
-      {
-        "title": "NYTimes Technology｜Microsoft’s Global Outage and Fixes: What We Know",
-        "url": "https://www.nytimes.com/2026/11/13/technology/microsoft-outage-what-to-know.html"
-      },
-      {
-        "title": "TechCrunch AI｜Asian governments react to Nvidia CEO Jensen Huang’s exit",
-        "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/"
-      },
-      {
-        "title": "CNBC Tech｜Nvidia board urged to consider 'potential return of Jensen Huang' by two major investors",
-        "url": "https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html"
-      },
-      {
-        "title": "TechCrunch AI｜Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
-        "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/"
+        "title": "CNBC Tech｜Anthropic’s IPO lands as the embattled AI trade looks for a much-needed bright spot",
+        "url": "https://www.cnbc.com/2026/11/15/anthropic-ipo-is-make-or-break-for-the-technology-industry.html"
       }
     ],
-    "news_summary": "ジェンスン・フアン氏の辞任とガバナンス問題は、AIインフラの調達および半導体サプライチェーンにおける単一企業への過度な依存リスクを表面化させた。今後はハード主導から、マルチエージェントの実装力と実運用での信頼性が競争の主軸となる。\n\n【事実】NVIDIAのCEOであるジェンスン・フアン氏が、中国へのチップ流出疑惑に関与したとされる顧客企業との関係などの秘匿を理由に辞任した。この辞任劇を受け、テック業界の著名人や主要投資家がフアン氏の復帰を求める嘆願や署名を行う一方、アジア各国の政府はチップ供給のコミットメント確認や影響のモニタリングに追われている。テック業界全体を見渡すと、Microsoftのグローバルな大規模障害が発生して36時間にわたり業務が停滞したほか、Axiosなどの報道によれば米議会ではAIやデータセンターに対するポピュリスト的な反発が強まり、ガードレール（規制）の導入が最優先課題となっている。他方、開発の現場では実用化の動きが進んでおり、Qwenのコードベース（GitHub Release v0.27.2-nightly）では長文チャットのマルチセグメント配信や管理されたエージェントのクライアントファイルシステム登録などの機能拡張が行われている。また、オープンソースのOpenClaw（v2026.11.5-beta.3）でも、トランスクリプトのインデックス作成やコンパクト化時のメモリ圧力を削減する長セッションの信頼性向上が実装されている。これらの事実は、インフラ層でのガバナンスと政治的リスクが極限に達する一方で、アプリケーション層では自律エージェントの運用性と安定性を高める実装が着実に進んでいるというねじれを示している。",
-    "opinion_summary": "【解釈】今回のNVIDIAを巡る混乱と政治的圧力の表面化は、AIインフラの「ボトルネック」が単なる物理的なGPU不足から、ガバナンス、コンプライアンス、そして経営リスクへと完全にシフトしたことを示している。これまでAI産業は、圧倒的な計算資源を握る特定のハードウェアエコシステムと、それを率いる強力なリーダーシップに依存してスケールしてきた。しかし、CEOの突然の辞任や中国へのチップ流出を巡る安全保障上の不備が露呈したことで、調達先の不確実性が企業にとって無視できない事業リスクとなった。これは、半導体の供給網に依存するすべての企業に対し、単一のベンダーやリーダーに頼る調達モデルからの脱却を強く迫るものである。同時に、Microsoftの大規模障害やセキュリティ上の懸念は、クラウドインフラとAIシステムの統合が進むほど、ひとつの脆弱性がグローバルな業務停止を引き起こすという構造的なもろさを露わにした。結果として、競争の主導権は「誰が最も強力なチップを独占するか」から、「不安定化するインフラと規制環境の下で、いかに中断のないエージェント運用システムを構築・維持するか」へと移行しつつある。",
+    "news_summary": "Nvidiaのガバナンス揺らぎとAnthropicのIPOは、ハードウェア主導の狂騒曲から、実需とガバナンスが問われる次章への転換点である。\n\n【事実】足元でAI産業の中枢を揺るがす出来事が連続している。まずNvidiaでは、ジェンスン・フアンCEOが中国製チップの不正輸出やスキャンダル疑惑を背景に突如辞任に追い込まれ、米財務長官のスコット・ベッセント氏や商務省高官の間で決算の質や外部経営者の招聘を求める声が公然と上がった（CNBC、Axios、NYTimes）。Nvidia株は約1ヶ月で30%近く下落し、米国の401(k)などの退職金口座や広範な指数ファンドにも痛手を与えている。第二に、AIモデル層では、Anthropicが市場の逆風を押し切る形でIPOを強行し、冷え込むAIトレードの試金石となっている（CNBC）。第三に、実用・研究面では、OpenAIが「GPT-6 Astra」を活用して素粒子物理学の標準理論に関する厳密な証明を支援するなど、科学的発見への応用ブログを相次いで公開した（OpenAI News）。さらに、開発者レイヤーでは、Qwen Code（v0.27.3-nightlyおよびDesktop v0.27.4）がマネージドエージェントのチャネルパスやマルチセグメント配信などの機能を拡充し、オープンソースモデルのエージェント化実装が急ピッチで進んでいる（GitHub）。これらは資本・ガバナンスの動揺と、ボトムアップの実装加速が同時に進行している事実を示している。",
+    "opinion_summary": "【解釈】今回の変化は、AI産業の収益化とガバナンス構造の脆弱性を同時に露わにしている。これまでAI市場の時価総額とインフラ投資は、Nvidiaの圧倒的なハードウェア供給力とジェンスン・フアン氏の強いリーダーシップという一点にレバレッジをかけて支えられてきた。しかし、その中核に政治的・経営的リスク（中国向け売上の不透明さやスキャンダル）が浮上したことで、ハードウェアの「かさ上げされた需要」に対する疑義が資本市場から突きつけられている。一方で、AnthropicのIPOやQwenのエージェント機能実装が進む理由は、単なるGPUの買い付け競争から、ソフトウェア・エージェントによる実利的な自動化、および科学的ブレイクスルーといった「投資に見合う実需の証明」へプレッシャーがシフトしているからに他ならない。資本が厳しく選別される環境下で、AI企業はマネタイズの裏付けを早急に示す必要に迫られている。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てが過大評価であると言える条件は、NVIDIAの取締役会が迅速かつ円滑な後継体制を構築し、主要投資家やエローン・マスク氏らの署名運動に応じる形でフアン氏の復帰や強力な求心力の維持に成功した場合である。もしサプライチェーンへの実害が限定的であり、米議会の規制の動きが従来の妥協的な枠内に収まるのであれば、ハードウェア主導の既存エコシステムは揺るがず、単なる一時的な経営陣のスキャンダルとして処理される。また、QwenやOpenClawなどのエージェント実装の進展が、エンタープライズ領域での大規模なセキュリティ監査やガバナンスの壁に阻まれて導入遅延を引き起こす場合、アプリケーション層での自律化の議論もトーンダウンする可能性がある。",
+      "negative": "【反証・留保】この見立てが過大評価である可能性は十分に存在する。もしNvidiaが外部から手腕あるCEOを迅速に迎えてサプライチェーンの混乱を早期に収束させ、さらに米中間の半導体規制に関する政治的圧力が緩和に向かった場合、ハードウェア主導の成長ストーリーは再び息を吹き返すだろう。また、AnthropicのIPOが市場で予想以上の高評価を獲得すれば、「AIバブル崩壊」という悲観論は一気に払拭され、巨額のインフラ投資レースは継続することになる。事態が単なる「一企業のガバナンス問題」にとどまり、クラウド各社の資本支出計画にブレーキがかからなければ、構造転換のシナリオは崩れる。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Qwen GitHub Release v0.27.2-nightly.20261113.6f754be654",
+        "title": "Qwen GitHub｜Release v0.27.3-nightly.20261115.6e3b2dcc19",
         "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261113.6f754be654",
-        "point": "What's Changed\n\nfeat(managed-agent): register client filesystems into managed sessions by @wenshao in #16844\ntest(web-sh"
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3-nightly.20261115.6e3b2dcc19",
+        "point": "What's Changed\n\nfeat(web-shell): add sidebar workspace filter by @callmeYe in #17244\nfeat(managed-agent): add the DingTa"
       },
       {
         "rank": 2,
-        "title": "OpenClaw GitHub openclaw 2026.11.5-beta.3",
-        "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.3",
-        "point": "2026.11.5-beta.3\nHighlights\n\nLarge-session reliability: reduce memory pressure during transcript indexing, trimming, and"
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.27.4",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.4",
+        "point": "What's Changed\n\nfeat(managed-agent): register client filesystems into managed sessions by @wenshao in #16844\ntest(web-sh"
       },
       {
         "rank": 3,
-        "title": "TechCrunch AI｜Where was Nvidia’s security team?",
-        "source": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
-        "point": "Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, i"
+        "title": "OpenAI News｜A step toward defining the Standard Model on a lattice",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+        "point": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea in"
       },
       {
         "rank": 4,
-        "title": "Axios｜AI's four colliding crises",
+        "title": "Axios｜Bessent questions did Nvidia \"goose\" earnings with suspect China chip sales",
         "source": "Axios",
-        "url": "https://www.axios.com/2026/11/14/ai-trust-nvidia-tech-stocks",
-        "point": "AI's titans were handed an extraordinary mandate: Police yourselves.But the industry faces a four-pronged crisis of trus"
+        "url": "https://www.axios.com/2026/11/15/bessent-nvidia-earnings-china-chip-sales-ceo",
+        "point": "Treasury Secretary Scott Bessent on Sunday questioned whether Nvidia's earnings might have been inflated by inappropriat"
       },
       {
         "rank": 5,
-        "title": "NYTimes Technology｜Jensen Huang Carried a Secret for More Than a Year. It Led to His Downfall.",
-        "source": "NYTimes Technology",
-        "url": "https://www.nytimes.com/2026/11/14/technology/jensen-huang-nvidia-board.html",
-        "point": "Nvidia’s leader said his relationship with a female customer was just about business. But what he was concealing eventua"
+        "title": "CNBC Tech｜Anthropic’s IPO lands as the embattled AI trade looks for a much-needed bright spot",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/15/anthropic-ipo-is-make-or-break-for-the-technology-industry.html",
+        "point": "Anthropic's IPO has outsized importance in the tech industry, which is heavily invested in the AI lab and is desperate f"
       }
     ],
     "joho_picks": [
       {
-        "headline": "エヌビディアの求心力低下とガバナンス危機が示すハードウェア主導の限界",
+        "headline": "Nvidiaの求心力低下とAnthropic上場が突くAI市場の構造転換",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261113.6f754be654",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3-nightly.20261115.6e3b2dcc19",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】NVIDIA（エヌビディア）のトップ辞任とガバナンス危機、そして米国政治におけるAIへの信頼性揺らぎは、AI産業における「単一のカリスマ経営者と特定ハードウェアへの過剰依存モデル」が曲がり角を迎えたことを意味する。本稿では、ハードウェアの供給を巡る地政学的リスクやサプライチェーンの混乱と、QwenやOpenClawなどの現場におけるエージェント実用化の進展をひとつの緊張感ある問いとして束ねる。いまや問われているのは、計算資源の調達力そのものではなく、サプライチェーンの動揺下で実運用をいかに継続・管理するかという「システム全体の耐障害性」である。\n\n【事実】NVIDIAのCEOであるジェンスン・フアン氏が、中国へのチップ流出疑惑に関与したとされる顧客企業との関係などの秘匿を理由に辞任した。この辞任劇を受け、テック業界の著名人や主要投資家がフアン氏の復帰を求める嘆願や署名を行う一方、アジア各国の政府はチップ供給のコミットメント確認や影響のモニタリングに追われている。テック業界全体を見渡すと、Microsoftのグローバルな大規模障害が発生して36時間にわたり業務が停滞したほか、Axiosなどの報道によれば米議会ではAIやデータセンターに対するポピュリスト的な反発が強まり、ガードレール（規制）の導入が最優先課題となっている。他方、開発の現場では実用化の動きが進んでおり、Qwenのコードベース（GitHub Release v0.27.2-nightly）では長文チャットのマルチセグメント配信や管理されたエージェントのクライアントファイルシステム登録などの機能拡張が行われている。また、オープンソースのOpenClaw（v2026.11.5-beta.3）でも、トランスクリプトのインデックス作成やコンパクト化時のメモリ圧力を削減する長セッションの信頼性向上が実装されている。これらの事実は、インフラ層でのガバナンスと政治的リスクが極限に達する一方で、アプリケーション層では自律エージェントの運用性と安定性を高める実装が着実に進んでいるというねじれを示している。\n\n【解釈】今回のNVIDIAを巡る混乱と政治的圧力の表面化は、AIインフラの「ボトルネック」が単なる物理的なGPU不足から、ガバナンス、コンプライアンス、そして経営リスクへと完全にシフトしたことを示している。これまでAI産業は、圧倒的な計算資源を握る特定のハードウェアエコシステムと、それを率いる強力なリーダーシップに依存してスケールしてきた。しかし、CEOの突然の辞任や中国へのチップ流出を巡る安全保障上の不備が露呈したことで、調達先の不確実性が企業にとって無視できない事業リスクとなった。これは、半導体の供給網に依存するすべての企業に対し、単一のベンダーやリーダーに頼る調達モデルからの脱却を強く迫るものである。同時に、Microsoftの大規模障害やセキュリティ上の懸念は、クラウドインフラとAIシステムの統合が進むほど、ひとつの脆弱性がグローバルな業務停止を引き起こすという構造的なもろさを露わにした。結果として、競争の主導権は「誰が最も強力なチップを独占するか」から、「不安定化するインフラと規制環境の下で、いかに中断のないエージェント運用システムを構築・維持するか」へと移行しつつある。\n\n【競争の構図】\n【NVIDIA】\nジェンスン・フアンCEOの辞任と、中国へのチップ流出疑惑を巡るガバナンス上の不備が表面化。投資家や業界有力者による復帰嘆願と、各国政府による供給・調査のモニタリングが行われている。\n→ 圧倒的なハードウェアの優位性を支えてきたカリスマ的リーダーシップと不敗神話が揺らいだことで、調達先としての信頼性やガバナンス体制に重大な弱点が露呈した。\n\n【Qwen】\nクライアントファイルシステムの登録や長チャットのマルチセグメント配信、エージェントループの最適化など、管理されたエージェントの実行機能をコードベースで継続的に強化している。\n→ インフラ層が動揺する中でも、オープン・オープンウェイトの枠組みでエージェントの実用性と複雑なワークフロー処理能力を着実に高め、実運用への適用主導権を狙う。\n\n【Microsoft】\nグローバルな大規模障害が発生し、メールやメッセージなどの主要プロダクトが約36時間にわたり停止、世界中のサービスに影響を与えた。\n→ インフラとAIサービスの高度な統合が進む中での単一障害点としてのリスクを露呈し、企業向け信頼性の再構築が急務となっている。",
-        "why_matters": "【日本の実務への示唆】日本企業は、NVIDIAのリーダーシップ危機やアジア各国政府の動向を踏まえ、GPUやハードウェアの調達計画における「単一ベンダー依存リスク」の再評価を直ちに行うべきである。特に半導体供給の不確実性が高まる中、特定のサプライチェーンに過度に依存したAIプロジェクトは、調達停止や価格変動によって計画の修正を余儀なくされるリスクがある。また、Microsoftの障害やセキュリティ上の脅威が示すように、クラウドやAIツールを導入する日本企業は、単一障害点（SPOF）を排除したマルチクラウドやフォールバック体制の構築を急ぐ必要がある。開発および導入の現場においては、新機能の物珍しさに飛びつくのではなく、QwenやOpenClawに見られるような「長文脈の安定処理」「メモリ管理」「権限承認の自動化」といった、実運用での耐障害性とセキュリティを担保できるアーキテクチャの選定基準を実務の調達要件に組み込むべきである。\n\n【反証・留保】この見立てが過大評価であると言える条件は、NVIDIAの取締役会が迅速かつ円滑な後継体制を構築し、主要投資家やエローン・マスク氏らの署名運動に応じる形でフアン氏の復帰や強力な求心力の維持に成功した場合である。もしサプライチェーンへの実害が限定的であり、米議会の規制の動きが従来の妥協的な枠内に収まるのであれば、ハードウェア主導の既存エコシステムは揺るがず、単なる一時的な経営陣のスキャンダルとして処理される。また、QwenやOpenClawなどのエージェント実装の進展が、エンタープライズ領域での大規模なセキュリティ監査やガバナンスの壁に阻まれて導入遅延を引き起こす場合、アプリケーション層での自律化の議論もトーンダウンする可能性がある。",
-        "context": "【次の観測点】\n・NVIDIAの取締役会による後継体制の決定プロセス、あるいはフアン氏の処遇を巡る公式なガバナンス変更の発表\n・米新議会におけるAIデータセンターおよびチップ供給に対する具体的な規制法案の提出と内容\n・QwenやOpenClaw等のエージェントフレームワークにおける、エンタープライズ環境での実運用安定性とセキュリティ検証の導入実績"
+        "body": "【結論】AI産業は、無条件の計算資源拡張とカリスマ経営に依存した成長モデルの限界を迎え、資本市場の洗礼と実需の検証フェーズへ移行した。本日は、Nvidiaの経営トップ辞任と中国向け出荷疑惑に端を発するサプライチェーンの動揺、OpenAIによる科学分野での長期的証明への踏み込み、そしてAnthropicのIPOという3つの材料を束ねる。これらは単なる個別企業のニュースではなく、AIエコシステム全体の「主導権の所在」が根底から問い直されている決定的なシグナルである。\n\n【事実】足元でAI産業の中枢を揺るがす出来事が連続している。まずNvidiaでは、ジェンスン・フアンCEOが中国製チップの不正輸出やスキャンダル疑惑を背景に突如辞任に追い込まれ、米財務長官のスコット・ベッセント氏や商務省高官の間で決算の質や外部経営者の招聘を求める声が公然と上がった（CNBC、Axios、NYTimes）。Nvidia株は約1ヶ月で30%近く下落し、米国の401(k)などの退職金口座や広範な指数ファンドにも痛手を与えている。第二に、AIモデル層では、Anthropicが市場の逆風を押し切る形でIPOを強行し、冷え込むAIトレードの試金石となっている（CNBC）。第三に、実用・研究面では、OpenAIが「GPT-6 Astra」を活用して素粒子物理学の標準理論に関する厳密な証明を支援するなど、科学的発見への応用ブログを相次いで公開した（OpenAI News）。さらに、開発者レイヤーでは、Qwen Code（v0.27.3-nightlyおよびDesktop v0.27.4）がマネージドエージェントのチャネルパスやマルチセグメント配信などの機能を拡充し、オープンソースモデルのエージェント化実装が急ピッチで進んでいる（GitHub）。これらは資本・ガバナンスの動揺と、ボトムアップの実装加速が同時に進行している事実を示している。\n\n【解釈】今回の変化は、AI産業の収益化とガバナンス構造の脆弱性を同時に露わにしている。これまでAI市場の時価総額とインフラ投資は、Nvidiaの圧倒的なハードウェア供給力とジェンスン・フアン氏の強いリーダーシップという一点にレバレッジをかけて支えられてきた。しかし、その中核に政治的・経営的リスク（中国向け売上の不透明さやスキャンダル）が浮上したことで、ハードウェアの「かさ上げされた需要」に対する疑義が資本市場から突きつけられている。一方で、AnthropicのIPOやQwenのエージェント機能実装が進む理由は、単なるGPUの買い付け競争から、ソフトウェア・エージェントによる実利的な自動化、および科学的ブレイクスルーといった「投資に見合う実需の証明」へプレッシャーがシフトしているからに他ならない。資本が厳しく選別される環境下で、AI企業はマネタイズの裏付けを早急に示す必要に迫られている。\n\n【競争の構図】\n【Nvidia】\nジェンスン・フアンCEOの辞任と中国向け売上を巡る政府・財務省からの調査・批判に直面し、株価が急落している。\n→ 圧倒的な求心力とガバナンス体制が揺らいだことで、ハードウェアの価格決定力やサプライチェーンの独占的地位に不確実性が生じている。\n\n【Anthropic】\n冷え込むAI市場と投資家の不安を背景に、極めて重要なIPOを断行し、資金調達の真価が試されている。\n→ 上場企業としての厳しい収益開示と成長責任を負うことで、ラボ主導の閉じた開発から、株主利益に直結する商業化への転換を迫られる。\n\n【Qwen (Alibaba)】\nマネージドエージェントのマルチセグメント配信やファイルシステム連携など、コード・エージェント基盤の機能を連日アップデートしている。\n→ オープンソースおよび中国発のモデルが、単なるベンチマークの追従から、実用的な自律型エージェントのインフラとしての実装力を着実に高めている。",
+        "why_matters": "【日本の実務への示唆】日本企業は、Nvidiaの動向や米国の政治的リスクに依存した「GPUありき」のAI調達戦略の再考を迫られている。今週見直すべきは、単なるモデルの性能比較ではなく、OpenAIの科学的・高度推論アプローチや、Qwen等のオープンソースエージェントを自社業務のワークフローへどう組み込むかという「実装の自律性」である。特に半導体やインフラの調達において、単一のサプライヤーや米国の政治動向に過度に依存しない、マルチモデル・マルチクラウドの調達・ガバナンス体制の構築を急ぐべき実務的タイミングに来ている。\n\n【反証・留保】この見立てが過大評価である可能性は十分に存在する。もしNvidiaが外部から手腕あるCEOを迅速に迎えてサプライチェーンの混乱を早期に収束させ、さらに米中間の半導体規制に関する政治的圧力が緩和に向かった場合、ハードウェア主導の成長ストーリーは再び息を吹き返すだろう。また、AnthropicのIPOが市場で予想以上の高評価を獲得すれば、「AIバブル崩壊」という悲観論は一気に払拭され、巨額のインフラ投資レースは継続することになる。事態が単なる「一企業のガバナンス問題」にとどまり、クラウド各社の資本支出計画にブレーキがかからなければ、構造転換のシナリオは崩れる。",
+        "context": "【次の観測点】\n・Nvidiaの後任CEO人事と、米国商務省・財務省による中国向けチップ販売に関する調査の最終結論\n・AnthropicのIPO初値およびその後の四半期決算における実質的な売上成長とキャッシュフロー\n・QwenやOpenAI等のエージェント機能が、実際のエンタープライズ顧客の基幹業務でどれだけ導入されたかを示す具体的な事例"
       }
     ]
   },
   "raw_articles": [
     {
-      "source": "OpenClaw GitHub",
-      "title": "openclaw 2026.11.5-beta.3",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.3",
-      "summary": "2026.11.5-beta.3\nHighlights\n\nLarge-session reliability: reduce memory pressure during transcript indexing, trimming, and compaction; stream only selected hydration payloads and honor configurable summary limits. (#194099, #194066, #194536, #196207) Thanks @vincentkoc, @aniruddhaadak80, @RomneyDa, @garrytan.\nRestart and delivery safety: preserve queued-message permission ceilings and accepted ingress during restarts, drain final chat writes before handoff, and retain delivery ownership through th",
-      "published": "2026-11-15 00:31 UTC",
-      "pub_dt": "2026-11-15T00:31:00+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Where was Nvidia’s security team?",
-      "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
-      "summary": "Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, including one with an executive at a company suspected of funneling chips to China, a former intelligence officer says it’s the kind of leak that runs everyday conversations, which most corporate security teams are poorly equipped to catch.",
-      "published": "2026-11-15 00:08 UTC",
-      "pub_dt": "2026-11-15T00:08:07+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "Jensen Huang Carried a Secret for More Than a Year. It Led to His Downfall.",
-      "url": "https://www.nytimes.com/2026/11/14/technology/jensen-huang-nvidia-board.html",
-      "summary": "Nvidia’s leader said his relationship with a female customer was just about business. But what he was concealing eventually led to his resignation from the company he created.",
-      "published": "2026-11-14 23:25 UTC",
-      "pub_dt": "2026-11-14T23:25:09+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
-      "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
-      "summary": "The petition had attracted more than 115,000 signatures as of Saturday afternoon.",
-      "published": "2026-11-14 21:41 UTC",
-      "pub_dt": "2026-11-14T21:41:22+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "Tech Leaders Rally Behind Jensen Huang",
-      "url": "https://www.nytimes.com/2026/11/14/technology/silicon-valley-nvidia-jensen-huang.html",
-      "summary": "In social media posts and letters to Nvidia’s board, Mr. Huang’s billionaire peers described him as a singular leader who could not be replaced at Nvidia.",
-      "published": "2026-11-14 20:57 UTC",
-      "pub_dt": "2026-11-14T20:57:38+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Nvidia's leadership crisis rattles the AI trade. Here's how we're adjusting our portfolio",
-      "url": "https://www.cnbc.com/investingclub/2026/11/14/nvidias-leadership-crisis-rattles-wall-street-how-were-adjusting.html",
-      "summary": "Despite the turbulence, the S&amp;P 500 secured a weekly gain of 2.5%, while the tech-heavy Nasdaq added 2.3%.",
-      "published": "2026-11-14 18:48 UTC",
-      "pub_dt": "2026-11-14T18:48:39+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Nvidia board urged to consider 'potential return of Jensen Huang' by two major investors",
-      "url": "https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html",
-      "summary": "Two Nvidia investors with about $2.13 billion of stock disclosed as of June 30 are calling for a deliberate leadership search after Huang’s resignation.",
-      "published": "2026-11-14 17:46 UTC",
-      "pub_dt": "2026-11-14T17:46:06+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-      "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-      "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
-      "published": "2026-11-14 17:30 UTC",
-      "pub_dt": "2026-11-14T17:30:00+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
-      "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
-      "summary": "Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations.",
-      "published": "2026-11-14 16:34 UTC",
-      "pub_dt": "2026-11-14T16:34:15+00:00"
-    },
-    {
-      "source": "The Verge AI",
-      "title": "The OpenAI board member who fired Sam Altman says we still can&#8217;t trust AI CEOs",
-      "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
-      "summary": "Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is perhaps best known for having served on [&#8230;]",
-      "published": "2026-11-14 15:00 UTC",
-      "pub_dt": "2026-11-14T15:00:00+00:00"
+      "source": "NVIDIA Blog",
+      "title": "AI Day Seoul Brings Together Korea’s Industry Leaders, Startups and Developer Communities",
+      "url": "https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/",
+      "summary": "Over two days at COEX, more than 2,000 attendees converged for AI Day Seoul, bringing together Korea’s industry leaders, startups and developer communities advancing physical AI and AI agents. At the plenary sessions, Deepu Talla, vice president of robotics and edge AI at NVIDIA, said Korea is “punching above its weight,” with Doosan Robotics, Hyundai [&#8230;]",
+      "published": "2026-11-16 00:00 UTC",
+      "pub_dt": "2026-11-16T00:00:28+00:00"
     },
     {
       "source": "Qwen GitHub",
-      "title": "Release v0.27.2-nightly.20261113.6f754be654",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261113.6f754be654",
-      "summary": "What's Changed\n\nfeat(managed-agent): register client filesystems into managed sessions by @wenshao in #16844\ntest(web-shell): open the shadow overview from its footer entry by @qwen-code-dev-bot in #17067\nfeat(managed-agent): plan long channel replies as ordered multi-segment deliveries by @wenshao in #17002\nfix(permissions): judge user authorization in the AUTO classifier by @yanyukang2003-ux in #16858\nfeat(core): run each AgentCore round in one runAgentLoop call by @qqqys in #17059\nrefactor(ma",
-      "published": "2026-11-14 14:07 UTC",
-      "pub_dt": "2026-11-14T14:07:23+00:00"
+      "title": "Release v0.27.3-nightly.20261115.6e3b2dcc19",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3-nightly.20261115.6e3b2dcc19",
+      "summary": "What's Changed\n\nfeat(web-shell): add sidebar workspace filter by @callmeYe in #17244\nfeat(managed-agent): add the DingTalk adapter on the managed channel path by @wenshao in #17136\nfix(managed-agent): settle stale public-child recovery as terminal instead of retrying forever by @yiliang114 in #17273\nfix(sdk): route Skill mutations through native REST by @Afloat16 in #17111\nfeat(acp): route live and read-only Agent Host sessions through the shared tool batch by @yiliang114 in #17218\nfix(sdk): kee",
+      "published": "2026-11-15 23:50 UTC",
+      "pub_dt": "2026-11-15T23:50:53+00:00"
     },
     {
-      "source": "NYTimes Technology",
-      "title": "Microsoft’s Global Outage and Fixes: What We Know",
-      "url": "https://www.nytimes.com/2026/11/13/technology/microsoft-outage-what-to-know.html",
-      "summary": "Disruptions to the company’s email, messaging and other products lasted about 36 hours, hampering companies and services around the world.",
-      "published": "2026-11-14 13:15 UTC",
-      "pub_dt": "2026-11-14T13:15:55+00:00"
+      "source": "TechCrunch AI",
+      "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+      "summary": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics.",
+      "published": "2026-11-15 23:30 UTC",
+      "pub_dt": "2026-11-15T23:30:00+00:00"
     },
     {
-      "source": "Wired",
-      "title": "Beware the New AI-Fueled Ransomware Boom",
-      "url": "https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/",
-      "summary": "Fully automated ransomware hasn’t arrived—yet. But seemingly unsophisticated attackers are using AI tools to wreak havoc.",
-      "published": "2026-11-14 13:00 UTC",
-      "pub_dt": "2026-11-14T13:00:00+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "v2026.11.5-beta.4",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.4",
+      "summary": "OpenClaw 2026.11.5-beta.4",
+      "published": "2026-11-15 22:35 UTC",
+      "pub_dt": "2026-11-15T22:35:17+00:00"
     },
     {
-      "source": "Axios",
-      "title": "AI's four colliding crises",
-      "url": "https://www.axios.com/2026/11/14/ai-trust-nvidia-tech-stocks",
-      "summary": "AI's titans were handed an extraordinary mandate: Police yourselves.But the industry faces a four-pronged crisis of trust as Democrats surge to power and many Americans rebel over AI and data centers. Guardrails for the industry will be a priority for the new Congress, with some populist Republicans eager to pile on.Why it matters: The collision of safety scares, political blows, financial turmoil and leadership scandals threatens to derail AI's once seemingly unstoppable ascent.The big picture:",
-      "published": "2026-11-14 12:35 UTC",
-      "pub_dt": "2026-11-14T12:35:56+00:00"
+      "source": "OpenAI News",
+      "title": "A step toward defining the Standard Model on a lattice",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
+      "published": "2026-11-15 22:00 UTC",
+      "pub_dt": "2026-11-15T22:00:01+00:00"
+    },
+    {
+      "source": "OpenAI News",
+      "title": "Our new blog for science",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+      "published": "2026-11-15 22:00 UTC",
+      "pub_dt": "2026-11-15T22:00:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+      "summary": "\"Jensen is Nvidia, right? And so much of this economy is riding on Nvidia.\"",
+      "published": "2026-11-15 21:56 UTC",
+      "pub_dt": "2026-11-15T21:56:35+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Jensen Huang might be plotting a return and more of the latest Nvidia drama",
+      "url": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
+      "summary": "The drama around Nvidia co-founder and former CEO Jensen Huang is evolving quickly. The latest edition of our Stepback newsletter should get you up to speed, but there have already been a number of new developments since this morning. That includes rumors that Jensen Huang might be trying to find a path back to CEO, [&#8230;]",
+      "published": "2026-11-15 20:43 UTC",
+      "pub_dt": "2026-11-15T20:43:49+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle",
+      "url": "https://www.infoq.com/news/2026/11/uber-secure-ai-framework/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "In a recent article, Uber Engineering highlights the limitations of traditional identity and API controls in securing AI agents that dynamically reason over external content and take real-world actions. Uber developed a framework to determine whether an agent's action is appropriate given the user's request, the agent's intended purpose, its permissions, and the context of the interaction. By Sergio De Simone",
+      "published": "2026-11-15 20:00 UTC",
+      "pub_dt": "2026-11-15T20:00:00+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "Meet the seven co-founders of Anthropic",
-      "url": "https://www.cnbc.com/2026/11/14/meet-the-seven-co-founders-of-anthropic.html",
-      "summary": "Four researchers, a former journalist, a public policymaker, and an engineer founded Anthropic in 2021. They're now poised to become multi-billionaires.",
-      "published": "2026-11-14 12:15 UTC",
-      "pub_dt": "2026-11-14T12:15:01+00:00"
+      "title": "Lutnick faces questions over Nvidia spy scandal. His sons' firm has ties to the chipmaker",
+      "url": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
+      "summary": "Jensen Huang’s resignation as Nvidia CEO has brought renewed scrutiny to Commerce Secretary Howard Lutnick and his family's financial ties to the chipmaker.",
+      "published": "2026-11-15 19:58 UTC",
+      "pub_dt": "2026-11-15T19:58:21+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+      "summary": "Unsurprisingly, following the scandal involving now-former Nvidia CEO Jensen Huang and a suspected Chinese spy, Congress is looking to further restrict exports of AI chips. Both Democrats and Republicans have voiced support for various measures and bills that would tighten rules and have demanded that Huang and other Nvidia leaders testify before Congress. Senate Minority [&#8230;]",
+      "published": "2026-11-15 19:15 UTC",
+      "pub_dt": "2026-11-15T19:15:43+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Bessent calls for ‘dramatic shakeup’ at Nvidia, urges outside CEO",
+      "url": "https://www.cnbc.com/2026/11/15/bessent-nvidia-ceo-lutnick-megaspeed.html",
+      "summary": "Bessent has criticized Howard Lutnick’s department over suspected chip diversion to China while defending President Donald Trump’s handling of the matter.",
+      "published": "2026-11-15 18:10 UTC",
+      "pub_dt": "2026-11-15T18:10:18+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Bessent questions did Nvidia \"goose\" earnings with suspect China chip sales",
+      "url": "https://www.axios.com/2026/11/15/bessent-nvidia-earnings-china-chip-sales-ceo",
+      "summary": "Treasury Secretary Scott Bessent on Sunday questioned whether Nvidia's earnings might have been inflated by inappropriate sales to China and urged the company to hire an outsider as CEO.Why it matters: Nvidia is central to the AI economy, which has been key to U.S. economic growth. The Treasury secretary casting doubt on the quality of its financial results and leadership could be a blow to an already shaky market. Since the scandal broke open in late October, Nvidia shares have shed more than $",
+      "published": "2026-11-15 17:29 UTC",
+      "pub_dt": "2026-11-15T17:29:21+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "An overview of Jensen Huang’s messy days",
+      "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation",
+      "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on Jensen Huang's resignation and the fallout from Nvidia's leadership crisis, follow Terrence O'Brien. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started On October [&#8230;]",
+      "published": "2026-11-15 13:00 UTC",
+      "pub_dt": "2026-11-15T13:00:00+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "How Jensen Huang’s Secret Led to His Downfall at Nvidia",
+      "url": "https://www.nytimes.com/2026/11/14/technology/jensen-huang-nvidia-board.html",
+      "summary": "Nvidia’s leader said his relationship with a female customer was just about business. But what he was concealing eventually led to his resignation from the company he created.",
+      "published": "2026-11-15 12:40 UTC",
+      "pub_dt": "2026-11-15T12:40:04+00:00"
     }
   ]
 }
