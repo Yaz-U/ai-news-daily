@@ -1,0 +1,223 @@
+{
+  "timestamp": "2026-11-18T11:42:03.810671+09:00",
+  "time_slot": "昼",
+  "summary": {
+    "headline": "AGIから実務自動化へ：AIエージェントが迎えるインフラの分水嶺",
+    "thesis": "AIの競争軸はモデルの単体性能から、エージェントを自社システムやハードウェアへ定常稼働させる「実務インフラの強靭化」へと完全に移行した。",
+    "opening": "【結論】AI競争の主戦場は、推論モデルの単なる賢さの競い合いから、自律型エージェントを現場のシステムやインフラへ組み込み、途切れることなく稼働させ続ける「実務インフラの強靭化」へと完全に移行した。本稿では、OpenAIによる新モデル群の投入、OpenClawなどによるエージェントの継続性担保、そしてNVIDIAの経営体制変化とインフラ側の動きを束ねる。いま起きているのは、単なる機能拡張ではなく、AIが「単発の壁打ち相手」から「24時間動く実務システム」へ脱皮する際の、社会的なインフラ摩擦の顕在化である。",
+    "what_happened": "【事実】今回の変化を裏付ける動線は、モデル提供レイヤーとエージェント基盤レイヤー、そしてそれを支えるハードウェア側の3点に集約される。まずOpenAIは、専門的出力やコード生成、コンピュータ操作の効率を高めた新モデル「GPT-6.2 Astra and Sol」を発表し、ChatGPT WorkやAPI経由での低コスト展開を打ち出した。同時に営業特化型のプラグイン群も投入し、ビジネスの川上から川下までをカバーし始めている（OpenAI）。次に、自律エージェントの運用基盤であるオープンソースのOpenClawは、バージョン2026.11.5において、ゲートウェイ再起動時でもメッセージのキューや送信権限、チャットの最終書き込みを保持する「再起動に強い会話機能」や、失敗時のロールバック機能を実装した（OpenClaw）。開発現場でもQwenなどが管理エージェントのループ処理やセッション管理の安定化を進めている。最後にハードウェア側では、NVIDIAがSC26において科学研究向けのエージェント実行用ツール群「Nemotron for Science」や新GPU「Rubin HPC GPU」を発表した（NVIDIA）。一方で、ジェンセン・フアン氏の退任に伴う経営体制の変化や、中国市場からの撤退方針が報じられるなど、巨大半導体エコシステムを取り巻く資本・地政学の前提も揺らいでいる（TechCrunch, CNBC）。",
+    "why_now": "【解釈】このタイミングでエージェントの「継続稼働性」と「インフラの安定」が急浮上した背景には、AIがデモの段階を終え、実際の業務システムや決済ネットワークに組み込まれ始めたという実務上の必然がある。これまでエージェントの実装における最大のボトルネックは、ネットワークの瞬断やサーバーの再起動によって処理が途切れ、人間の介入を必要とする点にあった。OpenClawのアップデートが示すように、状態の永続化や安全なロールバック機能が標準装備され始めたことは、AIが「止まってはいけない基幹システム」の領域に足を踏み入れたことを意味する。また、NVIDIAが科学計算やHPC領域に特化したエージェント用プラットフォームを急ピッチで打ち出しているのも、単なる汎用チャットの需要が一巡し、高度な自動化や実験計画の実行といった「産業インフラとしてのAI」から収益を回収するフェーズに入ったためと読める。",
+    "counterpoint": "【反証・留保】この「実務インフラとしてのAI定着」という見立てが過大評価であると判定されるための条件は、エージェントの自律実行に伴うシステム障害や政治的・社会的な反発が、実需の拡大を上回るスピードでインフラ全体を麻痺させる事態が起きることだ。足元では、全米でのデータセンター建設に対するモラトリアムの承認など、政治・社会的なインフラへの逆風が強まっている。もし、AIエージェントの自律的なトランザクション拡大が社会的な不信や大規模なシステム停止（アウトテージ）を引き起こし、法規制による強力な足止めやインフラ投資の急ブレーキにつながった場合、エージェント経済圏の拡大シナリオは一時的に大きく後退することになる。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、単発の生成AIチャットの導入検証ではなく、基幹システムや業務フローにAIエージェントを組み込む際の「耐障害性とガバナンスの設計」である。海外ではOpenClawの例のように、サーバー再起動や例外処理に耐えるレジリエンス（復元力）の確保がエージェント実装の必須条件になりつつある。国内企業は、PoC（概念実証）の段階で「途中で止まってもデータや処理が安全に巻き戻されるか」「夜間や休日を含めた無人環境で安全にエージェントが走るか」というインフラ面の要件定義へ評価軸をシフトし、調達やパートナー選定の基準を改めるべきタイミングに来ている。",
+    "company_positions": [
+      {
+        "company": "OpenAI",
+        "status": "GPT-6.2 Astra and Solを通じた高効率・コンピュータ操作機能の提供と、営業特化型プラグインによる業務プロセスの網羅。",
+        "implication": "モデルの単体性能競争から、実際のビジネスワークフローに入り込み、ユーザーの業務そのものを代替する主導権を狙う。"
+      },
+      {
+        "company": "NVIDIA",
+        "status": "ジェンセン・フアン氏の退任と新経営体制の下での好決算発表、およびSC26でのRubin HPC GPUや科学用エージェント基盤の発表。",
+        "implication": "経営トップの交代や地政学的リスク（中国からの撤退報道）を抱えつつも、AIインフラの圧倒的な供給者としての主導権を維持できるかが問われる。"
+      },
+      {
+        "company": "OpenClaw",
+        "status": "再起動に強い会話保持機能や安全なアップデート・ロールバック機構を備えたバージョン2026.11.5のリリース。",
+        "implication": "オープンソースのエージェントエコシステムにおいて、実務に耐えうる「高い信頼性と安定性」のデファクトスタンダードを握りつつある。"
+      }
+    ],
+    "next_signals": [
+      "金融機関や大手事業会社における、人間を介さない完全自律型AIエージェントの商用トランザクションの事例数",
+      "データセンターの電力・環境負荷に対する政治的規制やモラトリアムの法的波及範囲",
+      "NVIDIAの新経営体制下における対外投資スタンスおよびサプライチェーンの実効性"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI News｜Introducing GPT-6.2 Astra and Sol",
+        "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol"
+      },
+      {
+        "title": "OpenClaw GitHub｜openclaw 2026.11.5",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5"
+      },
+      {
+        "title": "NVIDIA Blog｜Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+        "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/"
+      },
+      {
+        "title": "Axios｜Exclusive: Donald Trump Jr. signals investors underestimated AI pushback",
+        "url": "https://www.axios.com/2026/11/17/donald-trump-jr-data-centers"
+      }
+    ],
+    "news_summary": "AIの競争軸はモデルの単体性能から、エージェントを自社システムやハードウェアへ定常稼働させる「実務インフラの強靭化」へと完全に移行した。\n\n【事実】今回の変化を裏付ける動線は、モデル提供レイヤーとエージェント基盤レイヤー、そしてそれを支えるハードウェア側の3点に集約される。まずOpenAIは、専門的出力やコード生成、コンピュータ操作の効率を高めた新モデル「GPT-6.2 Astra and Sol」を発表し、ChatGPT WorkやAPI経由での低コスト展開を打ち出した。同時に営業特化型のプラグイン群も投入し、ビジネスの川上から川下までをカバーし始めている（OpenAI）。次に、自律エージェントの運用基盤であるオープンソースのOpenClawは、バージョン2026.11.5において、ゲートウェイ再起動時でもメッセージのキューや送信権限、チャットの最終書き込みを保持する「再起動に強い会話機能」や、失敗時のロールバック機能を実装した（OpenClaw）。開発現場でもQwenなどが管理エージェントのループ処理やセッション管理の安定化を進めている。最後にハードウェア側では、NVIDIAがSC26において科学研究向けのエージェント実行用ツール群「Nemotron for Science」や新GPU「Rubin HPC GPU」を発表した（NVIDIA）。一方で、ジェンセン・フアン氏の退任に伴う経営体制の変化や、中国市場からの撤退方針が報じられるなど、巨大半導体エコシステムを取り巻く資本・地政学の前提も揺らいでいる（TechCrunch, CNBC）。",
+    "opinion_summary": "【解釈】このタイミングでエージェントの「継続稼働性」と「インフラの安定」が急浮上した背景には、AIがデモの段階を終え、実際の業務システムや決済ネットワークに組み込まれ始めたという実務上の必然がある。これまでエージェントの実装における最大のボトルネックは、ネットワークの瞬断やサーバーの再起動によって処理が途切れ、人間の介入を必要とする点にあった。OpenClawのアップデートが示すように、状態の永続化や安全なロールバック機能が標準装備され始めたことは、AIが「止まってはいけない基幹システム」の領域に足を踏み入れたことを意味する。また、NVIDIAが科学計算やHPC領域に特化したエージェント用プラットフォームを急ピッチで打ち出しているのも、単なる汎用チャットの需要が一巡し、高度な自動化や実験計画の実行といった「産業インフラとしてのAI」から収益を回収するフェーズに入ったためと読める。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この「実務インフラとしてのAI定着」という見立てが過大評価であると判定されるための条件は、エージェントの自律実行に伴うシステム障害や政治的・社会的な反発が、実需の拡大を上回るスピードでインフラ全体を麻痺させる事態が起きることだ。足元では、全米でのデータセンター建設に対するモラトリアムの承認など、政治・社会的なインフラへの逆風が強まっている。もし、AIエージェントの自律的なトランザクション拡大が社会的な不信や大規模なシステム停止（アウトテージ）を引き起こし、法規制による強力な足止めやインフラ投資の急ブレーキにつながった場合、エージェント経済圏の拡大シナリオは一時的に大きく後退することになる。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI News｜Introducing GPT-6.2 Astra and Sol",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+        "point": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost "
+      },
+      {
+        "rank": 2,
+        "title": "OpenClaw GitHub｜openclaw 2026.11.5",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5",
+        "point": "2026.11.5\nHighlights\n\nRestart-safe conversations: Queued messages, send permissions, and final chat writes are retained "
+      },
+      {
+        "rank": 3,
+        "title": "NVIDIA Blog｜Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+        "source": "NVIDIA Blog",
+        "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/",
+        "point": "NVIDIA’s Ian Buck kicked off the company’s week at SC26 in Chicago on Monday with new tools for AI agents, software that"
+      },
+      {
+        "rank": 4,
+        "title": "Axios｜Exclusive: Donald Trump Jr. signals investors underestimated AI pushback",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/17/donald-trump-jr-data-centers",
+        "point": "Donald Trump Jr. signaled that investors underestimated the political pushback to the AI ecosystem in an interview at Ax"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AGIから実務自動化へ：AIエージェントが迎えるインフラの分水嶺",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI競争の主戦場は、推論モデルの単なる賢さの競い合いから、自律型エージェントを現場のシステムやインフラへ組み込み、途切れることなく稼働させ続ける「実務インフラの強靭化」へと完全に移行した。本稿では、OpenAIによる新モデル群の投入、OpenClawなどによるエージェントの継続性担保、そしてNVIDIAの経営体制変化とインフラ側の動きを束ねる。いま起きているのは、単なる機能拡張ではなく、AIが「単発の壁打ち相手」から「24時間動く実務システム」へ脱皮する際の、社会的なインフラ摩擦の顕在化である。\n\n【事実】今回の変化を裏付ける動線は、モデル提供レイヤーとエージェント基盤レイヤー、そしてそれを支えるハードウェア側の3点に集約される。まずOpenAIは、専門的出力やコード生成、コンピュータ操作の効率を高めた新モデル「GPT-6.2 Astra and Sol」を発表し、ChatGPT WorkやAPI経由での低コスト展開を打ち出した。同時に営業特化型のプラグイン群も投入し、ビジネスの川上から川下までをカバーし始めている（OpenAI）。次に、自律エージェントの運用基盤であるオープンソースのOpenClawは、バージョン2026.11.5において、ゲートウェイ再起動時でもメッセージのキューや送信権限、チャットの最終書き込みを保持する「再起動に強い会話機能」や、失敗時のロールバック機能を実装した（OpenClaw）。開発現場でもQwenなどが管理エージェントのループ処理やセッション管理の安定化を進めている。最後にハードウェア側では、NVIDIAがSC26において科学研究向けのエージェント実行用ツール群「Nemotron for Science」や新GPU「Rubin HPC GPU」を発表した（NVIDIA）。一方で、ジェンセン・フアン氏の退任に伴う経営体制の変化や、中国市場からの撤退方針が報じられるなど、巨大半導体エコシステムを取り巻く資本・地政学の前提も揺らいでいる（TechCrunch, CNBC）。\n\n【解釈】このタイミングでエージェントの「継続稼働性」と「インフラの安定」が急浮上した背景には、AIがデモの段階を終え、実際の業務システムや決済ネットワークに組み込まれ始めたという実務上の必然がある。これまでエージェントの実装における最大のボトルネックは、ネットワークの瞬断やサーバーの再起動によって処理が途切れ、人間の介入を必要とする点にあった。OpenClawのアップデートが示すように、状態の永続化や安全なロールバック機能が標準装備され始めたことは、AIが「止まってはいけない基幹システム」の領域に足を踏み入れたことを意味する。また、NVIDIAが科学計算やHPC領域に特化したエージェント用プラットフォームを急ピッチで打ち出しているのも、単なる汎用チャットの需要が一巡し、高度な自動化や実験計画の実行といった「産業インフラとしてのAI」から収益を回収するフェーズに入ったためと読める。\n\n【競争の構図】\n【OpenAI】\nGPT-6.2 Astra and Solを通じた高効率・コンピュータ操作機能の提供と、営業特化型プラグインによる業務プロセスの網羅。\n→ モデルの単体性能競争から、実際のビジネスワークフローに入り込み、ユーザーの業務そのものを代替する主導権を狙う。\n\n【NVIDIA】\nジェンセン・フアン氏の退任と新経営体制の下での好決算発表、およびSC26でのRubin HPC GPUや科学用エージェント基盤の発表。\n→ 経営トップの交代や地政学的リスク（中国からの撤退報道）を抱えつつも、AIインフラの圧倒的な供給者としての主導権を維持できるかが問われる。\n\n【OpenClaw】\n再起動に強い会話保持機能や安全なアップデート・ロールバック機構を備えたバージョン2026.11.5のリリース。\n→ オープンソースのエージェントエコシステムにおいて、実務に耐えうる「高い信頼性と安定性」のデファクトスタンダードを握りつつある。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、単発の生成AIチャットの導入検証ではなく、基幹システムや業務フローにAIエージェントを組み込む際の「耐障害性とガバナンスの設計」である。海外ではOpenClawの例のように、サーバー再起動や例外処理に耐えるレジリエンス（復元力）の確保がエージェント実装の必須条件になりつつある。国内企業は、PoC（概念実証）の段階で「途中で止まってもデータや処理が安全に巻き戻されるか」「夜間や休日を含めた無人環境で安全にエージェントが走るか」というインフラ面の要件定義へ評価軸をシフトし、調達やパートナー選定の基準を改めるべきタイミングに来ている。\n\n【反証・留保】この「実務インフラとしてのAI定着」という見立てが過大評価であると判定されるための条件は、エージェントの自律実行に伴うシステム障害や政治的・社会的な反発が、実需の拡大を上回るスピードでインフラ全体を麻痺させる事態が起きることだ。足元では、全米でのデータセンター建設に対するモラトリアムの承認など、政治・社会的なインフラへの逆風が強まっている。もし、AIエージェントの自律的なトランザクション拡大が社会的な不信や大規模なシステム停止（アウトテージ）を引き起こし、法規制による強力な足止めやインフラ投資の急ブレーキにつながった場合、エージェント経済圏の拡大シナリオは一時的に大きく後退することになる。",
+        "context": "【次の観測点】\n・金融機関や大手事業会社における、人間を介さない完全自律型AIエージェントの商用トランザクションの事例数\n・データセンターの電力・環境負荷に対する政治的規制やモラトリアムの法的波及範囲\n・NVIDIAの新経営体制下における対外投資スタンスおよびサプライチェーンの実効性"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "TechCrunch AI",
+      "title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future  deals in doubt",
+      "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+      "summary": "The value of Nvidia’s private investments has nearly tripled over the past nine months, fueled by Jensen Huang’s aggressive dealmaking and rising valuations of its existing portfolio companies.",
+      "published": "2026-11-18 01:44 UTC",
+      "pub_dt": "2026-11-18T01:44:21+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Why the internet suddenly broke all at once",
+      "url": "https://www.axios.com/2026/11/17/tech-outages-ai-fears-internet-breaking",
+      "summary": "Americans were locked out of bank accounts, blocked from boarding flights and unable to check emails in rapid succession over the past week.Why it matters: The internet immediately pointed fingers toward an AI agent doomsday, sending people into a frenzy that the Big One™was about to happen.Reality check: Experts tell Axios these disruptions don't appear linked to hacking.To the extent they involve AI, the incidents may have just as much to do with widespread efforts to fix outdated code as they",
+      "published": "2026-11-18 01:40 UTC",
+      "pub_dt": "2026-11-18T01:40:32+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "OpenAI bugging case defendant Alfozan set for trial in January",
+      "url": "https://www.cnbc.com/2026/11/17/openai-spy-alfozan-trial-saudi.html",
+      "summary": "Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an OpenAI conference room.",
+      "published": "2026-11-18 01:31 UTC",
+      "pub_dt": "2026-11-18T01:31:37+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia's Colette Kress tells Cramer: Employees and customers are not going anywhere",
+      "url": "https://www.cnbc.com/2026/11/17/nvidias-colette-kress-tells-cramer-customers-and-employees-are-not-going-anywhere.html",
+      "summary": "Interim CEO Colette Kress said exclusively on \"Mad Money\" that the chipmaker's customers and employees remain committed to the company.",
+      "published": "2026-11-18 01:02 UTC",
+      "pub_dt": "2026-11-18T01:02:38+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "v2026.10.33",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.33",
+      "summary": "OpenClaw 2026.10.33",
+      "published": "2026-11-18 01:01 UTC",
+      "pub_dt": "2026-11-18T01:01:13+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Nvidia promises that revenue will keep soaring — for now",
+      "url": "https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/",
+      "summary": "Despite the turmoil Nvidia is in after the departure of its disgraced founder and CEO Jensen Huang, the company projected that its streak of record-breaking revenue isn't about to stop.",
+      "published": "2026-11-18 00:16 UTC",
+      "pub_dt": "2026-11-18T00:16:50+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Jensen Huang Says He Would Return as Nvidia CEO if Asked",
+      "url": "https://www.nytimes.com/2026/11/17/technology/jensen-huang-nvidia-statement.html",
+      "summary": "Mr. Huang resigned as chief executive of the company last week after revelations that he had affairs with an employee and a woman linked to Chinese intelligence.",
+      "published": "2026-11-17 23:48 UTC",
+      "pub_dt": "2026-11-17T23:48:31+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Satya Nadella says he’s AGI-pilled now",
+      "url": "https://www.theverge.com/tech/1036111/satya-nadella-says-hes-agi-pilled-now",
+      "summary": "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI-pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked at [&#8230;]",
+      "published": "2026-11-17 23:41 UTC",
+      "pub_dt": "2026-11-17T23:41:18+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+      "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+      "summary": "Nvidia's interim CEO says the company is done selling chips to China. How much will that cost?",
+      "published": "2026-11-17 23:37 UTC",
+      "pub_dt": "2026-11-17T23:37:48+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Review: Nubia Redmagic 12 Pro | Camera",
+      "url": "https://www.wired.com/gallery/review-nubia-redmagic-12-pro-or-camera/",
+      "summary": "Review: Nubia Redmagic 12 Pro | Camera",
+      "published": "2026-11-17 23:34 UTC",
+      "pub_dt": "2026-11-17T23:34:44+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
+      "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+      "summary": "JPMorgan and Hyundai Card are looking to expand the use of AI agents in financial transactions.",
+      "published": "2026-11-17 23:30 UTC",
+      "pub_dt": "2026-11-17T23:30:13+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Exclusive: Donald Trump Jr. signals investors underestimated AI pushback",
+      "url": "https://www.axios.com/2026/11/17/donald-trump-jr-data-centers",
+      "summary": "Donald Trump Jr. signaled that investors underestimated the political pushback to the AI ecosystem in an interview at Axios' annual BFD summit in New York.The big picture: The 2026 midterms reflected deep distrust of the AI race, with voters approving dozens of moratoriums on data centers — which President Trump rallied around.Driving the news: Trump Jr. asserted that \"a lot of\" the pushback \"is manufactured.\" But he added \"that doesn't mean it's not real\" in an interview with Axios Pro Rata aut",
+      "published": "2026-11-17 23:28 UTC",
+      "pub_dt": "2026-11-17T23:28:12+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "\"We will remain thoughtful\": Nvidia says it will continue to backstop AI ecosystem",
+      "url": "https://www.axios.com/2026/11/17/nvidia-ai-startup-investment-discipline-kress",
+      "summary": "Nvidia's interim CEO said Tuesday that the company will be \"disciplined\" as it decides how much to invest in neoclouds and other AI customers going forward.Why it matters: Nvidia isn't just the biggest chip partner for AI startups — it's a major source of capital.What they're saying: \"Our momentum is real,\" interim CEO Colette Kress said on at the end of conference call with investors and analysts. \"Our demand is accelerating. Our supply is growing. Our customers and our partners are with us, an",
+      "published": "2026-11-17 23:15 UTC",
+      "pub_dt": "2026-11-17T23:15:32+00:00"
+    },
+    {
+      "source": "ZDNet AI",
+      "title": "Microsoft unveiled Copilot Workspaces at Ignite 2026, plus more AI workplace updates",
+      "url": "https://www.zdnet.com/innovation/microsoft-copilot-workspaces-ignite-2026/",
+      "summary": "The company also released new ROI tracking tools for companies monitoring their AI spend.",
+      "published": "2026-11-17 23:14 UTC",
+      "pub_dt": "2026-11-17T23:14:05+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.5",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5",
+      "summary": "2026.11.5\nHighlights\n\nRestart-safe conversations: Queued messages, send permissions, and final chat writes are retained across Gateway restarts. (#196923, #196540, #196493) Authored by @steipete. Thanks @joshavant.\nSafer updates: Failed Doctor or Gateway startup rolls back an activated update, while restored npm packages remain readable by non-root services. (#197851, #193272) Thanks @RomneyDa, @obviyus, and @vincentkoc.\nTelegram widgets: Interactive widgets now render in Telegram messages, incl",
+      "published": "2026-11-17 23:07 UTC",
+      "pub_dt": "2026-11-17T23:07:19+00:00"
+    }
+  ]
+}
