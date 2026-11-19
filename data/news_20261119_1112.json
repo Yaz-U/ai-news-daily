@@ -1,0 +1,234 @@
+{
+  "timestamp": "2026-11-19T11:12:00.690841+09:00",
+  "time_slot": "昼",
+  "summary": {
+    "headline": "Anthropicの1兆ドルIPOと自律化コードエージェントの現実",
+    "thesis": "AI競争の主戦場はチャットの性能から、自律稼働するコードエージェントと実証基盤の獲得へと決定的に移行した。",
+    "opening": "【結論】AI産業の主導権争いは、汎用対話モデルの性能勝負から、自律的に動き続けるコードエージェントの運用制御と巨額の資本・インフラを握るフェーズへ移行した。本稿では、Anthropicの歴史的IPO、オープンソースの自律型エージェント開発、そして大企業の現場導入という一見バラバラに見える材料を束ねる。ここから見えてくるのは、AIが単なる「賢い道具」から「自律的な経済・開発主体」へと変貌する中で、誰がインフラとコスト、リスク管理の主導権を握るかという新たな競争ルールである。読者は、自社のシステム調達やガバナンス設計において、エージェント前提の運用へ舵を切る必要がある。",
+    "what_happened": "【事実】今回の変化を牽引する具体的な動きとして、まず資本市場ではAnthropicが歴史的なIPOを果たし、時価総額1兆ドル超という巨額の評価を獲得した。これはウォール街がフロンティアAIの収益化と持続的成長に対して強い信認を与えたことを示す。一方で技術レイヤーでは、OpenAIが研究アクセラレーションに関する「ギザギザのフロンティア」を公表し、コードエージェントがAI自身の研究を加速させる一方で、その性能にはまだ不均一なムラがあることを示した。同時にQwenなどのオープンソース陣営では、管理されたエージェントによるスケジュール実行やステートレスなホステッドハーネスの開発（v0.28.0-nightlyなど）が進み、エージェントの常時自律稼働に向けたインフラ整備が急ピッチで進んでいる。また、住友生命などの大企業顧客におけるChatGPT Enterprise導入事例では、幹部層の積極的な関与が全社的な業務適用や投資分析コードの記述をドライブしていることが示されている。これらは、AIが単発の壁打ち相手ではなく、実務の深いレイヤーに組み込まれ始めていることを示している。",
+    "why_now": "【解釈】なぜ今この変化が起きているのか。それは、モデルの「知能の高さ」の向上スピードが鈍化する一方で、自律型エージェントの「運用・ループ制御」の技術が実用閾値を超えたからだ。かつては個別の指示に答えるだけだったAIが、OpenClawやQwenのアップデートに見られるように、セッションの維持、スケジュール実行、コンテナ環境での安全なサンドボックス化を経て、人間の常時監視を離れた継続的なタスク遂行能力を持ち始めている。この変化は、収益化モデルを「APIの従量課金」から「自律エージェントによる業務プロセスの丸抱え（あるいはエージェント同士の取引）」へとシフトさせる。さらに、Anthropicの1兆ドル規模のIPOは、このインフラ投資と開発競争を継続するための巨額の弾薬が市場から調達可能であることを証明し、資本力を持つ少数のフロンティアプレイヤーへの集約を加速させる要因となっている。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、セキュリティと自律暴走のリスクがある。Axiosが報じたように、オープンソースのAIハッキングツールが急速に普及し、サイバー攻撃の自動化と激化を招いている。もしサイバーセキュリティの防御側がエージェントによる攻撃のスピードに追いつけず、大規模なインフラ障害や情報流出が相次いだ場合、規制当局や企業はエージェントの自律稼働に対して厳格なブレーキを踏むだろう。また、AIエージェントのコード生成や研究加速における「ギザギザのフロンティア」が解消されず、予期せぬバグや幻覚（ハルシネーション）のコストが人間の監査コストを上回る事態が続けば、自律化への期待は急速に冷え込み、投資回収の遅れから市場の調整局面が訪れることになる。",
+    "japan_impact": "【日本の実務への示唆】日本の事業会社は、生成AIを「チャットによる業務効率化」の枠組みから脱却させ、「自律型コードエージェントの受入テスト」へと実務の焦点を移すべきである。住友生命の事例が示すように、経営層や事業部門のリーダーが自らエージェントを触り、プロセスのどこを任せられるかを定義することが導入の成否を分ける。また、オープンソースやセキュアなホステッドハーネスを活用した社内開発プロセスの自動化を進める一方で、AIハッキングツール台頭のリスクに備え、セキュリティチームと連携したサンドボックス環境やガバナンス体制の構築を今すぐ見直す必要がある。",
+    "company_positions": [
+      {
+        "company": "Anthropic",
+        "status": "歴史的なIPOにより810億ドル以上を調達し、時価総額1兆ドル超で上場を果たした。",
+        "implication": "巨額の資本を手に入れたことで、長期的なフロンティアモデルの開発とインフラ投資競争において、大規模な資金力を武器に優位性を固める。"
+      },
+      {
+        "company": "OpenAI",
+        "status": "企業向け導入（住友生命など）の拡大を進めつつ、コードエージェントによる研究加速とリスク管理・アライメントの検証を並行して行う。",
+        "implication": "実務への浸透を進める一方、エージェントの自律化に伴うセキュリティリスクや性能の「ムラ」をどこまで制御できるかが、次段階の信頼性を左右する。"
+      },
+      {
+        "company": "Qwen / オープンソース陣営",
+        "status": "管理されたエージェントの定期実行や、ステートレスなホステッドハーネスの開発など、自律駆動インフラのコード実装を急速に進めている。",
+        "implication": "プロプライエタリなモデルに対抗し、開発者が自前のインフラで常時稼働エージェントを構築するための基盤技術をコモディティ化させる。"
+      }
+    ],
+    "next_signals": [
+      "自律型エージェントの誤作動やセキュリティインシデントに起因する大規模な規制強化の動き",
+      "AnthropicのIPO後の四半期決算における、API収益およびエンタープライズ顧客の継続率",
+      "オープンソースのコードエージェント（QwenやOpenClaw等）における実稼働環境での安定性とセキュリティパッチの頻度"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI News｜How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise",
+        "url": "https://openai.com/business/customer-stories/sumitomo-life"
+      },
+      {
+        "title": "OpenAI News｜Research acceleration: The jagged frontier",
+        "url": "https://openai.com/index/research-acceleration-jagged-frontier"
+      },
+      {
+        "title": "Qwen GitHub｜Release v0.28.0-nightly.20261118.d9ac287c9f",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0-nightly.20261118.d9ac287c9f"
+      },
+      {
+        "title": "Axios｜The terrifying rise of AI hacking tools",
+        "url": "https://www.axios.com/2026/11/18/ai-hacking-tools-artex-cairn"
+      },
+      {
+        "title": "Axios｜Anthropic valued at over $1 trillion in historic IPO",
+        "url": "https://www.axios.com/2026/11/18/anthropic-ipo-1-trillion"
+      }
+    ],
+    "news_summary": "AI競争の主戦場はチャットの性能から、自律稼働するコードエージェントと実証基盤の獲得へと決定的に移行した。\n\n【事実】今回の変化を牽引する具体的な動きとして、まず資本市場ではAnthropicが歴史的なIPOを果たし、時価総額1兆ドル超という巨額の評価を獲得した。これはウォール街がフロンティアAIの収益化と持続的成長に対して強い信認を与えたことを示す。一方で技術レイヤーでは、OpenAIが研究アクセラレーションに関する「ギザギザのフロンティア」を公表し、コードエージェントがAI自身の研究を加速させる一方で、その性能にはまだ不均一なムラがあることを示した。同時にQwenなどのオープンソース陣営では、管理されたエージェントによるスケジュール実行やステートレスなホステッドハーネスの開発（v0.28.0-nightlyなど）が進み、エージェントの常時自律稼働に向けたインフラ整備が急ピッチで進んでいる。また、住友生命などの大企業顧客におけるChatGPT Enterprise導入事例では、幹部層の積極的な関与が全社的な業務適用や投資分析コードの記述をドライブしていることが示されている。これらは、AIが単発の壁打ち相手ではなく、実務の深いレイヤーに組み込まれ始めていることを示している。",
+    "opinion_summary": "【解釈】なぜ今この変化が起きているのか。それは、モデルの「知能の高さ」の向上スピードが鈍化する一方で、自律型エージェントの「運用・ループ制御」の技術が実用閾値を超えたからだ。かつては個別の指示に答えるだけだったAIが、OpenClawやQwenのアップデートに見られるように、セッションの維持、スケジュール実行、コンテナ環境での安全なサンドボックス化を経て、人間の常時監視を離れた継続的なタスク遂行能力を持ち始めている。この変化は、収益化モデルを「APIの従量課金」から「自律エージェントによる業務プロセスの丸抱え（あるいはエージェント同士の取引）」へとシフトさせる。さらに、Anthropicの1兆ドル規模のIPOは、このインフラ投資と開発競争を継続するための巨額の弾薬が市場から調達可能であることを証明し、資本力を持つ少数のフロンティアプレイヤーへの集約を加速させる要因となっている。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、セキュリティと自律暴走のリスクがある。Axiosが報じたように、オープンソースのAIハッキングツールが急速に普及し、サイバー攻撃の自動化と激化を招いている。もしサイバーセキュリティの防御側がエージェントによる攻撃のスピードに追いつけず、大規模なインフラ障害や情報流出が相次いだ場合、規制当局や企業はエージェントの自律稼働に対して厳格なブレーキを踏むだろう。また、AIエージェントのコード生成や研究加速における「ギザギザのフロンティア」が解消されず、予期せぬバグや幻覚（ハルシネーション）のコストが人間の監査コストを上回る事態が続けば、自律化への期待は急速に冷え込み、投資回収の遅れから市場の調整局面が訪れることになる。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenAI News｜How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise",
+        "source": "OpenAI News",
+        "url": "https://openai.com/business/customer-stories/sumitomo-life",
+        "point": "Sumitomo Life uses ChatGPT Enterprise to research insurers, prepare proposals, and draft code for investment analysis. E"
+      },
+      {
+        "rank": 2,
+        "title": "OpenAI News｜Research acceleration: The jagged frontier",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+        "point": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this si"
+      },
+      {
+        "rank": 3,
+        "title": "Qwen GitHub｜Release v0.28.0-nightly.20261118.d9ac287c9f",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0-nightly.20261118.d9ac287c9f",
+        "point": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix"
+      },
+      {
+        "rank": 4,
+        "title": "Axios｜The terrifying rise of AI hacking tools",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/18/ai-hacking-tools-artex-cairn",
+        "point": "A new breed of widely available AI tools is helping hackers launch cyberattacks around the clock, breaching corporate ne"
+      },
+      {
+        "rank": 5,
+        "title": "Axios｜Anthropic valued at over $1 trillion in historic IPO",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/18/anthropic-ipo-1-trillion",
+        "point": "Anthropic on Wednesday raised over $81 billion in a long-awaited IPO that valued the Claude maker at over $1 trillion.Wh"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "Anthropicの1兆ドルIPOと自律化コードエージェントの現実",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://openai.com/business/customer-stories/sumitomo-life",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の主導権争いは、汎用対話モデルの性能勝負から、自律的に動き続けるコードエージェントの運用制御と巨額の資本・インフラを握るフェーズへ移行した。本稿では、Anthropicの歴史的IPO、オープンソースの自律型エージェント開発、そして大企業の現場導入という一見バラバラに見える材料を束ねる。ここから見えてくるのは、AIが単なる「賢い道具」から「自律的な経済・開発主体」へと変貌する中で、誰がインフラとコスト、リスク管理の主導権を握るかという新たな競争ルールである。読者は、自社のシステム調達やガバナンス設計において、エージェント前提の運用へ舵を切る必要がある。\n\n【事実】今回の変化を牽引する具体的な動きとして、まず資本市場ではAnthropicが歴史的なIPOを果たし、時価総額1兆ドル超という巨額の評価を獲得した。これはウォール街がフロンティアAIの収益化と持続的成長に対して強い信認を与えたことを示す。一方で技術レイヤーでは、OpenAIが研究アクセラレーションに関する「ギザギザのフロンティア」を公表し、コードエージェントがAI自身の研究を加速させる一方で、その性能にはまだ不均一なムラがあることを示した。同時にQwenなどのオープンソース陣営では、管理されたエージェントによるスケジュール実行やステートレスなホステッドハーネスの開発（v0.28.0-nightlyなど）が進み、エージェントの常時自律稼働に向けたインフラ整備が急ピッチで進んでいる。また、住友生命などの大企業顧客におけるChatGPT Enterprise導入事例では、幹部層の積極的な関与が全社的な業務適用や投資分析コードの記述をドライブしていることが示されている。これらは、AIが単発の壁打ち相手ではなく、実務の深いレイヤーに組み込まれ始めていることを示している。\n\n【解釈】なぜ今この変化が起きているのか。それは、モデルの「知能の高さ」の向上スピードが鈍化する一方で、自律型エージェントの「運用・ループ制御」の技術が実用閾値を超えたからだ。かつては個別の指示に答えるだけだったAIが、OpenClawやQwenのアップデートに見られるように、セッションの維持、スケジュール実行、コンテナ環境での安全なサンドボックス化を経て、人間の常時監視を離れた継続的なタスク遂行能力を持ち始めている。この変化は、収益化モデルを「APIの従量課金」から「自律エージェントによる業務プロセスの丸抱え（あるいはエージェント同士の取引）」へとシフトさせる。さらに、Anthropicの1兆ドル規模のIPOは、このインフラ投資と開発競争を継続するための巨額の弾薬が市場から調達可能であることを証明し、資本力を持つ少数のフロンティアプレイヤーへの集約を加速させる要因となっている。\n\n【競争の構図】\n【Anthropic】\n歴史的なIPOにより810億ドル以上を調達し、時価総額1兆ドル超で上場を果たした。\n→ 巨額の資本を手に入れたことで、長期的なフロンティアモデルの開発とインフラ投資競争において、大規模な資金力を武器に優位性を固める。\n\n【OpenAI】\n企業向け導入（住友生命など）の拡大を進めつつ、コードエージェントによる研究加速とリスク管理・アライメントの検証を並行して行う。\n→ 実務への浸透を進める一方、エージェントの自律化に伴うセキュリティリスクや性能の「ムラ」をどこまで制御できるかが、次段階の信頼性を左右する。\n\n【Qwen / オープンソース陣営】\n管理されたエージェントの定期実行や、ステートレスなホステッドハーネスの開発など、自律駆動インフラのコード実装を急速に進めている。\n→ プロプライエタリなモデルに対抗し、開発者が自前のインフラで常時稼働エージェントを構築するための基盤技術をコモディティ化させる。",
+        "why_matters": "【日本の実務への示唆】日本の事業会社は、生成AIを「チャットによる業務効率化」の枠組みから脱却させ、「自律型コードエージェントの受入テスト」へと実務の焦点を移すべきである。住友生命の事例が示すように、経営層や事業部門のリーダーが自らエージェントを触り、プロセスのどこを任せられるかを定義することが導入の成否を分ける。また、オープンソースやセキュアなホステッドハーネスを活用した社内開発プロセスの自動化を進める一方で、AIハッキングツール台頭のリスクに備え、セキュリティチームと連携したサンドボックス環境やガバナンス体制の構築を今すぐ見直す必要がある。\n\n【反証・留保】この見立てを過大評価しないための条件として、セキュリティと自律暴走のリスクがある。Axiosが報じたように、オープンソースのAIハッキングツールが急速に普及し、サイバー攻撃の自動化と激化を招いている。もしサイバーセキュリティの防御側がエージェントによる攻撃のスピードに追いつけず、大規模なインフラ障害や情報流出が相次いだ場合、規制当局や企業はエージェントの自律稼働に対して厳格なブレーキを踏むだろう。また、AIエージェントのコード生成や研究加速における「ギザギザのフロンティア」が解消されず、予期せぬバグや幻覚（ハルシネーション）のコストが人間の監査コストを上回る事態が続けば、自律化への期待は急速に冷え込み、投資回収の遅れから市場の調整局面が訪れることになる。",
+        "context": "【次の観測点】\n・自律型エージェントの誤作動やセキュリティインシデントに起因する大規模な規制強化の動き\n・AnthropicのIPO後の四半期決算における、API収益およびエンタープライズ顧客の継続率\n・オープンソースのコードエージェント（QwenやOpenClaw等）における実稼働環境での安定性とセキュリティパッチの頻度"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "NYTimes Technology",
+      "title": "How Nvidia Chips Ended Up Within Reach of China’s Military",
+      "url": "https://www.nytimes.com/2026/11/18/technology/nvidia-alibaba-china-military.html",
+      "summary": "Alibaba, the Chinese internet giant behind the company at the center of the Nvidia spy saga, has used its A.I. computing technology to aid a lab with links to China’s military.",
+      "published": "2026-11-19 01:54 UTC",
+      "pub_dt": "2026-11-19T01:54:54+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Intel signs first external customer for advanced 18A chips",
+      "url": "https://www.cnbc.com/2026/11/18/intel-first-18a-foundry-customer.html",
+      "summary": "Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+      "published": "2026-11-19 01:05 UTC",
+      "pub_dt": "2026-11-19T01:05:25+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+      "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+      "summary": "Microsoft CEO Satya Nadella explained why he offered buyouts to 60,000 of his employees in October, essentially urging them to voluntarily quit, rather than reducing the workforce via another massive layoff. The short answer is AI, but not in the way you might expect.",
+      "published": "2026-11-19 00:42 UTC",
+      "pub_dt": "2026-11-19T00:42:56+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Anthropic Sells $81.3 Billion in Shares for a Record IPO",
+      "url": "https://www.nytimes.com/2026/11/18/technology/anthropic-ipo-pricing.html",
+      "summary": "The sale valued the A.I. company, which makes the Claude chatbot, at more than $1.5 trillion. Shares begin trading on Thursday.",
+      "published": "2026-11-19 00:41 UTC",
+      "pub_dt": "2026-11-19T00:41:26+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Palo Alto inks $4.5 billion deal for AI startup Applied Compute, shares pop 7% on earnings",
+      "url": "https://www.cnbc.com/2026/11/18/palo-alto-networks-panw-q1-2027-earnings-.html",
+      "summary": "Palo Alto Networks has been steadily acquiring companies to capitalize on demand for cyber tools to fight AI.",
+      "published": "2026-11-19 00:07 UTC",
+      "pub_dt": "2026-11-19T00:07:06+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "How We Broke Open the Nvidia Investigation",
+      "url": "https://www.nytimes.com/2026/11/18/insider/nvidia-jensen-huang-spying-plot.html",
+      "summary": "A global reporting effort by The New York Times included many twists and turns, from surprising photos and shipment records to a big break through astonishing tips from sources.",
+      "published": "2026-11-18 23:52 UTC",
+      "pub_dt": "2026-11-18T23:52:05+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jim Cramer says Nvidia has a new problem — and it has nothing to do with earnings",
+      "url": "https://www.cnbc.com/2026/11/18/nvidia-cramer-anthropic-ipo-ceo.html",
+      "summary": "CNBC's Jim Cramer warned that Anthropic's highly anticipated IPO presents another headwind for Nvidia.",
+      "published": "2026-11-18 23:46 UTC",
+      "pub_dt": "2026-11-18T23:46:32+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Nvidia interim CEO Kress tells employees ‘let’s move forward’ at first all-hands meeting since Jensen Huang exit",
+      "url": "https://www.cnbc.com/2026/11/18/nvidia-interim-ceo-kress-addresses-staff-after-jensen-huang-exit-.html",
+      "summary": "Nvidia's interim CEO Colette Kress urges staff forward and offers pay raises after Jensen Huang exit.",
+      "published": "2026-11-18 23:45 UTC",
+      "pub_dt": "2026-11-18T23:45:50+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is ‘unpatchable’",
+      "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+      "summary": "The Microsoft CEO downplayed the recent Outlook outage while noting that AI was causing both opportunities and new challenges for securing much of the connected world.",
+      "published": "2026-11-18 23:45 UTC",
+      "pub_dt": "2026-11-18T23:45:00+00:00"
+    },
+    {
+      "source": "Qwen GitHub",
+      "title": "Release v0.28.0-nightly.20261118.d9ac287c9f",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0-nightly.20261118.d9ac287c9f",
+      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
+      "published": "2026-11-18 23:25 UTC",
+      "pub_dt": "2026-11-18T23:25:27+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "The nation’s largest school districts consider ditching Google Search",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+      "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Search. Chris Phillips, Google's vice [&#8230;]",
+      "published": "2026-11-18 23:18 UTC",
+      "pub_dt": "2026-11-18T23:18:35+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Microsoft CEO Satya Nadella remains confident in Nvidia after Huang’s exit",
+      "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/",
+      "summary": "Microsoft CEO Satya Nadella expressed confidence in Jensen Huang's successor Colette Kress, who is serving as Nvidia's interim CEO.",
+      "published": "2026-11-18 23:17 UTC",
+      "pub_dt": "2026-11-18T23:17:28+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "What Nvidia’s Interim CEO, Colette Kress, Said to Employees After Jensen Huang’s Resignation",
+      "url": "https://www.nytimes.com/2026/11/18/technology/nvidia-jensen-huang-affair-colette-kress.html",
+      "summary": "At an all-hands meeting with employees, Colette Kress sought to put the indiscretions of Nvidia’s co-founder, Jensen Huang, behind them.",
+      "published": "2026-11-18 23:10 UTC",
+      "pub_dt": "2026-11-18T23:10:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Satya Nadella predicts AI agents will reshuffle the economics of the web",
+      "url": "https://techcrunch.com/2026/11/18/satya-nadella-predicts-ai-agents-will-reshuffle-the-economics-of-the-web/",
+      "summary": "Microsoft's CEO says AI agents could disrupt advertising-driven business models, forcing companies like Amazon to rethink how they compete for customers.",
+      "published": "2026-11-18 22:58 UTC",
+      "pub_dt": "2026-11-18T22:58:11+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Anthropic valued at over $1 trillion in historic IPO",
+      "url": "https://www.axios.com/2026/11/18/anthropic-ipo-1-trillion",
+      "summary": "Anthropic on Wednesday raised over $81 billion in a long-awaited IPO that valued the Claude maker at over $1 trillion.Why it matters: Wall Street expects the AI boom to continue, despite some recent tumult.Zoom in: Anthropic priced at $83 per share, well above its planned range of $70 to $78 per share.It imputes an initial market cap of $1.08 trillion and a fully diluted value of around $1.5 trillion.Anthropic originally planned to sell 825 million shares, but increased it to 980 million shares.",
+      "published": "2026-11-18 22:16 UTC",
+      "pub_dt": "2026-11-18T22:16:32+00:00"
+    }
+  ]
+}
