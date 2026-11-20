@@ -1,0 +1,234 @@
+{
+  "timestamp": "2026-11-20T10:59:18.029677+09:00",
+  "time_slot": "朝",
+  "summary": {
+    "headline": "AIの競争軸はモデルの賢さからインフラ運用と実行基盤へ移る",
+    "thesis": "AI競争の本質は基礎モデルの性能競合から、膨大な演算資源を支えるインフラ調達力、そして自律型エージェントの安定稼働を担保するシステム運用力へと完全に移行しつつある。",
+    "opening": "【結論】AI産業の主導権争いは、単一モデルの優劣を競うフェーズを終え、いかに巨大な計算インフラを維持し、実務でエージェントを安全に動かし続けるかという「運用・基盤の勝負」へ移行した。本日は、GoogleのAPI機能拡張、OpenAIのパフォーマンス管理システム、そして自律型エージェント開発基盤であるOpenClawのリリース動向から、その構造変化を読み解く。これらは一見バラバラの技術発表に見えるが、共通しているのは「AIを実用・大規模稼働させるための泥臭いボトルネックをどう突破するか」という点にある。モデルの知性そのものよりも、それを支えるインフラや運用体制が、企業の勝敗を分けるルール変更の起点となっている。",
+    "what_happened": "【事実】今回の動向を支える具体的な材料として、Google AI BlogはGemini APIへの「Tool Retrieval（ツール検索）」機能の導入を発表し、膨大なツール群から必要な機能を効率的に呼び出す仕組みを整えた（[1]）。また、OpenAIは公式ブログにおいて、ChatGPTの高速性を維持・改善するための内部システム「Performance Factory」の仕組みを公開し、Codexを活用したワークフローでパフォーマンスの低下要因を自動的に発見・修正していることを示した（[3]）。一方、開発者コミュニティではOpenClawの継続的なアップデートが進行しており、v2026.11.6やベータ版において、ウィンドウズ環境でのプラグイン依存関係の検証や、ゲートウェイの軽量化、ClawHubパッケージを通じたエージェントテンプレートの導入など、実務的な安定稼働を重視した改修が行われている（[4][5][10]）。さらにインフラ面では、米国のエネルギー許認可に関する上院法案の動向が報じられ、データセンターなどの電力・エネルギーインフラ建設における規制緩和の可能性が浮上している（[9]）。一方で、MetaはAIインフラの爆発的なブームにより温室効果ガス排出量が前年比45%増加し、2030年のネットゼロ目標の再検討に追い込まれた（[14]）。これらはすべて、AIの実装が「計算資源の確保」と「実行時の安定性」という物理的・システム的制約に直面している事実を示している。",
+    "why_now": "【解釈】今回の変化が示すのは、AI産業が「作れば売れる実証実験の時代」から「大規模に運用し、コストと環境負荷をコントロールする最適化の時代」へ突入したという因果関係である。Googleのツール検索やOpenAIのパフォーマンスファクトリーは、モデルの規模拡大だけではユーザー体験やコスト効率を維持できないという限界の表れであり、いかにシステムを効率化するかという運用能力の勝負にシフトしている。同時に、OpenClawのアップデートに見られるように、開発現場では「自律エージェントが途中で止まらず、安全に連携し続ける仕組み」が最優先課題となっている。また、Metaの排出量増大やエネルギー許認可法案の動きは、AIのスケールアップが地球規模の電力・インフラの制約に直接ぶつかっていることを意味する。資本と計算資源の潤沢さだけでは解決できない物理的・工学的なボトルネックが、現在のプレイヤーたちの次なる競争優位を規定し始めている。",
+    "counterpoint": "【反証・留保】この見立てが過大評価に終わる条件は、基礎モデルにおける全く新しいパラダイムシフト（例えば、極小の計算資源で同等以上の性能を発揮する画期的なアーキテクチャの登場など）が突如として現れ、インフラの制約そのものを無意味化した場合である。もし推論コストが現在の数分の一に激減し、エネルギー問題が技術的に一気にクリアされるのであれば、インフラや運用の巧拙よりも再びモデル自体の知性や独自データを持つ者が圧倒的な優位に立つことになる。また、法規制やエネルギーの制約が一時的なものに留まり、巨額資本の投下によって容易に突破された場合も、この「運用・インフラ重視」の解釈は修正を迫られるだろう。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）としてのAI導入から、実運用環境における「安定性とインフラコストの試算」へのシフトである。単にどのLLM（大規模言語モデル）を採用するかという比較にとどまらず、社内システムや外部ツールと連携する際のエージェントの暴走を防ぐ仕組みや、API呼び出しの効率化、さらには将来的な電力・インフラコストの変動リスクまで織り込んだ調達計画を立てる必要がある。特に、自律型エージェントの実業務への組み込みを検討している組織は、機能の新しさではなく、システムのダウンタイムやプラグイン依存関係の管理といった「堅牢性」を評価基準の中心に据えるべきである。",
+    "company_positions": [
+      {
+        "company": "Google",
+        "status": "Gemini APIへのツール検索機能の導入など、開発者が膨大な外部機能やツールを効率的かつスケーラブルに呼び出すための基盤整備を進めている。",
+        "implication": "モデル単体の性能競争から離れ、APIエコシステム全体の実用性と処理効率を高めることで、開発者囲い込みの優位性を固めようとしている。"
+      },
+      {
+        "company": "OpenAI",
+        "status": "Codexを活用した独自の「Performance Factory」を稼働させ、ChatGPTの高速性とパフォーマンス低下の自動修正を継続的に行っている。",
+        "implication": "ユーザー増大に伴うレイテンシや運用コストの増大をシステム的に抑え込み、圧倒的な規模でもサービス品質を落とさない運用力の高さを証明している。"
+      },
+      {
+        "company": "Meta",
+        "status": "AIインフラの急速な拡張により温室効果ガス排出量が45%増加し、2030年のネットゼロ目標の再検討を余儀なくされている。",
+        "implication": "インフラ投資のスピードと環境規制・サステナビリティ目標との間で深刻なトレードオフに直面しており、今後のデータセンター拡張戦略に影を落としている。"
+      }
+    ],
+    "next_signals": [
+      "主要テック企業による次世代データセンター向けの電力調達およびエネルギー規制緩和法案の成立動向",
+      "OpenAIやGoogleなどのAPI提供事業者における、推論コストおよびパフォーマンス最適化に関する技術的発表の頻度",
+      "オープンソースおよびコミュニティ主導のエージェント基盤（OpenClaw等）におけるセキュリティ・安定性関連のアップデート規模"
+    ],
+    "sources": [
+      {
+        "title": "Introducing Tool Retrieval in the Gemini API",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+      },
+      {
+        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
+      },
+      {
+        "title": "openclaw 2026.11.6",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6"
+      },
+      {
+        "title": "Why the Senate energy permitting bill might become law",
+        "url": "https://www.axios.com/2026/11/19/energy-permitting-bill-senate-politics"
+      },
+      {
+        "title": "Meta rethinks climate goal as AI emissions soar 45%",
+        "url": "https://www.axios.com/2026/11/19/meta-ai-emissions-rise"
+      }
+    ],
+    "news_summary": "AI競争の本質は基礎モデルの性能競合から、膨大な演算資源を支えるインフラ調達力、そして自律型エージェントの安定稼働を担保するシステム運用力へと完全に移行しつつある。\n\n【事実】今回の動向を支える具体的な材料として、Google AI BlogはGemini APIへの「Tool Retrieval（ツール検索）」機能の導入を発表し、膨大なツール群から必要な機能を効率的に呼び出す仕組みを整えた（[1]）。また、OpenAIは公式ブログにおいて、ChatGPTの高速性を維持・改善するための内部システム「Performance Factory」の仕組みを公開し、Codexを活用したワークフローでパフォーマンスの低下要因を自動的に発見・修正していることを示した（[3]）。一方、開発者コミュニティではOpenClawの継続的なアップデートが進行しており、v2026.11.6やベータ版において、ウィンドウズ環境でのプラグイン依存関係の検証や、ゲートウェイの軽量化、ClawHubパッケージを通じたエージェントテンプレートの導入など、実務的な安定稼働を重視した改修が行われている（[4][5][10]）。さらにインフラ面では、米国のエネルギー許認可に関する上院法案の動向が報じられ、データセンターなどの電力・エネルギーインフラ建設における規制緩和の可能性が浮上している（[9]）。一方で、MetaはAIインフラの爆発的なブームにより温室効果ガス排出量が前年比45%増加し、2030年のネットゼロ目標の再検討に追い込まれた（[14]）。これらはすべて、AIの実装が「計算資源の確保」と「実行時の安定性」という物理的・システム的制約に直面している事実を示している。",
+    "opinion_summary": "【解釈】今回の変化が示すのは、AI産業が「作れば売れる実証実験の時代」から「大規模に運用し、コストと環境負荷をコントロールする最適化の時代」へ突入したという因果関係である。Googleのツール検索やOpenAIのパフォーマンスファクトリーは、モデルの規模拡大だけではユーザー体験やコスト効率を維持できないという限界の表れであり、いかにシステムを効率化するかという運用能力の勝負にシフトしている。同時に、OpenClawのアップデートに見られるように、開発現場では「自律エージェントが途中で止まらず、安全に連携し続ける仕組み」が最優先課題となっている。また、Metaの排出量増大やエネルギー許認可法案の動きは、AIのスケールアップが地球規模の電力・インフラの制約に直接ぶつかっていることを意味する。資本と計算資源の潤沢さだけでは解決できない物理的・工学的なボトルネックが、現在のプレイヤーたちの次なる競争優位を規定し始めている。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価に終わる条件は、基礎モデルにおける全く新しいパラダイムシフト（例えば、極小の計算資源で同等以上の性能を発揮する画期的なアーキテクチャの登場など）が突如として現れ、インフラの制約そのものを無意味化した場合である。もし推論コストが現在の数分の一に激減し、エネルギー問題が技術的に一気にクリアされるのであれば、インフラや運用の巧拙よりも再びモデル自体の知性や独自データを持つ者が圧倒的な優位に立つことになる。また、法規制やエネルギーの制約が一時的なものに留まり、巨額資本の投下によって容易に突破された場合も、この「運用・インフラ重視」の解釈は修正を迫られるだろう。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "Introducing Tool Retrieval in the Gemini API",
+        "source": "Google AI Blog",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+        "point": "Gemini spark on a space background"
+      },
+      {
+        "rank": 2,
+        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "point": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance iss"
+      },
+      {
+        "rank": 3,
+        "title": "openclaw 2026.11.6",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6",
+        "point": "2026.11.6\nHighlights\n\nSmoother upgrades: bridge the 2026.11.5 updater to the current release path and validate staged pl"
+      },
+      {
+        "rank": 4,
+        "title": "Why the Senate energy permitting bill might become law",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/19/energy-permitting-bill-senate-politics",
+        "point": "If the sweeping Senate permitting bill becomes law, it will reflect a rare convergence of political and market forces st"
+      },
+      {
+        "rank": 5,
+        "title": "Meta rethinks climate goal as AI emissions soar 45%",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/19/meta-ai-emissions-rise",
+        "point": "Meta's greenhouse gas emissions surged 45% last year amid its AI infrastructure boom, prompting the tech giant to recons"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AIの競争軸はモデルの賢さからインフラ運用と実行基盤へ移る",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の主導権争いは、単一モデルの優劣を競うフェーズを終え、いかに巨大な計算インフラを維持し、実務でエージェントを安全に動かし続けるかという「運用・基盤の勝負」へ移行した。本日は、GoogleのAPI機能拡張、OpenAIのパフォーマンス管理システム、そして自律型エージェント開発基盤であるOpenClawのリリース動向から、その構造変化を読み解く。これらは一見バラバラの技術発表に見えるが、共通しているのは「AIを実用・大規模稼働させるための泥臭いボトルネックをどう突破するか」という点にある。モデルの知性そのものよりも、それを支えるインフラや運用体制が、企業の勝敗を分けるルール変更の起点となっている。\n\n【事実】今回の動向を支える具体的な材料として、Google AI BlogはGemini APIへの「Tool Retrieval（ツール検索）」機能の導入を発表し、膨大なツール群から必要な機能を効率的に呼び出す仕組みを整えた（[1]）。また、OpenAIは公式ブログにおいて、ChatGPTの高速性を維持・改善するための内部システム「Performance Factory」の仕組みを公開し、Codexを活用したワークフローでパフォーマンスの低下要因を自動的に発見・修正していることを示した（[3]）。一方、開発者コミュニティではOpenClawの継続的なアップデートが進行しており、v2026.11.6やベータ版において、ウィンドウズ環境でのプラグイン依存関係の検証や、ゲートウェイの軽量化、ClawHubパッケージを通じたエージェントテンプレートの導入など、実務的な安定稼働を重視した改修が行われている（[4][5][10]）。さらにインフラ面では、米国のエネルギー許認可に関する上院法案の動向が報じられ、データセンターなどの電力・エネルギーインフラ建設における規制緩和の可能性が浮上している（[9]）。一方で、MetaはAIインフラの爆発的なブームにより温室効果ガス排出量が前年比45%増加し、2030年のネットゼロ目標の再検討に追い込まれた（[14]）。これらはすべて、AIの実装が「計算資源の確保」と「実行時の安定性」という物理的・システム的制約に直面している事実を示している。\n\n【解釈】今回の変化が示すのは、AI産業が「作れば売れる実証実験の時代」から「大規模に運用し、コストと環境負荷をコントロールする最適化の時代」へ突入したという因果関係である。Googleのツール検索やOpenAIのパフォーマンスファクトリーは、モデルの規模拡大だけではユーザー体験やコスト効率を維持できないという限界の表れであり、いかにシステムを効率化するかという運用能力の勝負にシフトしている。同時に、OpenClawのアップデートに見られるように、開発現場では「自律エージェントが途中で止まらず、安全に連携し続ける仕組み」が最優先課題となっている。また、Metaの排出量増大やエネルギー許認可法案の動きは、AIのスケールアップが地球規模の電力・インフラの制約に直接ぶつかっていることを意味する。資本と計算資源の潤沢さだけでは解決できない物理的・工学的なボトルネックが、現在のプレイヤーたちの次なる競争優位を規定し始めている。\n\n【競争の構図】\n【Google】\nGemini APIへのツール検索機能の導入など、開発者が膨大な外部機能やツールを効率的かつスケーラブルに呼び出すための基盤整備を進めている。\n→ モデル単体の性能競争から離れ、APIエコシステム全体の実用性と処理効率を高めることで、開発者囲い込みの優位性を固めようとしている。\n\n【OpenAI】\nCodexを活用した独自の「Performance Factory」を稼働させ、ChatGPTの高速性とパフォーマンス低下の自動修正を継続的に行っている。\n→ ユーザー増大に伴うレイテンシや運用コストの増大をシステム的に抑え込み、圧倒的な規模でもサービス品質を落とさない運用力の高さを証明している。\n\n【Meta】\nAIインフラの急速な拡張により温室効果ガス排出量が45%増加し、2030年のネットゼロ目標の再検討を余儀なくされている。\n→ インフラ投資のスピードと環境規制・サステナビリティ目標との間で深刻なトレードオフに直面しており、今後のデータセンター拡張戦略に影を落としている。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）としてのAI導入から、実運用環境における「安定性とインフラコストの試算」へのシフトである。単にどのLLM（大規模言語モデル）を採用するかという比較にとどまらず、社内システムや外部ツールと連携する際のエージェントの暴走を防ぐ仕組みや、API呼び出しの効率化、さらには将来的な電力・インフラコストの変動リスクまで織り込んだ調達計画を立てる必要がある。特に、自律型エージェントの実業務への組み込みを検討している組織は、機能の新しさではなく、システムのダウンタイムやプラグイン依存関係の管理といった「堅牢性」を評価基準の中心に据えるべきである。\n\n【反証・留保】この見立てが過大評価に終わる条件は、基礎モデルにおける全く新しいパラダイムシフト（例えば、極小の計算資源で同等以上の性能を発揮する画期的なアーキテクチャの登場など）が突如として現れ、インフラの制約そのものを無意味化した場合である。もし推論コストが現在の数分の一に激減し、エネルギー問題が技術的に一気にクリアされるのであれば、インフラや運用の巧拙よりも再びモデル自体の知性や独自データを持つ者が圧倒的な優位に立つことになる。また、法規制やエネルギーの制約が一時的なものに留まり、巨額資本の投下によって容易に突破された場合も、この「運用・インフラ重視」の解釈は修正を迫られるだろう。",
+        "context": "【次の観測点】\n・主要テック企業による次世代データセンター向けの電力調達およびエネルギー規制緩和法案の成立動向\n・OpenAIやGoogleなどのAPI提供事業者における、推論コストおよびパフォーマンス最適化に関する技術的発表の頻度\n・オープンソースおよびコミュニティ主導のエージェント基盤（OpenClaw等）におけるセキュリティ・安定性関連のアップデート規模"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "CNBC Tech",
+      "title": "SoftBank plunges over 16% as AI sell-off hits Asian tech stocks following Anthropic debut",
+      "url": "https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html",
+      "summary": "SoftBank shares plunged over 16% on Friday as Japanese and South Korean technology stocks fell sharply.",
+      "published": "2026-11-20 01:34 UTC",
+      "pub_dt": "2026-11-20T01:34:19+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Apple may be developing its own AI agent that runs your Mac",
+      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "summary": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
+      "published": "2026-11-20 00:56 UTC",
+      "pub_dt": "2026-11-20T00:56:01+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Commerce approved sales of more than 879,000 AI chips to Chinese companies, Rep. Mast says",
+      "url": "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html",
+      "summary": "Members of Congress have pushed in the wake of the Jensen Huang scandal for legislation to tighten export controls on chip sales to China.",
+      "published": "2026-11-20 00:53 UTC",
+      "pub_dt": "2026-11-20T00:53:55+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+      "summary": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
+      "published": "2026-11-20 00:43 UTC",
+      "pub_dt": "2026-11-20T00:43:50+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Anthropic’s I.P.O. Turns Tech Researchers Into Overnight Millionaires",
+      "url": "https://www.nytimes.com/2026/11/19/technology/anthropic-ipo-employees-payout.html",
+      "summary": "Many people who joined the A.I. company a few years ago might have had little reason to think how big Anthropic would become. They are now worth tens of millions of dollars, if not more.",
+      "published": "2026-11-20 00:25 UTC",
+      "pub_dt": "2026-11-20T00:25:47+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Here's how big Anthropic’s record-setting IPO is: Visualization",
+      "url": "https://www.cnbc.com/2026/11/19/ant-stock-anthropic-record-setting-ipo.html",
+      "summary": "The AI company sold 930 million shares at $83 each, the biggest initial public offering on record.",
+      "published": "2026-11-19 23:32 UTC",
+      "pub_dt": "2026-11-19T23:32:18+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Cramer says Nvidia’s woes are trumping Anthropic excitement for the rest of the AI trade",
+      "url": "https://www.cnbc.com/2026/11/19/nvidia-anthropic-ipo-ai-trade.html",
+      "summary": "Jim Cramer warned that Nvidia's leadership crisis is overshadowing Anthropic's historic IPO.",
+      "published": "2026-11-19 23:22 UTC",
+      "pub_dt": "2026-11-19T23:22:53+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Apple is hiring engineers to build its own AI agent",
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing spotted by Bloomberg, which says Apple is looking for an engineer to lead the creation of an agentic AI assistant. [&#8230;]",
+      "published": "2026-11-19 22:31 UTC",
+      "pub_dt": "2026-11-19T22:31:41+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Why Is the Stock Market Down After Anthropic’s Successful IPO?",
+      "url": "https://www.nytimes.com/2026/11/19/technology/anthropic-ipo-stock-market.html",
+      "summary": "Anthropic shares rose in their first day of trading, while both the S&amp;P 500 and Nasdaq indexes fell. There are a few factors at play.",
+      "published": "2026-11-19 22:17 UTC",
+      "pub_dt": "2026-11-19T22:17:42+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Scoop: Trump names Kirsten Davies as new national cyber director",
+      "url": "https://www.axios.com/2026/11/19/trump-national-cyber-director-sean-cairncross-leaving",
+      "summary": "The White House named Kirsten A. Davies to be its new national cyber director Thursday as President Trump overhauls his AI team, Axios has learned.Why it matters: Davies, who currently serves as the Pentagon's chief information officer, has more experience in the field than the outgoing director, Sean Cairncross. Cairncross' departure was described as amicable by two sources.But two White House officials said President Trump's new chief of staff, Stephen Miller, sought the change and pushed out ",
+      "published": "2026-11-19 22:12 UTC",
+      "pub_dt": "2026-11-19T22:12:23+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "A brief history of Nvidia’s recent stock fluctuations",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+      "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief post-earnings [&#8230;]",
+      "published": "2026-11-19 21:59 UTC",
+      "pub_dt": "2026-11-19T21:59:35+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Meta’s new Muse Charm device may cost $300",
+      "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+      "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+      "published": "2026-11-19 21:58 UTC",
+      "pub_dt": "2026-11-19T21:58:06+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "What’s With All These Outages?",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-whats-with-all-these-outages/",
+      "summary": "This week on “Uncanny Valley,” we discuss the outages that have swept digital life over the past week, where new money from Anthropic’s IPO is going, and the AI chip world post-Jensen Huang.",
+      "published": "2026-11-19 21:57 UTC",
+      "pub_dt": "2026-11-19T21:57:01+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "These tech outages are giving Y2K, AI agent style",
+      "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+      "summary": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+      "published": "2026-11-19 21:42 UTC",
+      "pub_dt": "2026-11-19T21:42:31+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "The Jensen Huang Blast Radius Has Hit His Favorite Restaurants",
+      "url": "https://www.wired.com/story/jensen-huangs-favorite-restaurants-are-caught-up-in-his-scandals-too/",
+      "summary": "In Taiwan, some food vendors are distancing themselves from Nvidia’s former CEO. Others stand by him. “It’s not as if he killed someone or set something on fire,” says one shop owner.",
+      "published": "2026-11-19 20:34 UTC",
+      "pub_dt": "2026-11-19T20:34:17+00:00"
+    }
+  ]
+}
