@@ -1,234 +1,234 @@
 {
-  "timestamp": "2026-11-20T10:59:18.029677+09:00",
+  "timestamp": "2026-11-21T10:56:27.803130+09:00",
   "time_slot": "朝",
   "summary": {
-    "headline": "AIの競争軸はモデルの賢さからインフラ運用と実行基盤へ移る",
-    "thesis": "AI競争の本質は基礎モデルの性能競合から、膨大な演算資源を支えるインフラ調達力、そして自律型エージェントの安定稼働を担保するシステム運用力へと完全に移行しつつある。",
-    "opening": "【結論】AI産業の主導権争いは、単一モデルの優劣を競うフェーズを終え、いかに巨大な計算インフラを維持し、実務でエージェントを安全に動かし続けるかという「運用・基盤の勝負」へ移行した。本日は、GoogleのAPI機能拡張、OpenAIのパフォーマンス管理システム、そして自律型エージェント開発基盤であるOpenClawのリリース動向から、その構造変化を読み解く。これらは一見バラバラの技術発表に見えるが、共通しているのは「AIを実用・大規模稼働させるための泥臭いボトルネックをどう突破するか」という点にある。モデルの知性そのものよりも、それを支えるインフラや運用体制が、企業の勝敗を分けるルール変更の起点となっている。",
-    "what_happened": "【事実】今回の動向を支える具体的な材料として、Google AI BlogはGemini APIへの「Tool Retrieval（ツール検索）」機能の導入を発表し、膨大なツール群から必要な機能を効率的に呼び出す仕組みを整えた（[1]）。また、OpenAIは公式ブログにおいて、ChatGPTの高速性を維持・改善するための内部システム「Performance Factory」の仕組みを公開し、Codexを活用したワークフローでパフォーマンスの低下要因を自動的に発見・修正していることを示した（[3]）。一方、開発者コミュニティではOpenClawの継続的なアップデートが進行しており、v2026.11.6やベータ版において、ウィンドウズ環境でのプラグイン依存関係の検証や、ゲートウェイの軽量化、ClawHubパッケージを通じたエージェントテンプレートの導入など、実務的な安定稼働を重視した改修が行われている（[4][5][10]）。さらにインフラ面では、米国のエネルギー許認可に関する上院法案の動向が報じられ、データセンターなどの電力・エネルギーインフラ建設における規制緩和の可能性が浮上している（[9]）。一方で、MetaはAIインフラの爆発的なブームにより温室効果ガス排出量が前年比45%増加し、2030年のネットゼロ目標の再検討に追い込まれた（[14]）。これらはすべて、AIの実装が「計算資源の確保」と「実行時の安定性」という物理的・システム的制約に直面している事実を示している。",
-    "why_now": "【解釈】今回の変化が示すのは、AI産業が「作れば売れる実証実験の時代」から「大規模に運用し、コストと環境負荷をコントロールする最適化の時代」へ突入したという因果関係である。Googleのツール検索やOpenAIのパフォーマンスファクトリーは、モデルの規模拡大だけではユーザー体験やコスト効率を維持できないという限界の表れであり、いかにシステムを効率化するかという運用能力の勝負にシフトしている。同時に、OpenClawのアップデートに見られるように、開発現場では「自律エージェントが途中で止まらず、安全に連携し続ける仕組み」が最優先課題となっている。また、Metaの排出量増大やエネルギー許認可法案の動きは、AIのスケールアップが地球規模の電力・インフラの制約に直接ぶつかっていることを意味する。資本と計算資源の潤沢さだけでは解決できない物理的・工学的なボトルネックが、現在のプレイヤーたちの次なる競争優位を規定し始めている。",
-    "counterpoint": "【反証・留保】この見立てが過大評価に終わる条件は、基礎モデルにおける全く新しいパラダイムシフト（例えば、極小の計算資源で同等以上の性能を発揮する画期的なアーキテクチャの登場など）が突如として現れ、インフラの制約そのものを無意味化した場合である。もし推論コストが現在の数分の一に激減し、エネルギー問題が技術的に一気にクリアされるのであれば、インフラや運用の巧拙よりも再びモデル自体の知性や独自データを持つ者が圧倒的な優位に立つことになる。また、法規制やエネルギーの制約が一時的なものに留まり、巨額資本の投下によって容易に突破された場合も、この「運用・インフラ重視」の解釈は修正を迫られるだろう。",
-    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）としてのAI導入から、実運用環境における「安定性とインフラコストの試算」へのシフトである。単にどのLLM（大規模言語モデル）を採用するかという比較にとどまらず、社内システムや外部ツールと連携する際のエージェントの暴走を防ぐ仕組みや、API呼び出しの効率化、さらには将来的な電力・インフラコストの変動リスクまで織り込んだ調達計画を立てる必要がある。特に、自律型エージェントの実業務への組み込みを検討している組織は、機能の新しさではなく、システムのダウンタイムやプラグイン依存関係の管理といった「堅牢性」を評価基準の中心に据えるべきである。",
+    "headline": "AIインフラの「国土縛り」が始まった",
+    "thesis": "米国による海外データセンター建設の牽制と国内電力の許可法案成立は、AIの物理的ボトルネックを経済安全保障の道具に変え、グローバル分散から国内回帰へのルール転換を告げている。",
+    "opening": "【結論】AI競争の主戦場は、モデルの性能やパラメータ数から、物理的な計算インフラの「立地と所有権」の縛りへ急速に移行しつつある。本稿では、トランプ米政権による海外データセンター建設への課税・禁止方針と、連邦議会を通過したエネルギー許可法案、そしてオープンソースエージェントやモデル保護をめぐる動きを一つの文脈として読み解く。これまでクラウドの柔軟性やコスト効率を最優先して進められてきたAIインフラのグローバル展開は、政治と地政学の介入により、決定的な方向転換を迫られている。もはや企業は、どこで計算資源を安く調達するかだけでなく、どこに拠点を置くことが政治的リスクを回避できるかという新たな制約のもとで戦略を描く必要がある。",
+    "what_happened": "【事実】今回の構造変化を示す材料として、まず米政治・インフラ面での規制の動きがある。米メディアの報道によると、トランプ大統領は米テック企業による海外でのデータセンター建設を禁止するか、あるいは巨額の課税を行う方針を表明した。これと歩調を合わせるように、米上院ではエネルギーおよびインフラプロジェクトの許可期間短縮を目的とした超党派の許可法案が可決されており、国内での電力・データセンター整備を加速させる法的な地ならしが進んでいる。一方で、オープンソースとエージェント開発の領域では、QwenのGitHubリポジトリ（v0.28シリーズ）においてステートレスなホステッドハーネスへの移行や自動ループ実行の改善など、AIエージェントの自律稼働と運用効率化のコードベース更新が相次いでいる。また、OpenClawのリリースではAIエージェント向けのプレーンMarkdown形式のチェンジログ提供やガバナンスを意識したポリシー維持が組み込まれている。さらにOpenAIは、モデルの能力抽出を防ぐための多層的な防御策として「対抗的蒸留（Adversarial Distillation）への対策」を発表し、モデルの模倣に対するガードレールを強化している。これらは、インフラの物理的囲い込みが進む一方で、ソフトウェアレイヤーではエージェントの実用化とモデル資産の保護という別の攻防が同時進行していることを示している。",
+    "why_now": "【解釈】なぜこのタイミングで「インフラの国内縛り」と「ソフトウェアの自律化・防衛」が同時に起きたのか。背景にあるのは、AIの価値の源泉が単なる大規模言語モデルの推論能力から、それを支える膨大な電力と計算資源の物理的支配権へとシフトしている点にある。米国内でのデータセンター建設が電力網や水資源の逼迫を招き、政治的争点となる中で、政権は国内のエネルギーインフラ許可法案の通過をテコにして、AI企業に国内投資と雇用を強制するカードを切った。海外へのデータセンター展開を封じることは、米国のテック巨人が持つ資本が国外へ流出するのを防ぐとともに、AI計算能力という国家安全保障上の重要アセットを国内に釘付けにする意図がある。同時に、Qwenの自動ループ機能の高度化やOpenClawのAI向け変更履歴の整備に見られるように、ソフトウェア側では「人間が介在しないエージェント運用」の自動化が着実に進んでいる。インフラが物理的に国境で縛られる一方で、ソフトウェアやエージェントは国境を越えて高度化しようとしており、この物理的制約とデジタルの自由度のギャップこそが、今後のテック企業の事業モデルを大きく揺さぶる原因となる。",
+    "counterpoint": "【反証・留保】この見立てが過大評価である可能性を示す条件もある。第1に、トランプ政権が示唆した海外データセンターへの課税や禁止措置が、具体的な法制化や執行の段階で実効性を失うケースである。米国テック企業が海外の安価な電力や土地を完全に断念することはコスト競争上の致命傷になり得るため、強い政治的反発やロビー活動によって例外規定や骨抜きが進む可能性がある。第2に、国内のエネルギー許可法案が通過したとしても、実際の送電網の増強や発電施設の稼働には何年もかかるため、物理的な電力不足が短期的に解消されず、企業の海外逃避を止めるだけの説得力を持たない場合である。もしこれらの政治的圧力が単なるレトリックにとどまり、海外でのインフラ投資が継続する実態が確認された場合、「インフラの国内回帰」という結論は修正を余儀なくされる。",
+    "japan_impact": "【日本の実務への示唆】日本企業にとって、今回の変化は「グローバルなクラウドから調達すればよい」という前提の崩壊を意味する。米国が自国へのデータセンター集約と海外流出の阻止に動き出す中、日本国内でのAIインフラ調達、特に電力確保を伴うデータセンター戦略や、国内の規制・エネルギー事情に即したAI基盤の構築を急ぐ必要がある。実務的には、米国のクラウドベンダーやオープンソースモデル（Qwenなどの多様な選択肢）を組み合わせる際、地政学リスクやサプライチェーンの変更が自社のシステム調達コストや可用性にどう波及するかを再点検すべきである。特に、AIエージェントの自律化（ループ処理やエージェント間連携）を自社業務に組み込む日本企業は、単に便利なAPIを使うだけでなく、モデル提供元のセキュリティポリシーや将来の輸出管理・利用制限の変更リスクを見据えたアーキテクチャ設計が不可欠となる。",
     "company_positions": [
       {
-        "company": "Google",
-        "status": "Gemini APIへのツール検索機能の導入など、開発者が膨大な外部機能やツールを効率的かつスケーラブルに呼び出すための基盤整備を進めている。",
-        "implication": "モデル単体の性能競争から離れ、APIエコシステム全体の実用性と処理効率を高めることで、開発者囲い込みの優位性を固めようとしている。"
-      },
-      {
         "company": "OpenAI",
-        "status": "Codexを活用した独自の「Performance Factory」を稼働させ、ChatGPTの高速性とパフォーマンス低下の自動修正を継続的に行っている。",
-        "implication": "ユーザー増大に伴うレイテンシや運用コストの増大をシステム的に抑え込み、圧倒的な規模でもサービス品質を落とさない運用力の高さを証明している。"
+        "status": "モデルの能力抽出を防ぐ対抗的蒸留への多層的な防御策を導入し、資産保護を強化している。",
+        "implication": "独自モデルの優位性を守る壁が高まる一方、オープンなエコシステムとの緊張関係が増す。"
       },
       {
-        "company": "Meta",
-        "status": "AIインフラの急速な拡張により温室効果ガス排出量が45%増加し、2030年のネットゼロ目標の再検討を余儀なくされている。",
-        "implication": "インフラ投資のスピードと環境規制・サステナビリティ目標との間で深刻なトレードオフに直面しており、今後のデータセンター拡張戦略に影を落としている。"
+        "company": "Qwen（Alibaba陣営）",
+        "status": "ステートレスなホステッドハーネスや管理されたエージェントの自動ループ実行に向けたコードベースの更新を継続している。",
+        "implication": "インフラ規制の動きとは裏腹に、自律型エージェントの基盤としての実用性を着実に高めている。"
+      },
+      {
+        "company": "OpenClaw",
+        "status": "AIエージェントやツール向けのプレーンMarkdown形式のチェンジログ提供など、機械可読なリリース体制を整えている。",
+        "implication": "人間中心のリリースからAIエージェント自身がシステムを追跡・統合するフローへの適応をリードしている。"
       }
     ],
     "next_signals": [
-      "主要テック企業による次世代データセンター向けの電力調達およびエネルギー規制緩和法案の成立動向",
-      "OpenAIやGoogleなどのAPI提供事業者における、推論コストおよびパフォーマンス最適化に関する技術的発表の頻度",
-      "オープンソースおよびコミュニティ主導のエージェント基盤（OpenClaw等）におけるセキュリティ・安定性関連のアップデート規模"
+      "米政権による海外データセンター課税・禁止令の具体的な法的文面と執行ルールの策定状況",
+      "米国内のエネルギー許可法案成立を受けた、主要テック企業による国内データセンター追加投資の発表ペース",
+      "QwenやOpenClawなどのオープンソース・エージェント基盤における、エンタープライズ向けガバナンス機能の実装度合い"
     ],
     "sources": [
       {
-        "title": "Introducing Tool Retrieval in the Gemini API",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+        "title": "Qwen GitHub｜Release v0.28.3",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3"
       },
       {
-        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
+        "title": "OpenAI News｜Combatting adversarial distillation",
+        "url": "https://openai.com/index/combatting-adversarial-distillation"
       },
       {
-        "title": "openclaw 2026.11.6",
+        "title": "OpenClaw GitHub｜openclaw 2026.11.6",
         "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6"
       },
       {
-        "title": "Why the Senate energy permitting bill might become law",
-        "url": "https://www.axios.com/2026/11/19/energy-permitting-bill-senate-politics"
+        "title": "Axios｜Senate passes Trump-backed permitting bill",
+        "url": "https://www.axios.com/2026/11/20/senate-passes-energy-permitting-bill"
       },
       {
-        "title": "Meta rethinks climate goal as AI emissions soar 45%",
-        "url": "https://www.axios.com/2026/11/19/meta-ai-emissions-rise"
+        "title": "CNBC Tech｜Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
+        "url": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html"
       }
     ],
-    "news_summary": "AI競争の本質は基礎モデルの性能競合から、膨大な演算資源を支えるインフラ調達力、そして自律型エージェントの安定稼働を担保するシステム運用力へと完全に移行しつつある。\n\n【事実】今回の動向を支える具体的な材料として、Google AI BlogはGemini APIへの「Tool Retrieval（ツール検索）」機能の導入を発表し、膨大なツール群から必要な機能を効率的に呼び出す仕組みを整えた（[1]）。また、OpenAIは公式ブログにおいて、ChatGPTの高速性を維持・改善するための内部システム「Performance Factory」の仕組みを公開し、Codexを活用したワークフローでパフォーマンスの低下要因を自動的に発見・修正していることを示した（[3]）。一方、開発者コミュニティではOpenClawの継続的なアップデートが進行しており、v2026.11.6やベータ版において、ウィンドウズ環境でのプラグイン依存関係の検証や、ゲートウェイの軽量化、ClawHubパッケージを通じたエージェントテンプレートの導入など、実務的な安定稼働を重視した改修が行われている（[4][5][10]）。さらにインフラ面では、米国のエネルギー許認可に関する上院法案の動向が報じられ、データセンターなどの電力・エネルギーインフラ建設における規制緩和の可能性が浮上している（[9]）。一方で、MetaはAIインフラの爆発的なブームにより温室効果ガス排出量が前年比45%増加し、2030年のネットゼロ目標の再検討に追い込まれた（[14]）。これらはすべて、AIの実装が「計算資源の確保」と「実行時の安定性」という物理的・システム的制約に直面している事実を示している。",
-    "opinion_summary": "【解釈】今回の変化が示すのは、AI産業が「作れば売れる実証実験の時代」から「大規模に運用し、コストと環境負荷をコントロールする最適化の時代」へ突入したという因果関係である。Googleのツール検索やOpenAIのパフォーマンスファクトリーは、モデルの規模拡大だけではユーザー体験やコスト効率を維持できないという限界の表れであり、いかにシステムを効率化するかという運用能力の勝負にシフトしている。同時に、OpenClawのアップデートに見られるように、開発現場では「自律エージェントが途中で止まらず、安全に連携し続ける仕組み」が最優先課題となっている。また、Metaの排出量増大やエネルギー許認可法案の動きは、AIのスケールアップが地球規模の電力・インフラの制約に直接ぶつかっていることを意味する。資本と計算資源の潤沢さだけでは解決できない物理的・工学的なボトルネックが、現在のプレイヤーたちの次なる競争優位を規定し始めている。",
+    "news_summary": "米国による海外データセンター建設の牽制と国内電力の許可法案成立は、AIの物理的ボトルネックを経済安全保障の道具に変え、グローバル分散から国内回帰へのルール転換を告げている。\n\n【事実】今回の構造変化を示す材料として、まず米政治・インフラ面での規制の動きがある。米メディアの報道によると、トランプ大統領は米テック企業による海外でのデータセンター建設を禁止するか、あるいは巨額の課税を行う方針を表明した。これと歩調を合わせるように、米上院ではエネルギーおよびインフラプロジェクトの許可期間短縮を目的とした超党派の許可法案が可決されており、国内での電力・データセンター整備を加速させる法的な地ならしが進んでいる。一方で、オープンソースとエージェント開発の領域では、QwenのGitHubリポジトリ（v0.28シリーズ）においてステートレスなホステッドハーネスへの移行や自動ループ実行の改善など、AIエージェントの自律稼働と運用効率化のコードベース更新が相次いでいる。また、OpenClawのリリースではAIエージェント向けのプレーンMarkdown形式のチェンジログ提供やガバナンスを意識したポリシー維持が組み込まれている。さらにOpenAIは、モデルの能力抽出を防ぐための多層的な防御策として「対抗的蒸留（Adversarial Distillation）への対策」を発表し、モデルの模倣に対するガードレールを強化している。これらは、インフラの物理的囲い込みが進む一方で、ソフトウェアレイヤーではエージェントの実用化とモデル資産の保護という別の攻防が同時進行していることを示している。",
+    "opinion_summary": "【解釈】なぜこのタイミングで「インフラの国内縛り」と「ソフトウェアの自律化・防衛」が同時に起きたのか。背景にあるのは、AIの価値の源泉が単なる大規模言語モデルの推論能力から、それを支える膨大な電力と計算資源の物理的支配権へとシフトしている点にある。米国内でのデータセンター建設が電力網や水資源の逼迫を招き、政治的争点となる中で、政権は国内のエネルギーインフラ許可法案の通過をテコにして、AI企業に国内投資と雇用を強制するカードを切った。海外へのデータセンター展開を封じることは、米国のテック巨人が持つ資本が国外へ流出するのを防ぐとともに、AI計算能力という国家安全保障上の重要アセットを国内に釘付けにする意図がある。同時に、Qwenの自動ループ機能の高度化やOpenClawのAI向け変更履歴の整備に見られるように、ソフトウェア側では「人間が介在しないエージェント運用」の自動化が着実に進んでいる。インフラが物理的に国境で縛られる一方で、ソフトウェアやエージェントは国境を越えて高度化しようとしており、この物理的制約とデジタルの自由度のギャップこそが、今後のテック企業の事業モデルを大きく揺さぶる原因となる。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てが過大評価に終わる条件は、基礎モデルにおける全く新しいパラダイムシフト（例えば、極小の計算資源で同等以上の性能を発揮する画期的なアーキテクチャの登場など）が突如として現れ、インフラの制約そのものを無意味化した場合である。もし推論コストが現在の数分の一に激減し、エネルギー問題が技術的に一気にクリアされるのであれば、インフラや運用の巧拙よりも再びモデル自体の知性や独自データを持つ者が圧倒的な優位に立つことになる。また、法規制やエネルギーの制約が一時的なものに留まり、巨額資本の投下によって容易に突破された場合も、この「運用・インフラ重視」の解釈は修正を迫られるだろう。",
+      "negative": "【反証・留保】この見立てが過大評価である可能性を示す条件もある。第1に、トランプ政権が示唆した海外データセンターへの課税や禁止措置が、具体的な法制化や執行の段階で実効性を失うケースである。米国テック企業が海外の安価な電力や土地を完全に断念することはコスト競争上の致命傷になり得るため、強い政治的反発やロビー活動によって例外規定や骨抜きが進む可能性がある。第2に、国内のエネルギー許可法案が通過したとしても、実際の送電網の増強や発電施設の稼働には何年もかかるため、物理的な電力不足が短期的に解消されず、企業の海外逃避を止めるだけの説得力を持たない場合である。もしこれらの政治的圧力が単なるレトリックにとどまり、海外でのインフラ投資が継続する実態が確認された場合、「インフラの国内回帰」という結論は修正を余儀なくされる。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Introducing Tool Retrieval in the Gemini API",
-        "source": "Google AI Blog",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
-        "point": "Gemini spark on a space background"
+        "title": "Qwen GitHub｜Release v0.28.3",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
+        "point": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix"
       },
       {
         "rank": 2,
-        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+        "title": "OpenAI News｜Combatting adversarial distillation",
         "source": "OpenAI News",
-        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-        "point": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance iss"
+        "url": "https://openai.com/index/combatting-adversarial-distillation",
+        "point": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to"
       },
       {
         "rank": 3,
-        "title": "openclaw 2026.11.6",
+        "title": "OpenClaw GitHub｜openclaw 2026.11.6",
         "source": "OpenClaw GitHub",
         "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6",
-        "point": "2026.11.6\nHighlights\n\nSmoother upgrades: bridge the 2026.11.5 updater to the current release path and validate staged pl"
+        "point": "OpenClaw v2026.11.6\n406 commits · 386 pull requests · 157 contributors\nChanges included in this release\nThe release note"
       },
       {
         "rank": 4,
-        "title": "Why the Senate energy permitting bill might become law",
+        "title": "Axios｜Senate passes Trump-backed permitting bill",
         "source": "Axios",
-        "url": "https://www.axios.com/2026/11/19/energy-permitting-bill-senate-politics",
-        "point": "If the sweeping Senate permitting bill becomes law, it will reflect a rare convergence of political and market forces st"
+        "url": "https://www.axios.com/2026/11/20/senate-passes-energy-permitting-bill",
+        "point": "The Senate passed a sweeping, bipartisan bill Thursday night that's designed to cut permitting timelines for energy and "
       },
       {
         "rank": 5,
-        "title": "Meta rethinks climate goal as AI emissions soar 45%",
-        "source": "Axios",
-        "url": "https://www.axios.com/2026/11/19/meta-ai-emissions-rise",
-        "point": "Meta's greenhouse gas emissions surged 45% last year amid its AI infrastructure boom, prompting the tech giant to recons"
+        "title": "CNBC Tech｜Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
+        "point": "Trump spoke at the White House after meeting with Chinese President Xi Jinping and Russian President Vladimir Putin for "
       }
     ],
     "joho_picks": [
       {
-        "headline": "AIの競争軸はモデルの賢さからインフラ運用と実行基盤へ移る",
+        "headline": "AIインフラの「国土縛り」が始まった",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】AI産業の主導権争いは、単一モデルの優劣を競うフェーズを終え、いかに巨大な計算インフラを維持し、実務でエージェントを安全に動かし続けるかという「運用・基盤の勝負」へ移行した。本日は、GoogleのAPI機能拡張、OpenAIのパフォーマンス管理システム、そして自律型エージェント開発基盤であるOpenClawのリリース動向から、その構造変化を読み解く。これらは一見バラバラの技術発表に見えるが、共通しているのは「AIを実用・大規模稼働させるための泥臭いボトルネックをどう突破するか」という点にある。モデルの知性そのものよりも、それを支えるインフラや運用体制が、企業の勝敗を分けるルール変更の起点となっている。\n\n【事実】今回の動向を支える具体的な材料として、Google AI BlogはGemini APIへの「Tool Retrieval（ツール検索）」機能の導入を発表し、膨大なツール群から必要な機能を効率的に呼び出す仕組みを整えた（[1]）。また、OpenAIは公式ブログにおいて、ChatGPTの高速性を維持・改善するための内部システム「Performance Factory」の仕組みを公開し、Codexを活用したワークフローでパフォーマンスの低下要因を自動的に発見・修正していることを示した（[3]）。一方、開発者コミュニティではOpenClawの継続的なアップデートが進行しており、v2026.11.6やベータ版において、ウィンドウズ環境でのプラグイン依存関係の検証や、ゲートウェイの軽量化、ClawHubパッケージを通じたエージェントテンプレートの導入など、実務的な安定稼働を重視した改修が行われている（[4][5][10]）。さらにインフラ面では、米国のエネルギー許認可に関する上院法案の動向が報じられ、データセンターなどの電力・エネルギーインフラ建設における規制緩和の可能性が浮上している（[9]）。一方で、MetaはAIインフラの爆発的なブームにより温室効果ガス排出量が前年比45%増加し、2030年のネットゼロ目標の再検討に追い込まれた（[14]）。これらはすべて、AIの実装が「計算資源の確保」と「実行時の安定性」という物理的・システム的制約に直面している事実を示している。\n\n【解釈】今回の変化が示すのは、AI産業が「作れば売れる実証実験の時代」から「大規模に運用し、コストと環境負荷をコントロールする最適化の時代」へ突入したという因果関係である。Googleのツール検索やOpenAIのパフォーマンスファクトリーは、モデルの規模拡大だけではユーザー体験やコスト効率を維持できないという限界の表れであり、いかにシステムを効率化するかという運用能力の勝負にシフトしている。同時に、OpenClawのアップデートに見られるように、開発現場では「自律エージェントが途中で止まらず、安全に連携し続ける仕組み」が最優先課題となっている。また、Metaの排出量増大やエネルギー許認可法案の動きは、AIのスケールアップが地球規模の電力・インフラの制約に直接ぶつかっていることを意味する。資本と計算資源の潤沢さだけでは解決できない物理的・工学的なボトルネックが、現在のプレイヤーたちの次なる競争優位を規定し始めている。\n\n【競争の構図】\n【Google】\nGemini APIへのツール検索機能の導入など、開発者が膨大な外部機能やツールを効率的かつスケーラブルに呼び出すための基盤整備を進めている。\n→ モデル単体の性能競争から離れ、APIエコシステム全体の実用性と処理効率を高めることで、開発者囲い込みの優位性を固めようとしている。\n\n【OpenAI】\nCodexを活用した独自の「Performance Factory」を稼働させ、ChatGPTの高速性とパフォーマンス低下の自動修正を継続的に行っている。\n→ ユーザー増大に伴うレイテンシや運用コストの増大をシステム的に抑え込み、圧倒的な規模でもサービス品質を落とさない運用力の高さを証明している。\n\n【Meta】\nAIインフラの急速な拡張により温室効果ガス排出量が45%増加し、2030年のネットゼロ目標の再検討を余儀なくされている。\n→ インフラ投資のスピードと環境規制・サステナビリティ目標との間で深刻なトレードオフに直面しており、今後のデータセンター拡張戦略に影を落としている。",
-        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）としてのAI導入から、実運用環境における「安定性とインフラコストの試算」へのシフトである。単にどのLLM（大規模言語モデル）を採用するかという比較にとどまらず、社内システムや外部ツールと連携する際のエージェントの暴走を防ぐ仕組みや、API呼び出しの効率化、さらには将来的な電力・インフラコストの変動リスクまで織り込んだ調達計画を立てる必要がある。特に、自律型エージェントの実業務への組み込みを検討している組織は、機能の新しさではなく、システムのダウンタイムやプラグイン依存関係の管理といった「堅牢性」を評価基準の中心に据えるべきである。\n\n【反証・留保】この見立てが過大評価に終わる条件は、基礎モデルにおける全く新しいパラダイムシフト（例えば、極小の計算資源で同等以上の性能を発揮する画期的なアーキテクチャの登場など）が突如として現れ、インフラの制約そのものを無意味化した場合である。もし推論コストが現在の数分の一に激減し、エネルギー問題が技術的に一気にクリアされるのであれば、インフラや運用の巧拙よりも再びモデル自体の知性や独自データを持つ者が圧倒的な優位に立つことになる。また、法規制やエネルギーの制約が一時的なものに留まり、巨額資本の投下によって容易に突破された場合も、この「運用・インフラ重視」の解釈は修正を迫られるだろう。",
-        "context": "【次の観測点】\n・主要テック企業による次世代データセンター向けの電力調達およびエネルギー規制緩和法案の成立動向\n・OpenAIやGoogleなどのAPI提供事業者における、推論コストおよびパフォーマンス最適化に関する技術的発表の頻度\n・オープンソースおよびコミュニティ主導のエージェント基盤（OpenClaw等）におけるセキュリティ・安定性関連のアップデート規模"
+        "body": "【結論】AI競争の主戦場は、モデルの性能やパラメータ数から、物理的な計算インフラの「立地と所有権」の縛りへ急速に移行しつつある。本稿では、トランプ米政権による海外データセンター建設への課税・禁止方針と、連邦議会を通過したエネルギー許可法案、そしてオープンソースエージェントやモデル保護をめぐる動きを一つの文脈として読み解く。これまでクラウドの柔軟性やコスト効率を最優先して進められてきたAIインフラのグローバル展開は、政治と地政学の介入により、決定的な方向転換を迫られている。もはや企業は、どこで計算資源を安く調達するかだけでなく、どこに拠点を置くことが政治的リスクを回避できるかという新たな制約のもとで戦略を描く必要がある。\n\n【事実】今回の構造変化を示す材料として、まず米政治・インフラ面での規制の動きがある。米メディアの報道によると、トランプ大統領は米テック企業による海外でのデータセンター建設を禁止するか、あるいは巨額の課税を行う方針を表明した。これと歩調を合わせるように、米上院ではエネルギーおよびインフラプロジェクトの許可期間短縮を目的とした超党派の許可法案が可決されており、国内での電力・データセンター整備を加速させる法的な地ならしが進んでいる。一方で、オープンソースとエージェント開発の領域では、QwenのGitHubリポジトリ（v0.28シリーズ）においてステートレスなホステッドハーネスへの移行や自動ループ実行の改善など、AIエージェントの自律稼働と運用効率化のコードベース更新が相次いでいる。また、OpenClawのリリースではAIエージェント向けのプレーンMarkdown形式のチェンジログ提供やガバナンスを意識したポリシー維持が組み込まれている。さらにOpenAIは、モデルの能力抽出を防ぐための多層的な防御策として「対抗的蒸留（Adversarial Distillation）への対策」を発表し、モデルの模倣に対するガードレールを強化している。これらは、インフラの物理的囲い込みが進む一方で、ソフトウェアレイヤーではエージェントの実用化とモデル資産の保護という別の攻防が同時進行していることを示している。\n\n【解釈】なぜこのタイミングで「インフラの国内縛り」と「ソフトウェアの自律化・防衛」が同時に起きたのか。背景にあるのは、AIの価値の源泉が単なる大規模言語モデルの推論能力から、それを支える膨大な電力と計算資源の物理的支配権へとシフトしている点にある。米国内でのデータセンター建設が電力網や水資源の逼迫を招き、政治的争点となる中で、政権は国内のエネルギーインフラ許可法案の通過をテコにして、AI企業に国内投資と雇用を強制するカードを切った。海外へのデータセンター展開を封じることは、米国のテック巨人が持つ資本が国外へ流出するのを防ぐとともに、AI計算能力という国家安全保障上の重要アセットを国内に釘付けにする意図がある。同時に、Qwenの自動ループ機能の高度化やOpenClawのAI向け変更履歴の整備に見られるように、ソフトウェア側では「人間が介在しないエージェント運用」の自動化が着実に進んでいる。インフラが物理的に国境で縛られる一方で、ソフトウェアやエージェントは国境を越えて高度化しようとしており、この物理的制約とデジタルの自由度のギャップこそが、今後のテック企業の事業モデルを大きく揺さぶる原因となる。\n\n【競争の構図】\n【OpenAI】\nモデルの能力抽出を防ぐ対抗的蒸留への多層的な防御策を導入し、資産保護を強化している。\n→ 独自モデルの優位性を守る壁が高まる一方、オープンなエコシステムとの緊張関係が増す。\n\n【Qwen（Alibaba陣営）】\nステートレスなホステッドハーネスや管理されたエージェントの自動ループ実行に向けたコードベースの更新を継続している。\n→ インフラ規制の動きとは裏腹に、自律型エージェントの基盤としての実用性を着実に高めている。\n\n【OpenClaw】\nAIエージェントやツール向けのプレーンMarkdown形式のチェンジログ提供など、機械可読なリリース体制を整えている。\n→ 人間中心のリリースからAIエージェント自身がシステムを追跡・統合するフローへの適応をリードしている。",
+        "why_matters": "【日本の実務への示唆】日本企業にとって、今回の変化は「グローバルなクラウドから調達すればよい」という前提の崩壊を意味する。米国が自国へのデータセンター集約と海外流出の阻止に動き出す中、日本国内でのAIインフラ調達、特に電力確保を伴うデータセンター戦略や、国内の規制・エネルギー事情に即したAI基盤の構築を急ぐ必要がある。実務的には、米国のクラウドベンダーやオープンソースモデル（Qwenなどの多様な選択肢）を組み合わせる際、地政学リスクやサプライチェーンの変更が自社のシステム調達コストや可用性にどう波及するかを再点検すべきである。特に、AIエージェントの自律化（ループ処理やエージェント間連携）を自社業務に組み込む日本企業は、単に便利なAPIを使うだけでなく、モデル提供元のセキュリティポリシーや将来の輸出管理・利用制限の変更リスクを見据えたアーキテクチャ設計が不可欠となる。\n\n【反証・留保】この見立てが過大評価である可能性を示す条件もある。第1に、トランプ政権が示唆した海外データセンターへの課税や禁止措置が、具体的な法制化や執行の段階で実効性を失うケースである。米国テック企業が海外の安価な電力や土地を完全に断念することはコスト競争上の致命傷になり得るため、強い政治的反発やロビー活動によって例外規定や骨抜きが進む可能性がある。第2に、国内のエネルギー許可法案が通過したとしても、実際の送電網の増強や発電施設の稼働には何年もかかるため、物理的な電力不足が短期的に解消されず、企業の海外逃避を止めるだけの説得力を持たない場合である。もしこれらの政治的圧力が単なるレトリックにとどまり、海外でのインフラ投資が継続する実態が確認された場合、「インフラの国内回帰」という結論は修正を余儀なくされる。",
+        "context": "【次の観測点】\n・米政権による海外データセンター課税・禁止令の具体的な法的文面と執行ルールの策定状況\n・米国内のエネルギー許可法案成立を受けた、主要テック企業による国内データセンター追加投資の発表ペース\n・QwenやOpenClawなどのオープンソース・エージェント基盤における、エンタープライズ向けガバナンス機能の実装度合い"
       }
     ]
   },
   "raw_articles": [
     {
+      "source": "Qwen GitHub",
+      "title": "Release v0.28.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
+      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
+      "published": "2026-11-21 01:45 UTC",
+      "pub_dt": "2026-11-21T01:45:48+00:00"
+    },
+    {
       "source": "CNBC Tech",
-      "title": "SoftBank plunges over 16% as AI sell-off hits Asian tech stocks following Anthropic debut",
-      "url": "https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html",
-      "summary": "SoftBank shares plunged over 16% on Friday as Japanese and South Korean technology stocks fell sharply.",
-      "published": "2026-11-20 01:34 UTC",
-      "pub_dt": "2026-11-20T01:34:19+00:00"
+      "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
+      "url": "https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html",
+      "summary": "Once the most valuable company in the world, Nvidia now ranks fourth behind Apple, Microsoft and Alphabet.",
+      "published": "2026-11-20 22:59 UTC",
+      "pub_dt": "2026-11-20T22:59:33+00:00"
+    },
+    {
+      "source": "Qwen GitHub",
+      "title": "Release v0.28.0-nightly.20261120.19b31401f5",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0-nightly.20261120.19b31401f5",
+      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
+      "published": "2026-11-20 22:34 UTC",
+      "pub_dt": "2026-11-20T22:34:18+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Trump says he discussed Jensen Huang with Xi; Bessent tells CNBC Nvidia chip export policy is unchanged",
+      "url": "https://www.cnbc.com/2026/11/20/treasury-secretary-scott-bessent.html",
+      "summary": "Trump said he discussed Jensen Huang with China's Xi. Bessent said the ousted Nvidia CEO didn't come up in talks he had while in China.",
+      "published": "2026-11-20 22:08 UTC",
+      "pub_dt": "2026-11-20T22:08:41+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
+      "url": "https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html",
+      "summary": "Cybersecurity companies have been hunting for acquisitions in the AI era.",
+      "published": "2026-11-20 21:35 UTC",
+      "pub_dt": "2026-11-20T21:35:24+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
+      "url": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
+      "summary": "Trump spoke at the White House after meeting with Chinese President Xi Jinping and Russian President Vladimir Putin for a historic trilateral summit in China.",
+      "published": "2026-11-20 20:47 UTC",
+      "pub_dt": "2026-11-20T20:47:58+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "release-publish/7af829afeef7-1795215667: fix(release): evaluate reusable evidence with Q-owned waivers (#201773)",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F7af829afeef7-1795215667",
+      "summary": "\nfix(release): evaluate reusable evidence with Q-owned waivers\n\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com\n\nfix(release): evaluate reusable evidence with Q-owned waivers\n\nOpenClaw-Publication: a9302dc0-5ad2-4b5f-90d9-a32629e0ccb3\n\ndocs(release): explain Q waiver aggregate declarations\n\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com\n\nfix(release): retain Q policy through publication consumers\n\nRead the immutable admitted Q ledger for publication gates a",
+      "published": "2026-11-20 20:25 UTC",
+      "pub_dt": "2026-11-20T20:25:56+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "Apple may be developing its own AI agent that runs your Mac",
-      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
-      "summary": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
-      "published": "2026-11-20 00:56 UTC",
-      "pub_dt": "2026-11-20T00:56:01+00:00"
+      "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+      "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+      "summary": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the startup is building.",
+      "published": "2026-11-20 19:53 UTC",
+      "pub_dt": "2026-11-20T19:53:41+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Jensen Huang’s ‘Lying’ Alarmed Nvidia Board Ahead of His Resignation",
+      "url": "https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/",
+      "summary": "Amid allegations of multiple affairs, including with a direct report and an alleged Chinese intelligence asset, sources tell WIRED the Nvidia board’s main issue was the former CEO’s “lack of candor.”",
+      "published": "2026-11-20 19:52 UTC",
+      "pub_dt": "2026-11-20T19:52:21+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "Commerce approved sales of more than 879,000 AI chips to Chinese companies, Rep. Mast says",
-      "url": "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html",
-      "summary": "Members of Congress have pushed in the wake of the Jensen Huang scandal for legislation to tighten export controls on chip sales to China.",
-      "published": "2026-11-20 00:53 UTC",
-      "pub_dt": "2026-11-20T00:53:55+00:00"
+      "title": "Jensen Huang to testify publicly before Senate banking panel, Chairman Scott says",
+      "url": "https://www.cnbc.com/2026/11/20/jensen-huang-nvidia-senate-testimony.html",
+      "summary": "Former Nvidia CEO Jensen Huang has faced a flurry of criticism on Capitol Hill in the wake of his involvement with a suspected Chinese spy.",
+      "published": "2026-11-20 19:42 UTC",
+      "pub_dt": "2026-11-20T19:42:53+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
-      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
-      "summary": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
-      "published": "2026-11-20 00:43 UTC",
-      "pub_dt": "2026-11-20T00:43:50+00:00"
+      "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+      "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+      "summary": "Mathematicians are having their minds blown by the latest AI-driven result — and there's a competing human solution, too.",
+      "published": "2026-11-20 19:32 UTC",
+      "pub_dt": "2026-11-20T19:32:08+00:00"
     },
     {
-      "source": "NYTimes Technology",
-      "title": "Anthropic’s I.P.O. Turns Tech Researchers Into Overnight Millionaires",
-      "url": "https://www.nytimes.com/2026/11/19/technology/anthropic-ipo-employees-payout.html",
-      "summary": "Many people who joined the A.I. company a few years ago might have had little reason to think how big Anthropic would become. They are now worth tens of millions of dollars, if not more.",
-      "published": "2026-11-20 00:25 UTC",
-      "pub_dt": "2026-11-20T00:25:47+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Here's how big Anthropic’s record-setting IPO is: Visualization",
-      "url": "https://www.cnbc.com/2026/11/19/ant-stock-anthropic-record-setting-ipo.html",
-      "summary": "The AI company sold 930 million shares at $83 each, the biggest initial public offering on record.",
-      "published": "2026-11-19 23:32 UTC",
-      "pub_dt": "2026-11-19T23:32:18+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Cramer says Nvidia’s woes are trumping Anthropic excitement for the rest of the AI trade",
-      "url": "https://www.cnbc.com/2026/11/19/nvidia-anthropic-ipo-ai-trade.html",
-      "summary": "Jim Cramer warned that Nvidia's leadership crisis is overshadowing Anthropic's historic IPO.",
-      "published": "2026-11-19 23:22 UTC",
-      "pub_dt": "2026-11-19T23:22:53+00:00"
-    },
-    {
-      "source": "The Verge AI",
-      "title": "Apple is hiring engineers to build its own AI agent",
-      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
-      "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing spotted by Bloomberg, which says Apple is looking for an engineer to lead the creation of an agentic AI assistant. [&#8230;]",
-      "published": "2026-11-19 22:31 UTC",
-      "pub_dt": "2026-11-19T22:31:41+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "Why Is the Stock Market Down After Anthropic’s Successful IPO?",
-      "url": "https://www.nytimes.com/2026/11/19/technology/anthropic-ipo-stock-market.html",
-      "summary": "Anthropic shares rose in their first day of trading, while both the S&amp;P 500 and Nasdaq indexes fell. There are a few factors at play.",
-      "published": "2026-11-19 22:17 UTC",
-      "pub_dt": "2026-11-19T22:17:42+00:00"
+      "source": "Qwen GitHub",
+      "title": "Release v0.28.1-preview.1",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.1-preview.1",
+      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
+      "published": "2026-11-20 19:20 UTC",
+      "pub_dt": "2026-11-20T19:20:36+00:00"
     },
     {
       "source": "Axios",
-      "title": "Scoop: Trump names Kirsten Davies as new national cyber director",
-      "url": "https://www.axios.com/2026/11/19/trump-national-cyber-director-sean-cairncross-leaving",
-      "summary": "The White House named Kirsten A. Davies to be its new national cyber director Thursday as President Trump overhauls his AI team, Axios has learned.Why it matters: Davies, who currently serves as the Pentagon's chief information officer, has more experience in the field than the outgoing director, Sean Cairncross. Cairncross' departure was described as amicable by two sources.But two White House officials said President Trump's new chief of staff, Stephen Miller, sought the change and pushed out ",
-      "published": "2026-11-19 22:12 UTC",
-      "pub_dt": "2026-11-19T22:12:23+00:00"
+      "title": "Trump floats major tax on U.S. companies constructing data centers overseas",
+      "url": "https://www.axios.com/2026/11/20/us-ai-trump-data-centers-overseas",
+      "summary": "President Trump on Friday said he would block U.S. companies from building data centers overseas or impose a \"tremendous tax\" on them if they do. Why it matters: Trump's push to keep AI infrastructure in the country comes just weeks after data center expansion became a midterm-election flashpoint, as voters raised concerns about the environmental and financial impacts they pose.What they're saying: Trump acknowledged that the announcement may come as a surprise, saying he had not yet discussed i",
+      "published": "2026-11-20 19:17 UTC",
+      "pub_dt": "2026-11-20T19:17:53+00:00"
     },
     {
-      "source": "The Verge AI",
-      "title": "A brief history of Nvidia’s recent stock fluctuations",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
-      "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief post-earnings [&#8230;]",
-      "published": "2026-11-19 21:59 UTC",
-      "pub_dt": "2026-11-19T21:59:35+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.6",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6",
+      "summary": "OpenClaw v2026.11.6\n406 commits · 386 pull requests · 157 contributors\nChanges included in this release\nThe release notes and changelog contain the same content, presented in two formats:\n\nRelease notes — formatted for people.\nChangelog — plain Markdown for AI agents and tools.\n\nThanks\n@609NFT @abacha @akifodabas @akmad @Alix-007 @amittell @Angelojiang11 @Anurag-5ingh @Aribarambo @ayaangazali @Barry-886 @bdjben @ben-milanko @boeingchoco @brainatworkharris @brainmonger @brianmcguire @brokemac79 @",
+      "published": "2026-11-20 18:54 UTC",
+      "pub_dt": "2026-11-20T18:54:53+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "Meta’s new Muse Charm device may cost $300",
-      "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
-      "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
-      "published": "2026-11-19 21:58 UTC",
-      "pub_dt": "2026-11-19T21:58:06+00:00"
-    },
-    {
-      "source": "Wired",
-      "title": "What’s With All These Outages?",
-      "url": "https://www.wired.com/story/uncanny-valley-podcast-whats-with-all-these-outages/",
-      "summary": "This week on “Uncanny Valley,” we discuss the outages that have swept digital life over the past week, where new money from Anthropic’s IPO is going, and the AI chip world post-Jensen Huang.",
-      "published": "2026-11-19 21:57 UTC",
-      "pub_dt": "2026-11-19T21:57:01+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "These tech outages are giving Y2K, AI agent style",
-      "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
-      "summary": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
-      "published": "2026-11-19 21:42 UTC",
-      "pub_dt": "2026-11-19T21:42:31+00:00"
-    },
-    {
-      "source": "Wired",
-      "title": "The Jensen Huang Blast Radius Has Hit His Favorite Restaurants",
-      "url": "https://www.wired.com/story/jensen-huangs-favorite-restaurants-are-caught-up-in-his-scandals-too/",
-      "summary": "In Taiwan, some food vendors are distancing themselves from Nvidia’s former CEO. Others stand by him. “It’s not as if he killed someone or set something on fire,” says one shop owner.",
-      "published": "2026-11-19 20:34 UTC",
-      "pub_dt": "2026-11-19T20:34:17+00:00"
+      "source": "NYTimes Technology",
+      "title": "Trump Threatens to Bar U.S. Tech Firms From Building Data Centers Abroad",
+      "url": "https://www.nytimes.com/2026/11/20/us/politics/trump-data-centers-ban.html",
+      "summary": "The president suggested he would tax the same companies, though it was not clear how he would carry out the plan unveiled at a news conference.",
+      "published": "2026-11-20 18:51 UTC",
+      "pub_dt": "2026-11-20T18:51:22+00:00"
     }
   ]
 }
