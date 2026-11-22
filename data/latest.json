@@ -1,234 +1,218 @@
 {
-  "timestamp": "2026-11-21T10:56:27.803130+09:00",
+  "timestamp": "2026-11-22T09:52:05.228062+09:00",
   "time_slot": "朝",
   "summary": {
-    "headline": "AIインフラの「国土縛り」が始まった",
-    "thesis": "米国による海外データセンター建設の牽制と国内電力の許可法案成立は、AIの物理的ボトルネックを経済安全保障の道具に変え、グローバル分散から国内回帰へのルール転換を告げている。",
-    "opening": "【結論】AI競争の主戦場は、モデルの性能やパラメータ数から、物理的な計算インフラの「立地と所有権」の縛りへ急速に移行しつつある。本稿では、トランプ米政権による海外データセンター建設への課税・禁止方針と、連邦議会を通過したエネルギー許可法案、そしてオープンソースエージェントやモデル保護をめぐる動きを一つの文脈として読み解く。これまでクラウドの柔軟性やコスト効率を最優先して進められてきたAIインフラのグローバル展開は、政治と地政学の介入により、決定的な方向転換を迫られている。もはや企業は、どこで計算資源を安く調達するかだけでなく、どこに拠点を置くことが政治的リスクを回避できるかという新たな制約のもとで戦略を描く必要がある。",
-    "what_happened": "【事実】今回の構造変化を示す材料として、まず米政治・インフラ面での規制の動きがある。米メディアの報道によると、トランプ大統領は米テック企業による海外でのデータセンター建設を禁止するか、あるいは巨額の課税を行う方針を表明した。これと歩調を合わせるように、米上院ではエネルギーおよびインフラプロジェクトの許可期間短縮を目的とした超党派の許可法案が可決されており、国内での電力・データセンター整備を加速させる法的な地ならしが進んでいる。一方で、オープンソースとエージェント開発の領域では、QwenのGitHubリポジトリ（v0.28シリーズ）においてステートレスなホステッドハーネスへの移行や自動ループ実行の改善など、AIエージェントの自律稼働と運用効率化のコードベース更新が相次いでいる。また、OpenClawのリリースではAIエージェント向けのプレーンMarkdown形式のチェンジログ提供やガバナンスを意識したポリシー維持が組み込まれている。さらにOpenAIは、モデルの能力抽出を防ぐための多層的な防御策として「対抗的蒸留（Adversarial Distillation）への対策」を発表し、モデルの模倣に対するガードレールを強化している。これらは、インフラの物理的囲い込みが進む一方で、ソフトウェアレイヤーではエージェントの実用化とモデル資産の保護という別の攻防が同時進行していることを示している。",
-    "why_now": "【解釈】なぜこのタイミングで「インフラの国内縛り」と「ソフトウェアの自律化・防衛」が同時に起きたのか。背景にあるのは、AIの価値の源泉が単なる大規模言語モデルの推論能力から、それを支える膨大な電力と計算資源の物理的支配権へとシフトしている点にある。米国内でのデータセンター建設が電力網や水資源の逼迫を招き、政治的争点となる中で、政権は国内のエネルギーインフラ許可法案の通過をテコにして、AI企業に国内投資と雇用を強制するカードを切った。海外へのデータセンター展開を封じることは、米国のテック巨人が持つ資本が国外へ流出するのを防ぐとともに、AI計算能力という国家安全保障上の重要アセットを国内に釘付けにする意図がある。同時に、Qwenの自動ループ機能の高度化やOpenClawのAI向け変更履歴の整備に見られるように、ソフトウェア側では「人間が介在しないエージェント運用」の自動化が着実に進んでいる。インフラが物理的に国境で縛られる一方で、ソフトウェアやエージェントは国境を越えて高度化しようとしており、この物理的制約とデジタルの自由度のギャップこそが、今後のテック企業の事業モデルを大きく揺さぶる原因となる。",
-    "counterpoint": "【反証・留保】この見立てが過大評価である可能性を示す条件もある。第1に、トランプ政権が示唆した海外データセンターへの課税や禁止措置が、具体的な法制化や執行の段階で実効性を失うケースである。米国テック企業が海外の安価な電力や土地を完全に断念することはコスト競争上の致命傷になり得るため、強い政治的反発やロビー活動によって例外規定や骨抜きが進む可能性がある。第2に、国内のエネルギー許可法案が通過したとしても、実際の送電網の増強や発電施設の稼働には何年もかかるため、物理的な電力不足が短期的に解消されず、企業の海外逃避を止めるだけの説得力を持たない場合である。もしこれらの政治的圧力が単なるレトリックにとどまり、海外でのインフラ投資が継続する実態が確認された場合、「インフラの国内回帰」という結論は修正を余儀なくされる。",
-    "japan_impact": "【日本の実務への示唆】日本企業にとって、今回の変化は「グローバルなクラウドから調達すればよい」という前提の崩壊を意味する。米国が自国へのデータセンター集約と海外流出の阻止に動き出す中、日本国内でのAIインフラ調達、特に電力確保を伴うデータセンター戦略や、国内の規制・エネルギー事情に即したAI基盤の構築を急ぐ必要がある。実務的には、米国のクラウドベンダーやオープンソースモデル（Qwenなどの多様な選択肢）を組み合わせる際、地政学リスクやサプライチェーンの変更が自社のシステム調達コストや可用性にどう波及するかを再点検すべきである。特に、AIエージェントの自律化（ループ処理やエージェント間連携）を自社業務に組み込む日本企業は、単に便利なAPIを使うだけでなく、モデル提供元のセキュリティポリシーや将来の輸出管理・利用制限の変更リスクを見据えたアーキテクチャ設計が不可欠となる。",
+    "headline": "AnthropicのIPOとNvidiaの変調が示すAIインフラの岐路",
+    "thesis": "巨大な資金調達と市場の動揺が同時並行する現在、AI産業の主導権は「過剰投資の回収」から「現実的なコスト規律とセキュリティの確保」へと急速にシフトし始めている。",
+    "opening": "【結論】Anthropicの歴史的な上場とNvidiaの株価・経営体制の揺らぎは、AI産業が「無限の拡大期」を終え、資本の論理と実利の狭間で冷徹な見直しを迫られる最初の分岐点に立ったことを示している。本稿では、公開市場におけるAI企業の評価の乖離、インフラを巡る地政学的リスク、そしてシステム障害やセキュリティの現実化という複数の材料を一つの緊張感ある問いに束ねる。いま、計算資源と資本の主導権は誰の手に移りつつあるのか。単なる技術的ブレイクスルーの礼賛ではなく、事業投資の判断軸がどこで変わり始めたかを読み解く。",
+    "what_happened": "【事実】足元の市場環境と主要プレイヤーの動向は、AIエコシステムの成熟に伴うひずみを露わにしている。CNBCなどの報道によれば、AI開発企業であるAnthropicは米ナスダック市場へ歴史的なIPOを果たしたものの、その直後の取引では、Nvidiaの記録的な株価低迷と重なるようにハイテク株全体の記録的な売り急ぎ（テック・セルオフ）に直面した。ウォール街の慎重な姿勢と、シリコンバレーの拡大志向の間の乖離が鮮明になっている。同時に、ニューヨーク・タイムズは、Nvidiaのジェンセン・フアン最高経営責任者（CEO）を巡る組織運営の文化的プレッシャーや、中国の軍事関連企業と結びついたネットワークとの間に生じたスパイ疑惑に関する報道を行い、AI半導体の供給網と地政学を巡る不確実性を浮き彫りにした。さらに、Wiredなどの報道では、AIの急速な導入とそれに伴うシステムの自動パッチ適用が、インターネット全体で予測不可能な障害やサイバー攻撃の頻発を招いており、技術の社会実装がインフラの安定性を脅かす「混沌の時代」に入ったことが示されている。",
+    "why_now": "【解釈】この時期にAnthropicの巨額上場とNvidiaの動揺が同時に起きた背景には、AI投資の「投資フェーズから回収フェーズへの強制的な移行」がある。これまで市場は、AIのモデル性能向上やインフラ需要の拡大を無条件に好感し、巨額の資本投下を正当化してきた。しかし、IPOを果たしたAnthropicが市場の冷徹な洗礼を受けたことは、投資家が「売上高の規模」ではなく「持続可能な収益モデルとコスト規律」を求め始めている証左である。Nvidiaを巡るガバナンスやサプライチェーンの揺らぎもまた、特定のハードウェア提供者に過度に依存したインフラ構築モデルが、地政学的リスクや内部統制の問題によって突然頓挫し得るという構造的な脆弱性を露呈している。つまり、AI競争のルールは「計算資源をどれだけ集め、いかに速くモデルを巨大化させるか」から、「システム障害やセキュリティのコストをコントロールしつつ、実業でどう利益を出すか」へと変質しつつある。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、市場の調整が単なる「一時的な金利・マクロ経済の動向に起因するテック株の利食い」に過ぎない可能性を考慮する必要がある。もしAnthropicや他の主要AIプレイヤーが次四半期以降も驚異的なB2B（企業間取引）での実需と利益率の改善を証明し続けた場合、現在の株価の低迷やウォール街の懸念は杞憂に終わり、再び巨額の資本がAIインフラへと集中する「拡大のサイクル」に回帰することになる。また、ハードウェアの供給制約が予想以上に緩和されれば、Nvidiaの求心力低下は一時的なノイズとして片付けられるだろう。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）の数ではなく、AI導入に伴う「インフラとセキュリティの防衛ライン」である。AIの急速な導入がシステム障害や新たな脆弱性を生む「混沌の時代」に入った現在、やみくもに最先端のLLM（大規模言語モデル）を業務に組み込むことは、予期せぬ停止リスクや情報漏洩コストを跳ね上げる。情報システム部門および事業部門は、利用するAIモデルやクラウドベンダーのガバナンス体制、万が一のシステム停止時のフォールバック（代替）手順の再点検を急ぐべきだ。投資判断においては、華やかな機能の新規性よりも、安定稼働とコスト効率が担保された実用的な基盤の選択へと軸足を移すべき時機にある。",
     "company_positions": [
       {
-        "company": "OpenAI",
-        "status": "モデルの能力抽出を防ぐ対抗的蒸留への多層的な防御策を導入し、資産保護を強化している。",
-        "implication": "独自モデルの優位性を守る壁が高まる一方、オープンなエコシステムとの緊張関係が増す。"
+        "company": "Anthropic",
+        "status": "ナスダックへの歴史的なIPOを果たしたが、市場のハイテク株売りと重なり、成長期待と収益性のバランスを厳しく問われる最初の試練に直面している。",
+        "implication": "非公開企業として自由な資金調達と安全性を優先できた立場から、今後は四半期ごとの利益成長とウォール街の厳格な規律に従わざるを得なくなり、安全性追求のスタンスに資本市場からの圧力がかかる。"
       },
       {
-        "company": "Qwen（Alibaba陣営）",
-        "status": "ステートレスなホステッドハーネスや管理されたエージェントの自動ループ実行に向けたコードベースの更新を継続している。",
-        "implication": "インフラ規制の動きとは裏腹に、自律型エージェントの基盤としての実用性を着実に高めている。"
-      },
-      {
-        "company": "OpenClaw",
-        "status": "AIエージェントやツール向けのプレーンMarkdown形式のチェンジログ提供など、機械可読なリリース体制を整えている。",
-        "implication": "人間中心のリリースからAIエージェント自身がシステムを追跡・統合するフローへの適応をリードしている。"
+        "company": "Nvidia",
+        "status": "史上最長の株価低迷週を記録する一方で、経営陣の統治構造や中国市場を巡る地政学的リスク、サプライチェーンの複雑さが表面化している。",
+        "implication": "AIインフラの「絶対的な独占者」としての神話が揺らぎ、顧客企業や投資家は特定のハードウェア供給網に依存するリスクを真剣に計算し直す契機を迎えている。"
       }
     ],
     "next_signals": [
-      "米政権による海外データセンター課税・禁止令の具体的な法的文面と執行ルールの策定状況",
-      "米国内のエネルギー許可法案成立を受けた、主要テック企業による国内データセンター追加投資の発表ペース",
-      "QwenやOpenClawなどのオープンソース・エージェント基盤における、エンタープライズ向けガバナンス機能の実装度合い"
+      "Anthropicの次回四半期決算におけるキャッシュバーン（資金枯渇）のペースとB2B顧客の継続率",
+      "Nvidiaのサプライチェーンおよびガバナンス問題を巡る米規制当局や市場のさらなる公式処分・調査の有無",
+      "AI導入企業の間でのシステム障害（アウトage）やセキュリティインシデントの発生頻度の推移"
     ],
     "sources": [
       {
-        "title": "Qwen GitHub｜Release v0.28.3",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3"
+        "title": "Anthropic’s Debut Shows the Disconnect Between Wall Street and Silicon Valley",
+        "url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html"
       },
       {
-        "title": "OpenAI News｜Combatting adversarial distillation",
-        "url": "https://openai.com/index/combatting-adversarial-distillation"
+        "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+        "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html"
       },
       {
-        "title": "OpenClaw GitHub｜openclaw 2026.11.6",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6"
+        "title": "A New Era of A.I.-Driven Chaos? That Might Just Be Progress.",
+        "url": "https://www.nytimes.com/2026/11/21/science/outages-tech-history.html"
       },
       {
-        "title": "Axios｜Senate passes Trump-backed permitting bill",
-        "url": "https://www.axios.com/2026/11/20/senate-passes-energy-permitting-bill"
-      },
-      {
-        "title": "CNBC Tech｜Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
-        "url": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html"
+        "title": "Alice Huang, Accused of Spying on Nvidia’s CEO, Is Linked to Firms With Ties to China’s Military",
+        "url": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html"
       }
     ],
-    "news_summary": "米国による海外データセンター建設の牽制と国内電力の許可法案成立は、AIの物理的ボトルネックを経済安全保障の道具に変え、グローバル分散から国内回帰へのルール転換を告げている。\n\n【事実】今回の構造変化を示す材料として、まず米政治・インフラ面での規制の動きがある。米メディアの報道によると、トランプ大統領は米テック企業による海外でのデータセンター建設を禁止するか、あるいは巨額の課税を行う方針を表明した。これと歩調を合わせるように、米上院ではエネルギーおよびインフラプロジェクトの許可期間短縮を目的とした超党派の許可法案が可決されており、国内での電力・データセンター整備を加速させる法的な地ならしが進んでいる。一方で、オープンソースとエージェント開発の領域では、QwenのGitHubリポジトリ（v0.28シリーズ）においてステートレスなホステッドハーネスへの移行や自動ループ実行の改善など、AIエージェントの自律稼働と運用効率化のコードベース更新が相次いでいる。また、OpenClawのリリースではAIエージェント向けのプレーンMarkdown形式のチェンジログ提供やガバナンスを意識したポリシー維持が組み込まれている。さらにOpenAIは、モデルの能力抽出を防ぐための多層的な防御策として「対抗的蒸留（Adversarial Distillation）への対策」を発表し、モデルの模倣に対するガードレールを強化している。これらは、インフラの物理的囲い込みが進む一方で、ソフトウェアレイヤーではエージェントの実用化とモデル資産の保護という別の攻防が同時進行していることを示している。",
-    "opinion_summary": "【解釈】なぜこのタイミングで「インフラの国内縛り」と「ソフトウェアの自律化・防衛」が同時に起きたのか。背景にあるのは、AIの価値の源泉が単なる大規模言語モデルの推論能力から、それを支える膨大な電力と計算資源の物理的支配権へとシフトしている点にある。米国内でのデータセンター建設が電力網や水資源の逼迫を招き、政治的争点となる中で、政権は国内のエネルギーインフラ許可法案の通過をテコにして、AI企業に国内投資と雇用を強制するカードを切った。海外へのデータセンター展開を封じることは、米国のテック巨人が持つ資本が国外へ流出するのを防ぐとともに、AI計算能力という国家安全保障上の重要アセットを国内に釘付けにする意図がある。同時に、Qwenの自動ループ機能の高度化やOpenClawのAI向け変更履歴の整備に見られるように、ソフトウェア側では「人間が介在しないエージェント運用」の自動化が着実に進んでいる。インフラが物理的に国境で縛られる一方で、ソフトウェアやエージェントは国境を越えて高度化しようとしており、この物理的制約とデジタルの自由度のギャップこそが、今後のテック企業の事業モデルを大きく揺さぶる原因となる。",
+    "news_summary": "巨大な資金調達と市場の動揺が同時並行する現在、AI産業の主導権は「過剰投資の回収」から「現実的なコスト規律とセキュリティの確保」へと急速にシフトし始めている。\n\n【事実】足元の市場環境と主要プレイヤーの動向は、AIエコシステムの成熟に伴うひずみを露わにしている。CNBCなどの報道によれば、AI開発企業であるAnthropicは米ナスダック市場へ歴史的なIPOを果たしたものの、その直後の取引では、Nvidiaの記録的な株価低迷と重なるようにハイテク株全体の記録的な売り急ぎ（テック・セルオフ）に直面した。ウォール街の慎重な姿勢と、シリコンバレーの拡大志向の間の乖離が鮮明になっている。同時に、ニューヨーク・タイムズは、Nvidiaのジェンセン・フアン最高経営責任者（CEO）を巡る組織運営の文化的プレッシャーや、中国の軍事関連企業と結びついたネットワークとの間に生じたスパイ疑惑に関する報道を行い、AI半導体の供給網と地政学を巡る不確実性を浮き彫りにした。さらに、Wiredなどの報道では、AIの急速な導入とそれに伴うシステムの自動パッチ適用が、インターネット全体で予測不可能な障害やサイバー攻撃の頻発を招いており、技術の社会実装がインフラの安定性を脅かす「混沌の時代」に入ったことが示されている。",
+    "opinion_summary": "【解釈】この時期にAnthropicの巨額上場とNvidiaの動揺が同時に起きた背景には、AI投資の「投資フェーズから回収フェーズへの強制的な移行」がある。これまで市場は、AIのモデル性能向上やインフラ需要の拡大を無条件に好感し、巨額の資本投下を正当化してきた。しかし、IPOを果たしたAnthropicが市場の冷徹な洗礼を受けたことは、投資家が「売上高の規模」ではなく「持続可能な収益モデルとコスト規律」を求め始めている証左である。Nvidiaを巡るガバナンスやサプライチェーンの揺らぎもまた、特定のハードウェア提供者に過度に依存したインフラ構築モデルが、地政学的リスクや内部統制の問題によって突然頓挫し得るという構造的な脆弱性を露呈している。つまり、AI競争のルールは「計算資源をどれだけ集め、いかに速くモデルを巨大化させるか」から、「システム障害やセキュリティのコストをコントロールしつつ、実業でどう利益を出すか」へと変質しつつある。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てが過大評価である可能性を示す条件もある。第1に、トランプ政権が示唆した海外データセンターへの課税や禁止措置が、具体的な法制化や執行の段階で実効性を失うケースである。米国テック企業が海外の安価な電力や土地を完全に断念することはコスト競争上の致命傷になり得るため、強い政治的反発やロビー活動によって例外規定や骨抜きが進む可能性がある。第2に、国内のエネルギー許可法案が通過したとしても、実際の送電網の増強や発電施設の稼働には何年もかかるため、物理的な電力不足が短期的に解消されず、企業の海外逃避を止めるだけの説得力を持たない場合である。もしこれらの政治的圧力が単なるレトリックにとどまり、海外でのインフラ投資が継続する実態が確認された場合、「インフラの国内回帰」という結論は修正を余儀なくされる。",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、市場の調整が単なる「一時的な金利・マクロ経済の動向に起因するテック株の利食い」に過ぎない可能性を考慮する必要がある。もしAnthropicや他の主要AIプレイヤーが次四半期以降も驚異的なB2B（企業間取引）での実需と利益率の改善を証明し続けた場合、現在の株価の低迷やウォール街の懸念は杞憂に終わり、再び巨額の資本がAIインフラへと集中する「拡大のサイクル」に回帰することになる。また、ハードウェアの供給制約が予想以上に緩和されれば、Nvidiaの求心力低下は一時的なノイズとして片付けられるだろう。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Qwen GitHub｜Release v0.28.3",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
-        "point": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix"
+        "title": "Anthropic’s Debut Shows the Disconnect Between Wall Street and Silicon Valley",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html",
+        "point": "The A.I. giant broke records with its initial public offering this week before a rocky first full day of trading, as the"
       },
       {
         "rank": 2,
-        "title": "OpenAI News｜Combatting adversarial distillation",
-        "source": "OpenAI News",
-        "url": "https://openai.com/index/combatting-adversarial-distillation",
-        "point": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to"
+        "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
+        "point": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2"
       },
       {
         "rank": 3,
-        "title": "OpenClaw GitHub｜openclaw 2026.11.6",
-        "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6",
-        "point": "OpenClaw v2026.11.6\n406 commits · 386 pull requests · 157 contributors\nChanges included in this release\nThe release note"
+        "title": "A New Era of A.I.-Driven Chaos? That Might Just Be Progress.",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/21/science/outages-tech-history.html",
+        "point": "If artificial intelligence is giving rise to outages, cyberattacks and more, it’s consistent with history, in that it sh"
       },
       {
         "rank": 4,
-        "title": "Axios｜Senate passes Trump-backed permitting bill",
-        "source": "Axios",
-        "url": "https://www.axios.com/2026/11/20/senate-passes-energy-permitting-bill",
-        "point": "The Senate passed a sweeping, bipartisan bill Thursday night that's designed to cut permitting timelines for energy and "
-      },
-      {
-        "rank": 5,
-        "title": "CNBC Tech｜Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
-        "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
-        "point": "Trump spoke at the White House after meeting with Chinese President Xi Jinping and Russian President Vladimir Putin for "
+        "title": "Alice Huang, Accused of Spying on Nvidia’s CEO, Is Linked to Firms With Ties to China’s Military",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html",
+        "point": "Companies linked to Alice Huang, the woman at the heart of the Nvidia scandal, are part of a network of Chinese tech fir"
       }
     ],
     "joho_picks": [
       {
-        "headline": "AIインフラの「国土縛り」が始まった",
+        "headline": "AnthropicのIPOとNvidiaの変調が示すAIインフラの岐路",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
+        "source_url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】AI競争の主戦場は、モデルの性能やパラメータ数から、物理的な計算インフラの「立地と所有権」の縛りへ急速に移行しつつある。本稿では、トランプ米政権による海外データセンター建設への課税・禁止方針と、連邦議会を通過したエネルギー許可法案、そしてオープンソースエージェントやモデル保護をめぐる動きを一つの文脈として読み解く。これまでクラウドの柔軟性やコスト効率を最優先して進められてきたAIインフラのグローバル展開は、政治と地政学の介入により、決定的な方向転換を迫られている。もはや企業は、どこで計算資源を安く調達するかだけでなく、どこに拠点を置くことが政治的リスクを回避できるかという新たな制約のもとで戦略を描く必要がある。\n\n【事実】今回の構造変化を示す材料として、まず米政治・インフラ面での規制の動きがある。米メディアの報道によると、トランプ大統領は米テック企業による海外でのデータセンター建設を禁止するか、あるいは巨額の課税を行う方針を表明した。これと歩調を合わせるように、米上院ではエネルギーおよびインフラプロジェクトの許可期間短縮を目的とした超党派の許可法案が可決されており、国内での電力・データセンター整備を加速させる法的な地ならしが進んでいる。一方で、オープンソースとエージェント開発の領域では、QwenのGitHubリポジトリ（v0.28シリーズ）においてステートレスなホステッドハーネスへの移行や自動ループ実行の改善など、AIエージェントの自律稼働と運用効率化のコードベース更新が相次いでいる。また、OpenClawのリリースではAIエージェント向けのプレーンMarkdown形式のチェンジログ提供やガバナンスを意識したポリシー維持が組み込まれている。さらにOpenAIは、モデルの能力抽出を防ぐための多層的な防御策として「対抗的蒸留（Adversarial Distillation）への対策」を発表し、モデルの模倣に対するガードレールを強化している。これらは、インフラの物理的囲い込みが進む一方で、ソフトウェアレイヤーではエージェントの実用化とモデル資産の保護という別の攻防が同時進行していることを示している。\n\n【解釈】なぜこのタイミングで「インフラの国内縛り」と「ソフトウェアの自律化・防衛」が同時に起きたのか。背景にあるのは、AIの価値の源泉が単なる大規模言語モデルの推論能力から、それを支える膨大な電力と計算資源の物理的支配権へとシフトしている点にある。米国内でのデータセンター建設が電力網や水資源の逼迫を招き、政治的争点となる中で、政権は国内のエネルギーインフラ許可法案の通過をテコにして、AI企業に国内投資と雇用を強制するカードを切った。海外へのデータセンター展開を封じることは、米国のテック巨人が持つ資本が国外へ流出するのを防ぐとともに、AI計算能力という国家安全保障上の重要アセットを国内に釘付けにする意図がある。同時に、Qwenの自動ループ機能の高度化やOpenClawのAI向け変更履歴の整備に見られるように、ソフトウェア側では「人間が介在しないエージェント運用」の自動化が着実に進んでいる。インフラが物理的に国境で縛られる一方で、ソフトウェアやエージェントは国境を越えて高度化しようとしており、この物理的制約とデジタルの自由度のギャップこそが、今後のテック企業の事業モデルを大きく揺さぶる原因となる。\n\n【競争の構図】\n【OpenAI】\nモデルの能力抽出を防ぐ対抗的蒸留への多層的な防御策を導入し、資産保護を強化している。\n→ 独自モデルの優位性を守る壁が高まる一方、オープンなエコシステムとの緊張関係が増す。\n\n【Qwen（Alibaba陣営）】\nステートレスなホステッドハーネスや管理されたエージェントの自動ループ実行に向けたコードベースの更新を継続している。\n→ インフラ規制の動きとは裏腹に、自律型エージェントの基盤としての実用性を着実に高めている。\n\n【OpenClaw】\nAIエージェントやツール向けのプレーンMarkdown形式のチェンジログ提供など、機械可読なリリース体制を整えている。\n→ 人間中心のリリースからAIエージェント自身がシステムを追跡・統合するフローへの適応をリードしている。",
-        "why_matters": "【日本の実務への示唆】日本企業にとって、今回の変化は「グローバルなクラウドから調達すればよい」という前提の崩壊を意味する。米国が自国へのデータセンター集約と海外流出の阻止に動き出す中、日本国内でのAIインフラ調達、特に電力確保を伴うデータセンター戦略や、国内の規制・エネルギー事情に即したAI基盤の構築を急ぐ必要がある。実務的には、米国のクラウドベンダーやオープンソースモデル（Qwenなどの多様な選択肢）を組み合わせる際、地政学リスクやサプライチェーンの変更が自社のシステム調達コストや可用性にどう波及するかを再点検すべきである。特に、AIエージェントの自律化（ループ処理やエージェント間連携）を自社業務に組み込む日本企業は、単に便利なAPIを使うだけでなく、モデル提供元のセキュリティポリシーや将来の輸出管理・利用制限の変更リスクを見据えたアーキテクチャ設計が不可欠となる。\n\n【反証・留保】この見立てが過大評価である可能性を示す条件もある。第1に、トランプ政権が示唆した海外データセンターへの課税や禁止措置が、具体的な法制化や執行の段階で実効性を失うケースである。米国テック企業が海外の安価な電力や土地を完全に断念することはコスト競争上の致命傷になり得るため、強い政治的反発やロビー活動によって例外規定や骨抜きが進む可能性がある。第2に、国内のエネルギー許可法案が通過したとしても、実際の送電網の増強や発電施設の稼働には何年もかかるため、物理的な電力不足が短期的に解消されず、企業の海外逃避を止めるだけの説得力を持たない場合である。もしこれらの政治的圧力が単なるレトリックにとどまり、海外でのインフラ投資が継続する実態が確認された場合、「インフラの国内回帰」という結論は修正を余儀なくされる。",
-        "context": "【次の観測点】\n・米政権による海外データセンター課税・禁止令の具体的な法的文面と執行ルールの策定状況\n・米国内のエネルギー許可法案成立を受けた、主要テック企業による国内データセンター追加投資の発表ペース\n・QwenやOpenClawなどのオープンソース・エージェント基盤における、エンタープライズ向けガバナンス機能の実装度合い"
+        "body": "【結論】Anthropicの歴史的な上場とNvidiaの株価・経営体制の揺らぎは、AI産業が「無限の拡大期」を終え、資本の論理と実利の狭間で冷徹な見直しを迫られる最初の分岐点に立ったことを示している。本稿では、公開市場におけるAI企業の評価の乖離、インフラを巡る地政学的リスク、そしてシステム障害やセキュリティの現実化という複数の材料を一つの緊張感ある問いに束ねる。いま、計算資源と資本の主導権は誰の手に移りつつあるのか。単なる技術的ブレイクスルーの礼賛ではなく、事業投資の判断軸がどこで変わり始めたかを読み解く。\n\n【事実】足元の市場環境と主要プレイヤーの動向は、AIエコシステムの成熟に伴うひずみを露わにしている。CNBCなどの報道によれば、AI開発企業であるAnthropicは米ナスダック市場へ歴史的なIPOを果たしたものの、その直後の取引では、Nvidiaの記録的な株価低迷と重なるようにハイテク株全体の記録的な売り急ぎ（テック・セルオフ）に直面した。ウォール街の慎重な姿勢と、シリコンバレーの拡大志向の間の乖離が鮮明になっている。同時に、ニューヨーク・タイムズは、Nvidiaのジェンセン・フアン最高経営責任者（CEO）を巡る組織運営の文化的プレッシャーや、中国の軍事関連企業と結びついたネットワークとの間に生じたスパイ疑惑に関する報道を行い、AI半導体の供給網と地政学を巡る不確実性を浮き彫りにした。さらに、Wiredなどの報道では、AIの急速な導入とそれに伴うシステムの自動パッチ適用が、インターネット全体で予測不可能な障害やサイバー攻撃の頻発を招いており、技術の社会実装がインフラの安定性を脅かす「混沌の時代」に入ったことが示されている。\n\n【解釈】この時期にAnthropicの巨額上場とNvidiaの動揺が同時に起きた背景には、AI投資の「投資フェーズから回収フェーズへの強制的な移行」がある。これまで市場は、AIのモデル性能向上やインフラ需要の拡大を無条件に好感し、巨額の資本投下を正当化してきた。しかし、IPOを果たしたAnthropicが市場の冷徹な洗礼を受けたことは、投資家が「売上高の規模」ではなく「持続可能な収益モデルとコスト規律」を求め始めている証左である。Nvidiaを巡るガバナンスやサプライチェーンの揺らぎもまた、特定のハードウェア提供者に過度に依存したインフラ構築モデルが、地政学的リスクや内部統制の問題によって突然頓挫し得るという構造的な脆弱性を露呈している。つまり、AI競争のルールは「計算資源をどれだけ集め、いかに速くモデルを巨大化させるか」から、「システム障害やセキュリティのコストをコントロールしつつ、実業でどう利益を出すか」へと変質しつつある。\n\n【競争の構図】\n【Anthropic】\nナスダックへの歴史的なIPOを果たしたが、市場のハイテク株売りと重なり、成長期待と収益性のバランスを厳しく問われる最初の試練に直面している。\n→ 非公開企業として自由な資金調達と安全性を優先できた立場から、今後は四半期ごとの利益成長とウォール街の厳格な規律に従わざるを得なくなり、安全性追求のスタンスに資本市場からの圧力がかかる。\n\n【Nvidia】\n史上最長の株価低迷週を記録する一方で、経営陣の統治構造や中国市場を巡る地政学的リスク、サプライチェーンの複雑さが表面化している。\n→ AIインフラの「絶対的な独占者」としての神話が揺らぎ、顧客企業や投資家は特定のハードウェア供給網に依存するリスクを真剣に計算し直す契機を迎えている。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）の数ではなく、AI導入に伴う「インフラとセキュリティの防衛ライン」である。AIの急速な導入がシステム障害や新たな脆弱性を生む「混沌の時代」に入った現在、やみくもに最先端のLLM（大規模言語モデル）を業務に組み込むことは、予期せぬ停止リスクや情報漏洩コストを跳ね上げる。情報システム部門および事業部門は、利用するAIモデルやクラウドベンダーのガバナンス体制、万が一のシステム停止時のフォールバック（代替）手順の再点検を急ぐべきだ。投資判断においては、華やかな機能の新規性よりも、安定稼働とコスト効率が担保された実用的な基盤の選択へと軸足を移すべき時機にある。\n\n【反証・留保】この見立てを過大評価しないための条件として、市場の調整が単なる「一時的な金利・マクロ経済の動向に起因するテック株の利食い」に過ぎない可能性を考慮する必要がある。もしAnthropicや他の主要AIプレイヤーが次四半期以降も驚異的なB2B（企業間取引）での実需と利益率の改善を証明し続けた場合、現在の株価の低迷やウォール街の懸念は杞憂に終わり、再び巨額の資本がAIインフラへと集中する「拡大のサイクル」に回帰することになる。また、ハードウェアの供給制約が予想以上に緩和されれば、Nvidiaの求心力低下は一時的なノイズとして片付けられるだろう。",
+        "context": "【次の観測点】\n・Anthropicの次回四半期決算におけるキャッシュバーン（資金枯渇）のペースとB2B顧客の継続率\n・Nvidiaのサプライチェーンおよびガバナンス問題を巡る米規制当局や市場のさらなる公式処分・調査の有無\n・AI導入企業の間でのシステム障害（アウトage）やセキュリティインシデントの発生頻度の推移"
       }
     ]
   },
   "raw_articles": [
     {
-      "source": "Qwen GitHub",
-      "title": "Release v0.28.3",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
-      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
-      "published": "2026-11-21 01:45 UTC",
-      "pub_dt": "2026-11-21T01:45:48+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-      "url": "https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html",
-      "summary": "Once the most valuable company in the world, Nvidia now ranks fourth behind Apple, Microsoft and Alphabet.",
-      "published": "2026-11-20 22:59 UTC",
-      "pub_dt": "2026-11-20T22:59:33+00:00"
-    },
-    {
-      "source": "Qwen GitHub",
-      "title": "Release v0.28.0-nightly.20261120.19b31401f5",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0-nightly.20261120.19b31401f5",
-      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
-      "published": "2026-11-20 22:34 UTC",
-      "pub_dt": "2026-11-20T22:34:18+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Trump says he discussed Jensen Huang with Xi; Bessent tells CNBC Nvidia chip export policy is unchanged",
-      "url": "https://www.cnbc.com/2026/11/20/treasury-secretary-scott-bessent.html",
-      "summary": "Trump said he discussed Jensen Huang with China's Xi. Bessent said the ousted Nvidia CEO didn't come up in talks he had while in China.",
-      "published": "2026-11-20 22:08 UTC",
-      "pub_dt": "2026-11-20T22:08:41+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
-      "url": "https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html",
-      "summary": "Cybersecurity companies have been hunting for acquisitions in the AI era.",
-      "published": "2026-11-20 21:35 UTC",
-      "pub_dt": "2026-11-20T21:35:24+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
-      "url": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
-      "summary": "Trump spoke at the White House after meeting with Chinese President Xi Jinping and Russian President Vladimir Putin for a historic trilateral summit in China.",
-      "published": "2026-11-20 20:47 UTC",
-      "pub_dt": "2026-11-20T20:47:58+00:00"
-    },
-    {
-      "source": "OpenClaw GitHub",
-      "title": "release-publish/7af829afeef7-1795215667: fix(release): evaluate reusable evidence with Q-owned waivers (#201773)",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F7af829afeef7-1795215667",
-      "summary": "\nfix(release): evaluate reusable evidence with Q-owned waivers\n\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com\n\nfix(release): evaluate reusable evidence with Q-owned waivers\n\nOpenClaw-Publication: a9302dc0-5ad2-4b5f-90d9-a32629e0ccb3\n\ndocs(release): explain Q waiver aggregate declarations\n\nCo-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com\n\nfix(release): retain Q policy through publication consumers\n\nRead the immutable admitted Q ledger for publication gates a",
-      "published": "2026-11-20 20:25 UTC",
-      "pub_dt": "2026-11-20T20:25:56+00:00"
+      "source": "TechCrunch AI",
+      "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+      "summary": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
+      "published": "2026-11-21 21:37 UTC",
+      "pub_dt": "2026-11-21T21:37:10+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
-      "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
-      "summary": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the startup is building.",
-      "published": "2026-11-20 19:53 UTC",
-      "pub_dt": "2026-11-20T19:53:41+00:00"
+      "title": "A tale of two Nvidias",
+      "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+      "summary": "We got two very different pictures of Nvidia —  the company’s latest earnings report vs. the tech executives loudly calling for Jensen Huang’s return.",
+      "published": "2026-11-21 21:07 UTC",
+      "pub_dt": "2026-11-21T21:07:42+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "The UN fails to agree on rules regulating ‘killer robots’",
+      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
+      "summary": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the [&#8230;]",
+      "published": "2026-11-21 20:03 UTC",
+      "pub_dt": "2026-11-21T20:03:37+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "G.T.A. VI Is a Monumental Human Achievement",
+      "url": "https://www.nytimes.com/2026/11/20/podcasts/hardfork-gta6-nvidia-anthropic.html",
+      "summary": "Anthropic goes public, Jensen Huang wants back in at Nvidia, and software patches seem to be breaking everything. But first, let’s talk about G.T.A.",
+      "published": "2026-11-21 19:12 UTC",
+      "pub_dt": "2026-11-21T19:12:00+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Here are the top AI agents that can live in your text messages",
+      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+      "published": "2026-11-21 17:00 UTC",
+      "pub_dt": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+      "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
+      "summary": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008.",
+      "published": "2026-11-21 16:40 UTC",
+      "pub_dt": "2026-11-21T16:40:05+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+      "summary": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
+      "published": "2026-11-21 16:00 UTC",
+      "pub_dt": "2026-11-21T16:00:00+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "How Jensen Huang Made Humiliation Routine at Nvidia",
+      "url": "https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html",
+      "summary": "The Nvidia co-founder’s belittling behavior toward employees goes back decades. It once led to a confidential settlement agreement with an executive who said Mr. Huang “terrorized” staff.",
+      "published": "2026-11-21 15:55 UTC",
+      "pub_dt": "2026-11-21T15:55:46+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Can Anthropic afford to put safety first?",
+      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+      "summary": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to [&#8230;]",
+      "published": "2026-11-21 15:00 UTC",
+      "pub_dt": "2026-11-21T15:00:00+00:00"
     },
     {
       "source": "Wired",
-      "title": "Jensen Huang’s ‘Lying’ Alarmed Nvidia Board Ahead of His Resignation",
-      "url": "https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/",
-      "summary": "Amid allegations of multiple affairs, including with a direct report and an alleged Chinese intelligence asset, sources tell WIRED the Nvidia board’s main issue was the former CEO’s “lack of candor.”",
-      "published": "2026-11-20 19:52 UTC",
-      "pub_dt": "2026-11-20T19:52:21+00:00"
+      "title": "The Outages Are Just Getting Started",
+      "url": "https://www.wired.com/story/brace-yourself-for-years-of-outage-chaos/",
+      "summary": "AI is forcing companies to patch their systems faster as attackers race to exploit newly discovered vulnerabilities. Welcome to internet outage hell.",
+      "published": "2026-11-21 13:00 UTC",
+      "pub_dt": "2026-11-21T13:00:00+00:00"
     },
     {
-      "source": "CNBC Tech",
-      "title": "Jensen Huang to testify publicly before Senate banking panel, Chairman Scott says",
-      "url": "https://www.cnbc.com/2026/11/20/jensen-huang-nvidia-senate-testimony.html",
-      "summary": "Former Nvidia CEO Jensen Huang has faced a flurry of criticism on Capitol Hill in the wake of his involvement with a suspected Chinese spy.",
-      "published": "2026-11-20 19:42 UTC",
-      "pub_dt": "2026-11-20T19:42:53+00:00"
+      "source": "NYTimes Technology",
+      "title": "Anthropic’s Debut Shows the Disconnect Between Wall Street and Silicon Valley",
+      "url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html",
+      "summary": "The A.I. giant broke records with its initial public offering this week before a rocky first full day of trading, as the markets plunged on worries about artificial intelligence spending.",
+      "published": "2026-11-21 10:03 UTC",
+      "pub_dt": "2026-11-21T10:03:45+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
-      "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
-      "summary": "Mathematicians are having their minds blown by the latest AI-driven result — and there's a competing human solution, too.",
-      "published": "2026-11-20 19:32 UTC",
-      "pub_dt": "2026-11-20T19:32:08+00:00"
+      "source": "NYTimes Technology",
+      "title": "A New Era of A.I.-Driven Chaos? That Might Just Be Progress.",
+      "url": "https://www.nytimes.com/2026/11/21/science/outages-tech-history.html",
+      "summary": "If artificial intelligence is giving rise to outages, cyberattacks and more, it’s consistent with history, in that it shows how new innovations often set off calamitous failure before they make life better.",
+      "published": "2026-11-21 10:02 UTC",
+      "pub_dt": "2026-11-21T10:02:10+00:00"
     },
     {
-      "source": "Qwen GitHub",
-      "title": "Release v0.28.1-preview.1",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.1-preview.1",
-      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
-      "published": "2026-11-20 19:20 UTC",
-      "pub_dt": "2026-11-20T19:20:36+00:00"
-    },
-    {
-      "source": "Axios",
-      "title": "Trump floats major tax on U.S. companies constructing data centers overseas",
-      "url": "https://www.axios.com/2026/11/20/us-ai-trump-data-centers-overseas",
-      "summary": "President Trump on Friday said he would block U.S. companies from building data centers overseas or impose a \"tremendous tax\" on them if they do. Why it matters: Trump's push to keep AI infrastructure in the country comes just weeks after data center expansion became a midterm-election flashpoint, as voters raised concerns about the environmental and financial impacts they pose.What they're saying: Trump acknowledged that the announcement may come as a surprise, saying he had not yet discussed i",
-      "published": "2026-11-20 19:17 UTC",
-      "pub_dt": "2026-11-20T19:17:53+00:00"
+      "source": "Last Week in AI",
+      "title": "Last Week in AI #348 - IPO->Correction, new GPTs and Geminis, Nvidia’s Fate",
+      "url": "https://lastweekin.ai/p/last-week-in-ai-348-ipo-correction",
+      "summary": "Anthropic's $81B IPO, AI stocks enter a correction, Huang resigns from Nvidia, Trump and Xi agree on military AI",
+      "published": "2026-11-21 08:41 UTC",
+      "pub_dt": "2026-11-21T08:41:43+00:00"
     },
     {
       "source": "OpenClaw GitHub",
       "title": "openclaw 2026.11.6",
       "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6",
       "summary": "OpenClaw v2026.11.6\n406 commits · 386 pull requests · 157 contributors\nChanges included in this release\nThe release notes and changelog contain the same content, presented in two formats:\n\nRelease notes — formatted for people.\nChangelog — plain Markdown for AI agents and tools.\n\nThanks\n@609NFT @abacha @akifodabas @akmad @Alix-007 @amittell @Angelojiang11 @Anurag-5ingh @Aribarambo @ayaangazali @Barry-886 @bdjben @ben-milanko @boeingchoco @brainatworkharris @brainmonger @brianmcguire @brokemac79 @",
-      "published": "2026-11-20 18:54 UTC",
-      "pub_dt": "2026-11-20T18:54:53+00:00"
+      "published": "2026-11-21 06:05 UTC",
+      "pub_dt": "2026-11-21T06:05:17+00:00"
     },
     {
       "source": "NYTimes Technology",
-      "title": "Trump Threatens to Bar U.S. Tech Firms From Building Data Centers Abroad",
-      "url": "https://www.nytimes.com/2026/11/20/us/politics/trump-data-centers-ban.html",
-      "summary": "The president suggested he would tax the same companies, though it was not clear how he would carry out the plan unveiled at a news conference.",
-      "published": "2026-11-20 18:51 UTC",
-      "pub_dt": "2026-11-20T18:51:22+00:00"
+      "title": "Alice Huang, Accused of Spying on Nvidia’s CEO, Is Linked to Firms With Ties to China’s Military",
+      "url": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html",
+      "summary": "Companies linked to Alice Huang, the woman at the heart of the Nvidia scandal, are part of a network of Chinese tech firms and defense contractors that need advanced computing power.",
+      "published": "2026-11-21 05:13 UTC",
+      "pub_dt": "2026-11-21T05:13:03+00:00"
     }
   ]
 }
