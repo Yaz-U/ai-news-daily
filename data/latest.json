@@ -1,218 +1,215 @@
 {
-  "timestamp": "2026-11-22T09:52:05.228062+09:00",
+  "timestamp": "2026-11-23T10:21:16.035489+09:00",
   "time_slot": "朝",
   "summary": {
-    "headline": "AnthropicのIPOとNvidiaの変調が示すAIインフラの岐路",
-    "thesis": "巨大な資金調達と市場の動揺が同時並行する現在、AI産業の主導権は「過剰投資の回収」から「現実的なコスト規律とセキュリティの確保」へと急速にシフトし始めている。",
-    "opening": "【結論】Anthropicの歴史的な上場とNvidiaの株価・経営体制の揺らぎは、AI産業が「無限の拡大期」を終え、資本の論理と実利の狭間で冷徹な見直しを迫られる最初の分岐点に立ったことを示している。本稿では、公開市場におけるAI企業の評価の乖離、インフラを巡る地政学的リスク、そしてシステム障害やセキュリティの現実化という複数の材料を一つの緊張感ある問いに束ねる。いま、計算資源と資本の主導権は誰の手に移りつつあるのか。単なる技術的ブレイクスルーの礼賛ではなく、事業投資の判断軸がどこで変わり始めたかを読み解く。",
-    "what_happened": "【事実】足元の市場環境と主要プレイヤーの動向は、AIエコシステムの成熟に伴うひずみを露わにしている。CNBCなどの報道によれば、AI開発企業であるAnthropicは米ナスダック市場へ歴史的なIPOを果たしたものの、その直後の取引では、Nvidiaの記録的な株価低迷と重なるようにハイテク株全体の記録的な売り急ぎ（テック・セルオフ）に直面した。ウォール街の慎重な姿勢と、シリコンバレーの拡大志向の間の乖離が鮮明になっている。同時に、ニューヨーク・タイムズは、Nvidiaのジェンセン・フアン最高経営責任者（CEO）を巡る組織運営の文化的プレッシャーや、中国の軍事関連企業と結びついたネットワークとの間に生じたスパイ疑惑に関する報道を行い、AI半導体の供給網と地政学を巡る不確実性を浮き彫りにした。さらに、Wiredなどの報道では、AIの急速な導入とそれに伴うシステムの自動パッチ適用が、インターネット全体で予測不可能な障害やサイバー攻撃の頻発を招いており、技術の社会実装がインフラの安定性を脅かす「混沌の時代」に入ったことが示されている。",
-    "why_now": "【解釈】この時期にAnthropicの巨額上場とNvidiaの動揺が同時に起きた背景には、AI投資の「投資フェーズから回収フェーズへの強制的な移行」がある。これまで市場は、AIのモデル性能向上やインフラ需要の拡大を無条件に好感し、巨額の資本投下を正当化してきた。しかし、IPOを果たしたAnthropicが市場の冷徹な洗礼を受けたことは、投資家が「売上高の規模」ではなく「持続可能な収益モデルとコスト規律」を求め始めている証左である。Nvidiaを巡るガバナンスやサプライチェーンの揺らぎもまた、特定のハードウェア提供者に過度に依存したインフラ構築モデルが、地政学的リスクや内部統制の問題によって突然頓挫し得るという構造的な脆弱性を露呈している。つまり、AI競争のルールは「計算資源をどれだけ集め、いかに速くモデルを巨大化させるか」から、「システム障害やセキュリティのコストをコントロールしつつ、実業でどう利益を出すか」へと変質しつつある。",
-    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、市場の調整が単なる「一時的な金利・マクロ経済の動向に起因するテック株の利食い」に過ぎない可能性を考慮する必要がある。もしAnthropicや他の主要AIプレイヤーが次四半期以降も驚異的なB2B（企業間取引）での実需と利益率の改善を証明し続けた場合、現在の株価の低迷やウォール街の懸念は杞憂に終わり、再び巨額の資本がAIインフラへと集中する「拡大のサイクル」に回帰することになる。また、ハードウェアの供給制約が予想以上に緩和されれば、Nvidiaの求心力低下は一時的なノイズとして片付けられるだろう。",
-    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）の数ではなく、AI導入に伴う「インフラとセキュリティの防衛ライン」である。AIの急速な導入がシステム障害や新たな脆弱性を生む「混沌の時代」に入った現在、やみくもに最先端のLLM（大規模言語モデル）を業務に組み込むことは、予期せぬ停止リスクや情報漏洩コストを跳ね上げる。情報システム部門および事業部門は、利用するAIモデルやクラウドベンダーのガバナンス体制、万が一のシステム停止時のフォールバック（代替）手順の再点検を急ぐべきだ。投資判断においては、華やかな機能の新規性よりも、安定稼働とコスト効率が担保された実用的な基盤の選択へと軸足を移すべき時機にある。",
+    "headline": "AIエージェントの主導権は「モデル単体」から「安全な実行ハーネス」へ移行する",
+    "thesis": "AI競争の主軸は、単体のLLM性能から、資格情報や状態を安全に管理・隔離する「ハーネス（実行環境）」の設計へ急速にシフトしている。",
+    "opening": "【結論】AI競争の優劣を決める主戦場は、推論モデルの単体性能から、エージェントを取り囲む実行環境（ハーネス）とセキュリティ基盤へ移行した。かつてはモデルの賢さが価値の中心だったが、現在はエージェントが自律的にコードやデータを扱う際の「安全な接続・隔離・資格情報の管理」こそが実運用の成否を握る。本稿では、Qwen Codeのローカル実行環境の改良や、Googleが発表した「Agent Compute Engine」、そしてClaude Codeの資格情報露出問題など、実務を揺るがす具体的な材料を束ね、インフラとセキュリティの新たな力学を読み解く。",
+    "what_happened": "【事実】QCon San Francisco 2026では、Mad Labsの創業者マンジュ・ラジャシェカール氏が「ハーネスが新しいオペレーティングシステムになる」と基調講演で述べ、文脈・ツール・状態・権限を制御するハーネスこそがエージェントの能力と安全性を決定づけると指摘した [11]。こうしたなか、開発現場での実運用における脆弱性が表面化している。InfoQの報道によれば、エージェントセキュリティ企業Apiiroの調査により、Anthropicの「Claude Code」が「Don't Ask Again」機能の実装において、設定ファイルやgit履歴、チャットトランスクリプトにシークレット情報をローカル保存し、公開リポジトリへ誤って漏洩させていたことが判明した [8]。1,122件のシークレットがclaude/settings.local.jsonから、さらに1,160件がgit履歴等から見つかっている [8]。これに対し、インフラストラクチャ側での対抗策も動き出している。Googleは、AIエージェントを隔離されたマイクロVM上で実行し、資格情報やAPIキー、OAuthリフレッシュトークンをエージェントのサンドボックス外に保持した上で、外部の「Agent Gateway」を介して認証と資格情報の注入を行うマネージドサービス「Agent Compute Engine」を発表した [9]。また、Qwen CodeのGitHubリリース（v0.28.4およびデスクトップ版）では、ウェブシェルローカルデーモンモードでのワークスペース成果物ライブラリページの追加や、ステートレスなホステッドハーネスに向けたアイドルセッションの一時停止に関する設計提案など、ハーネス側の状態管理の最適化が進められている [1][2]。",
+    "why_now": "【解釈】今回の変化が示すのは、AIエージェントの「実用化の壁」がモデルの理解力からセキュリティとインフラの隔離レイヤーへ移動したという点である。これまで開発者は便利さのあまり、エージェントのローカル実行環境にAPIキーや資格情報を無防備に保持させがちだった。しかし、Claude Codeのシークレット露出問題が示すように、エージェントの自律性が高まるほど、ローカル環境の不十分な隠蔽や設定ミスが即座に組織全体のセキュリティリスクに直結する構造が明確になった [8]。この課題に対し、GoogleのAgent Compute EngineやQwen Codeのステートレス化・サンドボックス化の動きは、エージェントに「自由に動く権限」を与えつつ、資格情報や状態を厳格に分離するインフラが不可欠になっていることを裏付けている [2][9]。つまり、企業が求めるのは単なる賢いAIではなく、誤作動や情報漏洩を物理的・論理的に封じ込める堅牢な実行ハーネスである。主導権はモデル開発企業から、セキュアな実行環境やインフラを握るプレイヤーへ移行しつつある。",
+    "counterpoint": "【反証・留保】この見立てが過大評価であると言える条件は、開発者がセキュリティの複雑さを嫌い、依然として「利便性と速度」を最優先してサンドボックス化されていないローカル実行環境を使い続けた場合である。もし、厳格なマイクロVMや外部ゲートウェイによる分離が「レイテンシの増大」や「開発体験の著しい低下」とみなされた場合、隔離されたセキュアなハーネスよりも、開発効率を優先した脆弱なローカルエージェントが現場で選ばれ続ける可能性もある。また、モデル単体の性能向上があまりに圧倒的であれば、セキュリティリスクを運用で力技でカバーするアプローチが再び支持されるかもしれない。この仮説が崩れるのは、企業がインフラの安全性よりも開発スピードを圧倒的に優先し、セキュリティインシデントのコストを許容し続けた場合である。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、社内で稼働する、あるいは導入を検討しているAIコーディングツールや自律型エージェントの「資格情報の置き場所と実行権限」である。Claude Codeの事例のように、開発者のローカル環境やリポジトリにAPIキーや認証情報が平文や隠し設定として保存されていないかを直ちに監査する必要がある [8]。また、単に「どのLLMモデルを使うか」の比較にとどまらず、GoogleのAgent Compute EngineやAWS LambdaのGPU推論活用に見られるように、エージェントを安全なマイクロVMや管理されたサンドボックス環境でどう隔離・実行するかというインフラ側の調達基準を調達・セキュリティ部門と共同で再定義することが急務となる [9][10]。",
     "company_positions": [
       {
         "company": "Anthropic",
-        "status": "ナスダックへの歴史的なIPOを果たしたが、市場のハイテク株売りと重なり、成長期待と収益性のバランスを厳しく問われる最初の試練に直面している。",
-        "implication": "非公開企業として自由な資金調達と安全性を優先できた立場から、今後は四半期ごとの利益成長とウォール街の厳格な規律に従わざるを得なくなり、安全性追求のスタンスに資本市場からの圧力がかかる。"
+        "status": "Claude Codeのローカル設定保存機能に起因するシークレット露出問題が表面化し、開発者向けエージェントのセキュリティガバナンスで厳しい見直しを迫られている [8]。",
+        "implication": "高いコーディング性能で獲得した開発者からの信頼に対し、実運用における安全性とプライバシー管理の脆弱性が弱点として露呈している [8]。"
       },
       {
-        "company": "Nvidia",
-        "status": "史上最長の株価低迷週を記録する一方で、経営陣の統治構造や中国市場を巡る地政学的リスク、サプライチェーンの複雑さが表面化している。",
-        "implication": "AIインフラの「絶対的な独占者」としての神話が揺らぎ、顧客企業や投資家は特定のハードウェア供給網に依存するリスクを真剣に計算し直す契機を迎えている。"
+        "company": "Google / DeepMind",
+        "status": "エージェントを隔離されたマイクロVMで実行し、資格情報をサンドボックス外に保持する「Agent Compute Engine」を発表した [9]。",
+        "implication": "モデルの賢さだけでなく、エンタープライズが求める「安全な実行インフラ」の主導権を握り、セキュアなエージェント実行のデファクトスタンダードを狙う [9]。"
+      },
+      {
+        "company": "Qwen（Alibaba陣営）",
+        "status": "Qwen Codeのアップデートでローカルデーモンモードの拡充や、ステートレスなホステッドハーネスに向けたセッションの一時停止設計を進めている [1][2]。",
+        "implication": "オープンかつ柔軟なローカル実行環境の利便性を維持しつつ、状態管理とセキュリティのバランスを取る独自のエコシステムを強化している [1][2]。"
       }
     ],
     "next_signals": [
-      "Anthropicの次回四半期決算におけるキャッシュバーン（資金枯渇）のペースとB2B顧客の継続率",
-      "Nvidiaのサプライチェーンおよびガバナンス問題を巡る米規制当局や市場のさらなる公式処分・調査の有無",
-      "AI導入企業の間でのシステム障害（アウトage）やセキュリティインシデントの発生頻度の推移"
+      "主要なAIエージェント・ツールにおける資格情報管理手法のセキュリティパッチ適用状況",
+      "エンタープライズ向けクラウドベンダーによる隔離型マイクロVM環境の価格競争と導入事例",
+      "金融やインフラなど規制の厳しい業界における、サードパーティ製AIエージェントの利用禁止・制限ルールの広がり"
     ],
     "sources": [
       {
-        "title": "Anthropic’s Debut Shows the Disconnect Between Wall Street and Silicon Valley",
-        "url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html"
+        "title": "Qwen GitHub｜Release v0.28.4",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4"
       },
       {
-        "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
-        "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html"
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.28.4",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.28.4"
       },
       {
-        "title": "A New Era of A.I.-Driven Chaos? That Might Just Be Progress.",
-        "url": "https://www.nytimes.com/2026/11/21/science/outages-tech-history.html"
+        "title": "InfoQ AI/ML｜Claude Code Has Been Leaking Secrets through its 'Don't Ask Again' Feature",
+        "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
       },
       {
-        "title": "Alice Huang, Accused of Spying on Nvidia’s CEO, Is Linked to Firms With Ties to China’s Military",
-        "url": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html"
+        "title": "InfoQ AI/ML｜Google Announces Agent Compute Engine for Secure AI Agent Execution",
+        "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
       }
     ],
-    "news_summary": "巨大な資金調達と市場の動揺が同時並行する現在、AI産業の主導権は「過剰投資の回収」から「現実的なコスト規律とセキュリティの確保」へと急速にシフトし始めている。\n\n【事実】足元の市場環境と主要プレイヤーの動向は、AIエコシステムの成熟に伴うひずみを露わにしている。CNBCなどの報道によれば、AI開発企業であるAnthropicは米ナスダック市場へ歴史的なIPOを果たしたものの、その直後の取引では、Nvidiaの記録的な株価低迷と重なるようにハイテク株全体の記録的な売り急ぎ（テック・セルオフ）に直面した。ウォール街の慎重な姿勢と、シリコンバレーの拡大志向の間の乖離が鮮明になっている。同時に、ニューヨーク・タイムズは、Nvidiaのジェンセン・フアン最高経営責任者（CEO）を巡る組織運営の文化的プレッシャーや、中国の軍事関連企業と結びついたネットワークとの間に生じたスパイ疑惑に関する報道を行い、AI半導体の供給網と地政学を巡る不確実性を浮き彫りにした。さらに、Wiredなどの報道では、AIの急速な導入とそれに伴うシステムの自動パッチ適用が、インターネット全体で予測不可能な障害やサイバー攻撃の頻発を招いており、技術の社会実装がインフラの安定性を脅かす「混沌の時代」に入ったことが示されている。",
-    "opinion_summary": "【解釈】この時期にAnthropicの巨額上場とNvidiaの動揺が同時に起きた背景には、AI投資の「投資フェーズから回収フェーズへの強制的な移行」がある。これまで市場は、AIのモデル性能向上やインフラ需要の拡大を無条件に好感し、巨額の資本投下を正当化してきた。しかし、IPOを果たしたAnthropicが市場の冷徹な洗礼を受けたことは、投資家が「売上高の規模」ではなく「持続可能な収益モデルとコスト規律」を求め始めている証左である。Nvidiaを巡るガバナンスやサプライチェーンの揺らぎもまた、特定のハードウェア提供者に過度に依存したインフラ構築モデルが、地政学的リスクや内部統制の問題によって突然頓挫し得るという構造的な脆弱性を露呈している。つまり、AI競争のルールは「計算資源をどれだけ集め、いかに速くモデルを巨大化させるか」から、「システム障害やセキュリティのコストをコントロールしつつ、実業でどう利益を出すか」へと変質しつつある。",
+    "news_summary": "AI競争の主軸は、単体のLLM性能から、資格情報や状態を安全に管理・隔離する「ハーネス（実行環境）」の設計へ急速にシフトしている。\n\n【事実】QCon San Francisco 2026では、Mad Labsの創業者マンジュ・ラジャシェカール氏が「ハーネスが新しいオペレーティングシステムになる」と基調講演で述べ、文脈・ツール・状態・権限を制御するハーネスこそがエージェントの能力と安全性を決定づけると指摘した [11]。こうしたなか、開発現場での実運用における脆弱性が表面化している。InfoQの報道によれば、エージェントセキュリティ企業Apiiroの調査により、Anthropicの「Claude Code」が「Don't Ask Again」機能の実装において、設定ファイルやgit履歴、チャットトランスクリプトにシークレット情報をローカル保存し、公開リポジトリへ誤って漏洩させていたことが判明した [8]。1,122件のシークレットがclaude/settings.local.jsonから、さらに1,160件がgit履歴等から見つかっている [8]。これに対し、インフラストラクチャ側での対抗策も動き出している。Googleは、AIエージェントを隔離されたマイクロVM上で実行し、資格情報やAPIキー、OAuthリフレッシュトークンをエージェントのサンドボックス外に保持した上で、外部の「Agent Gateway」を介して認証と資格情報の注入を行うマネージドサービス「Agent Compute Engine」を発表した [9]。また、Qwen CodeのGitHubリリース（v0.28.4およびデスクトップ版）では、ウェブシェルローカルデーモンモードでのワークスペース成果物ライブラリページの追加や、ステートレスなホステッドハーネスに向けたアイドルセッションの一時停止に関する設計提案など、ハーネス側の状態管理の最適化が進められている [1][2]。",
+    "opinion_summary": "【解釈】今回の変化が示すのは、AIエージェントの「実用化の壁」がモデルの理解力からセキュリティとインフラの隔離レイヤーへ移動したという点である。これまで開発者は便利さのあまり、エージェントのローカル実行環境にAPIキーや資格情報を無防備に保持させがちだった。しかし、Claude Codeのシークレット露出問題が示すように、エージェントの自律性が高まるほど、ローカル環境の不十分な隠蔽や設定ミスが即座に組織全体のセキュリティリスクに直結する構造が明確になった [8]。この課題に対し、GoogleのAgent Compute EngineやQwen Codeのステートレス化・サンドボックス化の動きは、エージェントに「自由に動く権限」を与えつつ、資格情報や状態を厳格に分離するインフラが不可欠になっていることを裏付けている [2][9]。つまり、企業が求めるのは単なる賢いAIではなく、誤作動や情報漏洩を物理的・論理的に封じ込める堅牢な実行ハーネスである。主導権はモデル開発企業から、セキュアな実行環境やインフラを握るプレイヤーへ移行しつつある。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てを過大評価しないための条件として、市場の調整が単なる「一時的な金利・マクロ経済の動向に起因するテック株の利食い」に過ぎない可能性を考慮する必要がある。もしAnthropicや他の主要AIプレイヤーが次四半期以降も驚異的なB2B（企業間取引）での実需と利益率の改善を証明し続けた場合、現在の株価の低迷やウォール街の懸念は杞憂に終わり、再び巨額の資本がAIインフラへと集中する「拡大のサイクル」に回帰することになる。また、ハードウェアの供給制約が予想以上に緩和されれば、Nvidiaの求心力低下は一時的なノイズとして片付けられるだろう。",
+      "negative": "【反証・留保】この見立てが過大評価であると言える条件は、開発者がセキュリティの複雑さを嫌い、依然として「利便性と速度」を最優先してサンドボックス化されていないローカル実行環境を使い続けた場合である。もし、厳格なマイクロVMや外部ゲートウェイによる分離が「レイテンシの増大」や「開発体験の著しい低下」とみなされた場合、隔離されたセキュアなハーネスよりも、開発効率を優先した脆弱なローカルエージェントが現場で選ばれ続ける可能性もある。また、モデル単体の性能向上があまりに圧倒的であれば、セキュリティリスクを運用で力技でカバーするアプローチが再び支持されるかもしれない。この仮説が崩れるのは、企業がインフラの安全性よりも開発スピードを圧倒的に優先し、セキュリティインシデントのコストを許容し続けた場合である。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Anthropic’s Debut Shows the Disconnect Between Wall Street and Silicon Valley",
-        "source": "NYTimes Technology",
-        "url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html",
-        "point": "The A.I. giant broke records with its initial public offering this week before a rocky first full day of trading, as the"
+        "title": "Qwen GitHub｜Release v0.28.4",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4",
+        "point": "Highlights\n\nWeb Shell local daemon mode adds a workspace artifact library page with progressive scanning and streaming u"
       },
       {
         "rank": 2,
-        "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
-        "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
-        "point": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2"
+        "title": "Qwen GitHub｜Qwen Code Desktop v0.28.4",
+        "source": "Qwen GitHub",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.28.4",
+        "point": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix"
       },
       {
         "rank": 3,
-        "title": "A New Era of A.I.-Driven Chaos? That Might Just Be Progress.",
-        "source": "NYTimes Technology",
-        "url": "https://www.nytimes.com/2026/11/21/science/outages-tech-history.html",
-        "point": "If artificial intelligence is giving rise to outages, cyberattacks and more, it’s consistent with history, in that it sh"
+        "title": "InfoQ AI/ML｜Claude Code Has Been Leaking Secrets through its 'Don't Ask Again' Feature",
+        "source": "InfoQ AI/ML",
+        "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+        "point": "Agentic security firm Apiiro found that Claude Code has been exposing secrets in public repositories due to how it store"
       },
       {
         "rank": 4,
-        "title": "Alice Huang, Accused of Spying on Nvidia’s CEO, Is Linked to Firms With Ties to China’s Military",
-        "source": "NYTimes Technology",
-        "url": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html",
-        "point": "Companies linked to Alice Huang, the woman at the heart of the Nvidia scandal, are part of a network of Chinese tech fir"
+        "title": "InfoQ AI/ML｜Google Announces Agent Compute Engine for Secure AI Agent Execution",
+        "source": "InfoQ AI/ML",
+        "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+        "point": "Google recently announced Agent Compute Engine, a managed service that runs AI agents in isolated microVMs, with checkpo"
       }
     ],
     "joho_picks": [
       {
-        "headline": "AnthropicのIPOとNvidiaの変調が示すAIインフラの岐路",
+        "headline": "AIエージェントの主導権は「モデル単体」から「安全な実行ハーネス」へ移行する",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html",
+        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】Anthropicの歴史的な上場とNvidiaの株価・経営体制の揺らぎは、AI産業が「無限の拡大期」を終え、資本の論理と実利の狭間で冷徹な見直しを迫られる最初の分岐点に立ったことを示している。本稿では、公開市場におけるAI企業の評価の乖離、インフラを巡る地政学的リスク、そしてシステム障害やセキュリティの現実化という複数の材料を一つの緊張感ある問いに束ねる。いま、計算資源と資本の主導権は誰の手に移りつつあるのか。単なる技術的ブレイクスルーの礼賛ではなく、事業投資の判断軸がどこで変わり始めたかを読み解く。\n\n【事実】足元の市場環境と主要プレイヤーの動向は、AIエコシステムの成熟に伴うひずみを露わにしている。CNBCなどの報道によれば、AI開発企業であるAnthropicは米ナスダック市場へ歴史的なIPOを果たしたものの、その直後の取引では、Nvidiaの記録的な株価低迷と重なるようにハイテク株全体の記録的な売り急ぎ（テック・セルオフ）に直面した。ウォール街の慎重な姿勢と、シリコンバレーの拡大志向の間の乖離が鮮明になっている。同時に、ニューヨーク・タイムズは、Nvidiaのジェンセン・フアン最高経営責任者（CEO）を巡る組織運営の文化的プレッシャーや、中国の軍事関連企業と結びついたネットワークとの間に生じたスパイ疑惑に関する報道を行い、AI半導体の供給網と地政学を巡る不確実性を浮き彫りにした。さらに、Wiredなどの報道では、AIの急速な導入とそれに伴うシステムの自動パッチ適用が、インターネット全体で予測不可能な障害やサイバー攻撃の頻発を招いており、技術の社会実装がインフラの安定性を脅かす「混沌の時代」に入ったことが示されている。\n\n【解釈】この時期にAnthropicの巨額上場とNvidiaの動揺が同時に起きた背景には、AI投資の「投資フェーズから回収フェーズへの強制的な移行」がある。これまで市場は、AIのモデル性能向上やインフラ需要の拡大を無条件に好感し、巨額の資本投下を正当化してきた。しかし、IPOを果たしたAnthropicが市場の冷徹な洗礼を受けたことは、投資家が「売上高の規模」ではなく「持続可能な収益モデルとコスト規律」を求め始めている証左である。Nvidiaを巡るガバナンスやサプライチェーンの揺らぎもまた、特定のハードウェア提供者に過度に依存したインフラ構築モデルが、地政学的リスクや内部統制の問題によって突然頓挫し得るという構造的な脆弱性を露呈している。つまり、AI競争のルールは「計算資源をどれだけ集め、いかに速くモデルを巨大化させるか」から、「システム障害やセキュリティのコストをコントロールしつつ、実業でどう利益を出すか」へと変質しつつある。\n\n【競争の構図】\n【Anthropic】\nナスダックへの歴史的なIPOを果たしたが、市場のハイテク株売りと重なり、成長期待と収益性のバランスを厳しく問われる最初の試練に直面している。\n→ 非公開企業として自由な資金調達と安全性を優先できた立場から、今後は四半期ごとの利益成長とウォール街の厳格な規律に従わざるを得なくなり、安全性追求のスタンスに資本市場からの圧力がかかる。\n\n【Nvidia】\n史上最長の株価低迷週を記録する一方で、経営陣の統治構造や中国市場を巡る地政学的リスク、サプライチェーンの複雑さが表面化している。\n→ AIインフラの「絶対的な独占者」としての神話が揺らぎ、顧客企業や投資家は特定のハードウェア供給網に依存するリスクを真剣に計算し直す契機を迎えている。",
-        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）の数ではなく、AI導入に伴う「インフラとセキュリティの防衛ライン」である。AIの急速な導入がシステム障害や新たな脆弱性を生む「混沌の時代」に入った現在、やみくもに最先端のLLM（大規模言語モデル）を業務に組み込むことは、予期せぬ停止リスクや情報漏洩コストを跳ね上げる。情報システム部門および事業部門は、利用するAIモデルやクラウドベンダーのガバナンス体制、万が一のシステム停止時のフォールバック（代替）手順の再点検を急ぐべきだ。投資判断においては、華やかな機能の新規性よりも、安定稼働とコスト効率が担保された実用的な基盤の選択へと軸足を移すべき時機にある。\n\n【反証・留保】この見立てを過大評価しないための条件として、市場の調整が単なる「一時的な金利・マクロ経済の動向に起因するテック株の利食い」に過ぎない可能性を考慮する必要がある。もしAnthropicや他の主要AIプレイヤーが次四半期以降も驚異的なB2B（企業間取引）での実需と利益率の改善を証明し続けた場合、現在の株価の低迷やウォール街の懸念は杞憂に終わり、再び巨額の資本がAIインフラへと集中する「拡大のサイクル」に回帰することになる。また、ハードウェアの供給制約が予想以上に緩和されれば、Nvidiaの求心力低下は一時的なノイズとして片付けられるだろう。",
-        "context": "【次の観測点】\n・Anthropicの次回四半期決算におけるキャッシュバーン（資金枯渇）のペースとB2B顧客の継続率\n・Nvidiaのサプライチェーンおよびガバナンス問題を巡る米規制当局や市場のさらなる公式処分・調査の有無\n・AI導入企業の間でのシステム障害（アウトage）やセキュリティインシデントの発生頻度の推移"
+        "body": "【結論】AI競争の優劣を決める主戦場は、推論モデルの単体性能から、エージェントを取り囲む実行環境（ハーネス）とセキュリティ基盤へ移行した。かつてはモデルの賢さが価値の中心だったが、現在はエージェントが自律的にコードやデータを扱う際の「安全な接続・隔離・資格情報の管理」こそが実運用の成否を握る。本稿では、Qwen Codeのローカル実行環境の改良や、Googleが発表した「Agent Compute Engine」、そしてClaude Codeの資格情報露出問題など、実務を揺るがす具体的な材料を束ね、インフラとセキュリティの新たな力学を読み解く。\n\n【事実】QCon San Francisco 2026では、Mad Labsの創業者マンジュ・ラジャシェカール氏が「ハーネスが新しいオペレーティングシステムになる」と基調講演で述べ、文脈・ツール・状態・権限を制御するハーネスこそがエージェントの能力と安全性を決定づけると指摘した [11]。こうしたなか、開発現場での実運用における脆弱性が表面化している。InfoQの報道によれば、エージェントセキュリティ企業Apiiroの調査により、Anthropicの「Claude Code」が「Don't Ask Again」機能の実装において、設定ファイルやgit履歴、チャットトランスクリプトにシークレット情報をローカル保存し、公開リポジトリへ誤って漏洩させていたことが判明した [8]。1,122件のシークレットがclaude/settings.local.jsonから、さらに1,160件がgit履歴等から見つかっている [8]。これに対し、インフラストラクチャ側での対抗策も動き出している。Googleは、AIエージェントを隔離されたマイクロVM上で実行し、資格情報やAPIキー、OAuthリフレッシュトークンをエージェントのサンドボックス外に保持した上で、外部の「Agent Gateway」を介して認証と資格情報の注入を行うマネージドサービス「Agent Compute Engine」を発表した [9]。また、Qwen CodeのGitHubリリース（v0.28.4およびデスクトップ版）では、ウェブシェルローカルデーモンモードでのワークスペース成果物ライブラリページの追加や、ステートレスなホステッドハーネスに向けたアイドルセッションの一時停止に関する設計提案など、ハーネス側の状態管理の最適化が進められている [1][2]。\n\n【解釈】今回の変化が示すのは、AIエージェントの「実用化の壁」がモデルの理解力からセキュリティとインフラの隔離レイヤーへ移動したという点である。これまで開発者は便利さのあまり、エージェントのローカル実行環境にAPIキーや資格情報を無防備に保持させがちだった。しかし、Claude Codeのシークレット露出問題が示すように、エージェントの自律性が高まるほど、ローカル環境の不十分な隠蔽や設定ミスが即座に組織全体のセキュリティリスクに直結する構造が明確になった [8]。この課題に対し、GoogleのAgent Compute EngineやQwen Codeのステートレス化・サンドボックス化の動きは、エージェントに「自由に動く権限」を与えつつ、資格情報や状態を厳格に分離するインフラが不可欠になっていることを裏付けている [2][9]。つまり、企業が求めるのは単なる賢いAIではなく、誤作動や情報漏洩を物理的・論理的に封じ込める堅牢な実行ハーネスである。主導権はモデル開発企業から、セキュアな実行環境やインフラを握るプレイヤーへ移行しつつある。\n\n【競争の構図】\n【Anthropic】\nClaude Codeのローカル設定保存機能に起因するシークレット露出問題が表面化し、開発者向けエージェントのセキュリティガバナンスで厳しい見直しを迫られている [8]。\n→ 高いコーディング性能で獲得した開発者からの信頼に対し、実運用における安全性とプライバシー管理の脆弱性が弱点として露呈している [8]。\n\n【Google / DeepMind】\nエージェントを隔離されたマイクロVMで実行し、資格情報をサンドボックス外に保持する「Agent Compute Engine」を発表した [9]。\n→ モデルの賢さだけでなく、エンタープライズが求める「安全な実行インフラ」の主導権を握り、セキュアなエージェント実行のデファクトスタンダードを狙う [9]。\n\n【Qwen（Alibaba陣営）】\nQwen Codeのアップデートでローカルデーモンモードの拡充や、ステートレスなホステッドハーネスに向けたセッションの一時停止設計を進めている [1][2]。\n→ オープンかつ柔軟なローカル実行環境の利便性を維持しつつ、状態管理とセキュリティのバランスを取る独自のエコシステムを強化している [1][2]。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、社内で稼働する、あるいは導入を検討しているAIコーディングツールや自律型エージェントの「資格情報の置き場所と実行権限」である。Claude Codeの事例のように、開発者のローカル環境やリポジトリにAPIキーや認証情報が平文や隠し設定として保存されていないかを直ちに監査する必要がある [8]。また、単に「どのLLMモデルを使うか」の比較にとどまらず、GoogleのAgent Compute EngineやAWS LambdaのGPU推論活用に見られるように、エージェントを安全なマイクロVMや管理されたサンドボックス環境でどう隔離・実行するかというインフラ側の調達基準を調達・セキュリティ部門と共同で再定義することが急務となる [9][10]。\n\n【反証・留保】この見立てが過大評価であると言える条件は、開発者がセキュリティの複雑さを嫌い、依然として「利便性と速度」を最優先してサンドボックス化されていないローカル実行環境を使い続けた場合である。もし、厳格なマイクロVMや外部ゲートウェイによる分離が「レイテンシの増大」や「開発体験の著しい低下」とみなされた場合、隔離されたセキュアなハーネスよりも、開発効率を優先した脆弱なローカルエージェントが現場で選ばれ続ける可能性もある。また、モデル単体の性能向上があまりに圧倒的であれば、セキュリティリスクを運用で力技でカバーするアプローチが再び支持されるかもしれない。この仮説が崩れるのは、企業がインフラの安全性よりも開発スピードを圧倒的に優先し、セキュリティインシデントのコストを許容し続けた場合である。",
+        "context": "【次の観測点】\n・主要なAIエージェント・ツールにおける資格情報管理手法のセキュリティパッチ適用状況\n・エンタープライズ向けクラウドベンダーによる隔離型マイクロVM環境の価格競争と導入事例\n・金融やインフラなど規制の厳しい業界における、サードパーティ製AIエージェントの利用禁止・制限ルールの広がり"
       }
     ]
   },
   "raw_articles": [
     {
-      "source": "TechCrunch AI",
-      "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
-      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
-      "summary": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
-      "published": "2026-11-21 21:37 UTC",
-      "pub_dt": "2026-11-21T21:37:10+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "v2026.11.7",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.7",
+      "summary": "OpenClaw 2026.11.7",
+      "published": "2026-11-22 23:53 UTC",
+      "pub_dt": "2026-11-22T23:53:26+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "QCon San Francisco 2026: The Harness Is the New Operating System",
+      "url": "https://www.infoq.com/news/2026/11/harness-new-operating-system/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "At QCon San Francisco 2026, Mad Labs founder and CEO Manju Rajashekhar opened the conference arguing that the harness around an AI model, rather than the model itself, decides what an agent can do and how safely it does it. The keynote mapped the parts of a harness, including context, tools, state, permissions and feedback loops, onto jobs that operating systems already perform. By Andrew Hoblitzell",
+      "published": "2026-11-22 22:44 UTC",
+      "pub_dt": "2026-11-22T22:44:00+00:00"
     },
     {
       "source": "TechCrunch AI",
-      "title": "A tale of two Nvidias",
-      "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
-      "summary": "We got two very different pictures of Nvidia —  the company’s latest earnings report vs. the tech executives loudly calling for Jensen Huang’s return.",
-      "published": "2026-11-21 21:07 UTC",
-      "pub_dt": "2026-11-21T21:07:42+00:00"
+      "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+      "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+      "summary": "To establish a speed limit on AI development, you need to agree on how to measure speed.",
+      "published": "2026-11-22 21:14 UTC",
+      "pub_dt": "2026-11-22T21:14:07+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Why data centers are at the center of the Big Tech backlash",
+      "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+      "summary": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+      "published": "2026-11-22 18:08 UTC",
+      "pub_dt": "2026-11-22T18:08:43+00:00"
     },
     {
       "source": "The Verge AI",
-      "title": "The UN fails to agree on rules regulating ‘killer robots’",
-      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
-      "summary": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the [&#8230;]",
-      "published": "2026-11-21 20:03 UTC",
-      "pub_dt": "2026-11-21T20:03:37+00:00"
+      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+      "summary": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to [&#8230;]",
+      "published": "2026-11-22 17:25 UTC",
+      "pub_dt": "2026-11-22T17:25:20+00:00"
     },
     {
-      "source": "NYTimes Technology",
-      "title": "G.T.A. VI Is a Monumental Human Achievement",
-      "url": "https://www.nytimes.com/2026/11/20/podcasts/hardfork-gta6-nvidia-anthropic.html",
-      "summary": "Anthropic goes public, Jensen Huang wants back in at Nvidia, and software patches seem to be breaking everything. But first, let’s talk about G.T.A.",
-      "published": "2026-11-21 19:12 UTC",
-      "pub_dt": "2026-11-21T19:12:00+00:00"
+      "source": "Axios",
+      "title": "Behind the Curtain — AI 2027: The reckoning",
+      "url": "https://www.axios.com/2026/11/22/behind-the-curtain-ai-2027-the-reckoning",
+      "summary": "We've talked to more than 50 leaders in government, AI, business and cyber — from let-'er-rip AI accelerationists to shut-'er-down critics — and they were unanimous on one chilling assessment:Cyberattacks on business and critical infrastructure will be constant, increasingly sophisticated and highly disruptive over the next 18 months.These leaders describe 2027 as the year cyber becomes like weather: Outages will be frequent, disruptive, occasionally scary, and something people and companies mus",
+      "published": "2026-11-22 13:36 UTC",
+      "pub_dt": "2026-11-22T13:36:46+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "Here are the top AI agents that can live in your text messages",
-      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
-      "published": "2026-11-21 17:00 UTC",
-      "pub_dt": "2026-11-21T17:00:00+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
-      "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
-      "summary": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008.",
-      "published": "2026-11-21 16:40 UTC",
-      "pub_dt": "2026-11-21T16:40:05+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
-      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
-      "summary": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
-      "published": "2026-11-21 16:00 UTC",
-      "pub_dt": "2026-11-21T16:00:00+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "How Jensen Huang Made Humiliation Routine at Nvidia",
-      "url": "https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html",
-      "summary": "The Nvidia co-founder’s belittling behavior toward employees goes back decades. It once led to a confidential settlement agreement with an executive who said Mr. Huang “terrorized” staff.",
-      "published": "2026-11-21 15:55 UTC",
-      "pub_dt": "2026-11-21T15:55:46+00:00"
+      "source": "Qwen GitHub",
+      "title": "Release v0.28.4",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4",
+      "summary": "Highlights\n\nWeb Shell local daemon mode adds a workspace artifact library page with progressive scanning and streaming updates. (#18071)\nWeb Shell chat adds a shared ChatSurface, Continue badges, suggestion chips, and mobile layout fixes for sessions. (#17952, #18044, #17918, #17883, #18011)\nCore adds built-in Gemini 4 reasoning defaults. (#18039)\nLocal Runtime now creates its state directory at process spawn with owner-private permissions. (#17964)\nCommand migration creates Markdown destination",
+      "published": "2026-11-22 13:24 UTC",
+      "pub_dt": "2026-11-22T13:24:12+00:00"
     },
     {
       "source": "The Verge AI",
-      "title": "Can Anthropic afford to put safety first?",
-      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
-      "summary": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to [&#8230;]",
-      "published": "2026-11-21 15:00 UTC",
-      "pub_dt": "2026-11-21T15:00:00+00:00"
+      "title": "The vibe-coding revolution is coming to all the gadgets",
+      "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
+      "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the vibe-hacking of everything, follow David Pierce. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started Like so many things with AI, it's not [&#8230;]",
+      "published": "2026-11-22 13:00 UTC",
+      "pub_dt": "2026-11-22T13:00:00+00:00"
+    },
+    {
+      "source": "Qwen GitHub",
+      "title": "Qwen Code Desktop v0.28.4",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.28.4",
+      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
+      "published": "2026-11-22 12:52 UTC",
+      "pub_dt": "2026-11-22T12:52:42+00:00"
     },
     {
       "source": "Wired",
-      "title": "The Outages Are Just Getting Started",
-      "url": "https://www.wired.com/story/brace-yourself-for-years-of-outage-chaos/",
-      "summary": "AI is forcing companies to patch their systems faster as attackers race to exploit newly discovered vulnerabilities. Welcome to internet outage hell.",
-      "published": "2026-11-21 13:00 UTC",
-      "pub_dt": "2026-11-21T13:00:00+00:00"
+      "title": "Banks Have Had It Up to Here With Your AI Agent",
+      "url": "https://www.wired.com/story/banks-are-cracking-down-on-ai-agents/",
+      "summary": "Major US financial institutions are banning third-party bots from logging into your accounts—and warning that any costly bot mistakes are strictly your problem.",
+      "published": "2026-11-22 11:00 UTC",
+      "pub_dt": "2026-11-22T11:00:00+00:00"
     },
     {
-      "source": "NYTimes Technology",
-      "title": "Anthropic’s Debut Shows the Disconnect Between Wall Street and Silicon Valley",
-      "url": "https://www.nytimes.com/2026/11/21/business/anthropic-stock-wall-street-silicon-valley.html",
-      "summary": "The A.I. giant broke records with its initial public offering this week before a rocky first full day of trading, as the markets plunged on worries about artificial intelligence spending.",
-      "published": "2026-11-21 10:03 UTC",
-      "pub_dt": "2026-11-21T10:03:45+00:00"
+      "source": "InfoQ AI/ML",
+      "title": "Claude Code Has Been Leaking Secrets through its \"Don't Ask Again\" Feature",
+      "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "Agentic security firm Apiiro found that Claude Code has been exposing secrets in public repositories due to how it stores them in local file on developers' machines to implement \"Don't Ask Again\". The company identified 1,122 secrets in claude/settings.local.json files and another 1,160 in git history, in the shared settings.json, and in agent chat transcripts stored in repos. By Sergio De Simone",
+      "published": "2026-11-22 11:00 UTC",
+      "pub_dt": "2026-11-22T11:00:00+00:00"
     },
     {
-      "source": "NYTimes Technology",
-      "title": "A New Era of A.I.-Driven Chaos? That Might Just Be Progress.",
-      "url": "https://www.nytimes.com/2026/11/21/science/outages-tech-history.html",
-      "summary": "If artificial intelligence is giving rise to outages, cyberattacks and more, it’s consistent with history, in that it shows how new innovations often set off calamitous failure before they make life better.",
-      "published": "2026-11-21 10:02 UTC",
-      "pub_dt": "2026-11-21T10:02:10+00:00"
+      "source": "InfoQ AI/ML",
+      "title": "Google Announces Agent Compute Engine for Secure AI Agent Execution",
+      "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "Google recently announced Agent Compute Engine, a managed service that runs AI agents in isolated microVMs, with checkpointing capabilities to suspend and resume execution environments. The design keeps credentials, API keys, and OAuth refresh tokens outside the agent sandbox, using an external Agent Gateway to authenticate requests and inject the required secrets. By Renato Losio",
+      "published": "2026-11-22 06:30 UTC",
+      "pub_dt": "2026-11-22T06:30:00+00:00"
     },
     {
-      "source": "Last Week in AI",
-      "title": "Last Week in AI #348 - IPO->Correction, new GPTs and Geminis, Nvidia’s Fate",
-      "url": "https://lastweekin.ai/p/last-week-in-ai-348-ipo-correction",
-      "summary": "Anthropic's $81B IPO, AI stocks enter a correction, Huang resigns from Nvidia, Trump and Xi agree on military AI",
-      "published": "2026-11-21 08:41 UTC",
-      "pub_dt": "2026-11-21T08:41:43+00:00"
+      "source": "InfoQ AI/ML",
+      "title": "AWS Lambda Now Runs GPU Inference with 48 Concurrent Invocations Sharing One Model per GPU",
+      "url": "https://www.infoq.com/news/2026/11/aws-lambda-gpu-managed-instances/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "AWS Lambda now runs Event Functions on EC2 G-series GPU instances through Lambda Managed Instances, with up to 48 concurrent invocations sharing one model per GPU, vLLM and SGLang base images that need no handler code, and 90-minute asynchronous timeouts. Billing is the instance price plus a 9.75 percent fee; first hands-on tests report an eight-minute publish and no response streaming. By Steef-Jan Wiggers",
+      "published": "2026-11-22 06:27 UTC",
+      "pub_dt": "2026-11-22T06:27:00+00:00"
     },
     {
-      "source": "OpenClaw GitHub",
-      "title": "openclaw 2026.11.6",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6",
-      "summary": "OpenClaw v2026.11.6\n406 commits · 386 pull requests · 157 contributors\nChanges included in this release\nThe release notes and changelog contain the same content, presented in two formats:\n\nRelease notes — formatted for people.\nChangelog — plain Markdown for AI agents and tools.\n\nThanks\n@609NFT @abacha @akifodabas @akmad @Alix-007 @amittell @Angelojiang11 @Anurag-5ingh @Aribarambo @ayaangazali @Barry-886 @bdjben @ben-milanko @boeingchoco @brainatworkharris @brainmonger @brianmcguire @brokemac79 @",
-      "published": "2026-11-21 06:05 UTC",
-      "pub_dt": "2026-11-21T06:05:17+00:00"
-    },
-    {
-      "source": "NYTimes Technology",
-      "title": "Alice Huang, Accused of Spying on Nvidia’s CEO, Is Linked to Firms With Ties to China’s Military",
-      "url": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html",
-      "summary": "Companies linked to Alice Huang, the woman at the heart of the Nvidia scandal, are part of a network of Chinese tech firms and defense contractors that need advanced computing power.",
-      "published": "2026-11-21 05:13 UTC",
-      "pub_dt": "2026-11-21T05:13:03+00:00"
+      "source": "Analytics Vidhya",
+      "title": "Positional Embeddings Explained: How LLMs Understand Word Order",
+      "url": "https://www.analyticsvidhya.com/blog/2026/11/positional-embeddings-explained-llm-word-order/",
+      "summary": "&#8220;The dog hunted the fox.&#8221; &#8220;The fox hunted the dog.&#8221; They are the same words, but the meanings are totally different. You can note the difference at once, but a transformer can&#8217;t. This is the problem which positional embeddings solve. They inform a language model about the position of each token in the sentence. Without [&#8230;]\nThe post Positional Embeddings Explained: How LLMs Understand Word Order appeared first on Analytics Vidhya.",
+      "published": "2026-11-22 05:46 UTC",
+      "pub_dt": "2026-11-22T05:46:07+00:00"
     }
   ]
 }
