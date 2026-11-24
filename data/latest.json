@@ -1,215 +1,238 @@
 {
-  "timestamp": "2026-11-23T10:21:16.035489+09:00",
-  "time_slot": "朝",
+  "timestamp": "2026-11-24T14:06:29.046642+09:00",
+  "time_slot": "昼",
   "summary": {
-    "headline": "AIエージェントの主導権は「モデル単体」から「安全な実行ハーネス」へ移行する",
-    "thesis": "AI競争の主軸は、単体のLLM性能から、資格情報や状態を安全に管理・隔離する「ハーネス（実行環境）」の設計へ急速にシフトしている。",
-    "opening": "【結論】AI競争の優劣を決める主戦場は、推論モデルの単体性能から、エージェントを取り囲む実行環境（ハーネス）とセキュリティ基盤へ移行した。かつてはモデルの賢さが価値の中心だったが、現在はエージェントが自律的にコードやデータを扱う際の「安全な接続・隔離・資格情報の管理」こそが実運用の成否を握る。本稿では、Qwen Codeのローカル実行環境の改良や、Googleが発表した「Agent Compute Engine」、そしてClaude Codeの資格情報露出問題など、実務を揺るがす具体的な材料を束ね、インフラとセキュリティの新たな力学を読み解く。",
-    "what_happened": "【事実】QCon San Francisco 2026では、Mad Labsの創業者マンジュ・ラジャシェカール氏が「ハーネスが新しいオペレーティングシステムになる」と基調講演で述べ、文脈・ツール・状態・権限を制御するハーネスこそがエージェントの能力と安全性を決定づけると指摘した [11]。こうしたなか、開発現場での実運用における脆弱性が表面化している。InfoQの報道によれば、エージェントセキュリティ企業Apiiroの調査により、Anthropicの「Claude Code」が「Don't Ask Again」機能の実装において、設定ファイルやgit履歴、チャットトランスクリプトにシークレット情報をローカル保存し、公開リポジトリへ誤って漏洩させていたことが判明した [8]。1,122件のシークレットがclaude/settings.local.jsonから、さらに1,160件がgit履歴等から見つかっている [8]。これに対し、インフラストラクチャ側での対抗策も動き出している。Googleは、AIエージェントを隔離されたマイクロVM上で実行し、資格情報やAPIキー、OAuthリフレッシュトークンをエージェントのサンドボックス外に保持した上で、外部の「Agent Gateway」を介して認証と資格情報の注入を行うマネージドサービス「Agent Compute Engine」を発表した [9]。また、Qwen CodeのGitHubリリース（v0.28.4およびデスクトップ版）では、ウェブシェルローカルデーモンモードでのワークスペース成果物ライブラリページの追加や、ステートレスなホステッドハーネスに向けたアイドルセッションの一時停止に関する設計提案など、ハーネス側の状態管理の最適化が進められている [1][2]。",
-    "why_now": "【解釈】今回の変化が示すのは、AIエージェントの「実用化の壁」がモデルの理解力からセキュリティとインフラの隔離レイヤーへ移動したという点である。これまで開発者は便利さのあまり、エージェントのローカル実行環境にAPIキーや資格情報を無防備に保持させがちだった。しかし、Claude Codeのシークレット露出問題が示すように、エージェントの自律性が高まるほど、ローカル環境の不十分な隠蔽や設定ミスが即座に組織全体のセキュリティリスクに直結する構造が明確になった [8]。この課題に対し、GoogleのAgent Compute EngineやQwen Codeのステートレス化・サンドボックス化の動きは、エージェントに「自由に動く権限」を与えつつ、資格情報や状態を厳格に分離するインフラが不可欠になっていることを裏付けている [2][9]。つまり、企業が求めるのは単なる賢いAIではなく、誤作動や情報漏洩を物理的・論理的に封じ込める堅牢な実行ハーネスである。主導権はモデル開発企業から、セキュアな実行環境やインフラを握るプレイヤーへ移行しつつある。",
-    "counterpoint": "【反証・留保】この見立てが過大評価であると言える条件は、開発者がセキュリティの複雑さを嫌い、依然として「利便性と速度」を最優先してサンドボックス化されていないローカル実行環境を使い続けた場合である。もし、厳格なマイクロVMや外部ゲートウェイによる分離が「レイテンシの増大」や「開発体験の著しい低下」とみなされた場合、隔離されたセキュアなハーネスよりも、開発効率を優先した脆弱なローカルエージェントが現場で選ばれ続ける可能性もある。また、モデル単体の性能向上があまりに圧倒的であれば、セキュリティリスクを運用で力技でカバーするアプローチが再び支持されるかもしれない。この仮説が崩れるのは、企業がインフラの安全性よりも開発スピードを圧倒的に優先し、セキュリティインシデントのコストを許容し続けた場合である。",
-    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、社内で稼働する、あるいは導入を検討しているAIコーディングツールや自律型エージェントの「資格情報の置き場所と実行権限」である。Claude Codeの事例のように、開発者のローカル環境やリポジトリにAPIキーや認証情報が平文や隠し設定として保存されていないかを直ちに監査する必要がある [8]。また、単に「どのLLMモデルを使うか」の比較にとどまらず、GoogleのAgent Compute EngineやAWS LambdaのGPU推論活用に見られるように、エージェントを安全なマイクロVMや管理されたサンドボックス環境でどう隔離・実行するかというインフラ側の調達基準を調達・セキュリティ部門と共同で再定義することが急務となる [9][10]。",
+    "headline": "AI実用化の足元で進むインフラの囲い込みと安全統御の攻防",
+    "thesis": "AI競争の主戦場は単なるモデルの性能向上から、インフラ供給の安全統御、自律型エージェントの運用信頼性、そして国家統制と結びついたチップ流通の覇権争いへと本格的にシフトしている。",
+    "opening": "【結論】AI競争の重心は、LLM（大規模言語モデル）の単なるベンチマーク性能の誇示から、実務の現場でシステムをどう安全に動かし、インフラや流通の主導権を誰が握るかという「実行力と統制」のフェーズへ移行した。本稿では、OpenAIによるセキュリティ・インフラ展開、自律エージェント基盤のアップデート、そしてNVIDIAの経営体制をめぐる米政界・規制当局の動向を一つの緊張感ある問いとして束ねる。いま問われているのは、次世代AIを駆動する計算資源と実システムが、どの企業・陣営の統制下で流通・運用されるかというインフラの主導権争奪戦である。",
+    "what_happened": "【事実】OpenAIはシスコシステムズと共同で、パッチ適用時のシステム保護を行うオープンソースのLinuxランタイム「Shirudo」を発表した。同時に、カスタマーサポート向けの「Richpanel」事例ではGPT-6世代のモデル群（Astra、Sol、Luna）が実務のエージェントツールとして組み込まれていることが示された。一方、開発者コミュニティの間で利用されるオープンソースの自律エージェント基盤「OpenClaw」のベータ版（2026.11.10-beta.2およびbeta.3）では、クラッシュ時や再起動をまたいだパッケージ更新のリカバリ機能や、ゲートウェイ再起動後もサブエージェントの完了結果を保持・配送し続ける信頼性向上のアップデートが相次いで行われている。ハードウェアおよび地政学の側面では、米トランプ政権がNVIDIA製チップの流通・転売問題に関連し、シンガポールのメガスピード社を含む企業群を貿易ブラックリスト（エンティティ・リスト）に追加した。これに呼応するように、Nvidiaのジェンスン・フアンCEOの復帰劇をめぐっては、市場の株価急騰やアジアの関連株上昇を引き起こした一方で、米議会の超党派から国家安全保障上のリスクを問う厳しい反発や調査の動きが表面化している。さらに、SpaceXが競合であるAnthropic等へ自社データセンターの計算資源を貸し出しているという報道や、OpenAIのエンジニアによる機密情報の秘密録音事件なども浮上し、AI産業の足元では安全保障と信頼性をめぐる摩擦が多層的に同時発生している。",
+    "why_now": "【解釈】今回の動きが示すのは、AI活用の主軸が「いかに賢いモデルを作るか」から「中断せずに稼働し続けるシステムをどう維持するか」というインフラ・運用レイヤーへ移動したことである。OpenAIの「Shirudo」やOpenClawのアップデートは、AIが自律的、あるいは頻繁にバックグラウンドで動作するようになった結果として顕在化した「停止リスク」「更新時のクラッシュ」「データの取りこぼし」という実務上のボトルネックを解消するための必然的な手当てである。単発の対話から、システム全体のランタイムやサブエージェントのライフサイクル管理へコストと技術投資の重心が移っている。同時に、米政権による輸出管理の厳格化とフアンCEO復帰への議会反発は、AIの計算資源（シリコン）とインフラの供給網が、もはや単なる民間企業の経済合理性だけで動かず、国家安全保障の直接的な管理下で組み替えられつつある現実を浮き彫りにしている。計算資源の貸し出しを行うSpaceXの動きを含め、プレイヤーは限られたインフラとセキュリティの確保を巡り、自社の持続可能性と外部への提供のバランスという複雑なジレンマに直面している。",
+    "counterpoint": "【反証・留保】この見立てが過大評価であると言えるのは、自律エージェントの安定化やランタイムの整備が、単なる一過性のソフトウェア保守の域を出ず、実際の企業利益に結びつかない場合である。もし、規制やセキュリティの強化が過剰な足枷となり、AI導入のスピードそのものを鈍化させた場合、あるいは米議会の調査や輸出管理の強化がNVIDIAを含むサプライチェーンの調達コストを致命的に引き上げ、エコシステム全体の成長を急減速させた場合には、「インフラの主導権争い」という構図自体が機能しなくなる。つまり、実務上の信頼性向上の試みが、重すぎるコンプライアンス負荷によって相殺されるシナリオが現実化すれば、この解釈は崩れることになる。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）の精度評価ではなく、AIシステムを本番環境で「安全に運用・更新し続けるためのランタイム設計」と「ハードウェア・クラウドの調達リスク管理」である。モデルの性能比較に予算を割く段階は過ぎており、OpenAIとシスコの連携やOpenClawのアップデート動向に見るような、クラッシュ耐性やパッチ適時のシステム保護を組み込んだアーキテクチャの導入が急務となる。また、米国の輸出管理や議会の動きがアジアの半導体・クラウド調達に波及するリスクを前提に、特定のサプライヤーや計算資源に依存しないマルチクラウド戦略および調達先の冗長化を、実務レベルの調達計画として今すぐ再点検すべきである。",
     "company_positions": [
       {
-        "company": "Anthropic",
-        "status": "Claude Codeのローカル設定保存機能に起因するシークレット露出問題が表面化し、開発者向けエージェントのセキュリティガバナンスで厳しい見直しを迫られている [8]。",
-        "implication": "高いコーディング性能で獲得した開発者からの信頼に対し、実運用における安全性とプライバシー管理の脆弱性が弱点として露呈している [8]。"
+        "company": "OpenAI",
+        "status": "Ciscoとのオープンソースランタイム「Shirudo」の投入や、企業向けサポート・法務分野での実務エージェント展開を進める。",
+        "implication": "単なるモデル提供者から、企業の基幹システムやセキュリティ・ランタイムのレイヤーまで囲い込むことで、顧客に対するスイッチングコストを高めている。"
       },
       {
-        "company": "Google / DeepMind",
-        "status": "エージェントを隔離されたマイクロVMで実行し、資格情報をサンドボックス外に保持する「Agent Compute Engine」を発表した [9]。",
-        "implication": "モデルの賢さだけでなく、エンタープライズが求める「安全な実行インフラ」の主導権を握り、セキュアなエージェント実行のデファクトスタンダードを狙う [9]。"
+        "company": "NVIDIA",
+        "status": "ジェンスン・フアンCEOの復帰により市場の信頼と株価は持ち直したものの、米議会からは国家安全保障上の厳しい視線が注がれている。",
+        "implication": "圧倒的なチップの供給力と市場支配力を持つ一方で、政治的・規制的な逆風が強まり、サプライチェーンの自由度や経営の安定性に不確実性が増している。"
       },
       {
-        "company": "Qwen（Alibaba陣営）",
-        "status": "Qwen Codeのアップデートでローカルデーモンモードの拡充や、ステートレスなホステッドハーネスに向けたセッションの一時停止設計を進めている [1][2]。",
-        "implication": "オープンかつ柔軟なローカル実行環境の利便性を維持しつつ、状態管理とセキュリティのバランスを取る独自のエコシステムを強化している [1][2]。"
+        "company": "SpaceX",
+        "status": "自社データセンターの計算資源を競合であるAnthropicなどに賃貸している。",
+        "implication": "潤沢な計算資源を収益化する合理的な動きである一方、自社のAI開発ロードマップと競合へのインフラ提供のバランスという難しいジレンマを抱えている。"
       }
     ],
     "next_signals": [
-      "主要なAIエージェント・ツールにおける資格情報管理手法のセキュリティパッチ適用状況",
-      "エンタープライズ向けクラウドベンダーによる隔離型マイクロVM環境の価格競争と導入事例",
-      "金融やインフラなど規制の厳しい業界における、サードパーティ製AIエージェントの利用禁止・制限ルールの広がり"
+      "米議会および規制当局によるNVIDIAの経営体制や輸出管理に関する具体的な調査・追加措置の有無",
+      "OpenAIの「Shirudo」などのランタイムやOpenClaw等の自律エージェント基盤が、実際のエンタープライズ本番環境でどの程度採用されるかの実例",
+      "シンガポールのメガスピード社をはじめとする制裁対象企業のサプライチェーンが、アジア地域の半導体流通に与える実際の遅延や価格変動"
     ],
     "sources": [
       {
-        "title": "Qwen GitHub｜Release v0.28.4",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4"
+        "title": "OpenAI and Cisco introduce Shirudo",
+        "url": "https://openai.com/index/introducing-shirudo"
       },
       {
-        "title": "Qwen GitHub｜Qwen Code Desktop v0.28.4",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.28.4"
+        "title": "Richpanel helps companies automate 50% of support in 30 days",
+        "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support"
       },
       {
-        "title": "InfoQ AI/ML｜Claude Code Has Been Leaking Secrets through its 'Don't Ask Again' Feature",
-        "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
+        "title": "openclaw/openclaw releases/tag/v2026.11.10-beta.3",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.3"
       },
       {
-        "title": "InfoQ AI/ML｜Google Announces Agent Compute Engine for Secure AI Agent Execution",
-        "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
+        "title": "Elon Musk Faces an A.I. Dilemma at SpaceX",
+        "url": "https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html"
+      },
+      {
+        "title": "U.S. adds Megaspeed to trade blacklist over export control concerns amid Nvidia controversy",
+        "url": "https://www.cnbc.com/2026/11/24/us-adds-megaspeed-to-trade-blacklist-over-export-control-concerns-.html"
+      },
+      {
+        "title": "Jensen Huang's return to Nvidia sparks bipartisan backlash on Capitol Hill",
+        "url": "https://www.axios.com/2026/11/23/jensen-huang-nvidia-congress-dc-reaction"
       }
     ],
-    "news_summary": "AI競争の主軸は、単体のLLM性能から、資格情報や状態を安全に管理・隔離する「ハーネス（実行環境）」の設計へ急速にシフトしている。\n\n【事実】QCon San Francisco 2026では、Mad Labsの創業者マンジュ・ラジャシェカール氏が「ハーネスが新しいオペレーティングシステムになる」と基調講演で述べ、文脈・ツール・状態・権限を制御するハーネスこそがエージェントの能力と安全性を決定づけると指摘した [11]。こうしたなか、開発現場での実運用における脆弱性が表面化している。InfoQの報道によれば、エージェントセキュリティ企業Apiiroの調査により、Anthropicの「Claude Code」が「Don't Ask Again」機能の実装において、設定ファイルやgit履歴、チャットトランスクリプトにシークレット情報をローカル保存し、公開リポジトリへ誤って漏洩させていたことが判明した [8]。1,122件のシークレットがclaude/settings.local.jsonから、さらに1,160件がgit履歴等から見つかっている [8]。これに対し、インフラストラクチャ側での対抗策も動き出している。Googleは、AIエージェントを隔離されたマイクロVM上で実行し、資格情報やAPIキー、OAuthリフレッシュトークンをエージェントのサンドボックス外に保持した上で、外部の「Agent Gateway」を介して認証と資格情報の注入を行うマネージドサービス「Agent Compute Engine」を発表した [9]。また、Qwen CodeのGitHubリリース（v0.28.4およびデスクトップ版）では、ウェブシェルローカルデーモンモードでのワークスペース成果物ライブラリページの追加や、ステートレスなホステッドハーネスに向けたアイドルセッションの一時停止に関する設計提案など、ハーネス側の状態管理の最適化が進められている [1][2]。",
-    "opinion_summary": "【解釈】今回の変化が示すのは、AIエージェントの「実用化の壁」がモデルの理解力からセキュリティとインフラの隔離レイヤーへ移動したという点である。これまで開発者は便利さのあまり、エージェントのローカル実行環境にAPIキーや資格情報を無防備に保持させがちだった。しかし、Claude Codeのシークレット露出問題が示すように、エージェントの自律性が高まるほど、ローカル環境の不十分な隠蔽や設定ミスが即座に組織全体のセキュリティリスクに直結する構造が明確になった [8]。この課題に対し、GoogleのAgent Compute EngineやQwen Codeのステートレス化・サンドボックス化の動きは、エージェントに「自由に動く権限」を与えつつ、資格情報や状態を厳格に分離するインフラが不可欠になっていることを裏付けている [2][9]。つまり、企業が求めるのは単なる賢いAIではなく、誤作動や情報漏洩を物理的・論理的に封じ込める堅牢な実行ハーネスである。主導権はモデル開発企業から、セキュアな実行環境やインフラを握るプレイヤーへ移行しつつある。",
+    "news_summary": "AI競争の主戦場は単なるモデルの性能向上から、インフラ供給の安全統御、自律型エージェントの運用信頼性、そして国家統制と結びついたチップ流通の覇権争いへと本格的にシフトしている。\n\n【事実】OpenAIはシスコシステムズと共同で、パッチ適用時のシステム保護を行うオープンソースのLinuxランタイム「Shirudo」を発表した。同時に、カスタマーサポート向けの「Richpanel」事例ではGPT-6世代のモデル群（Astra、Sol、Luna）が実務のエージェントツールとして組み込まれていることが示された。一方、開発者コミュニティの間で利用されるオープンソースの自律エージェント基盤「OpenClaw」のベータ版（2026.11.10-beta.2およびbeta.3）では、クラッシュ時や再起動をまたいだパッケージ更新のリカバリ機能や、ゲートウェイ再起動後もサブエージェントの完了結果を保持・配送し続ける信頼性向上のアップデートが相次いで行われている。ハードウェアおよび地政学の側面では、米トランプ政権がNVIDIA製チップの流通・転売問題に関連し、シンガポールのメガスピード社を含む企業群を貿易ブラックリスト（エンティティ・リスト）に追加した。これに呼応するように、Nvidiaのジェンスン・フアンCEOの復帰劇をめぐっては、市場の株価急騰やアジアの関連株上昇を引き起こした一方で、米議会の超党派から国家安全保障上のリスクを問う厳しい反発や調査の動きが表面化している。さらに、SpaceXが競合であるAnthropic等へ自社データセンターの計算資源を貸し出しているという報道や、OpenAIのエンジニアによる機密情報の秘密録音事件なども浮上し、AI産業の足元では安全保障と信頼性をめぐる摩擦が多層的に同時発生している。",
+    "opinion_summary": "【解釈】今回の動きが示すのは、AI活用の主軸が「いかに賢いモデルを作るか」から「中断せずに稼働し続けるシステムをどう維持するか」というインフラ・運用レイヤーへ移動したことである。OpenAIの「Shirudo」やOpenClawのアップデートは、AIが自律的、あるいは頻繁にバックグラウンドで動作するようになった結果として顕在化した「停止リスク」「更新時のクラッシュ」「データの取りこぼし」という実務上のボトルネックを解消するための必然的な手当てである。単発の対話から、システム全体のランタイムやサブエージェントのライフサイクル管理へコストと技術投資の重心が移っている。同時に、米政権による輸出管理の厳格化とフアンCEO復帰への議会反発は、AIの計算資源（シリコン）とインフラの供給網が、もはや単なる民間企業の経済合理性だけで動かず、国家安全保障の直接的な管理下で組み替えられつつある現実を浮き彫りにしている。計算資源の貸し出しを行うSpaceXの動きを含め、プレイヤーは限られたインフラとセキュリティの確保を巡り、自社の持続可能性と外部への提供のバランスという複雑なジレンマに直面している。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てが過大評価であると言える条件は、開発者がセキュリティの複雑さを嫌い、依然として「利便性と速度」を最優先してサンドボックス化されていないローカル実行環境を使い続けた場合である。もし、厳格なマイクロVMや外部ゲートウェイによる分離が「レイテンシの増大」や「開発体験の著しい低下」とみなされた場合、隔離されたセキュアなハーネスよりも、開発効率を優先した脆弱なローカルエージェントが現場で選ばれ続ける可能性もある。また、モデル単体の性能向上があまりに圧倒的であれば、セキュリティリスクを運用で力技でカバーするアプローチが再び支持されるかもしれない。この仮説が崩れるのは、企業がインフラの安全性よりも開発スピードを圧倒的に優先し、セキュリティインシデントのコストを許容し続けた場合である。",
+      "negative": "【反証・留保】この見立てが過大評価であると言えるのは、自律エージェントの安定化やランタイムの整備が、単なる一過性のソフトウェア保守の域を出ず、実際の企業利益に結びつかない場合である。もし、規制やセキュリティの強化が過剰な足枷となり、AI導入のスピードそのものを鈍化させた場合、あるいは米議会の調査や輸出管理の強化がNVIDIAを含むサプライチェーンの調達コストを致命的に引き上げ、エコシステム全体の成長を急減速させた場合には、「インフラの主導権争い」という構図自体が機能しなくなる。つまり、実務上の信頼性向上の試みが、重すぎるコンプライアンス負荷によって相殺されるシナリオが現実化すれば、この解釈は崩れることになる。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "Qwen GitHub｜Release v0.28.4",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4",
-        "point": "Highlights\n\nWeb Shell local daemon mode adds a workspace artifact library page with progressive scanning and streaming u"
+        "title": "OpenAI and Cisco introduce Shirudo",
+        "source": "OpenAI News",
+        "url": "https://openai.com/index/introducing-shirudo",
+        "point": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they "
       },
       {
         "rank": 2,
-        "title": "Qwen GitHub｜Qwen Code Desktop v0.28.4",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.28.4",
-        "point": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix"
+        "title": "Richpanel helps companies automate 50% of support in 30 days",
+        "source": "OpenAI News",
+        "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+        "point": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for "
       },
       {
         "rank": 3,
-        "title": "InfoQ AI/ML｜Claude Code Has Been Leaking Secrets through its 'Don't Ask Again' Feature",
-        "source": "InfoQ AI/ML",
-        "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
-        "point": "Agentic security firm Apiiro found that Claude Code has been exposing secrets in public repositories due to how it store"
+        "title": "openclaw/openclaw releases/tag/v2026.11.10-beta.3",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.3",
+        "point": "2026.11.10-beta.3\nHighlights\n\nUpdate recovery: Keep interrupted package and source updates recoverable, including update"
       },
       {
         "rank": 4,
-        "title": "InfoQ AI/ML｜Google Announces Agent Compute Engine for Secure AI Agent Execution",
-        "source": "InfoQ AI/ML",
-        "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
-        "point": "Google recently announced Agent Compute Engine, a managed service that runs AI agents in isolated microVMs, with checkpo"
+        "title": "Elon Musk Faces an A.I. Dilemma at SpaceX",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html",
+        "point": "Mr. Musk’s SpaceX is renting out computing power from its data centers to competitors, including Anthropic. That’s makin"
+      },
+      {
+        "rank": 5,
+        "title": "U.S. adds Megaspeed to trade blacklist over export control concerns amid Nvidia controversy",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/24/us-adds-megaspeed-to-trade-blacklist-over-export-control-concerns-.html",
+        "point": "The U.S. has added Megaspeed and six other companies to its trade blacklist over concerns about the potential diversion "
       }
     ],
     "joho_picks": [
       {
-        "headline": "AIエージェントの主導権は「モデル単体」から「安全な実行ハーネス」へ移行する",
+        "headline": "AI実用化の足元で進むインフラの囲い込みと安全統御の攻防",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4",
+        "source_url": "https://openai.com/index/introducing-shirudo",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】AI競争の優劣を決める主戦場は、推論モデルの単体性能から、エージェントを取り囲む実行環境（ハーネス）とセキュリティ基盤へ移行した。かつてはモデルの賢さが価値の中心だったが、現在はエージェントが自律的にコードやデータを扱う際の「安全な接続・隔離・資格情報の管理」こそが実運用の成否を握る。本稿では、Qwen Codeのローカル実行環境の改良や、Googleが発表した「Agent Compute Engine」、そしてClaude Codeの資格情報露出問題など、実務を揺るがす具体的な材料を束ね、インフラとセキュリティの新たな力学を読み解く。\n\n【事実】QCon San Francisco 2026では、Mad Labsの創業者マンジュ・ラジャシェカール氏が「ハーネスが新しいオペレーティングシステムになる」と基調講演で述べ、文脈・ツール・状態・権限を制御するハーネスこそがエージェントの能力と安全性を決定づけると指摘した [11]。こうしたなか、開発現場での実運用における脆弱性が表面化している。InfoQの報道によれば、エージェントセキュリティ企業Apiiroの調査により、Anthropicの「Claude Code」が「Don't Ask Again」機能の実装において、設定ファイルやgit履歴、チャットトランスクリプトにシークレット情報をローカル保存し、公開リポジトリへ誤って漏洩させていたことが判明した [8]。1,122件のシークレットがclaude/settings.local.jsonから、さらに1,160件がgit履歴等から見つかっている [8]。これに対し、インフラストラクチャ側での対抗策も動き出している。Googleは、AIエージェントを隔離されたマイクロVM上で実行し、資格情報やAPIキー、OAuthリフレッシュトークンをエージェントのサンドボックス外に保持した上で、外部の「Agent Gateway」を介して認証と資格情報の注入を行うマネージドサービス「Agent Compute Engine」を発表した [9]。また、Qwen CodeのGitHubリリース（v0.28.4およびデスクトップ版）では、ウェブシェルローカルデーモンモードでのワークスペース成果物ライブラリページの追加や、ステートレスなホステッドハーネスに向けたアイドルセッションの一時停止に関する設計提案など、ハーネス側の状態管理の最適化が進められている [1][2]。\n\n【解釈】今回の変化が示すのは、AIエージェントの「実用化の壁」がモデルの理解力からセキュリティとインフラの隔離レイヤーへ移動したという点である。これまで開発者は便利さのあまり、エージェントのローカル実行環境にAPIキーや資格情報を無防備に保持させがちだった。しかし、Claude Codeのシークレット露出問題が示すように、エージェントの自律性が高まるほど、ローカル環境の不十分な隠蔽や設定ミスが即座に組織全体のセキュリティリスクに直結する構造が明確になった [8]。この課題に対し、GoogleのAgent Compute EngineやQwen Codeのステートレス化・サンドボックス化の動きは、エージェントに「自由に動く権限」を与えつつ、資格情報や状態を厳格に分離するインフラが不可欠になっていることを裏付けている [2][9]。つまり、企業が求めるのは単なる賢いAIではなく、誤作動や情報漏洩を物理的・論理的に封じ込める堅牢な実行ハーネスである。主導権はモデル開発企業から、セキュアな実行環境やインフラを握るプレイヤーへ移行しつつある。\n\n【競争の構図】\n【Anthropic】\nClaude Codeのローカル設定保存機能に起因するシークレット露出問題が表面化し、開発者向けエージェントのセキュリティガバナンスで厳しい見直しを迫られている [8]。\n→ 高いコーディング性能で獲得した開発者からの信頼に対し、実運用における安全性とプライバシー管理の脆弱性が弱点として露呈している [8]。\n\n【Google / DeepMind】\nエージェントを隔離されたマイクロVMで実行し、資格情報をサンドボックス外に保持する「Agent Compute Engine」を発表した [9]。\n→ モデルの賢さだけでなく、エンタープライズが求める「安全な実行インフラ」の主導権を握り、セキュアなエージェント実行のデファクトスタンダードを狙う [9]。\n\n【Qwen（Alibaba陣営）】\nQwen Codeのアップデートでローカルデーモンモードの拡充や、ステートレスなホステッドハーネスに向けたセッションの一時停止設計を進めている [1][2]。\n→ オープンかつ柔軟なローカル実行環境の利便性を維持しつつ、状態管理とセキュリティのバランスを取る独自のエコシステムを強化している [1][2]。",
-        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、社内で稼働する、あるいは導入を検討しているAIコーディングツールや自律型エージェントの「資格情報の置き場所と実行権限」である。Claude Codeの事例のように、開発者のローカル環境やリポジトリにAPIキーや認証情報が平文や隠し設定として保存されていないかを直ちに監査する必要がある [8]。また、単に「どのLLMモデルを使うか」の比較にとどまらず、GoogleのAgent Compute EngineやAWS LambdaのGPU推論活用に見られるように、エージェントを安全なマイクロVMや管理されたサンドボックス環境でどう隔離・実行するかというインフラ側の調達基準を調達・セキュリティ部門と共同で再定義することが急務となる [9][10]。\n\n【反証・留保】この見立てが過大評価であると言える条件は、開発者がセキュリティの複雑さを嫌い、依然として「利便性と速度」を最優先してサンドボックス化されていないローカル実行環境を使い続けた場合である。もし、厳格なマイクロVMや外部ゲートウェイによる分離が「レイテンシの増大」や「開発体験の著しい低下」とみなされた場合、隔離されたセキュアなハーネスよりも、開発効率を優先した脆弱なローカルエージェントが現場で選ばれ続ける可能性もある。また、モデル単体の性能向上があまりに圧倒的であれば、セキュリティリスクを運用で力技でカバーするアプローチが再び支持されるかもしれない。この仮説が崩れるのは、企業がインフラの安全性よりも開発スピードを圧倒的に優先し、セキュリティインシデントのコストを許容し続けた場合である。",
-        "context": "【次の観測点】\n・主要なAIエージェント・ツールにおける資格情報管理手法のセキュリティパッチ適用状況\n・エンタープライズ向けクラウドベンダーによる隔離型マイクロVM環境の価格競争と導入事例\n・金融やインフラなど規制の厳しい業界における、サードパーティ製AIエージェントの利用禁止・制限ルールの広がり"
+        "body": "【結論】AI競争の重心は、LLM（大規模言語モデル）の単なるベンチマーク性能の誇示から、実務の現場でシステムをどう安全に動かし、インフラや流通の主導権を誰が握るかという「実行力と統制」のフェーズへ移行した。本稿では、OpenAIによるセキュリティ・インフラ展開、自律エージェント基盤のアップデート、そしてNVIDIAの経営体制をめぐる米政界・規制当局の動向を一つの緊張感ある問いとして束ねる。いま問われているのは、次世代AIを駆動する計算資源と実システムが、どの企業・陣営の統制下で流通・運用されるかというインフラの主導権争奪戦である。\n\n【事実】OpenAIはシスコシステムズと共同で、パッチ適用時のシステム保護を行うオープンソースのLinuxランタイム「Shirudo」を発表した。同時に、カスタマーサポート向けの「Richpanel」事例ではGPT-6世代のモデル群（Astra、Sol、Luna）が実務のエージェントツールとして組み込まれていることが示された。一方、開発者コミュニティの間で利用されるオープンソースの自律エージェント基盤「OpenClaw」のベータ版（2026.11.10-beta.2およびbeta.3）では、クラッシュ時や再起動をまたいだパッケージ更新のリカバリ機能や、ゲートウェイ再起動後もサブエージェントの完了結果を保持・配送し続ける信頼性向上のアップデートが相次いで行われている。ハードウェアおよび地政学の側面では、米トランプ政権がNVIDIA製チップの流通・転売問題に関連し、シンガポールのメガスピード社を含む企業群を貿易ブラックリスト（エンティティ・リスト）に追加した。これに呼応するように、Nvidiaのジェンスン・フアンCEOの復帰劇をめぐっては、市場の株価急騰やアジアの関連株上昇を引き起こした一方で、米議会の超党派から国家安全保障上のリスクを問う厳しい反発や調査の動きが表面化している。さらに、SpaceXが競合であるAnthropic等へ自社データセンターの計算資源を貸し出しているという報道や、OpenAIのエンジニアによる機密情報の秘密録音事件なども浮上し、AI産業の足元では安全保障と信頼性をめぐる摩擦が多層的に同時発生している。\n\n【解釈】今回の動きが示すのは、AI活用の主軸が「いかに賢いモデルを作るか」から「中断せずに稼働し続けるシステムをどう維持するか」というインフラ・運用レイヤーへ移動したことである。OpenAIの「Shirudo」やOpenClawのアップデートは、AIが自律的、あるいは頻繁にバックグラウンドで動作するようになった結果として顕在化した「停止リスク」「更新時のクラッシュ」「データの取りこぼし」という実務上のボトルネックを解消するための必然的な手当てである。単発の対話から、システム全体のランタイムやサブエージェントのライフサイクル管理へコストと技術投資の重心が移っている。同時に、米政権による輸出管理の厳格化とフアンCEO復帰への議会反発は、AIの計算資源（シリコン）とインフラの供給網が、もはや単なる民間企業の経済合理性だけで動かず、国家安全保障の直接的な管理下で組み替えられつつある現実を浮き彫りにしている。計算資源の貸し出しを行うSpaceXの動きを含め、プレイヤーは限られたインフラとセキュリティの確保を巡り、自社の持続可能性と外部への提供のバランスという複雑なジレンマに直面している。\n\n【競争の構図】\n【OpenAI】\nCiscoとのオープンソースランタイム「Shirudo」の投入や、企業向けサポート・法務分野での実務エージェント展開を進める。\n→ 単なるモデル提供者から、企業の基幹システムやセキュリティ・ランタイムのレイヤーまで囲い込むことで、顧客に対するスイッチングコストを高めている。\n\n【NVIDIA】\nジェンスン・フアンCEOの復帰により市場の信頼と株価は持ち直したものの、米議会からは国家安全保障上の厳しい視線が注がれている。\n→ 圧倒的なチップの供給力と市場支配力を持つ一方で、政治的・規制的な逆風が強まり、サプライチェーンの自由度や経営の安定性に不確実性が増している。\n\n【SpaceX】\n自社データセンターの計算資源を競合であるAnthropicなどに賃貸している。\n→ 潤沢な計算資源を収益化する合理的な動きである一方、自社のAI開発ロードマップと競合へのインフラ提供のバランスという難しいジレンマを抱えている。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、PoC（概念実証）の精度評価ではなく、AIシステムを本番環境で「安全に運用・更新し続けるためのランタイム設計」と「ハードウェア・クラウドの調達リスク管理」である。モデルの性能比較に予算を割く段階は過ぎており、OpenAIとシスコの連携やOpenClawのアップデート動向に見るような、クラッシュ耐性やパッチ適時のシステム保護を組み込んだアーキテクチャの導入が急務となる。また、米国の輸出管理や議会の動きがアジアの半導体・クラウド調達に波及するリスクを前提に、特定のサプライヤーや計算資源に依存しないマルチクラウド戦略および調達先の冗長化を、実務レベルの調達計画として今すぐ再点検すべきである。\n\n【反証・留保】この見立てが過大評価であると言えるのは、自律エージェントの安定化やランタイムの整備が、単なる一過性のソフトウェア保守の域を出ず、実際の企業利益に結びつかない場合である。もし、規制やセキュリティの強化が過剰な足枷となり、AI導入のスピードそのものを鈍化させた場合、あるいは米議会の調査や輸出管理の強化がNVIDIAを含むサプライチェーンの調達コストを致命的に引き上げ、エコシステム全体の成長を急減速させた場合には、「インフラの主導権争い」という構図自体が機能しなくなる。つまり、実務上の信頼性向上の試みが、重すぎるコンプライアンス負荷によって相殺されるシナリオが現実化すれば、この解釈は崩れることになる。",
+        "context": "【次の観測点】\n・米議会および規制当局によるNVIDIAの経営体制や輸出管理に関する具体的な調査・追加措置の有無\n・OpenAIの「Shirudo」などのランタイムやOpenClaw等の自律エージェント基盤が、実際のエンタープライズ本番環境でどの程度採用されるかの実例\n・シンガポールのメガスピード社をはじめとする制裁対象企業のサプライチェーンが、アジア地域の半導体流通に与える実際の遅延や価格変動"
       }
     ]
   },
   "raw_articles": [
     {
       "source": "OpenClaw GitHub",
-      "title": "v2026.11.7",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.7",
-      "summary": "OpenClaw 2026.11.7",
-      "published": "2026-11-22 23:53 UTC",
-      "pub_dt": "2026-11-22T23:53:26+00:00"
+      "title": "openclaw 2026.11.10-beta.3",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.3",
+      "summary": "2026.11.10-beta.3\nHighlights\n\nUpdate recovery: Keep interrupted package and source updates recoverable, including updates that cross a schema change or restart the machine. (#200273) (#200366) (#200460) (#200866) (#200994) (#201600) Thanks @fuller-stack-dev.\nReliable delegated work: Keep completed subagent answers available across Gateway restarts and while sibling tasks are still running. (#200279) (#200649) (#200823) (#190999) (#201563) Related #188422 Authored by @steipete. Thanks @vincentkoc",
+      "published": "2026-11-24 03:28 UTC",
+      "pub_dt": "2026-11-24T03:28:03+00:00"
     },
     {
-      "source": "InfoQ AI/ML",
-      "title": "QCon San Francisco 2026: The Harness Is the New Operating System",
-      "url": "https://www.infoq.com/news/2026/11/harness-new-operating-system/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
-      "summary": "At QCon San Francisco 2026, Mad Labs founder and CEO Manju Rajashekhar opened the conference arguing that the harness around an AI model, rather than the model itself, decides what an agent can do and how safely it does it. The keynote mapped the parts of a harness, including context, tools, state, permissions and feedback loops, onto jobs that operating systems already perform. By Andrew Hoblitzell",
-      "published": "2026-11-22 22:44 UTC",
-      "pub_dt": "2026-11-22T22:44:00+00:00"
+      "source": "NYTimes Technology",
+      "title": "Trump Administration Imposes Sanctions on Megaspeed, Singaporean Firm at Center of Nvidia Scandal",
+      "url": "https://www.nytimes.com/2026/11/23/business/trump-administration-megaspeed-trade-blacklist-nvidia.html",
+      "summary": "The administration added Megaspeed to the entity list, a trade blacklist, after weeks of sparring among top officials on the decision.",
+      "published": "2026-11-24 03:12 UTC",
+      "pub_dt": "2026-11-24T03:12:26+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
-      "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
-      "summary": "To establish a speed limit on AI development, you need to agree on how to measure speed.",
-      "published": "2026-11-22 21:14 UTC",
-      "pub_dt": "2026-11-22T21:14:07+00:00"
+      "source": "CNBC Tech",
+      "title": "Six key questions raised by Jensen Huang's return to Nvidia",
+      "url": "https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-politics-market.html",
+      "summary": "As Jensen Huang returns to Nvidia, questions remained around the board's reversal, Trump's involvement and the tech giant's future.",
+      "published": "2026-11-24 03:05 UTC",
+      "pub_dt": "2026-11-24T03:05:49+00:00"
     },
     {
-      "source": "TechCrunch AI",
-      "title": "Why data centers are at the center of the Big Tech backlash",
-      "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
-      "summary": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
-      "published": "2026-11-22 18:08 UTC",
-      "pub_dt": "2026-11-22T18:08:43+00:00"
+      "source": "CNBC Tech",
+      "title": "U.S. adds Megaspeed to trade blacklist over export control concerns amid Nvidia controversy",
+      "url": "https://www.cnbc.com/2026/11/24/us-adds-megaspeed-to-trade-blacklist-over-export-control-concerns-.html",
+      "summary": "The U.S. has added Megaspeed and six other companies to its trade blacklist over concerns about the potential diversion of advanced computing products.",
+      "published": "2026-11-24 02:37 UTC",
+      "pub_dt": "2026-11-24T02:37:39+00:00"
     },
     {
-      "source": "The Verge AI",
-      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
-      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
-      "summary": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to [&#8230;]",
-      "published": "2026-11-22 17:25 UTC",
-      "pub_dt": "2026-11-22T17:25:20+00:00"
+      "source": "CNBC Tech",
+      "title": "Asian Nvidia-related stocks jump after Huang's return, with Taiwan's near price limits",
+      "url": "https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-asia-chip-stocks.html",
+      "summary": "Investors piled back into the tech market, following the reinstatement of Nvidia CEO Jensen Huang by its board.",
+      "published": "2026-11-24 02:20 UTC",
+      "pub_dt": "2026-11-24T02:20:36+00:00"
     },
     {
-      "source": "Axios",
-      "title": "Behind the Curtain — AI 2027: The reckoning",
-      "url": "https://www.axios.com/2026/11/22/behind-the-curtain-ai-2027-the-reckoning",
-      "summary": "We've talked to more than 50 leaders in government, AI, business and cyber — from let-'er-rip AI accelerationists to shut-'er-down critics — and they were unanimous on one chilling assessment:Cyberattacks on business and critical infrastructure will be constant, increasingly sophisticated and highly disruptive over the next 18 months.These leaders describe 2027 as the year cyber becomes like weather: Outages will be frequent, disruptive, occasionally scary, and something people and companies mus",
-      "published": "2026-11-22 13:36 UTC",
-      "pub_dt": "2026-11-22T13:36:46+00:00"
-    },
-    {
-      "source": "Qwen GitHub",
-      "title": "Release v0.28.4",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4",
-      "summary": "Highlights\n\nWeb Shell local daemon mode adds a workspace artifact library page with progressive scanning and streaming updates. (#18071)\nWeb Shell chat adds a shared ChatSurface, Continue badges, suggestion chips, and mobile layout fixes for sessions. (#17952, #18044, #17918, #17883, #18011)\nCore adds built-in Gemini 4 reasoning defaults. (#18039)\nLocal Runtime now creates its state directory at process spawn with owner-private permissions. (#17964)\nCommand migration creates Markdown destination",
-      "published": "2026-11-22 13:24 UTC",
-      "pub_dt": "2026-11-22T13:24:12+00:00"
-    },
-    {
-      "source": "The Verge AI",
-      "title": "The vibe-coding revolution is coming to all the gadgets",
-      "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
-      "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the vibe-hacking of everything, follow David Pierce. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started Like so many things with AI, it's not [&#8230;]",
-      "published": "2026-11-22 13:00 UTC",
-      "pub_dt": "2026-11-22T13:00:00+00:00"
-    },
-    {
-      "source": "Qwen GitHub",
-      "title": "Qwen Code Desktop v0.28.4",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.28.4",
-      "summary": "What's Changed\n\ntest(managed-agent): observe a real scheduled /loop fire in the full-stack E2E by @wenshao in #17506\nfix(verify-pr): harden the watch-state shape guard, container nonce, and VM prose by @wenshao in #17440\nfix(external-context): deflake cumulative-deadline deletion timing by @qwen-code-dev-bot in #17342\ndocs(design): propose idle Session suspension toward a stateless Hosted Harness by @doudouOUC in #17527\ndocs(design): drop the 20-run parity requirement from the loop rollout steps",
-      "published": "2026-11-22 12:52 UTC",
-      "pub_dt": "2026-11-22T12:52:42+00:00"
+      "source": "NYTimes Technology",
+      "title": "OpenAI Engineer Secretly Recorded Dozens of Meetings, Prosecutors Say",
+      "url": "https://www.nytimes.com/2026/11/23/technology/openai-engineer-secret-recordings.html",
+      "summary": "A court filing said the engineer captured meetings on customers, A.I. safety and a foreign government briefing. Federal prosecutors are investigating what he did with the recordings.",
+      "published": "2026-11-24 01:36 UTC",
+      "pub_dt": "2026-11-24T01:36:36+00:00"
     },
     {
       "source": "Wired",
-      "title": "Banks Have Had It Up to Here With Your AI Agent",
-      "url": "https://www.wired.com/story/banks-are-cracking-down-on-ai-agents/",
-      "summary": "Major US financial institutions are banning third-party bots from logging into your accounts—and warning that any costly bot mistakes are strictly your problem.",
-      "published": "2026-11-22 11:00 UTC",
-      "pub_dt": "2026-11-22T11:00:00+00:00"
+      "title": "Inside Nvidia, Not Everyone Is Celebrating Jensen Huang’s Return",
+      "url": "https://www.wired.com/story/inside-nvidia-not-everyone-is-celebrating-jensen-huangs-return/",
+      "summary": "Some saw Huang’s resignation as an opportunity for culture change at the chip giant. “If Jensen comes back, I’m not doing any HR trainings ever again,” one employee said.",
+      "published": "2026-11-24 01:35 UTC",
+      "pub_dt": "2026-11-24T01:35:38+00:00"
     },
     {
-      "source": "InfoQ AI/ML",
-      "title": "Claude Code Has Been Leaking Secrets through its \"Don't Ask Again\" Feature",
-      "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
-      "summary": "Agentic security firm Apiiro found that Claude Code has been exposing secrets in public repositories due to how it stores them in local file on developers' machines to implement \"Don't Ask Again\". The company identified 1,122 secrets in claude/settings.local.json files and another 1,160 in git history, in the shared settings.json, and in agent chat transcripts stored in repos. By Sergio De Simone",
-      "published": "2026-11-22 11:00 UTC",
-      "pub_dt": "2026-11-22T11:00:00+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.10-beta.2",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.2",
+      "summary": "2026.11.10-beta.2\nHighlights\n\nUpdate recovery: keep OpenClaw runnable when package replacement is interrupted, and let the next update finish safely after a crash or reboot. (#200273, #200366, #200460, #200550, #200994) Thanks @fuller-stack-dev.\nReliable background work: preserve finished subagent results and resume their delivery after Gateway restarts, interrupted parent turns, and sibling activity. (#200279, #200649, #200249, #201544, #201563) Authored by @steipete. Thanks @RomneyDa, @vincent",
+      "published": "2026-11-24 01:22 UTC",
+      "pub_dt": "2026-11-24T01:22:40+00:00"
     },
     {
-      "source": "InfoQ AI/ML",
-      "title": "Google Announces Agent Compute Engine for Secure AI Agent Execution",
-      "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
-      "summary": "Google recently announced Agent Compute Engine, a managed service that runs AI agents in isolated microVMs, with checkpointing capabilities to suspend and resume execution environments. The design keeps credentials, API keys, and OAuth refresh tokens outside the agent sandbox, using an external Agent Gateway to authenticate requests and inject the required secrets. By Renato Losio",
-      "published": "2026-11-22 06:30 UTC",
-      "pub_dt": "2026-11-22T06:30:00+00:00"
+      "source": "CNBC Tech",
+      "title": "AI adoption grows in Asia, but measuring the gains remains tricky",
+      "url": "https://www.cnbc.com/2026/11/24/aws-asia-gains-roi.html",
+      "summary": "Businesses across Asia-Pacific are seeing returns from AI investments, even as confidence in measuring those gains varies, according to an AWS survey.",
+      "published": "2026-11-23 23:42 UTC",
+      "pub_dt": "2026-11-23T23:42:27+00:00"
     },
     {
-      "source": "InfoQ AI/ML",
-      "title": "AWS Lambda Now Runs GPU Inference with 48 Concurrent Invocations Sharing One Model per GPU",
-      "url": "https://www.infoq.com/news/2026/11/aws-lambda-gpu-managed-instances/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
-      "summary": "AWS Lambda now runs Event Functions on EC2 G-series GPU instances through Lambda Managed Instances, with up to 48 concurrent invocations sharing one model per GPU, vLLM and SGLang base images that need no handler code, and 90-minute asynchronous timeouts. Billing is the instance price plus a 9.75 percent fee; first hands-on tests report an eight-minute publish and no response streaming. By Steef-Jan Wiggers",
-      "published": "2026-11-22 06:27 UTC",
-      "pub_dt": "2026-11-22T06:27:00+00:00"
+      "source": "NYTimes Technology",
+      "title": "Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang",
+      "url": "https://www.nytimes.com/2026/11/23/us/politics/trump-nvidia-huang.html",
+      "summary": "The president set in motion a weekend of maneuvering, led by Vice President JD Vance, to help Jensen Huang get his old job back.",
+      "published": "2026-11-23 23:41 UTC",
+      "pub_dt": "2026-11-23T23:41:29+00:00"
     },
     {
-      "source": "Analytics Vidhya",
-      "title": "Positional Embeddings Explained: How LLMs Understand Word Order",
-      "url": "https://www.analyticsvidhya.com/blog/2026/11/positional-embeddings-explained-llm-word-order/",
-      "summary": "&#8220;The dog hunted the fox.&#8221; &#8220;The fox hunted the dog.&#8221; They are the same words, but the meanings are totally different. You can note the difference at once, but a transformer can&#8217;t. This is the problem which positional embeddings solve. They inform a language model about the position of each token in the sentence. Without [&#8230;]\nThe post Positional Embeddings Explained: How LLMs Understand Word Order appeared first on Analytics Vidhya.",
-      "published": "2026-11-22 05:46 UTC",
-      "pub_dt": "2026-11-22T05:46:07+00:00"
+      "source": "CNBC Tech",
+      "title": "Jim Cramer sees more upside for Nvidia stock with Jensen Huang back as CEO",
+      "url": "https://www.cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html",
+      "summary": "CNBC's Jim Cramer said Jensen Huang's return as Nvidia CEO could help revive the chipmaker's battered stock.",
+      "published": "2026-11-23 23:14 UTC",
+      "pub_dt": "2026-11-23T23:14:34+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Trump engineered a risky comeback for Jensen Huang",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
+      "summary": "After Nvidia's board accepted Jensen Huang's resignation as CEO, following reports that Huang had an affair with an alleged Chinese spy, President Donald Trump, too, appeared to submit to the new reality. Appearing on Stephen A. Smith's radio show shortly after the news came out, Trump said that Huang would \"end up on his feet.\" [&#8230;]",
+      "published": "2026-11-23 22:25 UTC",
+      "pub_dt": "2026-11-23T22:25:12+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Nvidia CEO Jensen Huang is back. What happens next?",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+      "summary": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation. However, after The New York Times reported there was evidence of another affair, this time with an Nvidia executive who reported directly to him, a board meeting that night ended [&#8230;]",
+      "published": "2026-11-23 22:10 UTC",
+      "pub_dt": "2026-11-23T22:10:32+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Welcome to elite impunity, Jensen Huang",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
+      "summary": "I suppose I must issue a hearty congratulations to Jensen Huang. Huang is CEO of Nvidia again, to the surprise of basically everyone except President Donald Trump and Vice President JD Vance, who made sure it happened. Now, those of us who had some kind of basic education on what a \"free market\" is might [&#8230;]",
+      "published": "2026-11-23 22:09 UTC",
+      "pub_dt": "2026-11-23T22:09:26+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+      "summary": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+      "published": "2026-11-23 22:05 UTC",
+      "pub_dt": "2026-11-23T22:05:50+00:00"
     }
   ]
 }
