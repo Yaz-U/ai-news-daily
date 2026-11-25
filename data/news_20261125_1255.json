@@ -1,0 +1,213 @@
+{
+  "timestamp": "2026-11-25T12:55:23.276447+09:00",
+  "time_slot": "昼",
+  "summary": {
+    "headline": "AIのインフラ競合とガバナンスの変異点",
+    "thesis": "AIの競争軸はモデル性能の誇示から、電力・ネットワーク負荷という物理的制約の克服と、主要企業のガバナンスリスクの管理へと確実にシフトし始めた。",
+    "opening": "【結論】AI産業の主導権争いは、単なるモデルの賢さや学習スケールの拡張競争から、電力網やネットワークといった物理インフラの制約、そして半導体巨人のガバナンス不全という現実的な足枷の克服へと重心を移している。本日の材料群は、AIがもはや抽象的なソフトウェアの領域を超え、国家の安全保障、エネルギー政策、企業の物理的ネットワークに深刻な負荷をかけ始めた現実を浮き彫りにしている。もはや機能の新しさだけで勝負できるフェーズは過ぎ去り、誰がインフラを自前で確保し、政治・法的リスクを切り抜けるかが勝敗を分けるルールへと変わりつつある。",
+    "what_happened": "【事実】本日の一次情報および報道からは、AIをとりまく物理的・政治的制約の輪郭が鮮明になっている。まず、米司法省などの調査や報道（NYTimes、Axios、TechCrunch他）によれば、Nvidiaのジェンスン・フアン氏を巡る中国へのチップ不正迂回やスパイ疑惑をめぐり、トランプ大統領が同氏のCEO復帰を政治的に後押しするという異例の事態が発生した。ボードの意向を無視したこの復帰劇は市場で歓迎されたものの、米国の産業基盤や国家安全保障に対する懸念を同時に呼び起こしている。第二に、インフラ面では、MIT Technology Reviewの報道が示すように、データセンターの電力需要が既存の送電網の接続待ち（最長10年）を迂回するため、オフグリッドの「自家用天然ガス発電プラント」を自前で建設する動きが加速している。さらに、同誌の別記事およびネットワーク関連の分析では、自律的に動くエージェント型AIの導入により、エンタープライズネットワークへの負荷が人間による作業の約450%増に達するという具体的なトラフィックの急増が報告されている。これらはAIの社会実装が電力と通信インフラの物理的限界に直面している動かぬ証拠である。",
+    "why_now": "【解釈】この変化が意味するのは、AI産業におけるボトルネックが「アルゴリズムの発見」から「物理資源の調達とガバナンス」へ完全に移行したという構造転換だ。これまでAIの進化はGPUの演算量とモデルのパラメータ数に依存してきたが、送電網の逼迫やネットワーク帯域の限界、さらには半導体供給を巡る地政学リスクが表面化したことで、どれほど優れたモデルを作ろうとも、電力を自前で調達できなければデータセンターすら稼働できない時代に入った。また、Nvidiaの経営トップを巡る混乱と政治的介入の表面化は、特定のハードウェアサプライヤーへの過度な依存が、そのまま国家および企業のガバナンスリスクに直結することを意味している。AIエージェントの爆発的な普及が社内ネットワークに致命的な負荷を与える現在、企業はソフトウェアの導入だけでなく、通信・電力インフラの抜本的なモダナイゼーションを同時に迫られている。",
+    "counterpoint": "【反証・留保】この見立てが過大評価である可能性は、政治的介入や規制の緩和が一時的な特例に終わらず、ハードウェアの輸出管理やインフラ建設の法規制を根本から書き換えるほど強力に機能した場合に生じる。もし政府がデータセンター向け天然ガス発電への環境規制を免除し、Nvidiaを巡る法的リスクが完全に霧散するならば、物理的・政治的制約というブレーキは外れ、再び力づくのスケール拡張競争へと回帰するだろう。また、ネットワーク負荷についても、通信プロトコルの効率化やモデルの軽量化（推論の最適化）が予想を上回るスピードで進めば、インフラの限界説は杞憂に終わる可能性がある。したがって、今回の摩擦が構造的なものか、単なる過渡期の摩擦音に過ぎないかは、今後の規制当局の処分とインフラ投資の実績を見極める必要がある。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、単なるAIツールの導入ライセンスの選定ではなく、自社の「ネットワーク帯域」と「電力・調達リスク」の棚卸しである。エージェント型AIの導入は従来の数倍のネットワークトラフィックを生むため、既存の社内ネットワーク環境のまま全社展開すれば深刻な遅延や障害を招く恐れがある。また、半導体やクラウドインフラの調達において特定の海外ハードウェアサプライヤーや米国の政治動向に依存しきったサプライチェーンを見直し、マルチクラウド化や国内での電力確保を含むレジリエンスの高いシステム設計へ舵を切る実務的な判断が急務となる。",
+    "company_positions": [
+      {
+        "company": "Nvidia",
+        "status": "ジェンスン・フアンCEOの復帰がトランプ大統領の政治的介入によって実現する一方、中国へのチップ不正流出を巡る司法省の捜査や米国産業界からの批判に直面している。",
+        "implication": "圧倒的なハードウェアの優位性は揺るがないものの、経営陣のガバナンス不全と政治的介入への依存が、顧客企業のコンプライアンスリスクや長期的な調達の不確実性を高める弱点となっている。"
+      }
+    ],
+    "next_signals": [
+      "米司法省および規制当局によるNvidiaの顧客調査・輸出管理違反に関する具体的な処分や追加召喚の有無",
+      "大規模データセンター向け「オフグリッド天然ガス発電」の導入・認可を巡る環境規制および自治体の動向",
+      "エンタープライズ領域におけるエージェント型AI本格導入に伴う、大手企業の社内ネットワーク改修・帯域拡張投資の実績"
+    ],
+    "sources": [
+      {
+        "title": "NYTimes Technology｜Blanche Downplays Questions Over Nvidia as Investigators Examine Company’s Customers",
+        "url": "https://www.nytimes.com/2026/11/24/us/politics/nvidia-justice-department-todd-blanche.html"
+      },
+      {
+        "title": "MIT Tech Review｜Data centers are getting their own natural gas power plants",
+        "url": "https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/"
+      },
+      {
+        "title": "MIT Tech Review｜Raising the stakes for enterprise networks with AI modernization",
+        "url": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/"
+      },
+      {
+        "title": "Axios｜Nvidia's one-man board: How Trump inherited Jensen Huang's scandal",
+        "url": "https://www.axios.com/2026/11/24/nvidias-one-man-board-how-trump-inherited-jensen-huangs-scandal"
+      }
+    ],
+    "news_summary": "AIの競争軸はモデル性能の誇示から、電力・ネットワーク負荷という物理的制約の克服と、主要企業のガバナンスリスクの管理へと確実にシフトし始めた。\n\n【事実】本日の一次情報および報道からは、AIをとりまく物理的・政治的制約の輪郭が鮮明になっている。まず、米司法省などの調査や報道（NYTimes、Axios、TechCrunch他）によれば、Nvidiaのジェンスン・フアン氏を巡る中国へのチップ不正迂回やスパイ疑惑をめぐり、トランプ大統領が同氏のCEO復帰を政治的に後押しするという異例の事態が発生した。ボードの意向を無視したこの復帰劇は市場で歓迎されたものの、米国の産業基盤や国家安全保障に対する懸念を同時に呼び起こしている。第二に、インフラ面では、MIT Technology Reviewの報道が示すように、データセンターの電力需要が既存の送電網の接続待ち（最長10年）を迂回するため、オフグリッドの「自家用天然ガス発電プラント」を自前で建設する動きが加速している。さらに、同誌の別記事およびネットワーク関連の分析では、自律的に動くエージェント型AIの導入により、エンタープライズネットワークへの負荷が人間による作業の約450%増に達するという具体的なトラフィックの急増が報告されている。これらはAIの社会実装が電力と通信インフラの物理的限界に直面している動かぬ証拠である。",
+    "opinion_summary": "【解釈】この変化が意味するのは、AI産業におけるボトルネックが「アルゴリズムの発見」から「物理資源の調達とガバナンス」へ完全に移行したという構造転換だ。これまでAIの進化はGPUの演算量とモデルのパラメータ数に依存してきたが、送電網の逼迫やネットワーク帯域の限界、さらには半導体供給を巡る地政学リスクが表面化したことで、どれほど優れたモデルを作ろうとも、電力を自前で調達できなければデータセンターすら稼働できない時代に入った。また、Nvidiaの経営トップを巡る混乱と政治的介入の表面化は、特定のハードウェアサプライヤーへの過度な依存が、そのまま国家および企業のガバナンスリスクに直結することを意味している。AIエージェントの爆発的な普及が社内ネットワークに致命的な負荷を与える現在、企業はソフトウェアの導入だけでなく、通信・電力インフラの抜本的なモダナイゼーションを同時に迫られている。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価である可能性は、政治的介入や規制の緩和が一時的な特例に終わらず、ハードウェアの輸出管理やインフラ建設の法規制を根本から書き換えるほど強力に機能した場合に生じる。もし政府がデータセンター向け天然ガス発電への環境規制を免除し、Nvidiaを巡る法的リスクが完全に霧散するならば、物理的・政治的制約というブレーキは外れ、再び力づくのスケール拡張競争へと回帰するだろう。また、ネットワーク負荷についても、通信プロトコルの効率化やモデルの軽量化（推論の最適化）が予想を上回るスピードで進めば、インフラの限界説は杞憂に終わる可能性がある。したがって、今回の摩擦が構造的なものか、単なる過渡期の摩擦音に過ぎないかは、今後の規制当局の処分とインフラ投資の実績を見極める必要がある。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "NYTimes Technology｜Blanche Downplays Questions Over Nvidia as Investigators Examine Company’s Customers",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/24/us/politics/nvidia-justice-department-todd-blanche.html",
+        "point": "Justice Department investigators have gathered evidence of Nvidia’s high-powered computer chips being illegally diverted"
+      },
+      {
+        "rank": 2,
+        "title": "MIT Tech Review｜Data centers are getting their own natural gas power plants",
+        "source": "MIT Tech Review",
+        "url": "https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/",
+        "point": "One of the biggest roadblocks to starting up a data center is getting approval to connect to the electric grid—a wait th"
+      },
+      {
+        "rank": 3,
+        "title": "MIT Tech Review｜Raising the stakes for enterprise networks with AI modernization",
+        "source": "MIT Tech Review",
+        "url": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/",
+        "point": "Enterprise networks are under severe strain. As companies rush to deploy artificial intelligence, the technology is quic"
+      },
+      {
+        "rank": 4,
+        "title": "Axios｜Nvidia's one-man board: How Trump inherited Jensen Huang's scandal",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/11/24/nvidias-one-man-board-how-trump-inherited-jensen-huangs-scandal",
+        "point": "A euphoric Wall Street erupted Monday as President Trump personally secured Jensen Huang's return to Nvidia, trading on "
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AIのインフラ競合とガバナンスの変異点",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://www.nytimes.com/2026/11/24/us/politics/nvidia-justice-department-todd-blanche.html",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の主導権争いは、単なるモデルの賢さや学習スケールの拡張競争から、電力網やネットワークといった物理インフラの制約、そして半導体巨人のガバナンス不全という現実的な足枷の克服へと重心を移している。本日の材料群は、AIがもはや抽象的なソフトウェアの領域を超え、国家の安全保障、エネルギー政策、企業の物理的ネットワークに深刻な負荷をかけ始めた現実を浮き彫りにしている。もはや機能の新しさだけで勝負できるフェーズは過ぎ去り、誰がインフラを自前で確保し、政治・法的リスクを切り抜けるかが勝敗を分けるルールへと変わりつつある。\n\n【事実】本日の一次情報および報道からは、AIをとりまく物理的・政治的制約の輪郭が鮮明になっている。まず、米司法省などの調査や報道（NYTimes、Axios、TechCrunch他）によれば、Nvidiaのジェンスン・フアン氏を巡る中国へのチップ不正迂回やスパイ疑惑をめぐり、トランプ大統領が同氏のCEO復帰を政治的に後押しするという異例の事態が発生した。ボードの意向を無視したこの復帰劇は市場で歓迎されたものの、米国の産業基盤や国家安全保障に対する懸念を同時に呼び起こしている。第二に、インフラ面では、MIT Technology Reviewの報道が示すように、データセンターの電力需要が既存の送電網の接続待ち（最長10年）を迂回するため、オフグリッドの「自家用天然ガス発電プラント」を自前で建設する動きが加速している。さらに、同誌の別記事およびネットワーク関連の分析では、自律的に動くエージェント型AIの導入により、エンタープライズネットワークへの負荷が人間による作業の約450%増に達するという具体的なトラフィックの急増が報告されている。これらはAIの社会実装が電力と通信インフラの物理的限界に直面している動かぬ証拠である。\n\n【解釈】この変化が意味するのは、AI産業におけるボトルネックが「アルゴリズムの発見」から「物理資源の調達とガバナンス」へ完全に移行したという構造転換だ。これまでAIの進化はGPUの演算量とモデルのパラメータ数に依存してきたが、送電網の逼迫やネットワーク帯域の限界、さらには半導体供給を巡る地政学リスクが表面化したことで、どれほど優れたモデルを作ろうとも、電力を自前で調達できなければデータセンターすら稼働できない時代に入った。また、Nvidiaの経営トップを巡る混乱と政治的介入の表面化は、特定のハードウェアサプライヤーへの過度な依存が、そのまま国家および企業のガバナンスリスクに直結することを意味している。AIエージェントの爆発的な普及が社内ネットワークに致命的な負荷を与える現在、企業はソフトウェアの導入だけでなく、通信・電力インフラの抜本的なモダナイゼーションを同時に迫られている。\n\n【競争の構図】\n【Nvidia】\nジェンスン・フアンCEOの復帰がトランプ大統領の政治的介入によって実現する一方、中国へのチップ不正流出を巡る司法省の捜査や米国産業界からの批判に直面している。\n→ 圧倒的なハードウェアの優位性は揺るがないものの、経営陣のガバナンス不全と政治的介入への依存が、顧客企業のコンプライアンスリスクや長期的な調達の不確実性を高める弱点となっている。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、単なるAIツールの導入ライセンスの選定ではなく、自社の「ネットワーク帯域」と「電力・調達リスク」の棚卸しである。エージェント型AIの導入は従来の数倍のネットワークトラフィックを生むため、既存の社内ネットワーク環境のまま全社展開すれば深刻な遅延や障害を招く恐れがある。また、半導体やクラウドインフラの調達において特定の海外ハードウェアサプライヤーや米国の政治動向に依存しきったサプライチェーンを見直し、マルチクラウド化や国内での電力確保を含むレジリエンスの高いシステム設計へ舵を切る実務的な判断が急務となる。\n\n【反証・留保】この見立てが過大評価である可能性は、政治的介入や規制の緩和が一時的な特例に終わらず、ハードウェアの輸出管理やインフラ建設の法規制を根本から書き換えるほど強力に機能した場合に生じる。もし政府がデータセンター向け天然ガス発電への環境規制を免除し、Nvidiaを巡る法的リスクが完全に霧散するならば、物理的・政治的制約というブレーキは外れ、再び力づくのスケール拡張競争へと回帰するだろう。また、ネットワーク負荷についても、通信プロトコルの効率化やモデルの軽量化（推論の最適化）が予想を上回るスピードで進めば、インフラの限界説は杞憂に終わる可能性がある。したがって、今回の摩擦が構造的なものか、単なる過渡期の摩擦音に過ぎないかは、今後の規制当局の処分とインフラ投資の実績を見極める必要がある。",
+        "context": "【次の観測点】\n・米司法省および規制当局によるNvidiaの顧客調査・輸出管理違反に関する具体的な処分や追加召喚の有無\n・大規模データセンター向け「オフグリッド天然ガス発電」の導入・認可を巡る環境規制および自治体の動向\n・エンタープライズ領域におけるエージェント型AI本格導入に伴う、大手企業の社内ネットワーク改修・帯域拡張投資の実績"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.11.9",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.9",
+      "summary": "OpenClaw v2026.11.9\n13 commits · 15 pull requests · 14 contributors\nChanges included in this release\nThe release notes and changelog contain the same content, presented in two formats:\n\nRelease notes — formatted for people.\nChangelog — plain Markdown for AI agents and tools.\n\nThanks\n@Caitoz @drobison00 @ericcaiwx-star @gorendac @MertBasar0 @obviyus @paulsimmondsplato @pgondhi987 @RomneyDa @scotthuang @shakkernerd @solavrc @steipete @titan550\nRelease verification\n\nnpm package: https://www.npmjs.c",
+      "published": "2026-11-25 02:55 UTC",
+      "pub_dt": "2026-11-25T02:55:22+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "v2026.11.10",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10",
+      "summary": "openclaw 2026.11.10",
+      "published": "2026-11-25 02:41 UTC",
+      "pub_dt": "2026-11-25T02:41:55+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Trump open to pardoning Jensen Huang if needed: NY Post",
+      "url": "https://www.cnbc.com/2026/11/25/trump-huang-pardon-politics.html",
+      "summary": "Trump said he would be willing to pardon Jensen Huang if needed and argued that the Nvidia CEO should not have to invoke the Fifth Amendment before Congress.",
+      "published": "2026-11-25 02:09 UTC",
+      "pub_dt": "2026-11-25T02:09:45+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jensen Huang's Nvidia return shows the U.S.-China AI race is about more than chips",
+      "url": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html",
+      "summary": "Jensen Huang's return as Nvidia CEO demonstrates that the U.S.-China artificial intelligence race is not just about semiconductors, but tech talent too.",
+      "published": "2026-11-25 01:13 UTC",
+      "pub_dt": "2026-11-25T01:13:56+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
+      "url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
+      "summary": "Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvidia's CEO and board member, could prove a giant mistake, exposing the directors to \"historic\" personal liability from a growing pile of lawsuits and raising the question of whether the country is celebrating a company that has helped put advanced chips in its adversaries' hands.",
+      "published": "2026-11-25 00:12 UTC",
+      "pub_dt": "2026-11-25T00:12:02+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "Jensen Huang’s Return Shows Nvidia Is Too Big to Police",
+      "url": "https://www.wired.com/story/jensen-huang-nvidia-us-national-security-risks/",
+      "summary": "Nvidia’s place at the center of the US economy may have outweighed concerns about its CEO’s ties to a suspected Chinese intelligence asset, national security and foreign policy experts say.",
+      "published": "2026-11-24 23:39 UTC",
+      "pub_dt": "2026-11-24T23:39:04+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Blanche Downplays Questions Over Nvidia as Investigators Examine Company’s Customers",
+      "url": "https://www.nytimes.com/2026/11/24/us/politics/nvidia-justice-department-todd-blanche.html",
+      "summary": "Justice Department investigators have gathered evidence of Nvidia’s high-powered computer chips being illegally diverted by other firms to China, according to people familiar with the inquiries.",
+      "published": "2026-11-24 23:27 UTC",
+      "pub_dt": "2026-11-24T23:27:37+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jim Cramer says Tuesday's market pullback is an encouraging sign. Here's why",
+      "url": "https://www.cnbc.com/2026/11/24/jim-cramer-market-pullback.html",
+      "summary": "Jim Cramer said Tuesday's market action following Monday's massive rally is an encouraging sign that stocks are on the path to a more sustainable recovery.",
+      "published": "2026-11-24 23:23 UTC",
+      "pub_dt": "2026-11-24T23:23:34+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Saudi national charged in OpenAI bugging to be released on $1 million bond",
+      "url": "https://www.cnbc.com/2026/11/24/openai-bugging-aflozan-release-saudi.html",
+      "summary": "Abdulrahman Alfozan is accused of planting a recording device in an executive conference room at OpenAI's headquarters.",
+      "published": "2026-11-24 22:03 UTC",
+      "pub_dt": "2026-11-24T22:03:01+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "AI debt markets shudder as Nvidia's top 'banker' returns",
+      "url": "https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-ai-credit-markets.html",
+      "summary": "Fears about some companies' AI debt ramped higher Tuesday, a day after Jensen Huang's return as Nvidia CEO.",
+      "published": "2026-11-24 21:52 UTC",
+      "pub_dt": "2026-11-24T21:52:05+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+      "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+      "summary": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
+      "published": "2026-11-24 21:48 UTC",
+      "pub_dt": "2026-11-24T21:48:27+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Jensen Huang Apologizes to Nvidia Employees, Says He Is in Therapy",
+      "url": "https://www.nytimes.com/2026/11/24/technology/jensen-huang-apology-nvidia-ceo.html",
+      "summary": "A day after returning to his company, Mr. Huang acknowledged that he had violated Nvidia’s code of conduct and “made some terrible mistakes.”",
+      "published": "2026-11-24 21:46 UTC",
+      "pub_dt": "2026-11-24T21:46:11+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Even the best AI agents struggle with everyday life",
+      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+      "summary": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems.",
+      "published": "2026-11-24 21:33 UTC",
+      "pub_dt": "2026-11-24T21:33:29+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+      "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/",
+      "summary": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
+      "published": "2026-11-24 21:32 UTC",
+      "pub_dt": "2026-11-24T21:32:38+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+      "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
+      "summary": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data.",
+      "published": "2026-11-24 21:19 UTC",
+      "pub_dt": "2026-11-24T21:19:52+00:00"
+    }
+  ]
+}
