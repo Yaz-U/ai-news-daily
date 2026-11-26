@@ -1,0 +1,229 @@
+{
+  "timestamp": "2026-11-26T12:20:49.387607+09:00",
+  "time_slot": "昼",
+  "summary": {
+    "headline": "AIインフラの物理的限界と安全保障の衝突",
+    "thesis": "AI競争の主導権争いは、モデルの機能進化から、エネルギー制約、規制・安全保障、そして社会的な統制権の確保へと急激にシフトしている。",
+    "opening": "【結論】AI産業の主導権は単なるモデルの賢さではなく、膨大な計算資源を支えるインフラの調達能力と、政治・社会からの統制リスクをどうマネジメントするかという次元へ移った。本日の材料から見えてくるのは、データセンターの電力不足や規制圧力、さらにプライバシーや安全性を巡る法的・政治的摩擦が、技術開発のスピードを直接左右し始めているという構造変化である。もはやAI企業単体のプロダクト力だけで勝敗が決まる時代は終わった。",
+    "what_happened": "【事実】足元の動向は、インフラの物理的制約と政治的圧力の双方が表面化していることを示す。CNBCによると、米連邦通信委員会（FCC）はSpaceXに対し、100万基の軌道上データセンター衛星の配備を承認した。一方でMIT Technology Reviewは、AIデータセンターの急増が米国での天然ガスブームを駆動し、電力インフラへの負荷が限界に達しつつあると報じている。また、米中間の地政学的リスクも影を落としており、CNBCは新たな米国の規制によってNvidia製AIチップへの中国関連顧客によるリモートアクセスが制限され、販売側が新たな買い手を模索せざるを得なくなっていると伝えた。政治・規制面では、Axiosの報道を契機に、民主党の有力政治家や州知事がAIの安全性や統制権の欠如に対する危機感を露わにしており、開発企業への新たな規制を求める圧力が急激に高まっている。さらにAnthropicのCEOであるダリオ・アモデイがAIの統制や自由意志を巡る議論で反論を行ったことや、Anthropicの株式上場がシリコンバレーのベンチャー投資全般にブレーキをかける可能性がNYTimesで報じられるなど、資本市場とガバナンスの緊張感も高まっている。",
+    "why_now": "【解釈】今回の変化の本質は、AI開発が「計算資源の無限の拡張」という前提から「物理的・政治的な壁による足切り」のフェーズに入ったことにある。データセンターの電力需要が天然ガスや宇宙空間への拡張を迫るほどのボトルネックになっている点は、インフラを握るプレイヤーしか大規模学習・推論を維持できなくなる構造を示唆している。また、安全性の制御不能を理由にした政治家や規制当局の介入は、これまでシリコンバレー主導だったAIの進化スピードに強制的なブレーキを踏ませる要因になり得る。資本市場においても、Anthropicの上場とその株価動向がスタートアップエコシステム全体への資金供給を絞る契機となっており、資金・インフラ・規制の三方向から、持続可能性の低いプレイヤーが淘汰される競争環境へ移行しつつあると読める。",
+    "counterpoint": "【反証・留保】この見立てが過大評価に終わる条件は、次世代の省電力アーキテクチャや革新的な半導体設計が予想を上回るスピードで実用化され、エネルギーと計算資源の制約が一気に緩和されることである。また、政治的な規制圧力が一時的なポピュリズムの域を出ず、実際の立法や厳格な運用に至らなかった場合、テック企業はこれまで通りフロンティアモデルの拡張を再加速させるだろう。市場の資金調達環境も、単一の企業の株価変動に引きずられず、巨額のプライベートエクイティや国家ファンドによって補完され続ければ、成長の鈍化は回避される。",
+    "japan_impact": "【日本の実務への示唆】日本企業は、生成AIの「機能の新しさ」を追うフェーズを終え、インフラコストの急騰と調達リスク、そして急速に厳格化するグローバルな規制・セキュリティ基準への対応に軸足を移すべきである。特に、電力制約や半導体の流通制限がグローバルで進む中、海外製モデルへの過度な依存や調達先の単一化は事業継続リスクに直結する。国内での独自インフラの確保、あるいはエネルギー効率の高いエッジAIや軽量モデルの活用を含め、調達とリスク管理の多重化を経営判断として急ぐ必要がある。",
+    "company_positions": [
+      {
+        "company": "Anthropic",
+        "status": "株式上場を果たしたものの、株価の下落がシリコンバレー全体のスタートアップ投資にブレーキをかけている。またAIの統制や安全性を巡る議論で経営陣が発信を強めている。",
+        "implication": "市場からの資金調達環境の悪化と規制当局からの直接的なプレッシャーが強まる中で、安全性と商業的成長のバランスをどう取るかが問われており、財務・ガバナンス両面での手腕が試される。"
+      },
+      {
+        "company": "Nvidia",
+        "status": "米国の新たな輸出規制により、中国関連顧客へのリモートアクセスを制限され、新たな買い手や販路の開拓を迫られている。",
+        "implication": "地政学リスクによる特定の巨大市場の閉鎖に対し、グローバルな需要のシフトや代替市場の開拓でどこまで売上を維持できるかが、今後の成長の持続性を左右する。"
+      }
+    ],
+    "next_signals": [
+      "米議会および州レベルでのAI開発・安全性に関する具体的な法制化の動き",
+      "データセンターの電力調達を巡る電力会社とテック企業間の契約・価格変動",
+      "Anthropicの上場後の株価推移とシリコンバレーのベンチャー投資金額の増減"
+    ],
+    "sources": [
+      {
+        "title": "Where the market may be mispricing risk most: AI boom, volatility, high-yield bonds",
+        "url": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html"
+      },
+      {
+        "title": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access",
+        "url": "https://www.cnbc.com/2026/11/25/nvidia-china-ai-chip-remote-access.html"
+      },
+      {
+        "title": "Anthropic’s Stock Debut Could Hurt Tech Start-Ups",
+        "url": "https://www.nytimes.com/2026/11/25/technology/anthropic-stock-tech-start-ups.html"
+      },
+      {
+        "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+        "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
+      },
+      {
+        "title": "How data centers are driving a US natural-gas boom",
+        "url": "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/"
+      }
+    ],
+    "news_summary": "AI競争の主導権争いは、モデルの機能進化から、エネルギー制約、規制・安全保障、そして社会的な統制権の確保へと急激にシフトしている。\n\n【事実】足元の動向は、インフラの物理的制約と政治的圧力の双方が表面化していることを示す。CNBCによると、米連邦通信委員会（FCC）はSpaceXに対し、100万基の軌道上データセンター衛星の配備を承認した。一方でMIT Technology Reviewは、AIデータセンターの急増が米国での天然ガスブームを駆動し、電力インフラへの負荷が限界に達しつつあると報じている。また、米中間の地政学的リスクも影を落としており、CNBCは新たな米国の規制によってNvidia製AIチップへの中国関連顧客によるリモートアクセスが制限され、販売側が新たな買い手を模索せざるを得なくなっていると伝えた。政治・規制面では、Axiosの報道を契機に、民主党の有力政治家や州知事がAIの安全性や統制権の欠如に対する危機感を露わにしており、開発企業への新たな規制を求める圧力が急激に高まっている。さらにAnthropicのCEOであるダリオ・アモデイがAIの統制や自由意志を巡る議論で反論を行ったことや、Anthropicの株式上場がシリコンバレーのベンチャー投資全般にブレーキをかける可能性がNYTimesで報じられるなど、資本市場とガバナンスの緊張感も高まっている。",
+    "opinion_summary": "【解釈】今回の変化の本質は、AI開発が「計算資源の無限の拡張」という前提から「物理的・政治的な壁による足切り」のフェーズに入ったことにある。データセンターの電力需要が天然ガスや宇宙空間への拡張を迫るほどのボトルネックになっている点は、インフラを握るプレイヤーしか大規模学習・推論を維持できなくなる構造を示唆している。また、安全性の制御不能を理由にした政治家や規制当局の介入は、これまでシリコンバレー主導だったAIの進化スピードに強制的なブレーキを踏ませる要因になり得る。資本市場においても、Anthropicの上場とその株価動向がスタートアップエコシステム全体への資金供給を絞る契機となっており、資金・インフラ・規制の三方向から、持続可能性の低いプレイヤーが淘汰される競争環境へ移行しつつあると読める。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てが過大評価に終わる条件は、次世代の省電力アーキテクチャや革新的な半導体設計が予想を上回るスピードで実用化され、エネルギーと計算資源の制約が一気に緩和されることである。また、政治的な規制圧力が一時的なポピュリズムの域を出ず、実際の立法や厳格な運用に至らなかった場合、テック企業はこれまで通りフロンティアモデルの拡張を再加速させるだろう。市場の資金調達環境も、単一の企業の株価変動に引きずられず、巨額のプライベートエクイティや国家ファンドによって補完され続ければ、成長の鈍化は回避される。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "Where the market may be mispricing risk most: AI boom, volatility, high-yield bonds",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
+        "point": "The AI boom could trigger a recession, but data centers remain an attractive investment opportunity, a hedge fund manage"
+      },
+      {
+        "rank": 2,
+        "title": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/25/nvidia-china-ai-chip-remote-access.html",
+        "point": "Nvidia GPU sellers are seeking new buyers after new U.S. rules tightened remote access to advanced AI chips for China-li"
+      },
+      {
+        "rank": 3,
+        "title": "Anthropic’s Stock Debut Could Hurt Tech Start-Ups",
+        "source": "NYTimes Technology",
+        "url": "https://www.nytimes.com/2026/11/25/technology/anthropic-stock-tech-start-ups.html",
+        "point": "As the share price drops, it could act as a brake on Silicon Valley’s frenzied investing in younger companies."
+      },
+      {
+        "rank": 4,
+        "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html",
+        "point": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed"
+      },
+      {
+        "rank": 5,
+        "title": "How data centers are driving a US natural-gas boom",
+        "source": "MIT Tech Review",
+        "url": "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/",
+        "point": "In May 2025, my colleague David Rotman wrote a feature story describing how AI could keep us dependent on natural gas. J"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AIインフラの物理的限界と安全保障の衝突",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】AI産業の主導権は単なるモデルの賢さではなく、膨大な計算資源を支えるインフラの調達能力と、政治・社会からの統制リスクをどうマネジメントするかという次元へ移った。本日の材料から見えてくるのは、データセンターの電力不足や規制圧力、さらにプライバシーや安全性を巡る法的・政治的摩擦が、技術開発のスピードを直接左右し始めているという構造変化である。もはやAI企業単体のプロダクト力だけで勝敗が決まる時代は終わった。\n\n【事実】足元の動向は、インフラの物理的制約と政治的圧力の双方が表面化していることを示す。CNBCによると、米連邦通信委員会（FCC）はSpaceXに対し、100万基の軌道上データセンター衛星の配備を承認した。一方でMIT Technology Reviewは、AIデータセンターの急増が米国での天然ガスブームを駆動し、電力インフラへの負荷が限界に達しつつあると報じている。また、米中間の地政学的リスクも影を落としており、CNBCは新たな米国の規制によってNvidia製AIチップへの中国関連顧客によるリモートアクセスが制限され、販売側が新たな買い手を模索せざるを得なくなっていると伝えた。政治・規制面では、Axiosの報道を契機に、民主党の有力政治家や州知事がAIの安全性や統制権の欠如に対する危機感を露わにしており、開発企業への新たな規制を求める圧力が急激に高まっている。さらにAnthropicのCEOであるダリオ・アモデイがAIの統制や自由意志を巡る議論で反論を行ったことや、Anthropicの株式上場がシリコンバレーのベンチャー投資全般にブレーキをかける可能性がNYTimesで報じられるなど、資本市場とガバナンスの緊張感も高まっている。\n\n【解釈】今回の変化の本質は、AI開発が「計算資源の無限の拡張」という前提から「物理的・政治的な壁による足切り」のフェーズに入ったことにある。データセンターの電力需要が天然ガスや宇宙空間への拡張を迫るほどのボトルネックになっている点は、インフラを握るプレイヤーしか大規模学習・推論を維持できなくなる構造を示唆している。また、安全性の制御不能を理由にした政治家や規制当局の介入は、これまでシリコンバレー主導だったAIの進化スピードに強制的なブレーキを踏ませる要因になり得る。資本市場においても、Anthropicの上場とその株価動向がスタートアップエコシステム全体への資金供給を絞る契機となっており、資金・インフラ・規制の三方向から、持続可能性の低いプレイヤーが淘汰される競争環境へ移行しつつあると読める。\n\n【競争の構図】\n【Anthropic】\n株式上場を果たしたものの、株価の下落がシリコンバレー全体のスタートアップ投資にブレーキをかけている。またAIの統制や安全性を巡る議論で経営陣が発信を強めている。\n→ 市場からの資金調達環境の悪化と規制当局からの直接的なプレッシャーが強まる中で、安全性と商業的成長のバランスをどう取るかが問われており、財務・ガバナンス両面での手腕が試される。\n\n【Nvidia】\n米国の新たな輸出規制により、中国関連顧客へのリモートアクセスを制限され、新たな買い手や販路の開拓を迫られている。\n→ 地政学リスクによる特定の巨大市場の閉鎖に対し、グローバルな需要のシフトや代替市場の開拓でどこまで売上を維持できるかが、今後の成長の持続性を左右する。",
+        "why_matters": "【日本の実務への示唆】日本企業は、生成AIの「機能の新しさ」を追うフェーズを終え、インフラコストの急騰と調達リスク、そして急速に厳格化するグローバルな規制・セキュリティ基準への対応に軸足を移すべきである。特に、電力制約や半導体の流通制限がグローバルで進む中、海外製モデルへの過度な依存や調達先の単一化は事業継続リスクに直結する。国内での独自インフラの確保、あるいはエネルギー効率の高いエッジAIや軽量モデルの活用を含め、調達とリスク管理の多重化を経営判断として急ぐ必要がある。\n\n【反証・留保】この見立てが過大評価に終わる条件は、次世代の省電力アーキテクチャや革新的な半導体設計が予想を上回るスピードで実用化され、エネルギーと計算資源の制約が一気に緩和されることである。また、政治的な規制圧力が一時的なポピュリズムの域を出ず、実際の立法や厳格な運用に至らなかった場合、テック企業はこれまで通りフロンティアモデルの拡張を再加速させるだろう。市場の資金調達環境も、単一の企業の株価変動に引きずられず、巨額のプライベートエクイティや国家ファンドによって補完され続ければ、成長の鈍化は回避される。",
+        "context": "【次の観測点】\n・米議会および州レベルでのAI開発・安全性に関する具体的な法制化の動き\n・データセンターの電力調達を巡る電力会社とテック企業間の契約・価格変動\n・Anthropicの上場後の株価推移とシリコンバレーのベンチャー投資金額の増減"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "CNBC Tech",
+      "title": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
+      "url": "https://www.cnbc.com/2026/11/26/dennys-jensen-huang-nvidia.html",
+      "summary": "Denny's reaffirmed its longstanding ties with Jensen Huang following his return as Nvidia CEO, revealing that a plaque had been restored.",
+      "published": "2026-11-26 03:13 UTC",
+      "pub_dt": "2026-11-26T03:13:43+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+      "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html",
+      "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
+      "published": "2026-11-26 02:35 UTC",
+      "pub_dt": "2026-11-26T02:35:39+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.10.34",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.34",
+      "summary": "This is a gateway-only extended-stable release, which is our current equivalent to LTS. This release is OpenClaw from the end of October 2026, plus critical security updates, reliability and performance fixes, and features like new model support. The latest version of OpenClaw at the time of this release is 2026.11.10\n2026.10.34\nThis extended-stable patch updates the Gateway and official npm plugins from 2026.10.33. It includes the core npm package and Gateway Docker images, but no native-app re",
+      "published": "2026-11-26 01:37 UTC",
+      "pub_dt": "2026-11-26T01:37:32+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Where the market may be mispricing risk most: AI boom, volatility, high-yield bonds",
+      "url": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
+      "summary": "The AI boom could trigger a recession, but data centers remain an attractive investment opportunity, a hedge fund manager said.",
+      "published": "2026-11-26 01:34 UTC",
+      "pub_dt": "2026-11-26T01:34:58+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "How to Talk to Your Family About A.I. Doom at Thanksgiving",
+      "url": "https://www.nytimes.com/2026/11/25/technology/thanksgiving-ai-doom-family.html",
+      "summary": "For people steeped in the world of artificial intelligence, the topic could be a minefield at this year’s dinner.",
+      "published": "2026-11-25 22:44 UTC",
+      "pub_dt": "2026-11-25T22:44:56+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks",
+      "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
+      "summary": "The credit rating agency may lower Nvidia's credit rating to AA-, the fourth-highest rating.",
+      "published": "2026-11-25 22:44 UTC",
+      "pub_dt": "2026-11-25T22:44:32+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
+      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+      "summary": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come [&#8230;]",
+      "published": "2026-11-25 21:51 UTC",
+      "pub_dt": "2026-11-25T21:51:26+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Anthropic’s Stock Debut Could Hurt Tech Start-Ups",
+      "url": "https://www.nytimes.com/2026/11/25/technology/anthropic-stock-tech-start-ups.html",
+      "summary": "As the share price drops, it could act as a brake on Silicon Valley’s frenzied investing in younger companies.",
+      "published": "2026-11-25 21:30 UTC",
+      "pub_dt": "2026-11-25T21:30:58+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "\"The flashing red lights couldn't be brighter\": Democrats demand new restrictions on AI",
+      "url": "https://www.axios.com/2026/11/25/democrats-ai-safety-restrictions-openai-anthropic-axios",
+      "summary": "Prominent Democrats are calling for new restrictions on AI development following Axios reporting that employees at OpenAI and Anthropic increasingly fear their most powerful models cannot be safely released.Why it matters: The political debate over AI is expanding beyond the economic consequences of the technology to a more existential question: whether companies should be allowed to build systems they may not be able to control.The issue is gaining traction among Democratic leaders ahead of the",
+      "published": "2026-11-25 20:19 UTC",
+      "pub_dt": "2026-11-25T20:19:21+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+      "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+      "summary": "OpenAI will introduce a single usage meter across ChatGPT as it combines the Chat and Work experiences.",
+      "published": "2026-11-25 20:03 UTC",
+      "pub_dt": "2026-11-25T20:03:27+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
+      "url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/",
+      "summary": "Most codes of conduct serve as a reflection of corporate culture. In Nvidia's case, that could have consequences.",
+      "published": "2026-11-25 19:54 UTC",
+      "pub_dt": "2026-11-25T19:54:57+00:00"
+    },
+    {
+      "source": "TechCrunch AI",
+      "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
+      "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+      "summary": "Anthropic CEO Dario Amodei pushes back against rivals’ accusations that he favors surrendering human agency to AI, even as leading AI companies increasingly automate their own research and model development.",
+      "published": "2026-11-25 19:44 UTC",
+      "pub_dt": "2026-11-25T19:44:24+00:00"
+    },
+    {
+      "source": "Axios",
+      "title": "Anthropic CEO pushes back on Axios reporting on AI and free will",
+      "url": "https://www.axios.com/2026/11/25/anthropic-dario-amodei-ai-free-will-contro-axios",
+      "summary": "Anthropic CEO Dario Amodei on Wednesday rejected the notion that humans should surrender free will to AI, pushing back on Axios' reporting about a growing ideological divide among top AI executives.Why it matters: This is Amodei's most significant public remarks since the company went public last week.What he's saying: \"We should never sacrifice legitimacy or self-determination at the altar of efficiency or security,\" Amodei said.Amodei distinguished between handing over governance to AI, which ",
+      "published": "2026-11-25 19:28 UTC",
+      "pub_dt": "2026-11-25T19:28:00+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Saudi national in OpenAI bugging case is out on bond after DOJ tries to block release",
+      "url": "https://www.cnbc.com/2026/11/25/openai-bugging-aflozan-bond-release-saudi.html",
+      "summary": "Abdulrahman Alfozan, a former OpenAI engineer, is expected to be fitted with an ankle monitor, his attorney, David Rizk, previously told CNBC.",
+      "published": "2026-11-25 19:11 UTC",
+      "pub_dt": "2026-11-25T19:11:53+00:00"
+    },
+    {
+      "source": "ZDNet AI",
+      "title": "You can turn Claude artifacts into Windows and Mac apps now – here’s how",
+      "url": "https://www.zdnet.com/innovation/claude-artifacts-desktop-apps-mac-windows/",
+      "summary": "Anthropic’s new ‘install as app’ feature makes it easy to turn your Claude artifacts into desktop apps on your computer – with some limitations.",
+      "published": "2026-11-25 18:54 UTC",
+      "pub_dt": "2026-11-25T18:54:05+00:00"
+    }
+  ]
+}
