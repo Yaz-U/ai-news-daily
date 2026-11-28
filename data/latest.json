@@ -1,233 +1,215 @@
 {
-  "timestamp": "2026-11-27T12:26:36.923067+09:00",
+  "timestamp": "2026-11-28T12:01:48.558777+09:00",
   "time_slot": "昼",
   "summary": {
-    "headline": "NVIDIAへの地政学的包囲網が突きつける計算資源の地殻変動",
-    "thesis": "米国の対中・周辺国規制の厳格化は、AIの物理的インフラの流通経路を狭め、ハードウェア主導権の争点を「技術の優劣」から「調達の合法性と地理的囲い込み」へと完全に書き換えた。",
-    "opening": "【結論】AI競争の主導権は、モデルの賢さというソフトウェアの次元を離れ、「誰が物理的な半導体とインフラの流通網を掌握するか」という地政学と物流のレイヤーへ移行した。CNBCやニューヨーク・タイムズ等の報道によれば、米国政府は中国への抜け道を塞ぐ新たな商務省（BIS）規則を発動し、NVIDIAに対してマレーシア、シンガポール、タイ、インドネシアの東南アジア4カ国へのサーバー・チップ出荷の即時一時停止を命じた。さらに、中国系レンターを通じたGPU調達ルートも厳格に封じられつつある。本稿では、このハードウェアの物理的サプライチェーンの分断と、オープンソース・エージェント基盤の進化という一見乖離した事象を束ね、今日の材料から競争のルールがどこで変わり始めたかを読み解く。",
-    "what_happened": "【事実】今回の構造変化を示す根拠として、ハードウェア流通の急停止と、オープンソース・開発者ツールの実用化という2つの明確な動きがある。第一に、CNBCおよびテッククランチの報道によると、NVIDIAは米国による対中AI半導体規制の抜け道を塞ぐ新しい商務省規則の施行に伴い、マレーシア、シンガポール、タイ、インドネシアの東南アジア諸国に対するサーバーおよび先端チップの出荷を一時停止した。米通商代表部（USTR）のジェイミソン・グリア氏も、今回の新規則が中国への迂回ルートを閉じるためのものであると認めている。第二に、開発者エコシステム側では、QwenのGitHubリポジトリ（v0.28.7およびCLIパッケージ）において、Harnessカーネル上でのQwen Code CLIの正式提供や、反復的なツール呼び出しエラーからのリカバリー機能、起動時の思考レベル適用など、AIエージェントが自律的に開発・運用作業を完結させるための実用的なアップデートが連続して投入されている。さらに、OpenClawのv2026.11.10リリースでは、人間向けのリリースノートに加え、AIエージェントやツールが直接読み込むためのプレーンなMarkdown形式の変更履歴（Changelog）が標準提供されるなど、システムインフラのインターフェース自体が「人間からAIへ」急速に最適化されている。物理ハードウェアの流通が国家安全保障によって細く絞られる一方で、ソフトウェアレイヤーではAIエージェントが自律分散的に実務を駆動する基盤が着々と整えられているのが現在の客観的な到達点である。",
-    "why_now": "【解釈】なぜこのタイミングで、ハードウェアの地理的封鎖とエージェント基盤の高度化が同時に起きているのか。その因果関係は「計算資源の密度の限界と、国家による囲い込みの必然性」にある。米国政府が東南アジアへの出荷停止という踏み込んだ措置に出たのは、単なる輸出管理の枠を超え、グローバルなクラウド・賃貸（Neocloud）市場を経由した迂回ルートがAIの地政学的なパワーバランスを揺るがし始めていたからだ。ハードウェアの自由な調達が制限される一方で、Qwen Code CLIやOpenClawに見られるように、ソフトウェア側は「より少ない計算資源で、エージェントが自律的にエラーを処理し成果を出す」効率化へと大きく舵を切っている。つまり、半導体の物理的供給がボトルネック化する未来を前提として、AI産業全体の重心が「潤沢なGPUを力任せに回すアプローチ」から、「制約されたハードウェア環境下でいかに高度なエージェントを回すかという効率化・最適化の競争」へと強制的にシフトしつつあると解釈できる。ただし、この見立ては、ハードウェアの迂回流通が完全に根絶され、かつ各国の規制執行が厳格に維持されることが前提となる。",
-    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、ハードウェア流通規制の「抜け道の生存性」と「オープンソース勢力の分散・自立度」を注視する必要がある。もし東南アジアや中東を経由した代替の調達ルートや、米国の輸出管理をかいくぐる非公式なネットワークが想定以上に強靭であることが判明した場合、「ハードウェアの物理的囲い込みによって効率化が強制される」という結論は大きく揺らぐ。また、中国勢を含むオープンソース陣営が、米国製先端チップの供給停止を契機として独自のエコシステムや国産アクセラレータへの移行を急速に完了させ、かつ性能面でのディスカウントを克服してしまった場合も、NVIDIA中心のサプライチェーンを前提とした地政学モデルは部分的に無効化される。単に規制ニュースの厳格さだけに目を奪われず、実需としてのGPU価格や非米製チップの稼働率に変化がない場合は、この仮説は過剰反応であると判定すべきである。",
-    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、クラウド上のAIモデルの選定や機能の比較ではなく、「調達先とサプライチェーンの法的リスク（コンプライアンス）」および「エージェント型ツールの実務への組み込み方」の2点である。第一に、NVIDIA製チップやそれを利用する海外のNeocloud（新興クラウド事業者）を介したインフラ調達を行っている場合、米国による東南アジアや第三国への規制強化の波及により、突然の供給停止やライセンス遅延に巻き込まれるリスクが現実化している。調達先のリーガルチェックを急ぐ必要がある。第二に、Qwen Code CLIやOpenClawに見られるような「AIエージェントが直接読み込み、自律的にエラー処理を行うツールチェーン」の進化は、社内の開発・業務プロセスにおいて人間中心のインタフェースからAI中心の処理基盤への移行を迫るものである。単なるチャットボットの導入ではなく、エージェントが自律稼働するためのAPIやデータ構造の整理を実務の現場で直ちに検討すべきタイミングに来ている。",
+    "headline": "AIの主導権は「モデル性能」から「流通・アクセス遮断」へ",
+    "thesis": "AI競争の主戦場は基礎モデルの性能向上から、ショッピングエージェント等の流通経路におけるプラットフォーマーのアクセス遮断と、それに伴う実務運用の自律化へ移行している。",
+    "opening": "【結論】今日のAI産業における最大の変化は、モデルの賢さを示すベンチマーク競争から、生成AIエージェントがユーザーと経済圏を結ぶ流通チャネルの覇権争いへと軸足が完全に移ったことにある。従来は「いかに高性能なモデルを作るか」が焦点だったが、実務や購買の現場では、大手小売やプラットフォーム側がAIエージェントのアクセスを遮断する動きが表面化している。本稿では、OpenAIやMetaなどのエージェント群が直面する流通の壁と、ソフトウェア開発における自律化（PyTorch GreenLight等）の動きを一つの緊張感ある問いとして読み解く。これは、AIが単なる「賢い道具」から「自ら経済活動やコード承認を行う主体」へ変貌する中で、既存のITインフラやEC覇権がどう防衛線を張るかという構造的な摩擦の始まりである。",
+    "what_happened": "【事実】今回の変化の起点を形成しているのは、CNBCが報じた大手小売によるAIショッピングエージェントのブロックの動きである。OpenAI、Meta、Googleなどが提供するAIショッピングエージェントが、Amazonをはじめとする主要小売サイトでアクセスの roadblocks（障害）に直面しており、エージェントを通じた自動購買の流通網が制限され始めている。一方で、開発プロセスの内部では自動化と自律化が別の形で進んでいる。InfoQが報じたMetaの「PyTorch GreenLight」は、AI（LLM）のレビューやリスクスコア評価に基づき、人間を介さずにコードのプルリクエスト（修正案）を自動承認・マージする仕組みを実用化している。また、オープンソースの環境では、OpenClawのベータ版（v2026.12.1-beta.1）において、サーバーの稼働を止めずにパッケージ更新を行う常駐ランチャーの導入や、コンテキストウィンドウの85%での自動圧縮・プロンプトキャッシュの再利用など、エージェントを常時稼働させるためのインフラ効率化が進む。さらに、MozillaとMistral AIの提携により、Firefoxのスマートウィンドウにオープンウェイトモデル「Mistral Small 4」が統合され、データ非保持を条件にブラウザレベルでの流通・アクセスが確保されつつある。これらは、外部の流通網（EC）がブロックされる一方で、内部の開発環境やブラウザ内ではエージェントの常時稼働と自動化が深化しているという、対照的な事実を示している。",
+    "why_now": "【解釈】なぜこのタイミングで「流通の遮断」と「内部の自律化」が同時に起きているのか。その背景には、AIエージェントが単なる検索の補助から、ユーザーの代わりに「トランザクション（取引・コード変更）」を実行する実利的なエージェントへ進化し始めたことがある。エージェントが自律的にショッピングやコードレビューを行うようになると、従来のWebサイトが収益源として頼ってきた「人間が広告やUIを見て判断する導線」がバイパスされる。これが、Amazonなどの大手小売がAIエージェントのアクセスをブロックする根本的な原因である。プラットフォーマーにとって、エージェントは自社の顧客囲い込みを崩す脅威なのだ。一方で、Metaやオープンソースのエコシステムが内部のコード承認や常時稼働インフラ（OpenClaw等）を急ぐのは、外部の流通が塞がれるリスクフリクションを見越し、自社内や開発者エコシステムの中で「AIが自ら価値を完結させる閉じたループ」を強固にする必要があったからと読める。つまり、AIの価値が「モデルの推論能力」単体ではなく、「どこまで人間を介さずに実務や取引を完結・流通させられるか」というレイヤーにシフトした結果、既存WebのビジネスモデルとAIエージェントの間に激しい摩擦が生じていると解釈できる。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、小売によるAIエージェントのブロックが技術的な対策ではなく、一時的な利用規約の変更や法的交渉のカードに留まる可能性に注意が必要である。もし主要小売がアクセス遮断を全面的に撤回し、API経由での「AIコマース枠」のマネタイズ（手数料ビジネス）に舵を切った場合、競争の主戦場は遮断の攻防ではなく「エージェント向けAPIの標準化争い」に巻き戻る。また、ブラウザやOSレベル（MozillaやAndroidのAI機能など）でのオープンウェイトモデルの採用がユーザーに広く定着しなかった場合、エージェントの流通網は少数の巨大テックが握る閉じられたアプリ内に再び回収される。結論が崩れるのは、AIエージェントが自律的な経済主体としてではなく、単なる「スマート検索のUIの一つ」として既存のWeb広告モデルに完全に包摂された場合である。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、自社サービスやECサイトにおける「AIエージェントからのアクセス方針」と、社内開発における「AIによる自律承認プロセスの導入」の2点である。まず、自社がECやWebプラットフォームを運営している場合、OpenAIやMeta等のエージェントからのスクレイピングや自動購入を無防備に受け入れるか、あるいはAmazonのようにブロックや専用API化の検討を始めるかの判断が急務となる。自社データを守りつつAPI経由でマネタイズする設計がなければ、利益を生まないAIトラフィックにサーバーリソースを圧迫されるリスクがある。次に、社内開発や保守においては、MetaのPyTorch GreenLightに見られるような「低リスクな変更のAI自動承認」の仕組みを参考に、コードレビューや定型的な業務プロセスの承認フローで人間がボトルネックになっていないかを点検すべきである。単にモデルを導入する段階から、エージェントが実務のゲートを通過するためのルールを設計するフェーズに入っている。",
     "company_positions": [
       {
-        "company": "NVIDIA",
-        "status": "米国の新たな商務省規則の厳格化を受け、マレーシア、シンガポール、タイ、インドネシアの東南アジア4カ国へのサーバーおよび先端チップの出荷停止を製造パートナーに指示した。",
-        "implication": "グローバルな流通網における裁量が国家安全保障によって大きく制限され、販売先のコンプライアンス監査コストと地政学的リスクが跳ね上がる。一方で、ハイエンド市場における供給の希少性は高まる。"
+        "company": "Amazon",
+        "status": "OpenAIやMetaなどの外部AIショッピングエージェントによる自社サイトへのアクセスをブロックする強硬姿勢をとる。",
+        "implication": "自社の顧客データと購買の主導権を守る強力な防衛策である一方、ユーザー側の利便性変化に取り残されるリスクも抱える。"
       },
       {
-        "company": "Qwen（Alibaba陣営）",
-        "status": "Harnessカーネル上でのQwen Code CLIの正式提供や、反復ツール呼び出しエラーの自動リカバリー、起動時の思考レベル適用など、実務的な開発エージェント機能を矢継ぎ早にリリースしている。",
-        "implication": "ハードウェアの調達環境が厳しさを増す中で、開発者向けのローカル・エージェント基盤としての利便性を高め、効率的な開発エコシステム内でのプレゼンスを着実に向上させている。"
+        "company": "Meta",
+        "status": "PyTorch GreenLightを通じたコードレビューの自動承認など、内部開発プロセスの自律化を推進している。",
+        "implication": "外部の流通網での摩擦が強まる中、自社エコシステム内での開発効率とエージェントの自律稼働能力を徹底して高める戦略に出ている。"
+      },
+      {
+        "company": "Mozilla",
+        "status": "Mistral AIのオープンウェイトモデルをFirefoxのスマートウィンドウに統合し、データ非保持を条件に提供している。",
+        "implication": "巨大テックのクローズドなAIに対抗し、ブラウザを基点としたオープンなAIエージェントの流通網を確保しようとしている。"
       }
     ],
     "next_signals": [
-      "米国商務省による東南アジア以外の地域（中東や中南米など）へのチップ輸出管理の拡大・追加指定の有無",
-      "NVIDIA製GPUの二次流通市場およびNeocloud各社における価格変動と調達遅延の実態",
-      "QwenやOpenClawなどのオープンソース・エージェント基盤における、開発者コミュニティの採用数と実務導入事例の広がり"
+      "Amazonや主要小売がAIエージェントに対して公式なAPIや有料のアクセス枠（提携モデル）を提供する動きが出るか",
+      "Metaや他のプラットフォームが自動承認・エージェント基盤をオープンソースとして外部展開する規模",
+      "ブラウザ（FirefoxやGoogle Chrome等）内蔵のAIエージェントにおけるユーザーの定着率とトラフィックの変化"
     ],
     "sources": [
       {
-        "title": "OpenClaw GitHub｜openclaw 2026.11.10",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10"
+        "title": "OpenClaw GitHub｜openclaw 2026.12.1-beta.1",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1"
       },
       {
-        "title": "Qwen GitHub｜Release v0.28.6-nightly.20261126.6b0cd79b",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.6-nightly.20261126.6b0cd79b"
+        "title": "CNBC Tech｜AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+        "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html"
       },
       {
-        "title": "Qwen GitHub｜Release v0.28.7",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7"
+        "title": "InfoQ AI/ML｜Meta Brings Code Review Auto-Approval More Mainstream with PyTorch GreenLight",
+        "url": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
       },
       {
-        "title": "CNBC Tech｜Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
-        "url": "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html"
-      },
-      {
-        "title": "NYTimes Technology｜Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
-        "url": "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html"
-      },
-      {
-        "title": "TechCrunch AI｜Nvidia hits pause on chip shipments to Southeast Asia",
-        "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/"
+        "title": "InfoQ AI/ML｜Mozilla Partners with Mistral to Bring Open-Weight AI Models to Firefox Smart Window",
+        "url": "https://www.infoq.com/news/2026/11/mozilla-mistral-ai-smart-window/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
       }
     ],
-    "news_summary": "米国の対中・周辺国規制の厳格化は、AIの物理的インフラの流通経路を狭め、ハードウェア主導権の争点を「技術の優劣」から「調達の合法性と地理的囲い込み」へと完全に書き換えた。\n\n【事実】今回の構造変化を示す根拠として、ハードウェア流通の急停止と、オープンソース・開発者ツールの実用化という2つの明確な動きがある。第一に、CNBCおよびテッククランチの報道によると、NVIDIAは米国による対中AI半導体規制の抜け道を塞ぐ新しい商務省規則の施行に伴い、マレーシア、シンガポール、タイ、インドネシアの東南アジア諸国に対するサーバーおよび先端チップの出荷を一時停止した。米通商代表部（USTR）のジェイミソン・グリア氏も、今回の新規則が中国への迂回ルートを閉じるためのものであると認めている。第二に、開発者エコシステム側では、QwenのGitHubリポジトリ（v0.28.7およびCLIパッケージ）において、Harnessカーネル上でのQwen Code CLIの正式提供や、反復的なツール呼び出しエラーからのリカバリー機能、起動時の思考レベル適用など、AIエージェントが自律的に開発・運用作業を完結させるための実用的なアップデートが連続して投入されている。さらに、OpenClawのv2026.11.10リリースでは、人間向けのリリースノートに加え、AIエージェントやツールが直接読み込むためのプレーンなMarkdown形式の変更履歴（Changelog）が標準提供されるなど、システムインフラのインターフェース自体が「人間からAIへ」急速に最適化されている。物理ハードウェアの流通が国家安全保障によって細く絞られる一方で、ソフトウェアレイヤーではAIエージェントが自律分散的に実務を駆動する基盤が着々と整えられているのが現在の客観的な到達点である。",
-    "opinion_summary": "【解釈】なぜこのタイミングで、ハードウェアの地理的封鎖とエージェント基盤の高度化が同時に起きているのか。その因果関係は「計算資源の密度の限界と、国家による囲い込みの必然性」にある。米国政府が東南アジアへの出荷停止という踏み込んだ措置に出たのは、単なる輸出管理の枠を超え、グローバルなクラウド・賃貸（Neocloud）市場を経由した迂回ルートがAIの地政学的なパワーバランスを揺るがし始めていたからだ。ハードウェアの自由な調達が制限される一方で、Qwen Code CLIやOpenClawに見られるように、ソフトウェア側は「より少ない計算資源で、エージェントが自律的にエラーを処理し成果を出す」効率化へと大きく舵を切っている。つまり、半導体の物理的供給がボトルネック化する未来を前提として、AI産業全体の重心が「潤沢なGPUを力任せに回すアプローチ」から、「制約されたハードウェア環境下でいかに高度なエージェントを回すかという効率化・最適化の競争」へと強制的にシフトしつつあると解釈できる。ただし、この見立ては、ハードウェアの迂回流通が完全に根絶され、かつ各国の規制執行が厳格に維持されることが前提となる。",
+    "news_summary": "AI競争の主戦場は基礎モデルの性能向上から、ショッピングエージェント等の流通経路におけるプラットフォーマーのアクセス遮断と、それに伴う実務運用の自律化へ移行している。\n\n【事実】今回の変化の起点を形成しているのは、CNBCが報じた大手小売によるAIショッピングエージェントのブロックの動きである。OpenAI、Meta、Googleなどが提供するAIショッピングエージェントが、Amazonをはじめとする主要小売サイトでアクセスの roadblocks（障害）に直面しており、エージェントを通じた自動購買の流通網が制限され始めている。一方で、開発プロセスの内部では自動化と自律化が別の形で進んでいる。InfoQが報じたMetaの「PyTorch GreenLight」は、AI（LLM）のレビューやリスクスコア評価に基づき、人間を介さずにコードのプルリクエスト（修正案）を自動承認・マージする仕組みを実用化している。また、オープンソースの環境では、OpenClawのベータ版（v2026.12.1-beta.1）において、サーバーの稼働を止めずにパッケージ更新を行う常駐ランチャーの導入や、コンテキストウィンドウの85%での自動圧縮・プロンプトキャッシュの再利用など、エージェントを常時稼働させるためのインフラ効率化が進む。さらに、MozillaとMistral AIの提携により、Firefoxのスマートウィンドウにオープンウェイトモデル「Mistral Small 4」が統合され、データ非保持を条件にブラウザレベルでの流通・アクセスが確保されつつある。これらは、外部の流通網（EC）がブロックされる一方で、内部の開発環境やブラウザ内ではエージェントの常時稼働と自動化が深化しているという、対照的な事実を示している。",
+    "opinion_summary": "【解釈】なぜこのタイミングで「流通の遮断」と「内部の自律化」が同時に起きているのか。その背景には、AIエージェントが単なる検索の補助から、ユーザーの代わりに「トランザクション（取引・コード変更）」を実行する実利的なエージェントへ進化し始めたことがある。エージェントが自律的にショッピングやコードレビューを行うようになると、従来のWebサイトが収益源として頼ってきた「人間が広告やUIを見て判断する導線」がバイパスされる。これが、Amazonなどの大手小売がAIエージェントのアクセスをブロックする根本的な原因である。プラットフォーマーにとって、エージェントは自社の顧客囲い込みを崩す脅威なのだ。一方で、Metaやオープンソースのエコシステムが内部のコード承認や常時稼働インフラ（OpenClaw等）を急ぐのは、外部の流通が塞がれるリスクフリクションを見越し、自社内や開発者エコシステムの中で「AIが自ら価値を完結させる閉じたループ」を強固にする必要があったからと読める。つまり、AIの価値が「モデルの推論能力」単体ではなく、「どこまで人間を介さずに実務や取引を完結・流通させられるか」というレイヤーにシフトした結果、既存WebのビジネスモデルとAIエージェントの間に激しい摩擦が生じていると解釈できる。",
     "sentiment": {
       "positive": "",
-      "negative": "【反証・留保】この見立てを過大評価しないための条件として、ハードウェア流通規制の「抜け道の生存性」と「オープンソース勢力の分散・自立度」を注視する必要がある。もし東南アジアや中東を経由した代替の調達ルートや、米国の輸出管理をかいくぐる非公式なネットワークが想定以上に強靭であることが判明した場合、「ハードウェアの物理的囲い込みによって効率化が強制される」という結論は大きく揺らぐ。また、中国勢を含むオープンソース陣営が、米国製先端チップの供給停止を契機として独自のエコシステムや国産アクセラレータへの移行を急速に完了させ、かつ性能面でのディスカウントを克服してしまった場合も、NVIDIA中心のサプライチェーンを前提とした地政学モデルは部分的に無効化される。単に規制ニュースの厳格さだけに目を奪われず、実需としてのGPU価格や非米製チップの稼働率に変化がない場合は、この仮説は過剰反応であると判定すべきである。",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、小売によるAIエージェントのブロックが技術的な対策ではなく、一時的な利用規約の変更や法的交渉のカードに留まる可能性に注意が必要である。もし主要小売がアクセス遮断を全面的に撤回し、API経由での「AIコマース枠」のマネタイズ（手数料ビジネス）に舵を切った場合、競争の主戦場は遮断の攻防ではなく「エージェント向けAPIの標準化争い」に巻き戻る。また、ブラウザやOSレベル（MozillaやAndroidのAI機能など）でのオープンウェイトモデルの採用がユーザーに広く定着しなかった場合、エージェントの流通網は少数の巨大テックが握る閉じられたアプリ内に再び回収される。結論が崩れるのは、AIエージェントが自律的な経済主体としてではなく、単なる「スマート検索のUIの一つ」として既存のWeb広告モデルに完全に包摂された場合である。",
       "neutral": "事実と分析を分けて掲載しています。"
     },
     "top_articles": [
       {
         "rank": 1,
-        "title": "OpenClaw GitHub｜openclaw 2026.11.10",
+        "title": "OpenClaw GitHub｜openclaw 2026.12.1-beta.1",
         "source": "OpenClaw GitHub",
-        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10",
-        "point": "OpenClaw v2026.11.10\n8,309 commits · 7,671 pull requests · 349 contributors\nChanges included in this release\nThe release"
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1",
+        "point": "2026.12.1-beta.1\nHighlights\n\nUpdates: Git installations use prepared releases and a resident launcher, while package upd"
       },
       {
         "rank": 2,
-        "title": "Qwen GitHub｜Release v0.28.6-nightly.20261126.6b0cd79b",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.6-nightly.20261126.6b0cd79b",
-        "point": "What's Changed\n\nfeat(qwen): add the Qwen Code CLI package on the Harness kernel by @sorrycc in #18351\nfix(core): explain"
+        "title": "CNBC Tech｜AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+        "point": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop, but they're hitting roadblocks at "
       },
       {
         "rank": 3,
-        "title": "Qwen GitHub｜Release v0.28.7",
-        "source": "Qwen GitHub",
-        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7",
-        "point": "Highlights\n\nQwen Code CLI is now available on the Harness kernel, with usage statistics off by default unless privacy.us"
+        "title": "InfoQ AI/ML｜Meta Brings Code Review Auto-Approval More Mainstream with PyTorch GreenLight",
+        "source": "InfoQ AI/ML",
+        "url": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+        "point": "PyTorch now lets an AI reviewer approve pull requests from its own maintainers. GreenLight is an open-source take on RAD"
       },
       {
         "rank": 4,
-        "title": "CNBC Tech｜Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
-        "source": "CNBC Tech",
-        "url": "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html",
-        "point": "A new BIS rule was intended to close \"loopholes,\" U.S. Trade Representative Jamieson Greer told CNBC's \"Squawk Box\" on W"
-      },
-      {
-        "rank": 5,
-        "title": "NYTimes Technology｜Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
-        "source": "NYTimes Technology",
-        "url": "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
-        "point": "The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the co"
+        "title": "InfoQ AI/ML｜Mozilla Partners with Mistral to Bring Open-Weight AI Models to Firefox Smart Window",
+        "source": "InfoQ AI/ML",
+        "url": "https://www.infoq.com/news/2026/11/mozilla-mistral-ai-smart-window/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+        "point": "Mozilla has partnered with Mistral AI to offer Mistral Small 4, an open-weight model, in Firefox's Smart Window AI assis"
       }
     ],
     "joho_picks": [
       {
-        "headline": "NVIDIAへの地政学的包囲網が突きつける計算資源の地殻変動",
+        "headline": "AIの主導権は「モデル性能」から「流通・アクセス遮断」へ",
         "source_title": "中心テーマ型編集記事",
-        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1",
         "source_name": "AI News Daily編集部",
-        "body": "【結論】AI競争の主導権は、モデルの賢さというソフトウェアの次元を離れ、「誰が物理的な半導体とインフラの流通網を掌握するか」という地政学と物流のレイヤーへ移行した。CNBCやニューヨーク・タイムズ等の報道によれば、米国政府は中国への抜け道を塞ぐ新たな商務省（BIS）規則を発動し、NVIDIAに対してマレーシア、シンガポール、タイ、インドネシアの東南アジア4カ国へのサーバー・チップ出荷の即時一時停止を命じた。さらに、中国系レンターを通じたGPU調達ルートも厳格に封じられつつある。本稿では、このハードウェアの物理的サプライチェーンの分断と、オープンソース・エージェント基盤の進化という一見乖離した事象を束ね、今日の材料から競争のルールがどこで変わり始めたかを読み解く。\n\n【事実】今回の構造変化を示す根拠として、ハードウェア流通の急停止と、オープンソース・開発者ツールの実用化という2つの明確な動きがある。第一に、CNBCおよびテッククランチの報道によると、NVIDIAは米国による対中AI半導体規制の抜け道を塞ぐ新しい商務省規則の施行に伴い、マレーシア、シンガポール、タイ、インドネシアの東南アジア諸国に対するサーバーおよび先端チップの出荷を一時停止した。米通商代表部（USTR）のジェイミソン・グリア氏も、今回の新規則が中国への迂回ルートを閉じるためのものであると認めている。第二に、開発者エコシステム側では、QwenのGitHubリポジトリ（v0.28.7およびCLIパッケージ）において、Harnessカーネル上でのQwen Code CLIの正式提供や、反復的なツール呼び出しエラーからのリカバリー機能、起動時の思考レベル適用など、AIエージェントが自律的に開発・運用作業を完結させるための実用的なアップデートが連続して投入されている。さらに、OpenClawのv2026.11.10リリースでは、人間向けのリリースノートに加え、AIエージェントやツールが直接読み込むためのプレーンなMarkdown形式の変更履歴（Changelog）が標準提供されるなど、システムインフラのインターフェース自体が「人間からAIへ」急速に最適化されている。物理ハードウェアの流通が国家安全保障によって細く絞られる一方で、ソフトウェアレイヤーではAIエージェントが自律分散的に実務を駆動する基盤が着々と整えられているのが現在の客観的な到達点である。\n\n【解釈】なぜこのタイミングで、ハードウェアの地理的封鎖とエージェント基盤の高度化が同時に起きているのか。その因果関係は「計算資源の密度の限界と、国家による囲い込みの必然性」にある。米国政府が東南アジアへの出荷停止という踏み込んだ措置に出たのは、単なる輸出管理の枠を超え、グローバルなクラウド・賃貸（Neocloud）市場を経由した迂回ルートがAIの地政学的なパワーバランスを揺るがし始めていたからだ。ハードウェアの自由な調達が制限される一方で、Qwen Code CLIやOpenClawに見られるように、ソフトウェア側は「より少ない計算資源で、エージェントが自律的にエラーを処理し成果を出す」効率化へと大きく舵を切っている。つまり、半導体の物理的供給がボトルネック化する未来を前提として、AI産業全体の重心が「潤沢なGPUを力任せに回すアプローチ」から、「制約されたハードウェア環境下でいかに高度なエージェントを回すかという効率化・最適化の競争」へと強制的にシフトしつつあると解釈できる。ただし、この見立ては、ハードウェアの迂回流通が完全に根絶され、かつ各国の規制執行が厳格に維持されることが前提となる。\n\n【競争の構図】\n【NVIDIA】\n米国の新たな商務省規則の厳格化を受け、マレーシア、シンガポール、タイ、インドネシアの東南アジア4カ国へのサーバーおよび先端チップの出荷停止を製造パートナーに指示した。\n→ グローバルな流通網における裁量が国家安全保障によって大きく制限され、販売先のコンプライアンス監査コストと地政学的リスクが跳ね上がる。一方で、ハイエンド市場における供給の希少性は高まる。\n\n【Qwen（Alibaba陣営）】\nHarnessカーネル上でのQwen Code CLIの正式提供や、反復ツール呼び出しエラーの自動リカバリー、起動時の思考レベル適用など、実務的な開発エージェント機能を矢継ぎ早にリリースしている。\n→ ハードウェアの調達環境が厳しさを増す中で、開発者向けのローカル・エージェント基盤としての利便性を高め、効率的な開発エコシステム内でのプレゼンスを着実に向上させている。",
-        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、クラウド上のAIモデルの選定や機能の比較ではなく、「調達先とサプライチェーンの法的リスク（コンプライアンス）」および「エージェント型ツールの実務への組み込み方」の2点である。第一に、NVIDIA製チップやそれを利用する海外のNeocloud（新興クラウド事業者）を介したインフラ調達を行っている場合、米国による東南アジアや第三国への規制強化の波及により、突然の供給停止やライセンス遅延に巻き込まれるリスクが現実化している。調達先のリーガルチェックを急ぐ必要がある。第二に、Qwen Code CLIやOpenClawに見られるような「AIエージェントが直接読み込み、自律的にエラー処理を行うツールチェーン」の進化は、社内の開発・業務プロセスにおいて人間中心のインタフェースからAI中心の処理基盤への移行を迫るものである。単なるチャットボットの導入ではなく、エージェントが自律稼働するためのAPIやデータ構造の整理を実務の現場で直ちに検討すべきタイミングに来ている。\n\n【反証・留保】この見立てを過大評価しないための条件として、ハードウェア流通規制の「抜け道の生存性」と「オープンソース勢力の分散・自立度」を注視する必要がある。もし東南アジアや中東を経由した代替の調達ルートや、米国の輸出管理をかいくぐる非公式なネットワークが想定以上に強靭であることが判明した場合、「ハードウェアの物理的囲い込みによって効率化が強制される」という結論は大きく揺らぐ。また、中国勢を含むオープンソース陣営が、米国製先端チップの供給停止を契機として独自のエコシステムや国産アクセラレータへの移行を急速に完了させ、かつ性能面でのディスカウントを克服してしまった場合も、NVIDIA中心のサプライチェーンを前提とした地政学モデルは部分的に無効化される。単に規制ニュースの厳格さだけに目を奪われず、実需としてのGPU価格や非米製チップの稼働率に変化がない場合は、この仮説は過剰反応であると判定すべきである。",
-        "context": "【次の観測点】\n・米国商務省による東南アジア以外の地域（中東や中南米など）へのチップ輸出管理の拡大・追加指定の有無\n・NVIDIA製GPUの二次流通市場およびNeocloud各社における価格変動と調達遅延の実態\n・QwenやOpenClawなどのオープンソース・エージェント基盤における、開発者コミュニティの採用数と実務導入事例の広がり"
+        "body": "【結論】今日のAI産業における最大の変化は、モデルの賢さを示すベンチマーク競争から、生成AIエージェントがユーザーと経済圏を結ぶ流通チャネルの覇権争いへと軸足が完全に移ったことにある。従来は「いかに高性能なモデルを作るか」が焦点だったが、実務や購買の現場では、大手小売やプラットフォーム側がAIエージェントのアクセスを遮断する動きが表面化している。本稿では、OpenAIやMetaなどのエージェント群が直面する流通の壁と、ソフトウェア開発における自律化（PyTorch GreenLight等）の動きを一つの緊張感ある問いとして読み解く。これは、AIが単なる「賢い道具」から「自ら経済活動やコード承認を行う主体」へ変貌する中で、既存のITインフラやEC覇権がどう防衛線を張るかという構造的な摩擦の始まりである。\n\n【事実】今回の変化の起点を形成しているのは、CNBCが報じた大手小売によるAIショッピングエージェントのブロックの動きである。OpenAI、Meta、Googleなどが提供するAIショッピングエージェントが、Amazonをはじめとする主要小売サイトでアクセスの roadblocks（障害）に直面しており、エージェントを通じた自動購買の流通網が制限され始めている。一方で、開発プロセスの内部では自動化と自律化が別の形で進んでいる。InfoQが報じたMetaの「PyTorch GreenLight」は、AI（LLM）のレビューやリスクスコア評価に基づき、人間を介さずにコードのプルリクエスト（修正案）を自動承認・マージする仕組みを実用化している。また、オープンソースの環境では、OpenClawのベータ版（v2026.12.1-beta.1）において、サーバーの稼働を止めずにパッケージ更新を行う常駐ランチャーの導入や、コンテキストウィンドウの85%での自動圧縮・プロンプトキャッシュの再利用など、エージェントを常時稼働させるためのインフラ効率化が進む。さらに、MozillaとMistral AIの提携により、Firefoxのスマートウィンドウにオープンウェイトモデル「Mistral Small 4」が統合され、データ非保持を条件にブラウザレベルでの流通・アクセスが確保されつつある。これらは、外部の流通網（EC）がブロックされる一方で、内部の開発環境やブラウザ内ではエージェントの常時稼働と自動化が深化しているという、対照的な事実を示している。\n\n【解釈】なぜこのタイミングで「流通の遮断」と「内部の自律化」が同時に起きているのか。その背景には、AIエージェントが単なる検索の補助から、ユーザーの代わりに「トランザクション（取引・コード変更）」を実行する実利的なエージェントへ進化し始めたことがある。エージェントが自律的にショッピングやコードレビューを行うようになると、従来のWebサイトが収益源として頼ってきた「人間が広告やUIを見て判断する導線」がバイパスされる。これが、Amazonなどの大手小売がAIエージェントのアクセスをブロックする根本的な原因である。プラットフォーマーにとって、エージェントは自社の顧客囲い込みを崩す脅威なのだ。一方で、Metaやオープンソースのエコシステムが内部のコード承認や常時稼働インフラ（OpenClaw等）を急ぐのは、外部の流通が塞がれるリスクフリクションを見越し、自社内や開発者エコシステムの中で「AIが自ら価値を完結させる閉じたループ」を強固にする必要があったからと読める。つまり、AIの価値が「モデルの推論能力」単体ではなく、「どこまで人間を介さずに実務や取引を完結・流通させられるか」というレイヤーにシフトした結果、既存WebのビジネスモデルとAIエージェントの間に激しい摩擦が生じていると解釈できる。\n\n【競争の構図】\n【Amazon】\nOpenAIやMetaなどの外部AIショッピングエージェントによる自社サイトへのアクセスをブロックする強硬姿勢をとる。\n→ 自社の顧客データと購買の主導権を守る強力な防衛策である一方、ユーザー側の利便性変化に取り残されるリスクも抱える。\n\n【Meta】\nPyTorch GreenLightを通じたコードレビューの自動承認など、内部開発プロセスの自律化を推進している。\n→ 外部の流通網での摩擦が強まる中、自社エコシステム内での開発効率とエージェントの自律稼働能力を徹底して高める戦略に出ている。\n\n【Mozilla】\nMistral AIのオープンウェイトモデルをFirefoxのスマートウィンドウに統合し、データ非保持を条件に提供している。\n→ 巨大テックのクローズドなAIに対抗し、ブラウザを基点としたオープンなAIエージェントの流通網を確保しようとしている。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、自社サービスやECサイトにおける「AIエージェントからのアクセス方針」と、社内開発における「AIによる自律承認プロセスの導入」の2点である。まず、自社がECやWebプラットフォームを運営している場合、OpenAIやMeta等のエージェントからのスクレイピングや自動購入を無防備に受け入れるか、あるいはAmazonのようにブロックや専用API化の検討を始めるかの判断が急務となる。自社データを守りつつAPI経由でマネタイズする設計がなければ、利益を生まないAIトラフィックにサーバーリソースを圧迫されるリスクがある。次に、社内開発や保守においては、MetaのPyTorch GreenLightに見られるような「低リスクな変更のAI自動承認」の仕組みを参考に、コードレビューや定型的な業務プロセスの承認フローで人間がボトルネックになっていないかを点検すべきである。単にモデルを導入する段階から、エージェントが実務のゲートを通過するためのルールを設計するフェーズに入っている。\n\n【反証・留保】この見立てを過大評価しないための条件として、小売によるAIエージェントのブロックが技術的な対策ではなく、一時的な利用規約の変更や法的交渉のカードに留まる可能性に注意が必要である。もし主要小売がアクセス遮断を全面的に撤回し、API経由での「AIコマース枠」のマネタイズ（手数料ビジネス）に舵を切った場合、競争の主戦場は遮断の攻防ではなく「エージェント向けAPIの標準化争い」に巻き戻る。また、ブラウザやOSレベル（MozillaやAndroidのAI機能など）でのオープンウェイトモデルの採用がユーザーに広く定着しなかった場合、エージェントの流通網は少数の巨大テックが握る閉じられたアプリ内に再び回収される。結論が崩れるのは、AIエージェントが自律的な経済主体としてではなく、単なる「スマート検索のUIの一つ」として既存のWeb広告モデルに完全に包摂された場合である。",
+        "context": "【次の観測点】\n・Amazonや主要小売がAIエージェントに対して公式なAPIや有料のアクセス枠（提携モデル）を提供する動きが出るか\n・Metaや他のプラットフォームが自動承認・エージェント基盤をオープンソースとして外部展開する規模\n・ブラウザ（FirefoxやGoogle Chrome等）内蔵のAIエージェントにおけるユーザーの定着率とトラフィックの変化"
       }
     ]
   },
   "raw_articles": [
     {
-      "source": "NYTimes Technology",
-      "title": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
-      "url": "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
-      "summary": "The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the countries to buy advanced A.I. chips.",
-      "published": "2026-11-27 02:45 UTC",
-      "pub_dt": "2026-11-27T02:45:41+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "v2026.11.11",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.11",
+      "summary": "OpenClaw v2026.11.11",
+      "published": "2026-11-28 02:12 UTC",
+      "pub_dt": "2026-11-28T02:12:16+00:00"
     },
     {
-      "source": "Qwen GitHub",
-      "title": "Release v0.28.6-nightly.20261126.6b0cd79b",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.6-nightly.20261126.6b0cd79b",
-      "summary": "What's Changed\n\nfeat(qwen): add the Qwen Code CLI package on the Harness kernel by @sorrycc in #18351\nfix(core): explain how to recover from a repeated-tool-call rejection by @qqqys in #18317\nfix(web-shell): keep compact Git status badges visible and adapt status bar to width by @callmeYe in #18359\ntest(verify-pr): use reaped child PIDs for torn-down worker fixtures by @wenshao in #18393\nfix(core): append effective permission context before model requests by @callmeYe in #18257\nfix(serve): branc",
-      "published": "2026-11-26 22:47 UTC",
-      "pub_dt": "2026-11-26T22:47:52+00:00"
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.12.1-beta.1",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1",
+      "summary": "2026.12.1-beta.1\nHighlights\n\nUpdates: Git installations use prepared releases and a resident launcher, while package updates prepare without stopping the serving Gateway. (#203194, #203497) Thanks @obviyus.\nPrompt caching: compaction reuses the warm prompt cache across routes, read-only prewarms keep idle caches warm, and automatic compaction starts at 85% of the context window. (#204111, #204219, #204210) Thanks @obviyus.\nTemplates: share an agent from its menu, preview a Template without expan",
+      "published": "2026-11-28 00:21 UTC",
+      "pub_dt": "2026-11-28T00:21:04+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jensen Huang's return did little to ease AI jitters. We used the weakness to buy",
+      "url": "https://www.cnbc.com/investingclub/2026/11/27/jensen-huangs-return-did-little-to-ease-ai-jitters-we-bought-on-weakness.html",
+      "summary": "Jensen Huang's return sparked a fleeting AI rally, but persistent market volatility gave us another opportunity to put cash to work.",
+      "published": "2026-11-27 18:46 UTC",
+      "pub_dt": "2026-11-27T18:46:20+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+      "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+      "summary": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop, but they're hitting roadblocks at Amazon and other retailers.",
+      "published": "2026-11-27 16:43 UTC",
+      "pub_dt": "2026-11-27T16:43:14+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "German software firm SAP is reportedly cutting at least 10,000 jobs in AI push",
+      "url": "https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html",
+      "summary": "SAP is reportedly considering cutting 10,000 jobs as it reshapes its software business around AI.",
+      "published": "2026-11-27 14:52 UTC",
+      "pub_dt": "2026-11-27T14:52:40+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "Meta Brings Code Review Auto-Approval More Mainstream with PyTorch GreenLight",
+      "url": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "PyTorch now lets an AI reviewer approve pull requests from its own maintainers. GreenLight is an open-source take on RADAR, the system Meta uses to auto-land low-risk diffs after safety checks, a risk score and an LLM review. OpenAI, Anthropic and Sonar describe similar ways to automate approval while keeping humans on risky changes. By Andrew Hoblitzell",
+      "published": "2026-11-27 14:36 UTC",
+      "pub_dt": "2026-11-27T14:36:00+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "This ER Doctor Became a Hospital’s First Clinical AI Engineer",
+      "url": "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai",
+      "summary": "When Boston Children’s Hospital posted a job listing for a prompt engineer in 2023, Dinesh Rai decided to apply. He didn’t expect to get the job.At the time, prompt engineering was being touted as one of the hot new jobs created by generative AI. Companies wanted people who knew how to coax the best answers from large language models (LLMs) by carefully wording instructions, supplying examples, and giving the systems personas or other context.Dinesh RaiEmployer: Boston Children’s HospitalOccupat",
+      "published": "2026-11-27 14:00 UTC",
+      "pub_dt": "2026-11-27T14:00:01+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Android’s DIY widgets are a bit of vibe-coding fun",
+      "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+      "summary": "Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right app and [&#8230;]",
+      "published": "2026-11-27 14:00 UTC",
+      "pub_dt": "2026-11-27T14:00:00+00:00"
+    },
+    {
+      "source": "Analytics Vidhya",
+      "title": "Building Self-Correcting AI Agents with Opik",
+      "url": "https://www.analyticsvidhya.com/blog/2026/11/self-correcting-ai-agents-opik/",
+      "summary": "Your agent might work perfectly in a demo, but real users bring unexpected challenges. It picks the wrong tool, ignores retrieved context, or generates unreliable answers. Observability tools show what happened, but rarely explain why or how to fix it, leaving developers scrolling through traces and debugging failures. With every model release introducing new failure [&#8230;]\nThe post Building Self-Correcting AI Agents with Opik appeared first on Analytics Vidhya.",
+      "published": "2026-11-27 12:44 UTC",
+      "pub_dt": "2026-11-27T12:44:15+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "The Tech Download: Will Jensen Huang’s return be the spark the shaky AI market needs?",
+      "url": "https://www.cnbc.com/2026/11/27/tech-download-jensen-huang-ai-market.html",
+      "summary": "AI stocks have fallen in recent times as investors question the sustainability of the AI boom.",
+      "published": "2026-11-27 12:00 UTC",
+      "pub_dt": "2026-11-27T12:00:22+00:00"
     },
     {
       "source": "NYTimes Technology",
       "title": "Jensen Huang Is Back, and So Is His Plaque at Denny’s",
       "url": "https://www.nytimes.com/2026/11/26/business/dennys-jensen-huang-nvidia-plaque.html",
-      "summary": "The chain said it had restored a plaque honoring Mr. Huang above a booth in San Jose, Calif., after he was reinstated at Nvidia, the company he is said to have co-founded while eating there.",
-      "published": "2026-11-26 21:25 UTC",
-      "pub_dt": "2026-11-26T21:25:16+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Nvidia hits pause on chip shipments to Southeast Asia",
-      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
-      "summary": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China.",
-      "published": "2026-11-26 20:03 UTC",
-      "pub_dt": "2026-11-26T20:03:54+00:00"
-    },
-    {
-      "source": "Qwen GitHub",
-      "title": "Release v0.28.7",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7",
-      "summary": "Highlights\n\nQwen Code CLI is now available on the Harness kernel, with usage statistics off by default unless privacy.usageStatisticsEnabled is true. (#18351)\nRepeated-tool-call rejections now explain the cause and suggest /compress or /clear to recover, across TUI, headless, and daemon sessions. (#18317)\nWeb Shell applies the selected thinking level at session startup, so the first prompt uses it without a second request. (#18326)\nThe interactive CLI saves reasoning effort and context window pe",
-      "published": "2026-11-26 18:08 UTC",
-      "pub_dt": "2026-11-26T18:08:44+00:00"
+      "summary": "The chain said it had restored a plaque honoring Mr. Huang above a booth in San Jose, Calif., where he is said to have developed the idea for Nvidia.",
+      "published": "2026-11-27 10:17 UTC",
+      "pub_dt": "2026-11-27T10:17:23+00:00"
     },
     {
       "source": "CNBC Tech",
-      "title": "Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
-      "url": "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html",
-      "summary": "A new BIS rule was intended to close \"loopholes,\" U.S. Trade Representative Jamieson Greer told CNBC's \"Squawk Box\" on Wednesday.",
-      "published": "2026-11-26 17:04 UTC",
-      "pub_dt": "2026-11-26T17:04:54+00:00"
-    },
-    {
-      "source": "TechCrunch AI",
-      "title": "Grand Theft Auto VI proves why efficiency isn’t a virtue",
-      "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
-      "summary": "On the same day that Anthropic entered the public market, a painstakingly human video game became one of most successful entertainment launches of all time.",
-      "published": "2026-11-26 16:00 UTC",
-      "pub_dt": "2026-11-26T16:00:00+00:00"
-    },
-    {
-      "source": "MIT Tech Review",
-      "title": "The Download: Better bionic hands and AI’s natural-gas boom",
-      "url": "https://www.technologyreview.com/2026/11/26/1149934/the-download-better-bionic-hands-ai-natural-gas-boom/",
-      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The next generation of bionic hands is here—and they can feel Avi Davidson lost his left hand as a teenager. Since then, he&#8217;s cycled through a few prosthetics. But his latest&#8230;",
-      "published": "2026-11-26 13:10 UTC",
-      "pub_dt": "2026-11-26T13:10:00+00:00"
-    },
-    {
-      "source": "CNBC Tech",
-      "title": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters to 'fish for bargains'",
-      "url": "https://www.cnbc.com/2026/11/26/stock-markets-today-.html",
-      "summary": "Investors appeared to have shrugged off a fresh set of tariffs unveiled by the White House on Wednesday, targeting more than a dozen major trading partners.",
-      "published": "2026-11-26 12:22 UTC",
-      "pub_dt": "2026-11-26T12:22:25+00:00"
+      "title": "Chinese chip stocks notch biggest ever one-day gains as Beijing signals broader market support",
+      "url": "https://www.cnbc.com/2026/11/27/china-chip-stocks-beijing-market-support.html",
+      "summary": "Chinese stocks rebounded sharply after a rare intraday state media readout cheered investors as top policymakers pledged market liquidity support.",
+      "published": "2026-11-27 10:13 UTC",
+      "pub_dt": "2026-11-27T10:13:44+00:00"
     },
     {
       "source": "Wired",
-      "title": "Here’s Everything You Can Do With With the New Gemini AI on Android Auto",
-      "url": "https://www.wired.com/story/heres-everything-you-can-do-with-with-the-new-gemini-ai-on-android-auto/",
-      "summary": "Android Auto is now smarter than before, thanks to the addition of Gemini. You can navigate more easily and even bounce ideas off of it along the way.",
-      "published": "2026-11-26 12:00 UTC",
-      "pub_dt": "2026-11-26T12:00:00+00:00"
-    },
-    {
-      "source": "Analytics Vidhya",
-      "title": "World Models: Why Yann LeCun Believes LLMs Are a Dead End",
-      "url": "https://www.analyticsvidhya.com/blog/2026/11/world-models-llm-limitations/",
-      "summary": "Ask a chatbot what happens when a glass falls off a table, and it will describe the outcome perfectly. Ask a robot to handle that same glass, and things become considerably more complicated. This gap between describing the world and understanding it lies at the heart of world models. Yann LeCun, former Meta&#8217;s AI chief, [&#8230;]\nThe post World Models: Why Yann LeCun Believes LLMs Are a Dead End appeared first on Analytics Vidhya.",
-      "published": "2026-11-26 11:29 UTC",
-      "pub_dt": "2026-11-26T11:29:36+00:00"
-    },
-    {
-      "source": "Axios",
-      "title": "Cookbook GPT: When AI becomes a Thanksgiving sous-chef",
-      "url": "https://www.axios.com/2026/11/26/ai-thanksgiving-meals-chefs",
-      "summary": "From cookbooks to YouTube to ChatGPT, the way Americans plan their holiday menus has evolved.The big picture: But there's something uniquely human about building a recipe, and chefs warn we risk fracturing personal connections and family history by reducing culinary traditions to chatbot prompts.\"Recipes can have tradition and ritual,\" says Melanie Underwood, a culinary educator and founder of Nourish &amp; Gather. She warns that taking the human conversation out of cooking could further erode o",
-      "published": "2026-11-26 11:00 UTC",
-      "pub_dt": "2026-11-26T11:00:04+00:00"
+      "title": "A New Breed of Chip Runs AI Models Using Waves of Light",
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "summary": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.",
+      "published": "2026-11-27 07:00 UTC",
+      "pub_dt": "2026-11-27T07:00:00+00:00"
     },
     {
       "source": "InfoQ AI/ML",
-      "title": "Presentation: Finetuning Your Embedding Model for Better Search: Learning from Agentic Search at Dell",
-      "url": "https://www.infoq.com/presentations/fine-tune-enterprise-rag-embeddings/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
-      "summary": "Rachel Shalom explains how Dell solved enterprise RAG retrieval failures on internal terminology by fine-tuning open-source embedding models. She discusses data prep with hard negatives, distributed InfoNCE loss training on H100 GPUs, automated hyperparameter tuning, and production evaluation using LLM-as-a-judge. By Rachel Shalom",
-      "published": "2026-11-26 11:00 UTC",
-      "pub_dt": "2026-11-26T11:00:00+00:00"
-    },
-    {
-      "source": "OpenClaw GitHub",
-      "title": "openclaw 2026.11.10",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.10",
-      "summary": "OpenClaw v2026.11.10\n8,309 commits · 7,671 pull requests · 349 contributors\nChanges included in this release\nThe release notes and changelog contain the same content, presented in two formats:\n\nRelease notes — formatted for people.\nChangelog — plain Markdown for AI agents and tools.\n\nThanks\n@0xNagato @1052326311 @555aaditya @651juan @A-Raphie @aashish254 @Abinithishkumarprabakaran @AgentXenAI @airbing11 @Airyn-Axyl @aishwary-dongre @akshitkhokhani @Alexi5000 @alfredjbclaw @Alix-007 @alkor2000 @a",
-      "published": "2026-11-26 10:06 UTC",
-      "pub_dt": "2026-11-26T10:06:31+00:00"
-    },
-    {
-      "source": "The Verge AI",
-      "title": "42 state AGs are trying to stop Character.AI from selling users’ chats",
-      "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
-      "summary": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings. In a deluge of nearly identical press releases, the various AGs accuse the company of planning to auction off \"the private chat histories of more than 21 million U.S. accounts - [&#8230;]",
-      "published": "2026-11-26 09:54 UTC",
-      "pub_dt": "2026-11-26T09:54:40+00:00"
+      "title": "Mozilla Partners with Mistral to Bring Open-Weight AI Models to Firefox Smart Window",
+      "url": "https://www.infoq.com/news/2026/11/mozilla-mistral-ai-smart-window/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "Mozilla has partnered with Mistral AI to offer Mistral Small 4, an open-weight model, in Firefox's Smart Window AI assistant, now in beta. It is recommended for users in France, the US and Canada. Users can choose among several models, and Mistral agreed to zero data retention. Beta feedback is mixed. By Daniel Curtis",
+      "published": "2026-11-27 06:58 UTC",
+      "pub_dt": "2026-11-27T06:58:00+00:00"
     }
   ]
 }

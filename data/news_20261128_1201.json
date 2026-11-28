@@ -1,0 +1,215 @@
+{
+  "timestamp": "2026-11-28T12:01:48.558777+09:00",
+  "time_slot": "昼",
+  "summary": {
+    "headline": "AIの主導権は「モデル性能」から「流通・アクセス遮断」へ",
+    "thesis": "AI競争の主戦場は基礎モデルの性能向上から、ショッピングエージェント等の流通経路におけるプラットフォーマーのアクセス遮断と、それに伴う実務運用の自律化へ移行している。",
+    "opening": "【結論】今日のAI産業における最大の変化は、モデルの賢さを示すベンチマーク競争から、生成AIエージェントがユーザーと経済圏を結ぶ流通チャネルの覇権争いへと軸足が完全に移ったことにある。従来は「いかに高性能なモデルを作るか」が焦点だったが、実務や購買の現場では、大手小売やプラットフォーム側がAIエージェントのアクセスを遮断する動きが表面化している。本稿では、OpenAIやMetaなどのエージェント群が直面する流通の壁と、ソフトウェア開発における自律化（PyTorch GreenLight等）の動きを一つの緊張感ある問いとして読み解く。これは、AIが単なる「賢い道具」から「自ら経済活動やコード承認を行う主体」へ変貌する中で、既存のITインフラやEC覇権がどう防衛線を張るかという構造的な摩擦の始まりである。",
+    "what_happened": "【事実】今回の変化の起点を形成しているのは、CNBCが報じた大手小売によるAIショッピングエージェントのブロックの動きである。OpenAI、Meta、Googleなどが提供するAIショッピングエージェントが、Amazonをはじめとする主要小売サイトでアクセスの roadblocks（障害）に直面しており、エージェントを通じた自動購買の流通網が制限され始めている。一方で、開発プロセスの内部では自動化と自律化が別の形で進んでいる。InfoQが報じたMetaの「PyTorch GreenLight」は、AI（LLM）のレビューやリスクスコア評価に基づき、人間を介さずにコードのプルリクエスト（修正案）を自動承認・マージする仕組みを実用化している。また、オープンソースの環境では、OpenClawのベータ版（v2026.12.1-beta.1）において、サーバーの稼働を止めずにパッケージ更新を行う常駐ランチャーの導入や、コンテキストウィンドウの85%での自動圧縮・プロンプトキャッシュの再利用など、エージェントを常時稼働させるためのインフラ効率化が進む。さらに、MozillaとMistral AIの提携により、Firefoxのスマートウィンドウにオープンウェイトモデル「Mistral Small 4」が統合され、データ非保持を条件にブラウザレベルでの流通・アクセスが確保されつつある。これらは、外部の流通網（EC）がブロックされる一方で、内部の開発環境やブラウザ内ではエージェントの常時稼働と自動化が深化しているという、対照的な事実を示している。",
+    "why_now": "【解釈】なぜこのタイミングで「流通の遮断」と「内部の自律化」が同時に起きているのか。その背景には、AIエージェントが単なる検索の補助から、ユーザーの代わりに「トランザクション（取引・コード変更）」を実行する実利的なエージェントへ進化し始めたことがある。エージェントが自律的にショッピングやコードレビューを行うようになると、従来のWebサイトが収益源として頼ってきた「人間が広告やUIを見て判断する導線」がバイパスされる。これが、Amazonなどの大手小売がAIエージェントのアクセスをブロックする根本的な原因である。プラットフォーマーにとって、エージェントは自社の顧客囲い込みを崩す脅威なのだ。一方で、Metaやオープンソースのエコシステムが内部のコード承認や常時稼働インフラ（OpenClaw等）を急ぐのは、外部の流通が塞がれるリスクフリクションを見越し、自社内や開発者エコシステムの中で「AIが自ら価値を完結させる閉じたループ」を強固にする必要があったからと読める。つまり、AIの価値が「モデルの推論能力」単体ではなく、「どこまで人間を介さずに実務や取引を完結・流通させられるか」というレイヤーにシフトした結果、既存WebのビジネスモデルとAIエージェントの間に激しい摩擦が生じていると解釈できる。",
+    "counterpoint": "【反証・留保】この見立てを過大評価しないための条件として、小売によるAIエージェントのブロックが技術的な対策ではなく、一時的な利用規約の変更や法的交渉のカードに留まる可能性に注意が必要である。もし主要小売がアクセス遮断を全面的に撤回し、API経由での「AIコマース枠」のマネタイズ（手数料ビジネス）に舵を切った場合、競争の主戦場は遮断の攻防ではなく「エージェント向けAPIの標準化争い」に巻き戻る。また、ブラウザやOSレベル（MozillaやAndroidのAI機能など）でのオープンウェイトモデルの採用がユーザーに広く定着しなかった場合、エージェントの流通網は少数の巨大テックが握る閉じられたアプリ内に再び回収される。結論が崩れるのは、AIエージェントが自律的な経済主体としてではなく、単なる「スマート検索のUIの一つ」として既存のWeb広告モデルに完全に包摂された場合である。",
+    "japan_impact": "【日本の実務への示唆】日本企業が今週見直すべきは、自社サービスやECサイトにおける「AIエージェントからのアクセス方針」と、社内開発における「AIによる自律承認プロセスの導入」の2点である。まず、自社がECやWebプラットフォームを運営している場合、OpenAIやMeta等のエージェントからのスクレイピングや自動購入を無防備に受け入れるか、あるいはAmazonのようにブロックや専用API化の検討を始めるかの判断が急務となる。自社データを守りつつAPI経由でマネタイズする設計がなければ、利益を生まないAIトラフィックにサーバーリソースを圧迫されるリスクがある。次に、社内開発や保守においては、MetaのPyTorch GreenLightに見られるような「低リスクな変更のAI自動承認」の仕組みを参考に、コードレビューや定型的な業務プロセスの承認フローで人間がボトルネックになっていないかを点検すべきである。単にモデルを導入する段階から、エージェントが実務のゲートを通過するためのルールを設計するフェーズに入っている。",
+    "company_positions": [
+      {
+        "company": "Amazon",
+        "status": "OpenAIやMetaなどの外部AIショッピングエージェントによる自社サイトへのアクセスをブロックする強硬姿勢をとる。",
+        "implication": "自社の顧客データと購買の主導権を守る強力な防衛策である一方、ユーザー側の利便性変化に取り残されるリスクも抱える。"
+      },
+      {
+        "company": "Meta",
+        "status": "PyTorch GreenLightを通じたコードレビューの自動承認など、内部開発プロセスの自律化を推進している。",
+        "implication": "外部の流通網での摩擦が強まる中、自社エコシステム内での開発効率とエージェントの自律稼働能力を徹底して高める戦略に出ている。"
+      },
+      {
+        "company": "Mozilla",
+        "status": "Mistral AIのオープンウェイトモデルをFirefoxのスマートウィンドウに統合し、データ非保持を条件に提供している。",
+        "implication": "巨大テックのクローズドなAIに対抗し、ブラウザを基点としたオープンなAIエージェントの流通網を確保しようとしている。"
+      }
+    ],
+    "next_signals": [
+      "Amazonや主要小売がAIエージェントに対して公式なAPIや有料のアクセス枠（提携モデル）を提供する動きが出るか",
+      "Metaや他のプラットフォームが自動承認・エージェント基盤をオープンソースとして外部展開する規模",
+      "ブラウザ（FirefoxやGoogle Chrome等）内蔵のAIエージェントにおけるユーザーの定着率とトラフィックの変化"
+    ],
+    "sources": [
+      {
+        "title": "OpenClaw GitHub｜openclaw 2026.12.1-beta.1",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1"
+      },
+      {
+        "title": "CNBC Tech｜AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+        "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html"
+      },
+      {
+        "title": "InfoQ AI/ML｜Meta Brings Code Review Auto-Approval More Mainstream with PyTorch GreenLight",
+        "url": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
+      },
+      {
+        "title": "InfoQ AI/ML｜Mozilla Partners with Mistral to Bring Open-Weight AI Models to Firefox Smart Window",
+        "url": "https://www.infoq.com/news/2026/11/mozilla-mistral-ai-smart-window/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering"
+      }
+    ],
+    "news_summary": "AI競争の主戦場は基礎モデルの性能向上から、ショッピングエージェント等の流通経路におけるプラットフォーマーのアクセス遮断と、それに伴う実務運用の自律化へ移行している。\n\n【事実】今回の変化の起点を形成しているのは、CNBCが報じた大手小売によるAIショッピングエージェントのブロックの動きである。OpenAI、Meta、Googleなどが提供するAIショッピングエージェントが、Amazonをはじめとする主要小売サイトでアクセスの roadblocks（障害）に直面しており、エージェントを通じた自動購買の流通網が制限され始めている。一方で、開発プロセスの内部では自動化と自律化が別の形で進んでいる。InfoQが報じたMetaの「PyTorch GreenLight」は、AI（LLM）のレビューやリスクスコア評価に基づき、人間を介さずにコードのプルリクエスト（修正案）を自動承認・マージする仕組みを実用化している。また、オープンソースの環境では、OpenClawのベータ版（v2026.12.1-beta.1）において、サーバーの稼働を止めずにパッケージ更新を行う常駐ランチャーの導入や、コンテキストウィンドウの85%での自動圧縮・プロンプトキャッシュの再利用など、エージェントを常時稼働させるためのインフラ効率化が進む。さらに、MozillaとMistral AIの提携により、Firefoxのスマートウィンドウにオープンウェイトモデル「Mistral Small 4」が統合され、データ非保持を条件にブラウザレベルでの流通・アクセスが確保されつつある。これらは、外部の流通網（EC）がブロックされる一方で、内部の開発環境やブラウザ内ではエージェントの常時稼働と自動化が深化しているという、対照的な事実を示している。",
+    "opinion_summary": "【解釈】なぜこのタイミングで「流通の遮断」と「内部の自律化」が同時に起きているのか。その背景には、AIエージェントが単なる検索の補助から、ユーザーの代わりに「トランザクション（取引・コード変更）」を実行する実利的なエージェントへ進化し始めたことがある。エージェントが自律的にショッピングやコードレビューを行うようになると、従来のWebサイトが収益源として頼ってきた「人間が広告やUIを見て判断する導線」がバイパスされる。これが、Amazonなどの大手小売がAIエージェントのアクセスをブロックする根本的な原因である。プラットフォーマーにとって、エージェントは自社の顧客囲い込みを崩す脅威なのだ。一方で、Metaやオープンソースのエコシステムが内部のコード承認や常時稼働インフラ（OpenClaw等）を急ぐのは、外部の流通が塞がれるリスクフリクションを見越し、自社内や開発者エコシステムの中で「AIが自ら価値を完結させる閉じたループ」を強固にする必要があったからと読める。つまり、AIの価値が「モデルの推論能力」単体ではなく、「どこまで人間を介さずに実務や取引を完結・流通させられるか」というレイヤーにシフトした結果、既存WebのビジネスモデルとAIエージェントの間に激しい摩擦が生じていると解釈できる。",
+    "sentiment": {
+      "positive": "",
+      "negative": "【反証・留保】この見立てを過大評価しないための条件として、小売によるAIエージェントのブロックが技術的な対策ではなく、一時的な利用規約の変更や法的交渉のカードに留まる可能性に注意が必要である。もし主要小売がアクセス遮断を全面的に撤回し、API経由での「AIコマース枠」のマネタイズ（手数料ビジネス）に舵を切った場合、競争の主戦場は遮断の攻防ではなく「エージェント向けAPIの標準化争い」に巻き戻る。また、ブラウザやOSレベル（MozillaやAndroidのAI機能など）でのオープンウェイトモデルの採用がユーザーに広く定着しなかった場合、エージェントの流通網は少数の巨大テックが握る閉じられたアプリ内に再び回収される。結論が崩れるのは、AIエージェントが自律的な経済主体としてではなく、単なる「スマート検索のUIの一つ」として既存のWeb広告モデルに完全に包摂された場合である。",
+      "neutral": "事実と分析を分けて掲載しています。"
+    },
+    "top_articles": [
+      {
+        "rank": 1,
+        "title": "OpenClaw GitHub｜openclaw 2026.12.1-beta.1",
+        "source": "OpenClaw GitHub",
+        "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1",
+        "point": "2026.12.1-beta.1\nHighlights\n\nUpdates: Git installations use prepared releases and a resident launcher, while package upd"
+      },
+      {
+        "rank": 2,
+        "title": "CNBC Tech｜AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+        "source": "CNBC Tech",
+        "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+        "point": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop, but they're hitting roadblocks at "
+      },
+      {
+        "rank": 3,
+        "title": "InfoQ AI/ML｜Meta Brings Code Review Auto-Approval More Mainstream with PyTorch GreenLight",
+        "source": "InfoQ AI/ML",
+        "url": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+        "point": "PyTorch now lets an AI reviewer approve pull requests from its own maintainers. GreenLight is an open-source take on RAD"
+      },
+      {
+        "rank": 4,
+        "title": "InfoQ AI/ML｜Mozilla Partners with Mistral to Bring Open-Weight AI Models to Firefox Smart Window",
+        "source": "InfoQ AI/ML",
+        "url": "https://www.infoq.com/news/2026/11/mozilla-mistral-ai-smart-window/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+        "point": "Mozilla has partnered with Mistral AI to offer Mistral Small 4, an open-weight model, in Firefox's Smart Window AI assis"
+      }
+    ],
+    "joho_picks": [
+      {
+        "headline": "AIの主導権は「モデル性能」から「流通・アクセス遮断」へ",
+        "source_title": "中心テーマ型編集記事",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1",
+        "source_name": "AI News Daily編集部",
+        "body": "【結論】今日のAI産業における最大の変化は、モデルの賢さを示すベンチマーク競争から、生成AIエージェントがユーザーと経済圏を結ぶ流通チャネルの覇権争いへと軸足が完全に移ったことにある。従来は「いかに高性能なモデルを作るか」が焦点だったが、実務や購買の現場では、大手小売やプラットフォーム側がAIエージェントのアクセスを遮断する動きが表面化している。本稿では、OpenAIやMetaなどのエージェント群が直面する流通の壁と、ソフトウェア開発における自律化（PyTorch GreenLight等）の動きを一つの緊張感ある問いとして読み解く。これは、AIが単なる「賢い道具」から「自ら経済活動やコード承認を行う主体」へ変貌する中で、既存のITインフラやEC覇権がどう防衛線を張るかという構造的な摩擦の始まりである。\n\n【事実】今回の変化の起点を形成しているのは、CNBCが報じた大手小売によるAIショッピングエージェントのブロックの動きである。OpenAI、Meta、Googleなどが提供するAIショッピングエージェントが、Amazonをはじめとする主要小売サイトでアクセスの roadblocks（障害）に直面しており、エージェントを通じた自動購買の流通網が制限され始めている。一方で、開発プロセスの内部では自動化と自律化が別の形で進んでいる。InfoQが報じたMetaの「PyTorch GreenLight」は、AI（LLM）のレビューやリスクスコア評価に基づき、人間を介さずにコードのプルリクエスト（修正案）を自動承認・マージする仕組みを実用化している。また、オープンソースの環境では、OpenClawのベータ版（v2026.12.1-beta.1）において、サーバーの稼働を止めずにパッケージ更新を行う常駐ランチャーの導入や、コンテキストウィンドウの85%での自動圧縮・プロンプトキャッシュの再利用など、エージェントを常時稼働させるためのインフラ効率化が進む。さらに、MozillaとMistral AIの提携により、Firefoxのスマートウィンドウにオープンウェイトモデル「Mistral Small 4」が統合され、データ非保持を条件にブラウザレベルでの流通・アクセスが確保されつつある。これらは、外部の流通網（EC）がブロックされる一方で、内部の開発環境やブラウザ内ではエージェントの常時稼働と自動化が深化しているという、対照的な事実を示している。\n\n【解釈】なぜこのタイミングで「流通の遮断」と「内部の自律化」が同時に起きているのか。その背景には、AIエージェントが単なる検索の補助から、ユーザーの代わりに「トランザクション（取引・コード変更）」を実行する実利的なエージェントへ進化し始めたことがある。エージェントが自律的にショッピングやコードレビューを行うようになると、従来のWebサイトが収益源として頼ってきた「人間が広告やUIを見て判断する導線」がバイパスされる。これが、Amazonなどの大手小売がAIエージェントのアクセスをブロックする根本的な原因である。プラットフォーマーにとって、エージェントは自社の顧客囲い込みを崩す脅威なのだ。一方で、Metaやオープンソースのエコシステムが内部のコード承認や常時稼働インフラ（OpenClaw等）を急ぐのは、外部の流通が塞がれるリスクフリクションを見越し、自社内や開発者エコシステムの中で「AIが自ら価値を完結させる閉じたループ」を強固にする必要があったからと読める。つまり、AIの価値が「モデルの推論能力」単体ではなく、「どこまで人間を介さずに実務や取引を完結・流通させられるか」というレイヤーにシフトした結果、既存WebのビジネスモデルとAIエージェントの間に激しい摩擦が生じていると解釈できる。\n\n【競争の構図】\n【Amazon】\nOpenAIやMetaなどの外部AIショッピングエージェントによる自社サイトへのアクセスをブロックする強硬姿勢をとる。\n→ 自社の顧客データと購買の主導権を守る強力な防衛策である一方、ユーザー側の利便性変化に取り残されるリスクも抱える。\n\n【Meta】\nPyTorch GreenLightを通じたコードレビューの自動承認など、内部開発プロセスの自律化を推進している。\n→ 外部の流通網での摩擦が強まる中、自社エコシステム内での開発効率とエージェントの自律稼働能力を徹底して高める戦略に出ている。\n\n【Mozilla】\nMistral AIのオープンウェイトモデルをFirefoxのスマートウィンドウに統合し、データ非保持を条件に提供している。\n→ 巨大テックのクローズドなAIに対抗し、ブラウザを基点としたオープンなAIエージェントの流通網を確保しようとしている。",
+        "why_matters": "【日本の実務への示唆】日本企業が今週見直すべきは、自社サービスやECサイトにおける「AIエージェントからのアクセス方針」と、社内開発における「AIによる自律承認プロセスの導入」の2点である。まず、自社がECやWebプラットフォームを運営している場合、OpenAIやMeta等のエージェントからのスクレイピングや自動購入を無防備に受け入れるか、あるいはAmazonのようにブロックや専用API化の検討を始めるかの判断が急務となる。自社データを守りつつAPI経由でマネタイズする設計がなければ、利益を生まないAIトラフィックにサーバーリソースを圧迫されるリスクがある。次に、社内開発や保守においては、MetaのPyTorch GreenLightに見られるような「低リスクな変更のAI自動承認」の仕組みを参考に、コードレビューや定型的な業務プロセスの承認フローで人間がボトルネックになっていないかを点検すべきである。単にモデルを導入する段階から、エージェントが実務のゲートを通過するためのルールを設計するフェーズに入っている。\n\n【反証・留保】この見立てを過大評価しないための条件として、小売によるAIエージェントのブロックが技術的な対策ではなく、一時的な利用規約の変更や法的交渉のカードに留まる可能性に注意が必要である。もし主要小売がアクセス遮断を全面的に撤回し、API経由での「AIコマース枠」のマネタイズ（手数料ビジネス）に舵を切った場合、競争の主戦場は遮断の攻防ではなく「エージェント向けAPIの標準化争い」に巻き戻る。また、ブラウザやOSレベル（MozillaやAndroidのAI機能など）でのオープンウェイトモデルの採用がユーザーに広く定着しなかった場合、エージェントの流通網は少数の巨大テックが握る閉じられたアプリ内に再び回収される。結論が崩れるのは、AIエージェントが自律的な経済主体としてではなく、単なる「スマート検索のUIの一つ」として既存のWeb広告モデルに完全に包摂された場合である。",
+        "context": "【次の観測点】\n・Amazonや主要小売がAIエージェントに対して公式なAPIや有料のアクセス枠（提携モデル）を提供する動きが出るか\n・Metaや他のプラットフォームが自動承認・エージェント基盤をオープンソースとして外部展開する規模\n・ブラウザ（FirefoxやGoogle Chrome等）内蔵のAIエージェントにおけるユーザーの定着率とトラフィックの変化"
+      }
+    ]
+  },
+  "raw_articles": [
+    {
+      "source": "OpenClaw GitHub",
+      "title": "v2026.11.11",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.11",
+      "summary": "OpenClaw v2026.11.11",
+      "published": "2026-11-28 02:12 UTC",
+      "pub_dt": "2026-11-28T02:12:16+00:00"
+    },
+    {
+      "source": "OpenClaw GitHub",
+      "title": "openclaw 2026.12.1-beta.1",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.12.1-beta.1",
+      "summary": "2026.12.1-beta.1\nHighlights\n\nUpdates: Git installations use prepared releases and a resident launcher, while package updates prepare without stopping the serving Gateway. (#203194, #203497) Thanks @obviyus.\nPrompt caching: compaction reuses the warm prompt cache across routes, read-only prewarms keep idle caches warm, and automatic compaction starts at 85% of the context window. (#204111, #204219, #204210) Thanks @obviyus.\nTemplates: share an agent from its menu, preview a Template without expan",
+      "published": "2026-11-28 00:21 UTC",
+      "pub_dt": "2026-11-28T00:21:04+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Jensen Huang's return did little to ease AI jitters. We used the weakness to buy",
+      "url": "https://www.cnbc.com/investingclub/2026/11/27/jensen-huangs-return-did-little-to-ease-ai-jitters-we-bought-on-weakness.html",
+      "summary": "Jensen Huang's return sparked a fleeting AI rally, but persistent market volatility gave us another opportunity to put cash to work.",
+      "published": "2026-11-27 18:46 UTC",
+      "pub_dt": "2026-11-27T18:46:20+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+      "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+      "summary": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop, but they're hitting roadblocks at Amazon and other retailers.",
+      "published": "2026-11-27 16:43 UTC",
+      "pub_dt": "2026-11-27T16:43:14+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "German software firm SAP is reportedly cutting at least 10,000 jobs in AI push",
+      "url": "https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html",
+      "summary": "SAP is reportedly considering cutting 10,000 jobs as it reshapes its software business around AI.",
+      "published": "2026-11-27 14:52 UTC",
+      "pub_dt": "2026-11-27T14:52:40+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "Meta Brings Code Review Auto-Approval More Mainstream with PyTorch GreenLight",
+      "url": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "PyTorch now lets an AI reviewer approve pull requests from its own maintainers. GreenLight is an open-source take on RADAR, the system Meta uses to auto-land low-risk diffs after safety checks, a risk score and an LLM review. OpenAI, Anthropic and Sonar describe similar ways to automate approval while keeping humans on risky changes. By Andrew Hoblitzell",
+      "published": "2026-11-27 14:36 UTC",
+      "pub_dt": "2026-11-27T14:36:00+00:00"
+    },
+    {
+      "source": "IEEE Spectrum",
+      "title": "This ER Doctor Became a Hospital’s First Clinical AI Engineer",
+      "url": "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai",
+      "summary": "When Boston Children’s Hospital posted a job listing for a prompt engineer in 2023, Dinesh Rai decided to apply. He didn’t expect to get the job.At the time, prompt engineering was being touted as one of the hot new jobs created by generative AI. Companies wanted people who knew how to coax the best answers from large language models (LLMs) by carefully wording instructions, supplying examples, and giving the systems personas or other context.Dinesh RaiEmployer: Boston Children’s HospitalOccupat",
+      "published": "2026-11-27 14:00 UTC",
+      "pub_dt": "2026-11-27T14:00:01+00:00"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Android’s DIY widgets are a bit of vibe-coding fun",
+      "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+      "summary": "Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right app and [&#8230;]",
+      "published": "2026-11-27 14:00 UTC",
+      "pub_dt": "2026-11-27T14:00:00+00:00"
+    },
+    {
+      "source": "Analytics Vidhya",
+      "title": "Building Self-Correcting AI Agents with Opik",
+      "url": "https://www.analyticsvidhya.com/blog/2026/11/self-correcting-ai-agents-opik/",
+      "summary": "Your agent might work perfectly in a demo, but real users bring unexpected challenges. It picks the wrong tool, ignores retrieved context, or generates unreliable answers. Observability tools show what happened, but rarely explain why or how to fix it, leaving developers scrolling through traces and debugging failures. With every model release introducing new failure [&#8230;]\nThe post Building Self-Correcting AI Agents with Opik appeared first on Analytics Vidhya.",
+      "published": "2026-11-27 12:44 UTC",
+      "pub_dt": "2026-11-27T12:44:15+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "The Tech Download: Will Jensen Huang’s return be the spark the shaky AI market needs?",
+      "url": "https://www.cnbc.com/2026/11/27/tech-download-jensen-huang-ai-market.html",
+      "summary": "AI stocks have fallen in recent times as investors question the sustainability of the AI boom.",
+      "published": "2026-11-27 12:00 UTC",
+      "pub_dt": "2026-11-27T12:00:22+00:00"
+    },
+    {
+      "source": "NYTimes Technology",
+      "title": "Jensen Huang Is Back, and So Is His Plaque at Denny’s",
+      "url": "https://www.nytimes.com/2026/11/26/business/dennys-jensen-huang-nvidia-plaque.html",
+      "summary": "The chain said it had restored a plaque honoring Mr. Huang above a booth in San Jose, Calif., where he is said to have developed the idea for Nvidia.",
+      "published": "2026-11-27 10:17 UTC",
+      "pub_dt": "2026-11-27T10:17:23+00:00"
+    },
+    {
+      "source": "CNBC Tech",
+      "title": "Chinese chip stocks notch biggest ever one-day gains as Beijing signals broader market support",
+      "url": "https://www.cnbc.com/2026/11/27/china-chip-stocks-beijing-market-support.html",
+      "summary": "Chinese stocks rebounded sharply after a rare intraday state media readout cheered investors as top policymakers pledged market liquidity support.",
+      "published": "2026-11-27 10:13 UTC",
+      "pub_dt": "2026-11-27T10:13:44+00:00"
+    },
+    {
+      "source": "Wired",
+      "title": "A New Breed of Chip Runs AI Models Using Waves of Light",
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "summary": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.",
+      "published": "2026-11-27 07:00 UTC",
+      "pub_dt": "2026-11-27T07:00:00+00:00"
+    },
+    {
+      "source": "InfoQ AI/ML",
+      "title": "Mozilla Partners with Mistral to Bring Open-Weight AI Models to Firefox Smart Window",
+      "url": "https://www.infoq.com/news/2026/11/mozilla-mistral-ai-smart-window/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "summary": "Mozilla has partnered with Mistral AI to offer Mistral Small 4, an open-weight model, in Firefox's Smart Window AI assistant, now in beta. It is recommended for users in France, the US and Canada. Users can choose among several models, and Mistral agreed to zero data retention. Beta feedback is mixed. By Daniel Curtis",
+      "published": "2026-11-27 06:58 UTC",
+      "pub_dt": "2026-11-27T06:58:00+00:00"
+    }
+  ]
+}
